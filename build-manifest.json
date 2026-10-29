@@ -1,0 +1,14 @@
+{
+  "questions": 300,
+  "groups": 30,
+  "days": 50,
+  "mathCount": 1718,
+  "mathErrors": [],
+  "sourceHashes": {
+    "micro": "164d7702616adbda5774c9bc234cffc48ab2bba51ab9c2c3470f15a943613844",
+    "macro": "12a3865b82b528252ee2a0c51df5cb7134946017428aa589d8d7289fcdb0ceed",
+    "political": "0d0ae99627b01cd9899fd85e1a1eca16366dafd9c82eab73afe4c37188fdda49"
+  },
+  "materials": 5,
+  "builtAt": "2026-10-29T16:44:56.582Z"
+}

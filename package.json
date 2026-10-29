@@ -1,0 +1,19 @@
+{
+  "name": "ruc-802-practice",
+  "version": "1.0.0",
+  "description": "人大802三科刷题、50天计划、草稿和错题复做",
+  "private": true,
+  "scripts": {
+    "build": "node build-data.mjs",
+    "check": "node --check dist/app.js && node verify-site.mjs",
+    "start": "node serve.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "dependencies": {
+    "katex": "0.19.1",
+    "marked": "18.1.2"
+  }
+}

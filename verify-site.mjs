@@ -1,0 +1,43 @@
+import {readFile,stat,writeFile,readdir} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import path from 'node:path';
+import vm from 'node:vm';
+const here=path.dirname(fileURLToPath(import.meta.url)),dist=path.join(here,'dist');
+const checks=[];const check=(name,passed)=>checks.push({name,passed:!!passed});
+const context={window:{}};vm.runInNewContext(await readFile(path.join(dist,'data.js'),'utf8'),context);
+const data=context.window.STUDY_DATA,manifest=JSON.parse(await readFile(path.join(here,'build-manifest.json'),'utf8'));
+const decode=s=>s.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#x27;|&#39;/g,"'");
+let mathCount=0;
+for(const subject of data.subjects){
+ const raw=await readFile(path.join(here,'content',subject.key+'.json'));const source=JSON.parse(raw);
+ check(subject.key+' source hash',createHash('sha256').update(raw).digest('hex')===manifest.sourceHashes[subject.key]);
+ check(subject.key+' count and unique IDs',subject.questions.length===100&&new Set(subject.questions.map(q=>q.id)).size===100);
+ check(subject.key+' groups',subject.groups.length===10&&subject.groups.every(g=>g.question_ids.length===10));
+ for(const q of subject.questions){const original=source.questions.find(x=>x.id===q.id);for(const field of ['prompt','outline','answer','pitfalls']){
+  const md=q[field+'_md'],html=q[field+'_html'];
+  check(q.id+' '+field+' source unchanged',md===original[field+'_md']);
+  const expected=[...md.matchAll(/\$\$([\s\S]+?)\$\$|\$([^$]+?)\$/g)].map(m=>(m[1]||m[2]).trim());
+  const actual=[...html.matchAll(/<annotation encoding="application\/x-tex">([\s\S]*?)<\/annotation>/g)].map(m=>decode(m[1]));
+  mathCount+=actual.length;
+  check(q.id+' '+field+' complete math',JSON.stringify(expected)===JSON.stringify(actual));
+  check(q.id+' '+field+' rendered',html.length>5&&!/math-error|katex-error|<script\b|javascript:/i.test(html));
+ }
+ check(q.id+' source metadata',q.source_refs.length>0&&q.source_refs.every(r=>r.exam_id&&r.source&&r.pages));
+ for(let block=0;block<5;block++)check(q.id+' round '+(block+1),data.plan.days.slice(block*10,block*10+10).filter(d=>d[subject.key+'_refs'].includes(q.id)).length===1);
+}
+}
+check('all rendered formulas accounted for',mathCount===manifest.mathCount);
+for(const day of data.plan.days){for(const subject of data.subjects){const refs=day[subject.key+'_refs'];check('day '+day.day+' '+subject.key+' 10 independent questions',refs.length===10&&new Set(refs).size===10);}}
+const html=await readFile(path.join(dist,'index.html'),'utf8');const css=await readFile(path.join(dist,'styles.css'),'utf8');const katexCss=await readFile(path.join(dist,'vendor/katex.min.css'),'utf8');
+const urls=[...html.matchAll(/(?:src|href)="([^"]+)"/g)].map(m=>m[1]).filter(u=>!u.startsWith('#'));
+for(const m of data.materials)for(const f of m.files)urls.push(f.url);
+for(const m of katexCss.matchAll(/url\(([^)]+)\)/g))urls.push('vendor/'+m[1].replace(/["']/g,''));
+for(const u of new Set(urls))check('local asset '+u,!/^(?:https?:)?\/\//.test(u)&&await stat(path.join(dist,u)).then(s=>s.isFile(),()=>false));
+check('responsive and focus styles',css.includes('@media(max-width:600px)')&&css.includes(':focus-visible')&&css.includes('prefers-reduced-motion'));
+async function files(folder){const entries=await readdir(folder,{withFileTypes:true});let result=[];for(const e of entries){const p=path.join(folder,e.name);result.push(...e.isDirectory()?await files(p):[p]);}return result;}
+for(const file of await files(dist))check('static file under platform size limit '+path.relative(dist,file),(await stat(file)).size<25*1024*1024);
+const result={all_passed:checks.every(c=>c.passed),count:checks.length,questions:300,days:50,mathCount,assetCount:new Set(urls).size,checks};
+await writeFile(path.join(here,'site-checks.json'),JSON.stringify(result,null,2));
+console.log(JSON.stringify({...result,checks:checks.filter(c=>!c.passed)}));
+if(!result.all_passed)process.exit(1);
