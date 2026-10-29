@@ -68,7 +68,7 @@ sudo systemctl status ruc802
 
 ## 更新与回退
 
-替换前保留上一版部署包、自定义`.env`与反向代理配置，并记下当前镜像版本。使用预构建镜像时，在`.env`设置目标版本（例如`IMAGE=ghcr.io/paimoncai/study-econ:v1.2.0`），执行`docker compose pull && docker compose up -d`。回退时把`IMAGE`改回之前的固定版本，再执行相同命令。`latest`和`dev`会随发布更新，需要可重复回退时使用固定版本或镜像摘要。
+替换前保留上一版部署包、自定义`.env`与反向代理配置，并记下当前镜像版本。使用预构建镜像时，在`.env`设置目标版本（例如`IMAGE=ghcr.io/paimoncai/study-econ:v1.3.0`），执行`docker compose pull && docker compose up -d`。回退时把`IMAGE`改回之前的固定版本，再执行相同命令。`latest`和`dev`会随发布更新，需要可重复回退时使用固定版本或镜像摘要。
 
 源码构建时换入新版源码和`dist/`，执行`docker compose -f compose.yaml -f compose.build.yaml up -d --build`；直接运行方式换入新版`dist/`和`serve.mjs`后重启Node服务。这两种方式回退时恢复上一版目录，再重新构建容器或重启服务。服务器响应包含缓存校验信息，刷新会获取新版网页；更新网站不会主动清空浏览器进度。
 
@@ -97,7 +97,7 @@ npm test
 仓库：`https://github.com/PaiMonCai/study-econ`。
 
 - 稳定版：`ghcr.io/paimoncai/study-econ:latest`
-- 固定版本：`ghcr.io/paimoncai/study-econ:v1.2.0`
+- 固定版本：`ghcr.io/paimoncai/study-econ:v1.3.0`
 - 日常更新：`ghcr.io/paimoncai/study-econ:dev`
 
 在`.env`设置`IMAGE`选择通道。main分支推送通过检查后更新dev；`v*`标签触发版本构建，标签须与package.json版本一致。正式版本更新latest，预发布标签不更新latest。构建在amd64和arm64原生运行器进行，两边容器验证通过后合成平台清单。

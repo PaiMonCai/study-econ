@@ -28,6 +28,25 @@ for(const subject of data.subjects){
 }
 }
 check('all rendered formulas accounted for',mathCount===manifest.mathCount);
+const recallSourceRaw=await readFile(path.join(here,'content/recall.json'));
+const recallSource=JSON.parse(recallSourceRaw),recall=data.recall;
+check('recall snapshot hash',createHash('sha256').update(recallSourceRaw).digest('hex')===manifest.sourceHashes.recall);
+check('recall cards complete and unique',recall.cards.length===323&&new Set(recall.cards.map(c=>c.id)).size===323);
+check('micro formula templates preserved',recall.cards.filter(c=>c.subject==='micro'&&c.kind==='formula').length===53);
+check('macro formula and condition cards preserved',recall.cards.filter(c=>c.subject==='macro'&&c.kind==='formula').length===48&&recall.cards.filter(c=>c.kind==='condition').length===6);
+check('political calculation topics preserved',recall.cards.filter(c=>c.subject==='political'&&c.kind==='formula').length===18);
+let recallMathCount=0;
+for(const card of recall.cards){
+ const original=recallSource.cards.find(c=>c.id===card.id);
+ check(card.id+' recall body matches snapshot',card.body_md===original?.body_md&&createHash('sha256').update(card.body_md).digest('hex')===card.body_sha256);
+ check(card.id+' recall provenance and group links',recall.sources.some(s=>s.id===card.source_id&&s.sha256.length===64)&&card.groups.length>0&&card.groups.every(g=>data.subjects.find(s=>s.key===card.subject)?.groups.some(group=>group.id===g)));
+ const expected=[...card.body_md.matchAll(/\$\$([\s\S]+?)\$\$|\$([^$]+?)\$/g)].map(m=>(m[1]||m[2]).trim());
+ const actual=[...card.body_html.matchAll(/<annotation encoding="application\/x-tex">([\s\S]*?)<\/annotation>/g)].map(m=>decode(m[1]));
+ recallMathCount+=actual.length;
+ check(card.id+' recall formula correspondence',JSON.stringify(expected)===JSON.stringify(actual));
+ check(card.id+' recall rendered safely',card.body_html.length>5&&!/math-error|katex-error|<script\b|javascript:/i.test(card.body_html));
+}
+check('all recall formulas accounted for',recallMathCount===manifest.recallMathCount);
 for(const day of data.plan.days){for(const subject of data.subjects){const refs=day[subject.key+'_refs'];check('day '+day.day+' '+subject.key+' 10 independent questions',refs.length===10&&new Set(refs).size===10);}}
 const html=await readFile(path.join(dist,'index.html'),'utf8');const css=await readFile(path.join(dist,'styles.css'),'utf8');const katexCss=await readFile(path.join(dist,'vendor/katex.min.css'),'utf8');
 const urls=[...html.matchAll(/(?:src|href)="([^"]+)"/g)].map(m=>m[1]).filter(u=>!u.startsWith('#'));
@@ -37,7 +56,7 @@ for(const u of new Set(urls))check('local asset '+u,!/^(?:https?:)?\/\//.test(u)
 check('responsive and focus styles',css.includes('@media(max-width:600px)')&&css.includes(':focus-visible')&&css.includes('prefers-reduced-motion'));
 async function files(folder){const entries=await readdir(folder,{withFileTypes:true});let result=[];for(const e of entries){const p=path.join(folder,e.name);result.push(...e.isDirectory()?await files(p):[p]);}return result;}
 for(const file of await files(dist))check('static file under platform size limit '+path.relative(dist,file),(await stat(file)).size<25*1024*1024);
-const result={all_passed:checks.every(c=>c.passed),count:checks.length,questions:300,days:50,mathCount,assetCount:new Set(urls).size,checks};
+const result={all_passed:checks.every(c=>c.passed),count:checks.length,questions:300,days:50,mathCount,recallCards:recall.cards.length,recallMathCount,assetCount:new Set(urls).size,checks};
 await writeFile(path.join(here,'site-checks.json'),JSON.stringify(result,null,2));
 console.log(JSON.stringify({...result,checks:checks.filter(c=>!c.passed)}));
 if(!result.all_passed)process.exit(1);

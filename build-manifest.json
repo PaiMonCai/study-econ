@@ -3,12 +3,15 @@
   "groups": 30,
   "days": 50,
   "mathCount": 1718,
+  "recallCards": 323,
+  "recallMathCount": 1475,
   "mathErrors": [],
   "sourceHashes": {
     "micro": "164d7702616adbda5774c9bc234cffc48ab2bba51ab9c2c3470f15a943613844",
     "macro": "12a3865b82b528252ee2a0c51df5cb7134946017428aa589d8d7289fcdb0ceed",
-    "political": "0d0ae99627b01cd9899fd85e1a1eca16366dafd9c82eab73afe4c37188fdda49"
+    "political": "0d0ae99627b01cd9899fd85e1a1eca16366dafd9c82eab73afe4c37188fdda49",
+    "recall": "3c16a1474056b42d8259e0258d52318bd52c6bfa17a6be6308acb8cf76a3106c"
   },
   "materials": 5,
-  "builtAt": "2026-10-29T18:47:27.288Z"
+  "builtAt": "2026-10-29T19:26:42.154Z"
 }
