@@ -1,0 +1,13 @@
+**
+!Dockerfile
+!serve.mjs
+!package.json
+!package-lock.json
+!build-data.mjs
+!verify-site.mjs
+!content/
+!content/**
+!dist/
+!dist/**
+dist/.openai/
+dist/.git/

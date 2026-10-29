@@ -1,10 +1,10 @@
 {
   "all_passed": true,
-  "count": 5709,
+  "count": 5711,
   "questions": 300,
   "days": 50,
   "mathCount": 1718,
-  "assetCount": 73,
+  "assetCount": 74,
   "checks": [
     {
       "name": "micro source hash",
@@ -22259,6 +22259,10 @@
       "passed": true
     },
     {
+      "name": "local asset reading.css",
+      "passed": true
+    },
+    {
       "name": "local asset data.js",
       "passed": true
     },
@@ -22588,6 +22592,10 @@
     },
     {
       "name": "static file under platform size limit materials\\political-training.pdf",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit reading.css",
       "passed": true
     },
     {

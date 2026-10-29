@@ -1,0 +1,23 @@
+[Unit]
+Description=RUC 802 Practice
+After=network.target
+
+[Service]
+Type=simple
+User=ruc802
+Group=ruc802
+WorkingDirectory=/opt/ruc802
+Environment=NODE_ENV=production
+Environment=HOST=127.0.0.1
+Environment=PORT=8080
+Environment=BASE_PATH=
+ExecStart=/usr/bin/node /opt/ruc802/serve.mjs
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

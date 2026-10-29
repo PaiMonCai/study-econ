@@ -1,0 +1,5 @@
+services:
+  practice:
+    image: study-econ:local
+    pull_policy: never
+    build: .

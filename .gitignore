@@ -1,4 +1,8 @@
 node_modules/
-.openai/local/
+.openai/
+release/
+.env
 qa/
 *.log
+test-results/
+playwright-report/
