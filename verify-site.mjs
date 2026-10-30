@@ -3,6 +3,7 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 import vm from 'node:vm';
+import {prepareDiagrams} from './build-diagrams.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url)),dist=path.join(here,'dist');
 const checks=[];const check=(name,passed)=>checks.push({name,passed:!!passed});
 const context={window:{}};vm.runInNewContext(await readFile(path.join(dist,'data.js'),'utf8'),context);
@@ -15,6 +16,10 @@ for(const subject of data.subjects){
  const knowledgeRaw=await readFile(path.join(here,'content','knowledge-'+subject.key+'.json'));
  const knowledgeSource=new Map(JSON.parse(knowledgeRaw).questions.map(q=>[q.id,q]));
  check(subject.key+' knowledge annotation hash',createHash('sha256').update(knowledgeRaw).digest('hex')===manifest.sourceHashes['knowledge_'+subject.key]);
+ const diagramRaw=await readFile(path.join(here,'content','diagrams-'+subject.key+'.json'));
+ const diagramBank=JSON.parse(diagramRaw),diagramIndex=prepareDiagrams(diagramBank,subject.key,source.questions);
+ check(subject.key+' diagram snapshot hash',createHash('sha256').update(diagramRaw).digest('hex')===manifest.sourceHashes['diagrams_'+subject.key]);
+ check(subject.key+' all diagram coverage decisions accounted for',diagramBank.coverage.length===100&&manifest.diagramSummary.subjects[subject.key]===diagramBank.diagrams.length);
  check(subject.key+' count and unique IDs',subject.questions.length===100&&new Set(subject.questions.map(q=>q.id)).size===100);
  check(subject.key+' groups',subject.groups.length===10&&subject.groups.every(g=>g.question_ids.length===10));
  for(const q of subject.questions){const original=source.questions.find(x=>x.id===q.id);for(const field of ['prompt','outline','answer','pitfalls']){
@@ -27,6 +32,7 @@ for(const subject of data.subjects){
   check(q.id+' '+field+' rendered',html.length>5&&!/math-error|katex-error|<script\b|javascript:/i.test(html));
  }
  check(q.id+' source metadata',q.source_refs.length>0&&q.source_refs.every(r=>r.exam_id&&r.source&&r.pages));
+ check(q.id+' diagrams match validated question-specific snapshot',JSON.stringify(q.diagrams)===JSON.stringify(diagramIndex.get(q.id)||[]));
  const solution=q.solution;
  check(q.id+' step source preserved',solution?.steps.map(s=>s.body_md).join('')===q.answer_md&&solution.source.preserved);
  const stepMath=solution.steps.flatMap(step=>[...step.body_html.matchAll(/<annotation encoding="application\/x-tex">([\s\S]*?)<\/annotation>/g)].map(m=>decode(m[1])));
@@ -61,6 +67,9 @@ for(const card of recall.cards){
  check(card.id+' recall rendered safely',card.body_html.length>5&&!/math-error|katex-error|<script\b|javascript:/i.test(card.body_html));
 }
 check('all recall formulas accounted for',recallMathCount===manifest.recallMathCount);
+const diagrams=data.subjects.flatMap(s=>s.questions.flatMap(q=>q.diagrams));
+check('diagram totals match build manifest',JSON.stringify(data.diagramSummary)===JSON.stringify(manifest.diagramSummary)&&diagrams.length===manifest.diagramSummary.total);
+for(const mode of ['numeric','schematic','structure'])check(mode+' diagram count matches',diagrams.filter(d=>d.mode===mode).length===manifest.diagramSummary[mode]);
 for(const day of data.plan.days){for(const subject of data.subjects){const refs=day[subject.key+'_refs'];check('day '+day.day+' '+subject.key+' 10 independent questions',refs.length===10&&new Set(refs).size===10);}}
 const html=await readFile(path.join(dist,'index.html'),'utf8');const css=await readFile(path.join(dist,'styles.css'),'utf8');const katexCss=await readFile(path.join(dist,'vendor/katex.min.css'),'utf8');
 const urls=[...html.matchAll(/(?:src|href)="([^"]+)"/g)].map(m=>m[1]).filter(u=>!u.startsWith('#'));
@@ -70,7 +79,7 @@ for(const u of new Set(urls))check('local asset '+u,!/^(?:https?:)?\/\//.test(u)
 check('responsive and focus styles',css.includes('@media(max-width:600px)')&&css.includes(':focus-visible')&&css.includes('prefers-reduced-motion'));
 async function files(folder){const entries=await readdir(folder,{withFileTypes:true});let result=[];for(const e of entries){const p=path.join(folder,e.name);result.push(...e.isDirectory()?await files(p):[p]);}return result;}
 for(const file of await files(dist))check('static file under platform size limit '+path.relative(dist,file),(await stat(file)).size<25*1024*1024);
-const result={all_passed:checks.every(c=>c.passed),count:checks.length,questions:300,days:50,mathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,assetCount:new Set(urls).size,checks};
+const result={all_passed:checks.every(c=>c.passed),count:checks.length,questions:300,days:50,mathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,diagramSummary:manifest.diagramSummary,assetCount:new Set(urls).size,checks};
 await writeFile(path.join(here,'site-checks.json'),JSON.stringify(result,null,2));
 console.log(JSON.stringify({...result,checks:checks.filter(c=>!c.passed)}));
 if(!result.all_passed)process.exit(1);

@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import katex from 'katex';
 import {Marked} from 'marked';
 import {prepareSolution} from './build-solutions.mjs';
+import {prepareDiagrams} from './build-diagrams.mjs';
 
 const HERE=path.dirname(fileURLToPath(import.meta.url));
 const ROOT=path.resolve(HERE,'../..');
@@ -23,6 +24,7 @@ const marked=new Marked({gfm:true,breaks:true,hooks:{emStrongMask(src){return sr
  {name:'inlineMath',level:'inline',start(src){return src.indexOf('$');},tokenizer(src){const m=/^\$([^$]+?)\$/.exec(src);if(m)return{type:'inlineMath',raw:m[0],tex:m[1]};},renderer(token){return math(token.tex,false);}}
 ]});
 const subjects=[];const sourceHashes={};let solutionMathCount=0;
+const diagramSummary={total:0,numeric:0,schematic:0,structure:0,subjects:{}};
 const recallRaw=await readFile(path.join(SOURCE,'recall.json'));
 const recallSource=JSON.parse(recallRaw);
 for(const [key,name] of [['micro','微观'],['macro','宏观'],['political','政经']]){
@@ -33,8 +35,13 @@ for(const [key,name] of [['micro','微观'],['macro','宏观'],['political','政
  if(knowledgeBank.subject!==key||knowledgeById.size!==bank.questions.length||knowledgeBank.questions.length!==bank.questions.length)throw Error('Invalid knowledge bank: '+key);
  sourceHashes['knowledge_'+key]=createHash('sha256').update(knowledgeRaw).digest('hex');
  if(bank.questions.length!==100||bank.groups.length!==10)throw new Error('Expected 100 questions / 10 groups: '+key);
+ const diagramRaw=await readFile(path.join(SOURCE,'diagrams-'+key+'.json'));
+ const diagramBank=JSON.parse(diagramRaw),diagrams=prepareDiagrams(diagramBank,key,bank.questions);
+ sourceHashes['diagrams_'+key]=createHash('sha256').update(diagramRaw).digest('hex');
+ diagramSummary.subjects[key]=diagramBank.diagrams.length;
+ for(const diagram of diagramBank.diagrams){diagramSummary.total++;diagramSummary[diagram.mode]++;}
  const questions=bank.questions.map(q=>{
-  const result={...q};
+  const result={...q,diagrams:diagrams.get(q.id)||[]};
   for(const field of ['prompt','outline','answer','pitfalls']){current=q.id+' '+field;result[field+'_html']=marked.parse(q[field+'_md']);}
   const guide=prepareSolution(q,key,recallSource.cards,knowledgeById.get(q.id)),before=mathCount;
   result.solution={...guide,steps:guide.steps.map(step=>({...step,body_html:step.lines_md.map(line=>marked.parse(line)).join('')})),knowledge:guide.knowledge.map(item=>({...item,title_html:marked.parseInline(item.title),explanation_html:marked.parse(item.explanation)})),recap_html:marked.parse(guide.recap_md)};
@@ -70,8 +77,8 @@ await material('三科主线训练打印版','完整题目与解答','与网站�
 await material('五十天复习计划','三科每天各10题','打印版与Excel记录表。网站中改动的日期和练习记录不会自动写回Excel。',[
  ['综合资料/01_复习手册/人大802五十天复习计划表.pdf','50-day-plan.pdf','打开PDF'],
  ['综合资料/01_复习手册/人大802五十天复习计划表.xlsx','50-day-plan.xlsx','下载Excel']]);
-const data={version:1,title:'802练习室',subjects,plan,materials,recall};
+const data={version:1,title:'802练习室',subjects,plan,materials,recall,diagramSummary};
 await writeFile(path.join(DIST,'data.js'),'window.STUDY_DATA='+JSON.stringify(data).replace(/</g,'\\u003c')+';\n','utf8');
-const manifest={questions:300,groups:30,days:50,mathCount:questionMathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,mathErrors:errors,sourceHashes,materials:materials.length,builtAt:new Date().toISOString()};
+const manifest={questions:300,groups:30,days:50,mathCount:questionMathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,mathErrors:errors,sourceHashes,diagramSummary,materials:materials.length,builtAt:new Date().toISOString()};
 await writeFile(path.join(HERE,'build-manifest.json'),JSON.stringify(manifest,null,2));
 console.log(JSON.stringify(manifest));

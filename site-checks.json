@@ -1,13 +1,24 @@
 {
   "all_passed": true,
-  "count": 8533,
+  "count": 8847,
   "questions": 300,
   "days": 50,
   "mathCount": 1718,
   "solutionMathCount": 2462,
   "recallCards": 323,
   "recallMathCount": 1475,
-  "assetCount": 84,
+  "diagramSummary": {
+    "total": 73,
+    "numeric": 56,
+    "schematic": 3,
+    "structure": 14,
+    "subjects": {
+      "micro": 33,
+      "macro": 22,
+      "political": 18
+    }
+  },
+  "assetCount": 86,
   "checks": [
     {
       "name": "micro source hash",
@@ -15,6 +26,14 @@
     },
     {
       "name": "micro knowledge annotation hash",
+      "passed": true
+    },
+    {
+      "name": "micro diagram snapshot hash",
+      "passed": true
+    },
+    {
+      "name": "micro all diagram coverage decisions accounted for",
       "passed": true
     },
     {
@@ -75,6 +94,10 @@
     },
     {
       "name": "MI001 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI001 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -170,6 +193,10 @@
       "passed": true
     },
     {
+      "name": "MI002 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI002 step source preserved",
       "passed": true
     },
@@ -259,6 +286,10 @@
     },
     {
       "name": "MI003 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI003 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -354,6 +385,10 @@
       "passed": true
     },
     {
+      "name": "MI004 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI004 step source preserved",
       "passed": true
     },
@@ -443,6 +478,10 @@
     },
     {
       "name": "MI005 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI005 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -538,6 +577,10 @@
       "passed": true
     },
     {
+      "name": "MI006 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI006 step source preserved",
       "passed": true
     },
@@ -627,6 +670,10 @@
     },
     {
       "name": "MI007 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI007 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -722,6 +769,10 @@
       "passed": true
     },
     {
+      "name": "MI008 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI008 step source preserved",
       "passed": true
     },
@@ -811,6 +862,10 @@
     },
     {
       "name": "MI009 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI009 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -906,6 +961,10 @@
       "passed": true
     },
     {
+      "name": "MI010 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI010 step source preserved",
       "passed": true
     },
@@ -995,6 +1054,10 @@
     },
     {
       "name": "MI011 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI011 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -1090,6 +1153,10 @@
       "passed": true
     },
     {
+      "name": "MI012 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI012 step source preserved",
       "passed": true
     },
@@ -1179,6 +1246,10 @@
     },
     {
       "name": "MI013 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI013 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -1274,6 +1345,10 @@
       "passed": true
     },
     {
+      "name": "MI014 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI014 step source preserved",
       "passed": true
     },
@@ -1363,6 +1438,10 @@
     },
     {
       "name": "MI015 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI015 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -1458,6 +1537,10 @@
       "passed": true
     },
     {
+      "name": "MI016 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI016 step source preserved",
       "passed": true
     },
@@ -1547,6 +1630,10 @@
     },
     {
       "name": "MI017 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI017 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -1642,6 +1729,10 @@
       "passed": true
     },
     {
+      "name": "MI018 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI018 step source preserved",
       "passed": true
     },
@@ -1731,6 +1822,10 @@
     },
     {
       "name": "MI019 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI019 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -1826,6 +1921,10 @@
       "passed": true
     },
     {
+      "name": "MI020 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI020 step source preserved",
       "passed": true
     },
@@ -1915,6 +2014,10 @@
     },
     {
       "name": "MI021 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI021 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -2010,6 +2113,10 @@
       "passed": true
     },
     {
+      "name": "MI022 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI022 step source preserved",
       "passed": true
     },
@@ -2099,6 +2206,10 @@
     },
     {
       "name": "MI023 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI023 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -2194,6 +2305,10 @@
       "passed": true
     },
     {
+      "name": "MI024 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI024 step source preserved",
       "passed": true
     },
@@ -2283,6 +2398,10 @@
     },
     {
       "name": "MI025 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI025 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -2378,6 +2497,10 @@
       "passed": true
     },
     {
+      "name": "MI026 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI026 step source preserved",
       "passed": true
     },
@@ -2467,6 +2590,10 @@
     },
     {
       "name": "MI027 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI027 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -2562,6 +2689,10 @@
       "passed": true
     },
     {
+      "name": "MI028 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI028 step source preserved",
       "passed": true
     },
@@ -2651,6 +2782,10 @@
     },
     {
       "name": "MI029 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI029 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -2746,6 +2881,10 @@
       "passed": true
     },
     {
+      "name": "MI030 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI030 step source preserved",
       "passed": true
     },
@@ -2835,6 +2974,10 @@
     },
     {
       "name": "MI031 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI031 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -2930,6 +3073,10 @@
       "passed": true
     },
     {
+      "name": "MI032 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI032 step source preserved",
       "passed": true
     },
@@ -3019,6 +3166,10 @@
     },
     {
       "name": "MI033 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI033 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -3114,6 +3265,10 @@
       "passed": true
     },
     {
+      "name": "MI034 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI034 step source preserved",
       "passed": true
     },
@@ -3203,6 +3358,10 @@
     },
     {
       "name": "MI035 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI035 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -3298,6 +3457,10 @@
       "passed": true
     },
     {
+      "name": "MI036 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI036 step source preserved",
       "passed": true
     },
@@ -3387,6 +3550,10 @@
     },
     {
       "name": "MI037 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI037 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -3482,6 +3649,10 @@
       "passed": true
     },
     {
+      "name": "MI038 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI038 step source preserved",
       "passed": true
     },
@@ -3571,6 +3742,10 @@
     },
     {
       "name": "MI039 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI039 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -3666,6 +3841,10 @@
       "passed": true
     },
     {
+      "name": "MI040 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI040 step source preserved",
       "passed": true
     },
@@ -3755,6 +3934,10 @@
     },
     {
       "name": "MI041 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI041 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -3850,6 +4033,10 @@
       "passed": true
     },
     {
+      "name": "MI042 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI042 step source preserved",
       "passed": true
     },
@@ -3939,6 +4126,10 @@
     },
     {
       "name": "MI043 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI043 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -4034,6 +4225,10 @@
       "passed": true
     },
     {
+      "name": "MI044 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI044 step source preserved",
       "passed": true
     },
@@ -4123,6 +4318,10 @@
     },
     {
       "name": "MI045 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI045 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -4218,6 +4417,10 @@
       "passed": true
     },
     {
+      "name": "MI046 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI046 step source preserved",
       "passed": true
     },
@@ -4307,6 +4510,10 @@
     },
     {
       "name": "MI047 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI047 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -4402,6 +4609,10 @@
       "passed": true
     },
     {
+      "name": "MI048 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI048 step source preserved",
       "passed": true
     },
@@ -4491,6 +4702,10 @@
     },
     {
       "name": "MI049 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI049 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -4586,6 +4801,10 @@
       "passed": true
     },
     {
+      "name": "MI050 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI050 step source preserved",
       "passed": true
     },
@@ -4675,6 +4894,10 @@
     },
     {
       "name": "MI051 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI051 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -4770,6 +4993,10 @@
       "passed": true
     },
     {
+      "name": "MI052 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI052 step source preserved",
       "passed": true
     },
@@ -4859,6 +5086,10 @@
     },
     {
       "name": "MI053 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI053 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -4954,6 +5185,10 @@
       "passed": true
     },
     {
+      "name": "MI054 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI054 step source preserved",
       "passed": true
     },
@@ -5043,6 +5278,10 @@
     },
     {
       "name": "MI055 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI055 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -5138,6 +5377,10 @@
       "passed": true
     },
     {
+      "name": "MI056 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI056 step source preserved",
       "passed": true
     },
@@ -5227,6 +5470,10 @@
     },
     {
       "name": "MI057 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI057 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -5322,6 +5569,10 @@
       "passed": true
     },
     {
+      "name": "MI058 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI058 step source preserved",
       "passed": true
     },
@@ -5411,6 +5662,10 @@
     },
     {
       "name": "MI059 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI059 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -5506,6 +5761,10 @@
       "passed": true
     },
     {
+      "name": "MI060 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI060 step source preserved",
       "passed": true
     },
@@ -5595,6 +5854,10 @@
     },
     {
       "name": "MI061 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI061 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -5690,6 +5953,10 @@
       "passed": true
     },
     {
+      "name": "MI062 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI062 step source preserved",
       "passed": true
     },
@@ -5779,6 +6046,10 @@
     },
     {
       "name": "MI063 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI063 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -5874,6 +6145,10 @@
       "passed": true
     },
     {
+      "name": "MI064 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI064 step source preserved",
       "passed": true
     },
@@ -5963,6 +6238,10 @@
     },
     {
       "name": "MI065 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI065 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -6058,6 +6337,10 @@
       "passed": true
     },
     {
+      "name": "MI066 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI066 step source preserved",
       "passed": true
     },
@@ -6147,6 +6430,10 @@
     },
     {
       "name": "MI067 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI067 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -6242,6 +6529,10 @@
       "passed": true
     },
     {
+      "name": "MI068 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI068 step source preserved",
       "passed": true
     },
@@ -6331,6 +6622,10 @@
     },
     {
       "name": "MI069 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI069 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -6426,6 +6721,10 @@
       "passed": true
     },
     {
+      "name": "MI070 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI070 step source preserved",
       "passed": true
     },
@@ -6515,6 +6814,10 @@
     },
     {
       "name": "MI071 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI071 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -6610,6 +6913,10 @@
       "passed": true
     },
     {
+      "name": "MI072 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI072 step source preserved",
       "passed": true
     },
@@ -6699,6 +7006,10 @@
     },
     {
       "name": "MI073 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI073 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -6794,6 +7105,10 @@
       "passed": true
     },
     {
+      "name": "MI074 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI074 step source preserved",
       "passed": true
     },
@@ -6883,6 +7198,10 @@
     },
     {
       "name": "MI075 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI075 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -6978,6 +7297,10 @@
       "passed": true
     },
     {
+      "name": "MI076 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI076 step source preserved",
       "passed": true
     },
@@ -7067,6 +7390,10 @@
     },
     {
       "name": "MI077 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI077 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -7162,6 +7489,10 @@
       "passed": true
     },
     {
+      "name": "MI078 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI078 step source preserved",
       "passed": true
     },
@@ -7251,6 +7582,10 @@
     },
     {
       "name": "MI079 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI079 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -7346,6 +7681,10 @@
       "passed": true
     },
     {
+      "name": "MI080 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI080 step source preserved",
       "passed": true
     },
@@ -7435,6 +7774,10 @@
     },
     {
       "name": "MI081 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI081 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -7530,6 +7873,10 @@
       "passed": true
     },
     {
+      "name": "MI082 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI082 step source preserved",
       "passed": true
     },
@@ -7619,6 +7966,10 @@
     },
     {
       "name": "MI083 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI083 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -7714,6 +8065,10 @@
       "passed": true
     },
     {
+      "name": "MI084 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI084 step source preserved",
       "passed": true
     },
@@ -7803,6 +8158,10 @@
     },
     {
       "name": "MI085 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI085 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -7898,6 +8257,10 @@
       "passed": true
     },
     {
+      "name": "MI086 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI086 step source preserved",
       "passed": true
     },
@@ -7987,6 +8350,10 @@
     },
     {
       "name": "MI087 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI087 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -8082,6 +8449,10 @@
       "passed": true
     },
     {
+      "name": "MI088 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI088 step source preserved",
       "passed": true
     },
@@ -8171,6 +8542,10 @@
     },
     {
       "name": "MI089 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI089 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -8266,6 +8641,10 @@
       "passed": true
     },
     {
+      "name": "MI090 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI090 step source preserved",
       "passed": true
     },
@@ -8355,6 +8734,10 @@
     },
     {
       "name": "MI091 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI091 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -8450,6 +8833,10 @@
       "passed": true
     },
     {
+      "name": "MI092 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI092 step source preserved",
       "passed": true
     },
@@ -8539,6 +8926,10 @@
     },
     {
       "name": "MI093 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI093 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -8634,6 +9025,10 @@
       "passed": true
     },
     {
+      "name": "MI094 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI094 step source preserved",
       "passed": true
     },
@@ -8723,6 +9118,10 @@
     },
     {
       "name": "MI095 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI095 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -8818,6 +9217,10 @@
       "passed": true
     },
     {
+      "name": "MI096 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI096 step source preserved",
       "passed": true
     },
@@ -8907,6 +9310,10 @@
     },
     {
       "name": "MI097 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI097 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -9002,6 +9409,10 @@
       "passed": true
     },
     {
+      "name": "MI098 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI098 step source preserved",
       "passed": true
     },
@@ -9091,6 +9502,10 @@
     },
     {
       "name": "MI099 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI099 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -9186,6 +9601,10 @@
       "passed": true
     },
     {
+      "name": "MI100 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MI100 step source preserved",
       "passed": true
     },
@@ -9231,6 +9650,14 @@
     },
     {
       "name": "macro knowledge annotation hash",
+      "passed": true
+    },
+    {
+      "name": "macro diagram snapshot hash",
+      "passed": true
+    },
+    {
+      "name": "macro all diagram coverage decisions accounted for",
       "passed": true
     },
     {
@@ -9291,6 +9718,10 @@
     },
     {
       "name": "MA001 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA001 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -9386,6 +9817,10 @@
       "passed": true
     },
     {
+      "name": "MA002 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA002 step source preserved",
       "passed": true
     },
@@ -9475,6 +9910,10 @@
     },
     {
       "name": "MA003 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA003 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -9570,6 +10009,10 @@
       "passed": true
     },
     {
+      "name": "MA004 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA004 step source preserved",
       "passed": true
     },
@@ -9659,6 +10102,10 @@
     },
     {
       "name": "MA005 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA005 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -9754,6 +10201,10 @@
       "passed": true
     },
     {
+      "name": "MA006 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA006 step source preserved",
       "passed": true
     },
@@ -9843,6 +10294,10 @@
     },
     {
       "name": "MA007 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA007 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -9938,6 +10393,10 @@
       "passed": true
     },
     {
+      "name": "MA008 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA008 step source preserved",
       "passed": true
     },
@@ -10027,6 +10486,10 @@
     },
     {
       "name": "MA009 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA009 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -10122,6 +10585,10 @@
       "passed": true
     },
     {
+      "name": "MA010 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA010 step source preserved",
       "passed": true
     },
@@ -10211,6 +10678,10 @@
     },
     {
       "name": "MA011 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA011 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -10306,6 +10777,10 @@
       "passed": true
     },
     {
+      "name": "MA012 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA012 step source preserved",
       "passed": true
     },
@@ -10395,6 +10870,10 @@
     },
     {
       "name": "MA013 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA013 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -10490,6 +10969,10 @@
       "passed": true
     },
     {
+      "name": "MA014 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA014 step source preserved",
       "passed": true
     },
@@ -10579,6 +11062,10 @@
     },
     {
       "name": "MA015 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA015 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -10674,6 +11161,10 @@
       "passed": true
     },
     {
+      "name": "MA016 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA016 step source preserved",
       "passed": true
     },
@@ -10763,6 +11254,10 @@
     },
     {
       "name": "MA017 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA017 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -10858,6 +11353,10 @@
       "passed": true
     },
     {
+      "name": "MA018 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA018 step source preserved",
       "passed": true
     },
@@ -10947,6 +11446,10 @@
     },
     {
       "name": "MA019 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA019 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -11042,6 +11545,10 @@
       "passed": true
     },
     {
+      "name": "MA020 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA020 step source preserved",
       "passed": true
     },
@@ -11131,6 +11638,10 @@
     },
     {
       "name": "MA021 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA021 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -11226,6 +11737,10 @@
       "passed": true
     },
     {
+      "name": "MA022 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA022 step source preserved",
       "passed": true
     },
@@ -11315,6 +11830,10 @@
     },
     {
       "name": "MA023 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA023 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -11410,6 +11929,10 @@
       "passed": true
     },
     {
+      "name": "MA024 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA024 step source preserved",
       "passed": true
     },
@@ -11499,6 +12022,10 @@
     },
     {
       "name": "MA025 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA025 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -11594,6 +12121,10 @@
       "passed": true
     },
     {
+      "name": "MA026 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA026 step source preserved",
       "passed": true
     },
@@ -11683,6 +12214,10 @@
     },
     {
       "name": "MA027 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA027 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -11778,6 +12313,10 @@
       "passed": true
     },
     {
+      "name": "MA028 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA028 step source preserved",
       "passed": true
     },
@@ -11867,6 +12406,10 @@
     },
     {
       "name": "MA029 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA029 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -11962,6 +12505,10 @@
       "passed": true
     },
     {
+      "name": "MA030 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA030 step source preserved",
       "passed": true
     },
@@ -12051,6 +12598,10 @@
     },
     {
       "name": "MA031 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA031 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -12146,6 +12697,10 @@
       "passed": true
     },
     {
+      "name": "MA032 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA032 step source preserved",
       "passed": true
     },
@@ -12235,6 +12790,10 @@
     },
     {
       "name": "MA033 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA033 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -12330,6 +12889,10 @@
       "passed": true
     },
     {
+      "name": "MA034 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA034 step source preserved",
       "passed": true
     },
@@ -12419,6 +12982,10 @@
     },
     {
       "name": "MA035 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA035 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -12514,6 +13081,10 @@
       "passed": true
     },
     {
+      "name": "MA036 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA036 step source preserved",
       "passed": true
     },
@@ -12603,6 +13174,10 @@
     },
     {
       "name": "MA037 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA037 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -12698,6 +13273,10 @@
       "passed": true
     },
     {
+      "name": "MA038 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA038 step source preserved",
       "passed": true
     },
@@ -12787,6 +13366,10 @@
     },
     {
       "name": "MA039 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA039 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -12882,6 +13465,10 @@
       "passed": true
     },
     {
+      "name": "MA040 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA040 step source preserved",
       "passed": true
     },
@@ -12971,6 +13558,10 @@
     },
     {
       "name": "MA041 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA041 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -13066,6 +13657,10 @@
       "passed": true
     },
     {
+      "name": "MA042 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA042 step source preserved",
       "passed": true
     },
@@ -13155,6 +13750,10 @@
     },
     {
       "name": "MA043 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA043 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -13250,6 +13849,10 @@
       "passed": true
     },
     {
+      "name": "MA044 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA044 step source preserved",
       "passed": true
     },
@@ -13339,6 +13942,10 @@
     },
     {
       "name": "MA045 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA045 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -13434,6 +14041,10 @@
       "passed": true
     },
     {
+      "name": "MA046 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA046 step source preserved",
       "passed": true
     },
@@ -13523,6 +14134,10 @@
     },
     {
       "name": "MA047 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA047 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -13618,6 +14233,10 @@
       "passed": true
     },
     {
+      "name": "MA048 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA048 step source preserved",
       "passed": true
     },
@@ -13707,6 +14326,10 @@
     },
     {
       "name": "MA049 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA049 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -13802,6 +14425,10 @@
       "passed": true
     },
     {
+      "name": "MA050 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA050 step source preserved",
       "passed": true
     },
@@ -13891,6 +14518,10 @@
     },
     {
       "name": "MA051 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA051 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -13986,6 +14617,10 @@
       "passed": true
     },
     {
+      "name": "MA052 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA052 step source preserved",
       "passed": true
     },
@@ -14075,6 +14710,10 @@
     },
     {
       "name": "MA053 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA053 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -14170,6 +14809,10 @@
       "passed": true
     },
     {
+      "name": "MA054 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA054 step source preserved",
       "passed": true
     },
@@ -14259,6 +14902,10 @@
     },
     {
       "name": "MA055 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA055 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -14354,6 +15001,10 @@
       "passed": true
     },
     {
+      "name": "MA056 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA056 step source preserved",
       "passed": true
     },
@@ -14443,6 +15094,10 @@
     },
     {
       "name": "MA057 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA057 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -14538,6 +15193,10 @@
       "passed": true
     },
     {
+      "name": "MA058 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA058 step source preserved",
       "passed": true
     },
@@ -14627,6 +15286,10 @@
     },
     {
       "name": "MA059 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA059 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -14722,6 +15385,10 @@
       "passed": true
     },
     {
+      "name": "MA060 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA060 step source preserved",
       "passed": true
     },
@@ -14811,6 +15478,10 @@
     },
     {
       "name": "MA061 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA061 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -14906,6 +15577,10 @@
       "passed": true
     },
     {
+      "name": "MA062 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA062 step source preserved",
       "passed": true
     },
@@ -14995,6 +15670,10 @@
     },
     {
       "name": "MA063 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA063 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -15090,6 +15769,10 @@
       "passed": true
     },
     {
+      "name": "MA064 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA064 step source preserved",
       "passed": true
     },
@@ -15179,6 +15862,10 @@
     },
     {
       "name": "MA065 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA065 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -15274,6 +15961,10 @@
       "passed": true
     },
     {
+      "name": "MA066 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA066 step source preserved",
       "passed": true
     },
@@ -15363,6 +16054,10 @@
     },
     {
       "name": "MA067 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA067 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -15458,6 +16153,10 @@
       "passed": true
     },
     {
+      "name": "MA068 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA068 step source preserved",
       "passed": true
     },
@@ -15547,6 +16246,10 @@
     },
     {
       "name": "MA069 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA069 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -15642,6 +16345,10 @@
       "passed": true
     },
     {
+      "name": "MA070 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA070 step source preserved",
       "passed": true
     },
@@ -15731,6 +16438,10 @@
     },
     {
       "name": "MA071 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA071 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -15826,6 +16537,10 @@
       "passed": true
     },
     {
+      "name": "MA072 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA072 step source preserved",
       "passed": true
     },
@@ -15915,6 +16630,10 @@
     },
     {
       "name": "MA073 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA073 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -16010,6 +16729,10 @@
       "passed": true
     },
     {
+      "name": "MA074 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA074 step source preserved",
       "passed": true
     },
@@ -16099,6 +16822,10 @@
     },
     {
       "name": "MA075 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA075 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -16194,6 +16921,10 @@
       "passed": true
     },
     {
+      "name": "MA076 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA076 step source preserved",
       "passed": true
     },
@@ -16283,6 +17014,10 @@
     },
     {
       "name": "MA077 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA077 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -16378,6 +17113,10 @@
       "passed": true
     },
     {
+      "name": "MA078 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA078 step source preserved",
       "passed": true
     },
@@ -16467,6 +17206,10 @@
     },
     {
       "name": "MA079 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA079 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -16562,6 +17305,10 @@
       "passed": true
     },
     {
+      "name": "MA080 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA080 step source preserved",
       "passed": true
     },
@@ -16651,6 +17398,10 @@
     },
     {
       "name": "MA081 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA081 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -16746,6 +17497,10 @@
       "passed": true
     },
     {
+      "name": "MA082 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA082 step source preserved",
       "passed": true
     },
@@ -16835,6 +17590,10 @@
     },
     {
       "name": "MA083 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA083 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -16930,6 +17689,10 @@
       "passed": true
     },
     {
+      "name": "MA084 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA084 step source preserved",
       "passed": true
     },
@@ -17019,6 +17782,10 @@
     },
     {
       "name": "MA085 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA085 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -17114,6 +17881,10 @@
       "passed": true
     },
     {
+      "name": "MA086 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA086 step source preserved",
       "passed": true
     },
@@ -17203,6 +17974,10 @@
     },
     {
       "name": "MA087 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA087 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -17298,6 +18073,10 @@
       "passed": true
     },
     {
+      "name": "MA088 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA088 step source preserved",
       "passed": true
     },
@@ -17387,6 +18166,10 @@
     },
     {
       "name": "MA089 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA089 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -17482,6 +18265,10 @@
       "passed": true
     },
     {
+      "name": "MA090 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA090 step source preserved",
       "passed": true
     },
@@ -17571,6 +18358,10 @@
     },
     {
       "name": "MA091 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA091 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -17666,6 +18457,10 @@
       "passed": true
     },
     {
+      "name": "MA092 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA092 step source preserved",
       "passed": true
     },
@@ -17755,6 +18550,10 @@
     },
     {
       "name": "MA093 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA093 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -17850,6 +18649,10 @@
       "passed": true
     },
     {
+      "name": "MA094 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA094 step source preserved",
       "passed": true
     },
@@ -17939,6 +18742,10 @@
     },
     {
       "name": "MA095 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA095 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -18034,6 +18841,10 @@
       "passed": true
     },
     {
+      "name": "MA096 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA096 step source preserved",
       "passed": true
     },
@@ -18123,6 +18934,10 @@
     },
     {
       "name": "MA097 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA097 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -18218,6 +19033,10 @@
       "passed": true
     },
     {
+      "name": "MA098 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA098 step source preserved",
       "passed": true
     },
@@ -18307,6 +19126,10 @@
     },
     {
       "name": "MA099 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA099 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -18402,6 +19225,10 @@
       "passed": true
     },
     {
+      "name": "MA100 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "MA100 step source preserved",
       "passed": true
     },
@@ -18447,6 +19274,14 @@
     },
     {
       "name": "political knowledge annotation hash",
+      "passed": true
+    },
+    {
+      "name": "political diagram snapshot hash",
+      "passed": true
+    },
+    {
+      "name": "political all diagram coverage decisions accounted for",
       "passed": true
     },
     {
@@ -18507,6 +19342,10 @@
     },
     {
       "name": "PE001 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE001 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -18602,6 +19441,10 @@
       "passed": true
     },
     {
+      "name": "PE002 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE002 step source preserved",
       "passed": true
     },
@@ -18691,6 +19534,10 @@
     },
     {
       "name": "PE003 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE003 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -18786,6 +19633,10 @@
       "passed": true
     },
     {
+      "name": "PE004 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE004 step source preserved",
       "passed": true
     },
@@ -18875,6 +19726,10 @@
     },
     {
       "name": "PE005 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE005 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -18970,6 +19825,10 @@
       "passed": true
     },
     {
+      "name": "PE006 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE006 step source preserved",
       "passed": true
     },
@@ -19059,6 +19918,10 @@
     },
     {
       "name": "PE007 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE007 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -19154,6 +20017,10 @@
       "passed": true
     },
     {
+      "name": "PE008 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE008 step source preserved",
       "passed": true
     },
@@ -19243,6 +20110,10 @@
     },
     {
       "name": "PE009 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE009 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -19338,6 +20209,10 @@
       "passed": true
     },
     {
+      "name": "PE010 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE010 step source preserved",
       "passed": true
     },
@@ -19427,6 +20302,10 @@
     },
     {
       "name": "PE011 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE011 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -19522,6 +20401,10 @@
       "passed": true
     },
     {
+      "name": "PE012 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE012 step source preserved",
       "passed": true
     },
@@ -19611,6 +20494,10 @@
     },
     {
       "name": "PE013 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE013 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -19706,6 +20593,10 @@
       "passed": true
     },
     {
+      "name": "PE014 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE014 step source preserved",
       "passed": true
     },
@@ -19795,6 +20686,10 @@
     },
     {
       "name": "PE015 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE015 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -19890,6 +20785,10 @@
       "passed": true
     },
     {
+      "name": "PE016 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE016 step source preserved",
       "passed": true
     },
@@ -19979,6 +20878,10 @@
     },
     {
       "name": "PE017 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE017 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -20074,6 +20977,10 @@
       "passed": true
     },
     {
+      "name": "PE018 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE018 step source preserved",
       "passed": true
     },
@@ -20163,6 +21070,10 @@
     },
     {
       "name": "PE019 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE019 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -20258,6 +21169,10 @@
       "passed": true
     },
     {
+      "name": "PE020 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE020 step source preserved",
       "passed": true
     },
@@ -20347,6 +21262,10 @@
     },
     {
       "name": "PE021 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE021 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -20442,6 +21361,10 @@
       "passed": true
     },
     {
+      "name": "PE022 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE022 step source preserved",
       "passed": true
     },
@@ -20531,6 +21454,10 @@
     },
     {
       "name": "PE023 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE023 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -20626,6 +21553,10 @@
       "passed": true
     },
     {
+      "name": "PE024 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE024 step source preserved",
       "passed": true
     },
@@ -20715,6 +21646,10 @@
     },
     {
       "name": "PE025 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE025 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -20810,6 +21745,10 @@
       "passed": true
     },
     {
+      "name": "PE026 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE026 step source preserved",
       "passed": true
     },
@@ -20899,6 +21838,10 @@
     },
     {
       "name": "PE027 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE027 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -20994,6 +21937,10 @@
       "passed": true
     },
     {
+      "name": "PE028 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE028 step source preserved",
       "passed": true
     },
@@ -21083,6 +22030,10 @@
     },
     {
       "name": "PE029 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE029 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -21178,6 +22129,10 @@
       "passed": true
     },
     {
+      "name": "PE030 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE030 step source preserved",
       "passed": true
     },
@@ -21267,6 +22222,10 @@
     },
     {
       "name": "PE031 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE031 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -21362,6 +22321,10 @@
       "passed": true
     },
     {
+      "name": "PE032 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE032 step source preserved",
       "passed": true
     },
@@ -21451,6 +22414,10 @@
     },
     {
       "name": "PE033 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE033 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -21546,6 +22513,10 @@
       "passed": true
     },
     {
+      "name": "PE034 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE034 step source preserved",
       "passed": true
     },
@@ -21635,6 +22606,10 @@
     },
     {
       "name": "PE035 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE035 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -21730,6 +22705,10 @@
       "passed": true
     },
     {
+      "name": "PE036 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE036 step source preserved",
       "passed": true
     },
@@ -21819,6 +22798,10 @@
     },
     {
       "name": "PE037 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE037 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -21914,6 +22897,10 @@
       "passed": true
     },
     {
+      "name": "PE038 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE038 step source preserved",
       "passed": true
     },
@@ -22003,6 +22990,10 @@
     },
     {
       "name": "PE039 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE039 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -22098,6 +23089,10 @@
       "passed": true
     },
     {
+      "name": "PE040 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE040 step source preserved",
       "passed": true
     },
@@ -22187,6 +23182,10 @@
     },
     {
       "name": "PE041 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE041 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -22282,6 +23281,10 @@
       "passed": true
     },
     {
+      "name": "PE042 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE042 step source preserved",
       "passed": true
     },
@@ -22371,6 +23374,10 @@
     },
     {
       "name": "PE043 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE043 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -22466,6 +23473,10 @@
       "passed": true
     },
     {
+      "name": "PE044 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE044 step source preserved",
       "passed": true
     },
@@ -22555,6 +23566,10 @@
     },
     {
       "name": "PE045 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE045 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -22650,6 +23665,10 @@
       "passed": true
     },
     {
+      "name": "PE046 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE046 step source preserved",
       "passed": true
     },
@@ -22739,6 +23758,10 @@
     },
     {
       "name": "PE047 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE047 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -22834,6 +23857,10 @@
       "passed": true
     },
     {
+      "name": "PE048 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE048 step source preserved",
       "passed": true
     },
@@ -22923,6 +23950,10 @@
     },
     {
       "name": "PE049 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE049 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -23018,6 +24049,10 @@
       "passed": true
     },
     {
+      "name": "PE050 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE050 step source preserved",
       "passed": true
     },
@@ -23107,6 +24142,10 @@
     },
     {
       "name": "PE051 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE051 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -23202,6 +24241,10 @@
       "passed": true
     },
     {
+      "name": "PE052 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE052 step source preserved",
       "passed": true
     },
@@ -23291,6 +24334,10 @@
     },
     {
       "name": "PE053 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE053 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -23386,6 +24433,10 @@
       "passed": true
     },
     {
+      "name": "PE054 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE054 step source preserved",
       "passed": true
     },
@@ -23475,6 +24526,10 @@
     },
     {
       "name": "PE055 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE055 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -23570,6 +24625,10 @@
       "passed": true
     },
     {
+      "name": "PE056 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE056 step source preserved",
       "passed": true
     },
@@ -23659,6 +24718,10 @@
     },
     {
       "name": "PE057 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE057 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -23754,6 +24817,10 @@
       "passed": true
     },
     {
+      "name": "PE058 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE058 step source preserved",
       "passed": true
     },
@@ -23843,6 +24910,10 @@
     },
     {
       "name": "PE059 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE059 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -23938,6 +25009,10 @@
       "passed": true
     },
     {
+      "name": "PE060 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE060 step source preserved",
       "passed": true
     },
@@ -24027,6 +25102,10 @@
     },
     {
       "name": "PE061 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE061 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -24122,6 +25201,10 @@
       "passed": true
     },
     {
+      "name": "PE062 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE062 step source preserved",
       "passed": true
     },
@@ -24211,6 +25294,10 @@
     },
     {
       "name": "PE063 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE063 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -24306,6 +25393,10 @@
       "passed": true
     },
     {
+      "name": "PE064 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE064 step source preserved",
       "passed": true
     },
@@ -24395,6 +25486,10 @@
     },
     {
       "name": "PE065 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE065 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -24490,6 +25585,10 @@
       "passed": true
     },
     {
+      "name": "PE066 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE066 step source preserved",
       "passed": true
     },
@@ -24579,6 +25678,10 @@
     },
     {
       "name": "PE067 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE067 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -24674,6 +25777,10 @@
       "passed": true
     },
     {
+      "name": "PE068 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE068 step source preserved",
       "passed": true
     },
@@ -24763,6 +25870,10 @@
     },
     {
       "name": "PE069 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE069 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -24858,6 +25969,10 @@
       "passed": true
     },
     {
+      "name": "PE070 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE070 step source preserved",
       "passed": true
     },
@@ -24947,6 +26062,10 @@
     },
     {
       "name": "PE071 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE071 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -25042,6 +26161,10 @@
       "passed": true
     },
     {
+      "name": "PE072 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE072 step source preserved",
       "passed": true
     },
@@ -25131,6 +26254,10 @@
     },
     {
       "name": "PE073 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE073 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -25226,6 +26353,10 @@
       "passed": true
     },
     {
+      "name": "PE074 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE074 step source preserved",
       "passed": true
     },
@@ -25315,6 +26446,10 @@
     },
     {
       "name": "PE075 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE075 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -25410,6 +26545,10 @@
       "passed": true
     },
     {
+      "name": "PE076 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE076 step source preserved",
       "passed": true
     },
@@ -25499,6 +26638,10 @@
     },
     {
       "name": "PE077 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE077 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -25594,6 +26737,10 @@
       "passed": true
     },
     {
+      "name": "PE078 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE078 step source preserved",
       "passed": true
     },
@@ -25683,6 +26830,10 @@
     },
     {
       "name": "PE079 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE079 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -25778,6 +26929,10 @@
       "passed": true
     },
     {
+      "name": "PE080 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE080 step source preserved",
       "passed": true
     },
@@ -25867,6 +27022,10 @@
     },
     {
       "name": "PE081 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE081 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -25962,6 +27121,10 @@
       "passed": true
     },
     {
+      "name": "PE082 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE082 step source preserved",
       "passed": true
     },
@@ -26051,6 +27214,10 @@
     },
     {
       "name": "PE083 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE083 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -26146,6 +27313,10 @@
       "passed": true
     },
     {
+      "name": "PE084 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE084 step source preserved",
       "passed": true
     },
@@ -26235,6 +27406,10 @@
     },
     {
       "name": "PE085 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE085 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -26330,6 +27505,10 @@
       "passed": true
     },
     {
+      "name": "PE086 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE086 step source preserved",
       "passed": true
     },
@@ -26419,6 +27598,10 @@
     },
     {
       "name": "PE087 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE087 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -26514,6 +27697,10 @@
       "passed": true
     },
     {
+      "name": "PE088 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE088 step source preserved",
       "passed": true
     },
@@ -26603,6 +27790,10 @@
     },
     {
       "name": "PE089 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE089 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -26698,6 +27889,10 @@
       "passed": true
     },
     {
+      "name": "PE090 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE090 step source preserved",
       "passed": true
     },
@@ -26787,6 +27982,10 @@
     },
     {
       "name": "PE091 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE091 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -26882,6 +28081,10 @@
       "passed": true
     },
     {
+      "name": "PE092 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE092 step source preserved",
       "passed": true
     },
@@ -26971,6 +28174,10 @@
     },
     {
       "name": "PE093 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE093 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -27066,6 +28273,10 @@
       "passed": true
     },
     {
+      "name": "PE094 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE094 step source preserved",
       "passed": true
     },
@@ -27155,6 +28366,10 @@
     },
     {
       "name": "PE095 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE095 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -27250,6 +28465,10 @@
       "passed": true
     },
     {
+      "name": "PE096 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE096 step source preserved",
       "passed": true
     },
@@ -27339,6 +28558,10 @@
     },
     {
       "name": "PE097 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE097 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -27434,6 +28657,10 @@
       "passed": true
     },
     {
+      "name": "PE098 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE098 step source preserved",
       "passed": true
     },
@@ -27526,6 +28753,10 @@
       "passed": true
     },
     {
+      "name": "PE099 diagrams match validated question-specific snapshot",
+      "passed": true
+    },
+    {
       "name": "PE099 step source preserved",
       "passed": true
     },
@@ -27615,6 +28846,10 @@
     },
     {
       "name": "PE100 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE100 diagrams match validated question-specific snapshot",
       "passed": true
     },
     {
@@ -32858,6 +34093,22 @@
       "passed": true
     },
     {
+      "name": "diagram totals match build manifest",
+      "passed": true
+    },
+    {
+      "name": "numeric diagram count matches",
+      "passed": true
+    },
+    {
+      "name": "schematic diagram count matches",
+      "passed": true
+    },
+    {
+      "name": "structure diagram count matches",
+      "passed": true
+    },
+    {
       "name": "day 1 micro 10 independent questions",
       "passed": true
     },
@@ -33486,6 +34737,10 @@
       "passed": true
     },
     {
+      "name": "local asset diagrams.css",
+      "passed": true
+    },
+    {
       "name": "local asset data.js",
       "passed": true
     },
@@ -33495,6 +34750,10 @@
     },
     {
       "name": "local asset photos.js",
+      "passed": true
+    },
+    {
+      "name": "local asset diagrams.js",
       "passed": true
     },
     {
@@ -33803,6 +35062,14 @@
     },
     {
       "name": "static file under platform size limit data.js",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit diagrams.css",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit diagrams.js",
       "passed": true
     },
     {

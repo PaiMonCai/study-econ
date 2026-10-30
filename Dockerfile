@@ -4,7 +4,7 @@ COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 COPY content ./content
 COPY dist ./dist
-COPY build-data.mjs build-solutions.mjs verify-site.mjs ./
+COPY build-data.mjs build-solutions.mjs build-diagrams.mjs verify-site.mjs ./
 RUN npm run build && npm run check
 
 FROM node:24-alpine AS runtime

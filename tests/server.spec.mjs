@@ -21,6 +21,20 @@ test('password gate protects the app and logout revokes access',async({page},inf
  await page.getByRole('button',{name:'退出访问',exact:true}).click();await expect(page.getByText('已退出访问，学习数据仍保留。',{exact:true})).toBeVisible();expect((await page.request.get(url+'api/state')).status()).toBe(401);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
+test('diagram stages do not mutate the shared server learning library',async({page})=>{
+ await login(page);await practice(page);await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();
+ await expect(page.locator('.local-status')).toHaveText('服务器已保存');
+ const before=await page.evaluate(()=>JSON.stringify(window.RemoteStore.state));
+ const mutations=[];const listener=request=>{if(request.url().includes('/api/')&&request.method()!=='GET')mutations.push(request.method()+' '+request.url());};
+ page.on('request',listener);
+ for(const stage of [1,2,0]){
+  const button=page.locator('.diagram-controls').first().locator(`[data-diagram-stage="${stage}"]`);
+  await button.click();await expect(button).toBeFocused();await expect(button).toHaveAttribute('aria-pressed','true');
+ }
+ expect(await page.evaluate(()=>JSON.stringify(window.RemoteStore.state))).toBe(before);
+ expect(mutations).toEqual([]);page.off('request',listener);
+});
+
 test('fragment and query tokens enter and leave a clean URL',async({page,browser})=>{
  const ready=loaded(page);await page.goto(url+'#token='+token);await ready;await expect(page.locator('.local-status')).toHaveText('服务器已保存');expect(page.url()).not.toContain(token);expect(page.url()).not.toContain('token=');
  const context=await browser.newContext();try{const other=await context.newPage(),ready=loaded(other);await other.goto(url+'?token='+token);await ready;await expect(other.locator('.local-status')).toHaveText('服务器已保存');expect(other.url()).not.toContain('token=');}finally{await context.close();}
