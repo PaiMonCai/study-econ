@@ -25,6 +25,7 @@ test('backup import requires preview and cancellation preserves records',async({
  await page.locator('#import-file').setInputFiles({name:'backup.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(backup))});
  await expect(page.getByRole('dialog')).toBeVisible();await page.getByRole('button',{name:'取消',exact:true}).click();
  expect(await page.evaluate(()=>localStorage.getItem('ruc802.practice.v1'))).toBeNull();
+ await expect(page.locator('[data-action="import"]')).toBeEnabled();
  await page.locator('#import-file').setInputFiles({name:'backup.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(backup))});
  await page.getByRole('button',{name:'合并导入',exact:true}).click();await expect(page.locator('#start-date')).toHaveValue('2026-11-01');
  expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('ruc802.practice.v1')).drafts.MI001)).toBe('备份草稿');
