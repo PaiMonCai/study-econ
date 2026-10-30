@@ -18646,9 +18646,9 @@
           "stage": 0,
           "dx": 8,
           "dy": -12,
-          "xLabel": "bₜ₀",
+          "xLabel": "b*",
           "description": "债务率递推的形式固定点b*=1，斜率大于1，局部不稳定。",
-          "yLabel": "bₜ₊₁₀"
+          "yLabel": "b*"
         },
         {
           "id": "first",
@@ -18658,9 +18658,9 @@
           "stage": 1,
           "dx": 10,
           "dy": -18,
-          "xLabel": "bₜ₁",
+          "xLabel": "b₀",
           "description": "题给b₀=0.8对应b₁=27/34≈0.794118，下降而非向1回归。",
-          "yLabel": "bₜ₊₁₁"
+          "yLabel": "b₁"
         },
         {
           "id": "second",
@@ -18670,9 +18670,9 @@
           "stage": 2,
           "dx": 10,
           "dy": 22,
-          "xLabel": "bₜ₂",
+          "xLabel": "b₁",
           "description": "再迭代一期的(b₁,b₂)，继续向下远离固定点。",
-          "yLabel": "bₜ₊₁₂"
+          "yLabel": "b₂"
         }
       ],
       "stages": [
