@@ -1,6 +1,6 @@
 {
   "name": "ruc-802-practice",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "人大802三科刷题、拍照作答、逐步解答、知识复盘与背诵",
   "private": true,
   "scripts": {

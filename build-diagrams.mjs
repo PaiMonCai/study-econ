@@ -15,6 +15,11 @@ export function validateDiagram(diagram, question) {
  require(Array.isArray(diagram.stages) && diagram.stages.length === 3 && diagram.stages.every(s => text(s.title) && text(s.explanation) && Array.isArray(s.checklist) && s.checklist.length > 0 && s.checklist.every(text)), 'three explained stages and drawing checks');
  require(Array.isArray(diagram.notes) && diagram.notes.length > 0 && diagram.notes.every(text), 'conditions and interpretation notes');
  if (diagram.mode === 'schematic') require(/示意/.test(diagram.intro + diagram.notes.join('')), 'schematic scope must be explicit');
+ if (diagram.textbook !== undefined) {
+  require(Array.isArray(diagram.textbook.references) && diagram.textbook.references.length > 0, 'textbook references');
+  for (const reference of diagram.textbook.references) require(text(reference.title) && text(reference.file) && text(reference.section) && Array.isArray(reference.pages) && reference.pages.length > 0 && reference.pages.every(p => Number.isInteger(p) && p > 0), 'textbook title, file, section and physical pages');
+  require(Array.isArray(diagram.textbook.checks) && diagram.textbook.checks.length > 0 && diagram.textbook.checks.every(text), 'textbook review checks');
+ }
  const kind = diagram.kind || 'plot';
  require(['plot', 'flow'].includes(kind), 'supported diagram kind');
  if (kind === 'flow') {
@@ -35,6 +40,10 @@ export function validateDiagram(diagram, question) {
   require(diagram.nodes.some(n => n.stage === 0), 'initial visible flow');
  } else {
   for (const axis of ['x', 'y']) require(text(diagram.axes?.[axis]?.label) && Number.isFinite(diagram.axes[axis].min) && Number.isFinite(diagram.axes[axis].max) && diagram.axes[axis].min < diagram.axes[axis].max, 'finite ' + axis + ' axis');
+  for (const axis of ['x', 'y']) if (diagram.axes[axis].ticks !== undefined) {
+   require(Array.isArray(diagram.axes[axis].ticks), 'axis ticks');
+   for (const tick of diagram.axes[axis].ticks) require(Number.isFinite(tick.value) && tick.value >= diagram.axes[axis].min && tick.value <= diagram.axes[axis].max && text(tick.label), 'finite labeled ticks within axis bounds');
+  }
   const coordinate = pair => Array.isArray(pair) && pair.length === 2 && pair.every(Number.isFinite) && pair[0] >= diagram.axes.x.min - 1e-8 && pair[0] <= diagram.axes.x.max + 1e-8 && pair[1] >= diagram.axes.y.min - 1e-8 && pair[1] <= diagram.axes.y.max + 1e-8;
   require(Array.isArray(diagram.series) && diagram.series.length > 0, 'plotted relationships');
   const seriesIds = new Set();
@@ -50,9 +59,18 @@ export function validateDiagram(diagram, question) {
   for (const point of diagram.points) {
    require(identifier(point.id) && !pointIds.has(point.id) && coordinate([point.x, point.y]) && text(point.label) && stage(point.stage), 'unique key points in bounds');
    require(['dx', 'dy'].every(key => point[key] === undefined || Number.isFinite(point[key]) && Math.abs(point[key]) <= 680), 'finite point-label offset');
+   require(point.description === undefined || text(point.description), 'point description');
+   require(point.projection === undefined || typeof point.projection === 'boolean', 'point projection flag');
+   require(['xLabel', 'yLabel'].every(key => point[key] === undefined || text(point[key])), 'axis projection labels');
    pointIds.add(point.id);
   }
-  for (const label of diagram.labels || []) require(coordinate([label.x, label.y]) && text(label.text) && stage(label.stage), 'plot label');
+  for (const label of diagram.labels || []) {
+   require(coordinate([label.x, label.y]) && text(label.text) && stage(label.stage), 'plot label');
+   if (label.curve_id !== undefined || label.curve_anchor !== undefined) {
+    const curve = diagram.series.find(s => s.id === label.curve_id);
+    require(curve && label.stage >= curve.stage && coordinate(label.curve_anchor) && curve.points.some(p => p.every((v,i) => Math.abs(v-label.curve_anchor[i]) < 1e-8)), 'curve label must name a visible series and exact sampled anchor');
+   }
+  }
   for (const arrow of diagram.arrows || []) require(coordinate(arrow.from) && coordinate(arrow.to) && stage(arrow.stage) && (!arrow.label || text(arrow.label)), 'plot arrow');
   require(diagram.series.some(s => s.stage === 0), 'initial plotted relationship');
  }

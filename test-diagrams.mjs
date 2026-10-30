@@ -22,6 +22,25 @@ test('all 300 coverage decisions bind only to their own original question and su
  }
 });
 
+test('every drawing names the textbook mechanism, physical pages and checked economic relationships', () => {
+ for (const subject of subjects) for (const d of banks[subject].diagrams) {
+  assert.ok(d.textbook?.references.length > 0,d.id+' missing textbook reference');
+  assert.ok(d.textbook.references.every(r=>r.file.endsWith('.pdf')&&r.pages.length&&r.pages.every(p=>Number.isInteger(p)&&p>0)),d.id);
+  assert.ok(d.textbook.checks.length>=2,d.id+' must explain what was checked');
+ }
+});
+
+test('political relationship drawings preserve circular reproduction and institutional direction', () => {
+ for (const qid of ['PE015','PE031','PE094']) {
+  assert.ok(political(qid).edges.some(e=>e.from==='n5'&&e.to==='n0'),qid+' must connect the next round');
+ }
+ const credit=political('PE061');
+ assert.ok(!credit.edges.some(e=>e.from==='social'&&e.to==='private'),'socialization does not cause private ownership');
+ const market=political('PE081');
+ for (const target of ['allocation','government'])assert.ok(market.edges.some(e=>e.from==='rules'&&e.to===target));
+ assert.ok(political('PE088').edges.some(e=>e.from==='n4'&&e.to==='n1'),'consumption feeds back to production');
+});
+
 test('rejects ungrounded diagrams and inconsistent coverage before publishing data', () => {
  const bank = structuredClone(banks.micro), q = questions.micro[0];
  const graph = structuredClone(bank.diagrams[0]);
@@ -32,6 +51,18 @@ test('rejects ungrounded diagrams and inconsistent coverage before publishing da
  assert.throws(() => validateDiagram({...graph, axes:{...graph.axes,x:{label:'x',min:1,max:1}}}, q), /axis/);
  assert.throws(() => validateDiagram({...graph, series:[{...graph.series[0], points:[[NaN,0],[1,1]]}]}, q), /coordinates/);
  assert.throws(() => validateDiagram({...graph, points:[{id:'bad',x:1e12,y:0,label:'bad',stage:0}]}, q), /key points/);
+});
+
+test('a curve name cannot be anchored to another curve or a hidden future relationship', () => {
+ const graph=structuredClone(banks.micro.diagrams[0]);
+ const q=questions.micro.find(q=>q.id===graph.question_id);
+ const label=graph.labels.find(l=>l.curve_id);
+ assert.ok(label,'consumer graph has explicit curve-name anchors');
+ label.curve_id='missing-curve';
+ assert.throws(()=>validateDiagram(graph,q),/curve label/);
+ label.curve_id=graph.series[0].id;
+ label.curve_anchor=[q.id.length,graph.axes.y.min];
+ assert.throws(()=>validateDiagram(graph,q),/curve label/);
 });
 
 test('flow edges cannot point at nodes that are hidden at that stage', () => {
@@ -51,6 +82,17 @@ test('PE012 compares absolute and relative surplus value as separate experiments
  close(facts.new_v / facts.rate,3);
  for (const id of ['base','extend']) for (const [hours,value] of d.series.find(s=>s.id===id).points) close(value,30*hours);
  assert.match(d.stages[2].explanation,/8小时/);
+});
+
+test('PE012 workday segments use the stated hours and compare each experiment with the baseline', () => {
+ const d=banks.political.diagrams.find(d=>d.id==='PE012-hours');
+ for (const [id,necessary,total] of [['base',4,8],['absolute',4,10],['relative',3,8]]) {
+  const n=d.series.find(s=>s.id===id+'-necessary'),m=d.series.find(s=>s.id===id+'-surplus');
+  close(n.points[1][0]-n.points[0][0],necessary);
+  close(m.points[1][0]-m.points[0][0],total-necessary);
+  close(n.points[1][0],m.points[0][0]);
+ }
+ assert.match(d.notes.join(''),/高度.*不表示价值量/);
 });
 
 test('PE016 separates transferred value, new value and the denominator of surplus-value ratios', () => {
