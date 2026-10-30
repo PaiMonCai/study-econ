@@ -17,13 +17,15 @@
   <script src="learning.js" defer></script>
   <script src="photos.js" defer></script>
   <link rel="stylesheet" href="server-store.css">
+  <link rel="stylesheet" href="interactions.css">
+  <script src="interactions.js" defer></script>
   <script src="state-model.js" defer></script>
   <script src="server-store.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">跳到主要内容</a>
-  <div id="app"><p class="loading">正在打开练习室…</p></div>
+  <div id="app" aria-busy="true"><section class="opening-state paper" role="status"><p>正在打开练习室…</p><p class="small muted">读取题库与学习记录，请稍候。</p></section></div>
   <div id="toast" role="status" aria-live="polite"></div>
   <noscript>请启用浏览器JavaScript以使用题库与保存练习记录。</noscript>
 </body>

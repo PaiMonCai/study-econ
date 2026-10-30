@@ -6,7 +6,7 @@ test('photo answers persist across reload and question changes and can be viewed
  await page.screenshot({path:info.outputPath('photo-answer.png'),fullPage:true});
  await page.getByRole('button',{name:'放大作答图片1',exact:true}).click();await expect(page.getByRole('dialog')).toBeVisible();await page.getByRole('button',{name:'关闭图片',exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);
  await page.getByRole('button',{name:'下一题',exact:true}).click();await expect(page.locator('[data-photo-status]')).toHaveText('尚未添加图片');await page.getByRole('button',{name:'上一题',exact:true}).click();await expect(page.locator('[data-photo-status]')).toHaveText('已保存 1/3 张');await page.reload();await expect(page.locator('[data-photo-status]')).toHaveText('已保存 1/3 张');
- await page.getByRole('button',{name:'删除图片1',exact:true}).click();await expect(page.locator('[data-photo-status]')).toHaveText('尚未添加图片');
+ await page.getByRole('button',{name:'删除图片1',exact:true}).click();await expect(page.getByRole('dialog')).toContainText('删除这张作答照片');await page.getByRole('dialog').getByRole('button',{name:'确认删除',exact:true}).click();await expect(page.locator('[data-photo-status]')).toHaveText('尚未添加图片');
 });
 test('photo answers reject invalid images and more than three images without partial writes',async({page})=>{
  await practice(page);const input=page.locator('input[data-photo-input][multiple]');await input.setInputFiles({name:'bad.png',mimeType:'image/png',buffer:Buffer.from('not an image')});await expect(page.locator('#toast')).toContainText(/图片|编码|source/i);await expect(page.locator('.photo-grid img')).toHaveCount(0);
@@ -21,7 +21,7 @@ test('progress export includes photo payload and canceled import preserves photo
 test('photo backup restores deleted photos and repeated imports do not duplicate them',async({page})=>{
  await practice(page);await page.locator('input[data-photo-input][multiple]').setInputFiles(await picture(page));await expect(page.locator('[data-photo-status]')).toHaveText('已保存 1/3 张');await page.goto('/#settings');
  const pending=page.waitForEvent('download');await page.getByRole('button',{name:'导出进度备份',exact:true}).click();const stream=await (await pending).createReadStream();let text='';for await(const chunk of stream)text+=chunk.toString();
- await page.goto('/#practice');await page.getByRole('button',{name:'删除图片1',exact:true}).click();await expect(page.locator('[data-photo-status]')).toHaveText('尚未添加图片');
+ await page.goto('/#practice');await page.getByRole('button',{name:'删除图片1',exact:true}).click();await expect(page.getByRole('dialog')).toContainText('删除这张作答照片');await page.getByRole('dialog').getByRole('button',{name:'确认删除',exact:true}).click();await expect(page.locator('[data-photo-status]')).toHaveText('尚未添加图片');
  for(let round=0;round<2;round++){
   await page.goto('/#settings');await page.locator('#import-file').setInputFiles({name:'photos.json',mimeType:'application/json',buffer:Buffer.from(text)});await expect(page.getByRole('dialog')).toContainText('1 张作答照片');await page.getByRole('button',{name:'合并导入',exact:true}).click();await expect(page.locator('#toast')).toContainText('已合并备份');
   await page.goto('/#practice');await expect(page.locator('[data-photo-status]')).toHaveText('已保存 1/3 张');await expect(page.locator('.photo-grid img')).toHaveCount(1);

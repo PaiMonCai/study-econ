@@ -42,7 +42,7 @@ test('backup previews recall data and merge never downgrades newer self-assessme
  await seed(page,value);await page.goto('/#settings');
  const incoming=oldBackup();incoming.recallProgress={FM01:{rating:0,at:1000,due:'2026-10-30'},FA01:{rating:1,at:3000,due:'2026-10-31'}};incoming.recallDrafts={FA01:'储蓄投资口径'};
  const before=await page.evaluate(key=>localStorage.getItem(key),key);await upload(page,incoming);await expect(page.getByRole('dialog')).toContainText('2 张背诵自评');await page.getByRole('button',{name:'取消',exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);expect(await page.evaluate(key=>localStorage.getItem(key),key)).toBe(before);
- await upload(page,incoming);await page.getByRole('button',{name:'合并导入',exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);await expect(page.getByRole('status')).toHaveText('已合并备份，共1次作答');
+ await upload(page,incoming);await page.getByRole('button',{name:'合并导入',exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);await expect(page.locator('#toast')).toHaveText('已合并备份，共1次作答');
  let result=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);expect(result.recallProgress.FM01.rating).toBe(2);expect(result.recallDrafts.FM01).toBe('本地回忆');expect(result.recallDrafts.FA01).toBe('储蓄投资口径');expect(result.records).toHaveLength(1);
  await upload(page,oldBackup());await page.getByRole('button',{name:'合并导入',exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);result=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);expect(Object.keys(result.recallProgress)).toHaveLength(2);
 });
@@ -62,5 +62,5 @@ test('learning lists and long formulas fit screen and reading settings',async({p
 test('storage failure reports unsaved recall drafts and self-assessments',async({page})=>{
  await page.addInitScript(()=>{Storage.prototype.setItem=function(){throw new DOMException('Full','QuotaExceededError');};});
  await page.goto('/#recall');await page.getByRole('button',{name:'背诵 FM01',exact:true}).click();await page.getByRole('textbox',{name:'我的回忆',exact:true}).fill('仍能导出的临时草稿');await expect(page.locator('#recall-draft-status')).toHaveText('未能保存，请导出备份');
- await page.getByRole('button',{name:'展开原条目核对',exact:true}).click();await page.getByRole('button',{name:'会背，3天后复习',exact:true}).click();await expect(page.getByRole('status')).toHaveText('未能保存，请立即导出备份');await expect(page.locator('.recall-saved')).toContainText('尚未写入浏览器');expect(await page.evaluate(key=>localStorage.getItem(key),key)).toBeNull();
+ await page.getByRole('button',{name:'展开原条目核对',exact:true}).click();await page.getByRole('button',{name:'会背，3天后复习',exact:true}).click();await expect(page.locator('#toast')).toHaveText('未能保存，请立即导出备份');await expect(page.locator('.recall-saved')).toContainText('尚未写入浏览器');expect(await page.evaluate(key=>localStorage.getItem(key),key)).toBeNull();
 });

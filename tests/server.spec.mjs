@@ -52,6 +52,6 @@ test('legacy browser progress and photos migrate only after confirmation',async(
 test('same recall draft conflict requires an explicit choice and preserves both until resolved',async({page,browser})=>{
  await login(page);const context=await browser.newContext();try{const other=await context.newPage();await login(other);for(const target of [page,other]){await target.goto(url+'#recall');await target.getByRole('button',{name:'背诵 FM02',exact:true}).click();}
  await page.locator('#recall-draft').fill('第一台设备的回忆');await expect(page.locator('.local-status')).toHaveText('服务器已保存');await other.locator('#recall-draft').fill('第二台设备的回忆');await expect(other.locator('.local-status')).toHaveText('草稿有冲突，请处理');await expect(other.locator('#recall-draft')).toHaveValue('第二台设备的回忆');
- other.once('dialog',d=>d.accept());await other.getByRole('button',{name:'使用服务器版本',exact:true}).click();await expect(other.locator('#recall-draft')).toHaveValue('第一台设备的回忆');await expect(other.locator('.local-status')).toHaveText('服务器已保存');
+ await other.getByRole('button',{name:'使用服务器版本',exact:true}).click();await other.getByRole('dialog').getByRole('button',{name:'确认使用服务器版本',exact:true}).click();await expect(other.locator('#recall-draft')).toHaveValue('第一台设备的回忆');await expect(other.locator('.local-status')).toHaveText('服务器已保存');
  }finally{await context.close();}
 });

@@ -1,6 +1,6 @@
 # 在自己的服务器部署
 
-300题、解答、公式字体、配套资料均包含在部署包中，无需Sites、ChatGPT登录或OpenAI密钥。v1.5.0默认使用Node.js内置SQLite保存学习进度和作答照片，不需要另装数据库服务。
+300题、解答、公式字体、配套资料均包含在部署包中，无需Sites、ChatGPT登录或OpenAI密钥。自v1.5.0起默认使用Node.js内置SQLite保存学习进度和作答照片，不需要另装数据库服务。
 
 ## Docker Compose首次部署
 
@@ -42,11 +42,15 @@ https://你的域名/802/#token=你的令牌
 
 公网使用HTTPS；接入HTTPS后将`ACCESS_COOKIE_SECURE=true`，只用HTTPS访问。直接HTTP测试时保持false。若只经本机反向代理访问，将`BIND_ADDRESS=127.0.0.1`。
 
+## 从v1.5更新
+
+本轮v1.6.0打磨前端交互，沿用v1.5的数据库与访问配置。保留自己的`.env`和原数据卷，将`IMAGE`改为`ghcr.io/paimoncai/study-econ:v1.6.0`后执行`docker compose pull`和`docker compose up -d`。无需重复迁移已写入服务器的数据。若此前仍使用v1.4及更早版本，继续按下一节同步更新Compose和访问配置。
+
 ## 从v1.4及更早版本更新
 
 1. 先在旧浏览器“设置与备份”导出完整JSON，保留照片；不要清除旧网站数据。
-2. 换入v1.5.0部署包中的`compose.yaml`、`.env.example`和部署文件，保留自己的`.env`并补入口令。只修改旧Compose的镜像版本不会自动增加数据卷和访问配置。
-3. 将`IMAGE`设为`ghcr.io/paimoncai/study-econ:v1.5.0`，保持原Compose项目名，执行`docker compose pull`和`docker compose up -d`。
+2. 换入v1.6.0部署包中的`compose.yaml`、`.env.example`和部署文件，保留自己的`.env`并补入口令。只修改旧Compose的镜像版本不会自动增加数据卷和访问配置。
+3. 将`IMAGE`设为`ghcr.io/paimoncai/study-econ:v1.6.0`，保持原Compose项目名，执行`docker compose pull`和`docker compose up -d`。
 4. 登录后打开“设置与备份”，选择“检查并迁移本机旧数据”，预览后确认；或导入刚导出的完整JSON。迁移读取当前网站地址下的旧浏览器存储，网址或端口变更时需通过JSON迁移。
 5. 在另一个浏览器登录，确认记录、背诵与照片可见，再继续学习。
 
@@ -111,4 +115,4 @@ npm run package
 
 测试覆盖原题库、公式、旧浏览器模式，以及认证、数据库重启、不同设备合并、冲突、照片、原子导入、断网恢复与迁移。CI分别在amd64和arm64原生运行器构建，启动根路径、子目录和Compose，并重建服务核验持久化。
 
-仓库为`https://github.com/PaiMonCai/study-econ`。稳定版`ghcr.io/paimoncai/study-econ:latest`，固定版`v1.5.0`，日常版`dev`。main通过验证后发布dev；版本标签与package.json一致时发布正式镜像、latest和部署包。源码构建可叠加`compose.build.yaml`。
+仓库为`https://github.com/PaiMonCai/study-econ`。稳定版`ghcr.io/paimoncai/study-econ:latest`，固定版`v1.6.0`，日常版`dev`。main通过验证后发布dev；版本标签与package.json一致时发布正式镜像、latest和部署包。源码构建可叠加`compose.build.yaml`。

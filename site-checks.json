@@ -1,13 +1,13 @@
 {
   "all_passed": true,
-  "count": 8529,
+  "count": 8533,
   "questions": 300,
   "days": 50,
   "mathCount": 1718,
   "solutionMathCount": 2462,
   "recallCards": 323,
   "recallMathCount": 1475,
-  "assetCount": 82,
+  "assetCount": 84,
   "checks": [
     {
       "name": "micro source hash",
@@ -33502,6 +33502,14 @@
       "passed": true
     },
     {
+      "name": "local asset interactions.css",
+      "passed": true
+    },
+    {
+      "name": "local asset interactions.js",
+      "passed": true
+    },
+    {
       "name": "local asset state-model.js",
       "passed": true
     },
@@ -33803,6 +33811,14 @@
     },
     {
       "name": "static file under platform size limit index.html",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit interactions.css",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit interactions.js",
       "passed": true
     },
     {

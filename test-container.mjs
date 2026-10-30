@@ -27,7 +27,7 @@ async function smoke(id,base,expectSaved=false){
  const home=await request('/');assert.equal(home.status,200);assert.match(await home.text(),/802练习室/);
  const data=await request('/data.js');assert.equal(data.status,200);const script=await data.text();assert.match(script,/MI100/);assert.match(script,/FM53/);assert.match(script,/recall/);
  assert.match(script,/solution/);assert.match(script,/application_md/);
- for(const asset of ['learning.js','learning.css','photos.js','photos.css','solutions.css'])assert.equal((await request('/'+asset)).status,200);
+ for(const asset of ['learning.js','learning.css','photos.js','photos.css','solutions.css','interactions.js','interactions.css'])assert.equal((await request('/'+asset)).status,200);
  assert.match(home.headers.get('content-security-policy'),/img-src[^;]*blob:/);
  const pdf=await request('/materials/micro-training.pdf',{headers:{Range:'bytes=0-7'}});assert.equal(pdf.status,206);assert.match(Buffer.from(await pdf.arrayBuffer()).toString(),/^%PDF/);
  assert.equal((await request('/.env')).status,403);
