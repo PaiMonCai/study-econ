@@ -10,26 +10,26 @@
   "sourceHashes": {
     "micro": "164d7702616adbda5774c9bc234cffc48ab2bba51ab9c2c3470f15a943613844",
     "knowledge_micro": "0e66e1dc0f1bc70e980896320bbd5df15104ecd9a3e499597d0a3b220f95d2c5",
-    "diagrams_micro": "79f8c76eafdfe0df0d5d80416384fb4bea841adb344389664e38a24df2b961c8",
+    "diagrams_micro": "7804ce1cd12a7cdcc7bd3a1bdfb2bb99ff88d75dccb6f8613ae52b2ed0e5e91e",
     "macro": "12a3865b82b528252ee2a0c51df5cb7134946017428aa589d8d7289fcdb0ceed",
     "knowledge_macro": "a5b340d7391c9d9ff5d3d10aa4b7cc6ceae64a89182677eb52af1f8d1359ecaf",
-    "diagrams_macro": "869e2cbd79c610ada33233d5890ecd7106ce0610c89664b2afed21e732d7aacc",
+    "diagrams_macro": "e89d32ae5bcf7c181a7d918489a28a07c72732edcdca0a53ff5129af714aa568",
     "political": "0d0ae99627b01cd9899fd85e1a1eca16366dafd9c82eab73afe4c37188fdda49",
     "knowledge_political": "141fc02f90329d608d6a7690e7a2f65bc3f92233b3bd0eb348cd7f5ad9e60dd0",
-    "diagrams_political": "097e8f6f0ed6a18f3e805711d42aed3122d66cd3c8f90c7f1d00edb0efe84357",
+    "diagrams_political": "5d6e4e63f6a3edd71f067b0d73038bceb25763e592e4d4fa37be2451ba5955c8",
     "recall": "3c16a1474056b42d8259e0258d52318bd52c6bfa17a6be6308acb8cf76a3106c"
   },
   "diagramSummary": {
-    "total": 73,
-    "numeric": 56,
-    "schematic": 3,
+    "total": 95,
+    "numeric": 66,
+    "schematic": 15,
     "structure": 14,
     "subjects": {
-      "micro": 33,
-      "macro": 22,
-      "political": 18
+      "micro": 35,
+      "macro": 41,
+      "political": 19
     }
   },
   "materials": 5,
-  "builtAt": "2026-10-30T15:04:59.277Z"
+  "builtAt": "2026-10-30T17:21:12.703Z"
 }
