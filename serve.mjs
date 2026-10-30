@@ -25,7 +25,7 @@ export async function createApp({directory=path.join(HERE,'dist'),basePath=''}={
   res.setHeader('X-Content-Type-Options','nosniff');
   res.setHeader('Referrer-Policy','same-origin');
   res.setHeader('X-Frame-Options','SAMEORIGIN');
-  res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'");
+  res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'");
   function text(status,message,headers={}){res.writeHead(status,{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'no-store',...headers});res.end(req.method==='HEAD'?undefined:message);}
   if(!['GET','HEAD'].includes(req.method)){text(405,'Method not allowed',{'Allow':'GET, HEAD'});return;}
   let route;

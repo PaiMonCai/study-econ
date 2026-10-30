@@ -1,15 +1,20 @@
 {
   "all_passed": true,
-  "count": 7013,
+  "count": 8523,
   "questions": 300,
   "days": 50,
   "mathCount": 1718,
+  "solutionMathCount": 2462,
   "recallCards": 323,
   "recallMathCount": 1475,
-  "assetCount": 76,
+  "assetCount": 79,
   "checks": [
     {
       "name": "micro source hash",
+      "passed": true
+    },
+    {
+      "name": "micro knowledge annotation hash",
       "passed": true
     },
     {
@@ -70,6 +75,26 @@
     },
     {
       "name": "MI001 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI001 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI001 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI001 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI001 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI001 knowledge cards same subject",
       "passed": true
     },
     {
@@ -145,6 +170,26 @@
       "passed": true
     },
     {
+      "name": "MI002 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI002 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI002 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI002 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI002 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI002 round 1",
       "passed": true
     },
@@ -214,6 +259,26 @@
     },
     {
       "name": "MI003 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI003 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI003 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI003 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI003 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI003 knowledge cards same subject",
       "passed": true
     },
     {
@@ -289,6 +354,26 @@
       "passed": true
     },
     {
+      "name": "MI004 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI004 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI004 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI004 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI004 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI004 round 1",
       "passed": true
     },
@@ -358,6 +443,26 @@
     },
     {
       "name": "MI005 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI005 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI005 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI005 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI005 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI005 knowledge cards same subject",
       "passed": true
     },
     {
@@ -433,6 +538,26 @@
       "passed": true
     },
     {
+      "name": "MI006 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI006 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI006 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI006 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI006 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI006 round 1",
       "passed": true
     },
@@ -502,6 +627,26 @@
     },
     {
       "name": "MI007 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI007 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI007 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI007 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI007 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI007 knowledge cards same subject",
       "passed": true
     },
     {
@@ -577,6 +722,26 @@
       "passed": true
     },
     {
+      "name": "MI008 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI008 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI008 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI008 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI008 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI008 round 1",
       "passed": true
     },
@@ -646,6 +811,26 @@
     },
     {
       "name": "MI009 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI009 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI009 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI009 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI009 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI009 knowledge cards same subject",
       "passed": true
     },
     {
@@ -721,6 +906,26 @@
       "passed": true
     },
     {
+      "name": "MI010 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI010 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI010 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI010 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI010 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI010 round 1",
       "passed": true
     },
@@ -790,6 +995,26 @@
     },
     {
       "name": "MI011 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI011 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI011 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI011 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI011 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI011 knowledge cards same subject",
       "passed": true
     },
     {
@@ -865,6 +1090,26 @@
       "passed": true
     },
     {
+      "name": "MI012 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI012 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI012 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI012 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI012 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI012 round 1",
       "passed": true
     },
@@ -934,6 +1179,26 @@
     },
     {
       "name": "MI013 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI013 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI013 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI013 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI013 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI013 knowledge cards same subject",
       "passed": true
     },
     {
@@ -1009,6 +1274,26 @@
       "passed": true
     },
     {
+      "name": "MI014 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI014 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI014 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI014 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI014 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI014 round 1",
       "passed": true
     },
@@ -1078,6 +1363,26 @@
     },
     {
       "name": "MI015 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI015 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI015 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI015 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI015 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI015 knowledge cards same subject",
       "passed": true
     },
     {
@@ -1153,6 +1458,26 @@
       "passed": true
     },
     {
+      "name": "MI016 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI016 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI016 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI016 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI016 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI016 round 1",
       "passed": true
     },
@@ -1222,6 +1547,26 @@
     },
     {
       "name": "MI017 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI017 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI017 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI017 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI017 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI017 knowledge cards same subject",
       "passed": true
     },
     {
@@ -1297,6 +1642,26 @@
       "passed": true
     },
     {
+      "name": "MI018 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI018 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI018 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI018 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI018 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI018 round 1",
       "passed": true
     },
@@ -1366,6 +1731,26 @@
     },
     {
       "name": "MI019 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI019 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI019 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI019 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI019 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI019 knowledge cards same subject",
       "passed": true
     },
     {
@@ -1441,6 +1826,26 @@
       "passed": true
     },
     {
+      "name": "MI020 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI020 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI020 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI020 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI020 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI020 round 1",
       "passed": true
     },
@@ -1510,6 +1915,26 @@
     },
     {
       "name": "MI021 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI021 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI021 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI021 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI021 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI021 knowledge cards same subject",
       "passed": true
     },
     {
@@ -1585,6 +2010,26 @@
       "passed": true
     },
     {
+      "name": "MI022 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI022 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI022 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI022 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI022 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI022 round 1",
       "passed": true
     },
@@ -1654,6 +2099,26 @@
     },
     {
       "name": "MI023 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI023 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI023 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI023 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI023 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI023 knowledge cards same subject",
       "passed": true
     },
     {
@@ -1729,6 +2194,26 @@
       "passed": true
     },
     {
+      "name": "MI024 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI024 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI024 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI024 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI024 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI024 round 1",
       "passed": true
     },
@@ -1798,6 +2283,26 @@
     },
     {
       "name": "MI025 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI025 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI025 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI025 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI025 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI025 knowledge cards same subject",
       "passed": true
     },
     {
@@ -1873,6 +2378,26 @@
       "passed": true
     },
     {
+      "name": "MI026 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI026 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI026 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI026 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI026 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI026 round 1",
       "passed": true
     },
@@ -1942,6 +2467,26 @@
     },
     {
       "name": "MI027 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI027 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI027 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI027 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI027 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI027 knowledge cards same subject",
       "passed": true
     },
     {
@@ -2017,6 +2562,26 @@
       "passed": true
     },
     {
+      "name": "MI028 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI028 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI028 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI028 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI028 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI028 round 1",
       "passed": true
     },
@@ -2086,6 +2651,26 @@
     },
     {
       "name": "MI029 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI029 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI029 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI029 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI029 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI029 knowledge cards same subject",
       "passed": true
     },
     {
@@ -2161,6 +2746,26 @@
       "passed": true
     },
     {
+      "name": "MI030 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI030 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI030 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI030 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI030 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI030 round 1",
       "passed": true
     },
@@ -2230,6 +2835,26 @@
     },
     {
       "name": "MI031 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI031 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI031 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI031 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI031 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI031 knowledge cards same subject",
       "passed": true
     },
     {
@@ -2305,6 +2930,26 @@
       "passed": true
     },
     {
+      "name": "MI032 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI032 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI032 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI032 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI032 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI032 round 1",
       "passed": true
     },
@@ -2374,6 +3019,26 @@
     },
     {
       "name": "MI033 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI033 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI033 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI033 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI033 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI033 knowledge cards same subject",
       "passed": true
     },
     {
@@ -2449,6 +3114,26 @@
       "passed": true
     },
     {
+      "name": "MI034 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI034 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI034 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI034 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI034 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI034 round 1",
       "passed": true
     },
@@ -2518,6 +3203,26 @@
     },
     {
       "name": "MI035 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI035 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI035 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI035 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI035 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI035 knowledge cards same subject",
       "passed": true
     },
     {
@@ -2593,6 +3298,26 @@
       "passed": true
     },
     {
+      "name": "MI036 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI036 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI036 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI036 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI036 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI036 round 1",
       "passed": true
     },
@@ -2662,6 +3387,26 @@
     },
     {
       "name": "MI037 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI037 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI037 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI037 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI037 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI037 knowledge cards same subject",
       "passed": true
     },
     {
@@ -2737,6 +3482,26 @@
       "passed": true
     },
     {
+      "name": "MI038 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI038 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI038 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI038 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI038 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI038 round 1",
       "passed": true
     },
@@ -2806,6 +3571,26 @@
     },
     {
       "name": "MI039 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI039 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI039 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI039 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI039 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI039 knowledge cards same subject",
       "passed": true
     },
     {
@@ -2881,6 +3666,26 @@
       "passed": true
     },
     {
+      "name": "MI040 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI040 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI040 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI040 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI040 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI040 round 1",
       "passed": true
     },
@@ -2950,6 +3755,26 @@
     },
     {
       "name": "MI041 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI041 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI041 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI041 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI041 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI041 knowledge cards same subject",
       "passed": true
     },
     {
@@ -3025,6 +3850,26 @@
       "passed": true
     },
     {
+      "name": "MI042 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI042 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI042 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI042 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI042 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI042 round 1",
       "passed": true
     },
@@ -3094,6 +3939,26 @@
     },
     {
       "name": "MI043 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI043 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI043 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI043 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI043 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI043 knowledge cards same subject",
       "passed": true
     },
     {
@@ -3169,6 +4034,26 @@
       "passed": true
     },
     {
+      "name": "MI044 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI044 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI044 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI044 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI044 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI044 round 1",
       "passed": true
     },
@@ -3238,6 +4123,26 @@
     },
     {
       "name": "MI045 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI045 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI045 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI045 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI045 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI045 knowledge cards same subject",
       "passed": true
     },
     {
@@ -3313,6 +4218,26 @@
       "passed": true
     },
     {
+      "name": "MI046 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI046 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI046 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI046 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI046 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI046 round 1",
       "passed": true
     },
@@ -3382,6 +4307,26 @@
     },
     {
       "name": "MI047 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI047 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI047 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI047 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI047 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI047 knowledge cards same subject",
       "passed": true
     },
     {
@@ -3457,6 +4402,26 @@
       "passed": true
     },
     {
+      "name": "MI048 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI048 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI048 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI048 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI048 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI048 round 1",
       "passed": true
     },
@@ -3526,6 +4491,26 @@
     },
     {
       "name": "MI049 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI049 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI049 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI049 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI049 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI049 knowledge cards same subject",
       "passed": true
     },
     {
@@ -3601,6 +4586,26 @@
       "passed": true
     },
     {
+      "name": "MI050 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI050 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI050 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI050 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI050 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI050 round 1",
       "passed": true
     },
@@ -3670,6 +4675,26 @@
     },
     {
       "name": "MI051 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI051 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI051 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI051 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI051 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI051 knowledge cards same subject",
       "passed": true
     },
     {
@@ -3745,6 +4770,26 @@
       "passed": true
     },
     {
+      "name": "MI052 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI052 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI052 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI052 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI052 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI052 round 1",
       "passed": true
     },
@@ -3814,6 +4859,26 @@
     },
     {
       "name": "MI053 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI053 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI053 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI053 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI053 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI053 knowledge cards same subject",
       "passed": true
     },
     {
@@ -3889,6 +4954,26 @@
       "passed": true
     },
     {
+      "name": "MI054 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI054 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI054 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI054 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI054 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI054 round 1",
       "passed": true
     },
@@ -3958,6 +5043,26 @@
     },
     {
       "name": "MI055 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI055 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI055 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI055 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI055 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI055 knowledge cards same subject",
       "passed": true
     },
     {
@@ -4033,6 +5138,26 @@
       "passed": true
     },
     {
+      "name": "MI056 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI056 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI056 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI056 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI056 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI056 round 1",
       "passed": true
     },
@@ -4102,6 +5227,26 @@
     },
     {
       "name": "MI057 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI057 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI057 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI057 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI057 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI057 knowledge cards same subject",
       "passed": true
     },
     {
@@ -4177,6 +5322,26 @@
       "passed": true
     },
     {
+      "name": "MI058 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI058 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI058 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI058 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI058 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI058 round 1",
       "passed": true
     },
@@ -4246,6 +5411,26 @@
     },
     {
       "name": "MI059 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI059 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI059 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI059 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI059 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI059 knowledge cards same subject",
       "passed": true
     },
     {
@@ -4321,6 +5506,26 @@
       "passed": true
     },
     {
+      "name": "MI060 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI060 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI060 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI060 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI060 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI060 round 1",
       "passed": true
     },
@@ -4390,6 +5595,26 @@
     },
     {
       "name": "MI061 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI061 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI061 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI061 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI061 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI061 knowledge cards same subject",
       "passed": true
     },
     {
@@ -4465,6 +5690,26 @@
       "passed": true
     },
     {
+      "name": "MI062 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI062 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI062 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI062 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI062 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI062 round 1",
       "passed": true
     },
@@ -4534,6 +5779,26 @@
     },
     {
       "name": "MI063 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI063 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI063 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI063 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI063 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI063 knowledge cards same subject",
       "passed": true
     },
     {
@@ -4609,6 +5874,26 @@
       "passed": true
     },
     {
+      "name": "MI064 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI064 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI064 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI064 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI064 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI064 round 1",
       "passed": true
     },
@@ -4678,6 +5963,26 @@
     },
     {
       "name": "MI065 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI065 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI065 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI065 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI065 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI065 knowledge cards same subject",
       "passed": true
     },
     {
@@ -4753,6 +6058,26 @@
       "passed": true
     },
     {
+      "name": "MI066 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI066 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI066 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI066 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI066 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI066 round 1",
       "passed": true
     },
@@ -4822,6 +6147,26 @@
     },
     {
       "name": "MI067 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI067 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI067 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI067 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI067 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI067 knowledge cards same subject",
       "passed": true
     },
     {
@@ -4897,6 +6242,26 @@
       "passed": true
     },
     {
+      "name": "MI068 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI068 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI068 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI068 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI068 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI068 round 1",
       "passed": true
     },
@@ -4966,6 +6331,26 @@
     },
     {
       "name": "MI069 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI069 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI069 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI069 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI069 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI069 knowledge cards same subject",
       "passed": true
     },
     {
@@ -5041,6 +6426,26 @@
       "passed": true
     },
     {
+      "name": "MI070 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI070 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI070 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI070 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI070 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI070 round 1",
       "passed": true
     },
@@ -5110,6 +6515,26 @@
     },
     {
       "name": "MI071 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI071 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI071 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI071 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI071 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI071 knowledge cards same subject",
       "passed": true
     },
     {
@@ -5185,6 +6610,26 @@
       "passed": true
     },
     {
+      "name": "MI072 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI072 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI072 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI072 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI072 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI072 round 1",
       "passed": true
     },
@@ -5254,6 +6699,26 @@
     },
     {
       "name": "MI073 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI073 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI073 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI073 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI073 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI073 knowledge cards same subject",
       "passed": true
     },
     {
@@ -5329,6 +6794,26 @@
       "passed": true
     },
     {
+      "name": "MI074 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI074 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI074 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI074 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI074 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI074 round 1",
       "passed": true
     },
@@ -5398,6 +6883,26 @@
     },
     {
       "name": "MI075 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI075 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI075 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI075 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI075 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI075 knowledge cards same subject",
       "passed": true
     },
     {
@@ -5473,6 +6978,26 @@
       "passed": true
     },
     {
+      "name": "MI076 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI076 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI076 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI076 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI076 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI076 round 1",
       "passed": true
     },
@@ -5542,6 +7067,26 @@
     },
     {
       "name": "MI077 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI077 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI077 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI077 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI077 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI077 knowledge cards same subject",
       "passed": true
     },
     {
@@ -5617,6 +7162,26 @@
       "passed": true
     },
     {
+      "name": "MI078 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI078 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI078 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI078 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI078 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI078 round 1",
       "passed": true
     },
@@ -5686,6 +7251,26 @@
     },
     {
       "name": "MI079 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI079 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI079 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI079 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI079 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI079 knowledge cards same subject",
       "passed": true
     },
     {
@@ -5761,6 +7346,26 @@
       "passed": true
     },
     {
+      "name": "MI080 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI080 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI080 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI080 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI080 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI080 round 1",
       "passed": true
     },
@@ -5830,6 +7435,26 @@
     },
     {
       "name": "MI081 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI081 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI081 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI081 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI081 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI081 knowledge cards same subject",
       "passed": true
     },
     {
@@ -5905,6 +7530,26 @@
       "passed": true
     },
     {
+      "name": "MI082 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI082 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI082 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI082 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI082 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI082 round 1",
       "passed": true
     },
@@ -5974,6 +7619,26 @@
     },
     {
       "name": "MI083 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI083 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI083 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI083 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI083 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI083 knowledge cards same subject",
       "passed": true
     },
     {
@@ -6049,6 +7714,26 @@
       "passed": true
     },
     {
+      "name": "MI084 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI084 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI084 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI084 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI084 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI084 round 1",
       "passed": true
     },
@@ -6118,6 +7803,26 @@
     },
     {
       "name": "MI085 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI085 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI085 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI085 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI085 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI085 knowledge cards same subject",
       "passed": true
     },
     {
@@ -6193,6 +7898,26 @@
       "passed": true
     },
     {
+      "name": "MI086 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI086 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI086 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI086 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI086 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI086 round 1",
       "passed": true
     },
@@ -6262,6 +7987,26 @@
     },
     {
       "name": "MI087 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI087 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI087 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI087 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI087 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI087 knowledge cards same subject",
       "passed": true
     },
     {
@@ -6337,6 +8082,26 @@
       "passed": true
     },
     {
+      "name": "MI088 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI088 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI088 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI088 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI088 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI088 round 1",
       "passed": true
     },
@@ -6406,6 +8171,26 @@
     },
     {
       "name": "MI089 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI089 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI089 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI089 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI089 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI089 knowledge cards same subject",
       "passed": true
     },
     {
@@ -6481,6 +8266,26 @@
       "passed": true
     },
     {
+      "name": "MI090 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI090 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI090 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI090 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI090 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI090 round 1",
       "passed": true
     },
@@ -6550,6 +8355,26 @@
     },
     {
       "name": "MI091 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI091 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI091 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI091 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI091 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI091 knowledge cards same subject",
       "passed": true
     },
     {
@@ -6625,6 +8450,26 @@
       "passed": true
     },
     {
+      "name": "MI092 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI092 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI092 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI092 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI092 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI092 round 1",
       "passed": true
     },
@@ -6694,6 +8539,26 @@
     },
     {
       "name": "MI093 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI093 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI093 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI093 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI093 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI093 knowledge cards same subject",
       "passed": true
     },
     {
@@ -6769,6 +8634,26 @@
       "passed": true
     },
     {
+      "name": "MI094 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI094 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI094 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI094 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI094 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI094 round 1",
       "passed": true
     },
@@ -6838,6 +8723,26 @@
     },
     {
       "name": "MI095 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI095 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI095 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI095 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI095 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI095 knowledge cards same subject",
       "passed": true
     },
     {
@@ -6913,6 +8818,26 @@
       "passed": true
     },
     {
+      "name": "MI096 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI096 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI096 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI096 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI096 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI096 round 1",
       "passed": true
     },
@@ -6982,6 +8907,26 @@
     },
     {
       "name": "MI097 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI097 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI097 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI097 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI097 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI097 knowledge cards same subject",
       "passed": true
     },
     {
@@ -7057,6 +9002,26 @@
       "passed": true
     },
     {
+      "name": "MI098 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI098 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI098 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI098 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI098 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI098 round 1",
       "passed": true
     },
@@ -7126,6 +9091,26 @@
     },
     {
       "name": "MI099 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MI099 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI099 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI099 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI099 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI099 knowledge cards same subject",
       "passed": true
     },
     {
@@ -7201,6 +9186,26 @@
       "passed": true
     },
     {
+      "name": "MI100 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MI100 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MI100 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MI100 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MI100 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MI100 round 1",
       "passed": true
     },
@@ -7222,6 +9227,10 @@
     },
     {
       "name": "macro source hash",
+      "passed": true
+    },
+    {
+      "name": "macro knowledge annotation hash",
       "passed": true
     },
     {
@@ -7282,6 +9291,26 @@
     },
     {
       "name": "MA001 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA001 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA001 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA001 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA001 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA001 knowledge cards same subject",
       "passed": true
     },
     {
@@ -7357,6 +9386,26 @@
       "passed": true
     },
     {
+      "name": "MA002 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA002 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA002 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA002 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA002 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA002 round 1",
       "passed": true
     },
@@ -7426,6 +9475,26 @@
     },
     {
       "name": "MA003 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA003 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA003 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA003 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA003 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA003 knowledge cards same subject",
       "passed": true
     },
     {
@@ -7501,6 +9570,26 @@
       "passed": true
     },
     {
+      "name": "MA004 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA004 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA004 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA004 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA004 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA004 round 1",
       "passed": true
     },
@@ -7570,6 +9659,26 @@
     },
     {
       "name": "MA005 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA005 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA005 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA005 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA005 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA005 knowledge cards same subject",
       "passed": true
     },
     {
@@ -7645,6 +9754,26 @@
       "passed": true
     },
     {
+      "name": "MA006 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA006 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA006 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA006 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA006 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA006 round 1",
       "passed": true
     },
@@ -7714,6 +9843,26 @@
     },
     {
       "name": "MA007 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA007 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA007 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA007 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA007 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA007 knowledge cards same subject",
       "passed": true
     },
     {
@@ -7789,6 +9938,26 @@
       "passed": true
     },
     {
+      "name": "MA008 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA008 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA008 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA008 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA008 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA008 round 1",
       "passed": true
     },
@@ -7858,6 +10027,26 @@
     },
     {
       "name": "MA009 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA009 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA009 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA009 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA009 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA009 knowledge cards same subject",
       "passed": true
     },
     {
@@ -7933,6 +10122,26 @@
       "passed": true
     },
     {
+      "name": "MA010 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA010 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA010 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA010 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA010 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA010 round 1",
       "passed": true
     },
@@ -8002,6 +10211,26 @@
     },
     {
       "name": "MA011 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA011 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA011 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA011 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA011 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA011 knowledge cards same subject",
       "passed": true
     },
     {
@@ -8077,6 +10306,26 @@
       "passed": true
     },
     {
+      "name": "MA012 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA012 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA012 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA012 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA012 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA012 round 1",
       "passed": true
     },
@@ -8146,6 +10395,26 @@
     },
     {
       "name": "MA013 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA013 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA013 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA013 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA013 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA013 knowledge cards same subject",
       "passed": true
     },
     {
@@ -8221,6 +10490,26 @@
       "passed": true
     },
     {
+      "name": "MA014 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA014 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA014 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA014 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA014 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA014 round 1",
       "passed": true
     },
@@ -8290,6 +10579,26 @@
     },
     {
       "name": "MA015 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA015 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA015 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA015 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA015 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA015 knowledge cards same subject",
       "passed": true
     },
     {
@@ -8365,6 +10674,26 @@
       "passed": true
     },
     {
+      "name": "MA016 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA016 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA016 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA016 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA016 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA016 round 1",
       "passed": true
     },
@@ -8434,6 +10763,26 @@
     },
     {
       "name": "MA017 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA017 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA017 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA017 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA017 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA017 knowledge cards same subject",
       "passed": true
     },
     {
@@ -8509,6 +10858,26 @@
       "passed": true
     },
     {
+      "name": "MA018 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA018 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA018 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA018 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA018 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA018 round 1",
       "passed": true
     },
@@ -8578,6 +10947,26 @@
     },
     {
       "name": "MA019 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA019 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA019 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA019 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA019 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA019 knowledge cards same subject",
       "passed": true
     },
     {
@@ -8653,6 +11042,26 @@
       "passed": true
     },
     {
+      "name": "MA020 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA020 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA020 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA020 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA020 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA020 round 1",
       "passed": true
     },
@@ -8722,6 +11131,26 @@
     },
     {
       "name": "MA021 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA021 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA021 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA021 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA021 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA021 knowledge cards same subject",
       "passed": true
     },
     {
@@ -8797,6 +11226,26 @@
       "passed": true
     },
     {
+      "name": "MA022 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA022 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA022 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA022 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA022 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA022 round 1",
       "passed": true
     },
@@ -8866,6 +11315,26 @@
     },
     {
       "name": "MA023 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA023 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA023 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA023 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA023 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA023 knowledge cards same subject",
       "passed": true
     },
     {
@@ -8941,6 +11410,26 @@
       "passed": true
     },
     {
+      "name": "MA024 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA024 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA024 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA024 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA024 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA024 round 1",
       "passed": true
     },
@@ -9010,6 +11499,26 @@
     },
     {
       "name": "MA025 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA025 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA025 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA025 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA025 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA025 knowledge cards same subject",
       "passed": true
     },
     {
@@ -9085,6 +11594,26 @@
       "passed": true
     },
     {
+      "name": "MA026 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA026 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA026 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA026 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA026 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA026 round 1",
       "passed": true
     },
@@ -9154,6 +11683,26 @@
     },
     {
       "name": "MA027 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA027 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA027 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA027 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA027 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA027 knowledge cards same subject",
       "passed": true
     },
     {
@@ -9229,6 +11778,26 @@
       "passed": true
     },
     {
+      "name": "MA028 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA028 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA028 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA028 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA028 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA028 round 1",
       "passed": true
     },
@@ -9298,6 +11867,26 @@
     },
     {
       "name": "MA029 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA029 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA029 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA029 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA029 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA029 knowledge cards same subject",
       "passed": true
     },
     {
@@ -9373,6 +11962,26 @@
       "passed": true
     },
     {
+      "name": "MA030 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA030 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA030 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA030 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA030 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA030 round 1",
       "passed": true
     },
@@ -9442,6 +12051,26 @@
     },
     {
       "name": "MA031 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA031 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA031 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA031 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA031 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA031 knowledge cards same subject",
       "passed": true
     },
     {
@@ -9517,6 +12146,26 @@
       "passed": true
     },
     {
+      "name": "MA032 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA032 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA032 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA032 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA032 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA032 round 1",
       "passed": true
     },
@@ -9586,6 +12235,26 @@
     },
     {
       "name": "MA033 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA033 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA033 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA033 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA033 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA033 knowledge cards same subject",
       "passed": true
     },
     {
@@ -9661,6 +12330,26 @@
       "passed": true
     },
     {
+      "name": "MA034 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA034 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA034 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA034 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA034 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA034 round 1",
       "passed": true
     },
@@ -9730,6 +12419,26 @@
     },
     {
       "name": "MA035 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA035 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA035 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA035 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA035 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA035 knowledge cards same subject",
       "passed": true
     },
     {
@@ -9805,6 +12514,26 @@
       "passed": true
     },
     {
+      "name": "MA036 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA036 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA036 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA036 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA036 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA036 round 1",
       "passed": true
     },
@@ -9874,6 +12603,26 @@
     },
     {
       "name": "MA037 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA037 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA037 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA037 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA037 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA037 knowledge cards same subject",
       "passed": true
     },
     {
@@ -9949,6 +12698,26 @@
       "passed": true
     },
     {
+      "name": "MA038 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA038 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA038 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA038 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA038 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA038 round 1",
       "passed": true
     },
@@ -10018,6 +12787,26 @@
     },
     {
       "name": "MA039 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA039 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA039 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA039 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA039 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA039 knowledge cards same subject",
       "passed": true
     },
     {
@@ -10093,6 +12882,26 @@
       "passed": true
     },
     {
+      "name": "MA040 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA040 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA040 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA040 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA040 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA040 round 1",
       "passed": true
     },
@@ -10162,6 +12971,26 @@
     },
     {
       "name": "MA041 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA041 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA041 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA041 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA041 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA041 knowledge cards same subject",
       "passed": true
     },
     {
@@ -10237,6 +13066,26 @@
       "passed": true
     },
     {
+      "name": "MA042 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA042 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA042 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA042 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA042 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA042 round 1",
       "passed": true
     },
@@ -10306,6 +13155,26 @@
     },
     {
       "name": "MA043 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA043 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA043 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA043 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA043 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA043 knowledge cards same subject",
       "passed": true
     },
     {
@@ -10381,6 +13250,26 @@
       "passed": true
     },
     {
+      "name": "MA044 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA044 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA044 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA044 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA044 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA044 round 1",
       "passed": true
     },
@@ -10450,6 +13339,26 @@
     },
     {
       "name": "MA045 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA045 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA045 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA045 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA045 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA045 knowledge cards same subject",
       "passed": true
     },
     {
@@ -10525,6 +13434,26 @@
       "passed": true
     },
     {
+      "name": "MA046 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA046 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA046 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA046 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA046 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA046 round 1",
       "passed": true
     },
@@ -10594,6 +13523,26 @@
     },
     {
       "name": "MA047 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA047 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA047 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA047 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA047 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA047 knowledge cards same subject",
       "passed": true
     },
     {
@@ -10669,6 +13618,26 @@
       "passed": true
     },
     {
+      "name": "MA048 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA048 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA048 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA048 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA048 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA048 round 1",
       "passed": true
     },
@@ -10738,6 +13707,26 @@
     },
     {
       "name": "MA049 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA049 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA049 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA049 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA049 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA049 knowledge cards same subject",
       "passed": true
     },
     {
@@ -10813,6 +13802,26 @@
       "passed": true
     },
     {
+      "name": "MA050 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA050 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA050 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA050 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA050 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA050 round 1",
       "passed": true
     },
@@ -10882,6 +13891,26 @@
     },
     {
       "name": "MA051 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA051 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA051 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA051 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA051 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA051 knowledge cards same subject",
       "passed": true
     },
     {
@@ -10957,6 +13986,26 @@
       "passed": true
     },
     {
+      "name": "MA052 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA052 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA052 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA052 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA052 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA052 round 1",
       "passed": true
     },
@@ -11026,6 +14075,26 @@
     },
     {
       "name": "MA053 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA053 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA053 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA053 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA053 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA053 knowledge cards same subject",
       "passed": true
     },
     {
@@ -11101,6 +14170,26 @@
       "passed": true
     },
     {
+      "name": "MA054 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA054 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA054 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA054 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA054 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA054 round 1",
       "passed": true
     },
@@ -11170,6 +14259,26 @@
     },
     {
       "name": "MA055 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA055 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA055 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA055 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA055 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA055 knowledge cards same subject",
       "passed": true
     },
     {
@@ -11245,6 +14354,26 @@
       "passed": true
     },
     {
+      "name": "MA056 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA056 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA056 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA056 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA056 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA056 round 1",
       "passed": true
     },
@@ -11314,6 +14443,26 @@
     },
     {
       "name": "MA057 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA057 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA057 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA057 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA057 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA057 knowledge cards same subject",
       "passed": true
     },
     {
@@ -11389,6 +14538,26 @@
       "passed": true
     },
     {
+      "name": "MA058 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA058 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA058 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA058 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA058 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA058 round 1",
       "passed": true
     },
@@ -11458,6 +14627,26 @@
     },
     {
       "name": "MA059 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA059 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA059 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA059 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA059 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA059 knowledge cards same subject",
       "passed": true
     },
     {
@@ -11533,6 +14722,26 @@
       "passed": true
     },
     {
+      "name": "MA060 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA060 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA060 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA060 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA060 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA060 round 1",
       "passed": true
     },
@@ -11602,6 +14811,26 @@
     },
     {
       "name": "MA061 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA061 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA061 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA061 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA061 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA061 knowledge cards same subject",
       "passed": true
     },
     {
@@ -11677,6 +14906,26 @@
       "passed": true
     },
     {
+      "name": "MA062 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA062 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA062 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA062 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA062 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA062 round 1",
       "passed": true
     },
@@ -11746,6 +14995,26 @@
     },
     {
       "name": "MA063 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA063 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA063 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA063 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA063 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA063 knowledge cards same subject",
       "passed": true
     },
     {
@@ -11821,6 +15090,26 @@
       "passed": true
     },
     {
+      "name": "MA064 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA064 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA064 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA064 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA064 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA064 round 1",
       "passed": true
     },
@@ -11890,6 +15179,26 @@
     },
     {
       "name": "MA065 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA065 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA065 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA065 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA065 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA065 knowledge cards same subject",
       "passed": true
     },
     {
@@ -11965,6 +15274,26 @@
       "passed": true
     },
     {
+      "name": "MA066 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA066 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA066 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA066 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA066 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA066 round 1",
       "passed": true
     },
@@ -12034,6 +15363,26 @@
     },
     {
       "name": "MA067 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA067 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA067 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA067 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA067 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA067 knowledge cards same subject",
       "passed": true
     },
     {
@@ -12109,6 +15458,26 @@
       "passed": true
     },
     {
+      "name": "MA068 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA068 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA068 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA068 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA068 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA068 round 1",
       "passed": true
     },
@@ -12178,6 +15547,26 @@
     },
     {
       "name": "MA069 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA069 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA069 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA069 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA069 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA069 knowledge cards same subject",
       "passed": true
     },
     {
@@ -12253,6 +15642,26 @@
       "passed": true
     },
     {
+      "name": "MA070 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA070 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA070 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA070 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA070 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA070 round 1",
       "passed": true
     },
@@ -12322,6 +15731,26 @@
     },
     {
       "name": "MA071 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA071 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA071 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA071 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA071 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA071 knowledge cards same subject",
       "passed": true
     },
     {
@@ -12397,6 +15826,26 @@
       "passed": true
     },
     {
+      "name": "MA072 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA072 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA072 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA072 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA072 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA072 round 1",
       "passed": true
     },
@@ -12466,6 +15915,26 @@
     },
     {
       "name": "MA073 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA073 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA073 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA073 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA073 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA073 knowledge cards same subject",
       "passed": true
     },
     {
@@ -12541,6 +16010,26 @@
       "passed": true
     },
     {
+      "name": "MA074 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA074 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA074 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA074 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA074 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA074 round 1",
       "passed": true
     },
@@ -12610,6 +16099,26 @@
     },
     {
       "name": "MA075 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA075 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA075 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA075 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA075 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA075 knowledge cards same subject",
       "passed": true
     },
     {
@@ -12685,6 +16194,26 @@
       "passed": true
     },
     {
+      "name": "MA076 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA076 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA076 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA076 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA076 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA076 round 1",
       "passed": true
     },
@@ -12754,6 +16283,26 @@
     },
     {
       "name": "MA077 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA077 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA077 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA077 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA077 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA077 knowledge cards same subject",
       "passed": true
     },
     {
@@ -12829,6 +16378,26 @@
       "passed": true
     },
     {
+      "name": "MA078 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA078 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA078 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA078 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA078 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA078 round 1",
       "passed": true
     },
@@ -12898,6 +16467,26 @@
     },
     {
       "name": "MA079 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA079 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA079 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA079 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA079 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA079 knowledge cards same subject",
       "passed": true
     },
     {
@@ -12973,6 +16562,26 @@
       "passed": true
     },
     {
+      "name": "MA080 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA080 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA080 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA080 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA080 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA080 round 1",
       "passed": true
     },
@@ -13042,6 +16651,26 @@
     },
     {
       "name": "MA081 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA081 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA081 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA081 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA081 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA081 knowledge cards same subject",
       "passed": true
     },
     {
@@ -13117,6 +16746,26 @@
       "passed": true
     },
     {
+      "name": "MA082 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA082 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA082 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA082 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA082 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA082 round 1",
       "passed": true
     },
@@ -13186,6 +16835,26 @@
     },
     {
       "name": "MA083 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA083 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA083 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA083 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA083 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA083 knowledge cards same subject",
       "passed": true
     },
     {
@@ -13261,6 +16930,26 @@
       "passed": true
     },
     {
+      "name": "MA084 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA084 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA084 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA084 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA084 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA084 round 1",
       "passed": true
     },
@@ -13330,6 +17019,26 @@
     },
     {
       "name": "MA085 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA085 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA085 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA085 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA085 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA085 knowledge cards same subject",
       "passed": true
     },
     {
@@ -13405,6 +17114,26 @@
       "passed": true
     },
     {
+      "name": "MA086 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA086 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA086 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA086 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA086 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA086 round 1",
       "passed": true
     },
@@ -13474,6 +17203,26 @@
     },
     {
       "name": "MA087 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA087 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA087 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA087 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA087 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA087 knowledge cards same subject",
       "passed": true
     },
     {
@@ -13549,6 +17298,26 @@
       "passed": true
     },
     {
+      "name": "MA088 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA088 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA088 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA088 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA088 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA088 round 1",
       "passed": true
     },
@@ -13618,6 +17387,26 @@
     },
     {
       "name": "MA089 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA089 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA089 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA089 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA089 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA089 knowledge cards same subject",
       "passed": true
     },
     {
@@ -13693,6 +17482,26 @@
       "passed": true
     },
     {
+      "name": "MA090 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA090 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA090 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA090 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA090 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA090 round 1",
       "passed": true
     },
@@ -13762,6 +17571,26 @@
     },
     {
       "name": "MA091 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA091 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA091 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA091 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA091 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA091 knowledge cards same subject",
       "passed": true
     },
     {
@@ -13837,6 +17666,26 @@
       "passed": true
     },
     {
+      "name": "MA092 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA092 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA092 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA092 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA092 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA092 round 1",
       "passed": true
     },
@@ -13906,6 +17755,26 @@
     },
     {
       "name": "MA093 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA093 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA093 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA093 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA093 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA093 knowledge cards same subject",
       "passed": true
     },
     {
@@ -13981,6 +17850,26 @@
       "passed": true
     },
     {
+      "name": "MA094 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA094 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA094 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA094 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA094 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA094 round 1",
       "passed": true
     },
@@ -14050,6 +17939,26 @@
     },
     {
       "name": "MA095 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA095 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA095 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA095 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA095 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA095 knowledge cards same subject",
       "passed": true
     },
     {
@@ -14125,6 +18034,26 @@
       "passed": true
     },
     {
+      "name": "MA096 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA096 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA096 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA096 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA096 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA096 round 1",
       "passed": true
     },
@@ -14194,6 +18123,26 @@
     },
     {
       "name": "MA097 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA097 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA097 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA097 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA097 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA097 knowledge cards same subject",
       "passed": true
     },
     {
@@ -14269,6 +18218,26 @@
       "passed": true
     },
     {
+      "name": "MA098 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA098 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA098 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA098 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA098 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA098 round 1",
       "passed": true
     },
@@ -14338,6 +18307,26 @@
     },
     {
       "name": "MA099 source metadata",
+      "passed": true
+    },
+    {
+      "name": "MA099 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA099 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA099 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA099 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA099 knowledge cards same subject",
       "passed": true
     },
     {
@@ -14413,6 +18402,26 @@
       "passed": true
     },
     {
+      "name": "MA100 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "MA100 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "MA100 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "MA100 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "MA100 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "MA100 round 1",
       "passed": true
     },
@@ -14434,6 +18443,10 @@
     },
     {
       "name": "political source hash",
+      "passed": true
+    },
+    {
+      "name": "political knowledge annotation hash",
       "passed": true
     },
     {
@@ -14494,6 +18507,26 @@
     },
     {
       "name": "PE001 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE001 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE001 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE001 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE001 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE001 knowledge cards same subject",
       "passed": true
     },
     {
@@ -14569,6 +18602,26 @@
       "passed": true
     },
     {
+      "name": "PE002 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE002 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE002 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE002 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE002 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE002 round 1",
       "passed": true
     },
@@ -14638,6 +18691,26 @@
     },
     {
       "name": "PE003 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE003 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE003 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE003 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE003 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE003 knowledge cards same subject",
       "passed": true
     },
     {
@@ -14713,6 +18786,26 @@
       "passed": true
     },
     {
+      "name": "PE004 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE004 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE004 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE004 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE004 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE004 round 1",
       "passed": true
     },
@@ -14782,6 +18875,26 @@
     },
     {
       "name": "PE005 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE005 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE005 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE005 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE005 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE005 knowledge cards same subject",
       "passed": true
     },
     {
@@ -14857,6 +18970,26 @@
       "passed": true
     },
     {
+      "name": "PE006 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE006 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE006 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE006 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE006 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE006 round 1",
       "passed": true
     },
@@ -14926,6 +19059,26 @@
     },
     {
       "name": "PE007 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE007 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE007 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE007 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE007 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE007 knowledge cards same subject",
       "passed": true
     },
     {
@@ -15001,6 +19154,26 @@
       "passed": true
     },
     {
+      "name": "PE008 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE008 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE008 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE008 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE008 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE008 round 1",
       "passed": true
     },
@@ -15070,6 +19243,26 @@
     },
     {
       "name": "PE009 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE009 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE009 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE009 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE009 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE009 knowledge cards same subject",
       "passed": true
     },
     {
@@ -15145,6 +19338,26 @@
       "passed": true
     },
     {
+      "name": "PE010 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE010 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE010 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE010 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE010 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE010 round 1",
       "passed": true
     },
@@ -15214,6 +19427,26 @@
     },
     {
       "name": "PE011 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE011 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE011 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE011 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE011 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE011 knowledge cards same subject",
       "passed": true
     },
     {
@@ -15289,6 +19522,26 @@
       "passed": true
     },
     {
+      "name": "PE012 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE012 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE012 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE012 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE012 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE012 round 1",
       "passed": true
     },
@@ -15358,6 +19611,26 @@
     },
     {
       "name": "PE013 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE013 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE013 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE013 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE013 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE013 knowledge cards same subject",
       "passed": true
     },
     {
@@ -15433,6 +19706,26 @@
       "passed": true
     },
     {
+      "name": "PE014 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE014 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE014 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE014 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE014 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE014 round 1",
       "passed": true
     },
@@ -15502,6 +19795,26 @@
     },
     {
       "name": "PE015 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE015 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE015 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE015 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE015 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE015 knowledge cards same subject",
       "passed": true
     },
     {
@@ -15577,6 +19890,26 @@
       "passed": true
     },
     {
+      "name": "PE016 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE016 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE016 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE016 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE016 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE016 round 1",
       "passed": true
     },
@@ -15646,6 +19979,26 @@
     },
     {
       "name": "PE017 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE017 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE017 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE017 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE017 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE017 knowledge cards same subject",
       "passed": true
     },
     {
@@ -15721,6 +20074,26 @@
       "passed": true
     },
     {
+      "name": "PE018 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE018 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE018 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE018 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE018 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE018 round 1",
       "passed": true
     },
@@ -15790,6 +20163,26 @@
     },
     {
       "name": "PE019 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE019 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE019 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE019 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE019 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE019 knowledge cards same subject",
       "passed": true
     },
     {
@@ -15865,6 +20258,26 @@
       "passed": true
     },
     {
+      "name": "PE020 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE020 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE020 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE020 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE020 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE020 round 1",
       "passed": true
     },
@@ -15934,6 +20347,26 @@
     },
     {
       "name": "PE021 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE021 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE021 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE021 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE021 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE021 knowledge cards same subject",
       "passed": true
     },
     {
@@ -16009,6 +20442,26 @@
       "passed": true
     },
     {
+      "name": "PE022 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE022 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE022 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE022 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE022 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE022 round 1",
       "passed": true
     },
@@ -16078,6 +20531,26 @@
     },
     {
       "name": "PE023 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE023 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE023 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE023 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE023 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE023 knowledge cards same subject",
       "passed": true
     },
     {
@@ -16153,6 +20626,26 @@
       "passed": true
     },
     {
+      "name": "PE024 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE024 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE024 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE024 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE024 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE024 round 1",
       "passed": true
     },
@@ -16222,6 +20715,26 @@
     },
     {
       "name": "PE025 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE025 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE025 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE025 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE025 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE025 knowledge cards same subject",
       "passed": true
     },
     {
@@ -16297,6 +20810,26 @@
       "passed": true
     },
     {
+      "name": "PE026 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE026 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE026 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE026 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE026 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE026 round 1",
       "passed": true
     },
@@ -16366,6 +20899,26 @@
     },
     {
       "name": "PE027 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE027 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE027 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE027 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE027 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE027 knowledge cards same subject",
       "passed": true
     },
     {
@@ -16441,6 +20994,26 @@
       "passed": true
     },
     {
+      "name": "PE028 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE028 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE028 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE028 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE028 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE028 round 1",
       "passed": true
     },
@@ -16510,6 +21083,26 @@
     },
     {
       "name": "PE029 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE029 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE029 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE029 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE029 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE029 knowledge cards same subject",
       "passed": true
     },
     {
@@ -16585,6 +21178,26 @@
       "passed": true
     },
     {
+      "name": "PE030 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE030 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE030 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE030 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE030 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE030 round 1",
       "passed": true
     },
@@ -16654,6 +21267,26 @@
     },
     {
       "name": "PE031 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE031 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE031 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE031 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE031 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE031 knowledge cards same subject",
       "passed": true
     },
     {
@@ -16729,6 +21362,26 @@
       "passed": true
     },
     {
+      "name": "PE032 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE032 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE032 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE032 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE032 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE032 round 1",
       "passed": true
     },
@@ -16798,6 +21451,26 @@
     },
     {
       "name": "PE033 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE033 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE033 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE033 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE033 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE033 knowledge cards same subject",
       "passed": true
     },
     {
@@ -16873,6 +21546,26 @@
       "passed": true
     },
     {
+      "name": "PE034 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE034 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE034 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE034 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE034 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE034 round 1",
       "passed": true
     },
@@ -16942,6 +21635,26 @@
     },
     {
       "name": "PE035 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE035 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE035 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE035 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE035 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE035 knowledge cards same subject",
       "passed": true
     },
     {
@@ -17017,6 +21730,26 @@
       "passed": true
     },
     {
+      "name": "PE036 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE036 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE036 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE036 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE036 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE036 round 1",
       "passed": true
     },
@@ -17086,6 +21819,26 @@
     },
     {
       "name": "PE037 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE037 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE037 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE037 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE037 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE037 knowledge cards same subject",
       "passed": true
     },
     {
@@ -17161,6 +21914,26 @@
       "passed": true
     },
     {
+      "name": "PE038 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE038 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE038 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE038 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE038 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE038 round 1",
       "passed": true
     },
@@ -17230,6 +22003,26 @@
     },
     {
       "name": "PE039 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE039 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE039 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE039 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE039 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE039 knowledge cards same subject",
       "passed": true
     },
     {
@@ -17305,6 +22098,26 @@
       "passed": true
     },
     {
+      "name": "PE040 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE040 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE040 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE040 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE040 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE040 round 1",
       "passed": true
     },
@@ -17374,6 +22187,26 @@
     },
     {
       "name": "PE041 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE041 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE041 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE041 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE041 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE041 knowledge cards same subject",
       "passed": true
     },
     {
@@ -17449,6 +22282,26 @@
       "passed": true
     },
     {
+      "name": "PE042 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE042 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE042 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE042 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE042 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE042 round 1",
       "passed": true
     },
@@ -17518,6 +22371,26 @@
     },
     {
       "name": "PE043 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE043 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE043 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE043 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE043 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE043 knowledge cards same subject",
       "passed": true
     },
     {
@@ -17593,6 +22466,26 @@
       "passed": true
     },
     {
+      "name": "PE044 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE044 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE044 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE044 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE044 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE044 round 1",
       "passed": true
     },
@@ -17662,6 +22555,26 @@
     },
     {
       "name": "PE045 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE045 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE045 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE045 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE045 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE045 knowledge cards same subject",
       "passed": true
     },
     {
@@ -17737,6 +22650,26 @@
       "passed": true
     },
     {
+      "name": "PE046 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE046 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE046 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE046 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE046 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE046 round 1",
       "passed": true
     },
@@ -17806,6 +22739,26 @@
     },
     {
       "name": "PE047 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE047 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE047 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE047 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE047 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE047 knowledge cards same subject",
       "passed": true
     },
     {
@@ -17881,6 +22834,26 @@
       "passed": true
     },
     {
+      "name": "PE048 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE048 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE048 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE048 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE048 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE048 round 1",
       "passed": true
     },
@@ -17950,6 +22923,26 @@
     },
     {
       "name": "PE049 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE049 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE049 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE049 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE049 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE049 knowledge cards same subject",
       "passed": true
     },
     {
@@ -18025,6 +23018,26 @@
       "passed": true
     },
     {
+      "name": "PE050 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE050 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE050 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE050 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE050 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE050 round 1",
       "passed": true
     },
@@ -18094,6 +23107,26 @@
     },
     {
       "name": "PE051 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE051 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE051 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE051 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE051 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE051 knowledge cards same subject",
       "passed": true
     },
     {
@@ -18169,6 +23202,26 @@
       "passed": true
     },
     {
+      "name": "PE052 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE052 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE052 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE052 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE052 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE052 round 1",
       "passed": true
     },
@@ -18238,6 +23291,26 @@
     },
     {
       "name": "PE053 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE053 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE053 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE053 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE053 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE053 knowledge cards same subject",
       "passed": true
     },
     {
@@ -18313,6 +23386,26 @@
       "passed": true
     },
     {
+      "name": "PE054 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE054 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE054 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE054 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE054 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE054 round 1",
       "passed": true
     },
@@ -18382,6 +23475,26 @@
     },
     {
       "name": "PE055 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE055 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE055 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE055 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE055 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE055 knowledge cards same subject",
       "passed": true
     },
     {
@@ -18457,6 +23570,26 @@
       "passed": true
     },
     {
+      "name": "PE056 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE056 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE056 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE056 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE056 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE056 round 1",
       "passed": true
     },
@@ -18526,6 +23659,26 @@
     },
     {
       "name": "PE057 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE057 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE057 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE057 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE057 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE057 knowledge cards same subject",
       "passed": true
     },
     {
@@ -18601,6 +23754,26 @@
       "passed": true
     },
     {
+      "name": "PE058 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE058 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE058 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE058 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE058 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE058 round 1",
       "passed": true
     },
@@ -18670,6 +23843,26 @@
     },
     {
       "name": "PE059 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE059 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE059 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE059 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE059 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE059 knowledge cards same subject",
       "passed": true
     },
     {
@@ -18745,6 +23938,26 @@
       "passed": true
     },
     {
+      "name": "PE060 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE060 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE060 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE060 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE060 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE060 round 1",
       "passed": true
     },
@@ -18814,6 +24027,26 @@
     },
     {
       "name": "PE061 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE061 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE061 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE061 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE061 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE061 knowledge cards same subject",
       "passed": true
     },
     {
@@ -18889,6 +24122,26 @@
       "passed": true
     },
     {
+      "name": "PE062 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE062 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE062 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE062 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE062 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE062 round 1",
       "passed": true
     },
@@ -18958,6 +24211,26 @@
     },
     {
       "name": "PE063 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE063 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE063 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE063 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE063 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE063 knowledge cards same subject",
       "passed": true
     },
     {
@@ -19033,6 +24306,26 @@
       "passed": true
     },
     {
+      "name": "PE064 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE064 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE064 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE064 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE064 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE064 round 1",
       "passed": true
     },
@@ -19102,6 +24395,26 @@
     },
     {
       "name": "PE065 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE065 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE065 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE065 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE065 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE065 knowledge cards same subject",
       "passed": true
     },
     {
@@ -19177,6 +24490,26 @@
       "passed": true
     },
     {
+      "name": "PE066 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE066 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE066 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE066 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE066 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE066 round 1",
       "passed": true
     },
@@ -19246,6 +24579,26 @@
     },
     {
       "name": "PE067 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE067 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE067 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE067 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE067 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE067 knowledge cards same subject",
       "passed": true
     },
     {
@@ -19321,6 +24674,26 @@
       "passed": true
     },
     {
+      "name": "PE068 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE068 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE068 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE068 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE068 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE068 round 1",
       "passed": true
     },
@@ -19390,6 +24763,26 @@
     },
     {
       "name": "PE069 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE069 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE069 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE069 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE069 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE069 knowledge cards same subject",
       "passed": true
     },
     {
@@ -19465,6 +24858,26 @@
       "passed": true
     },
     {
+      "name": "PE070 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE070 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE070 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE070 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE070 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE070 round 1",
       "passed": true
     },
@@ -19534,6 +24947,26 @@
     },
     {
       "name": "PE071 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE071 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE071 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE071 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE071 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE071 knowledge cards same subject",
       "passed": true
     },
     {
@@ -19609,6 +25042,26 @@
       "passed": true
     },
     {
+      "name": "PE072 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE072 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE072 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE072 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE072 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE072 round 1",
       "passed": true
     },
@@ -19678,6 +25131,26 @@
     },
     {
       "name": "PE073 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE073 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE073 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE073 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE073 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE073 knowledge cards same subject",
       "passed": true
     },
     {
@@ -19753,6 +25226,26 @@
       "passed": true
     },
     {
+      "name": "PE074 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE074 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE074 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE074 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE074 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE074 round 1",
       "passed": true
     },
@@ -19822,6 +25315,26 @@
     },
     {
       "name": "PE075 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE075 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE075 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE075 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE075 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE075 knowledge cards same subject",
       "passed": true
     },
     {
@@ -19897,6 +25410,26 @@
       "passed": true
     },
     {
+      "name": "PE076 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE076 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE076 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE076 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE076 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE076 round 1",
       "passed": true
     },
@@ -19966,6 +25499,26 @@
     },
     {
       "name": "PE077 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE077 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE077 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE077 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE077 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE077 knowledge cards same subject",
       "passed": true
     },
     {
@@ -20041,6 +25594,26 @@
       "passed": true
     },
     {
+      "name": "PE078 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE078 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE078 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE078 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE078 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE078 round 1",
       "passed": true
     },
@@ -20110,6 +25683,26 @@
     },
     {
       "name": "PE079 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE079 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE079 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE079 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE079 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE079 knowledge cards same subject",
       "passed": true
     },
     {
@@ -20185,6 +25778,26 @@
       "passed": true
     },
     {
+      "name": "PE080 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE080 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE080 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE080 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE080 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE080 round 1",
       "passed": true
     },
@@ -20254,6 +25867,26 @@
     },
     {
       "name": "PE081 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE081 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE081 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE081 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE081 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE081 knowledge cards same subject",
       "passed": true
     },
     {
@@ -20329,6 +25962,26 @@
       "passed": true
     },
     {
+      "name": "PE082 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE082 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE082 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE082 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE082 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE082 round 1",
       "passed": true
     },
@@ -20398,6 +26051,26 @@
     },
     {
       "name": "PE083 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE083 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE083 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE083 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE083 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE083 knowledge cards same subject",
       "passed": true
     },
     {
@@ -20473,6 +26146,26 @@
       "passed": true
     },
     {
+      "name": "PE084 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE084 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE084 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE084 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE084 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE084 round 1",
       "passed": true
     },
@@ -20542,6 +26235,26 @@
     },
     {
       "name": "PE085 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE085 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE085 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE085 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE085 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE085 knowledge cards same subject",
       "passed": true
     },
     {
@@ -20617,6 +26330,26 @@
       "passed": true
     },
     {
+      "name": "PE086 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE086 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE086 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE086 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE086 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE086 round 1",
       "passed": true
     },
@@ -20686,6 +26419,26 @@
     },
     {
       "name": "PE087 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE087 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE087 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE087 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE087 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE087 knowledge cards same subject",
       "passed": true
     },
     {
@@ -20761,6 +26514,26 @@
       "passed": true
     },
     {
+      "name": "PE088 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE088 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE088 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE088 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE088 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE088 round 1",
       "passed": true
     },
@@ -20830,6 +26603,26 @@
     },
     {
       "name": "PE089 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE089 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE089 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE089 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE089 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE089 knowledge cards same subject",
       "passed": true
     },
     {
@@ -20905,6 +26698,26 @@
       "passed": true
     },
     {
+      "name": "PE090 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE090 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE090 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE090 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE090 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE090 round 1",
       "passed": true
     },
@@ -20974,6 +26787,26 @@
     },
     {
       "name": "PE091 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE091 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE091 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE091 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE091 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE091 knowledge cards same subject",
       "passed": true
     },
     {
@@ -21049,6 +26882,26 @@
       "passed": true
     },
     {
+      "name": "PE092 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE092 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE092 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE092 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE092 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE092 round 1",
       "passed": true
     },
@@ -21118,6 +26971,26 @@
     },
     {
       "name": "PE093 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE093 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE093 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE093 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE093 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE093 knowledge cards same subject",
       "passed": true
     },
     {
@@ -21193,6 +27066,26 @@
       "passed": true
     },
     {
+      "name": "PE094 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE094 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE094 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE094 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE094 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE094 round 1",
       "passed": true
     },
@@ -21262,6 +27155,26 @@
     },
     {
       "name": "PE095 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE095 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE095 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE095 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE095 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE095 knowledge cards same subject",
       "passed": true
     },
     {
@@ -21337,6 +27250,26 @@
       "passed": true
     },
     {
+      "name": "PE096 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE096 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE096 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE096 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE096 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE096 round 1",
       "passed": true
     },
@@ -21406,6 +27339,26 @@
     },
     {
       "name": "PE097 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE097 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE097 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE097 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE097 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE097 knowledge cards same subject",
       "passed": true
     },
     {
@@ -21481,6 +27434,26 @@
       "passed": true
     },
     {
+      "name": "PE098 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE098 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE098 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE098 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE098 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE098 round 1",
       "passed": true
     },
@@ -21550,6 +27523,26 @@
     },
     {
       "name": "PE099 source metadata",
+      "passed": true
+    },
+    {
+      "name": "PE099 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE099 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE099 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE099 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE099 knowledge cards same subject",
       "passed": true
     },
     {
@@ -21625,6 +27618,26 @@
       "passed": true
     },
     {
+      "name": "PE100 step source preserved",
+      "passed": true
+    },
+    {
+      "name": "PE100 step math retained in order",
+      "passed": true
+    },
+    {
+      "name": "PE100 knowledge grounded in original question",
+      "passed": true
+    },
+    {
+      "name": "PE100 knowledge annotation correspondence",
+      "passed": true
+    },
+    {
+      "name": "PE100 knowledge cards same subject",
+      "passed": true
+    },
+    {
       "name": "PE100 round 1",
       "passed": true
     },
@@ -21646,6 +27659,10 @@
     },
     {
       "name": "all rendered formulas accounted for",
+      "passed": true
+    },
+    {
+      "name": "all step and review formulas accounted for",
       "passed": true
     },
     {
@@ -27461,11 +33478,23 @@
       "passed": true
     },
     {
+      "name": "local asset photos.css",
+      "passed": true
+    },
+    {
+      "name": "local asset solutions.css",
+      "passed": true
+    },
+    {
       "name": "local asset data.js",
       "passed": true
     },
     {
       "name": "local asset learning.js",
+      "passed": true
+    },
+    {
+      "name": "local asset photos.js",
       "passed": true
     },
     {
@@ -27805,7 +33834,19 @@
       "passed": true
     },
     {
+      "name": "static file under platform size limit photos.css",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit photos.js",
+      "passed": true
+    },
+    {
       "name": "static file under platform size limit reading.css",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit solutions.css",
       "passed": true
     },
     {

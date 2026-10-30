@@ -16,7 +16,9 @@ async function smoke(id,base){
  assert.equal((await fetch(origin+'/healthz')).status,200);
  const home=await fetch(origin+base+'/');assert.equal(home.status,200);assert.match(await home.text(),/802练习室/);
  const data=await fetch(origin+base+'/data.js');assert.equal(data.status,200);const script=await data.text();assert.match(script,/MI100/);assert.match(script,/FM53/);assert.match(script,/recall/);
- for(const asset of ['learning.js','learning.css'])assert.equal((await fetch(origin+base+'/'+asset)).status,200);
+ assert.match(script,/solution/);assert.match(script,/application_md/);
+ for(const asset of ['learning.js','learning.css','photos.js','photos.css','solutions.css'])assert.equal((await fetch(origin+base+'/'+asset)).status,200);
+ assert.match(home.headers.get('content-security-policy'),/img-src[^;]*blob:/);
  const pdf=await fetch(origin+base+'/materials/micro-training.pdf',{headers:{Range:'bytes=0-7'}});assert.equal(pdf.status,206);assert.match(Buffer.from(await pdf.arrayBuffer()).toString(),/^%PDF/);
  assert.equal((await fetch(origin+base+'/.env')).status,403);
  if(base)assert.equal((await fetch(origin+'/app.js')).status,404);

@@ -87,7 +87,7 @@ window.createLearning=function({data,state,canSave,save,esc,shell,navigate,readi
   if(a==='recall-daily'){filter.subject=button.dataset.sub;start(queue(filter.subject));}
   if(a==='recall-resume')navigate('recall-study');
   if(a==='recall-subject'){filter={...filter,subject:button.dataset.sub,chapter:'all',group:'all',page:1};library();}
-  if(a==='recall-card')start([button.dataset.id],filter.group!=='all'&&state().session?'practice':'recall');
+  if(a==='recall-card')start([button.dataset.id],button.dataset.return==='practice'||filter.group!=='all'&&state().session?'practice':'recall');
   if(a==='recall-filtered')start(listed().slice(0,10).map(c=>c.id));
   if(a==='recall-clear'){filter={...filter,kind:'all',chapter:'all',status:'all',search:'',group:'all',page:1};library();}
   if(a==='recall-topic'){filter={subject:button.dataset.sub,group:button.dataset.group,chapter:'all',kind:'all',status:'all',search:'',page:1};navigate('recall');}

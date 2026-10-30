@@ -1,0 +1,2498 @@
+{
+  "subject": "micro",
+  "questions": [
+    {
+      "id": "MI001",
+      "knowledge": [
+        {
+          "title": "预算约束与内点条件",
+          "application_md": "预算用尽且两商品均为正，$p_xx=m/3,p_yy=2m/3$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "Cobb-Douglas支出份额",
+          "application_md": "预算用尽且两商品均为正，$p_xx=m/3,p_yy=2m/3$。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM03"
+          ]
+        },
+        {
+          "title": "普通需求",
+          "application_md": "初始$(x_0,y_0)=(10,30)$，降价后$(x_1,y_1)=(30,30)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "Hicks补偿与支出函数",
+          "application_md": "支出函数在固定效用时与$p_x^{1/3}p_y^{2/3}$成比例，所以新价格达到旧效用所需收入$e_1=90/3^{1/3}$，可抽走的补偿额为$90-90/3^{1/3}$。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM10",
+            "FM08"
+          ]
+        },
+        {
+          "title": "替代效应与收入效应",
+          "application_md": "补偿需求$x^h=e_1/3=30/3^{1/3}$，位于10与30之间；降价的替代效应使x增加，正常品的收入效应再使x增加。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先由一阶条件求支出份额，再用支出函数固定旧效用。\n\n复盘时按“预算约束与内点条件 → Cobb-Douglas支出份额 → 普通需求 → Hicks补偿与支出函数 → 替代效应与收入效应”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI002",
+      "knowledge": [
+        {
+          "title": "拟线性偏好",
+          "application_md": "令$y=m-px$，目标为$8\\ln x+m-px$，无约束极值$x=8/p$。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM05"
+          ]
+        },
+        {
+          "title": "内点解与收入角点",
+          "application_md": "若$m\\ge8$，最优$x=8/p,y=m-8$；若$0<m<8$，可行上界$m/p<8/p$，效用在可行区间递增，因此$x=m/p,y=0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "预算可行性",
+          "application_md": "若$m\\ge8$，最优$x=8/p,y=m-8$；若$0<m<8$，可行上界$m/p<8/p$，效用在可行区间递增，因此$x=m/p,y=0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先判断内点能否负担；收入不足时沿预算边界比较。\n\n复盘时按“拟线性偏好 → 内点解与收入角点 → 预算可行性”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI003",
+      "knowledge": [
+        {
+          "title": "完全互补偏好与固定比例",
+          "application_md": "达到效用u的最低组合为$(u,u/2)$，$e(p,u)=(p_x+p_y/2)u$。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM04"
+          ]
+        },
+        {
+          "title": "支出函数",
+          "application_md": "达到效用u的最低组合为$(u,u/2)$，$e(p,u)=(p_x+p_y/2)u$。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM08"
+          ]
+        },
+        {
+          "title": "补偿变差与等价变差",
+          "application_md": "$CV=24-e(p^1,8)=8$；$EV=e(p^0,12)-24=12$。替代效应为0而收入效应不为0，两种补偿固定的效用不同，故不必相等。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM10"
+          ]
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：固定比例$x=2y$；用同一支出函数分别固定两种效用。\n\n复盘时按“完全互补偏好与固定比例 → 支出函数 → 补偿变差与等价变差”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI004",
+      "knowledge": [
+        {
+          "title": "完全替代偏好",
+          "application_md": "效用关于消费线性，严格内点切点并非必要；一阶等比仅识别无差异价格，不能在其余价格强行求两商品正消费。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM04"
+          ]
+        },
+        {
+          "title": "单位支出边际效用",
+          "application_md": "x的单位支出效用为$3/p_x$，y为1。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "需求对应与多重最优",
+          "application_md": "若$p_x<3$，只消费x，$(12/p_x,0)$；若$p_x>3$，只消费y，$(0,6)$；若$p_x=3$，预算线$3x+2y=12$上所有非负组合均最优。于是p为2时$(6,0)$，p为3时为整段，p为4时$(0,6)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：比较单位支出的边际效用；相等时保留全部最优组合。\n\n复盘时按“完全替代偏好 → 单位支出边际效用 → 需求对应与多重最优”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI005",
+      "knowledge": [
+        {
+          "title": "非凸偏好",
+          "application_md": "函数严格凸，沿预算驻点是最小值；例如效用至少为72的两个可行端点的中间某些组合低于72，上等值集非凸，不能依赖凹效用的充分性。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "预算线上全局比较",
+          "application_md": "正边际效用使预算用尽，$y=(12-x)/2$，故$u(x)=x^2+(12-x)^2/2$，$u'=3x-12$，内部驻点$x=4,y=4$且$u''=3>0$，效用48。两端点$(12,0)$效用144、$(0,6)$效用72，所以唯一全局最优为$(12,0)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "凸偏好与上等值集",
+          "application_md": "函数严格凸，沿预算驻点是最小值；例如效用至少为72的两个可行端点的中间某些组合低于72，上等值集非凸，不能依赖凹效用的充分性。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：将预算代入，比较端点与驻点；用上等值集检验凸偏好。\n\n复盘时按“非凸偏好 → 预算线上全局比较 → 凸偏好与上等值集”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI006",
+      "knowledge": [
+        {
+          "title": "边际替代率与预算约束",
+          "application_md": "令$D=p_y^2f''+p_x^2g''<0$，由$p_yf'-p_xg'=0$与$p_xx+p_yy=m$对m求导，得$x_m=p_xg''/D>0$、$y_m=p_yf''/D>0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "正常品与收入效应",
+          "application_md": "令$D=p_y^2f''+p_x^2g''<0$，由$p_yf'-p_xg'=0$与$p_xx+p_yy=m$对m求导，得$x_m=p_xg''/D>0$、$y_m=p_yf''/D>0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "普通需求与补偿需求",
+          "application_md": "对$p_y$求导并消元得$x_{p_y}=-p_x(g'+yg'')/D$，符号取决于$1+yg''/g'$，不唯一。例$U=-1/x-1/y$，在价格均1、收入2时$x=y=1$且$x_{p_y}=-1/4<0$；$\\ln x+\\ln y$为0，$\\sqrt x+\\sqrt y$为正。可加性不保证普通需求的总替代性。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：对边际替代条件与预算分别全微分；区分普通与补偿需求。\n\n复盘时按“边际替代率与预算约束 → 正常品与收入效应 → 普通需求与补偿需求”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI007",
+      "knowledge": [
+        {
+          "title": "最低消费约束",
+          "application_md": "定义域非空要求$m\\ge2p_x+p_y$，正剩余与正效用要求严格大于；不能把负剩余代入份额公式。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "剩余收入与支出份额",
+          "application_md": "可支配剩余$M=15-2\\times2-1=10$。两项各花M/2，故$x=2+10/4=4.5,y=1+10/2=6$，$u_0=\\sqrt{2.5\\times5}=5/\\sqrt2$。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM03"
+          ]
+        },
+        {
+          "title": "固定效用的支出补偿",
+          "application_md": "一般支出函数$e=2p_x+p_y+2u\\sqrt{p_xp_y}$。新价格维持$u_0$所需支出$7+5\\sqrt6$，需补$5\\sqrt6-8$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先扣除最低消费支出，再对剩余收入分配；固定旧效用求新支出。\n\n复盘时按“最低消费约束 → 剩余收入与支出份额 → 固定效用的支出补偿”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI008",
+      "knowledge": [
+        {
+          "title": "配给约束与角点",
+          "application_md": "配给后$x=2,y=42,u=62$，损失4。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "拟线性偏好",
+          "application_md": "无配给时$12-2x=4$得$x=4,y=34,u=66$。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM05"
+          ]
+        },
+        {
+          "title": "消费者剩余与效用度量",
+          "application_md": "补贴后的效用比原无券无配给高4，但配给扭曲仍存在：给同额现金且无配给时$x=4,y=42,u=74$，比配给低效4。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：检查自然最优与配给界；拟线性内点下效用差可用货币计。\n\n复盘时按“配给约束与角点 → 拟线性偏好 → 消费者剩余与效用度量”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI009",
+      "knowledge": [
+        {
+          "title": "显示偏好",
+          "application_md": "两次选择没有彼此可负担而反向严格选择的循环，因此未违反WARP。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM11"
+          ]
+        },
+        {
+          "title": "交叉预算可负担性",
+          "application_md": "旧价格下新篮子支出11，不能负担；新价格下旧篮子支出11，也不能负担。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "价格指数与福利判断",
+          "application_md": "Laspeyres价格比为$p^1x^0/p^0x^0=11/10$；Paasche比为$p^1x^1/p^0x^1=10/11$，二者夹住1但不直接给个人福利排序。预算集相交而没有包含关系；需偏好或补偿支出信息才能确定。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：交叉计算两篮子的支出；被选择篮子的可负担性决定显示偏好。\n\n复盘时按“显示偏好 → 交叉预算可负担性 → 价格指数与福利判断”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI010",
+      "knowledge": [
+        {
+          "title": "Slutsky分解",
+          "application_md": "令$h_x(p,u)=x(p,e(p,u))$，对$p_x$求导，用$e_{p_x}=h_x$得$h_{x,p_x}=x_{p_x}+x_mx$，即$x_{p_x}=h_{x,p_x}-xx_m$。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM09"
+          ]
+        },
+        {
+          "title": "补偿自身价格效应",
+          "application_md": "支出函数凹使$h_{x,p_x}\\le0$；若$x_{p_x}>0$且$x>0$，必须$x_m<0$，故吉芬必劣等，反向不成立。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "吉芬品必要条件",
+          "application_md": "支出函数凹使$h_{x,p_x}\\le0$；若$x_{p_x}>0$且$x>0$，必须$x_m<0$，故吉芬必劣等，反向不成立。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM09"
+          ]
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：固定效用收入补偿等于原需求乘价格变动；利用补偿自身效应非正。\n\n复盘时按“Slutsky分解 → 补偿自身价格效应 → 吉芬品必要条件”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI011",
+      "knowledge": [
+        {
+          "title": "含税价格与需求",
+          "application_md": "收入足以支持全部有效税率下的内点，$x_t=\\max\\{8-t,0\\}$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "税收收入",
+          "application_md": "在$0\\le t\\le8$，$R=t(8-t)$，极大值于$t=4$，此时$x=4,R=16$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "消费者剩余与无谓损失",
+          "application_md": "无税$x=8,y=84,u=132$；征税后$y=76,u=108$，效用损失24，扣税转移后的净损失8，即$t^2/2$。当$t\\ge8$，交易为0，税收0，净损失达到32后保持；不能声称任意税率下严格递增。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：含税价进入最优条件；区分消费者效用损失、财政转移和DWL。\n\n复盘时按“含税价格与需求 → 税收收入 → 消费者剩余与无谓损失”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI012",
+      "knowledge": [
+        {
+          "title": "含税需求的收入约束",
+          "application_md": "$x=\\min\\{\\max(10-k,0),9/k\\}$，$y=9-kx$。内点可负担要求$k(10-k)\\le9$，根为1、9。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "分段函数与边界",
+          "application_md": "因此$1<k<9$为y=0角点，$x=9/k$；$9\\le k<10$内点$x=10-k$；$k\\ge10$为x=0。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "税收收入极值",
+          "application_md": "角点税收$R=9(k-1)/k$递增；内点$R=(k-1)(10-k)$在$k\\ge9$递减，所以最优$k=9,t=8,R=8$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：写含税价k，比较无约束需求与可负担量；按分段边界寻最大值。\n\n复盘时按“含税需求的收入约束 → 分段函数与边界 → 税收收入极值”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI013",
+      "knowledge": [
+        {
+          "title": "总付返还与消费选择",
+          "application_md": "按旧量返还12，故新收入36、含税x价2，需求$(9,18)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "旧数量返税规则",
+          "application_md": "按旧量返还12，故新收入36、含税x价2，需求$(9,18)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "财政收支核账",
+          "application_md": "实际税收9，政府净收支为$9-12=-3$，存在赤字。实际税收返还时，个体是否把返还视为既定以及政府预算均衡需另作规定；若代表消费者把返还R视为给定，并要求$R=x$，则$x=(24+R)/4$与$R=x$给$x=8,R=8,y=16$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：返还在选择前给定；税收按新销量核算。\n\n复盘时按“总付返还与消费选择 → 旧数量返税规则 → 财政收支核账”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI014",
+      "knowledge": [
+        {
+          "title": "完全互补需求",
+          "application_md": "方案A价格$(2,1)$，故$x=y=6$、效用6、税收6。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM04"
+          ]
+        },
+        {
+          "title": "从量税与总付税",
+          "application_md": "方案A价格$(2,1)$，故$x=y=6$、效用6、税收6。方案B净收入12、价均1，仍$x=y=6$、效用6，税收6。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "等财政收入比较",
+          "application_md": "以同额总付税为比较基准，本模型从量税没有额外效用损失，因为固定比例下没有可扭曲的替代边际。税本身仍降低购买力：无税效用9；不能把“额外DWL为0”说成消费者毫无损失。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：固定消费比例；财政额先由方案A实际消费确定。\n\n复盘时按“完全互补需求 → 从量税与总付税 → 等财政收入比较”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI015",
+      "knowledge": [
+        {
+          "title": "拟线性偏好与收入充分性",
+          "application_md": "拟线性内点使货币边际效用固定为1，因此本设定下该积分也给精确货币福利变化；一般存在收入效应时普通需求积分不必等于CV或EV。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM05"
+          ]
+        },
+        {
+          "title": "消费者剩余积分",
+          "application_md": "精确剩余增量$\\int_2^4 16p^{-2}dp=4$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "非线性需求",
+          "application_md": "端点梯形面积$\\tfrac12(1+4)(4-2)=5$，因需求弯曲而高估。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先说明拟线性与收入充分，再积分。\n\n复盘时按“拟线性偏好与收入充分性 → 消费者剩余积分 → 非线性需求”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI016",
+      "knowledge": [
+        {
+          "title": "进口供求差与关税",
+          "application_md": "自由贸易$p=5,D=25,S=5,M=20$。关税后$p=8,D=22,S=8,M=14$，税收42。消费扭曲损失$3\\times3/2=4.5$，生产扭曲损失也4.5，总损失9。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "进口配额",
+          "application_md": "配额14解$30-2p=14$得价8，租金$3\\times14=42$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "配额租金归属",
+          "application_md": "租归国内时本国损失仍9；租归国外时再损42，总损失51。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：价格由进口供求差决定；同样数量限制需核租金流向。\n\n复盘时按“进口供求差与关税 → 进口配额 → 配额租金归属”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI017",
+      "knowledge": [
+        {
+          "title": "价格上限的约束性",
+          "application_md": "限价8使供给6、需求12，短缺6。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "有效配给",
+          "application_md": "有效配给时最高6单位获得商品，消费者剩余$\\int_0^6(20-q-8)dq=54$；生产者剩余$\\int_0^6(8-2-q)dq=18$，总剩余72。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "实际交易量与剩余",
+          "application_md": "有效配给时最高6单位获得商品，消费者剩余$\\int_0^6(20-q-8)dq=54$；生产者剩余$\\int_0^6(8-2-q)dq=18$，总剩余72。无管制总剩余81，DWL为9。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先判断上限约束；用实际交易量积分并说明配给。\n\n复盘时按“价格上限的约束性 → 有效配给 → 实际交易量与剩余”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI018",
+      "knowledge": [
+        {
+          "title": "垄断的MR等于MC",
+          "application_md": "无税$40-2Q=4$得$Q=18,p=22,\\pi=324$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "单位税与边际成本",
+          "application_md": "单位税后$40-2Q=12$得$Q=14,p=26$，厂商税后利润196，税收112；价格增加4，为单位税的一半。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "固定税与参与约束",
+          "application_md": "固定税112不改变$Q=18,p=22$，税后利润212仍非负，总剩余仍486。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：单位税进入边际成本；固定税只影响参与，不影响边际产量。\n\n复盘时按“垄断的MR等于MC → 单位税与边际成本 → 固定税与参与约束”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI019",
+      "knowledge": [
+        {
+          "title": "常弹性需求",
+          "application_md": "$R(t)=100t/(2+t)^2$，$R'=100(2-t)/(2+t)^3$，故$t^*=2$、$x=25/4,R=25/2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "税收收入极值",
+          "application_md": "$R(t)=100t/(2+t)^2$，$R'=100(2-t)/(2+t)^3$，故$t^*=2$、$x=25/4,R=25/2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "福利积分",
+          "application_md": "消费者剩余下降$\\int_2^4 100z^{-2}dz=25$；其中税收为$25/2$，故净损失$25/2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：含税价进入常弹性需求；收入求导后对福利用积分。\n\n复盘时按“常弹性需求 → 税收收入极值 → 福利积分”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI020",
+      "knowledge": [
+        {
+          "title": "分段预算约束",
+          "application_md": "超额税基下，$0\\le z\\le1$有$y=2z$、$u^2=8z-2z^2$递增；$z>1$有$y=z+1$，$u^2=(4-z)(z+1)=4+3z-z^2$，峰值$z=3/2$，得$(x,y)=(5/2,5/2)$，效用$5/2$，大于折点$\\sqrt6$。全额触发下，z不超过1的最优仍折点$u^2=6$；z超过1有$y=z,u^2=4z-z^2$，峰值z=2、效用2，故全局选z=1、$(x,y)=(3,2)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "门槛税与预算折点",
+          "application_md": "超额税基下，$0\\le z\\le1$有$y=2z$、$u^2=8z-2z^2$递增；$z>1$有$y=z+1$，$u^2=(4-z)(z+1)=4+3z-z^2$，峰值$z=3/2$，得$(x,y)=(5/2,5/2)$，效用$5/2$，大于折点$\\sqrt6$。全额触发下，z不超过1的最优仍折点$u^2=6$；z超过1有$y=z,u^2=4z-z^2$，峰值z=2、效用2，故全局选z=1、$(x,y)=(3,2)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "全局最优比较",
+          "application_md": "超额税基下，$0\\le z\\le1$有$y=2z$、$u^2=8z-2z^2$递增；$z>1$有$y=z+1$，$u^2=(4-z)(z+1)=4+3z-z^2$，峰值$z=3/2$，得$(x,y)=(5/2,5/2)$，效用$5/2$，大于折点$\\sqrt6$。全额触发下，z不超过1的最优仍折点$u^2=6$；z超过1有$y=z,u^2=4z-z^2$，峰值z=2、效用2，故全局选z=1、$(x,y)=(3,2)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：以出售量z重写分段预算；折点和每段极值都比较。\n\n复盘时按“分段预算约束 → 门槛税与预算折点 → 全局最优比较”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI021",
+      "knowledge": [
+        {
+          "title": "状态财富与期望效用",
+          "application_md": "两状态财富$W_L=36+(1-a)q,W_N=100-aq$，期望效用$E=\\tfrac14\\sqrt{W_L}+\\tfrac34\\sqrt{W_N}$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "保险价格与公平保费",
+          "application_md": "公平a=1/4时两财富相等，q=64、财富84。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "保险最优条件与端点",
+          "application_md": "内点条件$(1-a)/\\sqrt{W_L}=3a/\\sqrt{W_N}$。公平a=1/4时两财富相等，q=64、财富84。a=1/3时$W_N/W_L=9/4$，即$100-q/3=\\tfrac94(36+2q/3)$，得$q=114/11$，在区间内。凹效用使目标凹，内点为全局最优；赔付小于损失，保留部分风险以节约加价保费。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：写损失与无损失财富；对期望效用求导并查端点。\n\n复盘时按“状态财富与期望效用 → 保险价格与公平保费 → 保险最优条件与端点”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI022",
+      "knowledge": [
+        {
+          "title": "免赔额与状态财富",
+          "application_md": "免赔合同后财富72或62，EU为$(\\sqrt{72}+\\sqrt{62})/2\\approx8.1796$，故选免赔合同。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "合同期望效用比较",
+          "application_md": "无保险财富100或36，EU=8、期望财富68、确定性等价64，风险溢价4。全保险后财富65，EU为$\\sqrt{65}\\approx8.0623$。免赔合同后财富72或62，EU为$(\\sqrt{72}+\\sqrt{62})/2\\approx8.1796$，故选免赔合同。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "参与约束与最高保费",
+          "application_md": "最高保费P满足$\\sqrt{100-P}+\\sqrt{90-P}=16$；两根之差为10/16，得$\\sqrt{100-P}=133/16$，故$P=7911/256\\approx30.9023$。公平保费为期望赔款$54/2=27$。最高保费还包含期望赔付，不能把它误作单纯风险溢价。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：逐状态扣保费与未赔损失，先比较EU，再用无保险EU作为参与约束。\n\n复盘时按“免赔额与状态财富 → 合同期望效用比较 → 参与约束与最高保费”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI023",
+      "knowledge": [
+        {
+          "title": "利润选择与效用评价",
+          "application_md": "无信息期望边际收益25，$MC=q+5$，故q=20。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "信息下的状态决策",
+          "application_md": "有信息晴q=25、利润$425/2$；雨q=15、利润$25/2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "信息价值与期望效用",
+          "application_md": "故$EU_I=5(\\sqrt{34}+\\sqrt2)/4$，效用增量$5(\\sqrt{34}-3\\sqrt2)/4\\approx1.9854$。利润单位EVPI为$\\tfrac12(212.5+12.5)-100=12.5$，不可用来替代效用差。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先固定问题给定的利润选择基准，再分别平均效用；信息下可按状态行动。\n\n复盘时按“利润选择与效用评价 → 信息下的状态决策 → 信息价值与期望效用”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI024",
+      "knowledge": [
+        {
+          "title": "效用定义域与状态利润",
+          "application_md": "雨利润$15q-q^2/2-100\\ge0$给q在10至20之间；晴利润在此区间均非负。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "风险厌恶",
+          "application_md": "目标$\\tfrac12\\sqrt{25q-q^2/2-100}+\\tfrac12\\sqrt{15q-q^2/2-100}$严格凹。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "加权边际效用最优条件",
+          "application_md": "内点条件$(25-q)/\\sqrt{\\pi_H}+(15-q)/\\sqrt{\\pi_L}=0$，正解$q=(115+5\\sqrt{17})/8\\approx16.95194$，另一代数根不满足未平方的一阶条件。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先用每状态非负利润确定定义域，再求加权边际效用条件。\n\n复盘时按“效用定义域与状态利润 → 风险厌恶 → 加权边际效用最优条件”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI025",
+      "knowledge": [
+        {
+          "title": "风险资产配置",
+          "application_md": "一阶条件$1/(16+a)=(1/2)/(16-a/2)$，得a=8，两状态财富24、12。目标二阶导严格负，且可行。新回报下财富$16+a/2,16-a/2$，目标关于a对称且凹，导数在0为0，其后负，故最优a=0。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "状态财富与期望效用",
+          "application_md": "原状态财富$16+a,16-a/2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "一阶条件与投资边界",
+          "application_md": "一阶条件$1/(16+a)=(1/2)/(16-a/2)$，得a=8，两状态财富24、12。目标二阶导严格负，且可行。新回报下财富$16+a/2,16-a/2$，目标关于a对称且凹，导数在0为0，其后负，故最优a=0。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：写状态财富而非平均回报效用；一阶导与边界符号共同判断。\n\n复盘时按“风险资产配置 → 状态财富与期望效用 → 一阶条件与投资边界”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI026",
+      "knowledge": [
+        {
+          "title": "状态价格与无套利预算",
+          "application_md": "预算$\\tfrac12W_H+\\tfrac12W_L=50$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "凹效用与消费平滑",
+          "application_md": "一阶条件$W_H=W_L$，得两状态财富50。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "状态证券配置",
+          "application_md": "买入晴证券30单位、卖出雨证券30单位，现值支出相抵。原EU为$\\tfrac12\\ln20+\\tfrac12\\ln80=\\ln40$，新EU为$\\ln50$，增量$\\ln(5/4)$；期望财富始终50，改进来自风险分担。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：无套利预算是状态价格加权财富不变；凹效用要求按概率平滑。\n\n复盘时按“状态价格与无套利预算 → 凹效用与消费平滑 → 状态证券配置”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI027",
+      "knowledge": [
+        {
+          "title": "存贷利差与分段跨期预算",
+          "application_md": "原收入下，存款分段$c_2=120-c_1,c_1\\le60$，最优候选60；借款分段$c_2=150-1.5c_1,c_1\\ge60$，候选50不在该段，故选不交易$(60,60)$。第二期收入120时，存款段候选$c_1=90$不在存款段；借款段$c_2=210-1.5c_1$，一阶条件$c_2=1.5c_1$，得$c_1=70,c_2=105$，借入10、偿还15，可行且优于折点。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "跨期消费最优条件",
+          "application_md": "第二期收入120时，存款段候选$c_1=90$不在存款段；借款段$c_2=210-1.5c_1$，一阶条件$c_2=1.5c_1$，得$c_1=70,c_2=105$，借入10、偿还15，可行且优于折点。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "不借不贷折点",
+          "application_md": "原收入下，存款分段$c_2=120-c_1,c_1\\le60$，最优候选60；借款分段$c_2=150-1.5c_1,c_1\\ge60$，候选50不在该段，故选不交易$(60,60)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：分别按存款和借款预算求候选，检验候选所在分段及不交易点。\n\n复盘时按“存贷利差与分段跨期预算 → 跨期消费最优条件 → 不借不贷折点”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI028",
+      "knowledge": [
+        {
+          "title": "借款约束",
+          "application_md": "无约束终生资源100，消费各50，希望借款30。借款上限10使$c_1=30,c_2=70$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "受约束跨期消费",
+          "application_md": "借款上限10使$c_1=30,c_2=70$。将上限b放宽，效用边际增益$1/(20+b)-1/(80-b)$，b=10时为$2/105>0$；这是以效用计的放松价值。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "补助与预算变动",
+          "application_md": "补助6后总资源106、无约束消费53，需借27仍超过10，故$c_1=36,c_2=70$。第一期消费对补助的边际反应在受约束区间为1，不能套无约束的1/2。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：比较希望借款与借款上限，再检验补助后的新预算。\n\n复盘时按“借款约束 → 受约束跨期消费 → 补助与预算变动”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI029",
+      "knowledge": [
+        {
+          "title": "信息收费的时点",
+          "application_md": "固定费下$\\sqrt{81-F}\\ge8$，故最高固定费17；期望财富差13小于17，差额4来自风险消除。按原始高状态收费时，买信息后的财富仍以各半为81-F或81，参与条件$(\\sqrt{81-F}+9)/2\\ge8$，故F最多32、期望费16。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "最终财富风险",
+          "application_md": "无信息EU为8、确定性等价64，期望财富68。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "期望效用参与约束",
+          "application_md": "固定费下$\\sqrt{81-F}\\ge8$，故最高固定费17；期望财富差13小于17，差额4来自风险消除。按原始高状态收费时，买信息后的财富仍以各半为81-F或81，参与条件$(\\sqrt{81-F}+9)/2\\ge8$，故F最多32、期望费16。尽管名义上限32更高，期望支付16低于固定17，因为状态收费重新引入支付风险。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：两种收费方式分别写最终财富分布，以无信息EU8约束参与。\n\n复盘时按“信息收费的时点 → 最终财富风险 → 期望效用参与约束”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI030",
+      "knowledge": [
+        {
+          "title": "风险偏好",
+          "application_md": "甲的彩票EU为5，确定40效用$\\sqrt{40}>5$，故取40；甲严格风险厌恶。乙彩票EU为50>40，故取彩票，风险中性。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "确定性等价",
+          "application_md": "甲的彩票EU为5，确定40效用$\\sqrt{40}>5$，故取40；甲严格风险厌恶。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "期望效用的正仿射变换",
+          "application_md": "平方是正财富域的递增变换，保留确定财富大小排序，却不保留彩票期望效用比较；冯诺依曼期望效用仅正仿射变换保持所有彩票排序。平方后彩票EU50、确定40，选择反转。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：分别比较期望效用与确定结果效用；区分序数确定性效用与冯诺依曼效用。\n\n复盘时按“风险偏好 → 确定性等价 → 期望效用的正仿射变换”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI031",
+      "knowledge": [
+        {
+          "title": "条件要素需求",
+          "application_md": "由$LK=q^2$及$wL=rK$得$L=q/2,K=2q,C=4q$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "资本约束与短期成本",
+          "application_md": "当$q\\le2$时资本不超过4，仍用无约束解；当$q>2$时取$K=4,L=q^2/4$，$C=q^2+4$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "长期成本与分段包络",
+          "application_md": "当$q\\le2$时资本不超过4，仍用无约束解；当$q>2$时取$K=4,L=q^2/4$，$C=q^2+4$。q=8时有约束成本68，无约束32。资本容量从4略放宽时，受约束成本$4q^2/\\bar K+\\bar K$对容量导数为$1-4q^2/\\bar K^2$，q=8时为-15；一单位额外容量边际可节约15。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先求无约束条件需求，再把资本上限带回技术，分段求成本。\n\n复盘时按“条件要素需求 → 资本约束与短期成本 → 长期成本与分段包络”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI032",
+      "knowledge": [
+        {
+          "title": "互补技术与投入不等式",
+          "application_md": "约束$L+K\\ge q,L\\ge q/2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "成本最小化",
+          "application_md": "r=1时，在$L\\in[q/2,q]$取$K=q-L$，成本$q+L$递增，最优$L=K=q/2,C=3q/2$。r=3时该段成本$3q-L$递减，最优$L=q,K=0,C=2q$；L超过q只增加成本。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "等成本线支撑点",
+          "application_md": "r=1时，在$L\\in[q/2,q]$取$K=q-L$，成本$q+L$递增，最优$L=K=q/2,C=3q/2$。r=3时该段成本$3q-L$递减，最优$L=q,K=0,C=2q$；L超过q只增加成本。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：产量要求等价于两个投入不等式，找最低等成本线支撑点。\n\n复盘时按“互补技术与投入不等式 → 成本最小化 → 等成本线支撑点”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI033",
+      "knowledge": [
+        {
+          "title": "多工厂边际成本均等",
+          "application_md": "两厂开时$2q_1=4q_2$且$q_1+q_2=Q$，得$q_1=2Q/3,q_2=Q/3$，总成本$2Q^2/3+8$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "可避免固定成本",
+          "application_md": "仅厂1成本$Q^2$，仅厂2成本$2Q^2+8$被厂1严格支配。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "开厂阈值与全局比较",
+          "application_md": "因此当$Q>\\sqrt{24}$开两厂，低于阈值只开厂1，等号两方案同成本。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先按边际成本均等求条件解，再把避免的固定成本纳入开关比较。\n\n复盘时按“多工厂边际成本均等 → 可避免固定成本 → 开厂阈值与全局比较”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI034",
+      "knowledge": [
+        {
+          "title": "短期竞争供给",
+          "application_md": "短期每厂$q=p/2$，行业$Q=5p$，故$p=50/3,Q=250/3$，每厂$q=25/3$，利润$625/9-16=481/9$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "最低平均成本",
+          "application_md": "长期$AC=q+16/q$在q=4最小、最低AC=8，故$p=8,Q=92,N=23$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "自由进入与长期均衡",
+          "application_md": "长期$AC=q+16/q$在q=4最小、最低AC=8，故$p=8,Q=92,N=23$。单位税2后厂商净价仍8、每厂q仍4，消费者价10，行业Q90、N22.5；这是连续企业数近似，若要求整数则不能同时强求所有等式精确成立。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：短期先加总MC供给；长期令价格等于最低平均成本。\n\n复盘时按“短期竞争供给 → 最低平均成本 → 自由进入与长期均衡”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI035",
+      "knowledge": [
+        {
+          "title": "固定企业数与市场出清",
+          "application_md": "10家供给$Q=5p$，出清得p=20、Q=100、每厂q=10，净经营利润$200-100-16=84$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "资本正常回报",
+          "application_md": "10家供给$Q=5p$，出清得p=20、Q=100、每厂q=10，净经营利润$200-100-16=84$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "准入稀缺租金",
+          "application_md": "准入限制维持高于最低AC的价格，84是每期经营权可支付租金的上限（其他风险、管理成本均忽略）；一次性许可证价格为未来租流现值，而非直接等于84。若N小于10，正利润会吸引进入直至名额用尽。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：给定企业数求市场出清，再分离普通资本回报和稀缺准入租。\n\n复盘时按“固定企业数与市场出清 → 资本正常回报 → 准入稀缺租金”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI036",
+      "knowledge": [
+        {
+          "title": "规模报酬",
+          "application_md": "第一技术齐次次数1/2，规模报酬递减；最优$L=K=q^2$，成本$2q^2$，利润$pq-2q^2$在q=p/4有有限最大值。第二技术次数2，规模报酬递增；最优$L=K=\\sqrt q$，成本$2\\sqrt q$，当q趋无穷时利润趋无穷，故无有限最优。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "成本最小化",
+          "application_md": "第一技术齐次次数1/2，规模报酬递减；最优$L=K=q^2$，成本$2q^2$，利润$pq-2q^2$在q=p/4有有限最大值。第二技术次数2，规模报酬递增；最优$L=K=\\sqrt q$，成本$2\\sqrt q$，当q趋无穷时利润趋无穷，故无有限最优。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "利润最大值的存在性",
+          "application_md": "第二技术次数2，规模报酬递增；最优$L=K=\\sqrt q$，成本$2\\sqrt q$，当q趋无穷时利润趋无穷，故无有限最优。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先同比例扩大所有投入，再按成本最小化与增长阶数判断利润。\n\n复盘时按“规模报酬 → 成本最小化 → 利润最大值的存在性”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI037",
+      "knowledge": [
+        {
+          "title": "成本函数一阶齐次性",
+          "application_md": "同比例变价使成本同比例变化，故一次齐次。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "Shephard引理",
+          "application_md": "$L=C_w=q\\sqrt{r/w},K=C_r=q\\sqrt{w/r}$，$wL+rK=C$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "成本函数凹性与Hessian检验",
+          "application_md": "二阶方向可写为$d^2C=-q(\\sqrt r\\,dw/\\sqrt w-\\sqrt w\\,dr/\\sqrt r)^2/(2\\sqrt{wr})\\le0$，故价格凹。后式同比例变价按平方放大，违背一次齐次；且Hessian正定，违背成本作为线性投入支出最小包络应有的价格凹性。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：求一阶导、Euler恒等式与Hessian符号，再用单位同比例变价检验。\n\n复盘时按“成本函数一阶齐次性 → Shephard引理 → 成本函数凹性与Hessian检验”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI038",
+      "knowledge": [
+        {
+          "title": "停产条件与可避免成本",
+          "application_md": "$MC=6+2q,AVC=6+q$，无额外费时短期p>6有$q=(p-6)/2$。长期$AC=36/q+6+q$在q=6最小、最低AC18。p=8时q=1、利润-35，停产亏36，故短期生产但长期退出。另付可避免费9时，营业q仍1而利润-44，比停产-36更差，故停产。营业创造的贡献利润最大为$(p-6)^2/4$，需至少9，故营业下限p=12；等号可营业q=3或停产。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "固定成本回收",
+          "application_md": "p=8时q=1、利润-35，停产亏36，故短期生产但长期退出。另付可避免费9时，营业q仍1而利润-44，比停产-36更差，故停产。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "长期退出条件",
+          "application_md": "长期$AC=36/q+6+q$在q=6最小、最低AC18。p=8时q=1、利润-35，停产亏36，故短期生产但长期退出。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：短期比较可避免变动成本；长期再要求固定成本能收回。\n\n复盘时按“停产条件与可避免成本 → 固定成本回收 → 长期退出条件”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI039",
+      "knowledge": [
+        {
+          "title": "技术进步与成本曲线",
+          "application_md": "旧MC=2q，行业供给10p，故旧p=200/11、Q=2000/11。新MC=q，20家供给20p，故短期新p=200/21、Q=4000/21。新AC=q/2+25/q，最低点$q=5\\sqrt2$，最低AC=$5\\sqrt2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "短期固定企业数",
+          "application_md": "新MC=q，20家供给20p，故短期新p=200/21、Q=4000/21。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "长期进入退出",
+          "application_md": "长期p为$5\\sqrt2$，Q为$200-5\\sqrt2$，企业数$N=(200-5\\sqrt2)/(5\\sqrt2)=20\\sqrt2-1$。虽然单厂最优规模提高，行业需求与价格共同决定企业数，不能只凭规模变化断言退出。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：技术改变MC和AC，短期固定企业数、长期企业数内生。\n\n复盘时按“技术进步与成本曲线 → 短期固定企业数 → 长期进入退出”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI040",
+      "knowledge": [
+        {
+          "title": "要素价格与单位成本",
+          "application_md": "原单位成本2，给定q最优L=K=q；p大于单位成本，产能约束取q=10，投入各10，利润60。征税后劳动有效价4，最优$L=q/2,K=2q$，单位成本4；仍生产10，投入5和20，利润40。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "投入替代效应",
+          "application_md": "征税后劳动有效价4，最优$L=q/2,K=2q$，单位成本4；仍生产10，投入5和20，利润40。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "产品产量调整",
+          "application_md": "原单位成本2，给定q最优L=K=q；p大于单位成本，产能约束取q=10，投入各10，利润60。征税后劳动有效价4，最优$L=q/2,K=2q$，单位成本4；仍生产10，投入5和20，利润40。若无产能上限，原与税后p都高于单位成本，利润随q线性增加而无界；此时不能给某个p=MC的有限产量。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先按要素价求单位成本，再比较产品价决定产量边界。\n\n复盘时按“要素价格与单位成本 → 投入替代效应 → 产品产量调整”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI041",
+      "knowledge": [
+        {
+          "title": "三级价格歧视",
+          "application_md": "分市场最优$p_1=12,q_1=8$，$p_2=9.5,q_2=11$，利润$64+60.5=124.5$。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM29"
+          ]
+        },
+        {
+          "title": "统一价格的分段需求",
+          "application_md": "统一p不超过15时总需求$50-3p$，利润$(p-4)(50-3p)$，一阶最优$p=31/3,q_1=29/3,q_2=28/3$，利润$361/3$。15至20只服务市场1，其无约束最优12不在本段，段内最大在15，利润55；p达到20无销量。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "利润包络比较",
+          "application_md": "因此统一最优为31/3，两类均服务，分价提高利润但不保证每个消费者福利同向。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：分市场分别令MR=MC；统一价格按群体退出点分段。\n\n复盘时按“三级价格歧视 → 统一价格的分段需求 → 利润包络比较”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI042",
+      "knowledge": [
+        {
+          "title": "群体退出价格",
+          "application_md": "同时服务段总需求$28-2p$，候选$p=7+c/2$，仅在c不超过2时位于该段；利润$(14-c)^2/2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "分段垄断利润",
+          "application_md": "同时服务段总需求$28-2p$，候选$p=7+c/2$，仅在c不超过2时位于该段；利润$(14-c)^2/2$。仅H候选$p=(20+c)/2$，对全区间可行，利润$(20-c)^2/4$。在c为0时两利润为98与100；比较差$2(14-c)^2-(20-c)^2=c^2-16c-8$在0至2均负，所以即使同时服务候选可行，仍不如仅H；c大于2时双类段最大在p=8，亦不超过单H包络。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "市场覆盖选择",
+          "application_md": "因此全区间均仅服务H，价格$(20+c)/2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：在p不超过8与p介于8和20两段求利润，再比较包络。\n\n复盘时按“群体退出价格 → 分段垄断利润 → 市场覆盖选择”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI043",
+      "knowledge": [
+        {
+          "title": "统一垄断定价",
+          "application_md": "统一垄断$MR=24-4q=4$，得q=5、p=14、利润50、消费者剩余25、总剩余75。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "一级价格歧视",
+          "application_md": "一级歧视生产至$24-2q=4$，q=10，全部交易剩余$\\int_0^{10}(20-2q)dq=100$由厂商收取，消费者剩余0。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM30"
+          ]
+        },
+        {
+          "title": "总剩余与交易效率",
+          "application_md": "总剩余提高25而消费者减少25，说明总效率与剩余分配不同。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：统一定价用MR；完全歧视按愿付价逐单位收取至p=MC。\n\n复盘时按“统一垄断定价 → 一级价格歧视 → 总剩余与交易效率”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI044",
+      "knowledge": [
+        {
+          "title": "两部收费",
+          "application_md": "两部收费将边际价设边际成本以最大化总剩余，再用入场费抽取。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM30"
+          ]
+        },
+        {
+          "title": "消费者剩余与入场费",
+          "application_md": "对给定p，每人q=12-p，最大可收F为$\\tfrac12(12-p)^2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "总交易剩余最大化",
+          "application_md": "每人总可提取剩余$F+(p-2)q$在p=2达到最大，故q=10、F=50。总利润$10\\times50-100=400$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：入场费等于单位价下剩余，再最大化总交易剩余。\n\n复盘时按“两部收费 → 消费者剩余与入场费 → 总交易剩余最大化”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI045",
+      "knowledge": [
+        {
+          "title": "异质消费者参与约束",
+          "application_md": "同时服务时$0\\le p\\le8$且$F=\\tfrac12(8-p)^2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "统一两部收费",
+          "application_md": "利润$2F+p(20-2p)=64+4p-p^2$，最优p=2、F=18，利润68。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM30"
+          ]
+        },
+        {
+          "title": "排除低型的方案比较",
+          "application_md": "只服务H时取p=0、F=72，利润72；低型在此合同剩余32不足付72，确被排除。故全局只服务H。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：双类参与费受低型剩余限制；单类方案单独优化并检查排除。\n\n复盘时按“异质消费者参与约束 → 统一两部收费 → 排除低型的方案比较”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI046",
+      "knowledge": [
+        {
+          "title": "离散保留价格",
+          "application_md": "原估值下，每品价格10卖一件收入10，价格4卖两件收入8，故分别定价总利润20。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "捆绑定价",
+          "application_md": "每人套装估值14，捆绑价14可售两套利润28。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "估值相关性与利润比较",
+          "application_md": "正相关改设下，分别仍每品价10卖一件、总20；捆绑价20卖一套利润20，或价8卖两套16，最优20。负相关使总估值离散程度下降，便于统一套餐抽取，正相关例没有同样收益。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：列出各可能保留价，不把连续需求公式硬套离散估值。\n\n复盘时按“离散保留价格 → 捆绑定价 → 估值相关性与利润比较”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI047",
+      "knowledge": [
+        {
+          "title": "自然垄断",
+          "application_md": "MC定价p=2、Q=28，经营变动成本收回但固定成本亏100，需补贴100。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "平均成本定价",
+          "application_md": "收支平衡$30-Q=2+100/Q$，即$Q^2-28Q+100=0$，得$Q=14\\pm4\\sqrt6$。总剩余随Q在0至28递增，故选较大根$14+4\\sqrt6$，价$16-4\\sqrt6$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "监管方案与剩余比较",
+          "application_md": "垄断$30-2Q=2$得Q=14、p=16、利润96。MC定价p=2、Q=28，经营变动成本收回但固定成本亏100，需补贴100。收支平衡$30-Q=2+100/Q$，即$Q^2-28Q+100=0$，得$Q=14\\pm4\\sqrt6$。总剩余随Q在0至28递增，故选较大根$14+4\\sqrt6$，价$16-4\\sqrt6$。较小根也收支平衡但更低效，不能只报任一根。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：垄断MR=MC；平均成本约束会给两个根，应按产量与剩余比较。\n\n复盘时按“自然垄断 → 平均成本定价 → 监管方案与剩余比较”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI048",
+      "knowledge": [
+        {
+          "title": "广告与需求",
+          "application_md": "令$s=\\sqrt A$，给定s的垄断$q=8+s,p=12+s$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "垄断定价",
+          "application_md": "令$s=\\sqrt A$，给定s的垄断$q=8+s,p=12+s$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "联合最优与利润有界性",
+          "application_md": "广告成本A时利润$(8+s)^2-s^2=64+16s$，随s无界上升，无有限最优；联合一阶条件不能创造不存在的最大值。费用2A时利润$64+16s-s^2$，最大于s=8，即A=64、q=16、p=20，利润128。因为约化目标严格凹且s非负，这一解全局最优。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先给定广告解产量定价，再看最优利润关于广告的增长。\n\n复盘时按“广告与需求 → 垄断定价 → 联合最优与利润有界性”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI049",
+      "knowledge": [
+        {
+          "title": "高峰低谷需求",
+          "application_md": "低谷无容量约束垄断量5，高峰为9。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "产能约束与影子价格",
+          "application_md": "若K在5至9，高峰受限、低谷q=5。容量净边际收益$MR_H(K)-2-4=20-2K-6$，得K=7，落在该段。故高峰q=7、p=13，低谷q=5、p=7。高峰容量影子收益$MR_H-2=4$，低谷为0，恰覆盖4容量成本。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "容量投资的边际收益",
+          "application_md": "容量净边际收益$MR_H(K)-2-4=20-2K-6$，得K=7，落在该段。故高峰q=7、p=13，低谷q=5、p=7。高峰容量影子收益$MR_H-2=4$，低谷为0，恰覆盖4容量成本。利润高峰77、低谷25减容量28，共74。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：每期MR不低于MC时受容量约束；容量边际收益等于两期影子收益之和。\n\n复盘时按“高峰低谷需求 → 产能约束与影子价格 → 容量投资的边际收益”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI050",
+      "knowledge": [
+        {
+          "title": "质量选择",
+          "application_md": "完全歧视最大化$(8+s)q-q^2/2-s^2$，一阶条件$q=8+s,q=2s$，得s=8、q=16，总剩余64。统一价需求$p=10+s-q$，利润$(8+s)q-q^2-s^2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "统一价格下的边际消费者",
+          "application_md": "统一价需求$p=10+s-q$，利润$(8+s)q-q^2-s^2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "社会总剩余",
+          "application_md": "完全歧视最大化$(8+s)q-q^2/2-s^2$，一阶条件$q=8+s,q=2s$，得s=8、q=16，总剩余64。统一价需求$p=10+s-q$，利润$(8+s)q-q^2-s^2$。条件$8+s-2q=0,q-2s=0$给s=8/3、q=16/3、p=22/3，利润64/3。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：完全提取时最大化总剩余；统一价格时边际消费者决定需求曲线。\n\n复盘时按“质量选择 → 统一价格下的边际消费者 → 社会总剩余”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI051",
+      "knowledge": [
+        {
+          "title": "古诺数量竞争",
+          "application_md": "古诺反应$q_i=(48-q_j)/2$，得各16、Q32、p18，每家利润256。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM32"
+          ]
+        },
+        {
+          "title": "卡特尔联合利润",
+          "application_md": "卡特尔总MR=MC给Q24、各12、p26，每家利润288。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "社会有效产量",
+          "application_md": "效率量48、p2、经营利润0。总剩余$48Q-Q^2/2$分别为1024、864、1152。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：古诺以对方产量给定，卡特尔以行业总量优化，效率按p=MC。\n\n复盘时按“古诺数量竞争 → 卡特尔联合利润 → 社会有效产量”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI052",
+      "knowledge": [
+        {
+          "title": "非对称古诺反应函数",
+          "application_md": "内部反应$2q_1+q_2=36,q_1+2q_2=40-c$，解$q_1=(32+c)/3,q_2=(44-2c)/3$。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM32"
+          ]
+        },
+        {
+          "title": "非负产量约束",
+          "application_md": "双方正产要求c<22且c通常非负。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "退出与角点均衡",
+          "application_md": "双方正产要求c<22且c通常非负。c=30时内部q2为负，实际企业2退出；企业1作垄断q1=18、p22，企业2进入边际利润$p-c=-8\\le0$，退出稳定。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先解内部反应，再以非负性决定谁退出。\n\n复盘时按“非对称古诺反应函数 → 非负产量约束 → 退出与角点均衡”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI053",
+      "knowledge": [
+        {
+          "title": "古诺一阶条件",
+          "application_md": "对称条件$a-b(n+1)q=c$，故$q=(a-c)/[b(n+1)]$，$Q=n(a-c)/[b(n+1)]$，$p=(a+nc)/(n+1)$。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM32"
+          ]
+        },
+        {
+          "title": "市场份额与需求弹性",
+          "application_md": "Lerner指数$(p-c)/p=(a-c)/(a+nc)$。需求弹性绝对值$p/(bQ)$，于是$1/(n|\\varepsilon|)=bQ/(np)=bq/p$，恰等于加成。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "行业加成率",
+          "application_md": "Lerner指数$(p-c)/p=(a-c)/(a+nc)$。需求弹性绝对值$p/(bQ)$，于是$1/(n|\\varepsilon|)=bQ/(np)=bq/p$，恰等于加成。若c>0，指数小于1，故$|\\varepsilon|>1/n$；不能要求所有寡头均衡市场需求弹性都大于1，只有独家垄断时有该结论。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：把单厂一阶条件加总；用市场份额把残余斜率写成弹性。\n\n复盘时按“古诺一阶条件 → 市场份额与需求弹性 → 行业加成率”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI054",
+      "knowledge": [
+        {
+          "title": "竞争边缘供给",
+          "application_md": "令MR=10得$Q_d=45,p=32.5$；边缘供给22.5、总量67.5，满足市场需求。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "主导企业剩余需求",
+          "application_md": "剩余需求$Q_d=110-2p$，逆需求$p=55-Q_d/2$，故MR=$55-Q_d$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "剩余市场垄断定价",
+          "application_md": "令MR=10得$Q_d=45,p=32.5$；边缘供给22.5、总量67.5，满足市场需求。主导利润$(32.5-10)45=1012.5$。若用全市场需求，会忽略提高价格吸引边缘供给的额外销量损失，夸大市场势力并得到错误定价。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先从需求中扣竞争供给，再优化剩余市场。\n\n复盘时按“竞争边缘供给 → 主导企业剩余需求 → 剩余市场垄断定价”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI055",
+      "knowledge": [
+        {
+          "title": "差异产品需求",
+          "application_md": "厂商1利润$(p_1-2)(12-2p_1+p_2)$，一阶条件$16-4p_1+p_2=0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "伯特兰价格竞争",
+          "application_md": "对称得p=16/3，q=20/3，每家利润200/9。二阶导-4确保最佳反应；销量为正。在完全同质、相同MC且无容量限制的静态定价中，高于MC的共同价格可被微小降价抢走全部市场，均衡为p=2；差异化需求中的交叉系数和顾客保留不能直接沿用。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM35"
+          ]
+        },
+        {
+          "title": "价格反应函数",
+          "application_md": "厂商1利润$(p_1-2)(12-2p_1+p_2)$，一阶条件$16-4p_1+p_2=0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：各自价格影响自己的销量与边际收入；求价格反应函数。\n\n复盘时按“差异产品需求 → 伯特兰价格竞争 → 价格反应函数”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI056",
+      "knowledge": [
+        {
+          "title": "斯塔克尔伯格时序",
+          "application_md": "后手反应$q_2=\\max\\{(48-q_1)/2,0\\}$。先手在q1不超过48段利润$(24-q_1/2)q_1$，最优q1=24，后手12、价14，利润先手288、后手144。古诺各16、价18、利润256；先手承诺使自己多产并挤压后手。公告若可撤回，后手不必相信固定q1，先行承诺的时序假设失去，需另建博弈，不能仅凭“先说”赋予领导优势。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM34"
+          ]
+        },
+        {
+          "title": "后手最佳反应",
+          "application_md": "后手反应$q_2=\\max\\{(48-q_1)/2,0\\}$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "先手承诺与优化",
+          "application_md": "先手在q1不超过48段利润$(24-q_1/2)q_1$，最优q1=24，后手12、价14，利润先手288、后手144。古诺各16、价18、利润256；先手承诺使自己多产并挤压后手。公告若可撤回，后手不必相信固定q1，先行承诺的时序假设失去，需另建博弈，不能仅凭“先说”赋予领导优势。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先求后手完整最佳反应，再由先手代入优化。\n\n复盘时按“斯塔克尔伯格时序 → 后手最佳反应 → 先手承诺与优化”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI057",
+      "knowledge": [
+        {
+          "title": "合谋与一次偏离收益",
+          "application_md": "合谋每家利润288；对方产12时偏离最佳量18，价20，偏离利润324；古诺利润256。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "无限重复的贴现现值",
+          "application_md": "约束$288/(1-\\delta)\\ge324+256\\delta/(1-\\delta)$，整理得$\\delta\\ge36/68=9/17$。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM37"
+          ]
+        },
+        {
+          "title": "有限期逆向归纳",
+          "application_md": "有限次且每阶段唯一均衡、完整信息时末期必古诺，倒推所有期古诺；不能因总轮次大就直接套无限期阈值。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：一次偏离利润与贴现现值比较；有限期从末期逆推。\n\n复盘时按“合谋与一次偏离收益 → 无限重复的贴现现值 → 有限期逆向归纳”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI058",
+      "knowledge": [
+        {
+          "title": "混合策略均衡",
+          "application_md": "设行选A概率p、列选A概率q。行无差异要求$3q=1-q$，q=1/4；列无差异要求$p=3(1-p)$，p=3/4。行期望收益3/4、列期望收益3/4。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM36"
+          ]
+        },
+        {
+          "title": "使对方无差异",
+          "application_md": "行无差异要求$3q=1-q$，q=1/4；列无差异要求$p=3(1-p)$，p=3/4。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "非对称混合概率",
+          "application_md": "行无差异要求$3q=1-q$，q=1/4；列无差异要求$p=3(1-p)$，p=3/4。行期望收益3/4、列期望收益3/4。概率由使对方无差异的条件确定；双方对两个协调结果偏好相反，因此不能要求p=q。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：各自使对方无差异；明确每个概率代表谁的行动。\n\n复盘时按“混合策略均衡 → 使对方无差异 → 非对称混合概率”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI059",
+      "knowledge": [
+        {
+          "title": "私人类型与信息结构",
+          "application_md": "企业2不能观察类型后分别选两个产量，否则改变信息集。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "贝叶斯最优反应",
+          "application_md": "给q2，企业1低型$q_{1L}=(30-q_2)/2$，高型$q_{1H}=(18-q_2)/2$。期望$q_1=12-q_2/2$。企业2反应$q_2=[24-Eq_1]/2=6+q_2/4$，得q2=8；低型11、高型5。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "期望产量",
+          "application_md": "期望$q_1=12-q_2/2$。企业2反应$q_2=[24-Eq_1]/2=6+q_2/4$，得q2=8；低型11、高型5。均为正，预期q1=8。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：企业1对实际类型最优，企业2对对方期望产量最优。\n\n复盘时按“私人类型与信息结构 → 贝叶斯最优反应 → 期望产量”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI060",
+      "knowledge": [
+        {
+          "title": "二价拍卖的真实报价",
+          "application_md": "二价中低于价值时报价可能错失正剩余，高于价值时报价可能以超过价值价格中标；真实报价避免两者，是弱优势。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM51"
+          ]
+        },
+        {
+          "title": "私人价值与顺序统计量",
+          "application_md": "收入为较低估值，期望$\\int_0^1(1-z)^2dz=1/3$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "一价拍卖的最优偏离",
+          "application_md": "一价设对方$b(v)=v/2$，类型v冒充z时中标概率z、收益$(v-z/2)z$，最大z=v，故b(v)=v/2成立；最高估值期望2/3，收入也是1/3。独立私人估值、风险中性、相同分配与最低型零租等条件支持此等收入，改风险或相关估值须重算。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM51"
+          ]
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：按最高对手报价分情形证明，再求顺序统计量；一价用最优偏离推导。\n\n复盘时按“二价拍卖的真实报价 → 私人价值与顺序统计量 → 一价拍卖的最优偏离”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI061",
+      "knowledge": [
+        {
+          "title": "劳动边际收益产品",
+          "application_md": "竞争出清$20-L=L$，得L=10、w=10。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "买方垄断的边际要素支出",
+          "application_md": "单一雇主工资支出$L^2$，MFC=2L，得L=20/3、w=20/3。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM39"
+          ]
+        },
+        {
+          "title": "最低工资的分段效应",
+          "application_md": "最低工资10时该工资可招10人，边际支出在0至10为10；雇主在MRP=10处愿雇10，故工资与就业均升至竞争水平。竞争行业最低工资12使需求8、供给12，失业4。结果取决于工资决定机制，不能用竞争图直接评价所有市场。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：竞争令MRP=w，单一雇主令MRP=MFC；最低工资使边际雇佣支出分段。\n\n复盘时按“劳动边际收益产品 → 买方垄断的边际要素支出 → 最低工资的分段效应”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI062",
+      "knowledge": [
+        {
+          "title": "最低消费可行性",
+          "application_md": "正效用域要求$16w>20$，即w>5/4。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "劳动闲暇选择",
+          "application_md": "扣最低消费后，预算为$(c-20)+wl=16w-20$，对数项各分一半，故$l=8-10/w$，$h=8+10/w$，$c=8w+10$。w=2时h=13、c=26、l=3；w=4时h=10.5、c=42、l=5.5。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM38"
+          ]
+        },
+        {
+          "title": "全收入预算与后弯供给",
+          "application_md": "扣最低消费后，预算为$(c-20)+wl=16w-20$，对数项各分一半，故$l=8-10/w$，$h=8+10/w$，$c=8w+10$。w=2时h=13、c=26、l=3；w=4时h=10.5、c=42、l=5.5。工资提高使达到最低消费负担所需劳动减少，收入效应超过闲暇替代效应，故h随w下降。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM38"
+          ]
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先检查最低消费能否达到；以闲暇价格w写全收入预算。\n\n复盘时按“最低消费可行性 → 劳动闲暇选择 → 全收入预算与后弯供给”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI063",
+      "knowledge": [
+        {
+          "title": "时间禀赋与全收入",
+          "application_md": "预算$c+wl=16w$，普通需求l=8、h=8，消费从16升到32。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "工资替代效应",
+          "application_md": "补偿闲暇$l^h=(32\\sqrt2)/8=4\\sqrt2$，劳动$16-4\\sqrt2$。替代效应使劳动从8升到$16-4\\sqrt2$；收入效应反向把劳动降回8。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "收入效应与固定效用补偿",
+          "application_md": "新工资4达到旧效用的最低全支出$2\\sqrt{4\\times128}=32\\sqrt2$，可从新全收入64中抽税$64-32\\sqrt2$。补偿闲暇$l^h=(32\\sqrt2)/8=4\\sqrt2$，劳动$16-4\\sqrt2$。替代效应使劳动从8升到$16-4\\sqrt2$；收入效应反向把劳动降回8。两效应恰抵消不代表任一个为0。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：劳动者拥有时间禀赋，工资变化也改变全收入；补偿应固定旧效用。\n\n复盘时按“时间禀赋与全收入 → 工资替代效应 → 收入效应与固定效用补偿”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI064",
+      "knowledge": [
+        {
+          "title": "教育投资机会成本",
+          "application_md": "确定性增收现值$30/1.1+30/1.1^2=6300/121\\approx52.066$，总当期成本50，净现值约2.066，参加。成功概率3/4时预期收益现值$4725/121\\approx39.050$，小于50，不参加。给定放弃工资30，最高学费为$4725/121-30=1095/121\\approx9.050$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "成功概率与预期收入",
+          "application_md": "成功概率3/4时预期收益现值$4725/121\\approx39.050$，小于50，不参加。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "收益现值与折现",
+          "application_md": "确定性增收现值$30/1.1+30/1.1^2=6300/121\\approx52.066$，总当期成本50，净现值约2.066，参加。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：机会成本含放弃工资；未来收益按成功率和时点折现。\n\n复盘时按“教育投资机会成本 → 成功概率与预期收入 → 收益现值与折现”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI065",
+      "knowledge": [
+        {
+          "title": "工会目标与劳动需求约束",
+          "application_md": "租目标$(w-2)(20-w)$严格凹，最优w=11、L=9，总租81。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "工资就业权衡",
+          "application_md": "租目标$(w-2)(20-w)$严格凹，最优w=11、L=9，总租81。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "社会效率与机会成本",
+          "application_md": "社会有效就业满足MRP=2，即L=18，工人机会成本已计，0至18劳动净总剩余为$\\int_0^{18}(18-L)dL=162$。工资11导致只雇9，净总剩余$18\\times9-9^2/2=121.5$，少40.5。可转移协议若能同时议工资与就业，可选18并通过工资或转移分租；只议工资受到劳动需求曲线限制。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：把需求约束代入工会目标；效率按边际产品与外部机会成本比较。\n\n复盘时按“工会目标与劳动需求约束 → 工资就业权衡 → 社会效率与机会成本”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI066",
+      "knowledge": [
+        {
+          "title": "劳动税楔",
+          "application_md": "税后$w_g-w_n=4$，联立$20-w_g=w_n$得$w_g=12,w_n=8,L=8$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "税收归宿",
+          "application_md": "税收32，新增DWL为$\\tfrac12\\times4\\times(10-8)=4$；工人和雇主每单位各负担2。若征缴规则变而供需、执行和交易约束不变，同一税楔仍给同样结果；仅法定纳税人改变不改变归宿。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "实际就业与无谓损失",
+          "application_md": "税后$w_g-w_n=4$，联立$20-w_g=w_n$得$w_g=12,w_n=8,L=8$。税收32，新增DWL为$\\tfrac12\\times4\\times(10-8)=4$；工人和雇主每单位各负担2。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：以税楔连接两种工资；税收和损失按实际就业核算。\n\n复盘时按“劳动税楔 → 税收归宿 → 实际就业与无谓损失”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI067",
+      "knowledge": [
+        {
+          "title": "机会成本与经济租",
+          "application_md": "竞争L=9、w=11，劳动经济租$11\\times9-\\int_0^9(2+L)dL=40.5$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "劳动供给积分",
+          "application_md": "竞争L=9、w=11，劳动经济租$11\\times9-\\int_0^9(2+L)dL=40.5$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "岗位配额与价格楔",
+          "application_md": "岗位限额8时雇主边际愿付12，工人边际接受10，楔为2，8个许可共可产生16租。若雇主必须购买岗位且拍卖竞争，许可收入可由政府取得；若给工人或企业，租归不同方。岗位数量规定本身不足以唯一确定实际现金工资，需产权与交易规则。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：经济租扣去机会成本积分；配额造成买卖方价格楔。\n\n复盘时按“机会成本与经济租 → 劳动供给积分 → 岗位配额与价格楔”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI068",
+      "knowledge": [
+        {
+          "title": "工资与单位成本",
+          "application_md": "成本$C=2q\\sqrt w$，条件劳动$L=q/\\sqrt w$、资本$K=q\\sqrt w$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "投入替代",
+          "application_md": "固定q下工资上涨减少L/q、增加K/q，是要素替代；更高成本还降低q，进一步压低劳动需求。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "产品市场产量调整",
+          "application_md": "w=4时MC4，$40-2q=4$得q=18、L=9、K=36；w=9时MC6，得q=17、L=17/3、K=51。固定q下工资上涨减少L/q、增加K/q，是要素替代；更高成本还降低q，进一步压低劳动需求。资本最终增加而产量减少并不矛盾。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先得到工资相关单位成本，再求产品市场最优。\n\n复盘时按“工资与单位成本 → 投入替代 → 产品市场产量调整”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI069",
+      "knowledge": [
+        {
+          "title": "跨期消费平滑",
+          "application_md": "记终生收入Y，消费各Y/2。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "跨期劳动供给",
+          "application_md": "代回Y得$Y^2=2(2^2+4^2)=40$，所以$Y=2\\sqrt{10}$、$h_1=2/\\sqrt{10},h_2=4/\\sqrt{10}$，消费各$\\sqrt{10}$。第一期收入$4/\\sqrt{10}$，借款$6/\\sqrt{10}$，第二期归还同额。工资高期多工作，消费仍通过信贷平滑；若不能借款，此配置不可直接实施。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "劳动边际成本与财富边际效用",
+          "application_md": "约化目标$2\\ln(Y/2)-(h_1^2+h_2^2)/2$，一阶条件$h_i=2w_i/Y$。代回Y得$Y^2=2(2^2+4^2)=40$，所以$Y=2\\sqrt{10}$、$h_1=2/\\sqrt{10},h_2=4/\\sqrt{10}$，消费各$\\sqrt{10}$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先固定总劳动收入平滑消费，再联立劳动边际成本与财富边际效用。\n\n复盘时按“跨期消费平滑 → 跨期劳动供给 → 劳动边际成本与财富边际效用”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI070",
+      "knowledge": [
+        {
+          "title": "岗位构成效应",
+          "application_md": "按MRP付酬时第一组均薪$0.8\\times15+0.2\\times8=13.6$，第二组$0.2\\times15+0.8\\times8=9.4$，构成差可产生4.2的均薪差。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "同岗工资差异",
+          "application_md": "仍需同岗位、能力经验、工时、风险补偿和晋升进入机会数据，并区分岗位分配歧视与岗内工资歧视。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "选择偏差与识别边界",
+          "application_md": "实际均薪差3不能单独识别同工歧视，甚至小于这一构成例。仍需同岗位、能力经验、工时、风险补偿和晋升进入机会数据，并区分岗位分配歧视与岗内工资歧视。这个计算不是证明不存在歧视，而是证明总均值不足以识别原因。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先分解岗位构成，再识别同岗工资、选择与未观测特征。\n\n复盘时按“岗位构成效应 → 同岗工资差异 → 选择偏差与识别边界”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI071",
+      "knowledge": [
+        {
+          "title": "纯交换市场出清",
+          "application_md": "A收入2p，需求$x_A=1,y_A=p$；B收入3，需求$x_B=y_B=3/(p+1)$。x出清得p=2，配置A(1,2)、B(1,1)。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "公平目标与效用刻度",
+          "application_md": "公平目标可令B(t,t)、A(2-t,3-t)，最优交点$(2-t)(3-t)=t$，得$t=3-\\sqrt3$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "支持财富与一次总付转移",
+          "application_md": "A配置$(\\sqrt3-1,\\sqrt3)$，支持价$p=y_A/x_A=(3+\\sqrt3)/2$。A所需财富$2\\sqrt3$，原财富$2p=3+\\sqrt3$，需向B转价值$t$；只转x需数量$t/p=4-2\\sqrt3$可行；只转y因A原y=0不可行。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM41"
+          ]
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先求需求出清；公平目标保留原效用刻度，再核支持财富与转移。\n\n复盘时按“纯交换市场出清 → 公平目标与效用刻度 → 支持财富与一次总付转移”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI072",
+      "knowledge": [
+        {
+          "title": "禀赋价值与需求",
+          "application_md": "原A收入8p、B收入8，x总需求$4+4/p=8$，p=1，双方各(4,4)、效用4。转移后A收入6p、B收入2p+8，出清仍p=1；A(3,3)、B(5,5)，效用3与5。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "边际替代率相等",
+          "application_md": "契约条件$y_A/x_A=y_B/x_B$加资源约束给$y_A=x_A$，含适当边界。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "契约曲线",
+          "application_md": "契约条件$y_A/x_A=y_B/x_B$加资源约束给$y_A=x_A$，含适当边界。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM41"
+          ]
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：需求用禀赋价值；同质偏好契约曲线按MRS相等。\n\n复盘时按“禀赋价值与需求 → 边际替代率相等 → 契约曲线”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI073",
+      "knowledge": [
+        {
+          "title": "拟线性纯交换",
+          "application_md": "原总x2，内点需求$2/p$与$1/p$，故p=3/2。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM05"
+          ]
+        },
+        {
+          "title": "禀赋收入与市场出清",
+          "application_md": "两人收入6.5，A消费$(4/3,4.5)$、B$(2/3,5.5)$，均可行。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "非负消费角点",
+          "application_md": "y总禀赋为0时两人只能最终y=0，保持各自x=1可出清。A在该点选择y角点要求$p\\le2$，B要求$p\\le1$，所以任意$0<p\\le1$配各x1、y0可为均衡。p=1.5会使B愿卖x换正y，但无人可供y，原内点出清不再可用。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先由内点x需求出清，再核y非负；不足收入时重写角点。\n\n复盘时按“拟线性纯交换 → 禀赋收入与市场出清 → 非负消费角点”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI074",
+      "knowledge": [
+        {
+          "title": "边际替代率与交易方向",
+          "application_md": "起点MRS_A=1/5、MRS_B=5，不相等，存在交换改进；例如各(3,3)，两人效用由5升到9。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "帕累托有效集",
+          "application_md": "契约曲线为$x_A=y_A=s$、$0\\le s\\le6$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "个人理性区间",
+          "application_md": "个人理性要求$s^2\\ge5$且$(6-s)^2\\ge5$，即$s\\in[\\sqrt5,6-\\sqrt5]$。有效曲线其他点虽有效，却会使一方低于起点，不保证自愿接受。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：用MRS差判断交易方向；有效集与个人理性区间分开。\n\n复盘时按“边际替代率与交易方向 → 帕累托有效集 → 个人理性区间”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI075",
+      "knowledge": [
+        {
+          "title": "外部性偏好",
+          "application_md": "分散者选择只比较自己x和y的直接边际效用，漏掉A从B持有x获得的外部收益。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "个人选择与社会目标",
+          "application_md": "分散需求与两个乘积效用相同，均衡p=1、各(1,1)，总效用3。在固定y各1时，总效用为$x_A+x_B+x_B=2+x_B$，故加总最优将x全给B，总效用4，A消费效用下降，所以这不是无转移的帕累托改善结论。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "矫正税与交换均衡",
+          "application_md": "分散需求与两个乘积效用相同，均衡p=1、各(1,1)，总效用3。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：外部项对个人自己选择不变，但社会目标需计入对方消费效应。\n\n复盘时按“外部性偏好 → 个人选择与社会目标 → 矫正税与交换均衡”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI076",
+      "knowledge": [
+        {
+          "title": "福利第一定理",
+          "application_md": "若可行配置使每人弱改善、至少一人严格改善，在局部非饱和下任何弱改善组合价格不低于原收入，严格改善组合必须严格高于原收入，否则违背最优。于是加总得到改进配置总支出严格大于原总财富。可行资源加上利润分配及企业利润最大化又使总支出不可能超过原财富，矛盾。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "预算最优性反证",
+          "application_md": "若可行配置使每人弱改善、至少一人严格改善，在局部非饱和下任何弱改善组合价格不低于原收入，严格改善组合必须严格高于原收入，否则违背最优。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "支出不等式加总",
+          "application_md": "于是加总得到改进配置总支出严格大于原总财富。可行资源加上利润分配及企业利润最大化又使总支出不可能超过原财富，矛盾。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：严格改善者的可负担性与最优性矛盾；把各人支出不等式加总。\n\n复盘时按“福利第一定理 → 预算最优性反证 → 支出不等式加总”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI077",
+      "knowledge": [
+        {
+          "title": "企业利润与居民收入",
+          "application_md": "企业$q=p,\\pi=p^2/2$；消费者内点x=1/p、y=$10+p^2/2-1$，出清$p=1,q=1$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "市场出清",
+          "application_md": "企业$q=p,\\pi=p^2/2$；消费者内点x=1/p、y=$10+p^2/2-1$，出清$p=1,q=1$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "间接效用与利润福利评价",
+          "application_md": "$v(p,m)=\\ln(1/p)+m-1$，因此$F(p)=9-\\ln p+p^2/2$，$F'=p-1/p$在p=1为0，$F''=1+1/p^2>0$，是最小而非最大。给定收入v与利润直接相加仅在此拟线性规范下等同闭合收入表达；一般非线性效用时利润必须先进入预算，不能把效用单位与货币相加。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先闭合利润收入与市场；间接效用的货币边际值决定利润如何进入福利。\n\n复盘时按“企业利润与居民收入 → 市场出清 → 间接效用与利润福利评价”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI078",
+      "knowledge": [
+        {
+          "title": "契约曲线",
+          "application_md": "有效配置可写A(s,s)、B(4-s,4-s)，效用分别s与4-s。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM41"
+          ]
+        },
+        {
+          "title": "社会福利权重",
+          "application_md": "加权和为$4(1-\\alpha)+(2\\alpha-1)s$：若α大于1/2全部资源给A，小于1/2给B，等于1/2时整条有效曲线均最优。对数目标一阶条件$\\alpha/s=(1-\\alpha)/(4-s)$，得s=4α，唯一内点。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "效用刻度敏感性",
+          "application_md": "两个社会目标施加不同的边际福利权重，虽然个人确定性排序不变，社会最优却可变。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先沿契约曲线化为一维；社会加总对效用刻度敏感。\n\n复盘时按“契约曲线 → 社会福利权重 → 效用刻度敏感性”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI079",
+      "knowledge": [
+        {
+          "title": "目标配置与支持价格",
+          "application_md": "目标两人的MRS均1，故p_x=p_y=1。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "禀赋价值",
+          "application_md": "A原财富10，目标支出6，需缴4；B原财富10，收4后财富14，正好购买(7,7)。仅转x时A先把4单位x交B，新禀赋A(6,0)、B(4,10)，财富分别6与14，市场需求按份额给目标。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "一次总付转移与预算核账",
+          "application_md": "A原财富10，目标支出6，需缴4；B原财富10，收4后财富14，正好购买(7,7)。仅转x时A先把4单位x交B，新禀赋A(6,0)、B(4,10)，财富分别6与14，市场需求按份额给目标。总x、y各10，转移预算平衡；现金转移与商品转移的数量仅在支持价归一后才能换算。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM41"
+          ]
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先由目标MRS求价格，再由目标支出减禀赋价值确定转移。\n\n复盘时按“目标配置与支持价格 → 禀赋价值 → 一次总付转移与预算核账”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI080",
+      "knowledge": [
+        {
+          "title": "瓦尔拉斯定律",
+          "application_md": "预算用尽与禀赋加总给$p_xz_x+p_yz_y=0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "价格加权超额需求",
+          "application_md": "预算用尽与禀赋加总给$p_xz_x+p_yz_y=0$。若价格均正且z_x=0，则z_y=0；因此独立市场出清方程少一条。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "价格归一化",
+          "application_md": "价格与禀赋财富同比例放大不改变预算集，配置不变，只有相对价格有意义。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：加总预算得到价格加权超额需求为0；归一只是计价单位变化。\n\n复盘时按“瓦尔拉斯定律 → 价格加权超额需求 → 价格归一化”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI081",
+      "knowledge": [
+        {
+          "title": "凹生产技术",
+          "application_md": "两国生产边界半径分别10与5，最有效组合的方向相同，世界PPF为$X^2+Y^2=225$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "世界生产可能性边界",
+          "application_md": "两国生产边界半径分别10与5，最有效组合的方向相同，世界PPF为$X^2+Y^2=225$。可流动时最低劳动为$x_S^2+y_S^2+4x_N^2+4y_N^2$；对每商品最优有$x_S=4x_N,y_S=4y_N$，故劳动需求$4(X^2+Y^2)/5$，新PPF为$X^2+Y^2=250$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "要素流动与最低劳动配置",
+          "application_md": "可流动时最低劳动为$x_S^2+y_S^2+4x_N^2+4y_N^2$；对每商品最优有$x_S=4x_N,y_S=4y_N$，故劳动需求$4(X^2+Y^2)/5$，新PPF为$X^2+Y^2=250$。南劳动160、北40，凹技术下不能把全部劳动集中南国。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：不可流动时合成两圆；可流动时先求生产给定世界组合的最低劳动。\n\n复盘时按“凹生产技术 → 世界生产可能性边界 → 要素流动与最低劳动配置”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI082",
+      "knowledge": [
+        {
+          "title": "比较优势与机会成本",
+          "application_md": "南国x机会成本1/2单位y，北国为2。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "劳动专业化配置",
+          "application_md": "相对价1介于两国机会成本之间，南国专产x、北国专产y，各20；这与上一题凹技术的内部要素分配结论不同，取决于技术曲率。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "世界生产边界折点",
+          "application_md": "世界PPF顶点依次$(0,30),(20,20),(30,0)$，故$0\\le X\\le20$时$Y=30-X/2$；$20\\le X\\le30$时$Y=60-2X$。X=Y的最大共同量20，位于折点。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：按生产x的机会成本从低到高配置劳动，不把两国截距直接连直线。\n\n复盘时按“比较优势与机会成本 → 劳动专业化配置 → 世界生产边界折点”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI083",
+      "knowledge": [
+        {
+          "title": "生产的MRT条件",
+          "application_md": "封闭时MRT=x/y、MRS=y/x，联立得x=y=$5\\sqrt2$、相对价1，效用50。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "消费的MRS条件",
+          "application_md": "封闭时MRT=x/y、MRS=y/x，联立得x=y=$5\\sqrt2$、相对价1，效用50。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "贸易价格与生产消费分离",
+          "application_md": "世界价2时最大化$2x+y$，生产为$(4\\sqrt5,2\\sqrt5)$，收入$10\\sqrt5$。消费者支出各半，消费$(5\\sqrt5/2,5\\sqrt5)$，效用125/2。出口x为$3\\sqrt5/2$，进口y为$3\\sqrt5$，按价格2折算收支相等。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：生产按MRT等价格，消费按MRS等价格，贸易使生产点与消费点分离。\n\n复盘时按“生产的MRT条件 → 消费的MRS条件 → 贸易价格与生产消费分离”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI084",
+      "knowledge": [
+        {
+          "title": "生产外部损害",
+          "application_md": "联合目标对s导数$20-s-2$、对f导数$12-f$，故s=18、f=12，利润分别198和36，总234，增加2。征单位钢产量税2使钢厂选择18；税收36是转移，若归社会不从社会总利润再次扣除。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "私人利润与社会目标",
+          "application_md": "分散钢厂s=20、渔场f=12，利润分别200和32，总232。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "联合经营",
+          "application_md": "联合目标对s导数$20-s-2$、对f导数$12-f$，故s=18、f=12，利润分别198和36，总234，增加2。征单位钢产量税2使钢厂选择18；税收36是转移，若归社会不从社会总利润再次扣除。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：钢厂漏掉对渔场的边际损害；联合目标把两利润加总。\n\n复盘时按“生产外部损害 → 私人利润与社会目标 → 联合经营”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI085",
+      "knowledge": [
+        {
+          "title": "社会边际成本",
+          "application_md": "社会有效$20-Q=2Q$得Q=20/3，最优单位税$MD(Q^*)=20/3$，税收400/9。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "污染税",
+          "application_md": "社会有效$20-Q=2Q$得Q=20/3，最优单位税$MD(Q^*)=20/3$，税收400/9。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "扣除外部损害的总剩余",
+          "application_md": "社会总剩余$\\int_0^Q(20-q-q-q)dq=20Q-3Q^2/2$，竞争时50、最优200/3，零产量为0。因此完全禁止并非最优，需权衡产品边际收益与真实社会成本。税收不另作为社会成本重复扣。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：社会边际成本为MC与MD之和；总剩余需扣真实外部损害。\n\n复盘时按“社会边际成本 → 污染税 → 扣除外部损害的总剩余”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI086",
+      "knowledge": [
+        {
+          "title": "边际减排成本均等",
+          "application_md": "$a_1+a_2=12,2a_1=a_2$得$a_1=4,a_2=8$，许可价8。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "总减排约束",
+          "application_md": "$a_1+a_2=12,2a_1=a_2$得$a_1=4,a_2=8$，许可价8。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "排污权交易与配额核账",
+          "application_md": "排放分别6与2，厂1需买2、厂2卖2。真实减排成本$C_1=a_1^2=16,C_2=a_2^2/2=32$，共48；若各减6，总成本36+18=54，多6。交易支付16在两厂间转移，不增加真实减排成本；初始许可分配改变财富，不改变这个无摩擦内部解的成本最小条件。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：总减排12下使边际减排成本相等；许可证交易按实际排放减配额。\n\n复盘时按“边际减排成本均等 → 总减排约束 → 排污权交易与配额核账”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI087",
+      "knowledge": [
+        {
+          "title": "公共品自愿供给",
+          "application_md": "个人一阶条件$1/G=1/x_i$，故$g_i=(10-g_j)/2$。对称均衡各贡献10/3、G20/3、各x20/3。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM47"
+          ]
+        },
+        {
+          "title": "边际替代率纵向加总",
+          "application_md": "对称有效配置每人$x=10-G/2$，Samuelson为$2x/G=1$，得G=10、各x5、各贡献5。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "社会有效供给",
+          "application_md": "对称有效配置每人$x=10-G/2$，Samuelson为$2x/G=1$，得G=10、各x5、各贡献5。个人没计另一人的公共收益，故自愿供给不足。该例私人财富足够且内点成立；不能把两人的公共需求像私人物一样横向相加。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：个人只计自己从G增加的收益，规划者纵向相加边际替代率。\n\n复盘时按“公共品自愿供给 → 边际替代率纵向加总 → 社会有效供给”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI088",
+      "knowledge": [
+        {
+          "title": "异质公共品偏好",
+          "application_md": "私人内点有$x_1=G,x_2=G/2$，总资源$x_1+x_2+G=20$给G=8，故x1=8、x2=4，贡献2和6，均为正。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM47"
+          ]
+        },
+        {
+          "title": "个人最优与社会最优",
+          "application_md": "私人内点有$x_1=G,x_2=G/2$，总资源$x_1+x_2+G=20$给G=8，故x1=8、x2=4，贡献2和6，均为正。规划者最大化$\\ln x_1+\\ln x_2+3\\ln G$，资源约束给$x_1=x_2$且$3x_1/G=1$，得G=12、x1=x2=4。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "私人资源分配",
+          "application_md": "规划者最大化$\\ln x_1+\\ln x_2+3\\ln G$，资源约束给$x_1=x_2$且$3x_1/G=1$，得G=12、x1=x2=4。规划者配置可需要跨人转移，不能误说原收入不变的任意Lindahl份额都会自动支持它。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：分别写不同偏好的个人一阶条件；社会问题要同时分配私人资源。\n\n复盘时按“异质公共品偏好 → 个人最优与社会最优 → 私人资源分配”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI089",
+      "knowledge": [
+        {
+          "title": "有限人数拥堵外部性",
+          "application_md": "个人条件$12-t_i-T=0$，对称得t=3、T=9。社会总效用在对称下为$36t-15t^2$，最优t=6/5、T=18/5。每单位税应等于对其他两人的边际损害$2T^*=36/5$，个人条件$12-t-T-36/5=0$给t=6/5。若误把T视为完全外生，个人会漏掉自身承担的拥堵影响，所得不是有限三人博弈。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "私人导数与社会导数",
+          "application_md": "个人条件$12-t_i-T=0$，对称得t=3、T=9。社会总效用在对称下为$36t-15t^2$，最优t=6/5、T=18/5。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "既定返还与税楔",
+          "application_md": "每单位税应等于对其他两人的边际损害$2T^*=36/5$，个人条件$12-t-T-36/5=0$给t=6/5。若误把T视为完全外生，个人会漏掉自身承担的拥堵影响，所得不是有限三人博弈。税款平均返还且个体视为既定不改变边际条件。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：个人导数含一份拥堵影响，社会导数含三份；返还视为既定才能维持税楔。\n\n复盘时按“有限人数拥堵外部性 → 私人导数与社会导数 → 既定返还与税楔”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI090",
+      "knowledge": [
+        {
+          "title": "科斯协商与真实净收益",
+          "application_md": "过滤器净社会收益40-25=15，零协商成本时应安装。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "产权与威胁点",
+          "application_md": "工厂有排污权时，渔民可支付25至40促其安装；工厂愿收至少25，渔民愿付至多40。渔民有洁净权且可执行时，工厂需安装或取得排污许可；既然避免损害成本25小于损害40，安装有效。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "协商成本",
+          "application_md": "若为达成协议另耗20，净可分配收益为-5，排污权情形下自愿协商未必发生；制度执行或直接标准的成本也需另核。产权改变分配，交易成本可能改变行动。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先比较真实净收益，再由权利决定威胁点与谁付费。\n\n复盘时按“科斯协商与真实净收益 → 产权与威胁点 → 协商成本”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI091",
+      "knowledge": [
+        {
+          "title": "逆向选择与柠檬市场",
+          "application_md": "全体出售时平均买方估值70，低于高质量保留价80，高质退出，因此70不是全体交易均衡。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM48"
+          ]
+        },
+        {
+          "title": "卖方参与集合",
+          "application_md": "全体出售时平均买方估值70，低于高质量保留价80，高质退出，因此70不是全体交易均衡。只剩低质时买方报价40，介于低质保留20与高质80之间，参与集合一致，所以仅低质以40交易。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "价格质量固定点",
+          "application_md": "只剩低质时买方报价40，介于低质保留20与高质80之间，参与集合一致，所以仅低质以40交易。认证后可分别按100和40定价，高质与低质均有正交易剩余；原信息不对称损失主要是高质交易消失，而非所有交易必然消失。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：价格决定哪些卖家进入，进入集合又决定平均价值，需一致。\n\n复盘时按“逆向选择与柠檬市场 → 卖方参与集合 → 价格质量固定点”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI092",
+      "knowledge": [
+        {
+          "title": "保险混同定价",
+          "application_md": "最初混同成本$100(0.4+0.1)/2=25$。低型愿付15低于25会退出，故25不能维持全体混同。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "异质风险与平均成本",
+          "application_md": "最初混同成本$100(0.4+0.1)/2=25$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "参与集合与逆向选择",
+          "application_md": "低型愿付15低于25会退出，故25不能维持全体混同。退出后仅高型，竞争全保险保费40，高于低型15且低于高型45，形成一致参与集合。低型本可与自身公平成本10之间有交易收益却被混同信息结构排除；若提供部分保障筛选，需再设计自选择约束，不能凭这两数直接宣称已找到分离均衡。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先算平均成本，再用实际愿付价重新确定参与者。\n\n复盘时按“保险混同定价 → 异质风险与平均成本 → 参与集合与逆向选择”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI093",
+      "knowledge": [
+        {
+          "title": "教育信号",
+          "application_md": "教育不提高产出，成本是信号资源耗费；工资识别改善不等于教育创造同额生产收益。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM49"
+          ]
+        },
+        {
+          "title": "高型参与与低型不模仿",
+          "application_md": "高型约束$12-e^*\\ge6$给$e^*\\le6$。低型约束$6\\ge12-3e^*$给$e^*\\ge2$，所以$2\\le e^*\\le6$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "分离均衡区间",
+          "application_md": "高型约束$12-e^*\\ge6$给$e^*\\le6$。低型约束$6\\ge12-3e^*$给$e^*\\ge2$，所以$2\\le e^*\\le6$。在无差异选低教育约定下，最小分离e=2，高型净收入10、低型6。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：高型愿发信号、低型不愿模仿分别给上下界。\n\n复盘时按“教育信号 → 高型参与与低型不模仿 → 分离均衡区间”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI094",
+      "knowledge": [
+        {
+          "title": "参与约束与激励相容",
+          "application_md": "低型IR给$T_L=4q_L-q_L^2/2$，高型IC给高型租$4q_L$，故$T_H=8q_H-q_H^2/2-4q_L$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "信息租",
+          "application_md": "低型IR给$T_L=4q_L-q_L^2/2$，高型IC给高型租$4q_L$，故$T_H=8q_H-q_H^2/2-4q_L$。期望利润对qH一阶条件$8-q_H=0$，qH=8；对qL导数$\\tfrac12(4-q_L)-2=-q_L/2$，最优qL=0。于是TL=0、TH=32，高型租0；低型模仿高合同效用$4\\times8-32-32=-32<0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "数量合同筛选",
+          "application_md": "期望利润对qH一阶条件$8-q_H=0$，qH=8；对qL导数$\\tfrac12(4-q_L)-2=-q_L/2$，最优qL=0。于是TL=0、TH=32，高型租0；低型模仿高合同效用$4\\times8-32-32=-32<0$。本参数下最优排除低型，是筛选的角点，不能硬报正低型数量。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：绑定低型参与与高型IC，代入期望利润后分别优化。\n\n复盘时按“参与约束与激励相容 → 信息租 → 数量合同筛选”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI095",
+      "knowledge": [
+        {
+          "title": "类型概率与期望利润",
+          "application_md": "期望利润对qL条件$(3/4)(4-q_L)-(1/4)4=0$，得qL=8/3；qH=8。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "参与约束与激励相容",
+          "application_md": "仍有$T_L=4q_L-q_L^2/2$，$T_H=8q_H-q_H^2/2-4q_L$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "信息租边际成本",
+          "application_md": "TL=$64/9$，高型租$32/3$，TH=$64/3$。低型模仿高合同效用$32-32-64/3<0$，低型自选效用0；高型选低合同恰得信息租。完全信息数量为4和8，低型向下扭曲、高型无扭曲，以节约支付高型信息租。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：重复写清IR与IC，用概率改变信息租的边际成本。\n\n复盘时按“类型概率与期望利润 → 参与约束与激励相容 → 信息租边际成本”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI096",
+      "knowledge": [
+        {
+          "title": "隐藏行动与激励相容",
+          "application_md": "高努力IC为$(3/4-1/4)(w_S-w_F)\\ge6$，故差至少12。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "有限责任",
+          "application_md": "工资非负下最便宜$w_F=0,w_S=12$，高努力期望工资9、代理净效用3满足参与。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "最小成本工资奖金",
+          "application_md": "工资非负下最便宜$w_F=0,w_S=12$，高努力期望工资9、代理净效用3满足参与。委托人利润$30-9=21$。低努力可支付全0，利润10、代理净效用0。故选高努力。若没有有限责任，可用失败负工资把参与绑定，合同成本会改变；本题不能把保留效用0误当实施成本0。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：先由IC求成功奖金与失败工资差，再按有限责任最小化成本。\n\n复盘时按“隐藏行动与激励相容 → 有限责任 → 最小成本工资奖金”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI097",
+      "knowledge": [
+        {
+          "title": "风险厌恶与工资效用",
+          "application_md": "记$a=\\sqrt{w_S},b=\\sqrt{w_F}$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "激励约束与参与约束",
+          "application_md": "IC为$(a-b)/2\\ge2$，故$a-b\\ge4$；IR为$3a/4+b/4-2\\ge1$，即$3a+b\\ge12$。最小化$3a^2/4+b^2/4$，a,b非负。取a=b+4时IR自动变为$4b+12\\ge12$，目标随b增加，故b=0、a=4，工资$(16,0)$，期望工资12，IR与IC均绑定。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "保险与激励权衡",
+          "application_md": "固定工资使两努力收入效用相同，高努力多成本而不被选；状态差异提供激励但牺牲保险。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：将工资平方根记作状态效用，用线性激励参与约束求最便宜点。\n\n复盘时按“风险厌恶与工资效用 → 激励约束与参与约束 → 保险与激励权衡”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI098",
+      "knowledge": [
+        {
+          "title": "团队生产",
+          "application_md": "个人收益$2(e_i+e_j)-e_i^2/2$，条件e_i=2，纳什总产出16、总成本4、总剩余12。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "私人边际收益与社会边际收益",
+          "application_md": "个人收益$2(e_i+e_j)-e_i^2/2$，条件e_i=2，纳什总产出16、总成本4、总剩余12。社会目标$4(e_1+e_2)-(e_1^2+e_2^2)/2$，最优各4、总产出32、总成本16、总剩余16。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "搭便车与努力不足",
+          "application_md": "可观察努力下按4的边际奖励并用固定费用平衡，可使每人选择4；隐藏努力时不能直接按真实努力付酬，单一团队产出合同需处理搭便车、预算平衡与参与约束。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：个人只得一半产出边际收益，社会取得全部产出。\n\n复盘时按“团队生产 → 私人边际收益与社会边际收益 → 搭便车与努力不足”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI099",
+      "knowledge": [
+        {
+          "title": "二价拍卖保留价",
+          "application_md": "故期望收入$1/3+r^2-4r^3/3$，导数$2r-4r^2$给最优r=1/2，收入5/12，成交率$1-r^2=3/4$。",
+          "source_field": "answer_md",
+          "card_ids": [
+            "FM51"
+          ]
+        },
+        {
+          "title": "合格投标者与期望收入",
+          "application_md": "仅一人合格概率$2r(1-r)$，收入贡献$2r^2(1-r)$；次高值z的无条件密度为$2(1-z)$，两人都合格时的收入贡献为$\\int_r^1 2z(1-z)dz$。故期望收入$1/3+r^2-4r^3/3$，导数$2r-4r^2$给最优r=1/2，收入5/12，成交率$1-r^2=3/4$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "顺序统计量与交易效率",
+          "application_md": "无保留价收入1/3、总剩余$E\\max(v_1,v_2)=2/3$；有保留价总剩余$\\int_{1/2}^1 2v^2dv=7/12$，损失1/12。利润增加与效率下降并存。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：分别算仅一人合格与两人合格的收入，再按最高估值分布算社会收益。\n\n复盘时按“二价拍卖保留价 → 合格投标者与期望收入 → 顺序统计量与交易效率”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    },
+    {
+      "id": "MI100",
+      "knowledge": [
+        {
+          "title": "信息认证与交易净收益",
+          "application_md": "高质认证后竞争价格100，净卖价$100-k$，愿认证要求k不超过20。k=5时高质认证并交易，低质无须付费即可按40交易；k=25时高质宁可退出，高质交易缺口仍在。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "外部选项",
+          "application_md": "无认证时逆选择可留下低质价40，高质保留不卖。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "信号可信性与低型模仿",
+          "application_md": "不可伪造保证低质不能拿高质证，否则需把造假成本与IC纳入。强制认证若让低质也支付25可能消灭原本20的低质交易收益；制度成本可能抵消信息收益，消费者教育也不能凭空验证不可观察质量。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "先按本题原作答提纲推进：认证净交易收益与不认证外部选项比较；低型可否冒充决定信号可信。\n\n复盘时按“信息认证与交易净收益 → 外部选项 → 信号可信性与低型模仿”回忆各环节的作用，并用题目条件检查是否漏掉边界。"
+    }
+  ]
+}

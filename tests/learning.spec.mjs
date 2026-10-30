@@ -21,13 +21,15 @@ test('recall hides answer until reveal and restores drafts assessment and curren
  const result=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);expect(Object.keys(result.recallProgress)).toHaveLength(1);expect(result.recallProgress.FM01.rating).toBe(1);expect(result.records).toHaveLength(0);
  await page.getByRole('button',{name:'结束本组，返回背诵区',exact:true}).click();await expect(page.getByRole('heading',{name:'公式与背诵',exact:true})).toBeVisible();expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).recallSession,key)).toBeNull();
 });
-test('topic bridge restores the question draft and links back to the selected topic',async({page})=>{
+test('topic bridge restores the legacy question draft and links back to the selected topic',async({page})=>{
+ const value=oldBackup();value.drafts.MI001='题目中先列原预算。';await seed(page,value);
  await page.goto('/');await page.locator('#day-select').selectOption('1');await page.locator('[data-action="start-day"][data-sub="micro"]').click();
- await page.getByRole('textbox',{name:'我的作答',exact:true}).fill('题目中先列原预算。');
+ await page.getByRole('button',{name:'MI001',exact:true}).click();
+ await expect(page.locator('#draft')).toHaveCount(0);
  await page.getByRole('button',{name:/查看\d+张相关知识卡/}).click();await expect(page.locator('.bank-meta')).toContainText('关联专题');
  await page.getByRole('button',{name:'背诵 FM02',exact:true}).click();await page.getByRole('button',{name:'消费选择与需求证明',exact:true}).click();
  await expect(page.locator('#group-filter')).toHaveValue('01');await expect(page.locator('.question-row')).toHaveCount(10);
- await page.goto('/#practice');await expect(page.getByRole('textbox',{name:'我的作答',exact:true})).toHaveValue('题目中先列原预算。');
+ await page.goto('/#practice');await page.getByText('查看历史文字作答',{exact:true}).click();await expect(page.locator('.legacy-draft pre')).toHaveText('题目中先列原预算。');
 });
 test('daily recall prioritizes overdue cards and excludes future cards',async({page})=>{
  const value=oldBackup();value.recallProgress={FM01:{rating:2,at:1000,due:'2099-01-01'},FM53:{rating:1,at:1000,due:'2020-01-01'}};

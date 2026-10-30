@@ -8,10 +8,13 @@ const checks=[];const check=(name,passed)=>checks.push({name,passed:!!passed});
 const context={window:{}};vm.runInNewContext(await readFile(path.join(dist,'data.js'),'utf8'),context);
 const data=context.window.STUDY_DATA,manifest=JSON.parse(await readFile(path.join(here,'build-manifest.json'),'utf8'));
 const decode=s=>s.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#x27;|&#39;/g,"'");
-let mathCount=0;
+let mathCount=0,solutionMathCount=0;
 for(const subject of data.subjects){
  const raw=await readFile(path.join(here,'content',subject.key+'.json'));const source=JSON.parse(raw);
  check(subject.key+' source hash',createHash('sha256').update(raw).digest('hex')===manifest.sourceHashes[subject.key]);
+ const knowledgeRaw=await readFile(path.join(here,'content','knowledge-'+subject.key+'.json'));
+ const knowledgeSource=new Map(JSON.parse(knowledgeRaw).questions.map(q=>[q.id,q]));
+ check(subject.key+' knowledge annotation hash',createHash('sha256').update(knowledgeRaw).digest('hex')===manifest.sourceHashes['knowledge_'+subject.key]);
  check(subject.key+' count and unique IDs',subject.questions.length===100&&new Set(subject.questions.map(q=>q.id)).size===100);
  check(subject.key+' groups',subject.groups.length===10&&subject.groups.every(g=>g.question_ids.length===10));
  for(const q of subject.questions){const original=source.questions.find(x=>x.id===q.id);for(const field of ['prompt','outline','answer','pitfalls']){
@@ -24,10 +27,21 @@ for(const subject of data.subjects){
   check(q.id+' '+field+' rendered',html.length>5&&!/math-error|katex-error|<script\b|javascript:/i.test(html));
  }
  check(q.id+' source metadata',q.source_refs.length>0&&q.source_refs.every(r=>r.exam_id&&r.source&&r.pages));
+ const solution=q.solution;
+ check(q.id+' step source preserved',solution?.steps.map(s=>s.body_md).join('')===q.answer_md&&solution.source.preserved);
+ const stepMath=solution.steps.flatMap(step=>[...step.body_html.matchAll(/<annotation encoding="application\/x-tex">([\s\S]*?)<\/annotation>/g)].map(m=>decode(m[1])));
+ const answerMath=[...q.answer_html.matchAll(/<annotation encoding="application\/x-tex">([\s\S]*?)<\/annotation>/g)].map(m=>decode(m[1]));
+ check(q.id+' step math retained in order',JSON.stringify(stepMath)===JSON.stringify(answerMath));
+ check(q.id+' knowledge grounded in original question',solution.knowledge.length>=2&&solution.knowledge.every(k=>q[k.source_field]?.includes(k.application_md)));
+ check(q.id+' knowledge annotation correspondence',solution.source.knowledge_sha256===createHash('sha256').update(JSON.stringify(knowledgeSource.get(q.id))).digest('hex'));
+ check(q.id+' knowledge cards same subject',solution.knowledge.every(k=>k.card_ids.every(id=>data.recall.cards.some(c=>c.id===id&&c.subject===subject.key))));
+ const extraHtml=solution.steps.map(s=>s.body_html).join('')+solution.knowledge.map(k=>k.title_html+k.explanation_html).join('')+solution.recap_html;
+ solutionMathCount+=[...extraHtml.matchAll(/<annotation encoding="application\/x-tex">/g)].length;
  for(let block=0;block<5;block++)check(q.id+' round '+(block+1),data.plan.days.slice(block*10,block*10+10).filter(d=>d[subject.key+'_refs'].includes(q.id)).length===1);
 }
 }
 check('all rendered formulas accounted for',mathCount===manifest.mathCount);
+check('all step and review formulas accounted for',solutionMathCount===manifest.solutionMathCount);
 const recallSourceRaw=await readFile(path.join(here,'content/recall.json'));
 const recallSource=JSON.parse(recallSourceRaw),recall=data.recall;
 check('recall snapshot hash',createHash('sha256').update(recallSourceRaw).digest('hex')===manifest.sourceHashes.recall);
@@ -56,7 +70,7 @@ for(const u of new Set(urls))check('local asset '+u,!/^(?:https?:)?\/\//.test(u)
 check('responsive and focus styles',css.includes('@media(max-width:600px)')&&css.includes(':focus-visible')&&css.includes('prefers-reduced-motion'));
 async function files(folder){const entries=await readdir(folder,{withFileTypes:true});let result=[];for(const e of entries){const p=path.join(folder,e.name);result.push(...e.isDirectory()?await files(p):[p]);}return result;}
 for(const file of await files(dist))check('static file under platform size limit '+path.relative(dist,file),(await stat(file)).size<25*1024*1024);
-const result={all_passed:checks.every(c=>c.passed),count:checks.length,questions:300,days:50,mathCount,recallCards:recall.cards.length,recallMathCount,assetCount:new Set(urls).size,checks};
+const result={all_passed:checks.every(c=>c.passed),count:checks.length,questions:300,days:50,mathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,assetCount:new Set(urls).size,checks};
 await writeFile(path.join(here,'site-checks.json'),JSON.stringify(result,null,2));
 console.log(JSON.stringify({...result,checks:checks.filter(c=>!c.passed)}));
 if(!result.all_passed)process.exit(1);

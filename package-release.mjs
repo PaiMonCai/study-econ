@@ -14,9 +14,9 @@ const checks=JSON.parse(await readFile(path.join(here,'site-checks.json'),'utf8'
 if(!checks.all_passed)throw new Error('Run npm run check before packaging.');
 const stage=await mkdtemp(path.join(tmpdir(),'ruc802-release-')),root=path.join(stage,'ruc802');
 await mkdir(root);await mkdir(destination,{recursive:true});
-const files=['dist','content','deploy','serve.mjs','test-server.mjs','test-learning.mjs','import-handbooks.mjs','FEATURE_PLAN.md','verify-site.mjs','build-data.mjs','build-manifest.json','package-release.mjs','package.json','package-lock.json','Dockerfile','compose.yaml','compose.build.yaml','test-container.mjs','playwright.config.mjs','tests','.dockerignore','.env.example','README.md','DEPLOY.md'];
+const files=['dist','content','deploy','serve.mjs','test-server.mjs','test-learning.mjs','test-solutions.mjs','build-solutions.mjs','import-handbooks.mjs','FEATURE_PLAN.md','verify-site.mjs','build-data.mjs','build-manifest.json','package-release.mjs','package.json','package-lock.json','Dockerfile','compose.yaml','compose.build.yaml','test-container.mjs','playwright.config.mjs','tests','.dockerignore','.env.example','README.md','DEPLOY.md'];
 for(const file of files)await cp(path.join(here,file),path.join(root,file),{recursive:true});
-await writeFile(path.join(root,'release.json'),JSON.stringify({version,type:'self-hosted',questions:300,days:50,mathCount:checks.mathCount,recallCards:checks.recallCards,recallMathCount:checks.recallMathCount,runtimeDependencies:[],dataStorage:'browser-local',createdAt:new Date().toISOString()},null,2));
+await writeFile(path.join(root,'release.json'),JSON.stringify({version,type:'self-hosted',questions:300,days:50,mathCount:checks.mathCount,solutionMathCount:checks.solutionMathCount,recallCards:checks.recallCards,recallMathCount:checks.recallMathCount,runtimeDependencies:[],dataStorage:'browser-local',createdAt:new Date().toISOString()},null,2));
 await run('tar',['-czf',archive,'-C',stage,'ruc802'],{windowsHide:true});
 const bytes=await readFile(archive),sha256=createHash('sha256').update(bytes).digest('hex');
 await writeFile(path.join(destination,'SHA256SUMS'),sha256+'  '+name+'\n');

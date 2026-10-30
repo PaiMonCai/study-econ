@@ -4,6 +4,7 @@
 !package.json
 !package-lock.json
 !build-data.mjs
+!build-solutions.mjs
 !verify-site.mjs
 !content/
 !content/**

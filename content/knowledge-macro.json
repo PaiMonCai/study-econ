@@ -1,0 +1,2561 @@
+{
+  "subject": "macro",
+  "questions": [
+    {
+      "id": "MA001",
+      "knowledge": [
+        {
+          "title": "有效人均稳态与平衡增长",
+          "application_md": "有技术进步时，总量不静止。有效人均资本$k = \\frac{K}{A L}$不变，资本与产出沿平衡增长路径以相同速度增长。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "资本边际产出",
+          "application_md": "对生产函数求偏导，得到$M P K = \\frac{0.3 Y}{K}$，于是第一问为$\\frac{0.3}{3} = 0.10$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "资本积累与储蓄率",
+          "application_md": "平衡增长要求$sY=(g+\\delta)K$，故第二问为$s=(0.03+0.04)\\times3=0.21$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "黄金律消费最大化",
+          "application_md": "有效人均可持续消费为$c=f(k)-(g+\\delta)k$。令其对$k$的一阶导为零：\n\n$$f'(k^{GR})=g+\\delta=0.07.$$\n\n当前$MPK=0.10>0.07$，资本低于黄金律水平。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "转轨消费",
+          "application_md": "将储蓄率从21%提高到30%，给定当期资本，消费先降；随后资本积累加快，产出与可持续消费逐渐上升。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“有效人均稳态与平衡增长”，再依次运用“资本边际产出”、“资本积累与储蓄率”、“黄金律消费最大化”，最后结合“转轨消费”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA002",
+      "knowledge": [
+        {
+          "title": "离散人均资本积累",
+          "application_md": "设$k_t = \\frac{K_t}{N_t} , y_t = \\frac{Y_t}{N_t}$，索洛分支满足\n\n$$k_{t+1}=\\frac{(1-\\delta)k_t+szk_t^\\alpha}{1+n}.$$\n\n不能先把右侧除以本期人口就结束，因为左侧定义用了下一期人口。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "索洛正稳态与水平效应",
+          "application_md": "令$k_{t+1}=k_t=k^*>0$，得$sz(k^*)^\\alpha=(n+\\delta)k^*$，从而\n\n$$k^* = \\left (\\frac{s z}{n + \\delta} \\right)^{\\frac{1}{1 - \\alpha}} , \\qquad y^* = z \\left (\\frac{s z}{n + \\delta} \\right)^{\\frac{\\alpha}{1 - \\alpha}} .$$\n\n这里没有持续技术进步，人均产出长期增长率为0；总产出仍随人口以$n$增长。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "AK增长率",
+          "application_md": "现在$y_t=zk_t$，积累式变为$k_{t+1}=qk_t$，其中\n\n$$q=\\frac{1-\\delta+sz}{1+n},\\qquad g_y=q-1=\\frac{sz-\\delta-n}{1+n}.$$\n\n若$sz>\\delta+n$，人均产出持续增长，没有有限正的水平稳态；若相等，所有正$k$都可为不变水平，初始条件决定具体值；若小于，人均资本和产出趋向零。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "资本边际报酬",
+          "application_md": "索洛中单独增加资本会降低$MPK$，新增储蓄最终只抵消人口稀释与折旧；AK的资本边际产出恒为$z$，积累的收益不会因资本加深而衰减，储蓄变化便可持续改变增长率。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“离散人均资本积累”，再依次运用“索洛正稳态与水平效应”、“AK增长率”，最后结合“资本边际报酬”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA003",
+      "knowledge": [
+        {
+          "title": "双资本稳态条件",
+          "application_md": "人口固定时$y=k^\\alpha h^\\beta$，稳态满足$s_Ky=\\delta_Kk$与$s_Hy=\\delta_Hh$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "稳态消元",
+          "application_md": "将$k = (\\frac{s_K}{\\delta_K}) y$、$h = (\\frac{s_H}{\\delta_H}) y$代回，得到$y^{1 - \\alpha - \\beta} = (\\frac{s_K}{\\delta_K})^\\alpha (\\frac{s_H}{\\delta_H})^\\beta$，故\n\n$$y^* = \\left [\\left (\\frac{s_K}{\\delta_K} \\right)^\\alpha \\left (\\frac{s_H}{\\delta_H} \\right)^\\beta \\right]^{\\frac{1}{1 - \\alpha - \\beta}} .$$\n\n再顺次回代得$k^* = \\frac{s_K y^*}{\\delta_K}$、$h^* = \\frac{s_H y^*}{\\delta_H}$、$c^*=(1-s_K-s_H)y^*$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "双重黄金律",
+          "application_md": "写$c=k^\\alpha h^\\beta-\\delta_Kk-\\delta_Hh$，对$k,h$分别求导，得$\\frac{\\alpha y}{k} = \\delta_K$与$\\frac{\\beta y}{h} = \\delta_H$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "黄金律资本与消费",
+          "application_md": "第二问还要求人均产出，因此继续写\n\n$$y^{G R} = \\left [\\left (\\frac{\\alpha}{\\delta_K} \\right)^\\alpha \\left (\\frac{\\beta}{\\delta_H} \\right)^\\beta \\right]^{\\frac{1}{1 - \\alpha - \\beta}} , \\qquad c^{G R} = (1 - \\alpha - \\beta) y^{G R} .$$\n\n联合严格凹性与正维持成本支持内部最大值。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“双资本稳态条件”，再依次运用“稳态消元”、“双重黄金律”，最后结合“黄金律资本与消费”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA004",
+      "knowledge": [
+        {
+          "title": "有效劳动增长倍数",
+          "application_md": "设$k=K/(AL)$。下一期有效劳动增长倍数为$1.02\\times1.03=1.0506$，所以",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "稳态维持投资",
+          "application_md": "正稳态要求$0.2\\sqrt{k}=0.1506k$，故$\\sqrt{k^*}=1000/753$，$k^*=(1000/753)^2$，$y^*=1000/753$，$c^*=0.8y^*=800/753$。将投资除以资本得0.1506，扣折旧0.1后恰补有效劳动增长0.0506。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "平衡增长与黄金律",
+          "application_md": "普通人均产出$Y/L=Ay^*$每年增长3%，总量增长5.06%。黄金律最大化$\\sqrt{k}-0.1506k$，得$1/(2\\sqrt{k^{GR}})=0.1506$，故$s^{GR}=1/2$。给定当期资本，提高$s$先减少当期消费，随后提高资本，稳态消费比较不能保证每期均改善。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“有效劳动增长倍数”，再依次运用“稳态维持投资”，最后结合“平衡增长与黄金律”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA005",
+      "knowledge": [
+        {
+          "title": "税收用途与有效投资率",
+          "application_md": "第一种用途有效投资率为$0.2\\times0.75=0.15$，稳态$0.1k=0.15\\sqrt{k}$，所以$k^*=2.25,y^*=1.5$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "公共投资与资源分配",
+          "application_md": "若全部税收形成同一合并资本，投资率变为$0.15+0.25=0.40$，稳态$k^*=16,y^*=4$，私人消费$0.8\\times0.75\\times4=2.4$，总投资1.6，公共当期消费为0。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "税收影响增长的条件",
+          "application_md": "税收会改变私人可支配收入，但还可能改变公共投资、生产率及激励；用途不同导致净投资率不同。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“税收用途与有效投资率”，再依次运用“公共投资与资源分配”，最后结合“税收影响增长的条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA006",
+      "knowledge": [
+        {
+          "title": "资本毁损与转轨",
+          "application_md": "正稳态$k^*=4,y^*=2,c^*=1.6$。资本毁掉四分之三后$k=1,y=1,c=0.8$，$\\dot k=0.1$，当期资本比例增长率10%。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "局部收敛速度",
+          "application_md": "动态函数$F(k)=0.2\\sqrt{k}-0.1k$，$F'(4)=0.1/2-0.1=-0.05$，局部偏离约按$e^{-0.05t}$衰减，收敛速度0.05。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "条件收敛",
+          "application_md": "只有储蓄、人口、技术、折旧等决定的稳态相同或得到控制，较低初始资本才意味着更高过渡增长。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“资本毁损与转轨”，再依次运用“局部收敛速度”，最后结合“条件收敛”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA007",
+      "knowledge": [
+        {
+          "title": "平衡增长与资本产出比",
+          "application_md": "令$k=K/(AL)$恒定，则$y=Y/(AL)=k^\\alpha$恒定。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "竞争性要素收入份额",
+          "application_md": "资本租金$R_K=\\partial Y/\\partial K=\\alpha Y/K$，故资本收入$R_KK=\\alpha Y$；工资$w=\\partial Y/\\partial L=(1-\\alpha)Y/L$，劳动收入份额为$1-\\alpha$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "工资与资本租金",
+          "application_md": "$Y/L=Ay$随$A$以$g$增长，故实际工资以$g$增长；$Y/K$不变使单位资本折旧前租金不变。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“平衡增长与资本产出比”，再依次运用“竞争性要素收入份额”，最后结合“工资与资本租金”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA008",
+      "knowledge": [
+        {
+          "title": "增长核算与资本深化",
+          "application_md": "增长核算给$g_Y=g_A+0.4g_K+0.6g_L$，所以$g_A=5\\%-2.4\\%-0.6\\%=2\\%$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "技术增长率口径",
+          "application_md": "两种表示满足$A=B^{0.6}$，故$g_B=g_A/0.6=10/3\\%$，不同技术表示的增长率不能直接互换。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "索洛余值的识别边界",
+          "application_md": "余值是给定函数、份额与数据后的未解释增长；产能利用、劳动质量、要素测量、规模效应和配置变化均可能进入残差。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“增长核算与资本深化”，再依次运用“技术增长率口径”，最后结合“索洛余值的识别边界”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA009",
+      "knowledge": [
+        {
+          "title": "知识增长率",
+          "application_md": "知识增长率为$g_A=\\eta L_RA^{\\phi-1}$。当$\\phi=1$且$L_R$固定，$g_A=\\eta L_R$恒正；一次提高$L_R$永久提高这一模型中的知识增长率。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "研发递减报酬",
+          "application_md": "当$0<\\phi<1$，对$A^{1-\\phi}$积分得$A_t^{1-\\phi}=A_0^{1-\\phi}+(1-\\phi)\\eta L_Rt$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "科研劳动趋势与平衡增长",
+          "application_md": "若$L_R$以常数率$n_R>0$增长且存在平衡增长，令增长率关系相等得$(1-\\phi)g_A=n_R$，所以$g_A=n_R/(1-\\phi)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“知识增长率”，再依次运用“研发递减报酬”，最后结合“科研劳动趋势与平衡增长”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA010",
+      "knowledge": [
+        {
+          "title": "稳态与黄金律比较",
+          "application_md": "维持投资系数$n+\\delta=0.1$。稳态$0.8\\sqrt{k}=0.1k$，得$k^*=64,y^*=8,c^*=1.6$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "过度积累的消费路径",
+          "application_md": "当前$MPK=1/16=0.0625<0.1$，资本高于黄金律。将$s$降至0.5，给定资本的即时消费从1.6变为4；随后资本下降至25，消费趋2.5。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "动态效率与财政政策边界",
+          "application_md": "该结论以无额外摩擦、资本可调整与消费作为福利对象为前提。具体减税可能不改变国民储蓄、改变公共品和分配，不能从过度积累直接推出任意减税的福利结论。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“稳态与黄金律比较”，再依次运用“过度积累的消费路径”，最后结合“动态效率与财政政策边界”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA011",
+      "knowledge": [
+        {
+          "title": "银行零利润与贷款因子",
+          "application_md": "每贷出1单位，银行预期收回$\\alpha R_L$，需要支付存款本息$R$，故$\\alpha R_L=R$，即$R_L = \\frac{R}{\\alpha} > R$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "分段跨期预算",
+          "application_md": "储蓄段$0\\le c_1\\le y_1$，$c_2=y_2+R(y_1-c_1)$，效用对$c_1$的斜率为$1-R$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "线性效用角点",
+          "application_md": "因$R_L>R$，若$R>1$，两段斜率均为负，最优$c_1=0,c_2=Ry_1+y_2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "等号区间与非唯一解",
+          "application_md": "$R=1$时，$c_1\\in[0,y_1]$的整段储蓄组合都最优；$R=\\alpha$时，$c_1\\in[y_1,y_1+y_2]$的整段借款组合都最优。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "违约风险比较静态",
+          "application_md": "$\\alpha$下降使贷款因子上升。在$R<\\alpha$借款分支内，$\\frac{\\partial c_1}{\\partial \\alpha} = \\frac{y_2}{R} > 0$，所以风险上升压低第一期消费；进入不借不贷区后降到$y_1$并停止这一变化。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“银行零利润与贷款因子”，再依次运用“分段跨期预算”、“线性效用角点”、“等号区间与非唯一解”，最后结合“违约风险比较静态”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA012",
+      "knowledge": [
+        {
+          "title": "现值预算与消费平滑",
+          "application_md": "现值预算$c_1+c_2=16$，内点$1/c_1=1/c_2$，故$(8,8)$，借款4。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "借款约束与Euler不等式",
+          "application_md": "约束点$u_1'=1/4>Ru_2'=1/12$，家庭愿意借入增加第一期消费，但不能这样做，Euler等式被对应不等式替代。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "税收时点与流动性",
+          "application_md": "税收转移后收入变$(6,10)$且总现值不变；无约束最优仍$(8,8)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“现值预算与消费平滑”，再依次运用“借款约束与Euler不等式”，最后结合“税收时点与流动性”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA013",
+      "knowledge": [
+        {
+          "title": "临时与永久收入冲击",
+          "application_md": "无约束、利率0、三期同权，使最优消费相等。原总资源27，每期9。A总资源33，每期11，第一期收入15、消费11，储蓄4；相对原消费增加2，新增6中只消费三分之一。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "流动性约束消费",
+          "application_md": "约束案例原总资源27，若第一期不能借款，第一期消费最多1；由于希望消费9，限制有效，最优$c_1=1$，后两期各13。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“临时与永久收入冲击”，最后结合“流动性约束消费”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA014",
+      "knowledge": [
+        {
+          "title": "终身财富与利率",
+          "application_md": "预算$c_1+c_2/R=y_1+y_2/R$，Euler给$c_2=Rc_1$，所以$c_1=(y_1+y_2/R)/2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "借款成本与消费",
+          "application_md": "对$(0,20)$，R=1时$(10,10)$、借款10；R=2时$(5,10)$、借款5，融资成本上升限制第一期消费。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "替代效应与财富效应",
+          "application_md": "一般非对数偏好、原为净储蓄者时，提高利率还会增加资产收入，财富效应可能抵消替代效应；这里对数偏好下$c_1$的解析式给出具体方向，不能把这一结果当所有家庭普遍规律。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“终身财富与利率”，再依次运用“借款成本与消费”，最后结合“替代效应与财富效应”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA015",
+      "knowledge": [
+        {
+          "title": "存款家庭角点",
+          "application_md": "银行先有$R_L=1.2$，危机后1.5。存款者以第一期消费1单位替代第二期0.9单位，故全部当期消费10，不存款；两种情形60户贡献600。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "借款家庭角点与聚合",
+          "application_md": "借款者借款1单位带来第一期消费1，但第二期需付$R_L>1$。因收入只在第二期，线性效用下其最优本可选择不借且$c_2=12$，效用12；若借满则效用$12/R_L<12$，所以理性最优是$c_1=0,c_2=12$，不是自动借满。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "消费风险响应条件",
+          "application_md": "即使银行利差上升，在线性效用且贷款回报大于1的这些合同家庭中不产生边际借款；若另设最低当期需求、非线性效用或原$R_L<1$，消费反应会不同。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“存款家庭角点”，再依次运用“借款家庭角点与聚合”，最后结合“消费风险响应条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA016",
+      "knowledge": [
+        {
+          "title": "投资净现值与消费分离",
+          "application_md": "自由金融市场下投资最大化$6\\sqrt I-I$，一阶条件$3/\\sqrt I=1$，得$I^*=9$；二阶导负，净现值9。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "金融约束下的联合优化",
+          "application_md": "禁止借贷时$c_1=10-I,c_2=6\\sqrt I$。目标$\\ln(10-I)+\\ln6+0.5\\ln I$，导数$-1/(10-I)+0.5/I=0$，得$I=10/3$，$c_1=20/3$，$c_2=6\\sqrt{10/3}$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "费雪分离条件",
+          "application_md": "金融完善时生产投资只由回报R决定，偏好决定消费分配；借贷受限后同一资源限制使投资与消费相互竞争，不能沿用$I=9$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“投资净现值与消费分离”，再依次运用“金融约束下的联合优化”，最后结合“费雪分离条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA017",
+      "knowledge": [
+        {
+          "title": "资本使用成本",
+          "application_md": "每单位资本使用成本$uc=0.1+0.1=0.2$。$MPK=5/\\sqrt K$，故$K^*=(5/0.2)^2=625$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "资本品相对价格",
+          "application_md": "资本品价格0.8且无资本利得预期，使用成本为0.8×0.2=0.16，$K^*=(5/0.16)^2=976.5625$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "平均q与资本需求边界",
+          "application_md": "股票市值上升可提高平均q，但边际q、融资约束、调整成本、市场误估等决定新增投资。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“资本使用成本”，再依次运用“资本品相对价格”，最后结合“平均q与资本需求边界”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA018",
+      "knowledge": [
+        {
+          "title": "调整成本与非负投资",
+          "application_md": "对x求导得$q-1-4x=0$；二阶导为−4，故$x^*=\\max\\{(q-1)/4,0\\}$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "净投资与折旧",
+          "application_md": "q分别为0.8、1、1.8时，x分别为0、0、0.2。净资本增长率$I/K-\\delta$分别为−0.1、−0.1、0.1。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "边际q与平均q",
+          "application_md": "边际q是新增一单位资本的价值，平均q是既有企业市值相对资本重置成本。常报酬、竞争、合适税制与调整技术等条件下两者可能相等；垄断租、无形资本及融资摩擦会破坏等同。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“调整成本与非负投资”，再依次运用“净投资与折旧”，最后结合“边际q与平均q”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA019",
+      "knowledge": [
+        {
+          "title": "异质家庭减税响应",
+          "application_md": "受限者获得40减税，消费增40；等价家庭获得60但为未来税收多储蓄60，本期消费不变。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "自主消费冲击与乘数",
+          "application_md": "若额外给定边际消费倾向0.5、价格固定、投资不因利率变动，则需求反馈满足$\\Delta Y=40+0.5\\Delta Y$，所以产出增80。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "税负分配与模型条件",
+          "application_md": "结论依赖受限比例、税负分配、未来税收预期、政府支出与货币政策、价格和利率反应；若家庭异质或税负不同，需重新聚合。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“异质家庭减税响应”，再依次运用“自主消费冲击与乘数”，最后结合“税负分配与模型条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA020",
+      "knowledge": [
+        {
+          "title": "风险收入的储蓄一阶条件",
+          "application_md": "消费$c_1=10-s$，两种第二期消费为$4+s,16+s$。目标一阶条件\n$$\\frac1{10-s}=\\frac1{2(4+s)}+\\frac1{2(16+s)}.$$",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "预防性储蓄求解",
+          "application_md": "右侧合并为$(10+s)/[(4+s)(16+s)]$，故$64+20s+s^2=100-s^2$，化为$s^2+10s-18=0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "边际效用凸性",
+          "application_md": "确定收入10时目标$\\ln(10-s)+\\ln(10+s)$，最优s=0。风险情形平均收入仍10，却因边际效用凸性$E[1/c_2]>1/E[c_2]$而增加储蓄。该比较在给定偏好、独立收入风险和金融约束下成立，不把所有不确定性均称同量的预防性储蓄。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“风险收入的储蓄一阶条件”，再依次运用“预防性储蓄求解”，最后结合“边际效用凸性”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA021",
+      "knowledge": [
+        {
+          "title": "产品市场存货调整",
+          "application_md": "A的利率高于同一产出下IS所需利率，投资需求较低，计划总支出小于实际产出。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "货币超额供给与债券价格",
+          "application_md": "A的利率也高于同一产出下LM所需利率，货币需求低于实际余额供给，出现货币超额供给。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "双市场动态系统",
+          "application_md": "可设$\\dot Y=a[D(Y,i)-Y]$、$\\dot{i} = b [L (Y , i) - \\frac{M}{P}]$，其中$a,b>0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "调整速度与局部收敛",
+          "application_md": "若货币市场远快于产品市场，先画近乎向下接近LM的路径，再随产品调整沿LM附近趋向B。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“产品市场存货调整”，再依次运用“货币超额供给与债券价格”、“双市场动态系统”，最后结合“调整速度与局部收敛”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA022",
+      "knowledge": [
+        {
+          "title": "货币反馈规则与LM斜率",
+          "application_md": "由货币出清得\n\n$$i=\\frac{\\alpha-\\bar M}{\\beta}-\\frac{\\phi P}{\\beta}Y.$$\n\n固定$P>0$，$\\phi>0$时LM向右下倾斜；$\\phi<0$时向右上倾斜。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "AD分母与可行分支",
+          "application_md": "令$D = a + X - \\frac{b (\\alpha - \\bar{M})}{\\beta}$、$H = 1 - \\frac{b \\phi P}{\\beta}$，得\n\n$$Y=\\frac D H.$$\n\n在$D>0,H>0$的分支上，固定其余量，$\\frac{\\partial Y}{\\partial P} = \\frac{D b \\phi}{\\beta H^2}$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "出口冲击乘数",
+          "application_md": "因$\\frac{\\partial Y}{\\partial X} = \\frac{1}{H}$，顺周期$\\phi>0$且$0<H<1$时，出口下降引起更大的产出下降：产出下降使规则内货币收缩、利率上升，进一步压低需求。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "逆周期货币政策",
+          "application_md": "在此短期模型内可提高自主货币供给项$\\bar M$、降低顺周期程度，或以财政支出支持自主需求；但不应声称任意大的反馈都稳定。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“货币反馈规则与LM斜率”，再依次运用“AD分母与可行分支”、“出口冲击乘数”，最后结合“逆周期货币政策”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA023",
+      "knowledge": [
+        {
+          "title": "IS LM联立与挤出",
+          "application_md": "LM给$i=0.05Y-5$，代入IS得$1.25Y=225$，故$Y=180,i=4$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "固定利率的货币配合",
+          "application_md": "若央行保持i=4，新IS给Y=200，所需$m=0.5\\times200-10\\times4=60$，应增10。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“IS LM联立与挤出”，最后结合“固定利率的货币配合”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA024",
+      "knowledge": [
+        {
+          "title": "比例税与边际漏出",
+          "application_md": "产品市场为$0.4Y=100-0.8T_0-4i$，LM给$i=0.1Y-8$，因此$0.8Y=132+\\Delta G-0.8T_0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "财政乘数与平衡预算",
+          "application_md": "G增10使Y增12.5，i增1.25；T0增10使Y降10，i降1。两者同时增加10使Y增2.5，平衡预算乘数为0.25。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "单位平衡预算乘数条件",
+          "application_md": "简单凯恩斯交叉中固定一次总付税、无比例税且投资不受利率影响时才有常见的单位平衡预算乘数。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“比例税与边际漏出”，再依次运用“财政乘数与平衡预算”，最后结合“单位平衡预算乘数条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA025",
+      "knowledge": [
+        {
+          "title": "安全利率与信用利差联立",
+          "application_md": "LM给$i=0.05Y-2$；代入产品市场得$Y=100-0.2Y+8-15+0.05Y$，所以$1.15Y=93$，$Y=1860/23\\approx80.8696$，$i=47/23\\approx2.0435$，$\\omega=252/115\\approx2.1913>0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "金融加速器",
+          "application_md": "自主支出降11.5时，$\\Delta Y=-10$，$\\Delta i=-0.5$，$\\Delta\\omega=0.1$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "总借款成本与模型区间",
+          "application_md": "货币利率下降并未抵消利差上升；借款成本是二者之和。若外推使利差为负，必须改模型或限制区间，不能继续用线性式宣称风险补贴。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“安全利率与信用利差联立”，再依次运用“金融加速器”，最后结合“总借款成本与模型区间”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA026",
+      "knowledge": [
+        {
+          "title": "金融反馈乘数分母",
+          "application_md": "由$i=(kY-m)/h$，联立得\n$$DY=A+bm/h-\\beta\\bar\\omega,$$\n$$D=1+bk/h-\\beta\\gamma.$$",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "均衡存在性与正乘数",
+          "application_md": "若D非零，$\\partial Y/\\partial A=1/D$。D大于0时常规正乘数；利差反馈增大γ使D缩小、冲击放大。D=0且右端非零时无代数均衡；右端也为0时该线性约束给不出唯一Y。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "经济可行性与动态稳定",
+          "application_md": "D小于0时形式解可有负比较静态，但还须检查Y、i、利差和支出是否在可行区间。稳定性必须给出产出、利率或利差的调整规则，再考察特征根；静态斜率与动态路径不等同。例如同一均衡方程在不同调整速度或预期规则下可有不同稳定性。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“金融反馈乘数分母”，再依次运用“均衡存在性与正乘数”，最后结合“经济可行性与动态稳定”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA027",
+      "knowledge": [
+        {
+          "title": "双市场稳态",
+          "application_md": "稳态由$0.6Y+4i=120$和$0.5Y-10i=20$给出。后式$i=0.05Y-2$，前式$0.8Y=128$，所以$Y^*=160,i^*=6$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "Jacobian稳定结点",
+          "application_md": "Jacobian为$J=\\begin{pmatrix}-0.6&-4\\\\0.5&-10\\end{pmatrix}$，迹为−10.6，行列式8，判别式$10.6^2-32=80.36>0$，两根实且负，稳态为稳定结点。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "局部方向与调整路径",
+          "application_md": "在(100,4)，$\\dot Y=44>0$，$\\dot i=-10<0$，故向右下。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“双市场稳态”，再依次运用“Jacobian稳定结点”，最后结合“局部方向与调整路径”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA028",
+      "knowledge": [
+        {
+          "title": "利率下限的财政作用",
+          "application_md": "在i=0，初始Y=100，G增10后Y=110。此处产品市场自主系数已是约化式，题设未给额外消费反馈，不再另乘标准乘数。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "流动性陷阱的货币渠道",
+          "application_md": "当新增基础货币被公众作为近似等价的短期安全资产持有，名义利率已不能降低，传统“扩币→利率下降→投资”链条受阻。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "预期通胀与实际利率",
+          "application_md": "事前实际利率近似$r=i-\\pi^e$，预期通胀由−2%到0使r由2%到0下降2点，投资增6；按题给约化结构，Y再增6。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“利率下限的财政作用”，再依次运用“流动性陷阱的货币渠道”，最后结合“预期通胀与实际利率”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA029",
+      "knowledge": [
+        {
+          "title": "可支配收入与LM",
+          "application_md": "产品市场$0.25Y=80-0.75T-2i$。货币市场$i=0.1(Y-T)-4$，代入得$0.45Y=88-0.55T$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "减税的双市场响应",
+          "application_md": "T降8，$\\Delta Y=0.55\\times8/0.45=88/9\\approx9.7778$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "货币需求收入口径",
+          "application_md": "若货币需求错误地省略T，联立分母仍0.45，但税项系数变0.75，预测$\\Delta Y=40/3\\approx13.333$，高估产出刺激。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“可支配收入与LM”，再依次运用“减税的双市场响应”，最后结合“货币需求收入口径”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA030",
+      "knowledge": [
+        {
+          "title": "政策乘数的一般解",
+          "application_md": "联立得$Y=(hA+bm)/(h+bk)$，所以$\\partial Y/\\partial A=h/(h+bk)$，$\\partial Y/\\partial m=b/(h+bk)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "IS LM斜率与极限效果",
+          "application_md": "b趋0时财政乘数趋1、货币乘数趋0，投资对利率不响应，降息难增加支出。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "政策传导的适用条件",
+          "application_md": "极限模型有助理解相对效果，但名义下限、风险利差、价格变化、配给和预期会改变这些简化曲线；不能以“LM平”三个字替代适用条件和传导解释。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“政策乘数的一般解”，再依次运用“IS LM斜率与极限效果”，最后结合“政策传导的适用条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA031",
+      "knowledge": [
+        {
+          "title": "IS LM推导AD",
+          "application_md": "IS给$i=32-0.1Y$，代入LM得$\\frac{M}{P} = Y - 160$，所以AD为$Y = 160 + \\frac{M}{P}$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "正价格均衡",
+          "application_md": "初始AS为$P=1+0.01Y$。与$Y = 160 + \\frac{560}{P}$联立，化为$P^2-2.6P-5.6=0$，根为4和-1.4。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "预期价格冲击",
+          "application_md": "冲击后AS为$P=4.6+0.01Y$，联立得$P^2-6.2P-5.6=0$，保留正根$P_1=7$，从而$Y_1=240,i_1=8$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "产出目标与货币反推",
+          "application_md": "原第三问恢复的是$Y_0=300$。在$P_e=5.6$下，AS给$P^*=7.6$，IS给$i^*=2$，LM要求\n\n$$M^*=P^*(0.5Y^*-5i^*)=7.6(150-10)=1064.$$\n\n货币需增加504。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“IS LM推导AD”，再依次运用“正价格均衡”、“预期价格冲击”，最后结合“产出目标与货币反推”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA032",
+      "knowledge": [
+        {
+          "title": "需求收缩与就业",
+          "application_md": "消费意愿下降、企业投资减少或出口走弱，使给定价格下计划支出减少，AD左移。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "供给冲击与预期类型",
+          "application_md": "原料、能源、运输成本增加或生产受阻，使AS上移或左移；短期产出下降、价格上升，形成滞胀压力。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "复合冲击的价格不确定性",
+          "application_md": "需求左移和不利供给冲击都压低产出，因此在上述条件下产出下降、失业上升较明确。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "货币财政需求渠道",
+          "application_md": "降低融资成本、改善信贷传导可支持投资和消费；财政支出、减税或有针对性的转移可直接补需求并缓解流动性约束。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "供给恢复与预期管理",
+          "application_md": "疏通物流、保障能源与关键投入、降低不必要交易成本有助于AS恢复；清晰稳定的政策沟通、可执行的就业和企业支持可改善收入利润预期。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“需求收缩与就业”，再依次运用“供给冲击与预期类型”、“复合冲击的价格不确定性”、“货币财政需求渠道”，最后结合“供给恢复与预期管理”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA033",
+      "knowledge": [
+        {
+          "title": "货币扩张的短期均衡",
+          "application_md": "初始AD给$Y=200-10P$，AS给$P=0.1Y$，所以Y=100、P=10。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "预期调整与长期均衡",
+          "application_md": "长期Y回到100时AD给P=12；AS要求$P^e=P=12$。短期意外扩币提高产出10、价格1，预期逐渐调整后产出回100、价格总增2。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "长期货币中性条件",
+          "application_md": "长期中性是给定真实技术、资源、市场结构及货币不影响这些真实机制时的模型结果。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“货币扩张的短期均衡”，再依次运用“预期调整与长期均衡”，最后结合“长期货币中性条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA034",
+      "knowledge": [
+        {
+          "title": "不利供给冲击",
+          "application_md": "初始x=0、P=2。冲击后联立$x=2-P$和$P=4+x$，得x=−1、P=3，呈现产出降价升。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "稳产出与稳物价目标",
+          "application_md": "要恢复x=0，AS强制P=4，AD要求a=P=4，因此a增加2；稳产出付出价格比初始高2的代价。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "单一需求工具的权衡",
+          "application_md": "两种目标无法仅靠一个需求工具同时恢复。改善供给冲击v或提高潜在供给才可能缓和权衡；实际福利比较还需冲击持续性、预期与政策损失权重。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“不利供给冲击”，再依次运用“稳产出与稳物价目标”，最后结合“单一需求工具的权衡”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA035",
+      "knowledge": [
+        {
+          "title": "需求供给变化联立",
+          "application_md": "变化式为$\\Delta x=-d-2\\Delta P$，$\\Delta P=0.5\\Delta x+s$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "价格变化阈值",
+          "application_md": "产出必降；价格方向取决于2s与d的比较：2s>d时升，等于时不变，小于时降。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "需求支持与供给修复",
+          "application_md": "需求支持可提高a，缓解支出下降但可能进一步推价格；修复物流、关键供给与竞争秩序若能降低v，可同时改善产出和价格。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“需求供给变化联立”，再依次运用“价格变化阈值”，最后结合“需求支持与供给修复”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA036",
+      "knowledge": [
+        {
+          "title": "黏性工资与劳动需求",
+          "application_md": "固定W时，实际工资从10降到8，劳动需求从80增至84。价格超预期使既定名义工资对应的实际用工成本下降，企业沿劳动需求增加雇佣。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "不完全信息与供给",
+          "application_md": "信息模型Y从50增至51.5。这里主体把自身价格上升的一部分误认作相对价格改善，供给上升；新增总体价格信息使误判减少。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "工资指数化与充分信息",
+          "application_md": "若工资即时完全指数化$W=10P$，实际工资固定10，就业仍80；若信息企业即时准确观察总体价格且模型只含误判摩擦，则$P-P^e$有效误差消失，信息刺激渠道消失。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“黏性工资与劳动需求”，再依次运用“不完全信息与供给”，最后结合“工资指数化与充分信息”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA037",
+      "knowledge": [
+        {
+          "title": "实际货币余额",
+          "application_md": "实际余额从60升到72，增加20%，虽然名义货币下降10%。若货币需求函数及其他条件固定，实际余额增加在标准IS LM图上更接近LM右移，而非仅据M下降认定LM左移。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "费雪实际利率",
+          "application_md": "事前实际利率近似$r=i-\\pi^e$，原为4%，新为2%−(−5%)=7%，提高3个百分点。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "相关数据与因果识别",
+          "application_md": "产出下降可由支出、信用、预期及供给等共同变化引发；利率下降也可能是收入和货币需求下降的结果。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“实际货币余额”，再依次运用“费雪实际利率”，最后结合“相关数据与因果识别”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA038",
+      "knowledge": [
+        {
+          "title": "静态均衡与预期递推",
+          "application_md": "联立得$P_t=(10+P_t^e)/2$，$x_t=(10-P_t^e)/2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "预期追赶与产出缺口",
+          "application_md": "t=0时Pe=6、P=8、x=2；t=1时Pe=7、P=8.5、x=1.5；t=2时Pe=7.75、P=8.875、x=1.125。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "离散稳定与行为区间",
+          "application_md": "一般以更新权重λ替代0.5，预期系数$1-\\lambda/2$；离散稳定要求$|1-\\lambda/2|<1$，即0<λ<4。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“静态均衡与预期递推”，再依次运用“预期追赶与产出缺口”，最后结合“离散稳定与行为区间”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA039",
+      "knowledge": [
+        {
+          "title": "财政乘数与AS斜率",
+          "application_md": "初始代入得$Y=120-2[10+\\kappa(Y-100)]$，所以$Y=100,P=10$，不依赖κ。变化式$\\Delta Y=\\Delta G-2\\Delta P$、$\\Delta P=\\kappa\\Delta Y$，故\n$$\\frac{\\Delta Y}{\\Delta G}=\\frac1{1+2\\kappa},\\qquad \\frac{\\Delta P}{\\Delta G}=\\frac\\kappa{1+2\\kappa}.$$",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "供给约束下的政策效果",
+          "application_md": "G增10：κ=0时Y增10、P不变；κ=0.5时Y增5、P增2.5；κ=2时Y增2、P增4。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "潜在供给改善",
+          "application_md": "当κ很大，需求扩张主要反映在价格、真实产出反应趋0。提升潜在产出、改善技术或缓解瓶颈是移动供给而非仅改变G；其时间、资源成本和分配效果还需单独论证。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“财政乘数与AS斜率”，再依次运用“供给约束下的政策效果”，最后结合“潜在供给改善”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA040",
+      "knowledge": [
+        {
+          "title": "潜在产出与缺口基准",
+          "application_md": "冲击后AS为$P=20+0.2(Y-90)=2+0.2Y$。代入AD得$2Y=190$，所以Y=95、P=21。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "长期均衡与旧产出目标",
+          "application_md": "长期Y=90时AD给P=22，AS要求Pe=22。若短期Pe仍20且需求政策要使Y=100，AS要求P=22；AD需改为$Y=A-5P$且A=210，即截距提高10。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "供给恢复与需求边界",
+          "application_md": "需要恢复基础设施、劳动技能或技术等供给条件才能提高潜在产出；持续需求扩张维持旧Y可能推高预期和价格。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“潜在产出与缺口基准”，再依次运用“长期均衡与旧产出目标”，最后结合“供给恢复与需求边界”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA041",
+      "knowledge": [
+        {
+          "title": "政策规则与费雪关系",
+          "application_md": "记$A=1+\\alpha\\theta_Y$，将政策和费雪式代入需求：\n\n$$Ax_t=-\\alpha[(1+\\theta_\\pi)\\pi_t-\\pi_{t-1}-\\theta_\\pi\\pi^*]+\\varepsilon_t.$$\n\n这回答第一问。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "有符号供给与通胀稳定",
+          "application_md": "统一写$\\pi_t=\\pi_{t-1}+\\kappa x_t+v_t$；原题$\\kappa=-\\varphi$，教材常用模型$\\kappa=\\varphi>0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "滞后预期的严格时点",
+          "application_md": "若第三问描述同一规则在各期的形式，那么进入原本期方程的应为\n\n$$q_t=E_{t-1}\\pi_t=\\chi\\pi_{t-1}+(1-\\chi)\\pi_{t-2}+\\eta_{t-1}.$$\n\n此时DAD为$Ax_t=-\\alpha[(1+\\theta_\\pi)\\pi_t-q_t-\\theta_\\pi\\pi^*]+\\varepsilon_t$，DAS为$\\pi_t=q_t+\\kappa x_t+v_t$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "前瞻费雪分支",
+          "application_md": "若明确改$r_t=i_t-E_t\\pi_{t+1}$而供给仍用$q_t$，DAD改为\n\n$$\nAx_t=-\\alpha[(1+\\theta_\\pi-\\chi)\\pi_t-(1-\\chi)\\pi_{t-1}-\\theta_\\pi\\pi^*-\\eta_t]+\\varepsilon_t\n$$\n\n联立供给得到\n\n$$\\frac{\\partial\\pi_t}{\\partial\\eta_t}=\\frac{\\alpha\\kappa}{A+\\alpha\\kappa(1+\\theta_\\pi-\\chi)}.$$\n\n这是修改费雪时点后的答案，不能冒充严格沿用原式的唯一结果。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "共同当期预期分支",
+          "application_md": "若再明确供给和费雪共用$\\widehat\\pi_t=\\chi\\pi_t+(1-\\chi)\\pi_{t-1}+\\eta_t$，则DAD同动作4，而DAS变为\n\n$$(1-\\chi)(\\pi_t-\\pi_{t-1})=\\kappa x_t+\\eta_t+v_t.$$\n\n联立并对冲击求导，得到\n\n$$\\frac{\\partial\\pi_t}{\\partial\\eta_t}=\\frac{A+\\alpha\\kappa}{(1-\\chi)A+\\alpha\\kappa(1+\\theta_\\pi-\\chi)}.$$\n\n教材正号、$A>0,0\\le\\chi<1,\\theta_\\pi\\ge0$时，该反应为正：预期直接影响定价，也经实际利率影响需求。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“政策规则与费雪关系”，再依次运用“有符号供给与通胀稳定”、“滞后预期的严格时点”、“前瞻费雪分支”，最后结合“共同当期预期分支”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA042",
+      "knowledge": [
+        {
+          "title": "通胀偏离递推",
+          "application_md": "联立得$1.5\\pi_t=\\pi_{t-1}+1+0.5\\varepsilon_t+v_t$，故相对目标偏离$z_t=\\pi_t-2$满足$z_t=(2/3)z_{t-1}+(1/3)\\varepsilon_t+(2/3)v_t$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "需求冲击的动态路径",
+          "application_md": "需求冲击下$z_1=1,z_2=2/3,z_3=4/9$，通胀依次3、8/3、22/9；缺口$x_1=2,x_2=-2/3,x_3=-4/9$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "供给冲击与价产方向",
+          "application_md": "供给冲击下$z_1=2/3,z_2=4/9,z_3=8/27$；缺口依次−2/3、−4/9、−8/27。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“通胀偏离递推”，再依次运用“需求冲击的动态路径”，最后结合“供给冲击与价产方向”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA043",
+      "knowledge": [
+        {
+          "title": "负号供给递推",
+          "application_md": "令$z_t=\\pi_t-2$，由$x_t=-z_t$得$(1-\\varphi)z_t=z_{t-1}$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "奇异点与交替收敛",
+          "application_md": "φ=0.2时ρ=1.25，偏离扩大，不稳定。φ=1时方程为$0=z_{t-1}$：若前期偏离非零则无本期解；若前期恰为0，本期z不由该式唯一确定。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "供给符号的模型边界",
+          "application_md": "正号供给会改为系数$1/(1+\\varphi)$，给出不同模型结果。原资料负号与预期时间戳需核原页；训练可以另设正号分支，但必须标出修改条件及推论适用范围。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“负号供给递推”，再依次运用“奇异点与交替收敛”，最后结合“供给符号的模型边界”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA044",
+      "knowledge": [
+        {
+          "title": "预期冲击的需求方程",
+          "application_md": "需求化为$x_t=-\\pi_t+1+0.5\\pi_{t-1}+\\eta_t$，在前期通胀2时为$x_t=2-\\pi_t+\\eta_t$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "滞后供给预期闭合",
+          "application_md": "A闭合有$\\pi_t=2+0.5x_t$，故$1.5(\\pi_t-2)=0.5\\eta_t$，导数$d\\pi_t/d\\eta_t=1/3$，$dx_t/d\\eta_t=2/3$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "前瞻供给预期闭合",
+          "application_md": "B闭合有$\\pi_t=0.5\\pi_t+1+\\eta_t+0.5x_t$，即$\\pi_t=2+2\\eta_t+x_t$；与需求联立得$2(\\pi_t-2)=3\\eta_t$，导数分别3/2与−1/2。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "预期时点与方向",
+          "application_md": "B把前瞻指标同时放进当期供给，意味着工资或价格设定使用同一前瞻信息；A供给使用已给定的滞后指标。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“预期冲击的需求方程”，再依次运用“滞后供给预期闭合”、“前瞻供给预期闭合”，最后结合“预期时点与方向”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA045",
+      "knowledge": [
+        {
+          "title": "数量方程与速度",
+          "application_md": "$V=PY/M$，三年均为1。第一段M和Y同增10%、V不变，所以P不变；第二段M增10%、Y不变，P增10%，均符合$MV=PY$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "精确通胀倍率",
+          "application_md": "下一年的价格倍率为$1.10\\times0.96/1.05=1.0057142857$，精确通胀约0.5714%。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "核算恒等式与因果条件",
+          "application_md": "数量方程本身是核算恒等式；把M变化解释为P的因果驱动，还需速度、实际供给及货币内生性等假设。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“数量方程与速度”，再依次运用“精确通胀倍率”，最后结合“核算恒等式与因果条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA046",
+      "knowledge": [
+        {
+          "title": "流动性效应与费雪效应",
+          "application_md": "当期紧缩减少货币可用性，在价格及预期尚未充分调整时，可使流动性利率提高。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "实际利率与自然利率",
+          "application_md": "当期实际利率近似5%−2%=3%，高于题设长期自然值2%；长期预期通胀为0且实际利率2%，名义利率为2%。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "名义利率的识别边界",
+          "application_md": "名义利率下降也可能是衰退、预期通缩、风险偏好或货币需求变化的结果；需看预期通胀、自然利率、信用利差及政策操作。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“流动性效应与费雪效应”，再依次运用“实际利率与自然利率”，最后结合“名义利率的识别边界”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA047",
+      "knowledge": [
+        {
+          "title": "意外通胀与短期供给",
+          "application_md": "A中实际与预期均为4%，所以x=0；在该模型中只有意外通胀产生短期供给刺激。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "理性预期与系统性意外",
+          "application_md": "C中“总想制造2点意外”不能在公众完全知晓且行为可预见时每期实现；公众会将可预测部分计入预期，系统性意外消失。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "政策摩擦与有效性边界",
+          "application_md": "政策可信度和摩擦决定预期调整速度。这个供给模型不含价格黏性、信用摩擦等其他政策渠道，因此不能由A的x=0推论任何预期到的货币政策在所有环境中均无效。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“意外通胀与短期供给”，再依次运用“理性预期与系统性意外”，最后结合“政策摩擦与有效性边界”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA048",
+      "knowledge": [
+        {
+          "title": "年度目标与平均目标",
+          "application_md": "年度通胀目标只要求第二年2%，不补偿第一年的2点偏差。算术平均目标要求$(0+\\pi_2)/2=2$，故第二年4%。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "价格水平目标与复利",
+          "application_md": "若初始价格为100，原两年价格路径终点为$100(1.02)^2=104.04$；第一年实际仍100，所以第二年需通胀4.04%。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "补偿承诺与实际利率",
+          "application_md": "承诺弥补过去低通胀可以提高当前未来通胀预期，在名义利率下限附近压低实际利率；可信度不足或供给冲击环境中，弥补政策也可能增加沟通与稳定权衡。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“年度目标与平均目标”，再依次运用“价格水平目标与复利”，最后结合“补偿承诺与实际利率”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA049",
+      "knowledge": [
+        {
+          "title": "通胀锚定递推",
+          "application_md": "令$z_t=\\pi_t-2$，有$z_t=\\theta z_{t-1}+v_t$，所以第1期z=1，其后$z_t=\\theta^{t-1}$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "几何和与冲击持续性",
+          "application_md": "θ=0时只有一期1点；θ=0.5时路径1、0.5、0.25…，累计2点期；θ=0.9时累计10点期。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "单位根与累计偏离",
+          "application_md": "θ=1时冲击后每期偏离1，累计无界，已失去题设目标锚定回归。实际福利需将通胀和产出路径放入损失函数，累计偏离不是自动等于社会损失，但它说明预期机制会放大持续性。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“通胀锚定递推”，再依次运用“几何和与冲击持续性”，最后结合“单位根与累计偏离”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA050",
+      "knowledge": [
+        {
+          "title": "供给约束下的最优稳定",
+          "application_md": "目标为$(x+2)^2+\\lambda x^2$，一阶条件$2(x+2)+2\\lambda x=0$，故$x^*=-2/(1+\\lambda)$，$z^*=2\\lambda/(1+\\lambda)$，$L^*=4\\lambda/(1+\\lambda)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "损失权重与政策取舍",
+          "application_md": "λ=1时x=−1、z=1、L=2；λ=3时x=−0.5、z=1.5、L=3。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "完全稳物价与完全稳产出",
+          "application_md": "完全稳物价需x=−2，损失4λ；完全稳产出取x=0，损失4。内点最优在两者间分担，限于单期、预期锚定和给定供给曲线；跨期承诺需加入预期及未来损失。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“供给约束下的最优稳定”，再依次运用“损失权重与政策取舍”，最后结合“完全稳物价与完全稳产出”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA051",
+      "knowledge": [
+        {
+          "title": "自然失业率滞后机制",
+          "application_md": "长期失业可能造成技能退化、劳动市场联系减弱或退出求职，内部人议价等机制也可能使过去冲击影响后续均衡失业。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "反通胀时序与失业递推",
+          "application_md": "令$v_t=u_t-\\bar u$，把通胀变化以百分点计。政策冲击只有$\\pi_1-\\pi_0=-1$；此后$\\pi_t-\\pi_{t-1}=0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "单位根与永久失业影响",
+          "application_md": "第2期起的齐次递推特征根为1和$-1/2$，故\n\n$$v_t=\\frac43+\\frac23\\left(-\\frac12\\right)^{t-1},\\qquad t\\ge1.$$\n\n实际失业率围绕新水平交替收敛，长期比原稳态高$4/3$个百分点。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "牺牲率的基准",
+          "application_md": "先声明牺牲率的口径。相对原稳态，前T期累计额外失业为\n\n$$\\sum_{t=1}^{T}v_t=\\frac{4T}3+\\frac49\\left[1-\\left(-\\frac12\\right)^T\\right].$$\n\n它随T趋于无穷而无界。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "历史依赖与长期均衡",
+          "application_md": "短期仍有当期通胀变化与失业缺口的关系；长期自然率具有历史依赖，不能套用固定自然失业率模型的无长期水平影响结论。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“自然失业率滞后机制”，再依次运用“反通胀时序与失业递推”、“单位根与永久失业影响”、“牺牲率的基准”，最后结合“历史依赖与长期均衡”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA052",
+      "knowledge": [
+        {
+          "title": "人口与人均消费",
+          "application_md": "$c (N) = \\frac{Y}{N} = A (\\frac{L}{N})^{1 - \\alpha}$，固定土地下人口增加降低人均消费。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "人口稳态的消费门槛",
+          "application_md": "正人口稳态要求$g(c^*)=1$，故在1位于$g$的正消费取值范围时，$c^*=g^{-1}(1)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "技术冲击与稳态人口",
+          "application_md": "代回生产式，得\n\n$$N^* = L \\left (\\frac{A}{c^*} \\right)^{\\frac{1}{1 - \\alpha}} .$$\n\n技术提高当期人口来不及变化，消费上升；因为$g'>0$，随后人口增长。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "人口映射局部稳定",
+          "application_md": "记$F(N)=Ng(c(N))$，有$c' (N) = - \\frac{(1 - \\alpha) c}{N}$，故\n\n$$F'(N^*)=1-(1-\\alpha)c^*g'(c^*).$$\n\n离散局部稳定要求$0<(1-\\alpha)c^*g'(c^*)<2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "马尔萨斯机制的适用条件",
+          "application_md": "模型抓住前工业社会固定土地、人口对收入内生反应的约束。现代持续技术进步、教育、生育选择和人口转型会改变该机制，模型不证明现代人均生活水平必然停滞。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“人口与人均消费”，再依次运用“人口稳态的消费门槛”、“技术冲击与稳态人口”、“人口映射局部稳定”，最后结合“马尔萨斯机制的适用条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA053",
+      "knowledge": [
+        {
+          "title": "失业流入流出递推",
+          "application_md": "$u_{t+1}=u_t+s(1-u_t)-fu_t=s+(1-s-f)u_t$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "自然失业率与过渡路径",
+          "application_md": "改革后稳态$0.02/0.25=0.08$，首期$u_1=0.02+0.75\\times0.10=0.095$，不是立即到8%。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "匹配政策与需求政策",
+          "application_md": "改善信息、培训、匹配服务改变流量参数，可能降低结构性自然率；总需求刺激主要影响周期性岗位与失业，是否永久改变f、s需额外机制。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“失业流入流出递推”，再依次运用“自然失业率与过渡路径”，最后结合“匹配政策与需求政策”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA054",
+      "knowledge": [
+        {
+          "title": "工资制定与价格制定",
+          "application_md": "均衡$1-2u+z=1/(1+\\mu)$，所以$u_n=[1+z-1/(1+\\mu)]/2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "加价与自然失业率",
+          "application_md": "μ降至0.1，$u_n=(1.1-10/11)/2=21/220\\approx0.09545$，就业约90.4545；实际工资$20/11\\approx1.8182$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "生产率与实际工资",
+          "application_md": "A翻倍时两条曲线同比上移，u不变，实际工资翻倍。本题这种比例技术设定不支持“提高劳动生产率必降低自然失业率”；就业人口还依赖参与率、技能匹配等模型外因素。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“工资制定与价格制定”，再依次运用“加价与自然失业率”，最后结合“生产率与实际工资”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA055",
+      "knowledge": [
+        {
+          "title": "劳动力身份与比率",
+          "application_md": "初始劳动力700，失业率100/700=14.2857%，参与率70%，就业人口比60%。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "退出劳动力与岗位增长",
+          "application_md": "实际就业只增20，70名失业人数减少中50人为退出，不能把全部失业率下降视为岗位新增。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "就业压力的联合指标",
+          "application_md": "应同时观察就业人口比、参与率、工时、岗位质量及非自愿退出，避免劳动力分母变化掩盖就业压力。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“劳动力身份与比率”，再依次运用“退出劳动力与岗位增长”，最后结合“就业压力的联合指标”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA056",
+      "knowledge": [
+        {
+          "title": "菲利普斯关系与奥肯关系",
+          "application_md": "每年通胀变化−1，故$u_t-5=2$，失业率7%。奥肯关系给每年x=−4%，两年累计产出损失8个百分比年。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "固定自然率与滞后",
+          "application_md": "若两年后通胀不再下降且自然率固定5%，失业可回5、x回0。若自然率依赖过去失业，第二年的基准和政策后长期就业都会改变；不能继续把所有损失视为相对固定5%的短暂缺口，须同时解自然率运动方程。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "牺牲率的加总口径",
+          "application_md": "简单相加将潜在产出按可比单位或近似固定基准处理，若要求精确金额，应给各年潜在产出并逐年加总。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“菲利普斯关系与奥肯关系”，再依次运用“固定自然率与滞后”，最后结合“牺牲率的加总口径”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA057",
+      "knowledge": [
+        {
+          "title": "暂时滞后的几何衰减",
+          "application_md": "冲击使$h_1=0.2\\times2=0.4$，以后$h_t=0.4(0.8)^{t-1}$，所以$h_2=0.32$，长期回0。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "单位根与永久滞后",
+          "application_md": "系数改为1时，h1=0.4且以后均0.4，长期留下永久提高，累计偏离无界。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "失业运动律的模型范围",
+          "application_md": "这是明确的自编滞后律，体现培训、退出与内部人效应等可能机制；不把0.8或0.2当经验估计，也不与原题H01的二阶平均律混成一个模型。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“暂时滞后的几何衰减”，再依次运用“单位根与永久滞后”，最后结合“失业运动律的模型范围”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA058",
+      "knowledge": [
+        {
+          "title": "边际产出与劳动需求",
+          "application_md": "劳动需求满足$w=10/\\sqrt N$，即$N^d=100/w^2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "固定工资与短边成交",
+          "application_md": "工资固定5时需求4、供给20，按需求就业4，超额劳动供给16。技术变为30后需求$N^d=225/w^2$；固定工资5时就业9、供给20，差11。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "技术冲击与均衡条件",
+          "application_md": "劳动需求提升在本模型中增加就业并提高工资；若参与、供给偏好、产品需求或实际工资制定也改变，需要联立新系统，不能把单一MPN变化当全部总量结论。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“边际产出与劳动需求”，再依次运用“固定工资与短边成交”，最后结合“技术冲击与均衡条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA059",
+      "knowledge": [
+        {
+          "title": "马尔萨斯人口稳态",
+          "application_md": "人均消费$c=A/\\sqrt N$。正稳态人口倍率1要求c=1，故$N^*=A^2$；A=2时N=4，Y=4，每人消费1。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "人口映射稳定与技术冲击",
+          "application_md": "人口映射$F(N)=N g(A/\\sqrt N)$，在稳态$F'=1-0.5c g'(c)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "现代增长的机制边界",
+          "application_md": "技术一次提升被人口扩张吸收，长期人均水平不变。现代持续人均增长还需资本积累、持续技术、教育、人口转变及制度等；模型没有这些机制，不能将其短期逻辑当跨时期普遍规律，也不能忽略土地约束和生育行为的变化。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“马尔萨斯人口稳态”，再依次运用“人口映射稳定与技术冲击”，最后结合“现代增长的机制边界”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA060",
+      "knowledge": [
+        {
+          "title": "流入流出政策与稳态成本",
+          "application_md": "原自然失业率$0.03/(0.03+0.12)=0.2$，失业200人。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "政策效果与单位成本",
+          "application_md": "B新自然率$0.02/0.14=1/7$，失业约142.857、减少约57.143，每减少一名成本$30/(400/7)=0.525$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "就业政策的福利边界",
+          "application_md": "比较还需转轨时长、成本持续性、就业质量、技能分配、岗位流动与福利效应。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“流入流出政策与稳态成本”，再依次运用“政策效果与单位成本”，最后结合“就业政策的福利边界”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA061",
+      "knowledge": [
+        {
+          "title": "可信承诺均衡",
+          "application_md": "可信固定规则使$\\pi=\\pi^e$，因此$u=u^n$，央行只能在$L=(u^n)^2+\\gamma\\pi^2$中选择最优通胀，得$\\pi^C=0,u^C=u^n,L^C=(u^n)^2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "预期给定的偏离诱因",
+          "application_md": "将菲利普斯式代入损失，对实际通胀求导，得\n\n$$-\\alpha[u^n-\\alpha(\\pi-\\pi^e)]+\\gamma\\pi=0.$$\n\n所以$\\pi = \\frac{\\alpha u^n + \\alpha^2 \\pi^e}{\\alpha^2 + \\gamma}$，二阶导$2(\\alpha^2+\\gamma)>0$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "理性预见与通胀偏差",
+          "application_md": "若公众知道央行会按反应函数行事，施加$\\pi=\\pi^e$，得$\\pi^R = \\frac{\\alpha u^n}{\\gamma}$、$u^R=u^n$，损失\n\n$$L^R=(u^n)^2\\left(1+\\frac{\\alpha^2}{\\gamma}\\right)>L^C.$$\n\n公众预见通胀后，央行长期得不到低失业，却留下通胀偏差。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "统一损失标准与制度比较",
+          "application_md": "在本模型中$L^D<L^C<L^R$，但一次欺骗不能作为可重复的长期制度。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“可信承诺均衡”，再依次运用“预期给定的偏离诱因”、“理性预见与通胀偏差”，最后结合“统一损失标准与制度比较”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA062",
+      "knowledge": [
+        {
+          "title": "通胀目标与预期锚定",
+          "application_md": "货币政策通过名义利率、实际利率、信贷、汇率和预期影响总需求，在存在短期名义摩擦时影响产出与通胀。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "有效下限与补偿不足",
+          "application_md": "当政策主要把未来通胀拉回目标、对过去低于目标的缺口不承诺补偿时，接连低通胀可能使平均通胀长期偏低。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "平均目标的跨期承诺",
+          "application_md": "平均目标允许或承诺在一段低通胀之后，未来一段时间适度高于长期目标，以补偿先前偏差。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "预期实际利率渠道",
+          "application_md": "近似费雪关系$r_t=i_t-E_t\\pi_{t+1}$。若名义利率受下限约束，可信的未来补偿使预期通胀从1%升至2%，在当前名义利率不变下，预期实际利率降低约1个百分点，鼓励提前消费和投资；较长时间维持宽松的预期还可影响长期利率。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "平均窗口与可验证性",
+          "application_md": "平均窗口不清时，公众无法确认从何时算、过去低通胀补多少、未来多久高于目标、何时退出。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“通胀目标与预期锚定”，再依次运用“有效下限与补偿不足”、“平均目标的跨期承诺”、“预期实际利率渠道”，最后结合“平均窗口与可验证性”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA063",
+      "knowledge": [
+        {
+          "title": "泰勒规则与实际利率",
+          "application_md": "按百分点单位，$i=2+2+1.5\\times2-0.5=6.5\\%$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "泰勒原则的真实紧缩",
+          "application_md": "π再增1点，名义利率增1.5点，预期同增1点，因此实际利率增0.5点，体现此简化环境下对通胀的真实紧缩反应。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "通胀反应系数口径",
+          "application_md": "把1.5拆成1+0.5，等价当前通胀写法中$\\theta_\\pi=0.5$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“泰勒规则与实际利率”，再依次运用“泰勒原则的真实紧缩”，最后结合“通胀反应系数口径”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA064",
+      "knowledge": [
+        {
+          "title": "相机政策与理性预期",
+          "application_md": "代入目标得$(\\pi-\\pi^e-v-1)^2+\\pi^2$，一阶条件给$\\pi=(1+\\pi^e+v)/2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "冲击状态与期望损失",
+          "application_md": "v=2时π=2、x=−1、L=8；v=−2时π=0、x=1、L=0，期望损失4。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "通胀偏差和稳定收益",
+          "application_md": "相机政策留下平均通胀偏差1，却部分缓冲供给冲击，题内总期望损失反而较小。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“相机政策与理性预期”，再依次运用“冲击状态与期望损失”，最后结合“通胀偏差和稳定收益”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA065",
+      "knowledge": [
+        {
+          "title": "保守央行的反应函数",
+          "application_md": "央行一阶条件$-(6-\\pi+\\pi^e)+\\gamma\\pi=0$，即$\\pi=(6+\\pi^e)/(1+\\gamma)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "固定社会权重的福利比较",
+          "application_md": "γ=1时π=6、u=6，社会损失72；γ=4时π=1.5、u=6，社会损失38.25。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "保守程度与冲击稳定",
+          "application_md": "但冲击存在时，过度保守可能削弱对产出或就业冲击的适当反应；社会评价应结合冲击分布、信息与承诺技术。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“保守央行的反应函数”，再依次运用“固定社会权重的福利比较”，最后结合“保守程度与冲击稳定”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA066",
+      "knowledge": [
+        {
+          "title": "央行购债资产负债表",
+          "application_md": "央行资产长期国债+100，负债银行准备金+100。银行资产国债−100、准备金+100，资产总额不变，负债和权益在此交易中不变。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "政府合并预算与期限转换",
+          "application_md": "若合并政府与央行，操作主要将私人持有的较长期政府债权替换为准备金等短期政府负债，交易按公平价格不会凭空创造私人净金融财富100。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "资产再平衡与信贷传导",
+          "application_md": "期限供给减少可能压低期限溢价，卖方再平衡可推高其他资产价格，银行资产约束改善可能支持贷款；但准备金持有激励、资本约束、贷款需求和风险均可能阻断传导。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“央行购债资产负债表”，再依次运用“政府合并预算与期限转换”，最后结合“资产再平衡与信贷传导”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA067",
+      "knowledge": [
+        {
+          "title": "缩表的发债付款链",
+          "application_md": "公众先用存款买新债50，公众存款−50、银行准备金−50，财政央行账户+50；国债到期后央行资产旧债−50、财政账户−50。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "准备金制度与市场利率",
+          "application_md": "若准备金稀缺且央行不对冲，边际准备金减少可能抬高市场短期利率；若准备金仍远超需求、由付息准备金利率锚定，数量减少未必立即改变政策利率。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "缩表紧缩程度的条件",
+          "application_md": "因此缩表的真实紧缩程度取决于准备金需求、利率工具、国债供给、银行资本及贷款需求。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“缩表的发债付款链”，再依次运用“准备金制度与市场利率”，最后结合“缩表紧缩程度的条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA068",
+      "knowledge": [
+        {
+          "title": "基础货币与货币乘数",
+          "application_md": "有$B=(c+r+e)D$，$M=(1+c)D$，所以乘数$(1+c)/(c+r+e)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "现金偏好冲击",
+          "application_md": "危机后分母0.7、分子1.4，乘数2，B=100时M=200。维持M=300需B=150，即基础货币增加50%。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "比例核算与银行行为边界",
+          "application_md": "以上是在比例行为和给定准备金制度下的会计比较，不是银行“先有准备金才能逐轮固定放贷”的普遍因果机制。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“基础货币与货币乘数”，再依次运用“现金偏好冲击”，最后结合“比例核算与银行行为边界”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA069",
+      "knowledge": [
+        {
+          "title": "识别实施与作用时滞",
+          "application_md": "时间线从t=0冲击发生起，t=0.5年才确认，t=1年审批完成，t=1.5年才实施，宏观作用还可能更晚。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "自动稳定器与透明触发",
+          "application_md": "自动稳定器随税收、福利资格等现行制度响应，减少新审批时滞；预先说明触发条件、退出条件与不确定范围可帮助公众预期。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "规则和相机政策的条件",
+          "application_md": "固定规则能减少随意性与时间不一致，但数据修订、结构变化和极端冲击会使过度机械的规则失配。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“识别实施与作用时滞”，再依次运用“自动稳定器与透明触发”，最后结合“规则和相机政策的条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA070",
+      "knowledge": [
+        {
+          "title": "自然利率与有效下限",
+          "application_md": "稳产出要求r=rn。冲击前i=1+1=2%；冲击后需i=−2+1=−1%，违反i≥0。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "通胀预期与名义工具配合",
+          "application_md": "若预期通胀确实提高到2.5%，要r=−2%只需i=0.5%，满足下限；因此在该模型中可消除缺口。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "预期可信度与传导条件",
+          "application_md": "效果以承诺可信、公众预期真实响应且金融传导有效为前提。自然利率不可直接观察，估计误差、信用利差和供给冲击会影响政策选择，不能把提高宣布目标直接等同预期已经提高。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“自然利率与有效下限”，再依次运用“通胀预期与名义工具配合”，最后结合“预期可信度与传导条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA071",
+      "knowledge": [
+        {
+          "title": "政府债务存量与赤字",
+          "application_md": "期末债务即下期期初债务，故\n\n$$B_{t+1}=(1+r_t)B_t+G_t-\\tau_tY_t.$$\n\n等价写成$B_{t+1}-B_t=r_tB_t+G_t-\\tau_tY_t$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "李嘉图等价条件",
+          "application_md": "给定政府支出路径，今天减税发债意味着未来税收的现值增加。如果家庭有理性前瞻、能借贷、税为一次总付、政府与家庭适用相同相关融资条件，并能通过无限寿命或有效代际利他内部化未来税负，那么减税不改变家庭终身净财富。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "等价失效机制",
+          "application_md": "流动性受限家庭得到减税后可增加消费；有限寿命且无充分代际联系时未来税负可能落给他人；扭曲税改变劳动投资激励；不确定性、不同借贷条件及非理性预期也可能使等价失效。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "固定债务额与初级盈余",
+          "application_md": "令$B_{t+1}=B_t=B^*$，且$Y,G,\\tau,r$不变，预算得$rB^*=\\tau Y-G$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "债务率运动",
+          "application_md": "若$Y_{t+1}=(1+g_Y)Y_t$，记$b_t = \\frac{B_t}{Y_t}$和$d_t = \\frac{G_t - \\tau_t Y_t}{Y_t}$，则\n\n$$b_{t+1}=\\frac{(1+r_t)b_t+d_t}{1+g_Y}.$$\n\n常数债务率满足$(r-g_Y)b^*=-d$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“政府债务存量与赤字”，再依次运用“李嘉图等价条件”、“等价失效机制”、“固定债务额与初级盈余”，最后结合“债务率运动”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA072",
+      "knowledge": [
+        {
+          "title": "精确离散债务率",
+          "application_md": "定义$b_t=B_t/Y_t$，递推为$b_{t+1}=[(1+r)b_t-p]/(1+g)$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "固定点与动态不稳定",
+          "application_md": "稳态满足$(r-g)b^*=p$，故b*=1。递推系数1.05/1.02约1.02941大于1，形式固定点不具稳定性；从0.8开始会继续远离1向下，不能说“有稳态所以会自动回归”。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "稳定债务率的初级盈余",
+          "application_md": "若维持b=0.8，初级盈余率需$p=(r-g)b=0.024$，即2.4%。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“精确离散债务率”，再依次运用“固定点与动态不稳定”，最后结合“稳定债务率的初级盈余”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA073",
+      "knowledge": [
+        {
+          "title": "财政反馈与偏离递推",
+          "application_md": "在b=1时p=0.02，下一期为(1.04−0.02)/1.02=1。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "离散稳定区间",
+          "application_md": "离散局部稳定要求$|1.04-\\phi|<1.02$，故$0.02<\\phi<2.06$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "财政实施与增长反馈",
+          "application_md": "数学上规则能要求很大的增税或削支，但政治、税基、乘数和偿债能力可能限制实现。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“财政反馈与偏离递推”，再依次运用“离散稳定区间”，最后结合“财政实施与增长反馈”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA074",
+      "knowledge": [
+        {
+          "title": "政府家庭现值预算",
+          "application_md": "政府以借款2融资，第二期偿还R×2=2.4。家庭现值预算$c_1+c_2/1.2=y_1-T_1+(y_2-T_2)/1.2$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "私人储蓄与国民储蓄",
+          "application_md": "若原税收为0作消费数值展示，现值财富20，最优c1=10、c2=12；减税后可支配收入第一期12，仍消费10，储蓄增加2，第二期储蓄本息2.4恰支付新增税。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "李嘉图等价失效条件",
+          "application_md": "借款约束家庭可能把减税用于当期消费；有限视野或不关心后代会低估未来税；扭曲性税收改变劳动投资激励；不确定税负与异质代际分配改变资源或风险。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“政府家庭现值预算”，再依次运用“私人储蓄与国民储蓄”，最后结合“李嘉图等价失效条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA075",
+      "knowledge": [
+        {
+          "title": "税收进口与乘数分母",
+          "application_md": "均衡$Y=100+0.8(1-t)Y-0.1Y$，分母$D=1-0.8(1-t)+0.1$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "自动稳定器的冲击缓冲",
+          "application_md": "t=0时D=0.3，乘数10/3，同一自主冲击使Y降200/3约66.6667。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "短期稳定与长期税收激励",
+          "application_md": "稳定器还伴随财政收入波动、赤字与分配安排。提高法定税率可能改变长期激励和税基，题内固定行为参数的短期稳定结论不等于无成本最优税制。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“税收进口与乘数分母”，再依次运用“自动稳定器的冲击缓冲”，最后结合“短期稳定与长期税收激励”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA076",
+      "knowledge": [
+        {
+          "title": "固定利率闭合",
+          "application_md": "初始$0.4Y=40-8=32$，Y=80，m=40−10=30。若固定i=2且t=0.2，则$0.36Y=32$，Y=800/9约88.8889，央行须供给$m=0.5Y-10=310/9$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "固定货币闭合",
+          "application_md": "若m固定30，LM给$i=0.1Y-6$，代入新产品市场得$0.36Y=64-0.4Y$，故Y=1600/19约84.2105、i=46/19约2.42105。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "税率反馈与投资挤出",
+          "application_md": "税率改变边际可支配收入，消费反馈系数从0.6变0.64，所以是分母变化，不能简单当作一次自主支出增加。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“固定利率闭合”，再依次运用“固定货币闭合”，最后结合“税率反馈与投资挤出”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA077",
+      "knowledge": [
+        {
+          "title": "国民储蓄与可贷资金",
+          "application_md": "初始C=740，国民储蓄$S=Y-C-G=60$，联立60=200−20r得r=7，I=60。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "平衡预算财政挤出",
+          "application_md": "若G和T均增50，C=100+0.8×750=700，S=1000−700−250=50，r=7.5、I=50。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "充分就业与完全挤出条件",
+          "application_md": "完全挤出来自固定充分就业产出与封闭资金出清。短期价格黏性和闲置资源下，Y可响应需求；开放资本流动、货币配合也改变利率与挤出，不能把两种环境的结论混用。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“国民储蓄与可贷资金”，再依次运用“平衡预算财政挤出”，最后结合“充分就业与完全挤出条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA078",
+      "knowledge": [
+        {
+          "title": "通胀与实际债务再分配",
+          "application_md": "固定名义债务的实际价值由100降至80，政府实际负担少20，债权人实际资产也少20。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "预期通胀与风险溢价",
+          "application_md": "若通胀被预期，发行时名义利率可能包含补偿；反复意外通胀还损害信用、提高未来风险溢价并扰乱分配。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "重定价债务与指数债",
+          "application_md": "浮动利率与短期滚动债较快重定价，未来利息成本上升可抵消部分稀释；指数债本金随物价调整，真实价值按条款保护，题内80不再适用。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“通胀与实际债务再分配”，再依次运用“预期通胀与风险溢价”，最后结合“重定价债务与指数债”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA079",
+      "knowledge": [
+        {
+          "title": "政府偿债路径与现值核验",
+          "application_md": "第1期付息后减盈余，$B_1=1.1\\times100-30=80$；第2期清偿需$S_2=1.1\\times80=88$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "盈余时点与利息成本",
+          "application_md": "若S1=20，则B1=90，S2=99，比原来高11，反映少10的首期盈余需再承担一期10%利息。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "终端债务与无庞氏条件",
+          "application_md": "有限期限与终端零债务直接给现值预算。无限期时还要限制折现债务的终端项，排除仅靠滚动融资永远不形成偿债资源的路径。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“政府偿债路径与现值核验”，再依次运用“盈余时点与利息成本”，最后结合“终端债务与无庞氏条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA080",
+      "knowledge": [
+        {
+          "title": "减税的需求供给联立",
+          "application_md": "变化式为$\\Delta x=2-\\Delta P$、$\\Delta P=0.5\\Delta x-0.5$，所以$1.5\\Delta x=2.5$，产出缺口增5/3，价格增1/3。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "忽略供给渠道的偏差",
+          "application_md": "若忽略供给改善，把a变化设0，则产出增4/3、价格增2/3，低估产出反应并高估通胀。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "财政融资与供给弹性",
+          "application_md": "减税可增加税后劳动投资回报，但是否显著改变行为取决于税基与弹性；收入减少需由债务、削支或其他税补足，可能抵消部分效果；供给反应常慢于直接需求；不同群体税负和公共服务变化也影响福利。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“减税的需求供给联立”，再依次运用“忽略供给渠道的偏差”，最后结合“财政融资与供给弹性”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA081",
+      "knowledge": [
+        {
+          "title": "浮动汇率下的财政挤出",
+          "application_md": "货币市场Y=200；产品市场$0.2Y=140-20e$，故e=5、NX=0。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "货币扩张与实际贬值",
+          "application_md": "若m升120、G仍20，Y=240，$48=140-20e$，e=4.6、NX=8。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "蒙代尔弗莱明模型条件",
+          "application_md": "结果依赖完全资本流动、浮动汇率、固定物价及无风险溢价变化。长期价格调整、不完全流动或政策利率下限会改变效果，不是一般财政绝对无效命题。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“浮动汇率下的财政挤出”，再依次运用“货币扩张与实际贬值”，最后结合“蒙代尔弗莱明模型条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA082",
+      "knowledge": [
+        {
+          "title": "固定汇率下的财政扩张",
+          "application_md": "固定e=5使NX=0，产品市场$0.2Y=I+G=40$，Y=200、m=100。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "外汇干预与货币抵消",
+          "application_md": "若独立扩m至120、商品需求未变，给定e仍只支持Y=200、货币需求100，多余货币引发利率下降与资本流出、贬值压力。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "资本流动与货币自主性",
+          "application_md": "完全资本流动下固定汇率将国内利率与外部利率紧密联系，独立货币数量目标与它冲突。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“固定汇率下的财政扩张”，再依次运用“外汇干预与货币抵消”，最后结合“资本流动与货币自主性”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA083",
+      "knowledge": [
+        {
+          "title": "出口冲击与固定汇率乘数",
+          "application_md": "初始$Y=0.75Y+50+30$，所以Y=320；出口减少10后Y=280，下降40。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "食品供给与分配效应",
+          "application_md": "这只是出口需求渠道。限制出口若增加国内食品供给，可降低部分消费价格、改变实际工资和生产激励；同时生产者收入下降、消费者收益、财政或走私成本变化。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "政策评价的模型边界",
+          "application_md": "模型把价格固定、进口与利率反应简化，属于为使训练可算而新增的假设；原历史题的政策评价仍需交代制度和行业背景。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“出口冲击与固定汇率乘数”，再依次运用“食品供给与分配效应”，最后结合“政策评价的模型边界”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA084",
+      "knowledge": [
+        {
+          "title": "风险溢价与汇率平价",
+          "application_md": "由$1+i-i^*-\\rho=E^e/E$，初始分母1.01，所以E=1000/101约9.90099。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "汇率预期的复合冲击",
+          "application_md": "若预期E同时降9.5，新分母仍1，E=9.5，反而比初始更低，表示本币升值。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "正汇率与收益条件",
+          "application_md": "近似式忽略复利和其他资产属性；若使用精确收益条件，应先明确风险补偿形式，不把简单加法溢价当所有资产定价的恒等式。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“风险溢价与汇率平价”，再依次运用“汇率预期的复合冲击”，最后结合“正汇率与收益条件”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA085",
+      "knowledge": [
+        {
+          "title": "BP与IS联立",
+          "application_md": "固定e=2时NX=80−0.1Y，BP为$80-0.1Y+20(i-5)=0$，故$i=1+0.005Y$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "国际收支与货币需求",
+          "application_md": "货币需求$m=1800/11-290/11=1510/11\\approx137.2727$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "资本流动与冲销约束",
+          "application_md": "资本流动系数κ一般使BP斜率0.1/κ；κ越大越平，完全流动极限接近世界利率。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“BP与IS联立”，再依次运用“国际收支与货币需求”，最后结合“资本流动与冲销约束”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA086",
+      "knowledge": [
+        {
+          "title": "储蓄投资与净出口",
+          "application_md": "初始资本净流出S−I=30，与NX相等；30=60−10e，e=3。S降至60、I仍50时净流出及NX=10，e=5，实际升值挤压净出口。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "世界利率的投资渠道",
+          "application_md": "若世界利率上升令I降至40，净流出=20，NX=20，e=4。两冲击相对初始仍使净出口少10、e升1，但投资下降部分抵消储蓄下降的贸易效应。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "长期与短期开放模型",
+          "application_md": "本模型固定充分就业Y，财政变化通过储蓄、资本流与汇率调整；短期黏性价格模型中Y也可变。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“储蓄投资与净出口”，再依次运用“世界利率的投资渠道”，最后结合“长期与短期开放模型”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA087",
+      "knowledge": [
+        {
+          "title": "贸易计价与短期余额",
+          "application_md": "初始出口收入10、进口支出10，贸易余额0。短期出口本币合同收入仍10，进口成本1.2×10=12，余额−2。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "数量调整与J曲线",
+          "application_md": "短期价格换算先发生，需求数量与生产合同调整较慢；长期出口扩张、进口缩减可改善余额。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "汇率传递与需求弹性",
+          "application_md": "是否出现J曲线还取决于贸易计价货币、价格传递、需求弹性、产能和供应链，以及初始余额。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“贸易计价与短期余额”，再依次运用“数量调整与J曲线”，最后结合“汇率传递与需求弹性”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA088",
+      "knowledge": [
+        {
+          "title": "实际汇率与相对价格",
+          "application_md": "初始q=7，新q=$7.7\\times102/110=7.14$，倍率$1.1\\times1.02/1.1=1.02$，实际贬值2%。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "竞争力与外币债务",
+          "application_md": "较高生产率和产品质量可提高竞争力而不依赖汇率；进口中间品涨价会侵蚀出口成本优势；外币债务的本币负担上升可使企业削减投资；订单、品牌和供应链使数量调整有时滞。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "汇率定义的方向",
+          "application_md": "q定义若改为其倒数，方向语义反转；所有结论先与题设定义对齐。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“实际汇率与相对价格”，再依次运用“竞争力与外币债务”，最后结合“汇率定义的方向”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA089",
+      "knowledge": [
+        {
+          "title": "预期贬值与利差补偿",
+          "application_md": "若仍按当前固定汇率持有本币资产，近似条件要求$i-i^*=10\\%+2\\%=12$个百分点。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "利率防卫与储备约束",
+          "application_md": "提高利率可增加本币资产收益、减缓流出，却压低国内利率敏感支出并增加债务负担；卖外汇买本币可支持汇率但消耗储备，若不冲销还收缩货币。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "固定汇率危机反馈",
+          "application_md": "基本面恶化会提高弃守概率；集中流出又消耗储备、推高利率成本，可能进一步提高弃守激励，形成反馈。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“预期贬值与利差补偿”，再依次运用“利率防卫与储备约束”，最后结合“固定汇率危机反馈”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA090",
+      "knowledge": [
+        {
+          "title": "封闭经济财政挤出",
+          "application_md": "封闭经济固定实际货币时，财政扩张提高产品需求，Y和i通常上升，i提高挤出部分私人投资；没有汇率和净出口渠道。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "汇率制度与财政效果",
+          "application_md": "资本完全流动、浮动汇率、物价固定的标准小国模型中，利率被世界市场约束，财政刺激带来升值与净出口下降，完全挤出可使Y不变。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "不完全资本流动",
+          "application_md": "资本不完全流动时，利率可偏离世界水平，资本流、汇率、货币干预共同反应，效果依IS、LM、BP斜率而定。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“封闭经济财政挤出”，再依次运用“汇率制度与财政效果”，最后结合“不完全资本流动”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA091",
+      "knowledge": [
+        {
+          "title": "支出分项与IS证据",
+          "application_md": "实际GNP从203.6降至141.5，消费从139.6降至112.8，投资从40.4降至5.3；投资降幅约86.9%，明显大于消费约19.2%的降幅。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "名义货币与实际余额",
+          "application_md": "货币供给26.6降至19.9，降幅约25.2%，支持名义货币紧缩的事实。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "预期通缩与实际利率",
+          "application_md": "费雪关系近似为$r=i-E\\pi$。若预期物价继续下降，$E\\pi<0$，即便名义利率低，实际借贷成本仍可能高，消费投资被抑制，使IS进一步左移。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "债务通缩与信用传导",
+          "application_md": "通缩提高既定名义债务的实际负担，削弱债务人净值；若债务人支出下降大于债权人支出上升，总需求减弱。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "金融机制与图形表达",
+          "application_md": "可在IS LM图上画“债务通缩、实际利率或信用渠道导致IS左移”，并说明货币侧与需求侧可能联动。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“支出分项与IS证据”，再依次运用“名义货币与实际余额”、“预期通缩与实际利率”、“债务通缩与信用传导”，最后结合“金融机制与图形表达”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA092",
+      "knowledge": [
+        {
+          "title": "黏性价格的定价时序",
+          "application_md": "部分企业提前根据预期总体价格与预期需求定价，短期不能无成本随时调整。总需求使实际价格高于预期时，这些企业的既定相对价格偏低，需求增加，于是扩大产量。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "黏性工资与实际工资",
+          "application_md": "名义工资提前以预期物价为依据订立，短期暂时固定。实际物价高于预期时，实际工资$\\frac{W}{P}$低于事先希望达到的水平；在企业沿劳动需求曲线调整、劳动供给合同可支持该就业变化等条件下，雇佣与产出增加。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "相对价格信息误判",
+          "application_md": "生产者较快观察自己的产品价格，却不能即时辨认总体价格变动。当总体价格意外上升，部分生产者误将自身涨价理解为相对价格提高，从而增加供给。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "短期AS共同约化式",
+          "application_md": "在相应条件下，三者都可表达为\n\n$$Y=\\bar Y+\\lambda(P-P^e),\\qquad \\lambda>0.$$\n\n即实际价格高于预期时产出暂时高于自然水平，等价为$P = P^e + \\frac{Y - \\bar{Y}}{\\lambda}$。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "名义摩擦与长期调整",
+          "application_md": "黏性价格的摩擦在商品定价，黏性工资的摩擦在工资合同，不完全信息的摩擦在信息识别。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“黏性价格的定价时序”，再依次运用“黏性工资与实际工资”、“相对价格信息误判”、“短期AS共同约化式”，最后结合“名义摩擦与长期调整”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA093",
+      "knowledge": [
+        {
+          "title": "货币紧缩与投入成本",
+          "application_md": "第一，紧缩提高融资成本或压低信用和投资需求，可减少上游产品需求，降低PPI压力。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "同比增速与价格水平",
+          "application_md": "同比从8%到−2%是同一指数相对一年前的增速变化，不等于从政策日到当前价格累计下降10%；还应检查基期与环比路径。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "政策归因与对照证据",
+          "application_md": "识别证据可包括政策意外成分与融资利差、信贷量的时序；行业对利率和进口成本暴露的差异；控制国际价格与外需后的比较；政策未作用的对照组和数据修订。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“货币紧缩与投入成本”，再依次运用“同比增速与价格水平”，最后结合“政策归因与对照证据”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA094",
+      "knowledge": [
+        {
+          "title": "真实经济周期机制",
+          "application_md": "RBC以真实生产率、资源或偏好冲击为主要源头，通常采用竞争市场和灵活价格；生产率提高改变真实回报，引起劳动、消费和储蓄的跨期配置，产出波动可由均衡调整产生。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "不完全信息货币周期",
+          "application_md": "不完全信息货币周期强调主体未即时分清个别与总体价格变动。意外货币冲击产生相对价格误判，暂时影响劳动和供给；可预见政策被纳入预期后这一特定渠道减弱，信息逐步澄清后效应消散。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "周期理论的证据识别",
+          "application_md": "可比较意外货币冲击之后的相对价格认知与真实活动响应，或生产率冲击与工时的条件反应；但测量误差、政策内生性和多摩擦并存会限制识别。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“真实经济周期机制”，再依次运用“不完全信息货币周期”，最后结合“周期理论的证据识别”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA095",
+      "knowledge": [
+        {
+          "title": "跨期优化与灵活价格",
+          "application_md": "两者常使用跨期优化、均衡与明确的预期形成，分歧在价格工资调整、竞争结构、信息和市场完备性等关键假设。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "名义黏性与稳定政策",
+          "application_md": "新凯恩斯模型以价格、工资调整成本或分期合同等使名义需求变化传到真实利率、销售与就业；需求不足可形成产出缺口，适当政策有稳定空间。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "微观证据与政策识别",
+          "application_md": "区分证据包括微观价格变动频率、工资合同、可识别政策意外对产出和通胀的动态响应、企业定价及信用约束异质性。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“跨期优化与灵活价格”，再依次运用“名义黏性与稳定政策”，最后结合“微观证据与政策识别”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA096",
+      "knowledge": [
+        {
+          "title": "通缩的实际债务与利率",
+          "application_md": "真实债务由100/2=50升至100/1.6=62.5，增12.5；事前实际利率近似3%−(−4%)=7%。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "投资响应与总量闭合",
+          "application_md": "按题给投资响应，投资减少0.5×12.5=6.25。若没有产品市场消费反馈、财政货币反应和供给曲线，不能唯一求总产出降幅。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "债务通缩金融反馈",
+          "application_md": "借款者资产净值下降、违约损失上升可削弱银行资本与风险承担，信用利差提高、支出下降；需求收缩又压物价，进一步提高真实债务，形成放大机制。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“通缩的实际债务与利率”，再依次运用“投资响应与总量闭合”，最后结合“债务通缩金融反馈”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA097",
+      "knowledge": [
+        {
+          "title": "名义GDP与实际GDP",
+          "application_md": "基期名义GDP为20+40=60。本期名义GDP为36+45=81；基价实际GDP为24+36=60，因此实际增长0，名义增长35%。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "平减指数与拉氏指数",
+          "application_md": "拉氏指数用基期篮子，现价成本30+50=80，基价60，指数为400/3约133.333。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "进口与GDP核算边界",
+          "application_md": "进口消费是居民购买范围的一部分，可进入居民消费价格指标；本国产出GDP平减指数不直接把进口成品作为国内产出计价。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“名义GDP与实际GDP”，再依次运用“平减指数与拉氏指数”，最后结合“进口与GDP核算边界”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA098",
+      "knowledge": [
+        {
+          "title": "支出核算与增长贡献",
+          "application_md": "初期600+200+180+20=1000；后期585+160+190+15=950。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "下降贡献的占比",
+          "application_md": "投资是最大直接下降项，下降40占GDP降幅50的80%；因政府支出抵消一部分，有的项目贡献占比可超过总降幅，不代表数学错误。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "核算归因与结构因果",
+          "application_md": "投资也可能因消费和出口先下降、金融约束或共同预期冲击而内生下降；库存投资还可反映非意愿存货调整。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“支出核算与增长贡献”，再依次运用“下降贡献的占比”，最后结合“核算归因与结构因果”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA099",
+      "knowledge": [
+        {
+          "title": "需求支持与真实融资成本",
+          "application_md": "需求层面可针对高边际消费群体、公共服务与有效投资提供支持，缓解收入预期与订单不足；应说明融资来源、项目回报和挤出，监测实际消费与就业而非仅看拨款。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "供给瓶颈与长期能力",
+          "application_md": "供给层面要区分暂时物流、能源瓶颈与长期能力不足；改善保供与竞争、推动合理资源流动可缓解投入成本，但不能把需求压缩当所有供给问题的解法。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "信用修复与政策退出",
+          "application_md": "金融层面可透明识别损失、重组问题资产、维持有效信用渠道并配合资本审慎约束；不能以无限信用掩盖偿债能力。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“需求支持与真实融资成本”，再依次运用“供给瓶颈与长期能力”，最后结合“信用修复与政策退出”完成本题，并核对题设条件。"
+    },
+    {
+      "id": "MA100",
+      "knowledge": [
+        {
+          "title": "索洛与AK增长反例",
+          "application_md": "第一条不成立。递减报酬、外生技术的索洛模型提高s提升稳态资本和水平，长期人均增长仍由技术决定；AK等非递减机制可使s影响持续增长，须说明生产和积累结构。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "实际利率与信用利差",
+          "application_md": "第二条不成立。事前真实利率$i-\\pi^e$可因预期通缩而上升，借款利率还含信用利差；政策利率低不保证每类借款者融资条件改善。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "固定点稳定与债务通缩",
+          "application_md": "第三条不成立。如$b_{t+1}=ab_t-c$，固定点存在但若|a|>1偏离发散；还须检查财政反馈、增长及偿债可行性。第四条不成立。实际余额可能因物价更快下降而上升，同时预期通缩、真实债务与银行信用渠道压低支出；LM数量渠道不是全部金融机制。",
+          "source_field": "answer_md",
+          "card_ids": []
+        },
+        {
+          "title": "变量时序与条件推论",
+          "application_md": "统一原则是明确变量定义、时序、预期、约束与政策目标，再由完整方程推出条件结论。",
+          "source_field": "answer_md",
+          "card_ids": []
+        }
+      ],
+      "recap_md": "编者串联：先处理“索洛与AK增长反例”，再依次运用“实际利率与信用利差”、“固定点稳定与债务通缩”，最后结合“变量时序与条件推论”完成本题，并核对题设条件。"
+    }
+  ]
+}

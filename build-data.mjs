@@ -4,6 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import katex from 'katex';
 import {Marked} from 'marked';
+import {prepareSolution} from './build-solutions.mjs';
 
 const HERE=path.dirname(fileURLToPath(import.meta.url));
 const ROOT=path.resolve(HERE,'../..');
@@ -21,24 +22,32 @@ const marked=new Marked({gfm:true,breaks:true,hooks:{emStrongMask(src){return sr
  {name:'displayMath',level:'block',start(src){return src.indexOf('$$');},tokenizer(src){const m=/^\$\$([\s\S]+?)\$\$(?:\n|$)/.exec(src);if(m)return{type:'displayMath',raw:m[0],tex:m[1]};},renderer(token){return `<div class="math-block">${math(token.tex,true)}</div>`;}},
  {name:'inlineMath',level:'inline',start(src){return src.indexOf('$');},tokenizer(src){const m=/^\$([^$]+?)\$/.exec(src);if(m)return{type:'inlineMath',raw:m[0],tex:m[1]};},renderer(token){return math(token.tex,false);}}
 ]});
-const subjects=[];const sourceHashes={};
+const subjects=[];const sourceHashes={};let solutionMathCount=0;
+const recallRaw=await readFile(path.join(SOURCE,'recall.json'));
+const recallSource=JSON.parse(recallRaw);
 for(const [key,name] of [['micro','微观'],['macro','宏观'],['political','政经']]){
  const file=path.join(SOURCE,key+'.json');const raw=await readFile(file);const bank=JSON.parse(raw);
  sourceHashes[key]=createHash('sha256').update(raw).digest('hex');
+ const knowledgeRaw=await readFile(path.join(SOURCE,'knowledge-'+key+'.json'));
+ const knowledgeBank=JSON.parse(knowledgeRaw),knowledgeById=new Map(knowledgeBank.questions.map(q=>[q.id,q]));
+ if(knowledgeBank.subject!==key||knowledgeById.size!==bank.questions.length||knowledgeBank.questions.length!==bank.questions.length)throw Error('Invalid knowledge bank: '+key);
+ sourceHashes['knowledge_'+key]=createHash('sha256').update(knowledgeRaw).digest('hex');
  if(bank.questions.length!==100||bank.groups.length!==10)throw new Error('Expected 100 questions / 10 groups: '+key);
  const questions=bank.questions.map(q=>{
   const result={...q};
   for(const field of ['prompt','outline','answer','pitfalls']){current=q.id+' '+field;result[field+'_html']=marked.parse(q[field+'_md']);}
+  const guide=prepareSolution(q,key,recallSource.cards,knowledgeById.get(q.id)),before=mathCount;
+  result.solution={...guide,steps:guide.steps.map(step=>({...step,body_html:step.lines_md.map(line=>marked.parse(line)).join('')})),knowledge:guide.knowledge.map(item=>({...item,title_html:marked.parseInline(item.title),explanation_html:marked.parse(item.explanation)})),recap_html:marked.parse(guide.recap_md)};
+  solutionMathCount+=mathCount-before;
   return result;
  });
  subjects.push({key,name,groups:bank.groups,questions});
 }
 const plan=JSON.parse(await readFile(path.join(SOURCE,'plan.json'),'utf8'));
-const recallRaw=await readFile(path.join(SOURCE,'recall.json'));
-const recallSource=JSON.parse(recallRaw),questionMathCount=mathCount;
+const questionMathCount=mathCount-solutionMathCount;
 sourceHashes.recall=createHash('sha256').update(recallRaw).digest('hex');
 const recall={...recallSource,cards:recallSource.cards.map(card=>{current='recall '+card.id;return{...card,body_html:marked.parse(card.body_md)};})};
-const recallMathCount=mathCount-questionMathCount;
+const recallMathCount=mathCount-questionMathCount-solutionMathCount;
 const ids=new Set(subjects.flatMap(s=>s.questions.map(q=>q.id)));
 if(ids.size!==300||plan.days.length!==50)throw new Error('Invalid question count or plan');
 for(const d of plan.days)for(const s of subjects){const refs=d[s.key+'_refs'];if(refs.length!==10||new Set(refs).size!==10||refs.some(id=>!ids.has(id)))throw new Error('Invalid plan day '+d.day);}
@@ -63,6 +72,6 @@ await material('五十天复习计划','三科每天各10题','打印版与Excel
  ['综合资料/01_复习手册/人大802五十天复习计划表.xlsx','50-day-plan.xlsx','下载Excel']]);
 const data={version:1,title:'802练习室',subjects,plan,materials,recall};
 await writeFile(path.join(DIST,'data.js'),'window.STUDY_DATA='+JSON.stringify(data).replace(/</g,'\\u003c')+';\n','utf8');
-const manifest={questions:300,groups:30,days:50,mathCount:questionMathCount,recallCards:recall.cards.length,recallMathCount,mathErrors:errors,sourceHashes,materials:materials.length,builtAt:new Date().toISOString()};
+const manifest={questions:300,groups:30,days:50,mathCount:questionMathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,mathErrors:errors,sourceHashes,materials:materials.length,builtAt:new Date().toISOString()};
 await writeFile(path.join(HERE,'build-manifest.json'),JSON.stringify(manifest,null,2));
 console.log(JSON.stringify(manifest));

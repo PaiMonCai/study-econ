@@ -1,13 +1,13 @@
 {
   "name": "ruc-802-practice",
-  "version": "1.3.0",
-  "description": "人大802三科刷题、50天计划、草稿和错题复做",
+  "version": "1.4.0",
+  "description": "人大802三科刷题、拍照作答、逐步解答、知识复盘与背诵",
   "private": true,
   "scripts": {
     "build": "node build-data.mjs",
-    "check": "node --check dist/app.js && node --check dist/learning.js && node verify-site.mjs",
+    "check": "node --check dist/app.js && node --check dist/learning.js && node --check dist/photos.js && node verify-site.mjs",
     "start": "node serve.mjs",
-    "test": "node --test test-server.mjs test-learning.mjs",
+    "test": "node --test test-server.mjs test-learning.mjs test-solutions.mjs",
     "package": "node package-release.mjs",
     "test:ui": "playwright test",
     "import:handbooks": "node import-handbooks.mjs"

@@ -64,17 +64,17 @@ sudo systemctl status ruc802
 
 可以把`deploy/nginx.conf.example`中的`location`放进已有的HTTPS站点配置。根域部署保持`BASE_PATH`为空。若要放在`https://你的域名/802/`，设置`BASE_PATH=/802`并使用示例中的子目录代理规则；`proxy_pass`不加尾部斜杠，保留`/802/`路径。静态资源全部使用相对地址。
 
-网站本身没有账户登录，能访问服务器地址的人可以打开题库。个人使用可以部署在内网，或在已有反向代理中加访问认证。学习草稿与练习记录只在各自浏览器中。
+网站本身没有账户登录，能访问服务器地址的人可以打开题库。个人使用可以部署在内网，或在已有反向代理中加访问认证。作答照片、学习草稿与练习记录只在各自浏览器中。
 
 ## 更新与回退
 
-替换前保留上一版部署包、自定义`.env`与反向代理配置，并记下当前镜像版本。使用预构建镜像时，在`.env`设置目标版本（例如`IMAGE=ghcr.io/paimoncai/study-econ:v1.3.0`），执行`docker compose pull && docker compose up -d`。回退时把`IMAGE`改回之前的固定版本，再执行相同命令。`latest`和`dev`会随发布更新，需要可重复回退时使用固定版本或镜像摘要。
+替换前保留上一版部署包、自定义`.env`与反向代理配置，并记下当前镜像版本。使用预构建镜像时，在`.env`设置目标版本（例如`IMAGE=ghcr.io/paimoncai/study-econ:v1.4.0`），执行`docker compose pull && docker compose up -d`。回退时把`IMAGE`改回之前的固定版本，再执行相同命令。`latest`和`dev`会随发布更新，需要可重复回退时使用固定版本或镜像摘要。
 
 源码构建时换入新版源码和`dist/`，执行`docker compose -f compose.yaml -f compose.build.yaml up -d --build`；直接运行方式换入新版`dist/`和`serve.mjs`后重启Node服务。这两种方式回退时恢复上一版目录，再重新构建容器或重启服务。服务器响应包含缓存校验信息，刷新会获取新版网页；更新网站不会主动清空浏览器进度。
 
 ## 学习数据和迁移
 
-当前版本是单站点静态题库，学习数据保存在浏览器，包括草稿、错题、自评、收藏、阅读设置和计划日期。它们不会写入服务器，也不自动跨设备同步。因此无需配置数据库或数据卷。
+当前版本是单站点静态题库，学习数据保存在浏览器，包括作答照片、历史文字草稿、回忆草稿、错题、自评、收藏、阅读设置和计划日期。照片使用IndexedDB，其余学习进度使用localStorage。它们不会写入服务器，也不自动跨设备同步。因此无需配置数据库或数据卷。
 
 换域名、端口、浏览器或设备前，在“设置与备份”导出JSON，再在新地址导入。题目数据与服务器文件备份不能代替个人学习记录备份。旧Sites版本的进度也可用同样方式迁移。不要清理旧浏览器数据后再迁移。
 
@@ -97,7 +97,7 @@ npm test
 仓库：`https://github.com/PaiMonCai/study-econ`。
 
 - 稳定版：`ghcr.io/paimoncai/study-econ:latest`
-- 固定版本：`ghcr.io/paimoncai/study-econ:v1.3.0`
+- 固定版本：`ghcr.io/paimoncai/study-econ:v1.4.0`
 - 日常更新：`ghcr.io/paimoncai/study-econ:dev`
 
 在`.env`设置`IMAGE`选择通道。main分支推送通过检查后更新dev；`v*`标签触发版本构建，标签须与package.json版本一致。正式版本更新latest，预发布标签不更新latest。构建在amd64和arm64原生运行器进行，两边容器验证通过后合成平台清单。

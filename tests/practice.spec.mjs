@@ -6,13 +6,14 @@ test('daily navigation has bounded independent days',async({page})=>{
  await expect(page.locator('.subject-pills button')).toHaveCount(30);
  await page.locator('#day-select').selectOption('50');await expect(page.getByRole('button',{name:'下一计划日'})).toBeDisabled();
 });
-test('draft rating and reading survive question changes and reload',async({page})=>{
+test('legacy draft rating and reading survive question changes and reload',async({page})=>{
+ await page.addInitScript(()=>{if(!localStorage.getItem('ruc802.practice.v1'))localStorage.setItem('ruc802.practice.v1',JSON.stringify({version:1,start:'2026-10-29',records:[],drafts:{MI001:'先列预算，再验证条件。'},favorites:[],session:null}));});
  await page.goto('/');await page.locator('#day-select').selectOption('1');await page.locator('[data-action="start-day"][data-sub="micro"]').click();
- await page.getByRole('textbox',{name:'我的作答',exact:true}).fill('先列预算，再验证条件。');
+ await expect(page.locator('#draft')).toHaveCount(0);await page.getByText('查看历史文字作答',{exact:true}).click();await expect(page.locator('.legacy-draft pre')).toHaveText('先列预算，再验证条件。');
  await page.getByRole('button',{name:'大字号',exact:true}).click();await page.getByRole('button',{name:'专注阅读',exact:true}).click();
  await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();await page.getByRole('button',{name:'不熟，有断点',exact:true}).click();
  await page.getByRole('button',{name:'已保存，下一题',exact:true}).click();await page.getByRole('button',{name:'上一题',exact:true}).click();
- await expect(page.getByRole('textbox',{name:'我的作答',exact:true})).toHaveValue('先列预算，再验证条件。');await expect(page.locator('.rating.selected')).toHaveText('不熟，有断点');
+ await page.getByText('查看历史文字作答',{exact:true}).click();await expect(page.locator('.legacy-draft pre')).toHaveText('先列预算，再验证条件。');await expect(page.locator('.rating.selected')).toHaveText('不熟，有断点');
  await page.reload();await expect(page.getByRole('button',{name:'退出专注',exact:true})).toBeVisible();await expect(page.locator('.rating.selected')).toHaveText('不熟，有断点');
  await page.getByRole('button',{name:'会做，已掌握',exact:true}).click();
  expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('ruc802.practice.v1')).records.length)).toBe(1);

@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {prepareSolution,splitAnswer,splitOutline} from './build-solutions.mjs';
+const cards=JSON.parse(fs.readFileSync(new URL('./content/recall.json',import.meta.url))).cards;
+const annotations=Object.fromEntries(['micro','macro','political'].map(subject=>[subject,new Map(JSON.parse(fs.readFileSync(new URL('./content/knowledge-'+subject+'.json',import.meta.url))).questions.map(q=>[q.id,q]))]));
+test('all 300 solutions preserve source and use documented same-subject knowledge',()=>{let count=0;for(const subject of ['micro','macro','political'])for(const q of JSON.parse(fs.readFileSync(new URL('./content/'+subject+'.json',import.meta.url))).questions){const p=prepareSolution(q,subject,cards,annotations[subject].get(q.id));assert.equal(p.steps.map(s=>s.body_md).join(''),q.answer_md,q.id);for(const step of p.steps)assert.equal(step.lines_md.join(''),step.body_md,q.id);assert.ok(p.knowledge.length>=2&&p.knowledge.length<=5,q.id);for(const k of p.knowledge){assert.ok(q[k.source_field].includes(k.application_md),q.id);for(const id of k.card_ids)assert.equal(cards.find(c=>c.id===id).subject,subject);}count++;}assert.equal(count,300);});
+test('sentence punctuation inside math never splits its expression',()=>{const text='先写条件。\n\n$$x=1。+2$$\n\n再检验$x。y$。';const steps=splitAnswer(text);assert.equal(steps.map(s=>s.body_md).join(''),text);assert.ok(steps.some(s=>s.body_md.includes('$$x=1。+2$$')));});
+
+
+test('outline sequencing splits outside TeX only',()=>{assert.deepEqual(splitOutline('先求份额，再用支出函数。'),['先求份额，','再用支出函数。']);assert.deepEqual(splitOutline('保留$x→y；z$，然后验证。'),['保留$x→y；z$，','然后验证。']);});
+
+test('original action groups and political subquestions stay intact',()=>{const source='**动作1 识别稳态口径。** 第一句。第二句。\n\n$$x=1.$$\n\n**动作2 检验。** 第三句。';const steps=splitAnswer(source);assert.equal(steps.length,2);assert.ok(steps[0].body_md.startsWith('**动作1 识别稳态口径。**'));assert.equal(steps.map(s=>s.body_md).join(''),source);assert.equal(steps[0].lines_md.join(''),steps[0].body_md);assert.equal(splitAnswer('（一）定义。解释。\n\n（二）机制。说明。').length,2);});
