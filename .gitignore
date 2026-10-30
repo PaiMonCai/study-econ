@@ -6,3 +6,7 @@ qa/
 *.log
 test-results/
 playwright-report/
+data/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm

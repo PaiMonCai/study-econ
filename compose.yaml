@@ -8,6 +8,15 @@ services:
       HOST: 0.0.0.0
       PORT: 8080
       BASE_PATH: ${BASE_PATH:-}
+      STORAGE_MODE: server
+      DATA_DIR: /app/data
+      ACCESS_REQUIRED: "true"
+      ACCESS_PASSWORD: ${ACCESS_PASSWORD:-}
+      ACCESS_TOKEN: ${ACCESS_TOKEN:-}
+      ACCESS_COOKIE_SECURE: ${ACCESS_COOKIE_SECURE:-false}
+      ACCESS_SESSION_HOURS: ${ACCESS_SESSION_HOURS:-168}
+    volumes:
+      - study-data:/app/data
     restart: unless-stopped
     init: true
     read_only: true
@@ -20,3 +29,6 @@ services:
       options:
         max-size: 10m
         max-file: "3"
+
+volumes:
+  study-data:

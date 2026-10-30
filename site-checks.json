@@ -1,13 +1,13 @@
 {
   "all_passed": true,
-  "count": 8523,
+  "count": 8529,
   "questions": 300,
   "days": 50,
   "mathCount": 1718,
   "solutionMathCount": 2462,
   "recallCards": 323,
   "recallMathCount": 1475,
-  "assetCount": 79,
+  "assetCount": 82,
   "checks": [
     {
       "name": "micro source hash",
@@ -33498,6 +33498,18 @@
       "passed": true
     },
     {
+      "name": "local asset server-store.css",
+      "passed": true
+    },
+    {
+      "name": "local asset state-model.js",
+      "passed": true
+    },
+    {
+      "name": "local asset server-store.js",
+      "passed": true
+    },
+    {
       "name": "local asset app.js",
       "passed": true
     },
@@ -33846,7 +33858,19 @@
       "passed": true
     },
     {
+      "name": "static file under platform size limit server-store.css",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit server-store.js",
+      "passed": true
+    },
+    {
       "name": "static file under platform size limit solutions.css",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit state-model.js",
       "passed": true
     },
     {

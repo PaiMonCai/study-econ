@@ -1,9 +1,10 @@
 # Place inside your existing HTTPS server block.
 # Root URL: http://127.0.0.1:8080; preserve the request path.
 location / {
+    client_max_body_size 10m;
     proxy_pass http://127.0.0.1:8080;
     proxy_http_version 1.1;
-    proxy_set_header Host $host;
+    proxy_set_header Host $http_host;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
@@ -13,8 +14,9 @@ location / {
 # Subdirectory option: set BASE_PATH=/802, and replace location / above
 # with location /802/ below. No trailing slash on proxy_pass.
 # location /802/ {
+#     client_max_body_size 10m;
 #     proxy_pass http://127.0.0.1:8080;
-#     proxy_set_header Host $host;
+#     proxy_set_header Host $http_host;
 #     proxy_set_header X-Forwarded-Proto $scheme;
 # }
 # location = /802 { return 308 /802/; }

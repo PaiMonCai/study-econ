@@ -4,7 +4,7 @@ import {get} from 'node:http';
 import {gunzipSync} from 'node:zlib';
 import {createApp,normalizeBase} from './serve.mjs';
 
-async function withServer(basePath,fn){const server=await createApp({basePath});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));try{await fn(`http://127.0.0.1:${server.address().port}`);}finally{await new Promise(resolve=>{server.close(resolve);server.closeAllConnections();});}}
+async function withServer(basePath,fn){const server=await createApp({basePath,storageMode:'browser'});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));try{await fn(`http://127.0.0.1:${server.address().port}`);}finally{await new Promise(resolve=>{server.close(resolve);server.closeAllConnections();});}}
 function raw(url,headers={}){const [,origin,route]=/^(http:\/\/[^/]+)(.*)$/.exec(url);const parsed=new URL(origin);return new Promise((resolve,reject)=>{get({hostname:parsed.hostname,port:parsed.port,path:route||'/',headers},res=>{const chunks=[];res.on('data',x=>chunks.push(x));res.on('end',()=>resolve({status:res.statusCode,headers:res.headers,body:Buffer.concat(chunks)}));}).on('error',reject);});}
 test('root and static files serve independently with correct methods and caching',()=>withServer('',async url=>{
  const home=await fetch(url);assert.equal(home.status,200);assert.match(await home.text(),/802练习室/);assert.match(home.headers.get('content-security-policy'),/script-src 'self'/);

@@ -11,6 +11,9 @@ Environment=NODE_ENV=production
 Environment=HOST=127.0.0.1
 Environment=PORT=8080
 Environment=BASE_PATH=
+Environment=DATA_DIR=/var/lib/ruc802
+EnvironmentFile=/opt/ruc802/.env
+StateDirectory=ruc802
 ExecStart=/usr/bin/node /opt/ruc802/serve.mjs
 Restart=on-failure
 RestartSec=3

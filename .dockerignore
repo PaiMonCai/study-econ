@@ -1,6 +1,9 @@
 **
 !Dockerfile
 !serve.mjs
+!access.mjs
+!http-utils.mjs
+!server-data.mjs
 !package.json
 !package-lock.json
 !build-data.mjs
