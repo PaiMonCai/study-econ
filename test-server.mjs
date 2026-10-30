@@ -1,10 +1,11 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {get} from 'node:http';
+import {get,createServer} from 'node:http';
 import {gunzipSync} from 'node:zlib';
 import {createApp,normalizeBase} from './serve.mjs';
+import {listenForHttpTests} from './test-http-helper.mjs';
 
-async function withServer(basePath,fn){const server=await createApp({basePath,storageMode:'browser'});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));try{await fn(`http://127.0.0.1:${server.address().port}`);}finally{await new Promise(resolve=>{server.close(resolve);server.closeAllConnections();});}}
+async function withServer(basePath,fn){const server=await createApp({basePath,storageMode:'browser'});await listenForHttpTests(server);try{await fn(`http://127.0.0.1:${server.address().port}`);}finally{await new Promise(resolve=>{server.close(resolve);server.closeAllConnections();});}}
 function raw(url,headers={}){const [,origin,route]=/^(http:\/\/[^/]+)(.*)$/.exec(url);const parsed=new URL(origin);return new Promise((resolve,reject)=>{get({hostname:parsed.hostname,port:parsed.port,path:route||'/',headers},res=>{const chunks=[];res.on('data',x=>chunks.push(x));res.on('end',()=>resolve({status:res.statusCode,headers:res.headers,body:Buffer.concat(chunks)}));}).on('error',reject);});}
 test('root and static files serve independently with correct methods and caching',()=>withServer('',async url=>{
  const home=await fetch(url);assert.equal(home.status,200);assert.match(await home.text(),/802练习室/);assert.match(home.headers.get('content-security-policy'),/script-src 'self'/);
@@ -40,4 +41,13 @@ test('private source paths and malformed traversal are not served',()=>withServe
 test('base path configuration rejects invalid paths',()=>{
  assert.equal(normalizeBase('/802/'),'/802');assert.equal(normalizeBase('/'),'');
  for(const v of ['802','//other','/../','/a b','/a?b'])assert.throws(()=>normalizeBase(v));
+});
+
+test('HTTP fixture allocation avoids Fetch-blocked ports and handles an occupied candidate',async()=>{
+ const first=createServer(),second=createServer();
+ try{
+  const occupied=await listenForHttpTests(first),chosen=await listenForHttpTests(second,occupied);
+  assert.ok(chosen>=20000&&chosen<60000);assert.notEqual(chosen,occupied);
+  await assert.rejects(listenForHttpTests(createServer(),10080),/Invalid HTTP test port/);
+ }finally{for(const server of [first,second])if(server.listening)await new Promise(resolve=>server.close(resolve));}
 });

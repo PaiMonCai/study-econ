@@ -6,13 +6,14 @@ import {tmpdir} from 'node:os';
 import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {createApp} from './serve.mjs';
+import {listenForHttpTests} from './test-http-helper.mjs';
 
 const password='test-only-long-password',token='test_only_url_token_0123456789abcdef';
 const png='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aZk0AAAAASUVORK5CYII=';
 const photo=(id='photo1')=>({id,qid:'MI001',createdAt:1000,dataUrl:png});
 async function fixture(fn,options={}){
  const dataDir=await mkdtemp(path.join(tmpdir(),'ruc802-data-test-'));let server,url;
- async function start(){server=await createApp({basePath:'/802',dataDir,access:{password,token,...options}});await new Promise(r=>server.listen(0,'127.0.0.1',r));url=`http://127.0.0.1:${server.address().port}/802`;return url;}
+ async function start(){server=await createApp({basePath:'/802',dataDir,access:{password,token,...options}});await listenForHttpTests(server);url=`http://127.0.0.1:${server.address().port}/802`;return url;}
  async function stop(){await new Promise(r=>{server.close(r);server.closeAllConnections();});}
  try{await start();await fn({get url(){return url;},start,stop});}finally{if(server.listening)await stop();await rm(dataDir,{recursive:true,force:true});}
 }

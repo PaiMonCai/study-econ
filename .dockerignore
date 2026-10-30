@@ -8,6 +8,7 @@
 !package-lock.json
 !build-data.mjs
 !build-solutions.mjs
+!build-diagrams.mjs
 !verify-site.mjs
 !content/
 !content/**
