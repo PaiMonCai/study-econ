@@ -31,11 +31,22 @@ test('every drawing names the textbook mechanism, physical pages and checked eco
 });
 
 test('political relationship drawings preserve circular reproduction and institutional direction', () => {
- for (const qid of ['PE015','PE031','PE094']) {
-  assert.ok(political(qid).edges.some(e=>e.from==='n5'&&e.to==='n0'),qid+' must connect the next round');
+ assert.ok(political('PE015').edges.some(e=>e.from==='n5'&&e.to==='n0'),'PE015 must connect the next round');
+ const circuits=political('PE031');
+ for(const [from,to,stage,label] of [['g2','g0',0,'实现的货币资本再预付，进入下一轮'],['p2','p0',1,'再次生产接续下一轮生产资本循环'],['w2','w0',2,'新商品资本接续下一轮实现与生产']]) {
+  assert.ok(circuits.edges.some(e=>e.from===from&&e.to===to&&e.stage===stage&&e.label===label),'PE031 each circuit must return at its own reveal stage');
+  assert.equal(circuits.nodes.find(n=>n.id===from).stage,stage);
+  assert.equal(circuits.nodes.find(n=>n.id===to).stage,stage);
  }
+ const exports=political('PE094');
+ assert.ok(exports.edges.some(e=>e.from==='n5'&&e.to==='n1'&&e.stage===2&&e.label==='再次购买投入'),'export receipts support renewed inputs');
+ assert.ok(exports.edges.some(e=>e.from==='n4'&&e.to==='n0'&&e.stage===2&&e.label==='市场需要反馈'),'consumption feeds back to orders');
+ assert.ok(exports.notes.some(n=>n.includes('不是出口订单增加的充分原因')),'domestic consumption alone does not establish export demand');
  const credit=political('PE061');
- assert.ok(!credit.edges.some(e=>e.from==='social'&&e.to==='private'),'socialization does not cause private ownership');
+ assert.ok(credit.edges.some(e=>e.from==='social'&&e.to==='private'&&e.stage===2&&e.label==='社会化不等于占有变更'),'socialization and ownership link marks a distinction');
+ assert.ok(credit.nodes.find(n=>n.id==='private').detail.includes('不自动改变控制和占有关系'));
+ assert.ok(credit.stages[2].explanation.includes('不是信用创新的结果'),'private ownership is a pre-existing relation rather than a result of credit');
+ assert.ok(credit.textbook.checks.includes('促进社会化和维持私人占有不可画成前者产生后者。'));
  const market=political('PE081');
  for (const target of ['allocation','government'])assert.ok(market.edges.some(e=>e.from==='rules'&&e.to===target));
  assert.ok(political('PE088').edges.some(e=>e.from==='n4'&&e.to==='n1'),'consumption feeds back to production');
