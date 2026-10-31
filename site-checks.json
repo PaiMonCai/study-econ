@@ -8,14 +8,14 @@
   "recallCards": 323,
   "recallMathCount": 1475,
   "diagramSummary": {
-    "total": 95,
-    "numeric": 66,
-    "schematic": 15,
-    "structure": 14,
+    "total": 252,
+    "numeric": 192,
+    "schematic": 17,
+    "structure": 43,
     "subjects": {
-      "micro": 35,
-      "macro": 41,
-      "political": 19
+      "micro": 105,
+      "macro": 103,
+      "political": 44
     }
   },
   "assetCount": 86,

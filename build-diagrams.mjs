@@ -14,6 +14,11 @@ export function validateDiagram(diagram, question) {
  require(fields.has(diagram.source?.field) && text(diagram.source.quote) && question[diagram.source.field].includes(diagram.source.quote), 'source quotation must match the original question');
  require(Array.isArray(diagram.stages) && diagram.stages.length === 3 && diagram.stages.every(s => text(s.title) && text(s.explanation) && Array.isArray(s.checklist) && s.checklist.length > 0 && s.checklist.every(text)), 'three explained stages and drawing checks');
  require(Array.isArray(diagram.notes) && diagram.notes.length > 0 && diagram.notes.every(text), 'conditions and interpretation notes');
+ if (diagram.erratum !== undefined) {
+  const e=diagram.erratum;
+  require(text(e.title) && text(e.original_quote) && question.answer_md.includes(e.original_quote) && text(e.explanation), 'erratum must identify the retained source sentence and explain its correction');
+  require(Array.isArray(e.checks) && e.checks.length>0 && e.checks.every(text), 'erratum verification and scope');
+ }
  if (diagram.mode === 'schematic') require(/示意/.test(diagram.intro + diagram.notes.join('')), 'schematic scope must be explicit');
  if (diagram.textbook !== undefined) {
   require(Array.isArray(diagram.textbook.references) && diagram.textbook.references.length > 0, 'textbook references');
@@ -35,7 +40,9 @@ export function validateDiagram(diagram, question) {
   require(Array.isArray(diagram.edges) && diagram.edges.length > 0, 'flow relationships');
   for (const edge of diagram.edges) {
    const from = diagram.nodes.find(n => n.id === edge.from), to = diagram.nodes.find(n => n.id === edge.to);
-   require(from && to && from !== to && stage(edge.stage) && edge.stage >= from.stage && edge.stage >= to.stage && (!edge.label || text(edge.label)), 'visible edge endpoints');
+   require(from && to && from !== to && stage(edge.stage) && edge.stage >= from.stage && edge.stage >= to.stage, 'visible edge endpoints');
+   require(text(edge.label), 'flow relationship with economic meaning');
+   require(edge.shortLabel === undefined || text(edge.shortLabel), 'flow relationship short name');
   }
   require(diagram.nodes.some(n => n.stage === 0), 'initial visible flow');
  } else {
@@ -71,7 +78,10 @@ export function validateDiagram(diagram, question) {
     require(curve && label.stage >= curve.stage && coordinate(label.curve_anchor) && curve.points.some(p => p.every((v,i) => Math.abs(v-label.curve_anchor[i]) < 1e-8)), 'curve label must name a visible series and exact sampled anchor');
    }
   }
-  for (const arrow of diagram.arrows || []) require(coordinate(arrow.from) && coordinate(arrow.to) && stage(arrow.stage) && (!arrow.label || text(arrow.label)), 'plot arrow');
+  for (const arrow of diagram.arrows || []) {
+   require(coordinate(arrow.from) && coordinate(arrow.to) && arrow.from.some((value,index)=>Math.abs(value-arrow.to[index])>1e-10) && stage(arrow.stage) && text(arrow.label), 'plot arrow with a nonzero direction and economic meaning');
+   require(arrow.shortLabel === undefined || text(arrow.shortLabel), 'plot arrow short name');
+  }
   require(diagram.series.some(s => s.stage === 0), 'initial plotted relationship');
  }
  return diagram;
