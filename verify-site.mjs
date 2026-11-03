@@ -4,17 +4,25 @@ import {createHash} from 'node:crypto';
 import path from 'node:path';
 import vm from 'node:vm';
 import {prepareDiagrams} from './build-diagrams.mjs';
+import {prepareTopics} from './build-topics.mjs';
+import {prepareStudyCorrection} from './build-solutions.mjs';
+import {prepareExamBank} from './build-exam-review.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url)),dist=path.join(here,'dist');
 const checks=[];const check=(name,passed)=>checks.push({name,passed:!!passed});
 const context={window:{}};vm.runInNewContext(await readFile(path.join(dist,'data.js'),'utf8'),context);
 const data=context.window.STUDY_DATA,manifest=JSON.parse(await readFile(path.join(here,'build-manifest.json'),'utf8'));
+for(const subject of data.subjects)vm.runInNewContext(await readFile(path.join(dist,'exam-'+subject.key+'.js'),'utf8'),context);
+vm.runInNewContext(await readFile(path.join(dist,'exam-review.js'),'utf8'),context);
 const decode=s=>s.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#x27;|&#39;/g,"'");
-let mathCount=0,solutionMathCount=0;
+let mathCount=0,solutionMathCount=0,examMathCount=0,examQuestions=0;
 for(const subject of data.subjects){
  const raw=await readFile(path.join(here,'content',subject.key+'.json'));const source=JSON.parse(raw);
  check(subject.key+' source hash',createHash('sha256').update(raw).digest('hex')===manifest.sourceHashes[subject.key]);
  const knowledgeRaw=await readFile(path.join(here,'content','knowledge-'+subject.key+'.json'));
  const knowledgeSource=new Map(JSON.parse(knowledgeRaw).questions.map(q=>[q.id,q]));
+ const examRaw=await readFile(path.join(here,'content','exam-review-'+subject.key+'.json'));
+ const examIndex=prepareExamBank(JSON.parse(examRaw),subject.key,source.questions);
+ check(subject.key+' exam review source hash',createHash('sha256').update(examRaw).digest('hex')===manifest.sourceHashes['exam_'+subject.key]);
  check(subject.key+' knowledge annotation hash',createHash('sha256').update(knowledgeRaw).digest('hex')===manifest.sourceHashes['knowledge_'+subject.key]);
  const diagramRaw=await readFile(path.join(here,'content','diagrams-'+subject.key+'.json'));
  const diagramBank=JSON.parse(diagramRaw),diagramIndex=prepareDiagrams(diagramBank,subject.key,source.questions);
@@ -35,6 +43,7 @@ for(const subject of data.subjects){
  check(q.id+' diagrams match validated question-specific snapshot',JSON.stringify(q.diagrams)===JSON.stringify(diagramIndex.get(q.id)||[]));
  const solution=q.solution;
  check(q.id+' step source preserved',solution?.steps.map(s=>s.body_md).join('')===q.answer_md&&solution.source.preserved);
+ check(q.id+' progressive lines cover rendered answer',solution.steps.every(s=>s.lines_md.join('')===s.body_md&&s.line_lengths.length===s.lines_md.length&&s.line_lengths.every(n=>Number.isInteger(n)&&n>0)&&s.line_lengths.reduce((sum,n)=>sum+n,0)===s.body_html.length));
  const stepMath=solution.steps.flatMap(step=>[...step.body_html.matchAll(/<annotation encoding="application\/x-tex">([\s\S]*?)<\/annotation>/g)].map(m=>decode(m[1])));
  const answerMath=[...q.answer_html.matchAll(/<annotation encoding="application\/x-tex">([\s\S]*?)<\/annotation>/g)].map(m=>decode(m[1]));
  check(q.id+' step math retained in order',JSON.stringify(stepMath)===JSON.stringify(answerMath));
@@ -43,11 +52,35 @@ for(const subject of data.subjects){
  check(q.id+' knowledge cards same subject',solution.knowledge.every(k=>k.card_ids.every(id=>data.recall.cards.some(c=>c.id===id&&c.subject===subject.key))));
  const extraHtml=solution.steps.map(s=>s.body_html).join('')+solution.knowledge.map(k=>k.title_html+k.explanation_html).join('')+solution.recap_html;
  solutionMathCount+=[...extraHtml.matchAll(/<annotation encoding="application\/x-tex">/g)].length;
+ const study=prepareStudyCorrection(original,solution,diagramIndex.get(q.id)||[]);
+ check(q.id+' guided correction presence matches existing errata',!!study===!!solution.study);
+ if(study){
+  check(q.id+' guided correction matches audited explanation',solution.study.answer_md===study.answer_md&&solution.study.steps.map(s=>s.body_md).join('')===study.answer_md&&JSON.stringify(solution.study.corrections)===JSON.stringify(study.corrections));
+  check(q.id+' corrected progressive lines cover rendered answer',solution.study.steps.every(s=>s.lines_md.join('')===s.body_md&&s.line_lengths.length===s.lines_md.length&&s.line_lengths.reduce((sum,n)=>sum+n,0)===s.body_html.length));
+  check(q.id+' corrected knowledge uses corrected answer',solution.study.knowledge.every(k=>k.source_field!=='answer_md'||study.answer_md.includes(k.application_md)));
+  const studyHtml=solution.study.answer_html+solution.study.steps.map(s=>s.body_html).join('')+solution.study.knowledge.map(k=>k.title_html+k.explanation_html).join('');
+  solutionMathCount+=[...studyHtml.matchAll(/<annotation encoding="application\/x-tex">/g)].length;
+ }
+ const exam=solution.exam,expectedExam=examIndex.get(q.id);examQuestions++;
+ check(q.id+' exam review complete and resolved',exam?.verdict!=='needs-source'&&exam?.audit.unresolved.length===0&&exam?.audit.checked.length>=2);
+ check(q.id+' exam review bound to unchanged source',exam?.source.source_sha256===expectedExam.source.source_sha256&&exam?.source.review_sha256===expectedExam.source.review_sha256);
+ check(q.id+' exam steps correspond to individually reviewed content',JSON.stringify(exam?.steps.map(s=>({title:s.title,uses:s.uses,body_md:s.body_md})))===JSON.stringify(expectedExam.steps.map(s=>({title:s.title,uses:s.uses,body_md:s.body_md}))));
+ check(q.id+' exam progressive lines retain complete steps',exam.steps.every(s=>s.lines_md.join('')===s.body_md&&s.line_lengths.length===s.lines_md.length&&s.line_lengths.every(n=>Number.isInteger(n)&&n>0)&&s.line_lengths.reduce((sum,n)=>sum+n,0)===s.body_html.length));
+ const examFields=['method','pitfalls','recap'].map(f=>({md:exam[f+'_md'],html:exam[f+'_html']})).concat(exam.steps.map(s=>({md:s.body_md,html:s.body_html})));
+ if(exam.prompt_md!==undefined)examFields.push({md:exam.prompt_md,html:exam.prompt_html});
+ for(const {md,html} of examFields){
+  const expected=[...md.matchAll(/\$\$([\s\S]+?)\$\$|\$([^$]+?)\$/g)].map(m=>(m[1]||m[2]).trim());
+  const actual=[...html.matchAll(/<annotation encoding="application\/x-tex">([\s\S]*?)<\/annotation>/g)].map(m=>decode(m[1]));
+  examMathCount+=actual.length;
+  check(q.id+' exam formula correspondence and safe rendering',JSON.stringify(expected)===JSON.stringify(actual)&&!/math-error|katex-error|<script\b|javascript:/i.test(html));
+ }
  for(let block=0;block<5;block++)check(q.id+' round '+(block+1),data.plan.days.slice(block*10,block*10+10).filter(d=>d[subject.key+'_refs'].includes(q.id)).length===1);
 }
 }
 check('all rendered formulas accounted for',mathCount===manifest.mathCount);
 check('all step and review formulas accounted for',solutionMathCount===manifest.solutionMathCount);
+check('all 300 exam answers reviewed',examQuestions===300&&manifest.examSummary.total===300&&manifest.examSummary.unresolved===0);
+check('all exam formulas accounted for',examMathCount===manifest.examMathCount);
 const recallSourceRaw=await readFile(path.join(here,'content/recall.json'));
 const recallSource=JSON.parse(recallSourceRaw),recall=data.recall;
 check('recall snapshot hash',createHash('sha256').update(recallSourceRaw).digest('hex')===manifest.sourceHashes.recall);
@@ -67,6 +100,30 @@ for(const card of recall.cards){
  check(card.id+' recall rendered safely',card.body_html.length>5&&!/math-error|katex-error|<script\b|javascript:/i.test(card.body_html));
 }
 check('all recall formulas accounted for',recallMathCount===manifest.recallMathCount);
+check('30 distinct topic summaries',data.topics.length===30&&new Set(data.topics.map(t=>t.id)).size===30&&manifest.topicSummary.total===30);
+let topicMathCount=0;
+const topicHandbook=await readFile(path.join(here,'docs','topic-guide.md'),'utf8');
+const oldErrors=data.subjects.flatMap(s=>s.questions.flatMap(q=>q.diagrams.filter(d=>d.erratum).map(d=>d.erratum.original_quote)));
+for(const subject of data.subjects){
+ const raw=await readFile(path.join(here,'content','topics-'+subject.key+'.json'));
+ check(subject.key+' topic source hash',createHash('sha256').update(raw).digest('hex')===manifest.sourceHashes['topics_'+subject.key]);
+ const expected=prepareTopics(JSON.parse(raw),subject.key,subject,data.recall.cards),actual=data.topics.filter(t=>t.subject===subject.key);
+ check(subject.key+' all ten topic groups represented',actual.length===10&&manifest.topicSummary.subjects[subject.key]===10);
+ for(const original of expected){
+  const topic=actual.find(t=>t.id===original.id);
+  check(original.id+' offline guide matches current topic',topicHandbook.includes(original.title)&&['lead_md','comparison_md','boundaries_md','recall_md'].every(f=>topicHandbook.includes(original[f]))&&original.stages.every(s=>topicHandbook.includes(s.explanation_md)));
+  check(original.id+' known source mistakes not repeated as teaching text',oldErrors.every(error=>!original.stages.some(s=>s.explanation_md.includes(error))));
+  check(original.id+' source and stage links preserved',topic&&['title','source_note','editorial_note','source_question_ids','card_ids'].every(f=>JSON.stringify(topic[f])===JSON.stringify(original[f]))&&JSON.stringify(topic.stages.map(s=>({title:s.title,explanation_md:s.explanation_md,question_ids:s.question_ids})))===JSON.stringify(original.stages));
+  const fields=['lead','comparison','boundaries','recall'].map(f=>({md:original[f+'_md'],html:topic[f+'_html']})).concat(topic.stages.map(s=>({md:s.explanation_md,html:s.explanation_html})));
+  for(const {md,html} of fields){
+   const expectedMath=[...md.matchAll(/\$\$([\s\S]+?)\$\$|\$([^$]+?)\$/g)].map(m=>(m[1]||m[2]).trim());
+   const actualMath=[...html.matchAll(/<annotation encoding="application\/x-tex">([\s\S]*?)<\/annotation>/g)].map(m=>decode(m[1]));
+   topicMathCount+=actualMath.length;
+   check(original.id+' topic formula and safe rendering',JSON.stringify(expectedMath)===JSON.stringify(actualMath)&&!/math-error|katex-error|<script\b|javascript:/i.test(html));
+  }
+ }
+}
+check('all topic formulas accounted for',topicMathCount===manifest.topicMathCount);
 const diagrams=data.subjects.flatMap(s=>s.questions.flatMap(q=>q.diagrams));
 check('diagram totals match build manifest',JSON.stringify(data.diagramSummary)===JSON.stringify(manifest.diagramSummary)&&diagrams.length===manifest.diagramSummary.total);
 for(const mode of ['numeric','schematic','structure'])check(mode+' diagram count matches',diagrams.filter(d=>d.mode===mode).length===manifest.diagramSummary[mode]);
@@ -79,7 +136,7 @@ for(const u of new Set(urls))check('local asset '+u,!/^(?:https?:)?\/\//.test(u)
 check('responsive and focus styles',css.includes('@media(max-width:600px)')&&css.includes(':focus-visible')&&css.includes('prefers-reduced-motion'));
 async function files(folder){const entries=await readdir(folder,{withFileTypes:true});let result=[];for(const e of entries){const p=path.join(folder,e.name);result.push(...e.isDirectory()?await files(p):[p]);}return result;}
 for(const file of await files(dist))check('static file under platform size limit '+path.relative(dist,file),(await stat(file)).size<25*1024*1024);
-const result={all_passed:checks.every(c=>c.passed),count:checks.length,questions:300,days:50,mathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,diagramSummary:manifest.diagramSummary,assetCount:new Set(urls).size,checks};
+const result={all_passed:checks.every(c=>c.passed),count:checks.length,questions:300,days:50,mathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,topicMathCount,topicSummary:manifest.topicSummary,examMathCount,examSummary:manifest.examSummary,diagramSummary:manifest.diagramSummary,assetCount:new Set(urls).size,checks};
 await writeFile(path.join(here,'site-checks.json'),JSON.stringify(result,null,2));
 console.log(JSON.stringify({...result,checks:checks.filter(c=>!c.passed)}));
 if(!result.all_passed)process.exit(1);

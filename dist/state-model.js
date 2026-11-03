@@ -24,7 +24,7 @@ function cleanRecall(input,cards){
  if(session!=null){
   if(!ownObject(session)||!Array.isArray(session.ids)||!session.ids.length||session.ids.length>5000||session.ids.some(id=>!known.has(id))||!Number.isInteger(session.index)||session.index<0||session.index>=session.ids.length)throw Error('背诵练习组无效，未导入。');
   const ids=[...new Set(session.ids)];
-  result.recallSession={ids,index:Math.min(session.index,ids.length-1),revealed:Array.isArray(session.revealed)?[...new Set(session.revealed.filter(id=>ids.includes(id)))]:[],returnTo:session.returnTo==='practice'?'practice':'recall'};
+  result.recallSession={ids,index:Math.min(session.index,ids.length-1),revealed:Array.isArray(session.revealed)?[...new Set(session.revealed.filter(id=>ids.includes(id)))]:[],returnTo:session.returnTo==='practice'||/^topics\/(?:micro|macro|political)\/(?:0[1-9]|10)$/.test(session.returnTo)?session.returnTo:'recall'};
  }
  return result;
 }
@@ -32,7 +32,7 @@ function createStateModel(D){
 const byId=Object.assign(Object.create(null),Object.fromEntries(D.subjects.flatMap(s=>s.questions.map(q=>[q.id,q]))));
 const readingDefaults=()=>({size:19,face:'serif',focus:false});
 const fresh=()=>({version:1,start:D.plan.start,records:[],drafts:{},favorites:[],session:null,reading:readingDefaults(),...cleanRecall({},D.recall.cards)});
-function cleanWork(w,qid,records){return {seconds:Math.max(0,Math.min(604800,Number(w?.seconds)||0)),revealed:!!w?.revealed,hint:!!w?.hint,ratingId:records.some(r=>r.id===w?.ratingId&&r.qid===qid)?w.ratingId:null};}
+function cleanWork(w,qid,records){return {seconds:Math.max(0,Math.min(604800,Number(w?.seconds)||0)),revealed:!!w?.revealed,hint:!!w?.hint,solutionLines:Number.isInteger(w?.solutionLines)?Math.max(1,Math.min(1000,w.solutionLines)):1,ratingId:records.some(r=>r.id===w?.ratingId&&r.qid===qid)?w.ratingId:null};}
 function validate(input) {
  if (!input || input.version!==1 || !validDate(input.start) || !Array.isArray(input.records) || input.records.length>20000 || !Array.isArray(input.favorites) || !input.drafts || typeof input.drafts!=='object') throw new Error('备份格式不正确，请选择本网站导出的JSON文件。');
  const result=fresh(); result.start=input.start;
@@ -46,7 +46,10 @@ function validate(input) {
  for(const [id,text] of Object.entries(input.drafts)){if(byId[id]&&typeof text==='string'&&text.length<=100000) result.drafts[id]=text;else throw new Error('备份中的草稿无效，未导入。');}
  if(input.session && Array.isArray(input.session.ids) && input.session.ids.length && input.session.ids.length<=300 && input.session.ids.every(id=>byId[id]) && Number.isInteger(input.session.index) && input.session.index>=0 && input.session.index<input.session.ids.length){
   const s=input.session; result.session={ids:[...new Set(s.ids)],index:s.index,mode:String(s.mode||'自由练习').slice(0,40),day:Number.isInteger(s.day)&&s.day>=1&&s.day<=50?s.day:null,seconds:Math.max(0,Math.min(604800,Number(s.seconds)||0)),startedAt:null,revealed:!!s.revealed,hint:!!s.hint,ratingId:typeof s.ratingId==='string'?s.ratingId:null};
+  result.session.solutionLines=s.solutionLines;
   if(result.session.index>=result.session.ids.length) result.session.index=0;
+  result.session.study=s.study===true;
+  result.session.topicId=result.session.study&&D.topics?.some(t=>t.id===s.topicId&&result.session.ids.every(id=>t.source_question_ids.includes(id)))?s.topicId:null;
   result.session.work=Object.create(null);
   for(const id of result.session.ids){if(input.session.work?.[id])result.session.work[id]=cleanWork(input.session.work[id],id,result.records);}
   Object.assign(result.session,cleanWork(result.session,result.session.ids[result.session.index],result.records));

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+.solution-reader{min-width:0;margin:22px 0 28px}
+.solution-reader-print{display:none}
+.solution-reader .solution-reader-steps{margin:0;list-style:none;padding:0}
+.solution-reader .solution-reader-step{padding:23px 0 27px;border-bottom:1px solid var(--line)}
+.solution-reader .solution-reader-step:first-child{padding-top:4px}
+.solution-reader .step-heading{margin-bottom:16px;align-items:baseline}
+.solution-reader .step-heading>span{font-size:13px;color:var(--green)}
+.solution-reader .step-heading h3{font-size:16px;line-height:1.8}
+.solution-reader .step-uses{margin-bottom:18px}
+.solution-lines{display:grid;gap:15px;min-width:0}
+.solution-reader .solution-line{min-width:0;padding:0;border:0;scroll-margin-top:110px;overflow-wrap:anywhere}
+.solution-reader .solution-line p{margin:0 0 12px;line-height:2.1}
+.solution-reader .solution-line p:last-child{margin-bottom:0}
+.solution-reader .solution-line .math-block{margin:14px 0;padding:7px 2px;background:transparent;overflow-x:auto;max-width:100%;box-sizing:border-box}
+.solution-reader .solution-line .katex-display{margin:.4em 0;text-align:center;max-width:100%;overflow-x:auto;overflow-y:hidden}
+.solution-reader .solution-line .katex-display>.katex{text-align:center}
+.solution-reader-controls{padding:20px 0 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.solution-reader-progress{font:13px/1.8 var(--sans);color:var(--green);margin:0}
+.solution-reader-progress span{display:block;color:var(--muted);font-size:12px}
+.solution-reader-actions{display:flex;gap:10px;flex-wrap:wrap}
+.solution-reader-actions .btn{min-height:44px;white-space:normal;text-align:center}
+.solution-reader button:focus-visible,.solution-reader .solution-line:focus-visible{outline:2px solid var(--green);outline-offset:5px}
+@media(max-width:600px){.solution-lines{gap:13px}.solution-reader-controls{display:block}.solution-reader-actions{margin-top:13px}.solution-reader-actions .btn{flex:1 1 130px}.solution-reader .step-heading{display:block}.solution-reader .step-heading h3{margin-top:7px}.solution-reader .solution-line .math-block{padding:10px 2px}}
+@media(prefers-reduced-motion:reduce){.solution-reader *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+@media print{.solution-reader-controls,.solution-reader-steps{display:none}.solution-reader-print{display:block}.solution-reader .solution-line{border-left:0;padding-left:0}}

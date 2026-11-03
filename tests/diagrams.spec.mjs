@@ -81,6 +81,7 @@ test('complete diagram answers fit the page at large reading size for every illu
   await page.locator('#search').fill(q.id);await page.locator(`[data-action="single"][data-id="${q.id}"]`).click();await expect(page.locator('.q-id')).toHaveText(q.id);
   if(index===0)await page.getByRole('button',{name:'大字号',exact:true}).click();
   await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();
+  await page.locator('[data-action="solution-all"]').click();
   for(const button of await page.locator('.diagram-controls [data-diagram-stage="2"]').all())await button.click();
   const width=await page.evaluate(()=>({page:document.documentElement.scrollWidth,viewport:innerWidth}));
   if(width.page>width.viewport)failures.push({id:q.id,...width});
@@ -115,7 +116,7 @@ test('textbook diagrams enlarge the selected stage and restore keyboard focus wi
  expect(await saved(page)).toBe(before);
 });
 
-test('reviewed source corrections are revealed before the retained original solution',async({page})=>{
+test('reviewed corrections precede progressive answers and original source stays available',async({page})=>{
  await page.goto('/');
  const questions=await page.evaluate(()=>window.STUDY_DATA.subjects.flatMap(s=>s.questions.filter(q=>q.diagrams?.some(d=>d.erratum)).map(q=>({subject:s.key,id:q.id,errata:q.diagrams.filter(d=>d.erratum).map(d=>d.erratum)}))));
  expect(questions.map(q=>q.id)).toEqual(expect.arrayContaining(['MI075','MA025']));
@@ -126,14 +127,17 @@ test('reviewed source corrections are revealed before the retained original solu
   await expect(note).toContainText(q.errata[0].explanation);
   expect(await note.evaluate(el=>Boolean(el.compareDocumentPosition(document.querySelector('.solution-steps'))&Node.DOCUMENT_POSITION_FOLLOWING))).toBeTruthy();
   await note.locator('summary').click();await expect(note).toContainText(q.errata[0].original_quote);
-  const retained=await page.locator('.solution-steps').evaluate(el=>{
-   const copy=el.cloneNode(true);
-   for(const formula of copy.querySelectorAll('.katex')){
-    const tex=formula.querySelector('annotation[encoding="application/x-tex"]');
-    if(tex)formula.replaceWith(document.createTextNode('$'+tex.textContent+'$'));
-   }
-   return copy.textContent.replace(/\s+/g,' ');
-  });
-  expect(retained).toContain(q.errata[0].original_quote.replace(/\s+/g,' '));
+  await page.locator('[data-action="solution-all"]').click();
+  const corrected=(await page.locator('.solution-reader-steps .solution-line').allTextContents()).join('').replace(/\s+/g,'');
+  const reviewed=await page.evaluate(id=>{
+   const question=window.STUDY_DATA.subjects.flatMap(s=>s.questions).find(q=>q.id===id);
+   const guide=window.SolutionReader.guide(question),element=document.createElement('div');
+   element.innerHTML=guide.steps.map(step=>step.body_html).join('');
+   return {exam:guide.exam,text:element.textContent.replace(/\s+/g,'')};
+  },q.id);
+  expect(reviewed.exam).toBe(true);expect(corrected).toBe(reviewed.text);
+  expect(corrected).not.toContain(q.errata[0].original_quote.replace(/\s+/g,''));
+  const retained=await page.evaluate(({subject,id})=>window.STUDY_DATA.subjects.find(s=>s.key===subject).questions.find(q=>q.id===id).answer_md,q);
+  expect(retained).toContain(q.errata[0].original_quote);
  }
 });

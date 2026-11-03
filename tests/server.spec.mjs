@@ -14,6 +14,13 @@ async function practice(page){await page.locator('#day-select').selectOption('1'
 async function picture(page){const data=await page.evaluate(()=>{const c=document.createElement('canvas');c.width=200;c.height=100;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,200,100);x.fillStyle='#000';x.fillText('x + y = 10',10,30);return c.toDataURL('image/png');});return{name:'answer.png',mimeType:'image/png',buffer:Buffer.from(data.split(',')[1],'base64')};}
 async function backup(page){const pending=page.waitForEvent('download');await page.getByRole('button',{name:'导出进度备份',exact:true}).click();const stream=await(await pending).createReadStream();let text='';for await(const chunk of stream)text+=chunk.toString();return JSON.parse(text);}
 
+test('guided position syncs to the server without creating practice results',async({page,browser})=>{
+ await login(page);await page.goto(url+'#topics/micro/05');await page.getByRole('button',{name:'按主线跟读本专题题目',exact:true}).click();
+ await page.getByRole('button',{name:'下一题',exact:true}).click();await expect(page.locator('.q-id')).toHaveText('MI047');await expect(page.locator('.local-status')).toHaveText('服务器已保存');
+ const state=(await(await page.request.get(url+'api/state')).json()).state;expect(state.session.study).toBe(true);expect(state.session.topicId).toBe('micro-05');expect(state.session.index).toBe(1);expect(state.records).toEqual([]);
+ const context=await browser.newContext();try{const other=await context.newPage();await login(other);await other.getByRole('button',{name:'继续上次跟读',exact:true}).click();await expect(other.locator('.q-id')).toHaveText('MI047');await expect(other.getByRole('heading',{name:'规范作答',exact:true})).toBeVisible();}finally{await context.close();}
+});
+
 test('password gate protects the app and logout revokes access',async({page},info)=>{
  await page.goto(url);await expect(page.getByRole('heading',{name:'继续你的复习。'})).toBeVisible();await page.screenshot({path:info.outputPath('access-login.png'),fullPage:true});
  await page.getByLabel('访问密码或令牌',{exact:true}).fill('wrong-password');await page.getByRole('button',{name:'进入练习室',exact:true}).click();await expect(page.getByRole('alert')).toHaveText('访问口令不正确，请重新输入。');

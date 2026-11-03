@@ -4,8 +4,11 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import katex from 'katex';
 import {Marked} from 'marked';
-import {prepareSolution} from './build-solutions.mjs';
+import {prepareSolution,prepareStudyCorrection} from './build-solutions.mjs';
 import {prepareDiagrams} from './build-diagrams.mjs';
+import {prepareTopics} from './build-topics.mjs';
+import {formatDisplayTex} from './format-math.mjs';
+import {prepareExamBank} from './build-exam-review.mjs';
 
 const HERE=path.dirname(fileURLToPath(import.meta.url));
 const ROOT=path.resolve(HERE,'../..');
@@ -15,7 +18,21 @@ const escape=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'
 const errors=[];let mathCount=0,current='';
 function math(src,displayMode){
  mathCount++;
- try{return katex.renderToString(src.trim(),{displayMode,throwOnError:true,strict:'ignore',trust:false,output:'htmlAndMathml'});}
+ try{
+  const original=src.trim();let formatted=formatDisplayTex(original);
+  if(displayMode&&!/\\(?:begin|end|left|right)|\\[{}]/.test(formatted)){
+   const parts=[];let start=0,depth=0;
+   for(let i=0;i<formatted.length;i++){if('({['.includes(formatted[i]))depth++;if(')}]'.includes(formatted[i]))depth--;if(formatted[i]===','&&depth===0){parts.push(formatted.slice(start,i));start=i+1;}}
+   parts.push(formatted.slice(start));
+   if(parts.length>1&&parts.length<=4&&parts.every(p=>p.includes('=')))formatted='\\begin{aligned}'+parts.map(p=>p.trim().replace('=','&=')).join(' \\\\ ')+'\\end{aligned}';
+  }
+  let html=katex.renderToString(formatted,{displayMode,throwOnError:true,strict:'ignore',trust:false,output:'htmlAndMathml'});
+  if(formatted!==original){
+   html=html.replace(/<annotation encoding="application\/x-tex">[\s\S]*?<\/annotation>/,'<annotation encoding="application/x-tex">'+escape(original)+'</annotation>');
+   html=html.replace('<span class="katex','<span data-typeset-tex="'+escape(formatted)+'" class="katex');
+  }
+  return html;
+ }
  catch(e){errors.push({question:current,formula:src,error:e.message});return '<span class="math-error">'+escape(src)+'</span>';}
 }
 const marked=new Marked({gfm:true,breaks:true,hooks:{emStrongMask(src){return src.replace(/\$\$[\s\S]+?\$\$|\$[^$]+?\$/g,match=>'a'.repeat(match.length));}},renderer:{html({text}){return /^<br\s*\/?\s*>$/i.test(text.trim())?'<br>':escape(text);}},extensions:[
@@ -23,6 +40,13 @@ const marked=new Marked({gfm:true,breaks:true,hooks:{emStrongMask(src){return sr
  {name:'displayMath',level:'block',start(src){return src.indexOf('$$');},tokenizer(src){const m=/^\$\$([\s\S]+?)\$\$(?:\n|$)/.exec(src);if(m)return{type:'displayMath',raw:m[0],tex:m[1]};},renderer(token){return `<div class="math-block">${math(token.tex,true)}</div>`;}},
  {name:'inlineMath',level:'inline',start(src){return src.indexOf('$');},tokenizer(src){const m=/^\$([^$]+?)\$/.exec(src);if(m)return{type:'inlineMath',raw:m[0],tex:m[1]};},renderer(token){return math(token.tex,false);}}
 ]});
+function renderSolutionStep(step){
+ const lines_html=step.lines_md.map(line=>{
+  const formula=/^([^$]*?)(?:\$\$([\s\S]+?)\$\$|\$([^$]+?)\$)[\s，。；、,;:：]*$/u.exec(line);
+  return formula?(formula[1].trim()?marked.parse(formula[1]):'')+'<div class="math-block">'+math(formula[2]||formula[3],true)+'</div>':marked.parse(line);
+ });
+ return {...step,line_lengths:lines_html.map(line=>line.length),body_html:lines_html.join('')};
+}
 const subjects=[];const sourceHashes={};let solutionMathCount=0;
 const diagramSummary={total:0,numeric:0,schematic:0,structure:0,subjects:{}};
 const recallRaw=await readFile(path.join(SOURCE,'recall.json'));
@@ -44,7 +68,9 @@ for(const [key,name] of [['micro','微观'],['macro','宏观'],['political','政
   const result={...q,diagrams:diagrams.get(q.id)||[]};
   for(const field of ['prompt','outline','answer','pitfalls']){current=q.id+' '+field;result[field+'_html']=marked.parse(q[field+'_md']);}
   const guide=prepareSolution(q,key,recallSource.cards,knowledgeById.get(q.id)),before=mathCount;
-  result.solution={...guide,steps:guide.steps.map(step=>({...step,body_html:step.lines_md.map(line=>marked.parse(line)).join('')})),knowledge:guide.knowledge.map(item=>({...item,title_html:marked.parseInline(item.title),explanation_html:marked.parse(item.explanation)})),recap_html:marked.parse(guide.recap_md)};
+  result.solution={...guide,steps:guide.steps.map(renderSolutionStep),knowledge:guide.knowledge.map(item=>({...item,title_html:marked.parseInline(item.title),explanation_html:marked.parse(item.explanation)})),recap_html:marked.parse(guide.recap_md)};
+  const study=prepareStudyCorrection(q,guide,result.diagrams);
+  if(study)result.solution.study={...study,answer_html:marked.parse(study.answer_md),steps:study.steps.map(renderSolutionStep),knowledge:study.knowledge.map(item=>({...item,title_html:marked.parseInline(item.title),explanation_html:marked.parse(item.explanation)}))};
   solutionMathCount+=mathCount-before;
   return result;
  });
@@ -55,6 +81,39 @@ const questionMathCount=mathCount-solutionMathCount;
 sourceHashes.recall=createHash('sha256').update(recallRaw).digest('hex');
 const recall={...recallSource,cards:recallSource.cards.map(card=>{current='recall '+card.id;return{...card,body_html:marked.parse(card.body_md)};})};
 const recallMathCount=mathCount-questionMathCount-solutionMathCount;
+const topics=[];
+for(const subject of subjects){
+ const raw=await readFile(path.join(SOURCE,'topics-'+subject.key+'.json'));
+ sourceHashes['topics_'+subject.key]=createHash('sha256').update(raw).digest('hex');
+ for(const topic of prepareTopics(JSON.parse(raw),subject.key,subject,recallSource.cards)){
+  current=topic.id;
+  const result={...topic};
+  for(const field of ['lead','comparison','boundaries','recall'])result[field+'_html']=marked.parse(topic[field+'_md']);
+  result.stages=topic.stages.map(stage=>({...stage,explanation_html:marked.parse(stage.explanation_md)}));
+  topics.push(result);
+ }
+}
+const topicMathCount=mathCount-questionMathCount-solutionMathCount-recallMathCount;
+const topicSummary={total:topics.length,subjects:Object.fromEntries(subjects.map(s=>[s.key,topics.filter(t=>t.subject===s.key).length]))};
+const examSummary={total:0,revised:0,confirmed:0,unresolved:0,promptCorrections:0,subjects:{}};
+const beforeExam=mathCount;
+for(const subject of subjects){
+ const raw=await readFile(path.join(SOURCE,'exam-review-'+subject.key+'.json'));
+ sourceHashes['exam_'+subject.key]=createHash('sha256').update(raw).digest('hex');
+ const entries=prepareExamBank(JSON.parse(raw),subject.key,subject.questions),compiled={};
+ examSummary.subjects[subject.key]=entries.size;
+ for(const question of subject.questions){
+  current=question.id+' exam';
+  const entry=entries.get(question.id),result={...entry,steps:entry.steps.map(renderSolutionStep)};
+  for(const field of ['method','pitfalls','recap'])result[field+'_html']=marked.parse(entry[field+'_md']);
+  if(entry.prompt_md!==undefined){result.prompt_html=marked.parse(entry.prompt_md);examSummary.promptCorrections++;}
+  compiled[question.id]=result;examSummary.total++;
+  if(entry.verdict==='needs-source')examSummary.unresolved++;else examSummary[entry.verdict]++;
+ }
+ // Subject files keep every static asset below the hosting size limit.
+ await writeFile(path.join(DIST,'exam-'+subject.key+'.js'),'window.STUDY_EXAM_REVIEWS??={};Object.assign(window.STUDY_EXAM_REVIEWS,'+JSON.stringify(compiled).replace(/</g,'\\u003c')+');\n','utf8');
+}
+const examMathCount=mathCount-beforeExam;
 const ids=new Set(subjects.flatMap(s=>s.questions.map(q=>q.id)));
 if(ids.size!==300||plan.days.length!==50)throw new Error('Invalid question count or plan');
 for(const d of plan.days)for(const s of subjects){const refs=d[s.key+'_refs'];if(refs.length!==10||new Set(refs).size!==10||refs.some(id=>!ids.has(id)))throw new Error('Invalid plan day '+d.day);}
@@ -77,8 +136,8 @@ await material('三科主线训练打印版','完整题目与解答','与网站�
 await material('五十天复习计划','三科每天各10题','打印版与Excel记录表。网站中改动的日期和练习记录不会自动写回Excel。',[
  ['综合资料/01_复习手册/人大802五十天复习计划表.pdf','50-day-plan.pdf','打开PDF'],
  ['综合资料/01_复习手册/人大802五十天复习计划表.xlsx','50-day-plan.xlsx','下载Excel']]);
-const data={version:1,title:'802练习室',subjects,plan,materials,recall,diagramSummary};
+const data={version:1,title:'802练习室',subjects,plan,materials,recall,diagramSummary,topics};
 await writeFile(path.join(DIST,'data.js'),'window.STUDY_DATA='+JSON.stringify(data).replace(/</g,'\\u003c')+';\n','utf8');
-const manifest={questions:300,groups:30,days:50,mathCount:questionMathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,mathErrors:errors,sourceHashes,diagramSummary,materials:materials.length,builtAt:new Date().toISOString()};
+const manifest={questions:300,groups:30,days:50,mathCount:questionMathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,topicMathCount,topicSummary,examMathCount,examSummary,mathErrors:errors,sourceHashes,diagramSummary,materials:materials.length,builtAt:new Date().toISOString()};
 await writeFile(path.join(HERE,'build-manifest.json'),JSON.stringify(manifest,null,2));
 console.log(JSON.stringify(manifest));

@@ -36,7 +36,12 @@ function decodePhoto(item,questions){
 export async function createDataStore({dataDir=path.join(HERE,'data'),catalogDir=path.join(HERE,'content'),now=Date.now}={}){
  const subjects=await Promise.all(['micro','macro','political'].map(async key=>({key,...JSON.parse(await readFile(path.join(catalogDir,key+'.json'),'utf8'))})));
  const plan=JSON.parse(await readFile(path.join(catalogDir,'plan.json'),'utf8')),recall=JSON.parse(await readFile(path.join(catalogDir,'recall.json'),'utf8'));
- const model=stateModel.createStateModel({subjects,plan,recall}),questions=new Set(subjects.flatMap(s=>s.questions.map(q=>q.id)));
+ const topicBanks=await Promise.all(subjects.map(async s=>{
+  const raw=await readFile(path.join(catalogDir,'topics-'+s.key+'.json'),'utf8');
+  return JSON.parse(raw);
+ }));
+ const topics=topicBanks.flatMap(bank=>bank.topics);
+ const model=stateModel.createStateModel({subjects,plan,recall,topics}),questions=new Set(subjects.flatMap(s=>s.questions.map(q=>q.id)));
  await mkdir(dataDir,{recursive:true,mode:0o700});const filename=path.resolve(dataDir,'study.sqlite'),db=new DatabaseSync(filename);
  const tables=db.prepare("SELECT name FROM sqlite_schema WHERE type='table' AND name NOT LIKE 'sqlite_%'").all();
  const schema=tables.some(t=>t.name==='meta')?db.prepare("SELECT value FROM meta WHERE key='schema'").get():null;
