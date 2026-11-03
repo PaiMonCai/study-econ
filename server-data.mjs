@@ -41,7 +41,20 @@ export async function createDataStore({dataDir=path.join(HERE,'data'),catalogDir
   return JSON.parse(raw);
  }));
  const topics=topicBanks.flatMap(bank=>bank.topics);
- const model=stateModel.createStateModel({subjects,plan,recall,topics}),questions=new Set(subjects.flatMap(s=>s.questions.map(q=>q.id)));
+ const comprehensiveBanks=await Promise.all(['micro','macro'].map(async subject=>{
+  try{return JSON.parse(await readFile(path.join(catalogDir,'comprehensive-'+subject+'.json'),'utf8'));}
+  catch(error){if(error.code==='ENOENT')return{cases:[]};throw error;}
+ }));
+ let papers=[];
+ try{papers=JSON.parse(await readFile(path.join(catalogDir,'training-papers.json'),'utf8')).papers;}
+ catch(error){if(error.code!=='ENOENT')throw error;}
+ const comprehensive={questions:comprehensiveBanks.flatMap(bank=>bank.cases.map(question=>({...question,comprehensive:true}))),papers};
+ const conceptMaps=Object.fromEntries(await Promise.all(['micro','macro'].map(async subject=>{
+  const bank=JSON.parse(await readFile(path.join(catalogDir,'concept-map-'+subject+'.json'),'utf8'));
+  if(bank.subject!==subject||!Array.isArray(bank.nodes)||!bank.nodes.length)throw Error('知识图目录不完整，学习记录未改动：'+subject);
+  return[subject,bank];
+ })));
+ const model=stateModel.createStateModel({subjects,plan,recall,topics,comprehensive,conceptMaps}),questions=new Set([...subjects.flatMap(s=>s.questions),...comprehensive.questions].map(question=>question.id));
  await mkdir(dataDir,{recursive:true,mode:0o700});const filename=path.resolve(dataDir,'study.sqlite'),db=new DatabaseSync(filename);
  const tables=db.prepare("SELECT name FROM sqlite_schema WHERE type='table' AND name NOT LIKE 'sqlite_%'").all();
  const schema=tables.some(t=>t.name==='meta')?db.prepare("SELECT value FROM meta WHERE key='schema'").get():null;

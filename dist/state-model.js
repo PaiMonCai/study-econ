@@ -24,14 +24,37 @@ function cleanRecall(input,cards){
  if(session!=null){
   if(!ownObject(session)||!Array.isArray(session.ids)||!session.ids.length||session.ids.length>5000||session.ids.some(id=>!known.has(id))||!Number.isInteger(session.index)||session.index<0||session.index>=session.ids.length)throw Error('背诵练习组无效，未导入。');
   const ids=[...new Set(session.ids)];
-  result.recallSession={ids,index:Math.min(session.index,ids.length-1),revealed:Array.isArray(session.revealed)?[...new Set(session.revealed.filter(id=>ids.includes(id)))]:[],returnTo:session.returnTo==='practice'||/^topics\/(?:micro|macro|political)\/(?:0[1-9]|10)$/.test(session.returnTo)?session.returnTo:'recall'};
+  result.recallSession={ids,index:Math.min(session.index,ids.length-1),revealed:Array.isArray(session.revealed)?[...new Set(session.revealed.filter(id=>ids.includes(id)))]:[],returnTo:session.returnTo==='practice'||/^(?:topics\/(?:micro|macro|political)\/(?:0[1-9]|10)|maps\/(?:micro|macro)\/(?:0[1-9]|10)\/(?:mind|network|path)(?:\/[A-Za-z0-9]+){0,2})$/.test(session.returnTo)?session.returnTo:'recall'};
  }
  return result;
 }
 function createStateModel(D){
-const byId=Object.assign(Object.create(null),Object.fromEntries(D.subjects.flatMap(s=>s.questions.map(q=>[q.id,q]))));
+const byId=Object.assign(Object.create(null),Object.fromEntries([...D.subjects.flatMap(s=>s.questions),...(D.comprehensive?.questions||[])].map(q=>[q.id,q])));
+const catalogSize=Object.keys(byId).length;
+const conceptKeys=new Set(Object.values(D.conceptMaps||{}).flatMap(bank=>bank.nodes.flatMap(node=>['concept','relation','application'].map(layer=>node.id+':'+layer))));
+function cleanConceptProgress(input={}){
+ if(!ownObject(input)||Object.keys(input).length>15000)throw Error('知识图自评格式不正确，未导入。');
+ const result=Object.create(null);
+ for(const [id,value] of Object.entries(input)){
+  const subject=id.startsWith('KMI')?'micro':id.startsWith('KMA')?'macro':null;
+  if(subject&&!D.conceptMaps?.[subject]?.nodes?.length)throw Error('知识图目录未完整加载，原学习记录未改动。');
+  if(!conceptKeys.has(id))continue;
+  if(!ownObject(value)||![0,1,2].includes(value.rating)||!Number.isFinite(value.at)||value.at<0||value.at>1e14)throw Error('知识图自评无效，未导入。');
+  result[id]={rating:value.rating,at:value.at};
+ }
+ return result;
+}
+function mergeConceptProgress(a={},b={}){const result={...a};for(const [id,value] of Object.entries(b))if(!result[id]||value.at>=result[id].at)result[id]=value;return cleanConceptProgress(result);}
+const papers=new Map((D.comprehensive?.papers||[]).map(paper=>[paper.id,paper]));
+function cleanScores(qid,scores){
+ const question=byId[qid],parts=question?.scoring_parts||question?.parts;
+ if(!question?.comprehensive||!Array.isArray(parts)||!ownObject(scores)||Object.keys(scores).length!==parts.length)throw Error('综合题评分格式不正确，未导入。');
+ const result=Object.create(null);
+ for(const part of parts){const value=scores[part.id];if(!Number.isFinite(value)||value<0||value>part.points||Math.round(value*2)!==value*2)throw Error('综合题分问评分超出范围，未导入。');result[part.id]=value;}
+ return result;
+}
 const readingDefaults=()=>({size:19,face:'serif',focus:false});
-const fresh=()=>({version:1,start:D.plan.start,records:[],drafts:{},favorites:[],session:null,reading:readingDefaults(),...cleanRecall({},D.recall.cards)});
+const fresh=()=>({version:1,start:D.plan.start,records:[],drafts:{},favorites:[],session:null,reading:readingDefaults(),conceptProgress:cleanConceptProgress(),...cleanRecall({},D.recall.cards)});
 function cleanWork(w,qid,records){return {seconds:Math.max(0,Math.min(604800,Number(w?.seconds)||0)),revealed:!!w?.revealed,hint:!!w?.hint,solutionLines:Number.isInteger(w?.solutionLines)?Math.max(1,Math.min(1000,w.solutionLines)):1,ratingId:records.some(r=>r.id===w?.ratingId&&r.qid===qid)?w.ratingId:null};}
 function validate(input) {
  if (!input || input.version!==1 || !validDate(input.start) || !Array.isArray(input.records) || input.records.length>20000 || !Array.isArray(input.favorites) || !input.drafts || typeof input.drafts!=='object') throw new Error('备份格式不正确，请选择本网站导出的JSON文件。');
@@ -39,12 +62,22 @@ function validate(input) {
  if(input.reading)result.reading={size:[17,19,21].includes(input.reading.size)?input.reading.size:19,face:input.reading.face==='sans'?'sans':'serif',focus:!!input.reading.focus};
  result.records=input.records.map(r=>{
   if (!r || !byId[r.qid] || typeof r.id!=='string' || r.id.length>100 || ![0,1,2].includes(r.rating) || !Number.isFinite(r.at) || r.at<0 || r.at>1e14 || !Number.isFinite(r.seconds) || r.seconds<0 || r.seconds>604800 || (r.day!==null && (!Number.isInteger(r.day)||r.day<1||r.day>50))) throw new Error('备份中存在无效练习记录，未导入。');
-  return {id:r.id,qid:r.qid,rating:r.rating,at:r.at,updatedAt:Number.isFinite(r.updatedAt)&&r.updatedAt>=r.at&&r.updatedAt<=1e14?r.updatedAt:r.at,seconds:r.seconds,day:r.day};
+  const record={id:r.id,qid:r.qid,rating:r.rating,at:r.at,updatedAt:Number.isFinite(r.updatedAt)&&r.updatedAt>=r.at&&r.updatedAt<=1e14?r.updatedAt:r.at,seconds:r.seconds,day:r.day};
+  if(r.score!==undefined||r.maxScore!==undefined||r.partScores!==undefined){
+   const partScores=cleanScores(r.qid,r.partScores),score=Object.values(partScores).reduce((sum,value)=>sum+value,0);
+   if(r.maxScore!==25||r.score!==score)throw Error('综合题总分与分问不一致，未导入。');
+   Object.assign(record,{score,maxScore:25,partScores});
+  }
+  if(r.paperId!==undefined||r.paperAttempt!==undefined){
+   if(!papers.get(r.paperId)?.question_ids.includes(r.qid)||typeof r.paperAttempt!=='string'||!/^[-\w]{1,100}$/.test(r.paperAttempt)||r.day!==null)throw Error('限时卷记录格式不正确，未导入。');
+   Object.assign(record,{paperId:r.paperId,paperAttempt:r.paperAttempt});
+  }
+  return record;
  });
  result.records=[...new Map(result.records.map(r=>[r.id,r])).values()].sort((a,b)=>a.at-b.at);
  result.favorites=[...new Set(input.favorites.filter(id=>typeof id==='string'&&byId[id]))];
  for(const [id,text] of Object.entries(input.drafts)){if(byId[id]&&typeof text==='string'&&text.length<=100000) result.drafts[id]=text;else throw new Error('备份中的草稿无效，未导入。');}
- if(input.session && Array.isArray(input.session.ids) && input.session.ids.length && input.session.ids.length<=300 && input.session.ids.every(id=>byId[id]) && Number.isInteger(input.session.index) && input.session.index>=0 && input.session.index<input.session.ids.length){
+ if(input.session && Array.isArray(input.session.ids) && input.session.ids.length && input.session.ids.length<=catalogSize && input.session.ids.every(id=>byId[id]) && Number.isInteger(input.session.index) && input.session.index>=0 && input.session.index<input.session.ids.length){
   const s=input.session; result.session={ids:[...new Set(s.ids)],index:s.index,mode:String(s.mode||'自由练习').slice(0,40),day:Number.isInteger(s.day)&&s.day>=1&&s.day<=50?s.day:null,seconds:Math.max(0,Math.min(604800,Number(s.seconds)||0)),startedAt:null,revealed:!!s.revealed,hint:!!s.hint,ratingId:typeof s.ratingId==='string'?s.ratingId:null};
   result.session.solutionLines=s.solutionLines;
   if(result.session.index>=result.session.ids.length) result.session.index=0;
@@ -53,11 +86,29 @@ function validate(input) {
   result.session.work=Object.create(null);
   for(const id of result.session.ids){if(input.session.work?.[id])result.session.work[id]=cleanWork(input.session.work[id],id,result.records);}
   Object.assign(result.session,cleanWork(result.session,result.session.ids[result.session.index],result.records));
+  if(s.scoreDrafts!==undefined){
+   if(!ownObject(s.scoreDrafts))throw Error('综合题评分草稿格式不正确，未导入。');
+   result.session.scoreDrafts=Object.create(null);
+   for(const [qid,scores] of Object.entries(s.scoreDrafts)){if(!result.session.ids.includes(qid))throw Error('综合题评分草稿题号不正确，未导入。');result.session.scoreDrafts[qid]=cleanScores(qid,scores);}
+  }
+  if(s.paperId!==undefined){
+   const paper=papers.get(s.paperId);
+   if(!paper||JSON.stringify(paper.question_ids)!==JSON.stringify(result.session.ids)||typeof s.paperAttempt!=='string'||!/^[-\w]{1,100}$/.test(s.paperAttempt)||result.session.day!==null||result.session.study)throw Error('限时训练卷不完整，未导入。');
+   Object.assign(result.session,{paperId:paper.id,paperAttempt:s.paperAttempt,paperSubmitted:s.paperSubmitted===true,paperRunning:s.paperSubmitted!==true&&s.paperRunning===true});
+   const belongsToAttempt=id=>result.records.some(record=>record.id===id&&record.paperId===paper.id&&record.paperAttempt===s.paperAttempt);
+   if(!belongsToAttempt(result.session.ratingId))result.session.ratingId=null;
+   for(const work of Object.values(result.session.work))if(!belongsToAttempt(work.ratingId))work.ratingId=null;
+   if(!result.session.paperSubmitted){
+    Object.assign(result.session,{revealed:false,hint:false,solutionLines:1});
+    for(const work of Object.values(result.session.work))Object.assign(work,{revealed:false,hint:false,solutionLines:1});
+   }
+  }
  }
  Object.assign(result,cleanRecall(input,D.recall.cards));
+ result.conceptProgress=cleanConceptProgress(input.conceptProgress);
  return result;
 }
-const keyed=['drafts','recallDrafts','recallProgress'];
+const keyed=['drafts','recallDrafts','recallProgress','conceptProgress'];
 function diff(before,after){
  const changes=[];
  for(const field of ['start','reading','session','recallSession'])if(!same(before[field],after[field]))changes.push({path:[field],before:before[field]??null,after:after[field]??null});
@@ -79,7 +130,7 @@ function apply(current,changes,{checkConflicts=true}={}){
   if(keyed.includes(field)){
    const now=next[field]?.[id];
    if(['drafts','recallDrafts'].includes(field)&&checkConflicts&&!same(now,change.before)&&!same(now,change.after)){conflicts.push(change.path);continue;}
-   if(field==='recallProgress'&&now&&change.after&&now.at>change.after.at)continue;
+   if(['recallProgress','conceptProgress'].includes(field)&&now&&change.after&&now.at>change.after.at)continue;
    if(change.after===null)delete next[field][id];else next[field][id]=change.after;
   }else if(field==='records'){
    if(!change.after||change.after.id!==id)throw Error('作答记录不能通过同步删除');
@@ -96,9 +147,9 @@ function merge(current,incoming){
  const a=validate(incoming),records=new Map(current.records.map(r=>[r.id,r]));
  for(const r of a.records){const old=records.get(r.id);if(!old||(r.updatedAt||r.at)>(old.updatedAt||old.at))records.set(r.id,r);}
  const progress={...current.recallProgress};for(const [id,r] of Object.entries(a.recallProgress))if(!progress[id]||r.at>progress[id].at)progress[id]=r;
- return validate({...current,start:a.start,reading:a.reading,records:[...records.values()],favorites:[...new Set([...current.favorites,...a.favorites])],drafts:{...current.drafts,...a.drafts},recallProgress:progress,recallDrafts:{...current.recallDrafts,...a.recallDrafts},session:current.session||a.session,recallSession:current.recallSession||a.recallSession});
+ return validate({...current,start:a.start,reading:a.reading,records:[...records.values()],favorites:[...new Set([...current.favorites,...a.favorites])],drafts:{...current.drafts,...a.drafts},recallProgress:progress,recallDrafts:{...current.recallDrafts,...a.recallDrafts},session:current.session||a.session,recallSession:current.recallSession||a.recallSession,conceptProgress:mergeConceptProgress(current.conceptProgress,a.conceptProgress)});
 }
-return{fresh,validate,cleanWork,diff,apply,merge};
+return{fresh,validate,cleanWork,diff,apply,merge,mergeConceptProgress};
 }
 if(typeof module!=='undefined'&&module.exports)module.exports={createStateModel};else scope.createStateModel=createStateModel;
 })(globalThis);

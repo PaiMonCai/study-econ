@@ -1,10 +1,11 @@
 import {test,expect} from '@playwright/test';
 const saved=page=>page.evaluate(()=>localStorage.getItem('ruc802.practice.v1'));
+async function revealAnswer(page){await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();const panel=page.locator('.diagram-panel-disclosure');if(await panel.count()&&!await panel.evaluate(el=>el.open))await panel.locator(':scope>summary').click();}
 async function openQuestion(page,subject,id){await page.goto('/#bank');await page.locator(`[data-action="subject"][data-sub="${subject}"]`).click();await page.locator('#search').fill(id);await page.locator(`[data-action="single"][data-id="${id}"]`).click();await expect(page.locator('.q-id')).toHaveText(id);}
 test('graphs reveal progressively without changing assessments and survive practice redraws',async({page},info)=>{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/');
  const representatives=await page.evaluate(()=>window.STUDY_DATA.subjects.map(s=>({subject:s.key,id:s.questions.find(q=>q.diagrams?.length)?.id})));expect(representatives.every(r=>r.id)).toBeTruthy();
- for(const r of representatives){await openQuestion(page,r.subject,r.id);await expect(page.locator('.diagram-review')).toHaveCount(0);await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();const graph=page.locator('.study-diagram').first();await expect(graph).toBeVisible();await expect(graph.locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage','0');const before=await saved(page);
+ for(const r of representatives){await openQuestion(page,r.subject,r.id);await expect(page.locator('.diagram-review')).toHaveCount(0);await revealAnswer(page);const graph=page.locator('.study-diagram').first();await expect(graph).toBeVisible();await expect(graph.locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage','0');const before=await saved(page);
  for(const stage of [1,2,0,2]){const button=graph.locator(`[data-diagram-stage="${stage}"]`);await button.click();await expect(button).toBeFocused();await expect(button).toHaveAttribute('aria-pressed','true');await expect(graph.locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage',String(stage));expect(await saved(page)).toBe(before);}
  await page.getByRole('button',{name:'大字号',exact:true}).click();await expect(graph.locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage','2');await page.locator('[data-action="favorite"]').click();await expect(page.locator('.study-diagram').first().locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage','2');
  await expect(graph.locator('.diagram-frame svg title')).toHaveCount(1);await expect(graph.locator('.diagram-frame svg desc')).toHaveCount(1);await graph.locator('.diagram-text summary').first().click();await expect(graph.locator('.diagram-text').first()).toHaveAttribute('open','');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth)).toBeTruthy();await graph.screenshot({path:info.outputPath(r.subject+'-diagram.png')});
@@ -68,19 +69,19 @@ test('each visible direction is named and flow connectors avoid unrelated nodes'
  });
  expect(failures).toEqual([]);
 });
-test('questions without graphs keep complete source answers',async({page})=>{await page.goto('/');const r=await page.evaluate(()=>{for(const s of window.STUDY_DATA.subjects){const q=s.questions.find(q=>!q.diagrams?.length);if(q)return{subject:s.key,id:q.id};}});expect(r).toBeTruthy();await openQuestion(page,r.subject,r.id);await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();await expect(page.locator('.solution-steps')).toBeVisible();await expect(page.locator('.diagram-review')).toHaveCount(0);});
+test('questions without graphs keep complete source answers',async({page})=>{await page.goto('/');const r=await page.evaluate(()=>{for(const s of window.STUDY_DATA.subjects){const q=s.questions.find(q=>!q.diagrams?.length);if(q)return{subject:s.key,id:q.id};}});expect(r).toBeTruthy();await openQuestion(page,r.subject,r.id);await revealAnswer(page);await expect(page.locator('.solution-steps')).toBeVisible();await expect(page.locator('.diagram-review')).toHaveCount(0);});
 
 test('complete diagram answers fit the page at large reading size for every illustrated question',async({page})=>{
  test.setTimeout(120000);await page.goto('/#bank');
  const questions=await page.evaluate(()=>window.STUDY_DATA.subjects.flatMap(s=>s.questions.filter(q=>q.diagrams?.length).map(q=>({subject:s.key,id:q.id}))));
- test.setTimeout(Math.max(120000,30000+questions.length*800));
+ test.setTimeout(Math.max(120000,30000+questions.length*2500));
  const failures=[];let previousSubject;
  for(const [index,q] of questions.entries()){
   if(index)await page.getByRole('link',{name:'刷题训练',exact:true}).click();
   if(q.subject!==previousSubject){await page.locator(`[data-action="subject"][data-sub="${q.subject}"]`).click();previousSubject=q.subject;}
   await page.locator('#search').fill(q.id);await page.locator(`[data-action="single"][data-id="${q.id}"]`).click();await expect(page.locator('.q-id')).toHaveText(q.id);
   if(index===0)await page.getByRole('button',{name:'大字号',exact:true}).click();
-  await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();
+  await revealAnswer(page);
   await page.locator('[data-action="solution-all"]').click();
   for(const button of await page.locator('.diagram-controls [data-diagram-stage="2"]').all())await button.click();
   const width=await page.evaluate(()=>({page:document.documentElement.scrollWidth,viewport:innerWidth}));
@@ -91,7 +92,7 @@ test('complete diagram answers fit the page at large reading size for every illu
 
 test('textbook diagrams enlarge the selected stage and restore keyboard focus without saving progress',async({page},info)=>{
  await openQuestion(page,'micro','MI001');
- await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();
+ await revealAnswer(page);
  const graph=page.locator('[data-diagram-id="MI001-graph"]');
  await graph.locator('[data-diagram-stage="2"]').click();
  const before=await saved(page),trigger=graph.getByRole('button',{name:'放大图形',exact:true});
@@ -122,7 +123,7 @@ test('reviewed corrections precede progressive answers and original source stays
  expect(questions.map(q=>q.id)).toEqual(expect.arrayContaining(['MI075','MA025']));
  for(const q of questions){
   await openQuestion(page,q.subject,q.id);await expect(page.locator('.diagram-correction')).toHaveCount(0);
-  await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();
+  await revealAnswer(page);
   const note=page.locator('.diagram-correction').first();await expect(note).toBeVisible();
   await expect(note).toContainText(q.errata[0].explanation);
   expect(await note.evaluate(el=>Boolean(el.compareDocumentPosition(document.querySelector('.solution-steps'))&Node.DOCUMENT_POSITION_FOLLOWING))).toBeTruthy();

@@ -13,3 +13,33 @@
 .study-diagram svg .diagram-annotation-leader{fill:none;stroke:#91a5ae;stroke-width:.8;stroke-dasharray:none}.study-diagram svg .diagram-direction-label,.study-diagram svg .diagram-edge-label{font-size:13px;font-weight:600}.diagram-directions{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:8px 20px;padding:12px 0;list-style:none;border-top:1px solid var(--line);font-size:13px;line-height:1.7}.diagram-directions li{display:flex;align-items:baseline;gap:8px;min-width:0}.diagram-direction-key{flex:none;color:var(--green);font-weight:600}.diagram-directions li>span:last-child{overflow-wrap:anywhere}
 
 .diagram-correction{margin:0 0 20px;padding:16px 18px;border-left:4px solid #9b472b;background:#fff2e9;color:var(--ink);line-height:1.8}.diagram-correction h4{margin:0 0 8px;color:#873a23}.diagram-correction p{margin:8px 0}.diagram-correction ul{padding-left:20px}.diagram-correction summary{cursor:pointer;font-size:14px;font-weight:600}.diagram-correction blockquote{margin:12px 0;padding-left:14px;border-left:2px solid #b98b76;font-size:14px}
+
+.diagram-panel{min-width:0;overflow:hidden;border-top:3px solid var(--green)}
+.diagram-panel-disclosure>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 19px;cursor:pointer;font-size:15px;font-weight:650;list-style:none}
+.diagram-panel-disclosure>summary::-webkit-details-marker{display:none}
+.diagram-panel-disclosure>summary:after{content:'+';font-size:20px;font-weight:400;color:var(--green)}
+.diagram-panel-disclosure[open]>summary:after{content:'\2212'}
+.diagram-panel-count{font-size:11px;font-weight:400;color:var(--muted);margin-left:auto}
+.diagram-panel-body{min-width:0;padding:0 19px 18px;scrollbar-width:thin;overscroll-behavior-y:contain}
+.diagram-panel-body:focus-visible{outline:2px solid var(--green);outline-offset:-3px}
+.diagram-panel .study-diagram{margin:0;padding:18px 0;border-top:1px solid var(--line)}
+.diagram-panel .study-diagram:last-child{border-bottom:0;padding-bottom:0}
+.diagram-panel .study-diagram h3{font-size:17px;line-height:1.65;margin:0 0 5px}
+.diagram-panel .study-diagram>p{font-size:12px;line-height:1.8;margin-bottom:10px}
+.diagram-panel .diagram-mode{font-size:11px}
+.diagram-panel .diagram-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:14px 0 10px}
+.diagram-panel .diagram-controls button{padding:8px 7px;font-size:11px;line-height:1.6;min-height:44px;overflow-wrap:anywhere}
+.diagram-panel .diagram-enlarge{min-height:33px;padding:5px 10px;font-size:11px;margin-bottom:9px}
+.diagram-panel .diagram-canvas svg{min-width:0}
+.diagram-panel .diagram-legend{font-size:11px;gap:6px 12px;line-height:1.7}
+.diagram-panel .diagram-directions{font-size:11px;line-height:1.8;padding:10px 0;gap:6px}
+.diagram-panel .diagram-explanation{padding:13px 15px;font-size:12px;line-height:1.85;border-radius:5px}
+.diagram-panel .diagram-explanation h4{font-size:14px;margin:0 0 7px}
+.diagram-panel .diagram-explanation ul{padding-left:18px;margin:9px 0 0}
+.diagram-panel .diagram-notes,.diagram-panel .diagram-textbook,.diagram-panel .diagram-text{font-size:11px;line-height:1.85}
+.diagram-panel .diagram-notes{margin-bottom:0;padding-left:17px}
+.diagram-panel .diagram-textbook{margin:14px 0}
+.diagram-panel .diagram-scroll-hint{display:none}
+@media(max-width:999px){.diagram-panel-body{max-height:65vh;overflow:auto}.diagram-panel-disclosure>summary{padding:12px 17px;font-size:14px}}
+@media(max-width:600px){.diagram-panel-body{padding:0 14px 16px}.diagram-panel .diagram-canvas svg{min-width:580px}.diagram-panel .diagram-scroll-hint{display:block;font-size:11px}.diagram-panel .diagram-controls{grid-template-columns:repeat(3,minmax(0,1fr))}.diagram-panel .diagram-controls button{width:100%;font-size:11px;text-align:left;min-height:48px;padding:8px 6px}}
+@media print{.diagram-panel{position:static;overflow:visible;border:0;margin:20px 0}.diagram-panel-disclosure>summary,.diagram-panel .diagram-controls,.diagram-panel .diagram-frame,.diagram-panel .diagram-enlarge,.diagram-panel .diagram-scroll-hint{display:none}.diagram-panel-disclosure::details-content{content-visibility:visible;display:block}.diagram-panel-disclosure>.diagram-panel-body{display:block!important;max-height:none;overflow:visible;padding:0}.diagram-panel .diagram-canvas svg{min-width:0}.diagram-panel .study-diagram{break-inside:avoid}}

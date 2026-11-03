@@ -3,9 +3,9 @@ const key='ruc802.practice.v1';
 const oldBackup=()=>({version:1,start:'2026-10-29',records:[{id:'old-record',qid:'MI001',rating:1,at:1000,updatedAt:1000,seconds:60,day:1}],drafts:{MI001:'保留原来的预算约束'},favorites:['MI001'],session:null});
 async function seed(page,value){await page.addInitScript(({key,value})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(value));},{key,value});}
 async function upload(page,value){await expect(page.locator('[data-action="import"]')).toBeEnabled();await page.locator('#import-file').setInputFiles({name:'progress.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(value))});}
-test('seven functional areas preserve legacy progress and question day counts',async({page})=>{
+test('functional navigation preserves legacy progress and question day counts',async({page})=>{
  await seed(page,oldBackup());await page.goto('/');
- await expect(page.getByRole('navigation',{name:'主导航'}).getByRole('link')).toHaveCount(7);
+ await expect(page.getByRole('navigation',{name:'主导航'}).getByRole('link')).toHaveText(['今日安排','专题串联','知识导图与拓扑','刷题训练','公式与背诵','复盘与记录','资料库','设置与备份']);
  await page.locator('#day-select').selectOption('1');await expect(page.locator('.subject-pills button')).toHaveCount(30);
  await page.getByRole('button',{name:/微观背10张/}).click();await expect(page.locator('#recall-heading')).toBeVisible();
  const stored=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);

@@ -1,0 +1,3019 @@
+{
+  "version": 1,
+  "subject": "micro",
+  "label": "微观专项题结构化训练提纲",
+  "source_note": "编者按现有专项题和已审校答案组织。stem仅列经济情境与制度条件，parts给出明确分问及0起步骤对应；分类是训练功能判断，不冒充原卷题型。原完整题干和答案独立保留。关联综合题用于专题迁移训练，不表示综合题逐字取自原题。",
+  "questions": [
+    {
+      "id": "MI001",
+      "source_sha256": "89cc55ac0c4ee55952dcf10a3453976aa3458b2e749d8db461c41443b8a4a020",
+      "review_sha256": "240b638ff2fe5e377ce112895e7e36096810daa6e12e405b4d26208d0eb0b37f",
+      "classification": "linked",
+      "classification_reason": "固定模型中串联价格冲击、补偿与需求分解",
+      "stem_md": "消费者效用 $u(x,y)=x^{\\frac{1}{3}}y^{\\frac{2}{3}}$，收入90，初始价格 $(3,2)$；随后x价格降至1，y价格与收入不变。收入补偿以初始效用为基准。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求收入90、原价格(3,2)及x价格降为1后两套普通需求与效用。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "在新价格(1,2)下，以旧效用为基准求收入补偿，并说明x降价的替代效应和收入效应方向。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI01",
+        "CMI02"
+      ]
+    },
+    {
+      "id": "MI002",
+      "source_sha256": "94f756e168360c9faf813f53fec05d293d966fc1cd4897c1f7e0ce9a482ef5a2",
+      "review_sha256": "f7394028d060e91373e9b0c1ac54d956d1f8ad7fcfbabadea3d77bd821424c9e",
+      "classification": "focused",
+      "classification_reason": "同一拟线性模型围绕收入角点检验命题",
+      "stem_md": "消费者效用 $u=8\\ln x+y$，$x>0,y\\ge0$，$p_y=1$，收入 $m>0$、x价格 $p>0$。指定比较情形为收入6、p由2降至1。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "推导给定收入与价格下的完整需求，检查非负消费边界。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "固定收入6，将x价格从2降至1，比较需求与效用；评价“拟线性必无收入效应”。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI01",
+        "CMI02"
+      ]
+    },
+    {
+      "id": "MI003",
+      "source_sha256": "8e5c42319347fb13a22adb056542310308b540450916bd04e8792dee6253d5db",
+      "review_sha256": "4e3c98b0f050b8f9c32a8df43c6c35c5a4bc99b7b355fe089ac92f9387b24087",
+      "classification": "focused",
+      "classification_reason": "同一互补偏好下计算两种货币福利指标",
+      "stem_md": "消费者效用 $u=\\min\\{x,2y\\}$，收入24，价格由 $(2,2)$ 变为 $(1,2)$。本题CV定义为降价后最多可抽走的收入；EV定义为在原价格达到新效用所需额外收入。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "价格由(2,2)降为(1,2)，分别求需求与效用并给支出函数。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "按题给两个定义计算CV、EV并解释差别。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI01",
+        "CMI02"
+      ]
+    },
+    {
+      "id": "MI004",
+      "source_sha256": "fd04b696735c8644a53e109dacb85b394bf9af953a5b5bc082fe67484297afb7",
+      "review_sha256": "4ef0fb14bf5612ffddee7cd0b8353698b201eb6fe9aa067600a99b7f48bdf4e8",
+      "classification": "focused",
+      "classification_reason": "线性目标的角点与多值选择",
+      "stem_md": "消费者效用 $u=3x+2y$，非负消费满足 $p_xx+p_yy\\le12$，固定 $p_y=2$，$p_x>0$。指定价格情形为 $p_x=2,3,4$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求x价格为正时的最优需求集合，并分别代入x价格2、3、4（y价格均为2）。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "解释为何本题不能只靠切点方程。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI01",
+        "CMI02"
+      ]
+    },
+    {
+      "id": "MI005",
+      "source_sha256": "e6471a7925dd9c73c040e8284f2c116ec4af52bbf12432bbd47ae4fdc87682b2",
+      "review_sha256": "df4e5d143862d49294d447213dff612c39f4c1b50a661c9e1379e8d0b9eb149e",
+      "classification": "focused",
+      "classification_reason": "一元全局优化与偏好凸性的针对性辨析",
+      "stem_md": "消费者效用 $u=x^2+2y^2$，$x,y\\ge0$，预算约束 $x+2y\\le12$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求内部驻点与各端点效用，确定全局最优。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "检验偏好凸性并评价通常消费者切点法的适用性。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI01",
+        "CMI02"
+      ]
+    },
+    {
+      "id": "MI006",
+      "source_sha256": "8ce5a0e8b5784a0abfc55108a703cb15e92014ca322a822e507326e1f049fefb",
+      "review_sha256": "30ec1ddda2dd073ee5cc62703247bccd85bec6b7819e0c9c91291f30a08ecc86",
+      "classification": "linked",
+      "classification_reason": "理论比较静态连到正常品与总替代反例",
+      "stem_md": "消费者效用 $U=f(x)+g(y)$，$f',g'>0$、$f'',g''<0$，价格和收入为正，唯一最优在内点。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "说明交叉边际效用的含义，并证明两商品正常。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "推导交叉价格导数，判断总替代命题并给反例。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI01",
+        "CMI02"
+      ]
+    },
+    {
+      "id": "MI007",
+      "source_sha256": "286e4f396869c9930127650c0ce62be9d09f189d5913ce3cd43f1ab0f8ccbbf0",
+      "review_sha256": "1f3df2bcce076e18df39c08e3c3623ab634488d963c4ba0d9c7dcb67af870912",
+      "classification": "focused",
+      "classification_reason": "最低消费平移与补偿支出同一模型",
+      "stem_md": "效用 $u=(x-2)^{\\frac{1}{2}}(y-1)^{\\frac{1}{2}}$，定义域 $x\\ge2,y\\ge1$，原价格 $(2,1)$、收入15；随后x价格升至3，补偿目标为维持原效用。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "推导可负担条件、需求和间接效用，计算原情形。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "只将x价格由2提高为3，求维持原效用所需收入增加，并核最低消费可负担性。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI01",
+        "CMI02"
+      ]
+    },
+    {
+      "id": "MI008",
+      "source_sha256": "d203a6c21202a6f316a5881c19f39152b9b50edab2b52f51027fef02c4068e73",
+      "review_sha256": "1dec0660b912759528640c2c6bb504a31ba74074810695d29de4f86988e2487b",
+      "classification": "linked",
+      "classification_reason": "数量约束、货币补偿与专用转移相互关联",
+      "stem_md": "效用 $u=12x-x^2+y$，收入50，y价格1、x价格4。依次考察无配给、限购 $x\\le2$，以及在该限购下发面额8、只能购买x的代金券。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "比较无配给与限购 $x\\le2$ 时的最优、效用和货币损失。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "仍限购 $x\\le2$，加入只能买x、面额8的代金券后求最终选择，判断是否消除损失。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI01",
+        "CMI02"
+      ]
+    },
+    {
+      "id": "MI009",
+      "source_sha256": "b916ecc9b4d0a3a5c96dd94da888e6118f548d369e6a075b08d0a8865dee59ee",
+      "review_sha256": "a463e039a89fa42bc6f76895b4c4eba9b3cb8fcc9545f6d8e15559d042a0f969",
+      "classification": "focused",
+      "classification_reason": "交叉可负担性与福利信息识别",
+      "stem_md": "消费者在 $p^0=(1,2)$ 时选择 $x^0=(4,3)$，在 $p^1=(2,1)$ 时选择 $x^1=(3,4)$，每期恰好花完预算。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "列两篮子在两套价格下的支出并检验WARP。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "计算价格指数，说明它能否单独认定福利改善。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI01",
+        "CMI02"
+      ]
+    },
+    {
+      "id": "MI010",
+      "source_sha256": "9068930f64ebcb9c1dc48be7d885bf31b2099dba4f6a7b1756b275bad615c793",
+      "review_sha256": "86ddbf7bc1f0fba7ceda712a65a3cb488576d7ca07ae72fe29ab87d8938d8eb5",
+      "classification": "linked",
+      "classification_reason": "一般恒等式、命题证明与数值检验相连",
+      "stem_md": "商品x的普通需求可微。数值情形采用 $u=\\sqrt{xy}$、收入20、价格 $(1,1)$；补偿替代效应采用自身价格的Slutsky口径。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "推导自身价格Slutsky方程并证明吉芬品的必要条件。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "在指定效用、价格和收入下分别计算三项价格分解并核加总。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI01",
+        "CMI02"
+      ]
+    },
+    {
+      "id": "MI011",
+      "source_sha256": "21f013c1122974dc1253d9579b9557a0fd946c40a1224baf6a6665e0ce0e1573",
+      "review_sha256": "316eaf00c0a028355e3a09d704aaca1242472a79ab38d635e427bb4348229a55",
+      "classification": "linked",
+      "classification_reason": "税收优化与消费者福利在同一需求上连接",
+      "stem_md": "效用 $u=10x-\\frac{x^2}{2}+y$，收入100，y价格1、x生产者价格2，对x征单位税 $t\\ge0$。税款不计作消费者可支配收入。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "推导含税需求并求税收最大化税率。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "计算该税率的效用损失、净损失，说明禁绝税率后的情况。",
+          "answer_step_indexes": [
+            0,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI03",
+        "CMI04"
+      ]
+    },
+    {
+      "id": "MI012",
+      "source_sha256": "6719179b24e035886bc6d9fe94e34f16f2f9efeac80c1840e4a7d66bbf827781",
+      "review_sha256": "76f2df11b212e8781ff62b9873abc59a05c0ac013fffd80d6048659ecf77ad07",
+      "classification": "anchor",
+      "classification_reason": "收入约束改变税基并牵涉乘子加权福利判据",
+      "stem_md": "效用 $u=10x-\\frac{x^2}{2}+y$，收入9，价格 $(1+t,1)$，$t\\ge0$，税收不返还。指定局部检验税率为0.1，函数为 $D(t)=U(0)-U(t)-\\lambda(t)R(t)$，其中 $\\lambda(t)$ 为预算乘子、$R(t)$ 为税收。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求完整需求分支并比较各分支税收最大值。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "在 $t=0.1$ 求预算乘子，检验题给 $D(t)$ 是否必严格增加。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI03",
+        "CMI04"
+      ]
+    },
+    {
+      "id": "MI013",
+      "source_sha256": "91d4a499a5f5b025ac716d212698ca001c1e08c24ab8c4af463ff77ef41cb5d5",
+      "review_sha256": "cf72ccdb4206994131ca28934fcf9da0a5ac39003c1eb52b32005fc62de742c8",
+      "classification": "linked",
+      "classification_reason": "事前转移与财政闭合、事后返还规则相区别",
+      "stem_md": "效用 $u=\\sqrt{xy}$，原收入24、两商品原价均1。对x征单位税1，并按原最优量一次性返还。另一个比较制度将实际税收均分返还。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "先求原需求，再对x征单位税1、按原最优数量一次性返还，求新需求、返还额及实际财政收支。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若改为将实际税收均分返还，说明为何需重新建立闭合，并据既有答案检验它与事前按旧量返还的区别。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI03",
+        "CMI04"
+      ]
+    },
+    {
+      "id": "MI014",
+      "source_sha256": "c6ccd550a04465a27a9e403130d8f0a74cba2b99c415eca6af97b9941b3730b2",
+      "review_sha256": "496fe34f51a814b8e22aac617ddd1169b302571a588b22aa9a2eec075dcbd40e",
+      "classification": "focused",
+      "classification_reason": "同一互补偏好下比较等收入税制",
+      "stem_md": "效用 $u=\\min\\{x,y\\}$，收入18、原价均1。方案A对x征单位税1；方案B征与A实际税收相同的总付税。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "方案A对x征单位税1，方案B改为与A同实际税收的总付税；分别求需求、效用和税收。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "解释两方案的福利差异及无谓损失。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI03",
+        "CMI04"
+      ]
+    },
+    {
+      "id": "MI015",
+      "source_sha256": "63d757dcb2834291d4efd4aaf8487fd822fd0e2bbf108a68a6136fb64aba2a18",
+      "review_sha256": "441062f2f6cdb3ac090a1119539d161e2d293fe12210265202d26a0a7a39fac3",
+      "classification": "focused",
+      "classification_reason": "非线性面积与精确货币补偿的识别",
+      "stem_md": "普通需求 $x=\\frac{16}{p^2}$，偏好为拟线性且收入充分，价格从4降到2。面积近似采用端点梯形。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "价格由4降至2，计算端点需求和精确消费者剩余增量。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "计算端点梯形面积并解释哪个指标是精确补偿。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI03",
+        "CMI04"
+      ]
+    },
+    {
+      "id": "MI016",
+      "source_sha256": "431b4760d3fdf2b5203ef31a72ad0b82fc6c48db87a3ce82773ab09172698c2b",
+      "review_sha256": "c3a1040c9b3d7c3f8a3a7e764dcc9c1cc3881e768be63f5309dd98261e9010b0",
+      "classification": "anchor",
+      "classification_reason": "贸易政策数量、租金归属与本国福利联合分析",
+      "stem_md": "小国需求 $D=30-p$、供给 $S=p$，世界价格5。比较制度为自由贸易、每单位关税3、进口配额14；配额分别免费给国内企业或国外出口商。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "世界价5，分别求自由贸易和单位关税3下的消费、生产、进口、财政及本国福利。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "取消关税，进口配额定为14；求均衡价与租金，并分别核许可证免费给国内企业、国外出口商的本国福利。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI03",
+        "CMI04"
+      ]
+    },
+    {
+      "id": "MI017",
+      "source_sha256": "01e11bfacb9204c9cb28c5b742c906c056754f7ea1b07a8bbd41b31aaf5204be",
+      "review_sha256": "3f811f6d90aae3c1fe1849e9650c5222977fae68620893ef5a3c766b597872a1",
+      "classification": "linked",
+      "classification_reason": "管制出清、配给规则和福利识别递进",
+      "stem_md": "市场逆需求 $p=20-Q$、逆供给 $p=2+Q$。价格上限8，受管制交易量等于供给量。有效配给按最高愿付价优先；另一情形为随机配给。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求无管制均衡，再将价格上限设为8，求需求供给及缺口。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "保持上限8和交易量等于供给，按最高愿付价优先配给求剩余与DWL；再说明随机配给时哪些结果不唯一。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI03",
+        "CMI04"
+      ]
+    },
+    {
+      "id": "MI018",
+      "source_sha256": "5f9be8a55aed3eb1c7e8fc7d6d46136fa1b314776efb222c2b6688147d1a693e",
+      "review_sha256": "dcc670ba0243cd613ba31399b4bb2cbbaa4fdbcf31fb78310ea36819821b9e14",
+      "classification": "anchor",
+      "classification_reason": "市场势力下税种、税负归宿与福利比较",
+      "stem_md": "垄断需求 $p=40-Q$、成本 $C=4Q$。先考察无税，再对厂商征单位税8；最后改为与单位税实际收入相同的固定税。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "分别求无税和对厂商征单位税8时的量价、利润及福利。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "取消单位税，改征与其实际财政收入相同的固定税，重算并说明税负转嫁与法定缴纳主体的关系。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI03",
+        "CMI04"
+      ]
+    },
+    {
+      "id": "MI019",
+      "source_sha256": "bd0f937bcf6d41c12d738129b6c1ada9527b41767055fd51a2a16a86edc7b14d",
+      "review_sha256": "6ecf2c9b192c6f90614718f25c84edb6f30cb788d4f74eafdf15a881f3dd21cb",
+      "classification": "linked",
+      "classification_reason": "非线性税基优化与福利积分的同模型核算",
+      "stem_md": "拟线性需求 $x=\\frac{100}{(p+t)^2}$，生产者价格 $p=2$，单位税 $t\\ge0$，收入充分。福利比较基准为无税。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求税收最大化的单位税率与收入。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "用积分求相对无税的DWL，比较税收并解释。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI03",
+        "CMI04"
+      ]
+    },
+    {
+      "id": "MI020",
+      "source_sha256": "d46c4396c139f4c7b8b4df41bc392def8faa290c83efe504be06ba77938795a5",
+      "review_sha256": "7d120afe647c0f54ec7a7deb62b90bbd2482f8020e0ff6d0344a391d58ef8ee7",
+      "classification": "linked",
+      "classification_reason": "非线性预算的两种税基规则需全局比较",
+      "stem_md": "消费者禀赋x共4、现金0，效用 $u=\\sqrt{xy}$，市场x价2、y价1。原税制对出售超过1的部分每单位征1；另一税制在出售超过1时对全部出售量每单位征1。税收均不返还。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "超过出售1单位后，仅对超出部分每单位征税1，写预算各段并求最优出售量和消费。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "改为一旦出售超过1单位，就对全部出售量每单位征税1，重新比较全局最优。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI03",
+        "CMI04"
+      ]
+    },
+    {
+      "id": "MI021",
+      "source_sha256": "1d8cd3388a7fb0aaccfabcef58e9310204c020cf1cfd2ffdcf3caa6feb6e4bf5",
+      "review_sha256": "3865152586c0a7c78a34c8ba8acd9a42e4d8ee217c7e82b6b23a31205cc12b95",
+      "classification": "focused",
+      "classification_reason": "同一风险配置比较公平和加价保障",
+      "stem_md": "初始财富100，损失64的概率为1/4，效用 $\\sqrt W$。赔付 $q\\in[0,64]$、保费 $aq$；比较费率 $a=\\frac{1}{4}$ 与 $a=\\frac{1}{3}$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "在公平费率 $a=\\frac{1}{4}$ 下求最优赔付、状态财富并核边界。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "仅将费率改为 $a=\\frac{1}{3}$，重新求最优并解释保障变化。",
+          "answer_step_indexes": [
+            0,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI05",
+        "CMI06"
+      ]
+    },
+    {
+      "id": "MI022",
+      "source_sha256": "af7bb6f0e1b4f3f415944d9dabc7f6e2a773051bf4d86c0d15eea3e8eaa48df9",
+      "review_sha256": "d2851aa1a83a09d82be3edc35f0135b2a97c03b2a72aa1e06dea673e73db9754",
+      "classification": "linked",
+      "classification_reason": "合同选择、参与约束和保险风险定价相连",
+      "stem_md": "初始财富100，损失64的概率为1/2，效用 $\\sqrt W$。合同一为全保险、保费35；合同二为免赔10、保费28。最高可收保费相对于不保险的外部选择定义。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "比较不保险、保费35的全保险、保费28且免赔10的合同，计算EU并选择。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求免赔合同最高保费与公平保费，区分其与风险溢价。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI05",
+        "CMI06"
+      ]
+    },
+    {
+      "id": "MI023",
+      "source_sha256": "99ed549b38fa287cdd225fb683825d7e4a2a8c45413da1b876fe1641601d8f0f",
+      "review_sha256": "3e8135e84e19d4aaf0d523b6ee5df5cc51d31f95d029e310abb71ba909cec16a",
+      "classification": "linked",
+      "classification_reason": "信息时点改变决策，区分利润准则与效用评价",
+      "stem_md": "晴雨各半，售价分别30、20，成本 $C(q)=\\frac{q^2}{2}+5q+100$。无信息时决策准则为期望利润最大化，再以 $U(\\pi)=\\sqrt\\pi$ 评价；完美信息在生产前揭示天气，信息收益以效用单位计。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "按期望利润准则求无信息产量、两状态利润和EU。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若生产前完美得知天气，逐状态求产量和EU，再计算效用单位的信息收益。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI05",
+        "CMI06"
+      ]
+    },
+    {
+      "id": "MI024",
+      "source_sha256": "170aa05d594f036bafd4fbf912f7ea778a11d446b12a54c71f7a79383be0a70a",
+      "review_sha256": "8bf9eb6549f6ab9d7e47d4c7618a03d242e7124722dfa0569be0416c713280e6",
+      "classification": "focused",
+      "classification_reason": "同一不确定生产问题直接EU优化和可行域核验",
+      "stem_md": "晴雨各半，售价30或20，成本 $C=\\frac{q^2}{2}+5q+100$，效用 $\\sqrt\\pi$。生产前直接最大化期望效用，两状态利润均须非负。作为比较给定完美信息期望效用约9.05646。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "确定利润非负的产量域，推导并回验EU最优。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "将候选与效用可行域端点比较，并与给定完美信息EU约9.05646比较。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI05",
+        "CMI06"
+      ]
+    },
+    {
+      "id": "MI025",
+      "source_sha256": "53fc4fedc2d16fc35e31d3aa6a17e4d722415f83aad29a8e51327333e67a3b5b",
+      "review_sha256": "b311557ad0654184f5d0af8473428a54ae3cc6057c28db5a2ea4b5ee37a3166d",
+      "classification": "focused",
+      "classification_reason": "同一资产组合的内点与边界比较",
+      "stem_md": "财富16，无风险总回报1，风险投资额 $a\\in[0,16]$，效用为对数期末财富。原风险回报2或1/2、各半；另一情形回报3/2或1/2、各半。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求原回报下最优投资和两状态财富。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "将风险资产回报改为3/2或1/2、各半，其余不变，重求投资并核边界。",
+          "answer_step_indexes": [
+            1
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI05",
+        "CMI06"
+      ]
+    },
+    {
+      "id": "MI026",
+      "source_sha256": "bbc7dfb142b39d5e0aee6cde7986d9fb78ef890752a075e9778682407051f59f",
+      "review_sha256": "24277f958b1d32f4740bb17d6a0d59afca7912cd261fe49a77f570280be0cbe2",
+      "classification": "linked",
+      "classification_reason": "状态价格、证券交易和消费平滑联合核算",
+      "stem_md": "晴雨各半，初始状态财富 $(20,80)$，效用 $E\\ln W$。可按价格1/2买只在晴天付1的证券，并按同价格卖只在雨天付1的证券，交易不借贷现金。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "列状态预算并求最优状态财富。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "核证券交易现金流及福利变化。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI05",
+        "CMI06"
+      ]
+    },
+    {
+      "id": "MI027",
+      "source_sha256": "f00280841710c25d99e174d060a35c122719aa35ac5c93cc2ced3fa4253683cb",
+      "review_sha256": "f5c69a5d79a1f2dc8ba7f67f3a73efab491d7eaffccc45909b6954c192f3d7fe",
+      "classification": "focused",
+      "classification_reason": "分段跨期预算与借贷方向",
+      "stem_md": "两期效用 $\\ln c_1+\\ln c_2$，原收入 $(60,60)$，存款利率0、借款利率50%，无其他约束。另一情形仅将第二期收入改为120。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "分别列借贷预算并求原收入下的最优。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "只将第二期收入由60改为120，存款利率0、借款利率50%不变，重求消费并核实际借贷方向。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI05",
+        "CMI06"
+      ]
+    },
+    {
+      "id": "MI028",
+      "source_sha256": "015e71cbecba4ae3303b6487e5a2e44e21229893734a253414dcb590ce25f33a",
+      "review_sha256": "7c1c6377a68eb0be535d2b996a3d01937a4bbcf3bb76435402d07b9fe2c12b4b",
+      "classification": "linked",
+      "classification_reason": "融资边界、影子价格与流动性转移",
+      "stem_md": "两期收入 $(20,80)$，效用 $\\ln c_1+\\ln c_2$，总回报1，最多借款10。后续情形在第一期额外给现金补助6。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求无约束与受限消费，并解释约束影子价值。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "在最多借款10的制度下，第一期额外获得现金补助6，重求消费并判断约束是否仍绑定。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI05",
+        "CMI06"
+      ]
+    },
+    {
+      "id": "MI029",
+      "source_sha256": "18286998722f21e1c5aa1a2343b5873e93a5041b231bbd983c261ffa38d8c6c7",
+      "review_sha256": "30e64d88770926517737d946d34cfc96ab04a599778c1a25a696381bb8b4c614",
+      "classification": "linked",
+      "classification_reason": "信息价值与收费状态风险相连",
+      "stem_md": "最终财富效用为平方根。无信息时财富100或36、各半；信息允许调整行动，使收费前财富确定为81。比较固定预付费与仅原始高状态收费F、另一状态免费的制度。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "建立不买信息的外部选择，求固定预付费上限。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "改为仅在原始高财富状态收费F、另一状态免费，求最高名义收费与期望收费并比较支付风险。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI05",
+        "CMI06"
+      ]
+    },
+    {
+      "id": "MI030",
+      "source_sha256": "9068993e54a9c81e88df475e90176162c075fde945290487243ca5609789228c",
+      "review_sha256": "37aa16c98f3a3a2453656d1ceef09d10007a846a34048430e2d745c386be623c",
+      "classification": "focused",
+      "classification_reason": "期望效用表示的正仿射限制",
+      "stem_md": "甲效用 $u(W)=\\sqrt W$，乙效用 $v(W)=W$。彩票最终财富0或100、各半，可换确定财富40。另将甲效用变换为 $\\tilde u(W)=u(W)^2=W$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "分别比较两人的彩票和确定财富选择及风险态度。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "将甲效用平方为 $\\tilde u(W)=W$，比较彩票选择，解释确定性排序与彩票排序的差别。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI05",
+        "CMI06"
+      ]
+    },
+    {
+      "id": "MI031",
+      "source_sha256": "8086d920a24b279efb509b62697ebb66f43dee9570e77afecea13e058ab2cde2",
+      "review_sha256": "2334aa4ffcced209a228e5145c14d8a6d184a70efb475ff5d56948cd6e8fc623",
+      "classification": "anchor",
+      "classification_reason": "条件成本、容量分支和影子价值形成生产综合锚点",
+      "stem_md": "企业技术 $q=\\sqrt{LK}$，要素价格 $w=4,r=1$。原可自由选择两投入；受限情形资本最多4。指定总产量为8。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求不受限长期条件投入及成本，再将资本限制为最多4，写完整产量范围的成本。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "在资本最多4时代入产量8，求投入、成本及容量影子成本。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI07",
+        "CMI08"
+      ]
+    },
+    {
+      "id": "MI032",
+      "source_sha256": "825b0b867fad4cf300cdd0552d2988adb4c179b9f79296784a6373ddf01ee86e",
+      "review_sha256": "363fb9fa030fda27291034319fb1983a73580b6db5f482a140ec39e49a1a692e",
+      "classification": "focused",
+      "classification_reason": "共同技术约束的线性成本优化",
+      "stem_md": "技术 $q=\\min\\{L+K,2L\\}$，$L,K\\ge0$，原要素价 $w=2,r=1$；另一情形仅把资本价r改为3。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "取劳动价2、资本价1，求给定产量的最低成本投入与成本。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "劳动价仍2，将资本价提高到3，重新求解，并说明能否把两技术约束分别最小化后相加。",
+          "answer_step_indexes": [
+            0,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI07",
+        "CMI08"
+      ]
+    },
+    {
+      "id": "MI033",
+      "source_sha256": "b13a1009e67ac2542f4020b2ffac919cc590822dd96d7d8678229b6266c1cbf6",
+      "review_sha256": "846080700d126e5bcc5adc52a330e838fa6151f4596f93dea66a95342b773d79",
+      "classification": "linked",
+      "classification_reason": "连续产量配置与离散开厂决策结合",
+      "stem_md": "两个工厂成本为 $C_1=q_1^2$、$C_2=2q_2^2+8$，第二厂固定费用仅开厂时发生。企业须生产总量Q，指定比较总量为3和12。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "在两厂均开条件下求产量分配和成本，再求开厂阈值。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "分别取总产量3和12，计算最优工厂组合及产量配置并解释。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI07",
+        "CMI08"
+      ]
+    },
+    {
+      "id": "MI034",
+      "source_sha256": "0e97a39ce76d387ebef2c62bc21f7491eb3230162a60593eeef4407800eb70e2",
+      "review_sha256": "ec3f31e8aac23893f37c28de538aa77fed8d07a72cd4aad173ee57e8448fb8ad",
+      "classification": "anchor",
+      "classification_reason": "企业短期供给、长期进入与税收传导的完整调整",
+      "stem_md": "行业需求 $Q_D=100-p$，初始10家相同企业、成本 $C=q^2+16$，固定成本短期沉没。长期允许自由进入退出，企业数可连续；征税情形每单位税2。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求固定企业数的短期均衡与利润。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "允许企业数连续且自由进入退出，先求无税长期均衡，再征每单位税2，重求长期变化。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI07",
+        "CMI08"
+      ]
+    },
+    {
+      "id": "MI035",
+      "source_sha256": "ce0496d428747469d8798013ef64c72ad3dc9d26017984064eb821d27831c358",
+      "review_sha256": "d7d1b814470b4882fb5804e99ccf3c626b54086a683142d1373c45a86590b8de",
+      "classification": "linked",
+      "classification_reason": "限制进入造成的经营租与许可资产价格",
+      "stem_md": "需求 $Q=120-p$，企业成本 $q^2+16$，最多10张许可证、每证一家企业，考察许可证全部使用情形。比较基准为不限制自由进入；许可证可交易。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "先按10张许可证全部使用求均衡和每厂利润，再与无限制自由进入比较。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "说明可交易许可的租金上限由何决定。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI07",
+        "CMI08"
+      ]
+    },
+    {
+      "id": "MI036",
+      "source_sha256": "d828a996cdde84360141103224e95ae1a3e32f2f06b95c4f2a31f8f5408c2b44",
+      "review_sha256": "2181a2b576e02c82e076ac324244170cfdf70af7373db065f62a217afc3464ad",
+      "classification": "focused",
+      "classification_reason": "规模报酬、成本和利润存在性关系",
+      "stem_md": "两种企业技术分别为 $q=L^{\\frac{1}{4}}K^{\\frac{1}{4}}$ 与 $q=LK$，要素价均1，产品价格固定为正，产能没有上限。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "分别求两种技术的规模报酬、成本与固定正价利润最优是否存在。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "解释单一投入边际产量递减与规模报酬的区别。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI07",
+        "CMI08"
+      ]
+    },
+    {
+      "id": "MI037",
+      "source_sha256": "f3400ae97d8cf14929109a8b4116d927f06ef7407f3f84467c55b576ca731ca6",
+      "review_sha256": "b5cb99ccda4fbeafaa553777c0c3c4890fba15f1c2af1b9f519bdd8caa8f5eda",
+      "classification": "focused",
+      "classification_reason": "标准成本函数的对偶一致性检验",
+      "stem_md": "观测成本函数为 $C(w,r,q)=2q\\sqrt{wr}$，要素价格为正、产量 $q\\ge0$。另一观测式为 $q(w^2+r^2)$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求条件投入、核支出并检验齐次性和价格凹性。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "说明另一个观测式为何不可能是标准成本函数。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI07",
+        "CMI08"
+      ]
+    },
+    {
+      "id": "MI038",
+      "source_sha256": "5c280a4e80981d6dc1b56340f47931cc13915572805974034f41709adc139a8d",
+      "review_sha256": "66285d4172f6e9a4a1a9c6feb302d6053bd24064783d2e7ef40848bfcad25984",
+      "classification": "linked",
+      "classification_reason": "沉没和可避免成本改变停产退出判据",
+      "stem_md": "企业成本 $C=36+6q+q^2$，36为短期沉没成本。指定产品价8；另一营业制度要求每期另付可避免许可证费9。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求原短期供给和长期退出阈值，在价格8时比较生产、停产和退出。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "在价格8时新增每期可避免营业许可证费9，重作选择，并推导此制度的短期营业价格下限。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI07",
+        "CMI08"
+      ]
+    },
+    {
+      "id": "MI039",
+      "source_sha256": "74f1fff2ce1881d1d27e3cb80b17c81e68d416bbb8ea963b7f61b6eceb12e080",
+      "review_sha256": "686117be2522772711ef2b2e8ab41b0b7c2c16e82ebe33c9ba93e5321b5bed3e",
+      "classification": "linked",
+      "classification_reason": "技术变化触发企业规模和进入的不同阶段",
+      "stem_md": "原20家企业，各成本 $q^2+25$，行业需求 $Q=200-p$。技术进步将每家成本改为 $\\frac{q^2}{2}+25$；短期企业数固定，长期允许自由进入。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "固定20家，将每家成本从 $q^2+25$ 改为 $\\frac{q^2}{2}+25$，分别求旧、新短期均衡。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "保持新成本 $\\frac{q^2}{2}+25$，允许长期自由进入，求零利润均衡并比较价格、行业量与厂商数。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI07",
+        "CMI08"
+      ]
+    },
+    {
+      "id": "MI040",
+      "source_sha256": "a36ea264d485998714a366c494f66fd0bc5b43d03f5a06d4d4bd73398d611f6c",
+      "review_sha256": "1463b18c2e676431362011095d5c7e95002f665d1ce0ad6100d5fb77fe8d8903",
+      "classification": "linked",
+      "classification_reason": "投入替代、容量约束与规模报酬利润存在性",
+      "stem_md": "竞争企业技术 $q=\\sqrt{LK}$，产品价格8，原要素价均1，每家容量上限10。劳动征单位税3；另考察取消容量上限情形。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求一般成本最小投入并计算原产能最优利润。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "在原产能最多10的约束下，劳动征单位税3，重求投入、产量与利润；再取消产能上限，判断有限利润最大值的存在条件。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI07",
+        "CMI08"
+      ]
+    },
+    {
+      "id": "MI041",
+      "source_sha256": "6090ca62798d20b3f1cf1a9f4d908d67cd4bd38cc16e6fceeeb00e55c8427b5f",
+      "review_sha256": "8a00ae88dc92ea2c3f6ddf980fe0ad650e440cd74a98a61c99596194f53d0141",
+      "classification": "linked",
+      "classification_reason": "市场分段进入与歧视/统一定价比较",
+      "stem_md": "两个隔离市场需求 $q_1=20-p_1$、$q_2=30-2p_2$，实际需求不得为负，边际成本4，无固定成本。企业可分别定价或统一定价。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求两隔离市场分别定价的量价利润。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "分段求统一定价全局最优并比较服务范围。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI09",
+        "CMI10"
+      ]
+    },
+    {
+      "id": "MI042",
+      "source_sha256": "b376bdabc66ccc164f75b2fb45335ad6e9e009bbb826df3b69766a91f25f4478",
+      "review_sha256": "3c81cda7608175c1dcb4e7d64a93fef66f7c1bf891527ef8b5c7d59330033d14",
+      "classification": "focused",
+      "classification_reason": "成本参数下统一定价的服务集合选择",
+      "stem_md": "高低两类各一名消费者，需求 $q_H=20-p,q_L=8-p$，需求不得为负。企业统一定价，边际成本 $c\\in[0,8]$，可选择服务集合。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求同时服务两类与只服务高型的候选。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "在整个 $0\\le c\\le8$ 区间比较服务集合候选，检验各价格分支的有效性。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI09",
+        "CMI10"
+      ]
+    },
+    {
+      "id": "MI043",
+      "source_sha256": "efedf1e0736219553fcede7836029ce6acd8fdf914f4230494ed7790b45158a4",
+      "review_sha256": "ab3bb354f9e99ba4a60f8306ddf21fdeea974ddc0b2e1b8dbb8be2a56839b7ad",
+      "classification": "linked",
+      "classification_reason": "市场势力的效率与剩余分配对比",
+      "stem_md": "单一消费者逆需求 $p=24-2q$，边际成本4。比较统一单位定价与完全一级价格歧视。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求统一垄断和一级歧视的量价或总收费、利润及剩余。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "解释效率和消费者福利为何可反向变化。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI09",
+        "CMI10"
+      ]
+    },
+    {
+      "id": "MI044",
+      "source_sha256": "09110082d8eca98100f31ac0b93201a4f252c60a4e59a2dfe5ce362995eff259",
+      "review_sha256": "1e395b7da07143a3cafbe12437f703ea0b9c926ee61103bdaa2d94eb008a30c0",
+      "classification": "linked",
+      "classification_reason": "参与约束决定入场费并比较收费制度",
+      "stem_md": "10名相同消费者，各逆需求 $p=12-q$，外部选项0。厂商边际成本2、固定成本100，可收每人入场费F及统一单位价p；比较基准为只收统一单位价。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "写需求与参与约束并求最优两部合同及利润。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "与仅统一单位定价比较。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI09",
+        "CMI10"
+      ]
+    },
+    {
+      "id": "MI045",
+      "source_sha256": "1966045989a961f750f840028fe74f4b022007182979fe7fd422f7662dba075b",
+      "review_sha256": "72866e05d6857c4921d0d2e84635dd70c2a421980c6ffbb16d0c7e074f0f2aca",
+      "classification": "linked",
+      "classification_reason": "异质消费者的参与与市场排除",
+      "stem_md": "两名消费者需求分别 $q_H=12-p,q_L=8-p$，边际成本0，外部选项0。企业统一两部收费 $(F,p)$，可同时服务两人或只服务高型。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求同时服务两人时的最优统一合同。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求只服务高型的最优合同并选择全局方案。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI09",
+        "CMI10"
+      ]
+    },
+    {
+      "id": "MI046",
+      "source_sha256": "40728ed68e08c6dd3af92bfb80ea6cf03f78a257412fc85e736446d84c061e7f",
+      "review_sha256": "934f8b87afea9dd547f95158d5800d35cbf8e2301514b8a8f07e75d4d4e8b974",
+      "classification": "focused",
+      "classification_reason": "相关性改变捆绑和单卖收益",
+      "stem_md": "两名消费者对A、B估值为 $(10,4)$ 与 $(4,10)$，各最多买每品一件，两品边际成本均0。另一估值组合为 $(10,10)$ 与 $(4,4)$。销售制度分别为单卖与纯捆绑。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "在原估值下分别求单卖与纯捆绑最优。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "将两人的(A,B)估值改为(10,10)与(4,4)，重新比较分别销售与纯捆绑，并解释相关性的影响。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI09",
+        "CMI10"
+      ]
+    },
+    {
+      "id": "MI047",
+      "source_sha256": "432e4939a198dcc7db24d05be5474459ff13db438150dc676c018fe2ef5df300",
+      "review_sha256": "286050e2308cfbdf15c1c637142ecb40bd6237ddc0dde14c8581c94f4660a4d9",
+      "classification": "anchor",
+      "classification_reason": "自然垄断效率、补贴和收支平衡监管的连续权衡",
+      "stem_md": "需求 $p=30-Q$，自然垄断成本 $C=100+2Q$。比较垄断、边际成本定价及不补贴且收支平衡的平均成本定价。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求垄断与边际成本定价的量价利润和补贴。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求收支平衡的平均成本价格各支并选择福利较高者。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI09",
+        "CMI10"
+      ]
+    },
+    {
+      "id": "MI048",
+      "source_sha256": "ab0c63158458c45aa4429631a3b8519d53d15b2387ce36b9f2a9140a82a91b43",
+      "review_sha256": "f1b04dcb803c73781196e0ce1e3eaf245d9a504cf21a48673e888489ca5215ea",
+      "classification": "linked",
+      "classification_reason": "联合优化先检查存在性再改费用",
+      "stem_md": "需求 $Q=20+2\\sqrt A-p$，$A\\ge0$ 为广告投入，生产边际成本4，原广告费用为A。厂商同时选价格和广告；另一情形广告费用为2A。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求原费用下的候选并判断有限最大值是否存在。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "仅将广告费用由A改为2A，其余需求和生产成本不变，求有限全局最优。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI09",
+        "CMI10"
+      ]
+    },
+    {
+      "id": "MI049",
+      "source_sha256": "080a202ebb7b9bb9a94bf873316d05589fcb859a1a64b036709487ce3334d931",
+      "review_sha256": "8bd939021b51ef3331ecf24343c3a8263bac630f9731f47c772d54a478ff1a09",
+      "classification": "linked",
+      "classification_reason": "跨时段共享容量与分段影子价",
+      "stem_md": "高峰逆需求 $p_H=20-Q_H$，低谷 $p_L=12-Q_L$，两期运营边际成本均2，共享容量K，每单位容量成本4。企业利润为两期收入减运营和容量成本。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "给定容量求两期产量，再全局选择容量。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "核两期价格、利润及容量影子价分担。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI09",
+        "CMI10"
+      ]
+    },
+    {
+      "id": "MI050",
+      "source_sha256": "c0a715cd792a4be23a4564e5e5618445616044d1e24040b06706308e6f57997d",
+      "review_sha256": "d9f6a8a553730c30923ed6da0f99d93f90a3a42e987bbc3fa059d5834f5556c5",
+      "classification": "anchor",
+      "classification_reason": "质量数量共同选择与定价制度的效率差异",
+      "stem_md": "一位消费者对质量s与数量q的总愿付价 $V=(10+s)q-\\frac{q^2}{2}$，生产成本 $2q+s^2$，数量质量非负。厂商可一级歧视提取全部剩余；另一制度只允许单位定价。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求一级歧视的质量、数量与最优性。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "取消一级歧视，改为只允许单位定价，重新求质量与数量，并与原制度比较。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI09",
+        "CMI10"
+      ]
+    },
+    {
+      "id": "MI051",
+      "source_sha256": "73387aa65ad4862242ecc1ca35d25c4a59fb06cfd6bd79885285003e3c92587d",
+      "review_sha256": "14664b6ec77550a0b60df65e861db7109410335a593a0f0744cfefdec81f2442",
+      "classification": "anchor",
+      "classification_reason": "寡头行为、联合经营与福利基准的统一市场比较",
+      "stem_md": "两家同质品企业面对 $p=50-Q$，各边际成本2。比较同时古诺、联合利润最大化且产量均分、竞争有效三种配置。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "从最佳反应求古诺均衡量价利润。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求联合最优与竞争有效配置，完整比较总剩余。",
+          "answer_step_indexes": [
+            2,
+            3
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI11",
+        "CMI12"
+      ]
+    },
+    {
+      "id": "MI052",
+      "source_sha256": "d69808e7be3c3d947ce74ecb24929e2b8bc0b7c16df89d2e7402958936fbe853",
+      "review_sha256": "773c722751381f4c12b5135f26951654461eddf66b5068887e1baf0a1043fe07",
+      "classification": "focused",
+      "classification_reason": "非对称成本下内点与退出分支",
+      "stem_md": "需求 $p=40-q_1-q_2$，企业1边际成本4，企业2边际成本c，产量非负，同时选数量。指定参数情形为 $c=30$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求双方正产候选及成立范围。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "取企业2边际成本c为30，重新求非负实际均衡，解释负产量候选为何不可用。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI11",
+        "CMI12"
+      ]
+    },
+    {
+      "id": "MI053",
+      "source_sha256": "472019798d1b374f4ddc904306a1adf3c82cbd84bdbd8a6a59b84dfb5a9d15ef",
+      "review_sha256": "1676eda70c154a7135b8e400bcc55009437d790049f1a0eccb7550037d296f8a",
+      "classification": "linked",
+      "classification_reason": "多厂均衡与加成弹性恒等式相连",
+      "stem_md": "n家相同古诺企业面对 $p=a-bQ$，边际成本c，$a>c,b>0$。加成率和价格弹性在均衡价格为正的域讨论，并另考察c为正的限制。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "推导对称产量、价格和Lerner指数。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "用需求弹性验证加成关系，并说明正成本限制与正价格域。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI11",
+        "CMI12"
+      ]
+    },
+    {
+      "id": "MI054",
+      "source_sha256": "c1bdba1b51aeab3f651daf8ee40b67df6cd4adfd03d43aa42c186a757ab0a3ff",
+      "review_sha256": "d6b831a329c9ecb8629ceb597dd4aaa80ac7d68e7052c73ec68806ef004b2805",
+      "classification": "focused",
+      "classification_reason": "剩余需求的构造与厂商优化",
+      "stem_md": "市场需求 $Q=100-p$，主导企业边际成本10，竞争边缘供给 $Q_f=p-10$，价格至少10。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "推导主导企业剩余需求并求市场均衡。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "说明把全市场需求直接代入利润会错在哪。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI11",
+        "CMI12"
+      ]
+    },
+    {
+      "id": "MI055",
+      "source_sha256": "02601c9aa55c30f794b37d1367db747c7510d8318f8d3bae6fa004fe6373d378",
+      "review_sha256": "2137f3f157eb50a4c7ae4652f4fb27575c9f6b454468c2eee29197f6af5a067c",
+      "classification": "linked",
+      "classification_reason": "差异化与同质价格竞争的机制转换",
+      "stem_md": "两厂同时选非负价格，需求 $q_1=12-2p_1+p_2,q_2=12-2p_2+p_1$，边际成本均2。另一比较制度为完全同质品且无容量约束。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求差异品定价最佳反应、均衡及利润。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "改为完全同质品、无容量限制，以价格偏离解释均衡，判断原差异品数值是否仍适用。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI11",
+        "CMI12"
+      ]
+    },
+    {
+      "id": "MI056",
+      "source_sha256": "94cd4fea89788482c42afa41dd6c3c63a7da709b850e3372309a837d9fefaff1",
+      "review_sha256": "f3ef0275b7ddf0bcbb9254dc2a55568513a16de7c0ef1f5ce1d040626896a6ee",
+      "classification": "linked",
+      "classification_reason": "序贯策略、分支检验与承诺",
+      "stem_md": "需求 $p=50-q_1-q_2$，两厂边际成本均2。企业1先承诺产量、企业2观察后行动。比较基准为同时古诺；另考察先手公告可随意撤回的情形。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "逆向求完整后手策略和先手最优，核各分支。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "与相同市场的同时古诺比较；若企业1产量公告可随意撤回，说明先行结论的适用性。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI11",
+        "CMI12"
+      ]
+    },
+    {
+      "id": "MI057",
+      "source_sha256": "d443652f1aa48c494294eea081182ac500accbf52c512519ce668de8880df1b4",
+      "review_sha256": "79ebc7021bb3fccd31046cbb3dca87435a63c502f5607e3364f8684afc12506e",
+      "classification": "linked",
+      "classification_reason": "单期偏离优化连接无限期激励与有限期逆推",
+      "stem_md": "每期需求 $p=50-Q$，两厂边际成本2。合谋计划每厂产12；任何一次偏离后永远回到各产16的古诺惩罚。原为无限重复；另比较已知有限次数且末期均衡唯一的情形。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "计算合谋、最佳偏离与惩罚利润，求最低贴现因子。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "把无限重复改为共同知道的有限次数，并给定末期唯一阶段均衡，解释各期结果。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI11",
+        "CMI12"
+      ]
+    },
+    {
+      "id": "MI058",
+      "source_sha256": "a31f9cb5c54480e72638a1bc945649f37eafc1f48f1d10f20ba1ee39b9e4cfdb",
+      "review_sha256": "472c16d47491185107cb0cad6881d76871cb268cb0e3590202768795afa18772",
+      "classification": "focused",
+      "classification_reason": "同一协调博弈的纯策略与混合策略求解",
+      "stem_md": "双方同时选A或B。行玩家收益矩阵 $\\begin{pmatrix}3&0\\\\0&1\\end{pmatrix}$，列玩家收益矩阵 $\\begin{pmatrix}1&0\\\\0&3\\end{pmatrix}$，行、列行动次序均为A、B。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求纯策略均衡并列完全混合无差异条件。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "计算混合概率和收益，解释双方概率为何不同。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI11",
+        "CMI12"
+      ]
+    },
+    {
+      "id": "MI059",
+      "source_sha256": "2a9f9e9d43c47389b95d3e7698a5d3b4d31da8ec205571b2fb2e9aee617d77f9",
+      "review_sha256": "ab18bc0bb2533c1db946b1062e36fd8828853e057f34a3a559e6c8b3b467fa62",
+      "classification": "linked",
+      "classification_reason": "私人类型下条件策略与对手期望反应",
+      "stem_md": "需求 $p=30-q_1-q_2$。企业1边际成本0或12、各半，仅其自己知道类型；企业2边际成本6，只知道类型分布。两厂同时选非负产量。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "写两类型企业1与不知情企业2的最优条件。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求贝叶斯均衡并核全部类型非负。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI11",
+        "CMI12"
+      ]
+    },
+    {
+      "id": "MI060",
+      "source_sha256": "d1138cd80b61fb7a10101e42da240f84c43d5b21f50959dfb697e8e517c62330",
+      "review_sha256": "16a7aa97941b48222aab1e927c37e1fcb77b2d66a13d964d5eab62bb7dcafeeb",
+      "classification": "anchor",
+      "classification_reason": "策略证明、收入积分与机制比较",
+      "stem_md": "两位风险中性投标者独立私人估值，均匀分布于0至1，拍卖单一物品、无保留价。比较二价与对称一价拍卖。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "证明二价真实报价弱占优并求卖方期望收入。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "给出并核验一价对称报价，比较收入及等收入条件。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI11",
+        "CMI12"
+      ]
+    },
+    {
+      "id": "MI061",
+      "source_sha256": "991b960688b4b95e5ac4d51d35bacf5addc9774573417b891975fc6fd876d555",
+      "review_sha256": "477e6819e96bd9e2f80aa9306f3a5542c4af02d17603ef92930670ec17dd0654",
+      "classification": "anchor",
+      "classification_reason": "买方市场势力、最低工资和竞争失业的同市场对照",
+      "stem_md": "劳动边际收益产品 $MRP=20-L$，劳动供给 $w=L$。比较竞争劳动市场与单一雇主。最低工资10用于单雇主情形，最低工资12用于竞争行业。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "先求竞争和单雇主基准，再在单雇主环境施最低工资10，重求并解释。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "改看竞争行业最低工资12，求失业并说明其机制与上一问是否相同。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI13",
+        "CMI14"
+      ]
+    },
+    {
+      "id": "MI062",
+      "source_sha256": "5ac19c67aa53bdf20d836bd8592a7fd927f3ad6ba92a0f5257780f3a293d8901",
+      "review_sha256": "db19dae2f7be39664ef3ae6ec97417e32da9b60afbbbed3af7ca80809bf8efae",
+      "classification": "focused",
+      "classification_reason": "最低消费约束引出的劳动供给比较静态",
+      "stem_md": "每天时间16小时，闲暇l、劳动h满足 $h+l=16$，无非劳动收入，消费 $c=wh$。效用 $u=\\ln(c-20)+\\ln l$，指定工资比较为2与4。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "确定可行工资域并推导内点闲暇、劳动、消费。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "将工资分别取2和4，计算劳动、闲暇、消费并解释劳动供给方向。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI13",
+        "CMI14"
+      ]
+    },
+    {
+      "id": "MI063",
+      "source_sha256": "ee4d2b99f5171e44ae9986fa21577ddbede7dbe215d506fbfb1fad024687e93e",
+      "review_sha256": "fa036e797fd271ef131d319e4184d65d5af4910167075727926790aeada9e861",
+      "classification": "linked",
+      "classification_reason": "工资禀赋财富效应与补偿劳动的分解",
+      "stem_md": "效用 $u=\\ln c+\\ln l$，每天16小时、无其他收入。工资由2升至4；补偿制度在新工资下征一次性税，使效用维持原水平。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "工资从2升到4，求两次实际劳动消费；在工资4下征一次性税保持旧效用，求补偿劳动。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "分解实际劳动变化的替代与收入效应。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI13",
+        "CMI14"
+      ]
+    },
+    {
+      "id": "MI064",
+      "source_sha256": "767c3c46b2a4fbf7d2914fd7770590ca03bba40ade8b10b2d7c1f99fd46fa0d4",
+      "review_sha256": "271433361445a98d8c95a45cd9397c8c0fc749d956a2b4de02af5d20be0a6d0c",
+      "classification": "linked",
+      "classification_reason": "人力资本跨期资源成本与成功风险",
+      "stem_md": "一年培训学费20并放弃当期工资30，未来两年每年工资增加30，利率10%，无其他收益。风险情形培训成功概率3/4、失败工资不增，决策者风险中性。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "先按确定性未来每年增薪30计算净现值，再把成功概率设为3/4、失败不增薪，判断风险中性者是否参加。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求风险中性者刚好参加的最高学费。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI13",
+        "CMI14"
+      ]
+    },
+    {
+      "id": "MI065",
+      "source_sha256": "2cde2820aff8daa31094f41cc695306f333dc994753ca6ab9d47fb017b54b10a",
+      "review_sha256": "67ffef1c4b495566c5aec6eadb3b38f6718125a31fc39186e2b9e4df05d7c5c3",
+      "classification": "linked",
+      "classification_reason": "工会目标与可转移效用效率基准",
+      "stem_md": "行业劳动需求 $L=20-w$，工人外部工资2。工会选统一工资，原目标为总工资租 $(w-2)L$；比较可转移效用下的有效就业和就业优先目标。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求工资租最大化的工资、就业与总租。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求可转移效用有效就业，并说明就业优先目标为何不同。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI13",
+        "CMI14"
+      ]
+    },
+    {
+      "id": "MI066",
+      "source_sha256": "cdcc26fe7781ecfba16b64def1f0046c423eaf922882d498c295feac7d5a91a4",
+      "review_sha256": "9dbde6d24ad17fcf72a42cb582c178a7ff80b00df60dea46e2f3afd9443c576f",
+      "classification": "linked",
+      "classification_reason": "劳动税楔、归宿和福利核算",
+      "stem_md": "劳动需求 $L_D=20-w_g$、供给 $L_S=w_n$，$w_g$ 为雇主总支付、$w_n$ 为工人净工资。每单位劳动缴税4；法定缴纳人可为雇主或工人。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求无税基准，再每单位劳动征税4，求雇主总支付、工人净工资、就业与税收。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "计算该税造成的额外损失；若仅把法定缴纳人改为工人，分析结果是否改变。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI13",
+        "CMI14"
+      ]
+    },
+    {
+      "id": "MI067",
+      "source_sha256": "d4fb2f0d8766d4779dd727e8ae9875682775515ce302210b495da24a5ef288b5",
+      "review_sha256": "91346557744ce1f5801ff20187180320f02f5450541f9d8cd9b97be5af6f2e56",
+      "classification": "focused",
+      "classification_reason": "固定岗位下两侧边际估值与配额租识别",
+      "stem_md": "劳动逆供给 $w=2+L$、逆需求 $w=20-L$。岗位制度最多允许8个岗位，竞争分配给机会成本最低者。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求竞争工资就业及劳动经济租。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "最多允许8个岗位且分配给最低机会成本者，求两侧边际工资，解释实际工资与岗位租的归属。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI13",
+        "CMI14"
+      ]
+    },
+    {
+      "id": "MI068",
+      "source_sha256": "54c83b63cea5f72bc073de29b4ad3aef82f688cb398b391760c4f0af5629b607",
+      "review_sha256": "82811b9acd6485aa02b5bf6192f3e13313d58fec1e3cc17bbb9fc91bd1f232e4",
+      "classification": "anchor",
+      "classification_reason": "投入成本与垄断产量共同响应工资冲击",
+      "stem_md": "垄断企业需求 $p=40-q$，技术 $q=\\sqrt{LK}$，资本价格1，劳动价格由4升至9，可长期调整两投入。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "在资本价1下，将劳动价分别取4和9，求长期成本及垄断最优量、投入。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "分辨固定产量替代效应与产品销量变化效应。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI13",
+        "CMI14"
+      ]
+    },
+    {
+      "id": "MI069",
+      "source_sha256": "a23916231f456c6ddd96f4d0652f33d5a9ebc46856b54c9abae778fc74f92b39",
+      "review_sha256": "c60ef45ad65181f62cb55f354fd4a897d64d5ed3426367ddcfc0689b0194051c",
+      "classification": "linked",
+      "classification_reason": "跨期消费平滑与劳动供给共同优化",
+      "stem_md": "两期工资2、4，利率0、无非劳动财富，可自由借贷。效用 $\\ln c_1+\\ln c_2-\\frac{h_1^2+h_2^2}{2}$，预算 $c_1+c_2=2h_1+4h_2$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "联立求两期消费与劳动。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "核跨期现金流和净借贷，并解释劳动跨期替代。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI13",
+        "CMI14"
+      ]
+    },
+    {
+      "id": "MI070",
+      "source_sha256": "5130589b5a4f60385f33e86dfdb9a721cc3ab9467f328f8f0bfcdb76af977713",
+      "review_sha256": "c7a79eedbb2d34e4343c1509b64ac9e1740b71ee85dbfed0ad62fc9c392864ad",
+      "classification": "focused",
+      "classification_reason": "工资分组均值与歧视因果识别",
+      "stem_md": "两组工人观测均薪12与9。岗位A的MRP15、岗位B的MRP8；两组处于A的比例分别4/5、1/5，其余处于B。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "计算按岗位边际收益产品付酬的两组均薪，并与观测均值比较。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "说明能否单独认定同工歧视并列所需补充证据。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI13",
+        "CMI14"
+      ]
+    },
+    {
+      "id": "MI071",
+      "source_sha256": "58fd98e909a84e77b6a59ef7d19c213a30d418677f1bbbc6e36fb1616d46602c",
+      "review_sha256": "c3aa5a23683fc5f110df55512a63a4367f76581d1974b6e3c8a07a3af97cc8c9",
+      "classification": "anchor",
+      "classification_reason": "交换价格、非线性社会目标和禀赋转移实施",
+      "stem_md": "两人两商品，总资源 $(2,3)$。A效用 $u_A=x_Ay_A$，B效用 $u_B=\\min\\{x_B,y_B\\}$，禀赋A $(2,0)$、B $(0,3)$，y价1、x价p。公平标准为最大化 $\\min\\{u_A,u_B\\}$，实施转移可仅转x或仅转y。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求竞争均衡，再求maxmin配置。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "对最大化两人最小效用的配置求支持价，并分别检验只转x、只转y的实施。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI15",
+        "CMI16"
+      ]
+    },
+    {
+      "id": "MI072",
+      "source_sha256": "343327972380f2b0d391bbeb9711c199ac6c5e2e4252a748349121ba2ce51b20",
+      "review_sha256": "41b7950ea925a98221d439b55be12e54b227756b510aaa955eb0633f0a720468",
+      "classification": "linked",
+      "classification_reason": "契约曲线、竞争出清和再分配比较",
+      "stem_md": "两人效用均为 $\\sqrt{xy}$，原禀赋A $(8,0)$、B $(0,8)$，y为计价物。再分配将2单位x从A转给B，总资源不变。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求契约曲线、原禀赋竞争均衡及效用。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "将2单位x从A转给B，其余不变，重求竞争价、配置与福利，解释效率与分配。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI15",
+        "CMI16"
+      ]
+    },
+    {
+      "id": "MI073",
+      "source_sha256": "30393441337b001e40fd754edc61330f90a34d52c12559bcfd79f3308f4181cd",
+      "review_sha256": "566ed7c9674afa1f17c87a5ef03d64008b429206993a0b487167d5eda23029b8",
+      "classification": "focused",
+      "classification_reason": "拟线性交换内点条件与计价商品总资源为零的边界",
+      "stem_md": "A效用 $2\\ln x_A+y_A$，B效用 $\\ln x_B+y_B$，两人原禀赋均为x1、y5，y价1。另一个情形两人的y禀赋均改为0，x禀赋不变。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求原禀赋的均衡并检查预算内点。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "将两人y禀赋均改为0、各人x禀赋仍1，检验旧内点价格并给一个均衡，说明所报价格的支持条件。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI15",
+        "CMI16"
+      ]
+    },
+    {
+      "id": "MI074",
+      "source_sha256": "0d42f5cd3896eae5685ec29e66a53dece9505af32763fb4a41f3dbcfe137a1f2",
+      "review_sha256": "60d3f216add913b9bf70b01e11aa51272993802490dd228c0314db7019b416f8",
+      "classification": "linked",
+      "classification_reason": "效率集合与个体起点参与约束的区别",
+      "stem_md": "总资源 $(6,6)$，两人效用均为自身消费的乘积。给定起点A $(5,1)$、B $(1,5)$，自愿交易以双方不低于起点效用为条件。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "判断起点有效性并构造双方严格改进。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "描述全部有效配置及其中可由起点自愿达到者。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI15",
+        "CMI16"
+      ]
+    },
+    {
+      "id": "MI075",
+      "source_sha256": "d4762a767b49a5661bc76af899d42c647e2a582369b596600d2969e225e54f9d",
+      "review_sha256": "88103c3ac17eb0e020e84f343a066c60c6d852cc8b71f9566eb7f76927b69870",
+      "classification": "anchor",
+      "classification_reason": "交换外部性与社会目标、逐人帕累托核验",
+      "stem_md": "A禀赋x2、B禀赋y2，A效用 $x_Ay_A+\\eta x_B$，B效用 $x_By_B$，$\\eta=1$，y为计价物；各人把对方消费视为既定。社会比较子问题固定两人y消费均为1，采用等权加总效用。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "取外部性参数1，先求各自视对方消费给定的分散均衡；再固定两人y消费均为1，求加总效用最大的x分配。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "逐人比较并解释分散决策遗漏的影响。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI15",
+        "CMI16"
+      ]
+    },
+    {
+      "id": "MI076",
+      "source_sha256": "775b80e883c77fd091cec3cd8c5591ea75418647b1b82ed6b51d1dd2e635fc2b",
+      "review_sha256": "7b4a7f51f6a9fd8dac225b4f61cee9929e70bbb6ac717a1276da41efad5c8ed8",
+      "classification": "linked",
+      "classification_reason": "福利定理预算反证与外部性失效机制",
+      "stem_md": "竞争均衡环境满足局部非饱和、价格接受、市场完备且无外部性。比较环境为存在污染外部性。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "用预算和可行性不等式证明竞争均衡有效。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "说明污染外部性使哪一步不能直接使用。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI15",
+        "CMI16"
+      ]
+    },
+    {
+      "id": "MI077",
+      "source_sha256": "aa7c9cb912b084e618af7e06dd448c1bfcd3d4b7da42fcf9afe45b6c6c55097d",
+      "review_sha256": "5fd0b2af7ddb28d7ae960c9ee471f0dd3e34adac8521ad2419a9c0e297675c46",
+      "classification": "anchor",
+      "classification_reason": "生产利润闭合、消费者最优与价格函数检验",
+      "stem_md": "代表消费者效用 $\\ln x+y$、现金禀赋10，完全拥有成本 $C(q)=\\frac{q^2}{2}$ 的企业，y为计价物。消费者决策时把利润当给定收入。价格函数为 $F(p)=v(p,10+\\pi(p))$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求企业供给、消费者需求并闭合竞争均衡。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "检验题给F函数在均衡价的极值，说明不能任意相加间接效用和利润。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI15",
+        "CMI16"
+      ]
+    },
+    {
+      "id": "MI078",
+      "source_sha256": "e5403f79200948e5f0bf78968b319140af9741a2baad16ab453332c36c65f3ea",
+      "review_sha256": "5e3259a579aac588183da53cd7fbc7fe2760db007a7ce514eb2de281f589b2c5",
+      "classification": "linked",
+      "classification_reason": "相同效率前沿下福利刻度改变分配",
+      "stem_md": "两人效用均 $\\sqrt{xy}$，总资源 $(4,4)$，权重 $0<\\alpha<1$。福利目标分别为 $\\alpha u_A+(1-\\alpha)u_B$ 与 $\\alpha\\ln u_A+(1-\\alpha)\\ln u_B$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求有效配置与线性加权最优集合。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "将福利目标改为 $\\alpha\\ln u_A+(1-\\alpha)\\ln u_B$，求唯一内点并解释这一福利刻度变换的意义。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI15",
+        "CMI16"
+      ]
+    },
+    {
+      "id": "MI079",
+      "source_sha256": "beb29e6824e04def6c189fe61cc5a0cded661ba960f095fe079c5c646c49cc95",
+      "review_sha256": "89d3cfdb873fae5254ba7bd703a06a498f14db7ab1f23ae3e76bdde5994d359f",
+      "classification": "focused",
+      "classification_reason": "目标配置的价格支持与转移核账",
+      "stem_md": "两人效用均 $\\sqrt{xy}$，总资源 $(10,10)$，原禀赋A $(10,0)$、B $(0,10)$。目标配置为A $(3,3)$、B $(7,7)$。转移可用现金或仅由A转出x。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求支持价格及现金转移，并核两人预算。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若仅允许A转出x而不能作现金转移，求实施A(3,3)、B(7,7)的转移量并核商品和预算。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI15",
+        "CMI16"
+      ]
+    },
+    {
+      "id": "MI080",
+      "source_sha256": "1aed006b4371ae95adbc65588bbaf14394050d5f0e34f1794d263e03ce1f693d",
+      "review_sha256": "d124e3a804ac6e207ba4985d0576f2c72953c3d87a71fa2045a2ea114839d3ec",
+      "classification": "linked",
+      "classification_reason": "价格齐次、瓦尔拉斯恒等式与政府预算闭合",
+      "stem_md": "两商品纯交换，两人效用严格单调且预算恰用尽。另考察全部价格同乘5，以及有税收但未分配给家庭的环境。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "用加总预算解释为何只需核一个商品市场，并分析两商品价格同乘5时配置变化。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若税收被收取但没有分给家庭，重新检查加总预算闭合，判断市场出清推论。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI15",
+        "CMI16"
+      ]
+    },
+    {
+      "id": "MI081",
+      "source_sha256": "9cf7f4461b4a9fabc50f6ae70eae2871178ac617f5cd78737b667e8765631af0",
+      "review_sha256": "e33944f83a742dc29775aa58ab0c210ba46dafa7181dd153c45d0dcfc82534bf",
+      "classification": "anchor",
+      "classification_reason": "国家技术差异、要素跨国配置和世界生产边界",
+      "stem_md": "南国技术 $x_S=\\sqrt{L_{xS}},y_S=\\sqrt{L_{yS}}$，北国技术 $x_N=\\frac{\\sqrt{L_{xN}}}{2},y_N=\\frac{\\sqrt{L_{yN}}}{2}$。原每国劳动100、不能跨国；新制度允许总劳动200自由跨国。另给世界等量要求X=Y。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求劳动不能流动时的世界PPF。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "将原每国100劳动的不可流动制度改为总劳动200可自由跨国，求新PPF和两国劳动配置，并按X=Y比较产量增长。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI17",
+        "CMI18"
+      ]
+    },
+    {
+      "id": "MI082",
+      "source_sha256": "02056630c1196265fd26a31020fec18880929aacedbaecf7f1a13eb8eb67fcba",
+      "review_sha256": "ba3fab10850225bb901abb3880f18e9d18130128f2ab6b5286e430046be25378",
+      "classification": "linked",
+      "classification_reason": "比较优势形成世界分段边界并由价格选择分工",
+      "stem_md": "两国劳动各10。南国每单位劳动可产x2或y1，北国可产x1或y2，国内劳动可自由配置。另给世界等量要求X=Y及价格比 $\\frac{p_x}{p_y}=1$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "按机会成本求世界PPF折点和分段式。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "先按X=Y求最大共同量，再令世界价格比为1，说明各国的生产分工。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI17",
+        "CMI18"
+      ]
+    },
+    {
+      "id": "MI083",
+      "source_sha256": "60d587cba63e36c0d1535ef3c689a50695b8645299438a667638fae2b820184e",
+      "review_sha256": "a4e3f4b12f4b2c9918d37cd216eb099df2db29660443210cc85b612b740a7838",
+      "classification": "anchor",
+      "classification_reason": "同一经济的生产、消费、贸易预算和福利",
+      "stem_md": "代表经济劳动100，技术 $x=\\sqrt{L_x},y=\\sqrt{L_y}$，消费者效用 $u=xy$。原为封闭竞争经济；开放后世界价格外生为 $(2,1)$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "先求封闭竞争的生产消费与相对价格，再开放为世界价(2,1)，求生产消费。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "在世界价(2,1)下计算进出口、效用并核贸易价值平衡。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI17",
+        "CMI18"
+      ]
+    },
+    {
+      "id": "MI084",
+      "source_sha256": "2f6a7edfe4a215403e53c4f58c88377142f2afc336b74962b80147bd2cb93b7a",
+      "review_sha256": "b0bc078f917d5ab2875190558e8dea6ebce4140d944267dd812f844e70f1158d",
+      "classification": "linked",
+      "classification_reason": "外部损害改变联合目标并用税实施",
+      "stem_md": "钢厂利润 $\\pi_S=20s-\\frac{s^2}{2}$，渔场利润 $\\pi_F=12f-\\frac{f^2}{2}-2s$，两产量非负。比较分别决策、联合经营和对钢产量征单位税的制度。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求分散和联合产量利润，核总增益。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "对每单位钢产量征纠正税以实施联合最优，求税率并说明税款的社会核算。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI17",
+        "CMI18"
+      ]
+    },
+    {
+      "id": "MI085",
+      "source_sha256": "557548fd16aa80467da0694e2c400dfe906ecfacf30eb9ad226e0a977abbe373",
+      "review_sha256": "2ff4afcdd0aadd64736ede49d1a398f8d3c78a4c9b121001697a4e21cc5b1070",
+      "classification": "linked",
+      "classification_reason": "竞争与社会边际成本、纠正税和总剩余",
+      "stem_md": "逆需求 $p=20-Q$，私人边际成本 $MC=Q$、外部边际损害 $MD=Q$。比较竞争、社会有效配置、Pigou税和零排放制度。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求竞争与社会有效量、实施税和财政收入。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "核各方案社会总剩余并判断零排放是否最优。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI17",
+        "CMI18"
+      ]
+    },
+    {
+      "id": "MI086",
+      "source_sha256": "e236fa2fede4b608318b57dfc05df06ff8e546172445b208facfa1b3fd864ac5",
+      "review_sha256": "89dee101dddba0066327f474f2826645ce31f1984ab711cf8b858227868aaba1",
+      "classification": "linked",
+      "classification_reason": "总减排约束与许可交易的资源成本比较",
+      "stem_md": "两厂原排放各10，总排放上限8。减排边际成本 $MAC_1=2a_1,MAC_2=a_2$。初始许可各4；命令控制比较方案为各减排6。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求成本最低减排组合及许可价格。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "初始许可每厂4，求交易方向和数量；再与各减排6的命令控制比较总成本。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI17",
+        "CMI18"
+      ]
+    },
+    {
+      "id": "MI087",
+      "source_sha256": "a8f9d5111bf1db9ed18600adb0c6ab0c2167bdafad3688e7ef7dc9d5903c25f4",
+      "review_sha256": "056e967793704d70dcd259cc6ee395013a2ac664e10503bf5d2ba255405cb598",
+      "classification": "linked",
+      "classification_reason": "自愿反应与社会公共品条件",
+      "stem_md": "两人收入各10，私人物与公共品价格均1，效用 $u_i=\\ln x_i+\\ln G$。自愿贡献 $g_i$ 满足 $x_i=10-g_i,G=g_1+g_2$；社会比较采用对称有效配置。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求个人最佳反应及纳什贡献。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求对称有效供给，写Samuelson条件并解释搭便车。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI17",
+        "CMI18"
+      ]
+    },
+    {
+      "id": "MI088",
+      "source_sha256": "919db7b7c523f0bf0ad90afd1e57e8b1de67ec23de22cb269d13db97465fe285",
+      "review_sha256": "1012e9e6ed2df5da3d714b8a8948f97c3a63008dc911c632bd5b022706a3732d",
+      "classification": "anchor",
+      "classification_reason": "异质偏好自愿贡献连接可转移规划配置",
+      "stem_md": "两人收入各10、两品价格均1，效用 $u_1=\\ln x_1+\\ln G,u_2=\\ln x_2+2\\ln G$，原为自愿贡献。规划者可转移私人物、采用等权加总效用。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求纳什贡献并核正贡献条件。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "改由可转移私人物、等权加总效用的规划者选择，求配置，并说明与原收入下自愿筹资的区别。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI17",
+        "CMI18"
+      ]
+    },
+    {
+      "id": "MI089",
+      "source_sha256": "820d372d0b00ea8023ca9d4babb6efa96640d396a11ace4a54957f7c3dc2b813",
+      "review_sha256": "4bb75cef70e887c72079927d546d72cc2aea2cfbf28a3b1cd6280f7d496791d8",
+      "classification": "linked",
+      "classification_reason": "原子型拥堵外部性与税款返还行为假设",
+      "stem_md": "三人各选 $t_i\\ge0$，$T=\\sum_i t_i$，效用 $u_i=12t_i-\\frac{t_i^2}{2}-\\frac{T^2}{2}$。税制为线性出行税，总额均分返还，各人把返还视为既定。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求对称纳什和加总效用最优，说明个人对总量的影响。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "征线性出行税、总额均分返还且个体视返还给定，求实施最优的税，并说明该行为假设。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI17",
+        "CMI18"
+      ]
+    },
+    {
+      "id": "MI090",
+      "source_sha256": "9e1bd46ce2f8831b85ce6a98d56b6139a5da9faeb8b394387db5ecd740d20530",
+      "review_sha256": "e7f2d46088eed6da064f82f36a48020739f216d81c3987316cd2d2351bf91177",
+      "classification": "focused",
+      "classification_reason": "离散污染行动的产权、参与和真实协商成本",
+      "stem_md": "工厂产量固定，污染给渔民损失40。过滤器成本25、可完全消除损失，无其他影响。产权可为工厂排污权或渔民洁净权；另设协商耗真实资源20。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "比较有效行动并分别写两种产权下可接受转移区间。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "将达成协商所需真实资源成本设为20，按不同产权重新评价协商的可行性与效率。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI17",
+        "CMI18"
+      ]
+    },
+    {
+      "id": "MI091",
+      "source_sha256": "f6a184b9f41db3535374b285528259521682cd57329ee2dd33286820952283cf",
+      "review_sha256": "b39734ecad50922d9939b636af13c38c7ae0037da4e4176fc82ad3d5c748f439",
+      "classification": "linked",
+      "classification_reason": "参与集合定价与认证恢复交易",
+      "stem_md": "二手车高低质量各半，买方估值100、40，卖方保留价80、20。质量仅卖方知晓，竞争买方按实际出售车辆平均值报价。另一个制度提供可信免费认证。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "检验全体出售候选，并求可存续的质量和价格。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若增加可信免费认证，求各质量交易及价格并比较效率。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI19",
+        "CMI20"
+      ]
+    },
+    {
+      "id": "MI092",
+      "source_sha256": "7b5c45b0e9247dcbca203ea7365a1e9e5c8718fa42b59ecb0c905ac193d087d2",
+      "review_sha256": "94c6273ce2231f6f5db4ab712a50c172b0ae4e68ea174a373e62226e7a3c6626",
+      "classification": "linked",
+      "classification_reason": "保险平均成本与实际购买者集合重新定价",
+      "stem_md": "高低风险投保者各半，损失均100，事故概率0.4与0.1，类型为私人信息。竞争全保险报价等于实际投保者平均期望赔付；最高愿付保费分别为高型45、低型15。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "先按高低两类都愿投保计算零利润混同保费，再用低型最多愿付15、高型45检验参与。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求退出后保费，说明潜在低型交易及筛选结论的边界。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI19",
+        "CMI20"
+      ]
+    },
+    {
+      "id": "MI093",
+      "source_sha256": "011436f373ea89317ecbb2a8b58e29ca63256917a646fb090a8d8b1a78ac4462",
+      "review_sha256": "174ec0e9fdc0cc47616bf66cdf6d75ce6d7e9808e6787eaf2cbd2bf59f72af71",
+      "classification": "linked",
+      "classification_reason": "信号自选择、成本和完整均衡的前提",
+      "stem_md": "工人高低生产率12、6，雇主竞争且看不见类型。教育e不改变生产率，高型成本e、低型成本3e。候选分离为低型教育0、高型教育 $e^*$，工资分别6、12。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "在低型教育0、高型教育 $e^*$、工资6与12的候选下，列自选择约束并求可行教育区间和最低成本水平。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "解释社会成本以及无差异和离轨信念条件。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI19",
+        "CMI20"
+      ]
+    },
+    {
+      "id": "MI094",
+      "source_sha256": "b48ca1217e9f990b28ec8fec21a9538caa749aef44944d7fc2c79fb84db9f9ae",
+      "review_sha256": "871a4894b728cd77d481b0b0f9036f5c67fd97df0e1c1f5708d11cecbdd77f1c",
+      "classification": "anchor",
+      "classification_reason": "直接机制的IC、IR、数量角点与信息租",
+      "stem_md": "买者价值 $V=\\theta q-\\frac{q^2}{2}$，两类型 $\\theta_L=4,\\theta_H=8$ 各半。卖方边际成本0，提供菜单 $(q_L,T_L),(q_H,T_H)$，数量非负，买者外部选项0。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "列完整可行约束并求最优数量、转移和高型租。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "回验两型选择、参与及无差异实施条件。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI19",
+        "CMI20"
+      ]
+    },
+    {
+      "id": "MI095",
+      "source_sha256": "ac95b7793b9eda7d053e32fa287d15ef2305d20892284ae927266eae911c8ddb",
+      "review_sha256": "a4a6df3f8407f15445c82c2db2db98fc305e008a4d11bf4c533c04fb303e20e1",
+      "classification": "anchor",
+      "classification_reason": "概率改变信息租边际成本并与完全信息比较",
+      "stem_md": "买者价值 $V=\\theta q-\\frac{q^2}{2}$，类型4、8的概率分别3/4、1/4，卖方边际成本0、买者外部选项0，可提供数量与转移组成的两类型菜单。比较基准为完全信息。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "取低型概率3/4、高型1/4，列筛选约束并求最优数量、转移和信息租。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "回验自选择并与完全信息配置比较。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI19",
+        "CMI20"
+      ]
+    },
+    {
+      "id": "MI096",
+      "source_sha256": "31a10b4062dd702c96688dab1d8fe4c49518dc9370d7b9d5bb9e7c6f92cb43d7",
+      "review_sha256": "68d7073c7222faf470507036ab2657392bc70e65afc359a1cbbcb60de07b1db4",
+      "classification": "linked",
+      "classification_reason": "隐藏行动IC、IR、有限责任与委托人选择",
+      "stem_md": "高低努力成功概率3/4、1/4，成本6、0；成功收入40、失败0。代理风险中性、保留效用0，状态工资均非负，努力隐藏。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求实施高努力的最低工资合同、期望工资和利润。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "在原非负工资、风险中性环境中求实施低努力的合同和委托人利润，与高努力比较，并说明有限责任与无差异条件。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI19",
+        "CMI20"
+      ]
+    },
+    {
+      "id": "MI097",
+      "source_sha256": "b5f538deea15d6301bf75e9efeaaf3d61006a5b632a7c27969df3695d003b186",
+      "review_sha256": "80f2bfbeb562386f6bd5615ff2a63dce7f14fb2e8f780bb7e936f45643a55587",
+      "classification": "linked",
+      "classification_reason": "风险厌恶的激励约束与保险成本权衡",
+      "stem_md": "高低努力成功概率3/4、1/4，效用单位成本2、0。代理工资效用 $\\sqrt w$，保留效用1，工资非负，努力隐藏。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求最低期望工资实施高努力的合同并核绑定约束。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "解释固定工资为何无法激励以及保险与激励的取舍。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI19",
+        "CMI20"
+      ]
+    },
+    {
+      "id": "MI098",
+      "source_sha256": "e112518afff88bd57343100a7ab2646d188e9a9232949eff6d77374b1b6963a1",
+      "review_sha256": "c0a11cee5a84553575d9cb2be12eacf093585948e84e51a7a0468329ab03dd49",
+      "classification": "linked",
+      "classification_reason": "团队产出共享与效率合同、可验证性",
+      "stem_md": "两人努力 $e_i\\ge0$，团队产出 $Y=4(e_1+e_2)$，原制度平分产出，个人成本 $\\frac{e_i^2}{2}$。另比较可观察、可据以付酬的努力与隐藏努力。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求纳什努力与总剩余最优。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若各人努力可观察并可据以付酬，给边际产出支付合同、核预算；再说明努力隐藏时为何不能照搬。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI19",
+        "CMI20"
+      ]
+    },
+    {
+      "id": "MI099",
+      "source_sha256": "e42973f1d0ea4f02f70f51436bb1cfd071195bc6b7a9c63136875ee94a809420",
+      "review_sha256": "4a9639211b1f41e9b7ac1004de00e6ea45c0a79161069cda6332a7c7bb2e5740",
+      "classification": "anchor",
+      "classification_reason": "机制收入优化与交易效率、概率和福利积分",
+      "stem_md": "两名风险中性买者独立估值、均匀分布于0至1，卖者成本0。二价拍卖保留价r，仅一人达标时支付r、两人达标时付次高值。比较基准为无保留价。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求收入函数、最优保留价和成交概率。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "取消保留价作为反事实，与所求最优保留价制度比较期望收入和总剩余。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI19",
+        "CMI20"
+      ]
+    },
+    {
+      "id": "MI100",
+      "source_sha256": "e962dfe78b90569fcc26447415ce1d9c62f795f3864b51435242b16df17ae97f",
+      "review_sha256": "5547ecd5dcd7e53934f06be87607553cb07184f983847df51dd54ef7e9e79058",
+      "classification": "linked",
+      "classification_reason": "自愿认证、强制制度与可验证性成本",
+      "stem_md": "高低质量各半，买方估值100、40，卖方保留价80、20。卖方可付认证费k取得不可伪造质量证书，指定费用5、25。制度可为自愿或强制认证。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求自愿高质量认证的可持续费用条件，分别取认证费5和25比较两类参与与交易。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "保留不可伪造条件，讨论低型激励、强制认证的成本和消费者教育的验证边界。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "把有效题干整理为情境和条件，将原求解任务分列并对应现有审校步骤；各变式的数值与制度条件保留，未改变原题和答案。",
+      "comprehensive_ids": [
+        "CMI19",
+        "CMI20"
+      ]
+    }
+  ]
+}

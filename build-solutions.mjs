@@ -9,7 +9,7 @@ function sentenceLines(source){
  }
  if(source.slice(start))chunks.push(source.slice(start));return chunks;
 }
-export function teachingLines(source,{inlineEquations=true}={}){
+export function teachingLines(source,{inlineEquations=true,clauseBreaks=true}={}){
  const chunks=[];let start=0,mathStart=-1,display=false,bold=false;
  for(let i=0;i<source.length;i++){
   if(source[i]==='$'&&source[i-1]!=='\\'){
@@ -26,7 +26,7 @@ export function teachingLines(source,{inlineEquations=true}={}){
   }
   if(mathStart>=0)continue;
   if(source.slice(i,i+2)==='**'){bold=!bold;i++;continue;}
-  if(!bold&&(source[i]==='。'||source[i]==='；'||source[i]===';'||source.slice(i,i+2)==='\n\n'||(source[i]==='，'&&/^(?:所以|故|得到|于是|因此|从而|可得|最后|再)/u.test(source.slice(i+1))))){
+  if(!bold&&(source[i]==='。'||source.slice(i,i+2)==='\n\n'||clauseBreaks&&(source[i]==='；'||source[i]===';'||(source[i]==='，'&&/^(?:所以|故|得到|于是|因此|从而|可得|最后|再)/u.test(source.slice(i+1)))))){
    let end=i+1;while(source[end]==='\n')end++;chunks.push(source.slice(start,end));start=end;i=end-1;
   }
  }

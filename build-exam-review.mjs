@@ -34,7 +34,7 @@ export function prepareExamReview(question,entry,label='编者逐题考试作答
   if(!text(step.title)||!text(step.body_md)||!Array.isArray(step.uses)||!step.uses.length||!step.uses.every(text))fail('step '+(index+1));
   if(/运用.+完成本问|^解答第.+步$/.test(step.title)||step.body_md.includes('****')||step.body_md.trimStart().startsWith('**'+step.title))fail('unfinished step layout '+(index+1));
   if(/(?:^|\n)\s*[，；]/.test(step.body_md))fail('orphan punctuation '+(index+1));
-  return {id:'exam-step-'+(index+1),title:step.title,uses:step.uses,body_md:step.body_md,lines_md:teachingLines(step.body_md,{inlineEquations:false}),knowledge_indexes:[index]};
+  return {id:'exam-step-'+(index+1),title:step.title,uses:step.uses,body_md:step.body_md,lines_md:teachingLines(step.body_md,{inlineEquations:false,clauseBreaks:false}),knowledge_indexes:[index]};
  });
  const answer_md=steps.map(step=>'**'+step.title+'**\n\n'+step.body_md).join('\n\n');
  return {exam:true,label,verdict:entry.verdict,method_md:entry.method_md,pitfalls_md:entry.pitfalls_md,recap_md:entry.recap_md,...(entry.prompt_md===undefined?{}:{prompt_md:entry.prompt_md}),steps,audit:entry.audit,source:{kind:label,source_sha256:entry.source_sha256,original_answer_sha256:sha256(question.answer_md),review_sha256:sha256(JSON.stringify(entry)),answer_sha256:sha256(answer_md)}};

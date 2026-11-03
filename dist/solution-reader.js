@@ -30,6 +30,6 @@
   }).join('');
   return `<section class="solution-reader" data-solution-reader="${reader}" data-progress="${meta.progress}" data-total="${meta.total}"><ol class="solution-steps solution-reader-steps">${body}</ol><div class="solution-reader-controls"><p class="solution-reader-progress" role="status" aria-live="polite" aria-atomic="true">已展开 ${meta.progress} / ${meta.total} 行<span>当前第 ${meta.currentStep} / ${meta.stepCount} 步</span></p><div class="solution-reader-actions">${meta.complete?`<button class="btn" data-action="solution-reset" data-reader="${reader}">从第一行重读</button>`:`<button class="btn primary" data-action="solution-next" data-reader="${reader}">${meta.crossesStep?'进入第 '+meta.nextStep+' 步':'展开下一行'}</button><button class="btn" data-action="solution-all" data-reader="${reader}">展开全部解答</button>`}</div></div><div class="solution-reader-print rich">${guide.steps.map((step,index)=>(guide.exam?'<h3>第 '+(index+1)+' 步 '+escape(step.title)+'</h3>':'')+step.body_html).join('')}</div></section>`;
  }
- const guide=question=>question.solution.exam&&question.solution.exam.verdict!=='needs-source'?question.solution.exam:question.solution.study||question.solution;
+ const guide=question=>question.comprehensive?question.solution:question.solution.exam&&question.solution.exam.verdict!=='needs-source'?question.solution.exam:question.solution.study||question.solution;
  window.SolutionReader={render,metadata,guide};
 })();

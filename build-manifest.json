@@ -15,11 +15,11 @@
       "political": 10
     }
   },
-  "examMathCount": 1899,
+  "examMathCount": 2213,
   "examSummary": {
     "total": 300,
-    "revised": 67,
-    "confirmed": 233,
+    "revised": 300,
+    "confirmed": 0,
     "unresolved": 0,
     "promptCorrections": 2,
     "subjects": {
@@ -27,6 +27,58 @@
       "macro": 100,
       "political": 100
     }
+  },
+  "trainingMathCount": 1499,
+  "trainingSummary": {
+    "structured": 200,
+    "cases": 40,
+    "parts": 200,
+    "subjects": {
+      "micro": {
+        "structured": 100,
+        "cases": 20
+      },
+      "macro": {
+        "structured": 100,
+        "cases": 20
+      }
+    },
+    "classifications": {
+      "focused": 88,
+      "linked": 69,
+      "anchor": 43
+    },
+    "figures": 0,
+    "textOnly": 40,
+    "papers": 3
+  },
+  "conceptMathCount": 2308,
+  "conceptSummary": {
+    "topics": 20,
+    "nodes": 263,
+    "edges": 284,
+    "cards": 139,
+    "questions": 240,
+    "parts": 708,
+    "subjects": {
+      "micro": {
+        "topics": 10,
+        "nodes": 134,
+        "edges": 155,
+        "cards": 75,
+        "questions": 120,
+        "parts": 300
+      },
+      "macro": {
+        "topics": 10,
+        "nodes": 129,
+        "edges": 129,
+        "cards": 64,
+        "questions": 120,
+        "parts": 408
+      }
+    },
+    "bridges": 7
   },
   "mathErrors": [],
   "sourceHashes": {
@@ -43,9 +95,17 @@
     "topics_micro": "1b9188da0bbb02c6eaba4a8e6d505054f6ab6be1e4a62d34fec0f79299168040",
     "topics_macro": "e70588ff390f5420a176716453ffed0288dce5f7b7d3bbfa06bde60e0dd78ecc",
     "topics_political": "fa947518cbf763d7161601ae7e7c852bc68225a33514f8783ee19dd9ad3cc18b",
-    "exam_micro": "8e8334c5898cf7936d66d3755e6d5c531ae519787f11735889ffeb157234a02f",
-    "exam_macro": "19ebeed01d58be2f84f2547cfa6e35fc0379d292bb2102ffc6efc459c8114403",
-    "exam_political": "c2105b492ef7217e2af6b0212b9663fd8595cc1965e613ca3e309bd06df48c15"
+    "exam_micro": "6cb181e2cd56362b27b41ad7a4232a8df4962e62992fef39bb3ff923ac6428f9",
+    "exam_macro": "5f87cfa579a74e9d4523999f6fd557bf1bef533390d01c4e3d67d0bba109f51a",
+    "exam_political": "2848f79306cb1893d4387a0399cf65256d3938d55b0b32e0ea23725e5973cb92",
+    "training_micro": "fe8010e13ffd7fbb1a0edec5909402c4e46bee30f63b5b41a63a8c68997caade",
+    "comprehensive_micro": "f55372fa06248f14cff41e97ec8f09ec60daa5f15ccdfc86e05ba7c22ec25769",
+    "training_macro": "4796ca61230a3b226d315514969740ba71c351c7186dd70bb9701964d1af0056",
+    "comprehensive_macro": "1a695b5c51657f94f2aedcc84e1c36610cf59c016ddb77fd27171a48906b9d0c",
+    "training_papers": "867cb0667ccc9c422f9844f4b5fcacf9e94f66e5a8efbd66fab70dcc2dc4ff7f",
+    "concept_map_micro": "036575e9b7519e63f23bdcb84a4eabae095543dea62f0c82d3b525eecbfbdbfc",
+    "concept_map_macro": "412902bd5961aaa446da4c8dc52d167d6e51b1e5ab958dee136e012d716ba5e2",
+    "concept_map_bridges": "2b2506ae49a39db1eae2e2910bdb6963b12aa50c0c3c1481a8df1948f0c985bc"
   },
   "diagramSummary": {
     "total": 252,
@@ -58,6 +118,6 @@
       "political": 44
     }
   },
-  "materials": 5,
-  "builtAt": "2026-11-02T16:38:50.832Z"
+  "materials": 6,
+  "builtAt": "2026-11-03T09:04:47.235Z"
 }

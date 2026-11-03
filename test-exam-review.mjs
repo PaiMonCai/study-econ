@@ -43,3 +43,10 @@ test('inline parameter conditions stay with the reasoning they qualify',()=>{
  const review=prepareExamReview(question,e);
  assert.deepEqual(review.steps[0].lines_md,['当$a=1/3$时，导数在$q=0$处为正。']);
 });
+
+test('exam prose keeps its reasoning clauses together until the sentence ends',()=>{
+ const e=entry();e.steps[0].body_md='联立两式，先消去$y$；再代入预算，可得$x=2$。因此原条件成立。';
+ const review=prepareExamReview(question,e);
+ assert.deepEqual(review.steps[0].lines_md,['联立两式，先消去$y$；再代入预算，可得$x=2$。','因此原条件成立。']);
+ assert.equal(review.steps[0].lines_md.join(''),e.steps[0].body_md);
+});

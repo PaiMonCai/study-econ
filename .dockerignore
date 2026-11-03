@@ -11,9 +11,13 @@
 !build-diagrams.mjs
 !build-topics.mjs
 !build-exam-review.mjs
+!build-training.mjs
+!build-concept-map.mjs
+!export-concept-map.mjs
 !format-math.mjs
 !export-topics.mjs
 !export-exam-review.mjs
+!export-training.mjs
 !verify-site.mjs
 !content/
 !content/**

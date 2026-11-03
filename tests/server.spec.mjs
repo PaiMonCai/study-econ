@@ -30,6 +30,7 @@ test('password gate protects the app and logout revokes access',async({page},inf
 });
 test('diagram stages do not mutate the shared server learning library',async({page})=>{
  await login(page);await practice(page);await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();
+ const panel=page.locator('.diagram-panel-disclosure');if(!await panel.evaluate(el=>el.open))await panel.locator(':scope>summary').click();
  await expect(page.locator('.local-status')).toHaveText('服务器已保存');
  const before=await page.evaluate(()=>JSON.stringify(window.RemoteStore.state));
  const mutations=[];const listener=request=>{if(request.url().includes('/api/')&&request.method()!=='GET')mutations.push(request.method()+' '+request.url());};

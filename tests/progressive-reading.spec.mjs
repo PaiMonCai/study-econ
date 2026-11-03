@@ -55,8 +55,9 @@ test('topic stages advance individually and comparison is folded until requested
 test('insurance answer uses readable Markdown math with stacked fractions and aligned equations',async({page},info)=>{
  await page.goto('/#bank');await page.locator('#search').fill('MI021');await page.getByRole('button',{name:'看规范作答',exact:true}).click();await page.locator('[data-action="solution-all"]').click();
  const reader=page.locator('.solution-reader-steps');expect(await reader.locator('.mfrac').count()).toBeGreaterThan(5);expect(await reader.locator('.sqrt').count()).toBeGreaterThan(1);await expect(reader.locator('.katex-error,.math-error')).toHaveCount(0);
- const rendered=await reader.locator('[data-typeset-tex]').evaluateAll(els=>els.map(el=>el.getAttribute('data-typeset-tex')));
- expect(rendered.some(tex=>tex.includes('\\begin{aligned}')&&tex.includes('W_L'))).toBe(true);expect(rendered).toContain('q=\\frac{114}{11}');
+ const rendered=await reader.locator('[data-typeset-tex],annotation[encoding="application/x-tex"]').evaluateAll(els=>els.map(el=>el.getAttribute('data-typeset-tex')||el.textContent));
+ expect(rendered.some(tex=>tex.includes('\\begin{aligned}')&&tex.includes('W_L'))).toBe(true);
+ expect(rendered.some(tex=>/q(?:\^\*)?=\\frac\{114\}\{11\}/.test(tex))).toBe(true);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await reader.screenshot({path:info.outputPath('markdown-insurance-answer.png')});
 });

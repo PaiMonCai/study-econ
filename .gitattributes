@@ -1,0 +1,2 @@
+# Source fingerprints bind exact JSON bytes across platforms.
+content/*.json -text

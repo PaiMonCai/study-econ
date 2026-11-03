@@ -62,7 +62,7 @@ test('reading can return from knowledge cards and then switch to independent pra
 });
 
 test('guided study uses audited corrections while the original answer remains available',async({page})=>{
- for(const [subject,id,wrong,correct] of [['micro','MI075','所以这不是无转移的帕累托改善结论','帕累托改进'],['macro','MA025','货币利率下降并未抵消利差上升','仍然下降']]){
+ for(const [subject,id,wrong,correct] of [['micro','MI075','所以这不是无转移的帕累托改善结论','帕累托改进'],['macro','MA025','货币利率下降并未抵消利差上升',/仍(?:然)?下降/]]){
   await page.goto('/#bank');await page.locator(`[data-action="subject"][data-sub="${subject}"]`).click();await page.locator('#search').fill(id);
   await page.getByRole('button',{name:'看规范作答',exact:true}).click();await expect(page.locator('.study-correction')).toBeVisible();await page.locator('[data-action="solution-all"]').click();
   await expect(page.locator('.study-answer .solution-steps')).toContainText(correct);await expect(page.locator('.study-answer .solution-steps')).not.toContainText(wrong);

@@ -29,4 +29,57 @@ body[data-face="sans"]{--reading-font:var(--sans)}
 @media(max-width:1100px){.practice-layout{grid-template-columns:112px minmax(0,1fr);gap:16px}.question-rail{padding-left:9px;padding-right:9px}.subject-row{grid-template-columns:145px minmax(180px,1fr);gap:17px}.row-action{grid-column:2;display:flex;align-items:center;justify-content:space-between;gap:12px}.row-action .small{margin:0}.exercise-heading h1{font-size:23px}}
 @media(max-width:900px){.main{padding-left:24px;padding-right:24px}.practice-layout{display:block}.question-rail{max-height:none;overflow:visible;padding:14px 17px;margin-bottom:19px}.rail-ids{display:flex}.rail-title{margin-bottom:9px}.rail-progress{display:none}.exercise{max-width:850px}.reading-focus .main{padding-left:20px;padding-right:20px}.reading-focus .question-rail{display:none}.reading-bar{top:0}.subject-row{grid-template-columns:155px minmax(0,1fr)}}
 @media(max-width:600px){.main{padding:19px 15px 32px}.main:has(.practice-layout){padding-top:16px}.brand{font-size:18px;margin-bottom:10px}.sidebar{padding:14px 16px 0}.nav{grid-template-columns:repeat(4,minmax(0,1fr));gap:2px}.nav a{font-size:11px;padding:7px 2px;min-height:49px}.nav svg{width:17px;height:17px}.topbar{margin-bottom:22px}.page-heading p{line-height:1.9}.subject-row{display:block;padding:21px}.subject-topic{display:block;margin:5px 0 0;font-size:12px}.subject-pills{margin-top:17px;gap:8px}.subject-pills .qchip{min-height:39px;font-size:12px}.row-action{display:flex;margin-top:17px;justify-content:space-between}.row-action .small{font-size:12px}.row-action .btn{min-height:43px}.exercise-paper,.reading-focus .exercise-paper{padding:24px 21px}.exercise-heading h1{font-size:22px;line-height:1.65;margin-bottom:23px}.rich{line-height:2;letter-spacing:0}.rich p{margin-bottom:1.15em}.reading-bar{gap:6px;padding:8px 0;margin-bottom:5px}.reading-size{gap:1px}.reading-size button{padding:5px 9px;font-size:12px;min-height:32px}.reading-bar select{font-size:11px;padding:5px 3px;max-width:88px}.focus-toggle{padding:7px 8px;font-size:11px;min-height:38px}.exercise-top{margin-bottom:8px}.exercise-meta{font-size:11px;gap:8px;margin-bottom:17px}.question-rail .qchip{min-width:53px;font-size:11px}.question-rail{margin-bottom:16px}.writing textarea{font-size:16px;min-height:240px;padding:13px 14px}.writing-note{font-size:11px}.exercise-buttons .btn{font-size:12px;padding:9px 7px;min-height:44px}.answer-section>h2{font-size:18px}.answer-nav{justify-content:flex-start;gap:20px}.answer-label{font-size:11px}.pitfalls{padding:19px 17px}.self-check{padding:20px 17px}.rating-buttons{display:grid;grid-template-columns:1fr}.rating{width:100%;text-align:left;padding:11px 15px}.rating-next{width:100%;min-height:44px}.exercise-bottom{flex-wrap:nowrap;gap:10px;padding:11px 0 calc(11px + env(safe-area-inset-bottom))}.exercise-bottom span{order:0;flex-basis:auto;font-size:11px;flex:1}.exercise-bottom .btn{font-size:12px;padding:8px 13px}.reading-focus .main{padding-left:12px;padding-right:12px}.question-row h3{font-size:16px}.question-row p{line-height:1.8}.question-row .row-buttons{margin-top:6px}.material-list{gap:16px}}
-@media print{.sidebar,.question-rail,.reading-bar,.exercise-top,.exercise-buttons,.exercise-bottom,.self-check,.writing,.source,.topbar,.star,.answer-nav{display:none!important}.main,.exercise-paper{padding:0!important}.shell,.practice-layout{display:block}.paper{border:0}.rich{font-size:12pt;line-height:1.8}.math-block{break-inside:avoid}.answer-section{border-top:1px solid #aaa}body{background:white}}
+.shell:has(.split-workspace){display:block}
+.shell:has(.split-workspace)>.sidebar{display:none}
+body:has(.split-workspace) #toast{left:50%}
+.main:has(.split-workspace),.reading-focus .main:has(.split-workspace){max-width:1960px;margin:auto;padding-top:22px}
+.main:has(.split-workspace)>.topbar{margin-bottom:15px}
+.practice-layout,.reading-focus .practice-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:15px;max-width:none}
+.split-workspace>.exercise-top,.split-workspace>.reading-bar{grid-column:1/-1;margin:0}
+.split-workspace>.reading-bar{padding:7px 0;min-height:52px}
+.split-workspace>.exercise-top{min-height:34px}
+.practice-layout>.question-rail{grid-column:1/-1;position:relative;top:auto;display:flex;align-items:center;gap:16px;padding:12px 16px;margin:0;max-height:none;overflow:visible}
+.practice-layout .rail-title{flex:0 1 170px;font-size:12px;line-height:1.6;margin:0}
+.practice-layout .rail-ids{display:flex;flex:1;min-width:0;gap:7px;overflow:auto;padding:3px;scrollbar-width:thin}
+.practice-layout .rail-ids .qchip{flex:none;min-width:49px;min-height:34px;font-size:11px;padding:5px 7px}
+.practice-layout .rail-meta{display:flex;align-items:center;gap:12px;flex:none;font-size:11px;color:var(--muted)}
+.practice-layout .rail-progress{display:block;margin:0;padding:0;border:0;white-space:nowrap;font-size:11px}
+.rail-help{position:relative}.rail-help summary{cursor:pointer;white-space:nowrap}.rail-help p{position:absolute;right:0;top:100%;z-index:8;width:220px;margin:10px 0 0;padding:14px;background:var(--white);border:1px solid var(--line);border-radius:6px;line-height:1.8;box-shadow:0 6px 20px #18334712}
+.practice-layout .exercise{min-width:0;max-width:none;width:100%}
+.question-column{min-width:0;scrollbar-width:thin;overscroll-behavior-y:contain;scroll-padding:12px}
+.question-column:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.question-paper,.split-workspace .exercise-paper{padding:28px clamp(24px,2.2vw,38px)}
+.question-paper .exercise-heading h1{font-size:25px;line-height:1.55;margin-bottom:18px}
+.split-workspace .rich{line-height:1.95;letter-spacing:.005em}
+.split-workspace .rich p{margin-bottom:.8em}
+.split-workspace .rich p:last-child{margin-bottom:0}
+.split-workspace .math-block{margin:12px 0;padding:6px 2px}
+.question-paper .prompt{padding-bottom:0;border-bottom:0}
+.question-paper .study-entry{padding-top:18px;border-top:1px solid var(--line)}
+.question-column>.diagram-panel{margin-top:16px;position:static}
+.workspace-writing{padding:24px;margin-top:16px}
+.split-workspace .exercise-paper>.exercise-buttons{margin-top:0;padding-top:0}
+.answer-awaiting h2{font-size:19px;margin-bottom:10px}
+.answer-awaiting p{font-size:14px;line-height:1.9;color:var(--muted);margin-bottom:20px}
+.split-workspace .study-outline{padding-top:0}
+.question-paper .exercise-meta{margin-bottom:14px}
+.reading-focus .practice-layout>.question-rail{display:none}
+@media(min-width:1000px){
+ .practice-layout.split-workspace,.reading-focus .practice-layout.split-workspace{grid-template-columns:minmax(340px,.92fr) minmax(0,1.08fr);column-gap:24px}
+ .split-workspace>.question-column{grid-column:1;position:sticky;top:74px;max-height:calc(100vh - 92px);overflow:auto}
+ .split-workspace>.exercise{grid-column:2}
+ .question-column .diagram-panel-body{max-height:none;overflow:visible}
+}
+@media(max-width:999px){.split-workspace>.question-column,.split-workspace>.exercise{width:100%;max-width:920px;margin:auto}.practice-layout>.question-rail{max-width:920px;width:100%;margin:auto}}
+@media(max-width:700px){
+ .practice-layout>.question-rail{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:7px 12px;padding:10px 12px}
+ .practice-layout .rail-title{max-width:none;font-size:11px}
+ .practice-layout .rail-meta{gap:9px;font-size:10px}
+ .practice-layout .rail-ids{grid-column:1/-1;grid-row:2;width:100%}
+ .practice-layout .rail-ids .qchip{min-width:48px;min-height:34px}
+ .practice-layout{gap:12px}
+ .split-workspace .rich{line-height:1.9}
+ .question-paper,.split-workspace .exercise-paper{padding:24px 21px}
+ .question-paper .exercise-heading h1{font-size:22px;line-height:1.65}
+}
+@media print{.sidebar,.question-rail,.reading-bar,.exercise-top,.exercise-buttons,.exercise-bottom,.self-check,.writing,.source,.topbar,.star,.answer-nav{display:none!important}.main,.exercise-paper,.question-paper{padding:0!important}.shell,.practice-layout,.reading-focus .practice-layout,.practice-layout.split-workspace,.reading-focus .practice-layout.split-workspace{display:block}.split-workspace>.question-column{position:static;max-height:none;overflow:visible}.paper{border:0}.rich{font-size:12pt;line-height:1.8}.math-block{break-inside:avoid}.answer-section{border-top:1px solid #aaa}body{background:white}}

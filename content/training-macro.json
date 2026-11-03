@@ -1,0 +1,3739 @@
+{
+  "version": 1,
+  "subject": "macro",
+  "label": "宏观专项题结构化训练",
+  "source_note": "编者分类与分问导航；原题源及已审校答案分别保留，非官方试卷分类。",
+  "questions": [
+    {
+      "id": "MA001",
+      "source_sha256": "b217b0a8c43526b9524397efc45fc1a488646bd4cf867381e8ad1abd219463af",
+      "review_sha256": "4d72ebc438b76e5f8541880367534329f8320df5a12e05dcc4c49ee398fc8b24",
+      "classification": "anchor",
+      "classification_reason": "从资本收益进入储蓄与黄金律，并要求转轨消费解释，已含增长分配和最优配置的综合链。",
+      "stem_md": "生产函数为$Y_t=K_t^{0.3}(A_tL_t)^{0.7}$，经济处于平衡增长路径，总产出增长率为3%，折旧率为4%，人口不增长。资本市场完全竞争，资本报酬等于边际产出。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "资本产出比为3时，资本边际产出是多少？",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "维持该路径所需的储蓄率是多少？",
+          "answer_step_indexes": [
+            2
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "黄金律要求的资本边际产出是多少？",
+          "answer_step_indexes": [
+            3
+          ]
+        },
+        {
+          "id": "4",
+          "prompt_md": "黄金律储蓄率是多少？补充说明从当前状态向黄金律转轨时消费怎样变化。",
+          "answer_step_indexes": [
+            3,
+            4
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA01",
+        "CMA02"
+      ]
+    },
+    {
+      "id": "MA002",
+      "source_sha256": "9d5f4dc65f8abb3bb796991d5fac47d8bc23a3d37bfe3394d733a71facffa42d",
+      "review_sha256": "510097c1f0e5e9f967c5efd29f01f59869e8b972965eb1b10afdafa92d281e3c",
+      "classification": "anchor",
+      "classification_reason": "同一积累时序下比较索洛与AK的水平、增长和储蓄效应，是两类增长机制的综合比较。",
+      "stem_md": "索洛模型$Y_t=zN_t^{1-\\alpha}K_t^\\alpha$，$0<\\alpha<1$，$z>0$，$N_{t+1}=(1+n)N_t$，$n\\ge0$，折旧率$0<\\delta<1$，储蓄率$0<s<1$。\n\n统一采用$K_{t+1}=(1-\\delta)K_t+sY_t$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求人均稳态产出及人均增长率。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "储蓄率上升如何影响长期人均产出和增长率？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若改为$Y_t=zK_t$，讨论人均稳态、增长率及储蓄变化。",
+          "answer_step_indexes": [
+            2
+          ]
+        },
+        {
+          "id": "4",
+          "prompt_md": "解释两种模型结果为何不同。",
+          "answer_step_indexes": [
+            3
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA01",
+        "CMA02"
+      ]
+    },
+    {
+      "id": "MA003",
+      "source_sha256": "55c8e68ea4664e44a663507487c587e04098604f181155f09482167334ddc6af",
+      "review_sha256": "6e3a133a4d4e251ce015c49a9f83927a43158817cb61ca4000bcfe42889b43df",
+      "classification": "anchor",
+      "classification_reason": "两资本稳态消元与双维消费最优须联合配置，不是单变量代入。",
+      "stem_md": "$Y=K^\\alpha H^\\beta N^{1-\\alpha-\\beta}$，$\\alpha,\\beta>0$且$\\alpha+\\beta<1$。两种资本满足$K_{t+1}=(1-\\delta_K)K_t+s_KY_t$、$H_{t+1}=(1-\\delta_H)H_t+s_HY_t$，人口固定，两种折旧率为正，$s_K,s_H>0$且$s_K+s_H<1$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "写稳态条件并求人均产出。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "最大化稳态人均消费，求两种最优储蓄率和对应人均产出。",
+          "answer_step_indexes": [
+            2,
+            3
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA01",
+        "CMA02"
+      ]
+    },
+    {
+      "id": "MA004",
+      "source_sha256": "319281ea975735190636dd7a9d0f71bec93211bff774dc62e18d222b07c1b2f9",
+      "review_sha256": "0b8ed1619ae2f6243b4a32eae04036aec1675fef4f9b39318ff19b847131f1c2",
+      "classification": "linked",
+      "classification_reason": "以有效人均递推串联精确增长倍率与消费黄金律。",
+      "stem_md": "编者训练设定：$Y=K^{\\frac{1}{2}}(AL)^{\\frac{1}{2}}$，$L_{t+1}=1.02L_t$，$A_{t+1}=1.03A_t$，$K_{t+1}=0.9K_t+0.2Y_t$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "推导有效人均资本递推，求正稳态的$k,y,c$。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求稳态普通人均产出的精确增长率和总产出增长率。",
+          "answer_step_indexes": [
+            2
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "推导消费黄金律储蓄率，并说明增加储蓄的转轨代价。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA01",
+        "CMA02"
+      ]
+    },
+    {
+      "id": "MA005",
+      "source_sha256": "a512df84e11d39cbffc77046d2f4ae0612134b54c8e3d6962a0635ce3c4b9b05",
+      "review_sha256": "f66a8a7278b85354c4659bfac5fff83c8145fccd33798b20dbdc68c7e05f56c6",
+      "classification": "linked",
+      "classification_reason": "同税率改税收用途后比较两套积累条件及增长结论。",
+      "stem_md": "封闭经济$Y=K^{\\frac{1}{2}}L^{\\frac{1}{2}}$，$L$不变，折旧率0.1。家庭将税后收入的20%储蓄，政府按产出征比例税$\\tau=0.25$，全部税收当期用于不形成资本的公共消费。私人资本按$K_{t+1}=0.9K_t+0.2(1-\\tau)Y_t$积累。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求稳态人均资本、私人消费、公共消费。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若税收全部转为同效率公共投资且资本可合并，求新稳态。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "解释为何仅给“税率提高”不足以判断增长后果。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA01",
+        "CMA02"
+      ]
+    },
+    {
+      "id": "MA006",
+      "source_sha256": "6d129945b74ebedbb02a3a1c5abd98fb9e62e62450a4d823fead4ff6dc6688ab",
+      "review_sha256": "e1a6e75e18ee9cf826488ebae3de734ee3a04dd2f9235f6108853de568dd8c3e",
+      "classification": "focused",
+      "classification_reason": "围绕一次资本破坏检验重建与收敛，主技能是索洛局部动态。",
+      "stem_md": "连续时间索洛经济满足$y=\\sqrt{k}$，$\\dot k=0.2\\sqrt{k}-0.1k$，人口与技术不增长。原在正稳态。一次灾难毁掉四分之三资本，不改变劳动和技术。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求灾难后立即的$k,y,c$及资本增长率。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "说明后续路径并求局部收敛速度。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "另一个经济若稳态较低，能否仅凭贫穷断言它增长更快？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA01",
+        "CMA02"
+      ]
+    },
+    {
+      "id": "MA007",
+      "source_sha256": "ebf5641714defaadeb489cc95cca0ea039a1988b992ce113cf29f68d925c13e9",
+      "review_sha256": "435162a77abdcf2b4269f4eb9f7c826cb8bce7d4c1aadb002b6274665c5a7528",
+      "classification": "focused",
+      "classification_reason": "在同一柯布道格拉斯平衡路径证明资本比例、份额和要素报酬增长。",
+      "stem_md": "生产函数$Y=K^\\alpha(AL)^{1-\\alpha}$，竞争市场支付要素边际产出，$0<\\alpha<1$。沿有效人均资本不变的平衡增长路径，$\\frac{\\dot A}{A}=g$、$\\frac{\\dot L}{L}=n$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "证明并解释资本产出比$\\frac{K}{Y}$为何保持不变。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "证明并解释竞争性资本与劳动收入份额为何保持不变。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "实际工资与单位资本租金的增长率分别如何。",
+          "answer_step_indexes": [
+            2
+          ]
+        },
+        {
+          "id": "4",
+          "prompt_md": "这些结论依赖哪些假设？",
+          "answer_step_indexes": [
+            3
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA01",
+        "CMA02"
+      ]
+    },
+    {
+      "id": "MA008",
+      "source_sha256": "8caf4451714d5b97f5f3cf6fa53b1093776cfb8e8deaf5d744e5d1ab2af655e3",
+      "review_sha256": "9b9f22866884839ca96ae09756c01be32acd2ae0f6520a0c2e2996f3955124fb",
+      "classification": "focused",
+      "classification_reason": "围绕增长核算、技术口径换算及余值识别边界。",
+      "stem_md": "某经济近似连续增长：产出增长5%，资本增长6%，就业增长1%，资本份额0.4。生产函数$Y=AK^{0.4}L^{0.6}$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求全要素生产率增长及劳动生产率增长的来源。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若改写为劳动增进技术$Y=K^{0.4}(BL)^{0.6}$，求$B$增长率。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "能否把余值全部称作技术发明？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA01",
+        "CMA02"
+      ]
+    },
+    {
+      "id": "MA009",
+      "source_sha256": "14e01808851dccef2c9d76075125623fddfbbbd6999537a368aeaa4e7e7b739e",
+      "review_sha256": "d16b860a87bb56ff838016c7c966ed65395f1e7c75f59d827a11c7aad06ae429",
+      "classification": "linked",
+      "classification_reason": "比较知识积累指数与科研劳动趋势的长期增长条件。",
+      "stem_md": "为模拟知识增长题，编者设$Y=AK^\\alpha L^{1-\\alpha}$、$\\dot K=sY-\\delta K$、$\\dot A=\\eta A^\\phi L_R$，$L_R$固定，$\\eta>0$。分两种情形：$\\phi=1$与$0<\\phi<1$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "写$A$增长率及其变化。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "说明长期常正知识增长能否维持。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "增加一次科研劳动与持续提高科研劳动增长率有何不同？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA01",
+        "CMA02"
+      ]
+    },
+    {
+      "id": "MA010",
+      "source_sha256": "6078137883a1f7341ea908164d859ac3e070041112afc033e8b69e8b67f6c18c",
+      "review_sha256": "e8bf8f92b40bf63e158e0412c904782bcf3d51be74a5cbb9e30c3ea0eb25bd21",
+      "classification": "linked",
+      "classification_reason": "围绕原稳态、黄金律与储蓄改革比较消费转轨和福利条件。",
+      "stem_md": "连续时间经济$y=\\sqrt{k}$，人口增长2%，技术不增长，折旧率8%，储蓄率0.8。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求正稳态与消费。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求黄金律，判断是否过度积累。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若立即把储蓄率降至黄金律水平，说明即时和长期消费变化。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "4",
+          "prompt_md": "是否因此证明任意减税都提高福利？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA01",
+        "CMA02"
+      ]
+    },
+    {
+      "id": "MA011",
+      "source_sha256": "319b745c0c94591a7148c3cacf4a0f61d5907b714c4693fb4a3dce85071b90a5",
+      "review_sha256": "e08ee4faf16119465793946c7b2df4f90343e1364bd9d1c350a74edbe0c368de",
+      "classification": "anchor",
+      "classification_reason": "银行风险定价、家庭分段角点及聚合缺项须贯通，已是跨主体综合锚点。",
+      "stem_md": "银行存款总回报因子为$R>0$，借款人偿付比例为$\\alpha\\in(0,1)$，贷款总偿付因子为$R_L$。无运营成本、无违约回收，竞争银行零利润。家庭效用$u=c_1+c_2$，收入$y_1,y_2\\ge0$，消费非负。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求银行零利润贷款因子。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "对按合同承担偿还约束的家庭，求最优消费，说明平价边界。",
+          "answer_step_indexes": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "金融危机使$\\alpha$下降，第一期消费和总消费如何变化？说明总量结论还缺哪些设定。",
+          "answer_step_indexes": [
+            4,
+            5
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA03",
+        "CMA04"
+      ]
+    },
+    {
+      "id": "MA012",
+      "source_sha256": "c68d8977204dd5e2866337df83331c3e93657d128f97bfb1e0d03b559a22fd73",
+      "review_sha256": "85307682e0672d27e42e0ed8f0b47956b6ed26fd58c522924161f617e33e57c9",
+      "classification": "linked",
+      "classification_reason": "围绕同一对数家庭依次检验自由借贷、借款约束和净转移。",
+      "stem_md": "家庭$u=\\ln c_1+\\ln c_2$，收入$(y_1,y_2)=(4,12)$，总回报$R=1$，消费非负。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "无约束最优消费与借款是多少？",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "禁止借款时求解并解释Euler不等式。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "第二期一次税收减少2并在第一期给同现值转移2，约束家庭第一期消费如何变？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA03",
+        "CMA04"
+      ]
+    },
+    {
+      "id": "MA013",
+      "source_sha256": "21372878085fb6ca6970a924b0407ea9316b77686cd2da9eea846bbe8e756cee",
+      "review_sha256": "7925fd129fe4b50198f5e322e218e27031295a013ea7d297e86a823aae260ece",
+      "classification": "linked",
+      "classification_reason": "比较临时永久收入并加入借款约束，串联冲击持久性与消费平滑。",
+      "stem_md": "家庭生存三期，效用$\\ln c_1+\\ln c_2+\\ln c_3$，利率0，无借贷限制，无遗产，原收入每期9。第一期可预见冲击A仅使第一期收入增加6，冲击B使每期收入均增加6；两冲击独立比较。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "分别求原消费及两种冲击下第一期消费、储蓄变化，解释持久性差异。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "另将原收入改为$(1,13,13)$且第一期不能借款，比较两冲击下最优消费，检验借款约束。",
+          "answer_step_indexes": [
+            2,
+            3
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA03",
+        "CMA04"
+      ]
+    },
+    {
+      "id": "MA014",
+      "source_sha256": "1ab2a6697d8c302aa83eed0ebd3106451be4f6819926e86d09c2a091e8b82bbe",
+      "review_sha256": "7630d63b135b09b831eede7ddf5fdfc7b726eff8ee955bd6aafb2bae53681236",
+      "classification": "linked",
+      "classification_reason": "同一利率变化在储蓄与借款禀赋下分别求解，须解释方向条件。",
+      "stem_md": "两期家庭$u=\\ln c_1+\\ln c_2$，收入$(10,10)$，可以按统一总回报R自由借贷。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "比较R=1与R=2时消费和储蓄，解释第一期消费变化。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "独立将收入改为$(0,20)$，比较同样两种R时的最优消费和借贷。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "根据两类收入的比较，说明为什么不能只凭利率提高推断一般家庭消费方向。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA03",
+        "CMA04"
+      ]
+    },
+    {
+      "id": "MA015",
+      "source_sha256": "abb38a4e1d93ddbfbcc898838d9e17b377dc547b5d1f77f3d16bd067ce0d7278",
+      "review_sha256": "d4751ac0484c59f6622715727ca84e5ee178526fd999a540fa38a00773ee1f4b",
+      "classification": "linked",
+      "classification_reason": "给定两类型权重后聚合危机消费，连接风险利差与家庭角点。",
+      "stem_md": "人口100户，其中60户存款者、40户按合同偿还的借款者，类型固定。偏好均为$c_1+c_2$。存款者收入$(10,0)$且不许借款；借款者收入$(0,12)$、额度按未来收入现值且不许存款。银行R=0.9、偿付比例α=0.75、零利润$R_L=\\frac{R}{\\alpha}$；危机仅使α降至0.6。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求两情形贷款因子及存款者最优消费。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求危机前后借款者最优消费，检验角点及贷款额度。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "加总第一期消费，并说明总量结论依赖哪些题定条件。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA03",
+        "CMA04"
+      ]
+    },
+    {
+      "id": "MA016",
+      "source_sha256": "88ebac78ded0c8dfecba20169bfad6198cb3f79006630bca1d766c3cc7be8796",
+      "review_sha256": "3833770f1acf56c8f823fb717f2dde85268686644a32687c754167d642234565",
+      "classification": "anchor",
+      "classification_reason": "同一家庭联合投资和消费，比较金融分离及现金约束的两种闭合。",
+      "stem_md": "家庭第一期资源10，可投资$I\\ge0$，第二期产出$F(I)=6\\sqrt I$，无其他第二期收入，资本全折旧。金融市场总回报$R=1$，家庭偏好$\\ln c_1+\\ln c_2$，可自由借贷。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求最优投资。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求总现值财富、消费及金融头寸。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "禁止金融借贷时，求投资消费并比较；解释分离定理的条件。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA03",
+        "CMA04"
+      ]
+    },
+    {
+      "id": "MA017",
+      "source_sha256": "5ca28f77aaca074532565229f324cedca3714569123b73f8d63106a2d090cf5c",
+      "review_sha256": "d35f229eaff25625c825287223c03c960e762548aab77f983343de633b453d95",
+      "classification": "focused",
+      "classification_reason": "围绕资本使用成本求资本需求并辨股票市值证据。",
+      "stem_md": "竞争企业产出$Y=10\\sqrt K$，产出价1。资本购买价1，实际融资利率10%，折旧10%，预计资本品价格不变；无调整成本。按每期租价$uc=(r+\\delta)$选择资本服务。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求资本使用成本及期望资本。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若投资补贴只使购置价格降为0.8、未来转售价格也同比例下降，求新资本。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若只知市场股票价格上升，能否断言同样的资本变化？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA03",
+        "CMA04"
+      ]
+    },
+    {
+      "id": "MA018",
+      "source_sha256": "57613dd999185471984c6338e6ce1dc06567f28c960dfed5b0346460c5357e55",
+      "review_sha256": "f9a71a7325baa9edd97bf1137537c4796e3eb58f36fac0e43aa5b590bd789001",
+      "classification": "focused",
+      "classification_reason": "围绕带非负约束的q投资最优和边际平均q区分。",
+      "stem_md": "企业以投资率$x=\\frac{I}{K}$选择当期投资，边际q外生。每单位资本净收益为$(q-1)x-2x^2$，约束$x\\ge0$，折旧率0.1。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "推导最优投资率及边界。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求$q=0.8,1,1.8$时投资和净资本增长率。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "解释平均q为何不必等于此处边际q。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA03",
+        "CMA04"
+      ]
+    },
+    {
+      "id": "MA019",
+      "source_sha256": "21acd27aa83056d2891756bae0497dc7175c0119f88e3fe1f22c41cce1eae3fd",
+      "review_sha256": "409d10fe897c201b5bb074542f67c5bc9023044043f7c7fe568c10316a8a4705",
+      "classification": "linked",
+      "classification_reason": "异质家庭减税直接效应与需求反馈串联，并要求聚合条件。",
+      "stem_md": "政府本期减税100、下期按同现值增税，利率0、政府支出不变。家庭中40%为流动性受限者，将本期可支配收入增量全部消费；60%为无限视野、无限制、预期理性者，满足李嘉图等价。税收减免和未来增税均按人口均分。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求本期总消费直接变化和私人储蓄变化。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若无挤出、封闭经济边际消费倾向为0.5，计算乘数后的产出变化。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "解释为何这些结果不能只由减税额度确定。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA03",
+        "CMA04"
+      ]
+    },
+    {
+      "id": "MA020",
+      "source_sha256": "590ca994e7a26cf31b38706fe5b9e9a5fbd737bd6bf6b466c6d09e458b504f92",
+      "review_sha256": "244480cad236113ad9895028a18233497a6cec0fe0b7d9be974b75db455e8b90",
+      "classification": "focused",
+      "classification_reason": "围绕风险收入储蓄最优、可行根和确定收入对照。",
+      "stem_md": "两期家庭$\\ln c_1+E\\ln c_2$，第一期收入10，可储蓄$s\\in[0,10)$，总回报1。第二期收入各半概率为4或16，无保险与借款。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "建立消费预算并写最优储蓄条件。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求储蓄并检验根的可行性与最优性。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "独立将第二期收入确定为10，比较储蓄并解释风险作用。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA03",
+        "CMA04"
+      ]
+    },
+    {
+      "id": "MA021",
+      "source_sha256": "9d24be5b64950bcd8c9236c9673a0d8c86ea901fef3571fd83809565c9acaea7",
+      "review_sha256": "bd7d1d7954ce487b3c6c75ce34d90b7baa3be3566b358e0d04e3ed6f4869f008",
+      "classification": "focused",
+      "classification_reason": "围绕IS LM图上双市场失衡与局部箭头，不默认全路径。",
+      "stem_md": "横轴为产出$Y$，纵轴为利率$i$，IS向右下倾斜，LM向右上倾斜，均衡交点为B。A在两条曲线上方。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "A处产品市场供需如何，为什么？",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "货币市场供需如何，为什么？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "画从A向B调整的局部方向，说明画整条路径还需什么条件。",
+          "answer_step_indexes": [
+            2,
+            3
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA05",
+        "CMA06"
+      ]
+    },
+    {
+      "id": "MA022",
+      "source_sha256": "3073a84fb98a13b453d465f9694970c3571fcd67dcad237edda25da016e7aa7e",
+      "review_sha256": "e27f8e66bbe0278b094150507511d429f199da70701752d42d72d206bada0ac9",
+      "classification": "anchor",
+      "classification_reason": "非标准货币供给反馈下推LM AD和出口冲击可行性，闭合较综合。",
+      "stem_md": "实际货币供给规则为$\\frac{M^s}{P} = \\bar{M} + \\phi Y P$，$\\bar M>0$；货币需求为$\\frac{M^d}{P} = \\alpha - \\beta i$，$\\alpha,\\beta>0$。注意货币需求式没有收入项。另设IS为$Y=a-bi+X$，$a,b>0$，$X$为外生出口需求。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "分别在$\\phi>0$与$\\phi<0$时推导LM和AD，比较形状。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "出口需求下降时，产出变化和政策反应有何差异？写明均衡可行性条件。",
+          "answer_step_indexes": [
+            2,
+            3
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA05",
+        "CMA06"
+      ]
+    },
+    {
+      "id": "MA023",
+      "source_sha256": "6658ec19f9d2f87e9c8fabae810a84a65e07a2a7c784194a9f260ac9533345eb",
+      "review_sha256": "ef18f7e3f93c2f763e5b25810f01a55645eef792ece8b9a053e6e4fea2b2b90f",
+      "classification": "focused",
+      "classification_reason": "围绕同一IS LM求财政变化与保持利率的货币配合。",
+      "stem_md": "编者设短期价格固定，IS为$Y=200-5i$，实际货币需求$m^d=0.5Y-10i$，实际供给$m=50$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求均衡。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "自主支出增20，货币不变，求新均衡并分解挤出。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若要求利率保持初值，需增加多少实际货币？画出两种调整的IS LM图。",
+          "answer_step_indexes": [
+            1
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA05",
+        "CMA06"
+      ]
+    },
+    {
+      "id": "MA024",
+      "source_sha256": "fd9ccf22b51d5f281f1c9755b03d8ccc26e11d3a37b736e6a3d63588a5a4de49",
+      "review_sha256": "7d4152b17f5b8be93057b36e03b7a6c23f43ad645d1266c6aa662152483e24a7",
+      "classification": "linked",
+      "classification_reason": "围绕比例税、总付税与货币挤出辨平衡预算口径。",
+      "stem_md": "$C=20+0.8(Y-T_0-0.25Y)$，$I=50-4i$，$G=30$，初始$T_0=0$。实际货币市场$40=0.5Y-5i$，价格固定。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求均衡。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "分别求G增加10、T0增加10的产出变化。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若G和T0同时增加10，求平衡预算乘数，并解释其为何不等于1。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA05",
+        "CMA06"
+      ]
+    },
+    {
+      "id": "MA025",
+      "source_sha256": "98da6cb757543f0c8c2a994280c67c8a3e320b96470244a4b94faea78d9d7d04",
+      "review_sha256": "200a59938726530b41c92af38cff8ca51b55f1398ebba93c0f8b376dbe5ac947",
+      "classification": "linked",
+      "classification_reason": "同一信用反馈模型比较支出冲击与冻结利差反事实。",
+      "stem_md": "短期模型$Y=100-4i-5\\omega$，信用利差$\\omega=3-0.01Y$，货币市场$20=0.5Y-10i$。所有量按编者单位，利差须非负。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求均衡并检查利差。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若自主支出下降11.5，求产出、利率、利差变化。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若利差改为外生等于初始值，比较同一冲击；解释反馈机制。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA05",
+        "CMA06"
+      ]
+    },
+    {
+      "id": "MA026",
+      "source_sha256": "d6c91cd3b5dc36f0a252138dfe7b45a462ed17ccfc26166e98672162e593e4f5",
+      "review_sha256": "4f8ebf7d0f61fc2fde1e461db03eb79b0e0c79ecbb6049e92f5274ef263bd3d9",
+      "classification": "anchor",
+      "classification_reason": "将信用比较静态的奇异分母、经济可行与动态规则分层，是闭合审查锚点。",
+      "stem_md": "模型$Y=A-bi-\\beta\\omega$，$m=kY-hi$，$\\omega=\\bar\\omega-\\gamma Y$，参数$b,\\beta,k,h>0,\\gamma\\ge0$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "推导Y与A的比较静态。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "讨论分母为正、零、负分别意味着什么。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "为什么“乘数为负”不能单独证明动态不稳定？提出还需给出的动态方程与经济可行条件。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA05",
+        "CMA06"
+      ]
+    },
+    {
+      "id": "MA027",
+      "source_sha256": "a7812b78824116da7275a360045c7f158c493265a3ba186e8c893443cb5119b9",
+      "review_sha256": "51ec7fdd764e7167a59128b1468a9b2bc90fba5dc206cf440a9f4467d8263573",
+      "classification": "focused",
+      "classification_reason": "围绕明确双变量调整方程的稳态、Jacobian与局部路径。",
+      "stem_md": "编者把两市场调整规则明确设为$\\dot Y=120-0.6Y-4i$，$\\dot i=0.5Y-10i-20$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求稳态。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "由Jacobian判断局部稳定。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "在点$(Y,i)=(100,4)$画局部箭头。",
+          "answer_step_indexes": [
+            2
+          ]
+        },
+        {
+          "id": "4",
+          "prompt_md": "解释原题只给IS LM图时为何不能唯一画整条轨迹。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA05",
+        "CMA06"
+      ]
+    },
+    {
+      "id": "MA028",
+      "source_sha256": "8fe953819cd722014198ed66ff71204aa25f5dfe2b2a52ff704d8b2cf8c33e39",
+      "review_sha256": "69ffdfb57dd57a6184e500bcbc1a240e3c7a037e4f40da2b4e337404f7005c59",
+      "classification": "focused",
+      "classification_reason": "围绕利率下限比较财政与预期通胀传导。",
+      "stem_md": "价格固定，利率有效下限为0。产品市场$Y=80+G-5i$，G初值20。央行大量扩张基础货币，但在下限区域公众愿持有新增货币，i仍为0。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求初始产出及G增加10后的产出。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "为什么基础货币增加不必增加投资？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若可信承诺使预期通胀从−2%升为0，名义利率仍0，实际利率每下降1个百分点，投资增加3，求额外产出；说明预期承诺的边界。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。原第3问语序澄清为实际利率每下降1个百分点投资增加3，与既有规范答案一致。",
+      "comprehensive_ids": [
+        "CMA05",
+        "CMA06"
+      ]
+    },
+    {
+      "id": "MA029",
+      "source_sha256": "7d15cd9d517677005d6487759a7ec9c334ea4b9bdfeacbf243ae69cd1d9781ec",
+      "review_sha256": "74ca86d4506d3a653f6f130b308bfb9aa1274649992a8de75168bd45833f9156",
+      "classification": "focused",
+      "classification_reason": "围绕税后收入货币需求检验减税及漏税项误差。",
+      "stem_md": "编者设$C=20+0.75(Y-T)$，$I=40-2i$，G=20，实际货币需求$m^d=0.5(Y-T)-5i$，m=20，T初值20。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求均衡。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "一次总付税减少8、货币固定，求Y和i变化。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若误写货币需求为$0.5Y-5i$，减税结论怎样偏离？解释。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA05",
+        "CMA06"
+      ]
+    },
+    {
+      "id": "MA030",
+      "source_sha256": "b04525aabd24a8a2daa8f3c725d325abca4bb79b287e63ac98bf5617cfbb092f",
+      "review_sha256": "df05d3330bc13cded9e0d59d61f9c826366acebf89e3acdc88d2e4f8414dbced",
+      "classification": "focused",
+      "classification_reason": "围绕两乘数参数极限和IS LM斜率传导。",
+      "stem_md": "一般短期模型$Y=A-bi$，$m=kY-hi$，参数b、k、h为正。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求财政自主支出乘数与货币乘数。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "分别讨论b接近0、h很大、h接近0的极限；说明图形斜率与政策传导的关系。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "哪些极限不宜机械视为现实精确状态？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA05",
+        "CMA06"
+      ]
+    },
+    {
+      "id": "MA031",
+      "source_sha256": "22e3919a64f457978468b4f3f0366a191e122b23de428e6ee80ddc5b0054e74e",
+      "review_sha256": "9f22ed84e71337af0abd108bee4ff107e2e8f14a0c6a4a8e07f0b0f6a7d46ddc",
+      "classification": "anchor",
+      "classification_reason": "联立IS LM AD AS后比较预期冲击并反推恢复产出工具，跨市场完整。",
+      "stem_md": "IS为$Y=320-10i$，LM为$\\frac{M}{P} = 0.5 Y - 5 i$，AS为$P=P_e+0.01(Y-100)$，名义货币供给$M=560$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "初始$P_e=2$，求AD和初始均衡。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若$P_e=5.6$，求新均衡并解释变化。",
+          "answer_step_indexes": [
+            2
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "保持冲击后预期价格不变，通过货币政策使产出回到第一问初始产出，需要多少货币？评价代价。",
+          "answer_step_indexes": [
+            3
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA07",
+        "CMA08"
+      ]
+    },
+    {
+      "id": "MA032",
+      "source_sha256": "dd4bd39ccd19754c3cc91b4752e86d8999240e6361e9c82c9b705507d6c236af",
+      "review_sha256": "6e6517e7e7067d1f149f7c85d736187cb90fb154fd82873fef7562b256c7bb0a",
+      "classification": "anchor",
+      "classification_reason": "对需求供给预期三压力建立机制及针对性政策，属于材料综合论述。",
+      "stem_md": "题干讨论需求收缩、供给冲击、预期转弱三重压力。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "分别说明其在AD AS中的机制，分析同时发生时通胀和失业的方向。",
+          "answer_step_indexes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "提出货币、财政及其他政策，并说明每种措施解决哪条传导链、有什么限制。",
+          "answer_step_indexes": [
+            3,
+            4
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA07",
+        "CMA08"
+      ]
+    },
+    {
+      "id": "MA033",
+      "source_sha256": "2db8a6f389630cbe9b5768811a979898843670b5f6aa19ccd2fb3f4fdb10430d",
+      "review_sha256": "af29c01b2727affb63398fbc8824c9985af3582576b0dc266bfab93d4c9a98ae",
+      "classification": "focused",
+      "classification_reason": "围绕永久扩币的短期均衡、长期预期和中性条件。",
+      "stem_md": "AD为$Y=200+M-10P$，AS为$P=P^e+0.1(Y-100)$。初始M=0、$P^e=10$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求初始均衡。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "M永久提高20，预期短期不变，求短期均衡。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若长期预期调整且Y回到100，求长期P、$P^e$。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "4",
+          "prompt_md": "说明货币中性的条件。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA07",
+        "CMA08"
+      ]
+    },
+    {
+      "id": "MA034",
+      "source_sha256": "3ed1a95f10b095e00517f96f9bb73c4037157657b59df3302b1a93d2a329dff6",
+      "review_sha256": "a82e146aee46affcd60e1b9b0f33423f225d556f48262b37192bc52a77a43d0c",
+      "classification": "focused",
+      "classification_reason": "围绕一次供给冲击分别反推稳产出与稳价格目标。",
+      "stem_md": "AD为$x=a-P$，AS为$P=P^e+x+v$，x为产出缺口。初始a=2、Pe=2、v=0。不利供给冲击使v升至2。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "无政策时求x、P。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "财政或货币使a调整以恢复x=0，需多少a和P？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若目标改为恢复P=2，需要多少a和x？比较两种目标。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA07",
+        "CMA08"
+      ]
+    },
+    {
+      "id": "MA035",
+      "source_sha256": "75a007f6099418e29c28dbd379026e2ca8f0a29ad2b11cd58b2dfbaa1e09220f",
+      "review_sha256": "4db56474cf038b55a3b5b324fb4dd897bb6f76fc6982b80864aca60626bd5e3b",
+      "classification": "focused",
+      "classification_reason": "围绕复合冲击参数解检验价格方向阈值。",
+      "stem_md": "模型$x=a-2P$，$P=P^e+0.5x+v$。冲击使$\\Delta a=-d$、$\\Delta v=s$、$\\Delta P^e=0$，d、s均正。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求产出和价格变化。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "何时通胀压力上升、下降或不变？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "取d=3、s=2计算，并提出分别针对需求和供给的政策。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA07",
+        "CMA08"
+      ]
+    },
+    {
+      "id": "MA036",
+      "source_sha256": "557dedab17efd21e519d5393a575c642a19bf11fa291bdd3577e9ada7565db2d",
+      "review_sha256": "d504948010fdb5da61d7f9ac925e7a9b8834c426525121b5ed920d55c712037e",
+      "classification": "focused",
+      "classification_reason": "并列比较名义工资黏性与信息误判的同一意外价格效应。",
+      "stem_md": "编者设劳动需求$N^d=100-2w$，实际工资$w=\\frac{W}{P}$。工资合同按预期P=2签订，固定名义工资W=20。另有独立的不完全信息企业模型$Y=\\bar Y+3(P-P^e)$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "实际P由2升至2.5时，前一模型就业如何变化？",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "后一模型若$\\bar Y=50,P^e=2$，产出如何变化？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "比较两种意外价格扩张机制，并说明即时指数化或即时获知总体价格的影响。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA07",
+        "CMA08"
+      ]
+    },
+    {
+      "id": "MA037",
+      "source_sha256": "507a59238803778a06fc8c28771c40814e2d38de44aa21275ceb66d1b5e78e5d",
+      "review_sha256": "fcc251892d0c81d099526d016de3a762bda0a2745f4a977c8c1dd96c513ed18a",
+      "classification": "focused",
+      "classification_reason": "围绕余额与实际利率的两期数据解释及因果边界。",
+      "stem_md": "某经济名义货币M从120降至108，物价P从2降至1.5，名义利率从4%降至2%，实际产出下降。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "计算实际余额变化。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "这些数据支持“LM必然左移”吗？",
+          "answer_step_indexes": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若预期通胀由0降到−5%，求事前实际利率近似变化，并说明支出下滑可能渠道。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA07",
+        "CMA08"
+      ]
+    },
+    {
+      "id": "MA038",
+      "source_sha256": "1e3b24dd112456b58698520562f647fdca0bfa826a6b4c485cad2cbad3c14c99",
+      "review_sha256": "064416d3bf2988d4066f8a5de625fe848d8c176b2926038cc8dba1569a86319b",
+      "classification": "focused",
+      "classification_reason": "围绕适应性预期递推、数值路径及稳定系数。",
+      "stem_md": "经济满足$x_t=10-P_t$，$P_t=P_t^e+x_t$，预期规则$P_{t+1}^e=P_t^e+0.5(P_t-P_t^e)$。初始$P_0^e=6$，需求式永久不变。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "推导Pe递推及稳态。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "计算t=0、1、2的P、x。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "解释产出为何回归而价格持续调整，并说明局部稳定条件。",
+          "answer_step_indexes": [
+            0,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA07",
+        "CMA08"
+      ]
+    },
+    {
+      "id": "MA039",
+      "source_sha256": "e66a4b7d7d6fdf52fd20cb61aba50a00618a153240baf478aa9422abc77d6c8f",
+      "review_sha256": "f061a8afc50693a6dc7355f869adb2f46caecdead42cbbc9e2af9414a32695c1",
+      "classification": "focused",
+      "classification_reason": "围绕供给斜率比较财政乘数及潜在供给改革。",
+      "stem_md": "AD为$Y=100+G-2P$，AS为$P=10+\\kappa(Y-100)$，$\\kappa\\ge0$。初始G=20。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求初始均衡和财政产出、价格乘数。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "比较$\\kappa=0,0.5,2$时G增加10的效果。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "讨论接近垂直AS时与潜在供给改革的差别。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA07",
+        "CMA08"
+      ]
+    },
+    {
+      "id": "MA040",
+      "source_sha256": "d0d3fe707404db81b9e0533c31e9b973c1af9a064895ce807ed180d0ae38c6db",
+      "review_sha256": "41b116aeba5ca618c56bd7fd1f1a7ef871908a09af74e6dfdddae99a7886249d",
+      "classification": "linked",
+      "classification_reason": "围绕潜在产出损失区分短长期和旧产出目标。",
+      "stem_md": "经济初始AD为$Y=200-5P$，长期潜在产出100，短期AS为$P=P^e+0.2(Y-\\bar Y)$。初始Pe=20。自然灾害永久使潜在产出降至90，短期Pe仍20。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求冲击后的短期均衡。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求长期预期调整后的P、Y。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若需求政策短期恢复原Y=100，求所需AD截距与P，并评价“恢复旧产出”等同消除缺口是否成立。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA07",
+        "CMA08"
+      ]
+    },
+    {
+      "id": "MA041",
+      "source_sha256": "65cb07afe31f047185d644f783c28cacd60a89262fd35b12a8671f0e3a245a33",
+      "review_sha256": "d21a08f5a53afdd964e15d68a0b5e5d7be89766ed210a96de4be2e76c19e7bef",
+      "classification": "anchor",
+      "classification_reason": "原负号、政策反应与两种前瞻时点共同闭合，已有高强度综合辨析。",
+      "stem_md": "设$x_t=Y_t-\\bar Y_t$。需求$x_t=-\\alpha(r_t-\\rho)+\\varepsilon_t$，原供给$\\pi_t=E_{t-1}\\pi_t-\\varphi x_t+v_t$，$\\alpha,\\varphi>0$。政策为$i_t=\\pi_t+\\rho+\\theta_\\pi(\\pi_t-\\pi^*)+\\theta_Yx_t$，初始预期$E_{t-1}\\pi_t=\\pi_{t-1}$，费雪式$r_t=i_t-E_{t-1}\\pi_t$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "推导DAD。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "讨论$\\theta_\\pi<0$的后果及政策启示。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "预期规则改为$E_t\\pi_{t+1}=\\chi\\pi_t+(1-\\chi)\\pi_{t-1}+\\eta_t$，推导新DAD、DAS。",
+          "answer_step_indexes": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "id": "4",
+          "prompt_md": "$\\eta_t>0$是否必然使本期通胀自我实现？交代时点与符号。",
+          "answer_step_indexes": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA09",
+        "CMA10"
+      ]
+    },
+    {
+      "id": "MA042",
+      "source_sha256": "5148bbc31e35b6901b919b0280d5509d3c5b82de867b23a711a267c13c173884",
+      "review_sha256": "2df1fc311759440d3e447ad5f84ad48c2004b848da12de490d2ff21aa8b54777",
+      "classification": "linked",
+      "classification_reason": "围绕正号动态供给求需求和供给冲击的递推路径。",
+      "stem_md": "编者明确采用教材正号供给：$x_t=-(\\pi_t-2)+\\varepsilon_t$，$\\pi_t=\\pi_{t-1}+0.5x_t+v_t$。初始$\\pi_0=2$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "推导通胀递推。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "仅第1期有需求冲击$\\varepsilon_1=3$，其余冲击为0，求前3期通胀和缺口。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若第1期改为供给冲击$v_1=1$、需求冲击为0，比较路径。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA09",
+        "CMA10"
+      ]
+    },
+    {
+      "id": "MA043",
+      "source_sha256": "ec158295c91f7623a22a224c29d24432ec19afc3d81650f4be9e78a2bb166ef6",
+      "review_sha256": "578f429f08b2a729e273db0008fc83d1e618ad51e6dbf2ce6c752e914cf3b5c7",
+      "classification": "focused",
+      "classification_reason": "围绕负号模型的特征系数、奇异点和合法改题边界。",
+      "stem_md": "保留源题负号作条件辨析。编者给$x_t=-(\\pi_t-2)$，$\\pi_t=\\pi_{t-1}-\\varphi x_t$，$\\varphi>0$，无冲击。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求通胀偏离目标的递推系数。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "分别讨论$\\varphi=0.2,1,3$的代数解与稳定性。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "为什么不能仅把负号静默改为正号后宣布原题唯一解成立？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA09",
+        "CMA10"
+      ]
+    },
+    {
+      "id": "MA044",
+      "source_sha256": "d3a4ba2c02e60210180d88e8c844048eb80c03afd2c499259c87d8264f5ef534",
+      "review_sha256": "b7d1fdc66c525c3a4304801611e5f42400bb978b92a50164349977c24288081f",
+      "classification": "linked",
+      "classification_reason": "同需求政策下只变供给预期时序，比较沟通冲击方向。",
+      "stem_md": "需求$x_t=-[i_t-E_t\\pi_{t+1}-\\rho]$，政策$i_t=\\rho+\\pi_t+0.5(\\pi_t-2)$，预期$E_t\\pi_{t+1}=0.5\\pi_t+0.5\\pi_{t-1}+\\eta_t$。供给A为$\\pi_t=\\pi_{t-1}+0.5x_t$，B为$\\pi_t=E_t\\pi_{t+1}+0.5x_t$；两闭合独立比较，初始$\\pi_{t-1}=2$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "在供给A下求η对当期通胀与产出缺口的导数。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "在供给B下求相同导数，并与A比较。",
+          "answer_step_indexes": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "解释供给B相对A新增的经济与信息时点假设。",
+          "answer_step_indexes": [
+            3
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA09",
+        "CMA10"
+      ]
+    },
+    {
+      "id": "MA045",
+      "source_sha256": "2a89076d938122fceacf86af781d162c050e4abaf50e57b7cc89e168bff960f8",
+      "review_sha256": "ac2083f4039edc27294a950269fb8131acc893f614718d543f628d5e3732fdff",
+      "classification": "focused",
+      "classification_reason": "围绕数量方程核流速与精确通胀倍率。",
+      "stem_md": "三年数据为：名义货币M依次100、110、121，实际产出Y依次50、55、55，物价P依次2、2、2.2。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "逐年求货币流速V。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "用精确增长倍数检验数量方程。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若下一年M增长10%、Y增长5%、V下降4%，求精确通胀率，并比较增长率相加近似。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA09",
+        "CMA10"
+      ]
+    },
+    {
+      "id": "MA046",
+      "source_sha256": "77600f71199b1cee955c398452b90f007c2f43bdb6fe755ad819ac222fb9ad08",
+      "review_sha256": "275eb50e0e0646f2305d50d2b595352ff08a9da6acc32e7f366361ae6ac1c403",
+      "classification": "focused",
+      "classification_reason": "围绕紧缩的当期流动性及长期费雪效应辨名义利率。",
+      "stem_md": "某紧缩政策在实施当期使名义利率从3%升至5%，一年后名义利率降至2%。已知预期通胀从2%逐步降至0%，长期自然实际利率保持2%。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "用流动性效应和费雪效应解释短长期差异。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若当期预期通胀仍为2%，求当期实际利率近似值；长期值是多少？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若只观察名义利率下降，能否断言货币宽松？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA09",
+        "CMA10"
+      ]
+    },
+    {
+      "id": "MA047",
+      "source_sha256": "2804ef5cf0f6b998aea88ef58f45dbaa0d476be82b14a6f36c82f082b92966c4",
+      "review_sha256": "f4035839998517e1e2d8e8b987647f1ff4900230d9602bc35fa4c45925c5aaaf",
+      "classification": "linked",
+      "classification_reason": "比较可信预期到政策、意外通胀和重复意外的可实现性。",
+      "stem_md": "供给$x=2(\\pi-\\pi^e)$，央行可选通胀。原通胀与预期均为2%。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "若公开可信地将通胀永久改为4%，公众同步预期，分析当期产出及预期调整。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若公众仍预期2%而当期实际通胀4%，分析产出并同前问比较。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若公众知道央行总想制造2点意外通胀，讨论预期、可实现性与长期政策评价。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA09",
+        "CMA10"
+      ]
+    },
+    {
+      "id": "MA048",
+      "source_sha256": "35d05229474aee935569e63a8b4b1b15fde386191cd4fffbd5b77db3ce22566d",
+      "review_sha256": "920864471f0492a963ca9dd53409c769e69c0a6d0d33bce7df3544c2bd298fbc",
+      "classification": "focused",
+      "classification_reason": "围绕两年补偿目标区分算术平均和复利价格路径。",
+      "stem_md": "两年目标通胀均为2%。第一年实际通胀为0。假定第二年各目标均严格实现。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "若坚持固定年度通胀目标2%，求第二年通胀。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若要求两年通胀算术平均为2%，求第二年通胀。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若要求两年末价格水平达到每年增长2%的原路径，求第二年通胀，并比较三种目标及其差异。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA09",
+        "CMA10"
+      ]
+    },
+    {
+      "id": "MA049",
+      "source_sha256": "52cf8e9760cefebe36dd510112058700adbbc9b3f5f8f34eec0867a31bd1b775",
+      "review_sha256": "fb86d8cb3e116fcf74276198f0705129cdfe54eb4c709d690dadbd876da41039",
+      "classification": "focused",
+      "classification_reason": "围绕预期锚定系数求一次冲击持续性及累计偏离。",
+      "stem_md": "菲利普斯式$\\pi_t=\\pi_t^e+0.5x_t+v_t$，需求缺口固定$x_t=0$。预期为$\\pi_t^e=\\theta\\pi_{t-1}+(1-\\theta)2$，$0\\le\\theta<1$。初始通胀2，仅第1期供给冲击$v_1=1$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求各期通胀及累计偏离。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "比较θ=0、0.5、0.9。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "θ=1时结果怎样，为什么不能只说首次冲击大小决定损失？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA09",
+        "CMA10"
+      ]
+    },
+    {
+      "id": "MA050",
+      "source_sha256": "f9ad8190d1dc33b7f3fc591ea2c5823c0c2d43c6f6c7c65e0ea5ca5507c46212",
+      "review_sha256": "04005a5d5602878773f6ec27fa2ae1974b06a1e6a019b94f21d0e17ed261c734",
+      "classification": "focused",
+      "classification_reason": "围绕凸损失在供给冲击下求内点稳定权衡。",
+      "stem_md": "央行当期选择产出缺口x，通胀偏离目标$z=x+v$，损失$L=z^2+\\lambda x^2$，λ>0，预期已锚定。供给冲击v=2。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求最优x、z和损失。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "比较λ=1与λ=3。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "解释它与“任何冲击下都完全稳物价”或“完全稳产出”的差异。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA09",
+        "CMA10"
+      ]
+    },
+    {
+      "id": "MA051",
+      "source_sha256": "3e43b4bd7fabc65cc054a2318f9240d633d39250042fc39a9927e9fb114866c8",
+      "review_sha256": "d2c2330ffd32020e5532cf8d3ce50e530319641083422582e487bc67d6a31076",
+      "classification": "anchor",
+      "classification_reason": "滞后自然率、通胀路径、单位根及牺牲率基准联动，是动态政策综合锚点。",
+      "stem_md": "经济满足$\\pi_t=\\pi_{t-1}-0.5(u_t-u_t^n)$，$u_t^n=\\frac{u_{t-1}+u_{t-2}}{2}$。政策前$u_{-1}=u_0=\\bar u$且通胀恒定。主政策从第1期起将通胀水平一次性永久降低1个百分点，第2期起保持新水平。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "解释自然失业率为何可能受最近实际失业影响。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求主政策下失业递推、长期水平和稳定性。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "说明牺牲率的定义、累计损失及比较基准。",
+          "answer_step_indexes": [
+            3
+          ]
+        },
+        {
+          "id": "4",
+          "prompt_md": "评价短期和长期取舍；区别一次永久降通胀水平与连续每期降通胀的路径。",
+          "answer_step_indexes": [
+            4
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA11",
+        "CMA12"
+      ]
+    },
+    {
+      "id": "MA052",
+      "source_sha256": "66301a3050bc7fb2c05bf31af0e1ac7a0ea01d2671c896120bc91e49b0672a14",
+      "review_sha256": "3359e31b312284c4c8f707586d7a11e21054b0c37642c127c1d1f1da31cc1dcb",
+      "classification": "anchor",
+      "classification_reason": "人口消费反馈、正稳态存在稳定及技术效应相联，是历史增长模型综合题。",
+      "stem_md": "$Y=AL^{1-\\alpha}N^\\alpha$，土地$L$固定，$A>0,0<\\alpha<1$；$\\frac{N_{t + 1}}{N_t} = g (c_t)$，$g'>0,g''<0$，无资本积累，人均消费等于人均产出。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求人口和人均消费的正稳态，分析技术提高的短期与长期效应。补充讨论正稳态存在与局部稳定的条件。",
+          "answer_step_indexes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "评价这一理论的解释范围。",
+          "answer_step_indexes": [
+            4
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA11",
+        "CMA12"
+      ]
+    },
+    {
+      "id": "MA053",
+      "source_sha256": "bfdbf430a0eaef7fc563c9f3e299aa3be4272d697145d0faf86723760fa77b2f",
+      "review_sha256": "d57a66556b72da072595aba9ad47130ca9a05b08fd1f4a9e78c55ee4a83ff62b",
+      "classification": "focused",
+      "classification_reason": "围绕期初身份流量求匹配改革失业率路径。",
+      "stem_md": "劳动人口固定，离职率s=0.02，失业者找工作率f=0.18，每期先按期初身份计算转移。初始失业率10%。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "写离散失业递推并求稳态。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若就业匹配改革永久将f升至0.23，求新稳态、改革后首期失业率及收敛速度。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "提高匹配率与刺激总需求有何区别？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA11",
+        "CMA12"
+      ]
+    },
+    {
+      "id": "MA054",
+      "source_sha256": "0d031468c153fad6210ccca8fd775f270200e6f83bfe9080f101105c99e9cf8f",
+      "review_sha256": "7ef87a688a028760cf62557205faf6a734b2db81f2790bffe78bcc60bf69f2e3",
+      "classification": "focused",
+      "classification_reason": "围绕工资制定价格制定求自然失业与生产率比较。",
+      "stem_md": "实际工资的工资制定式为$w=A(1-2u+z)$，价格制定式为$w=\\frac{A}{1+\\mu}$。取A=2、z=0.1、μ=0.25，潜在劳动力100。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求自然失业率与就业。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "加价率降至0.1时如何变化？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "A提高一倍、其他参数不变时自然失业和实际工资怎样？说明模型边界。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA11",
+        "CMA12"
+      ]
+    },
+    {
+      "id": "MA055",
+      "source_sha256": "5769b1d25fb4def0fe23c06086a180a1ef3e7989f47151a465489d50993a25fe",
+      "review_sha256": "9b7cebb0f1e9a3cb1cd7b7cc8595128c14112cb61270608c09b7ae04d309b458",
+      "classification": "focused",
+      "classification_reason": "围绕人口身份核失业率参与率和就业人口比。",
+      "stem_md": "某经济劳动年龄人口1000，初始就业600、积极求职失业100，其余不在劳动力。下一期就业增20，但有50名原失业者停止找工作，其他身份不变。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求两期失业率、参与率与就业人口比。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "说明失业率下降中有多少来自就业、多少来自退出。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "评价用单一失业率判断就业改善的局限。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA11",
+        "CMA12"
+      ]
+    },
+    {
+      "id": "MA056",
+      "source_sha256": "81c402122519e5d85e9b2b6fad51071a9469dc0064860f67c413df444513ed04",
+      "review_sha256": "03997a6e144ed430f9b18f2d7488e3b4b36f0b396e8774e856d93414dd282169",
+      "classification": "focused",
+      "classification_reason": "围绕给定通胀路径计算产出牺牲并辨自然率基准。",
+      "stem_md": "菲利普斯曲线$\\pi_t-\\pi_{t-1}=-0.5(u_t-5)$，奥肯关系$x_t=-2(u_t-5)$，x以潜在产出百分比表示。政策以两年每年降通胀1个百分点，将通胀从4降至2。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求每年失业率、产出缺口及累计产出损失。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求牺牲率。",
+          "answer_step_indexes": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若自然失业率存在滞后，哪一步不能照搬？",
+          "answer_step_indexes": [
+            1
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA11",
+        "CMA12"
+      ]
+    },
+    {
+      "id": "MA057",
+      "source_sha256": "7c81d6d149b18843f68225fcbb8aaed71a49a34efc0424b3ab5622d40fed6342",
+      "review_sha256": "c7680f6b55f006fb1194c7e6cac5f2ec1f8ecd02d4e93ac3b8cb19e56f87f0bc",
+      "classification": "focused",
+      "classification_reason": "围绕自然率持久系数比较暂时与永久历史依赖。",
+      "stem_md": "编者设自然失业偏离稳态$h_t=u_t^n-\\bar u$满足$h_{t+1}=0.8h_t+0.2x_t$，其中x为实际失业相对当期自然率的缺口（百分点）。初始h0=0，第0期出现x0=2，以后x均0。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求h1、h2及长期h。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求自然率累计偏离。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若把系数0.8改为1，结果怎样？比较暂时持续性与永久历史依赖。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA11",
+        "CMA12"
+      ]
+    },
+    {
+      "id": "MA058",
+      "source_sha256": "8d9661983e41383fa88dd35324a447fbb4e2dcb836369d9a862e0848413ff93c",
+      "review_sha256": "d4c4d05af2d4f9eb1e3cd54518bb784b006007c2e3653cca0927c4180e0ec3df",
+      "classification": "focused",
+      "classification_reason": "围绕劳动供求联立比较固定工资与技术变化。",
+      "stem_md": "竞争企业生产$Y=20\\sqrt N$，劳动供给$N^s=4w$，w为实际工资，劳动力无其他限制。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求竞争就业、工资及产出。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若制度将实际工资固定为5，求劳动需求与失业供给差。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "技术系数20提高至30，分别讨论灵活工资与固定工资下就业变化，并说明不能只用需求曲线作总量结论。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA11",
+        "CMA12"
+      ]
+    },
+    {
+      "id": "MA059",
+      "source_sha256": "ea30e45451fad56c457ee19149abe278a2611947c3d8ae38a3741f029df5a374",
+      "review_sha256": "e139a96b77de622b8673f628b96f5897421f6298025ba40f7e0d7797dc9360fc",
+      "classification": "focused",
+      "classification_reason": "围绕人口倍率模型求技术冲击和稳定性。",
+      "stem_md": "经济无资本，土地固定1，$Y=A\\sqrt N$，人口倍率$\\frac{N_{t+1}}{N_t}=\\frac{2c_t}{1+c_t}$，全部产出用于消费。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求A=2时稳态与局部稳定性。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "A一次升为3，说明当期与长期人口、消费。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "对照现代持续人均增长，指出模型需要改变的环节。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA11",
+        "CMA12"
+      ]
+    },
+    {
+      "id": "MA060",
+      "source_sha256": "600083af48d0111b7387ab4f2162c2d99c723658263a87929a3d43e4c7453402",
+      "review_sha256": "296f844117938e0e8feba7a51fc2710016ec04a8bf6aaa465b0f077df8749d85",
+      "classification": "focused",
+      "classification_reason": "围绕离职匹配两政策算稳态成本并评价遗漏维度。",
+      "stem_md": "劳动人口1000，离职率s=0.03、找工作率f=0.12。政策A每期花费20将f提高到0.17；政策B每期花费30将s降到0.02、f不变。两政策独立比较，原在稳态。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求原稳态及两政策新稳态失业人数。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "计算每减少一名稳态失业者的当期政策成本。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "讨论为何该比率不足以决定最优政策，还需哪些动态、分配和质量信息。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA11",
+        "CMA12"
+      ]
+    },
+    {
+      "id": "MA061",
+      "source_sha256": "1a72ca972fc419d2fca3606d90e54404262d7748de543e3dfac1521fa2549793",
+      "review_sha256": "0432f69c247bc034b29e7298e00e0cd3310aec58e9d2624ef68e7037660ff153",
+      "classification": "anchor",
+      "classification_reason": "承诺、偏离及理性预见的三制度均衡和社会损失比较构成综合锚点。",
+      "stem_md": "$u=u^n-\\alpha(\\pi-\\pi^e)$，$L=u^2+\\gamma\\pi^2$，$u^n>0,\\alpha>0,\\gamma>0$。央行选择通胀最小化损失。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "央行宣布并遵守固定通胀规则、公众相信时，求通胀与失业。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "公众仍相信该承诺，央行却可偏离时，分别宣布和执行什么通胀？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "公众理性预见相机抉择时，求均衡。",
+          "answer_step_indexes": [
+            2
+          ]
+        },
+        {
+          "id": "4",
+          "prompt_md": "比较政策效果并评价长期制度选择。",
+          "answer_step_indexes": [
+            3
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA13",
+        "CMA14"
+      ]
+    },
+    {
+      "id": "MA062",
+      "source_sha256": "b3f9472d590e0f0076772ded48906be9ed0e17838b4d90b3a04b1972347cf483",
+      "review_sha256": "23b9ac5f6e63c26fcd031e68c55f05945de450c187c67d8cc1f766ff28a98f27",
+      "classification": "anchor",
+      "classification_reason": "从通胀传导基础进入下限、平均补偿与可信窗口，是制度综合论述。",
+      "stem_md": "平均通胀目标以一段时间的平均通胀为目标。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "从通胀形成和货币传导说明传统通胀目标的理论基础与缺陷。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "在需求低迷、名义利率受有效下限约束时，为什么平均目标可能提供额外刺激？",
+          "answer_step_indexes": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若未明确平均窗口长度，会产生什么问题，为什么？",
+          "answer_step_indexes": [
+            4,
+            5
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA13",
+        "CMA14"
+      ]
+    },
+    {
+      "id": "MA063",
+      "source_sha256": "1ab86eb1ab3f57112bffe4391b35ee477d3051bcaa886388e24d6699629437c6",
+      "review_sha256": "6f7eebaf3693caa6588afb20c2910400958f422486dad7302cc961fdbf5cad78",
+      "classification": "focused",
+      "classification_reason": "围绕政策规则系数换写与真实利率响应。",
+      "stem_md": "编者给政策规则$i=\\rho+\\pi^*+1.5(\\pi-\\pi^*)+0.5x$，$\\rho=2\\%,\\pi^*=2\\%$，x为百分比产出缺口。当前π=4%、x=−1%。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求名义与实际利率（预期通胀等于当前π）。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若通胀再增1点、缺口不变，真实利率如何变？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "将规则写成$i=\\rho+\\pi+\\theta_\\pi(\\pi-\\pi^*)+0.5x$，求θπ并解释不能混淆系数。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA13",
+        "CMA14"
+      ]
+    },
+    {
+      "id": "MA064",
+      "source_sha256": "3b07d35d66a330899eecc9d87b9ccac0936c8eb136e0ca8041e9ddde0f035941",
+      "review_sha256": "dc9ce05b3272d835ac34f59593ab3b3efa1dbd12a39cec052f0f48fd4bd9e8f0",
+      "classification": "linked",
+      "classification_reason": "围绕有冲击相机政策与固定规则的统一期望损失比较。",
+      "stem_md": "央行目标最小化$L=(x-1)^2+\\pi^2$，供给$x=\\pi-\\pi^e-v$。公众先定预期，随后央行观察供给冲击v再行动。v以各$\\frac{1}{2}$概率为2或−2。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求相机最优反应及理性预期均衡。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求期望损失。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "比较可信固定零通胀规则的期望损失，说明“有偏差所以规则必优”为何不完整。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA13",
+        "CMA14"
+      ]
+    },
+    {
+      "id": "MA065",
+      "source_sha256": "4e0585b674ceff55427f5b774cbe4d460fd26e0d0956eda39a70fd38d1a09c47",
+      "review_sha256": "22308ed927377163e9baa474a59174a5a2af079dfa55ab9faa339436d14ca3d4",
+      "classification": "focused",
+      "classification_reason": "围绕保守委托求无冲击均衡并辨有冲击外推。",
+      "stem_md": "供给$u=6-(\\pi-\\pi^e)$。社会损失为$L_s=u^2+\\pi^2$，公众理性预期，央行相机决策且无冲击。比较央行自己的损失分别为$u^2+\\gamma\\pi^2$、γ=1或4。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求两种委托下均衡π、u和社会损失。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "解释保守委托的收益。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若存在供给冲击，为什么仍不能只凭该无冲击结果选择γ无穷大？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA13",
+        "CMA14"
+      ]
+    },
+    {
+      "id": "MA066",
+      "source_sha256": "64d5d5ade001a69ca5deff65fbc497d7fff7baca8717c0928fd503a70e5bf0c9",
+      "review_sha256": "2fea78770fd7f46b4f18474e4373c6fc880ee46f7fcf5f65c20d6555a0d1ac64",
+      "classification": "focused",
+      "classification_reason": "围绕QE资产负债核账、合并财富与传导渠道。",
+      "stem_md": "编者给央行以100单位准备金购买银行持有的长期国债100，交易价格等于账面价，银行不立即新增贷款。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "分别列央行和商业银行资产负债表变化。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "基础货币、银行总资产、私人部门净金融财富怎样变化？",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "解释组合再平衡、期限溢价和信贷渠道，并说明QE不等于政府直接支出100。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA13",
+        "CMA14"
+      ]
+    },
+    {
+      "id": "MA067",
+      "source_sha256": "fc9b447b46ae7a6b191503dec45b0f36c151e5b09c16f4511bfc3df60af956f6",
+      "review_sha256": "dd9d3128eb223b8ea912bf732978be626d31f9a32d78bde60da2f3bb385a940d",
+      "classification": "focused",
+      "classification_reason": "围绕债券到期筹款链核缩表及准备金制度。",
+      "stem_md": "央行持有国债到期50不再投资，财政部从其央行账户偿付；为筹款财政部先向非银行公众发行新债50，公众用银行存款付款。设支付链完成、无其他操作。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "列最终央行资产、准备金及公众存款变化。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "缩表必然使短期利率上升吗？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "比较准备金稀缺与充裕两种制度，说明对信用和总需求的可能影响。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA13",
+        "CMA14"
+      ]
+    },
+    {
+      "id": "MA068",
+      "source_sha256": "388aa0162374ee2e2e4c381b70ff559fdf6697e6d69dd2851e51332caefcbcfd",
+      "review_sha256": "918a5a9e97741c1abeb16a1bd98184aa09eefb5198d2682c79cd8635b33701ea",
+      "classification": "focused",
+      "classification_reason": "围绕现金和超额准备金比率变化核货币乘数。",
+      "stem_md": "公众现金存款比c=0.2，法定准备金率r=0.1，银行超额准备金率e=0.1。基础货币B=100，广义货币M为现金加存款。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求货币乘数、存款及M。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "危机使c升至0.4、e升至0.2，B不变，求新M。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若央行只为维持原M需多少B？讨论为何这仍不保证贷款和支出恢复。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA13",
+        "CMA14"
+      ]
+    },
+    {
+      "id": "MA069",
+      "source_sha256": "4f3396fa1f9d5ae74d3e559d7c96481ad7bfcb0fab2507b160762e5175c9908d",
+      "review_sha256": "57baa7e6d384c954b369f9df73a4536cb5ac35526f7e907234c2a177e1e81aed",
+      "classification": "focused",
+      "classification_reason": "围绕识别决策实施时滞比较稳定器与规则风险。",
+      "stem_md": "某经济需求冲击在半年后被统计确认，财政审批另需半年、实施再需半年，而冲击预计一年后消退。可比较机械追踪当期数据的政策与预先公布且可按明确状态调整的规则。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "画文字时间线，区分识别、决策、实施和作用时滞。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "说明自动稳定器及预先沟通能解决什么问题。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "讨论规则与相机政策各自风险，说明如何避免机械反应。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA13",
+        "CMA14"
+      ]
+    },
+    {
+      "id": "MA070",
+      "source_sha256": "db19c23c1834bece34a32a6386dec366575c16280dcdd903651ce8103c2df1bc",
+      "review_sha256": "422f3feb3680528775658b24f3b5c9b8e330806457ce916c761cb1c2d360b45e",
+      "classification": "focused",
+      "classification_reason": "围绕自然利率下降及下限反推预期政策工具。",
+      "stem_md": "编者设需求缺口$x=-(r-r^n)$，事前实际利率$r=i-\\pi^e$，名义利率下限i≥0。自然实际利率由1%降至−2%，预期通胀固定1%。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "若要保持x=0，冲击前后所需i各是多少？",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "下限约束后的实际i、r、x是什么？",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若可信政策能把预期通胀提高到2.5%，能否消除缺口，需怎样设置i？说明承诺条件。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA13",
+        "CMA14"
+      ]
+    },
+    {
+      "id": "MA071",
+      "source_sha256": "33cc7a0e63d1045aee77a29de0ed1e9d8a9f92f266503c85800b662da6dd54d0",
+      "review_sha256": "dc17b68ffa84fb53748f5ce3bdef4960b46ddf7b96e19d4e1504f45f19ab3e7a",
+      "classification": "anchor",
+      "classification_reason": "政府当期预算、融资等价与债务额率稳态联动，是财政综合锚点。",
+      "stem_md": "政府期初债务为$B_t$，本期利率为$r_t$，政府支出$G_t$，税收$\\tau_tY_t$，本期末需支付利息$r_tB_t$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "写政府本期预算。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "说明债务与税收融资等价的条件及不成立的环境。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若政府初级盈余恰能支付利息即达题目所说的债务上限，求稳态决定式及上限。再说明债务额不变与债务率不变的差别。",
+          "answer_step_indexes": [
+            3,
+            4
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA15",
+        "CMA16"
+      ]
+    },
+    {
+      "id": "MA072",
+      "source_sha256": "19a4470fa630ee6b969fe8ea7909ba22a60e1f1dfe1e631c28b4882d38424b0e",
+      "review_sha256": "b2fc6a31467066525e963fb8a5c9a5d241f60a236cfa26b883e90926d9af7c28",
+      "classification": "focused",
+      "classification_reason": "围绕本期GDP口径债务率递推和无反馈稳定。",
+      "stem_md": "政府债务$B_{t+1}=(1+r)B_t+G_t-T_t$，名义GDP$Y_{t+1}=(1+g)Y_t$。r=5%、g=2%，初级盈余占本期GDP的比率固定p=3%，初始债务率b0=0.8。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "推导债务率递推、求b1。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求形式稳态并判断无反馈时稳定性。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "要在初始债务率上保持稳定，p应是多少？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA15",
+        "CMA16"
+      ]
+    },
+    {
+      "id": "MA073",
+      "source_sha256": "60054f73502757337e43c6026e2dd20344fdc37bfac6684823ed0004cc9d31f7",
+      "review_sha256": "7ef488ef4f60e19ecb503d9c436a52632b75fb15a535ab453ccf4024c1cc1f55",
+      "classification": "focused",
+      "classification_reason": "围绕财政反馈固定点、系数区间及调整可行。",
+      "stem_md": "债务率递推$b_{t+1}=\\frac{1.04b_t-p_t}{1.02}$，财政规则$p_t=0.02+\\phi(b_t-1)$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "证明b=1是固定点。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求局部稳定的φ区间。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "比较φ=0、0.1、2.2。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "4",
+          "prompt_md": "为什么稳定要求之外还要检查财政调整可行性？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA15",
+        "CMA16"
+      ]
+    },
+    {
+      "id": "MA074",
+      "source_sha256": "6ca1c9468e31f5c67bf9df9306abd0b73556b936c6cbb7023d5f994af814ceb9",
+      "review_sha256": "6c4e78cbdf3060ccea9e9d05091a4e2150d3f8dd3aeb54dd79f93c0ab0663d3c",
+      "classification": "focused",
+      "classification_reason": "围绕两期税收融资现值等价与私人储蓄调整。",
+      "stem_md": "两期家庭收入$(10,12)$，总回报R=1.2，政府支出给定。政府第一期减税2并借款，第二期提高税收2.4。家庭效用$\\ln c_1+\\ln c_2$，可按同利率自由借贷、完全预见未来税收，无遗产边界。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "证明家庭税后现值资源不变并求消费变化。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求私人储蓄变化。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "列出至少三种会破坏结论的条件，并给相应机制。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA15",
+        "CMA16"
+      ]
+    },
+    {
+      "id": "MA075",
+      "source_sha256": "24ebe7bb44fc2bddb456cbc7ef087fdb35842d28198ab0a610c80edb14b982ed",
+      "review_sha256": "da3bdc27d9c8d06087ecc061f4cb02076a69a909fb146277d58e7ddc7549ac73",
+      "classification": "focused",
+      "classification_reason": "围绕比例税和进口泄漏比较自动稳定器。",
+      "stem_md": "开放经济价格固定、利率固定，$C=20+0.8(1-t)Y$，$I+G+X=80$，进口$IM=0.1Y$。初始t=0.25。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求均衡与自主需求乘数。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "自主需求下降20时，比较t=0.25与t=0两种制度的产出变化。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "税率较高为什么既降低扩张乘数也缓冲下行？这种稳定是否无成本？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA15",
+        "CMA16"
+      ]
+    },
+    {
+      "id": "MA076",
+      "source_sha256": "cada1e40502abcb9bbfc6a6f12d0e7d49822856eafa12602bdf97c1cde4b1659",
+      "review_sha256": "f5f3a4b27d44fff2fdd0e6d6bda235d3770e49265d561a77695bb4c2caeeafee",
+      "classification": "focused",
+      "classification_reason": "围绕同次税率调整比较固定利率与固定货币。",
+      "stem_md": "产品市场$Y=40+0.8(1-t)Y-4i$。货币需求$m=0.5Y-5i$，初始t=0.25、i=2。央行可选择固定i或固定初始m。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求初始Y和m。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "t降至0.2，分别求两种货币闭合下的新Y、i。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "解释税率变化为何改变乘数分母。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA15",
+        "CMA16"
+      ]
+    },
+    {
+      "id": "MA077",
+      "source_sha256": "0546c9ec57a24203a6052498121f80afbc37d96fbe41caaf1d5456ef751b347f",
+      "review_sha256": "ec2d8d538bb6407c00b694d982a1589f3be069010a357081f17c01ec2bb66e74",
+      "classification": "focused",
+      "classification_reason": "围绕充分就业资源约束计算财政储蓄挤出。",
+      "stem_md": "封闭经济充分就业Y固定1000，私人消费$C=100+0.8(Y-T)$，投资$I=200-20r$，初始G=T=200。r按百分点计。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求国民储蓄与均衡r。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "G增50而T不变，求r与投资变化。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "G和T同增50时再算。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "4",
+          "prompt_md": "与短期凯恩斯需求扩张比较条件。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA15",
+        "CMA16"
+      ]
+    },
+    {
+      "id": "MA078",
+      "source_sha256": "fc4bfe4c140771c2785e0b9d183c63b265f1c944d4603cabb92db9e3b57f4ba3",
+      "review_sha256": "efdac3188063eb98ce5f3f5694785e43222716b17ae8bf7108d52539ba570100",
+      "classification": "focused",
+      "classification_reason": "围绕名义债务通胀稀释及债务条款再定价。",
+      "stem_md": "政府有固定名义债务100，价格初始P=1，未来没有指数化条款，债务由本国居民持有。意外通胀使P升至1.25，实际GDP不变。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求债务实际价值变化。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "区分政府与债权人的财富变化，能否把债务稀释全称社会净收益？",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若债务是浮动利率、短期滚动或通胀指数债，结论怎样变化？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA15",
+        "CMA16"
+      ]
+    },
+    {
+      "id": "MA079",
+      "source_sha256": "8500e6ea62a67a3399c98cc791c307a59e1d784521a3add9823e78b3e2fc3b01",
+      "review_sha256": "0e1a89b265eaed50dab1418066bdcc4154355cfdb03529c293e402beff94dccf",
+      "classification": "focused",
+      "classification_reason": "围绕有限终端盈余、跨期预算和不庞氏条件。",
+      "stem_md": "政府初始债务B0=100，总利率R=1.1。未来两期初级盈余分别为S1=30、S2未知，此后政府终止且无剩余债务。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求S2。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若第一期盈余降为20，求S2及其变化。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "比较有限期预算、无限期跨期约束与“不庞氏条件”，说明“r>g所以必然违约”为何不成立。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA15",
+        "CMA16"
+      ]
+    },
+    {
+      "id": "MA080",
+      "source_sha256": "2b67825ed09d3b8334dd37a92b405c9f1c93d14b33144f556fae3c367ce945cc",
+      "review_sha256": "3aab5c2013b1b8af6752c1538d9eb8b21174a360bd67dc2e2ffe2b5ccb9e8c21",
+      "classification": "focused",
+      "classification_reason": "围绕减税需求供给双渠道及政策实施边界。",
+      "stem_md": "编者给短期AD变化$\\Delta x=2\\Delta D-\\Delta P$，AS变化$\\Delta P=0.5\\Delta x-\\Delta a$。减税使自主需求D增加1，同时提高供给效率参数a共0.5。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求x、P变化。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若只看需求效应会得什么结果？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "从税收激励、财政融资、实施时滞和分配四方面评价这项政策，指出题内参数不能被当作经验估计。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA15",
+        "CMA16"
+      ]
+    },
+    {
+      "id": "MA081",
+      "source_sha256": "497b7e29d5db0cd4f037f6f233658b8d8ebf55ccff0bdc5c76200561df97cc1f",
+      "review_sha256": "c71a2a3313d070b3a945fb8be049335b25e84ccae7f91de4c588e113b12e6f88",
+      "classification": "anchor",
+      "classification_reason": "在同一小国浮动汇率闭合中比较财政货币并作图，是制度政策锚点。",
+      "stem_md": "按人大开放经济政策题结构改编，设小型开放经济价格固定、资本完全流动、利率由世界市场固定。$C=0.8Y$、I=20、G=20、$NX=100-20e$，e为实际升值指标，越高表示本国产品越贵。实际货币需求$0.5Y$，供给m=100。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求初始Y、e、NX。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "G增10、m固定时求新均衡。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "m增20而G不变时求新均衡。作图并解释两类政策。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA17",
+        "CMA18"
+      ]
+    },
+    {
+      "id": "MA082",
+      "source_sha256": "762f5e4bda0a87d6ff5061b90e10a58460285a638d8928bf52904a4c30ddc4ef",
+      "review_sha256": "afc842c252ee27da28d06466a4c26c53c958742d5d8bde199caa1dc7c1e0e7b1",
+      "classification": "focused",
+      "classification_reason": "围绕固定汇率财政配套货币及独立扩币抵消。",
+      "stem_md": "小型开放经济利率固定，$C=0.8Y$、I=20、$NX=100-20e$、G=20，e为升值指标，央行固定e=5。货币需求m=0.5Y。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求初始均衡。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "G增加10，求Y和为维持汇率所需m。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "央行试图独立将m从100增至120、G不变，会面对什么干预？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "4",
+          "prompt_md": "说明资本完全流动、固定汇率与独立货币政策的关系。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA17",
+        "CMA18"
+      ]
+    },
+    {
+      "id": "MA083",
+      "source_sha256": "d7c0847d59f0da1b007fb2ee6b69bba985af9e6a742e00f9e31512ce9f82ec31",
+      "review_sha256": "af4b8e1689e484a9fc15e5af71c2863a436f41efe1689d9d0c0d366528552bfd",
+      "classification": "focused",
+      "classification_reason": "围绕出口限制的需求货币效应及食品福利缺项。",
+      "stem_md": "按2013年限制粮食出口问法构造闭合模型：价格固定、世界利率固定、汇率固定。消费C=0.75Y，投资与政府支出合计50，自主净出口X=30。政策限制出口使X降10，进口已并入固定参数，央行维持汇率。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求初始和冲击后Y。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若货币需求m=0.5Y，央行货币如何调整？",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若政策同时降低国内食品价格，应怎样扩展模型，为什么不能从总需求式直接回答全部福利？",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA17",
+        "CMA18"
+      ]
+    },
+    {
+      "id": "MA084",
+      "source_sha256": "2d107c4716c726675957e03524476fb161495b4813abd449497b4fb9dec630eb",
+      "review_sha256": "3b6c0e012b0b2b36d24d68ccdeac62200f3856d76a9d9d96e055ad5c23218de1",
+      "classification": "focused",
+      "classification_reason": "围绕含风险溢价平价式辨汇率和预期共同变化。",
+      "stem_md": "采用一年近似无套利式$i=i^*+\\frac{E^e-E}{E}+\\rho$，E为一单位外币的本币价格。国内利率3%，国外1%，风险溢价1%，预期未来E为10。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "解当前E。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "风险溢价升至2%，其他量固定时E如何变化？",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若预期未来E同时降至9.5，求新E并解释为什么不能只看风险溢价给方向。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA17",
+        "CMA18"
+      ]
+    },
+    {
+      "id": "MA085",
+      "source_sha256": "904c950d7641b526a3b9f1c82b993c99a3a8f12453dd3a3684e89477decf10a5",
+      "review_sha256": "a3e6d9aad5201344e10f1fc64113e13d81de117a8ff5b4b7aa454ffe312647db",
+      "classification": "focused",
+      "classification_reason": "围绕不完全流动BP IS交点和货币支持。",
+      "stem_md": "编者扩展开放经济闭合：$NX=100-0.1Y-10e$，净资本流入$K=20(i-5)$，固定e=2，国际收支均衡要求NX+K=0。产品市场$Y=400-20i-10e$。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "推导BP并求与IS的交点。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "若货币需求$m=0.5Y-10i$，维持该交点需多少m？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "比较资本流动系数变大时BP斜率；说明固定汇率下冲销的限制。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA17",
+        "CMA18"
+      ]
+    },
+    {
+      "id": "MA086",
+      "source_sha256": "45aba4d3918d8df3975c4c2b5eb6ca3810000ddac24784f72b73debfe75208ff",
+      "review_sha256": "f94b975924d023bc128b3bdde8e274aab66fc17d1254fb655faae3c3a3531010",
+      "classification": "focused",
+      "classification_reason": "围绕充分就业储蓄投资差比较财政世界利率。",
+      "stem_md": "小型开放经济充分就业产出固定，国民储蓄S=80，国内投资I=50，净出口$NX=60-10e$，e为升值指标。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求资本净流出、NX和e。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "财政赤字使S降20，求新均衡。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若同时世界利率上升使I降10，再算；区分长期模型与短期产出政策结论。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA17",
+        "CMA18"
+      ]
+    },
+    {
+      "id": "MA087",
+      "source_sha256": "9e5f1a6a9f5256e4d41f687c583996a77c4ac0877d1033ee658fc1c3ef056678",
+      "review_sha256": "4e8fed6d87e0a9e7a0975e9a3a4d7b6361a115b28ecf30c0208837c708560a46",
+      "classification": "focused",
+      "classification_reason": "围绕合同货币和数量时滞核贬值贸易余额。",
+      "stem_md": "初始出口数量10、每单位外币价1，进口数量10、外币价1，直接标价E初为1。汇率突然贬值至E=1.2，短期贸易数量固定，出口合同本币价固定为1，进口外币价固定为1；长期数量变为出口12、进口8，合同价格规则不变。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求初始、短期、长期本币贸易余额。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "解释短期恶化长期改善的机制。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "说明这不是所有贬值必出现的经验规律。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA17",
+        "CMA18"
+      ]
+    },
+    {
+      "id": "MA088",
+      "source_sha256": "c9223442b5c6de5c68ad111f6306e6bd0e4c7d24dce09efddf156a9713834a47",
+      "review_sha256": "7d64e57da8baedf0bca488129f17fd1952fad556f2d5ff8fde420a6dab967d93",
+      "classification": "focused",
+      "classification_reason": "围绕精确实际汇率和成本债务竞争力条件。",
+      "stem_md": "直接标价名义汇率E从7升至7.7，国外物价P*从100升至102，本国物价P从100升至110。定义实际汇率$q=\\frac{EP^*}{P}$，q越高表示本国产品相对便宜。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求q的精确变化。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "比较只看10%名义贬值的结论。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "从生产率、进口中间品、外币债务及产业结构讨论贬值对竞争力的限制。",
+          "answer_step_indexes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA17",
+        "CMA18"
+      ]
+    },
+    {
+      "id": "MA089",
+      "source_sha256": "ad9e968372ce2fa2bca2f96c0805a06745d7fb510f4ab7a3063cd4f0b86d2cac",
+      "review_sha256": "8b4ff9d6eecd013eae23fbd4817cd0089534da6015f8f155d0bf39a0dac82fb1",
+      "classification": "focused",
+      "classification_reason": "围绕预期贬值风险补偿与守汇率代价。",
+      "stem_md": "某固定汇率经济国内利率i与国外利率i*相同。公众预期一年内贬值10%，风险溢价2%。央行可提高国内利率、卖外汇或放弃固定汇率。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "在近似利率平价下，为补偿预期和风险，国内利率相对i*需提高多少？",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "解释维持汇率与国内产出的权衡。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "为什么资本流出既可能反映基本面，也可能被预期强化？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA17",
+        "CMA18"
+      ]
+    },
+    {
+      "id": "MA090",
+      "source_sha256": "91edfc930c8007452985cbba1ac094d2d5587a78ed6edd1f4e662c12514b09ba",
+      "review_sha256": "4e662b3773895988372910a4a95f2ee529a8052a76b6a852f3267d24cd728a70",
+      "classification": "anchor",
+      "classification_reason": "跨四种资本流动汇率制度比较财政渠道，是开放宏观综合锚点。",
+      "stem_md": "比较四个环境：封闭经济固定货币；开放经济浮动汇率且资本完全流动；开放经济固定汇率且资本完全流动；开放经济资本不完全流动。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "在封闭固定货币环境分析财政扩张的利率及产出渠道。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "在完全流动浮动汇率环境分析财政的利率、汇率、净出口与产出渠道。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "在完全流动固定汇率环境分析财政的利率、汇率、净出口、产出及配套货币。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "4",
+          "prompt_md": "讨论资本不完全流动时的条件结果，说明为什么须先识别制度再求乘数。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA17",
+        "CMA18"
+      ]
+    },
+    {
+      "id": "MA091",
+      "source_sha256": "98f97fe74536e97d6e78b57f6b8e9b9fb5f1fbb16f3f379c19e3200c17b7a550",
+      "review_sha256": "8d2876bda1c61e7878f58e4536afecf76585acd5dba4ccc261534e87ddf3dca4",
+      "classification": "anchor",
+      "classification_reason": "两组历史表的支出、余额、实际利率和债务通缩证据贯通，是经验综合锚点。",
+      "stem_md": "根据以下同口径历史数据，考察大萧条的支出与货币金融解释。\n\n| 年份 | 实际GNP | 消费 | 投资 | 政府支出 |\n|---|---:|---:|---:|---:|\n| 1929 | 203.6 | 139.6 | 40.4 | 22.0 |\n| 1930 | 183.5 | 130.4 | 27.4 | 24.3 |\n| 1931 | 169.5 | 126.1 | 16.8 | 25.4 |\n| 1932 | 144.2 | 114.8 | 4.7 | 24.2 |\n| 1933 | 141.5 | 112.8 | 5.3 | 23.3 |\n\n| 年份 | 名义利率 | 货币供给 | 物价水平 | 通胀率 | 实际货币余额 |\n|---|---:|---:|---:|---:|---:|\n| 1929 | 5.9 | 26.6 | 50.6 | 未列 | 52.6 |\n| 1930 | 3.6 | 25.8 | 49.3 | -2.6 | 52.3 |\n| 1931 | 2.6 | 24.1 | 44.8 | -10.1 | 54.5 |\n| 1932 | 2.7 | 21.1 | 40.2 | -9.3 | 52.5 |\n| 1933 | 1.7 | 19.9 | 39.3 | -2.2 | 50.7 |\n\n注：各列单位沿用题面。题给1931年“货币供给24.1、物价44.8、实际余额54.5”存在近似或整理差异，前两列按$\\frac{100 M}{P}$算约53.8；作答注明采用题给余额列，不静默修改原表。该差异不改变“实际余额未持续大幅下降”的关键判断。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "若将大萧条归于支出冲击，IS怎样移动，哪些数据支持？",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "名义货币下降对应LM紧缩的解释，有哪些支持或反对证据？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "除直接影响LM外，名义货币下降和通缩还可能通过哪些渠道影响经济？逐问说明数据能与不能证明什么。",
+          "answer_step_indexes": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA19",
+        "CMA20"
+      ]
+    },
+    {
+      "id": "MA092",
+      "source_sha256": "515381073a59fb05ba512b64cd8fc8b93de9694289f5b3f656e0914ae06a5b68",
+      "review_sha256": "1836e1f8c3ae3057e569f891cbe0ee13c5e0d54bbb797bb61315ac78a1989b67",
+      "classification": "anchor",
+      "classification_reason": "三种短期供给微观摩擦及共同约化式比较，是理论综合锚点。",
+      "stem_md": "分别考察黏性价格、黏性工资与不完全信息三种短期总供给机制。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "分别介绍黏性价格、黏性工资、不完全信息三种短期总供给模型。",
+          "answer_step_indexes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "比较它们的共同结论、摩擦位置、价格超出预期时的传导及长期调整。作答需说明共同供给关系为什么不是三种相同机制。",
+          "answer_step_indexes": [
+            3,
+            4
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA19",
+        "CMA20"
+      ]
+    },
+    {
+      "id": "MA093",
+      "source_sha256": "62c65d3fc25a68348fb41cd180adc30ec5748da69a0522714057a37e97cad7cb",
+      "review_sha256": "b8c6bab9b95daaa681ba76e1fefdc1a1b672967480d4246caa3e4d700ba9f8e5",
+      "classification": "focused",
+      "classification_reason": "围绕PPI货币原油汇率投资竞争机制设计识别证据。",
+      "stem_md": "某假设年央行先紧缩，随后PPI同比由8%降至−2%，同期国际原油价格下降30%、国内投资减速、汇率升值；题设不是实际年份的经验因果结论。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "建立至少三条解释PPI变化的可能机制。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "区分PPI价格水平与同比增速，解释由正转负的含义。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "提出有助识别货币政策独立作用的证据清单。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA19",
+        "CMA20"
+      ]
+    },
+    {
+      "id": "MA094",
+      "source_sha256": "74d86f02710f0e6ae48f96550845363decb988cea155d0cd706825b96a06d035",
+      "review_sha256": "712f1fc6740a6dcefb0124911d1cef3aee5d1a716bf94cf95674bac3ddce0e40",
+      "classification": "anchor",
+      "classification_reason": "真实与信息货币周期跨期反应、政策及经验区分构成学派综合比较。",
+      "stem_md": "对真实经济周期与不完全信息货币周期进行完整理论比较。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "说明真实经济周期的冲击、价格信息假设、劳动消费跨期反应和政策含义。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "说明不完全信息货币周期的冲击、信息摩擦、劳动消费反应及预期政策效果。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "比较两理论的政策与经验限制，并给能区分机制的可观察证据。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA19",
+        "CMA20"
+      ]
+    },
+    {
+      "id": "MA095",
+      "source_sha256": "c59d295284cc89765e2bb967076e4b538b6218d30c62808e1ae5535b18cef2ba",
+      "review_sha256": "e52507069cd948837c068fb58a8edf75aee498ee4d6973ea66f7ebff018989da",
+      "classification": "anchor",
+      "classification_reason": "同一次需求变化在两类理论的价格数量就业及证据对比，已是综合论述。",
+      "stem_md": "以同一次需求下降为比较对象，考察新凯恩斯与新古典宏观解释。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "说明共同方法基础及灵活价格基准下价格、产出和就业预测。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "说明名义刚性或信息摩擦如何改变传导，比较政策反应。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "提出可区分机制的证据，避免将学派等同于政府万能或政策永远无效。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA19",
+        "CMA20"
+      ]
+    },
+    {
+      "id": "MA096",
+      "source_sha256": "35db560119db9955ab8e324ebf22234234ed151efeb64d810027c61ceeed99ad",
+      "review_sha256": "48020e4eb0c1a49f5ea0a4e88f653fc9e8f1e0917f49a97db9b8cfa7fec3efb0",
+      "classification": "focused",
+      "classification_reason": "围绕通缩真实债务、利率和企业投资的直接反馈。",
+      "stem_md": "经济中借款企业负有固定名义债务100，价格从2降至1.6，名义利率3%、预期通胀−4%。企业因真实债务每增加1单位而减少投资0.5单位。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求真实债务和近似事前真实利率。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "求题设债务渠道的投资变化。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "说明债务通缩怎样与银行资产、需求和价格形成反馈；哪些参数还不足以算总产出变化？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA19",
+        "CMA20"
+      ]
+    },
+    {
+      "id": "MA097",
+      "source_sha256": "024f25aafcb648a6f9805b403921e30063cb744850140d372314a88a3f685393",
+      "review_sha256": "7e0b6c1b7b87f29c8dc81ee3bfb214c99af6f8e5acd2aa8f983c7fbb9593df43",
+      "classification": "focused",
+      "classification_reason": "围绕两商品GDP平减与拉氏权重及进口边界。",
+      "stem_md": "两种产品A、B：基期数量各10，价格分别2、4；本期数量分别12、9，价格分别3、5。以基期价格计算实际GDP，以基期数量计算拉氏物价指数。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "求两期名义GDP、实际GDP增长、GDP平减指数与拉氏指数。",
+          "answer_step_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "解释两个价格指标为何不同。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "若居民进口消费增加，其价格能否直接进入本国GDP平减指数？",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA19",
+        "CMA20"
+      ]
+    },
+    {
+      "id": "MA098",
+      "source_sha256": "92cf7b3cde8101035f729b14727c5f1bdd22077093adf89fa1bb32f9971adb67",
+      "review_sha256": "b21d1c5304daf914b923525e9ecd6a55c6274332b9b04eb4908673329d9516e8",
+      "classification": "focused",
+      "classification_reason": "围绕支出账户分解与直接贡献因果识别区别。",
+      "stem_md": "某经济同口径实际GDP从1000降至950。消费从600降至585、投资从200降至160、政府购买从180升至190、净出口从20降至15。数据均无统计差异。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "核对两期GDP并分解变化贡献。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "哪项是主要直接支出下降项？",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "能否由投资跌幅认定衰退的初始原因是投资冲击？提出至少两种反向或共同原因。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA19",
+        "CMA20"
+      ]
+    },
+    {
+      "id": "MA099",
+      "source_sha256": "6a3c7d55382b389acea1282e83f6b3ad4f33c68e55b4e5f63f2f34e7a2744127",
+      "review_sha256": "79f021e9d28d43e3a88bfea025692bb7af19f7ee84aa1f7b4e4e3eb526ad9ab9",
+      "classification": "anchor",
+      "classification_reason": "需求供给金融材料各接政策监测与退出，是跨机制综合作答。",
+      "stem_md": "某假设经济需求偏弱、服务就业恢复缓慢，部分关键投入价格上涨，银行风险偏好下降；没有给实际年份或政策参数。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "针对需求链条提出有传导解释的政策，并说明监测。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "针对供给瓶颈提出对应措施及限制。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "针对金融信用链条提出治理、监测与退出安排，避免仅列工具。",
+          "answer_step_indexes": [
+            2
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA19",
+        "CMA20"
+      ]
+    },
+    {
+      "id": "MA100",
+      "source_sha256": "48772af92ad693a9672de666350738fd0a8e494617315a46a65158e149e09189",
+      "review_sha256": "413acfe7a0d5f6f198588fa07a25fbbd21f97c1696b45e8853216ac31cc95ada",
+      "classification": "anchor",
+      "classification_reason": "用增长、利率、债务和金融闭合逐条检验命题，是跨专题条件总结。",
+      "stem_md": "对下列四项宏观命题逐条判断，均须给出模型条件、完整推理或反例。",
+      "parts": [
+        {
+          "id": "1",
+          "prompt_md": "储蓄率提高必永久提高人均增长率。",
+          "answer_step_indexes": [
+            0
+          ]
+        },
+        {
+          "id": "2",
+          "prompt_md": "名义利率下降必表示融资更宽松。",
+          "answer_step_indexes": [
+            1
+          ]
+        },
+        {
+          "id": "3",
+          "prompt_md": "政府债务率存在稳态就一定稳定。",
+          "answer_step_indexes": [
+            2
+          ]
+        },
+        {
+          "id": "4",
+          "prompt_md": "实际货币余额增加足以排除货币金融因素导致衰退。最后说明宏观结论如何依模型闭合。",
+          "answer_step_indexes": [
+            2,
+            3
+          ]
+        }
+      ],
+      "change_note_md": "编者将有效题干拆为情境和分问，保留题定参数、制度、时序及已审修订；不回写原题或规范答案，不增加无答案新任务。",
+      "comprehensive_ids": [
+        "CMA19",
+        "CMA20"
+      ]
+    }
+  ]
+}

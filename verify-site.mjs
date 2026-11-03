@@ -7,11 +7,15 @@ import {prepareDiagrams} from './build-diagrams.mjs';
 import {prepareTopics} from './build-topics.mjs';
 import {prepareStudyCorrection} from './build-solutions.mjs';
 import {prepareExamBank} from './build-exam-review.mjs';
+import {prepareTrainingBank,prepareComprehensiveBank,prepareTrainingPapers,trainingDigest} from './build-training.mjs';
+import {prepareConceptMap,conceptDigest,prepareConceptBridges} from './build-concept-map.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url)),dist=path.join(here,'dist');
 const checks=[];const check=(name,passed)=>checks.push({name,passed:!!passed});
 const context={window:{}};vm.runInNewContext(await readFile(path.join(dist,'data.js'),'utf8'),context);
 const data=context.window.STUDY_DATA,manifest=JSON.parse(await readFile(path.join(here,'build-manifest.json'),'utf8'));
 for(const subject of data.subjects)vm.runInNewContext(await readFile(path.join(dist,'exam-'+subject.key+'.js'),'utf8'),context);
+for(const subject of ['micro','macro'])vm.runInNewContext(await readFile(path.join(dist,'training-data-'+subject+'.js'),'utf8'),context);
+for(const subject of ['micro','macro'])vm.runInNewContext(await readFile(path.join(dist,'concept-data-'+subject+'.js'),'utf8'),context);
 vm.runInNewContext(await readFile(path.join(dist,'exam-review.js'),'utf8'),context);
 const decode=s=>s.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#x27;|&#39;/g,"'");
 let mathCount=0,solutionMathCount=0,examMathCount=0,examQuestions=0;
@@ -124,6 +128,91 @@ for(const subject of data.subjects){
  }
 }
 check('all topic formulas accounted for',topicMathCount===manifest.topicMathCount);
+let trainingMathCount=0;
+function trainingField(id,md,html){
+ const expected=[...md.matchAll(/\$\$([\s\S]+?)\$\$|\$([^$]+?)\$/g)].map(m=>(m[1]||m[2]).trim());
+ const actual=[...html.matchAll(/<annotation encoding="application\/x-tex">([\s\S]*?)<\/annotation>/g)].map(m=>decode(m[1]));
+ trainingMathCount+=actual.length;
+ check(id+' training formula correspondence and safe rendering',JSON.stringify(expected)===JSON.stringify(actual)&&!/math-error|katex-error|<script\b|javascript:/i.test(html));
+}
+const expectedCases=[];
+for(const subject of data.subjects.filter(subject=>['micro','macro'].includes(subject.key))){
+ const [trainingRaw,caseRaw,reviewRaw]=await Promise.all(['training-','comprehensive-','exam-review-'].map(prefix=>readFile(path.join(here,'content',prefix+subject.key+'.json'))));
+ const structured=prepareTrainingBank(JSON.parse(trainingRaw),subject.key,subject.questions,JSON.parse(reviewRaw));
+ const cases=prepareComprehensiveBank(JSON.parse(caseRaw),subject.key,subject.questions,subject.groups);
+ expectedCases.push(...cases);
+ check(subject.key+' training source hash',createHash('sha256').update(trainingRaw).digest('hex')===manifest.sourceHashes['training_'+subject.key]);
+ check(subject.key+' comprehensive source hash',createHash('sha256').update(caseRaw).digest('hex')===manifest.sourceHashes['comprehensive_'+subject.key]);
+ for(const q of subject.questions){
+  const expected=structured.get(q.id),actual=q.training;
+  check(q.id+' structured content and answer mapping',actual&&Object.keys(expected).every(key=>JSON.stringify(actual[key])===JSON.stringify(expected[key])));
+  check(q.id+' linked comprehensive cases exist',actual.comprehensive_ids.every(id=>cases.some(entry=>entry.id===id)));
+  trainingField(q.id,actual.prompt_md,actual.prompt_html);
+ }
+}
+const compiledCases=data.comprehensive.questions;
+check('40 distinct comprehensive cases outside original 300',compiledCases.length===40&&new Set(compiledCases.map(q=>q.id)).size===40&&!compiledCases.some(q=>data.subjects.some(s=>s.questions.some(original=>original.id===q.id))));
+for(const expected of expectedCases){
+ const q=compiledCases.find(q=>q.id===expected.id),guide=q.solution;
+ check(q.id+' comprehensive source and all parts retained',Object.keys(expected).every(key=>JSON.stringify(q[key])===JSON.stringify(expected[key]))&&guide.source.review_sha256===trainingDigest(expected));
+ check(q.id+' comprehensive answers retained',guide.steps.every((step,index)=>step.body_md===expected.parts[index].answer_md&&step.lines_md.join('')===step.body_md&&step.line_lengths.reduce((sum,n)=>sum+n,0)===step.body_html.length));
+ check(q.id+' comprehensive scoring parts retained',q.scoring_parts.every((part,index)=>part.points===expected.parts[index].points&&part.prompt_md===expected.parts[index].prompt_md&&part.rubric.every((row,i)=>row.points===expected.parts[index].rubric[i].points&&row.criterion_md===expected.parts[index].rubric[i].criterion_md)));
+ check(q.id+' scoped figures retain original geometry',q.diagrams.length===q.figure_references.reduce((sum,ref)=>sum+data.subjects.find(s=>s.key===q.subject).questions.find(source=>source.id===ref.question_id).diagrams.length,0)&&q.diagrams.every(figure=>{
+  const ref=q.figure_references.find(ref=>data.subjects.find(s=>s.key===q.subject).questions.find(source=>source.id===ref.question_id).diagrams.some(original=>original.id===figure.source_diagram_id));
+  const original=data.subjects.find(s=>s.key===q.subject).questions.find(source=>source.id===ref.question_id).diagrams.find(original=>original.id===figure.source_diagram_id);
+  return figure.question_id===q.id&&figure.situation.includes(ref.scope_md)&&Object.keys(original).filter(key=>!['id','question_id','situation','erratum'].includes(key)).every(key=>JSON.stringify(original[key])===JSON.stringify(figure[key]));
+ }));
+ trainingField(q.id,q.prompt_md,q.prompt_html);
+ for(const field of ['source_note','connections','diagram_decision'])trainingField(q.id,q[field+'_md'],q[field+'_html']);
+ for(const field of ['method','pitfalls','recap'])trainingField(q.id,guide[field+'_md'],guide[field+'_html']);
+ for(const step of guide.steps)trainingField(q.id,step.body_md,step.body_html);
+ for(const part of q.scoring_parts){trainingField(q.id,part.prompt_md,part.prompt_html);for(const row of part.rubric)trainingField(q.id,row.criterion_md,row.criterion_html);}
+}
+const papersRaw=await readFile(path.join(here,'content','training-papers.json'));
+const expectedPapers=prepareTrainingPapers(JSON.parse(papersRaw),expectedCases);
+check('timed paper source hash',createHash('sha256').update(papersRaw).digest('hex')===manifest.sourceHashes.training_papers);
+check('three 100 point timed papers retained',expectedPapers.every((paper,index)=>Object.keys(paper).every(key=>JSON.stringify(paper[key])===JSON.stringify(data.comprehensive.papers[index][key]))));
+for(const paper of data.comprehensive.papers)trainingField(paper.id,paper.instructions_md,paper.instructions_html);
+check('all training formulas accounted for',trainingMathCount===manifest.trainingMathCount);
+check('training summary matches actual catalog',JSON.stringify(data.trainingSummary)===JSON.stringify(manifest.trainingSummary)&&manifest.trainingSummary.structured===200&&manifest.trainingSummary.cases===40&&manifest.trainingSummary.papers===3&&manifest.trainingSummary.parts===compiledCases.reduce((sum,q)=>sum+q.parts.length,0)&&manifest.trainingSummary.figures===compiledCases.filter(q=>q.diagrams.length).length&&manifest.trainingSummary.textOnly===compiledCases.filter(q=>!q.diagrams.length).length);
+let conceptMathCount=0;
+function checkConcept(raw,compiled,label){
+ if(Array.isArray(raw)){check(label+' array length',Array.isArray(compiled)&&raw.length===compiled.length);for(let i=0;i<raw.length;i++)checkConcept(raw[i],compiled[i],label+'/'+i);return;}
+ if(raw&&typeof raw==='object'){
+  for(const [key,value] of Object.entries(raw)){
+   checkConcept(value,compiled?.[key],label+'/'+key);
+   if(key.endsWith('_md')){
+    const html=compiled?.[key.slice(0,-3)+'_html']||'';
+    const expected=[...value.matchAll(/\$\$([\s\S]+?)\$\$|\$([^$]+?)\$/g)].map(m=>(m[1]||m[2]).trim());
+    const actual=[...html.matchAll(/<annotation encoding="application\/x-tex">([\s\S]*?)<\/annotation>/g)].map(m=>decode(m[1]));
+    conceptMathCount+=actual.length;
+    check(label+'/'+key+' formula correspondence and safe rendering',JSON.stringify(expected)===JSON.stringify(actual)&&!/math-error|katex-error|<script\b|javascript:/i.test(html));
+   }
+  }
+  return;
+ }
+ check(label+' source retained',JSON.stringify(raw)===JSON.stringify(compiled));
+}
+const conceptSummary={topics:0,nodes:0,edges:0,cards:0,questions:0,parts:0,subjects:{}};
+const conceptBanks=[];
+for(const subject of ['micro','macro']){
+ const raw=await readFile(path.join(here,'content','concept-map-'+subject+'.json'));
+ check(subject+' concept source fingerprint',conceptDigest(raw)===manifest.sourceHashes['concept_map_'+subject]);
+ const sources={hashes:manifest.sourceHashes};
+ for(const [key,file] of [['recall','recall'],['topics','topics-'+subject],['exam','exam-review-'+subject],['training','training-'+subject],['comprehensive','comprehensive-'+subject]])sources[key]=JSON.parse(await readFile(path.join(here,'content',file+'.json'),'utf8'));
+ const prepared=prepareConceptMap(JSON.parse(raw),subject,sources),compiled=data.conceptMaps[subject];
+ conceptBanks.push(prepared);
+ checkConcept(prepared,compiled,subject+' concept map');
+ conceptSummary.subjects[subject]=prepared.summary;
+ for(const key of ['topics','nodes','edges','cards','questions','parts'])conceptSummary[key]+=prepared.summary[key];
+}
+const bridgeRaw=await readFile(path.join(here,'content','concept-map-bridges.json'));
+check('cross-subject bridge fingerprint',conceptDigest(bridgeRaw)===manifest.sourceHashes.concept_map_bridges);
+const conceptBridges=prepareConceptBridges(JSON.parse(bridgeRaw),conceptBanks,manifest.sourceHashes);
+checkConcept(conceptBridges,data.conceptBridges,'cross-subject bridges');
+conceptSummary.bridges=conceptBridges.bridges.length;
+check('all concept formulas accounted for',conceptMathCount===manifest.conceptMathCount);
+check('concept summary matches the catalog',JSON.stringify(conceptSummary)===JSON.stringify(manifest.conceptSummary)&&JSON.stringify(conceptSummary)===JSON.stringify(data.conceptSummary));
 const diagrams=data.subjects.flatMap(s=>s.questions.flatMap(q=>q.diagrams));
 check('diagram totals match build manifest',JSON.stringify(data.diagramSummary)===JSON.stringify(manifest.diagramSummary)&&diagrams.length===manifest.diagramSummary.total);
 for(const mode of ['numeric','schematic','structure'])check(mode+' diagram count matches',diagrams.filter(d=>d.mode===mode).length===manifest.diagramSummary[mode]);
@@ -136,7 +225,7 @@ for(const u of new Set(urls))check('local asset '+u,!/^(?:https?:)?\/\//.test(u)
 check('responsive and focus styles',css.includes('@media(max-width:600px)')&&css.includes(':focus-visible')&&css.includes('prefers-reduced-motion'));
 async function files(folder){const entries=await readdir(folder,{withFileTypes:true});let result=[];for(const e of entries){const p=path.join(folder,e.name);result.push(...e.isDirectory()?await files(p):[p]);}return result;}
 for(const file of await files(dist))check('static file under platform size limit '+path.relative(dist,file),(await stat(file)).size<25*1024*1024);
-const result={all_passed:checks.every(c=>c.passed),count:checks.length,questions:300,days:50,mathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,topicMathCount,topicSummary:manifest.topicSummary,examMathCount,examSummary:manifest.examSummary,diagramSummary:manifest.diagramSummary,assetCount:new Set(urls).size,checks};
+const result={all_passed:checks.every(c=>c.passed),count:checks.length,questions:300,days:50,mathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,topicMathCount,topicSummary:manifest.topicSummary,examMathCount,examSummary:manifest.examSummary,trainingMathCount,trainingSummary:manifest.trainingSummary,conceptMathCount,conceptSummary:manifest.conceptSummary,diagramSummary:manifest.diagramSummary,assetCount:new Set(urls).size,checks};
 await writeFile(path.join(here,'site-checks.json'),JSON.stringify(result,null,2));
 console.log(JSON.stringify({...result,checks:checks.filter(c=>!c.passed)}));
 if(!result.all_passed)process.exit(1);
