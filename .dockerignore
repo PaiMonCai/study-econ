@@ -9,6 +9,11 @@
 !build-data.mjs
 !build-solutions.mjs
 !build-diagrams.mjs
+!build-topics.mjs
+!build-exam-review.mjs
+!format-math.mjs
+!export-topics.mjs
+!export-exam-review.mjs
 !verify-site.mjs
 !content/
 !content/**

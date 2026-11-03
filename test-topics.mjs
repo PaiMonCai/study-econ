@@ -8,6 +8,35 @@ import {createRequire} from 'node:module';
 const read=name=>JSON.parse(fs.readFileSync(new URL('./content/'+name+'.json',import.meta.url)));
 const cards=read('recall').cards;
 
+test('Docker build inputs include the local build and check module dependency graph',()=>{
+ const text=file=>fs.readFileSync(new URL('./'+file,import.meta.url),'utf8');
+ const pkg=JSON.parse(text('package.json'));
+ const commands=pkg.scripts.build+' && '+pkg.scripts.check;
+ const pending=[...commands.matchAll(/node(?:\s+--check)?\s+([\w-]+\.mjs)\b/g)].map(m=>m[1]);
+ const required=new Set();
+ while(pending.length){
+  const file=pending.pop();if(required.has(file))continue;
+  required.add(file);
+  for(const match of text(file).matchAll(/from\s+['"]\.\/([\w.-]+\.mjs)['"]|import\s*['"]\.\/([\w.-]+\.mjs)['"]/g))pending.push(match[1]||match[2]);
+ }
+ const matches=(pattern,file)=>new RegExp('^'+pattern.replace(/\./g,'\\.').replace(/\*/g,'.*')+'$').test(file);
+ function missing(dockerfile,ignore){
+  const stage=dockerfile.split(/\r?\nFROM\s/i)[0];
+  const copied=[...stage.matchAll(/^COPY\s+(.+?)\s+\.\/\s*$/gm)].flatMap(m=>m[1].split(/\s+/));
+  const rules=ignore.split(/\r?\n/).map(line=>line.trim()).filter(line=>line&&!line.startsWith('#'));
+  return [...required].filter(file=>{
+   let included=true;
+   for(const rule of rules)if(matches(rule.startsWith('!')?rule.slice(1):rule,file))included=rule.startsWith('!');
+   return !included||!copied.some(pattern=>matches(pattern,file));
+  });
+ }
+ const dockerfile=text('Dockerfile'),ignore=text('.dockerignore');
+ assert.ok(required.has('build-topics.mjs')&&required.has('export-exam-review.mjs'));
+ assert.deepEqual(missing(dockerfile,ignore),[]);
+ assert.ok(missing('COPY build-data.mjs build-solutions.mjs build-diagrams.mjs verify-site.mjs ./\n',ignore).includes('build-topics.mjs'));
+ assert.ok(missing(dockerfile,'**\n!build-data.mjs\n!build-solutions.mjs\n!build-diagrams.mjs\n!verify-site.mjs\n').includes('build-topics.mjs'));
+});
+
 test('each topic has a full group, valid applications and same-subject cards',()=>{
  const covered=[];
  for(const subject of ['micro','macro','political']){
