@@ -5,7 +5,7 @@ const saved=page=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);
 test('guided answers open immediately for all subjects without recording an attempt',async({page})=>{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  for(const subject of ['micro','macro','political']){
-  await page.goto('/');await page.locator('#day-select').selectOption('1');
+  await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('1');
   await page.locator(`[data-action="study-day"][data-sub="${subject}"]`).click();
   await expect(page.getByRole('heading',{name:'规范作答',exact:true})).toBeVisible();
   await expect(page.locator('.study-applications')).toBeVisible();
@@ -17,7 +17,7 @@ test('guided answers open immediately for all subjects without recording an atte
 });
 
 test('covering an answer, changing questions and resuming preserve reading position',async({page})=>{
- await page.goto('/');await page.locator('#day-select').selectOption('1');await page.locator('[data-action="study-day"][data-sub="micro"]').click();
+ await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('1');await page.locator('[data-action="study-day"][data-sub="micro"]').click();
  await page.getByRole('button',{name:'遮住答案，按主线复述',exact:true}).click();await expect(page.locator('#study-answer')).toBeHidden();
  await page.getByRole('button',{name:'下一题',exact:true}).click();await expect(page.locator('.q-id')).toHaveText('MI002');await expect(page.locator('#study-answer')).toBeVisible();
  await page.getByRole('button',{name:'上一题',exact:true}).click();await expect(page.locator('#study-answer')).toBeHidden();
@@ -53,7 +53,7 @@ test('all 30 topic pages render with valid math and no page overflow',async({pag
 });
 
 test('reading can return from knowledge cards and then switch to independent practice',async({page})=>{
- await page.goto('/');await page.locator('#day-select').selectOption('1');await page.locator('[data-action="study-day"][data-sub="micro"]').click();
+ await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('1');await page.locator('[data-action="study-day"][data-sub="micro"]').click();
  await page.locator('.study-applications summary').click();await page.locator('.study-applications [data-action="recall-card"]').first().click();await expect(page).toHaveURL(/#recall-study$/);
  await page.locator('[data-action="recall-back"]').click();await expect(page.locator('#study-answer')).toBeVisible();
  await page.getByRole('button',{name:'独立做这道题',exact:true}).click();await expect(page.locator('.photo-answer')).toBeVisible();await expect(page.locator('.solution-steps')).toHaveCount(0);

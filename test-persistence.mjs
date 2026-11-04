@@ -60,6 +60,16 @@ test('state and photo survive restart and are visible in a new session',()=>fixt
  const other=await login(f.url),saved=await other.json('/api/state');assert.equal(saved.workspace,initial.workspace);assert.deepEqual(saved.state.favorites,['MI001']);assert.equal((await other.json('/api/photos')).count,1);assert.equal((await other.request('/api/photos/photo1')).headers.get('content-type'),'image/png');
  const backup=await other.json('/api/backup');assert.deepEqual(backup.favorites,['MI001']);assert.equal(backup.photos.items[0].dataUrl,png);
 }));
+
+test('intensive schedule and checks survive restart and backup without relabeling legacy day records',()=>fixture(async f=>{
+ const user=await login(f.url),initial=(await user.json('/api/state')).state;
+ const schedule={mode:'intensive',start:'2026-11-08',at:1000},checked={checked:true,at:1000};
+ const record={id:'intensive1',qid:'MI001',rating:1,at:1000,updatedAt:1000,seconds:60,day:null,planId:'intensive-15',planDay:1};
+ await user.json('/api/state',{method:'PATCH',body:JSON.stringify({changes:[{path:['schedule'],before:initial.schedule,after:schedule},{path:['intensiveProgress','1:micro:0'],before:null,after:checked},{path:['records',record.id],before:null,after:record}]})});
+ await f.stop();await f.start();const other=await login(f.url),saved=(await other.json('/api/state')).state;
+ assert.equal(saved.start,initial.start);assert.deepEqual(saved.schedule,schedule);assert.deepEqual(saved.intensiveProgress['1:micro:0'],checked);assert.deepEqual(saved.records,[record]);
+ const exported=await other.json('/api/backup');assert.deepEqual(exported.schedule,schedule);assert.deepEqual(exported.records,[record]);
+}));
 test('concurrent entity changes merge and same-draft conflict is explicit and atomic',()=>fixture(async({url})=>{
  const a=await login(url),b=await login(url),patch=changes=>({method:'PATCH',body:JSON.stringify({changes})});
  await a.json('/api/state',patch([{path:['favorites','MI001'],before:false,after:true},{path:['drafts','MI001'],before:null,after:'first'}]));

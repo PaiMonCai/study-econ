@@ -12,6 +12,8 @@ import {prepareExamBank} from './build-exam-review.mjs';
 import {teachingLines} from './build-solutions.mjs';
 import {prepareTrainingBank,prepareComprehensiveBank,prepareTrainingPapers,trainingClassNames,trainingDigest} from './build-training.mjs';
 import {prepareConceptMap,compileConceptMap,prepareConceptBridges} from './build-concept-map.mjs';
+import {prepareIntensivePlan} from './build-intensive.mjs';
+import {prepareMethodSheets,compileMethodSheets} from './build-methods.mjs';
 
 const HERE=path.dirname(fileURLToPath(import.meta.url));
 const ROOT=path.resolve(HERE,'../..');
@@ -168,6 +170,9 @@ sourceHashes.training_papers=createHash('sha256').update(paperRaw).digest('hex')
 const paperBank=JSON.parse(paperRaw);
 const papers=prepareTrainingPapers(paperBank,comprehensiveQuestions).map(paper=>({...paper,instructions_html:marked.parse(paper.instructions_md)}));
 const comprehensive={questions:comprehensiveQuestions,papers,editorial_note:paperBank.editorial_note};
+const intensiveRaw=await readFile(path.join(SOURCE,'intensive-plan.json'));
+const intensivePlan=prepareIntensivePlan(JSON.parse(intensiveRaw),subjects,comprehensive);
+sourceHashes.intensive_plan=createHash('sha256').update(intensiveRaw).digest('hex');
 trainingSummary.papers=papers.length;
 const trainingMathCount=mathCount-beforeTraining;
 const beforeConcept=mathCount,conceptSummary={topics:0,nodes:0,edges:0,cards:0,questions:0,parts:0,subjects:{}},conceptBanks=[];
@@ -183,11 +188,19 @@ for(const subject of ['micro','macro']){
  conceptSummary.subjects[subject]=prepared.summary;
  await writeFile(path.join(DIST,'concept-data-'+subject+'.js'),'window.STUDY_DATA.conceptMaps['+JSON.stringify(subject)+']='+JSON.stringify(compiled).replace(/</g,'\\u003c')+';\n','utf8');
 }
+const methodBanks={};for(const subject of ['micro','macro']){const raw=await readFile(path.join(SOURCE,'concept-map-'+subject+'.json'));methodBanks[subject]={...JSON.parse(raw),raw};}
+const methodRaw=await readFile(path.join(SOURCE,'method-sheets.json'));
+const methodSheets=prepareMethodSheets(JSON.parse(methodRaw),methodBanks,subjects);
+sourceHashes.method_sheets=createHash('sha256').update(methodRaw).digest('hex');
+current='method sheets';const beforeMethods=mathCount;
+const methodCompiled=compileMethodSheets(methodSheets,md=>marked.parse(md));
+const methodMathCount=mathCount-beforeMethods;
+await writeFile(path.join(DIST,'method-data.js'),'window.STUDY_DATA.methodSheets='+JSON.stringify(methodCompiled).replace(/</g,'\\u003c')+';\n','utf8');
 const bridgeRaw=await readFile(path.join(SOURCE,'concept-map-bridges.json'));
 sourceHashes.concept_map_bridges=createHash('sha256').update(bridgeRaw).digest('hex');
 const conceptBridges=compileConceptMap(prepareConceptBridges(JSON.parse(bridgeRaw),conceptBanks,sourceHashes),md=>marked.parse(md));
 conceptSummary.bridges=conceptBridges.bridges.length;
-const conceptMathCount=mathCount-beforeConcept;
+const conceptMathCount=mathCount-beforeConcept-methodMathCount;
 const ids=new Set(subjects.flatMap(s=>s.questions.map(q=>q.id)));
 if(ids.size!==300||plan.days.length!==50)throw new Error('Invalid question count or plan');
 for(const d of plan.days)for(const s of subjects){const refs=d[s.key+'_refs'];if(refs.length!==10||new Set(refs).size!==10||refs.some(id=>!ids.has(id)))throw new Error('Invalid plan day '+d.day);}
@@ -215,10 +228,12 @@ for(const [file,label] of [['concept-map-micro.md','微观总稿'],['concept-map
  await cp(path.join(HERE,'docs',file),path.join(DIST,'materials',file));conceptFiles.push({url:'materials/'+file,label});
 }
 materials.push({title:'宏微观知识导图与拓扑总稿',tag:'知识图 · 文字总稿',description:'包含完整节点教学、带条件的关系与逐问应用。交互阅读请进入“知识导图与拓扑”。下载文件为Markdown，图示需支持Mermaid的阅读器。',files:conceptFiles});
+materials.push({title:'宏微观15天强化安排',tag:'每日安排 · 满分目标',description:'20专题、40道完整专项代表题、160道条件筛查，综合应用与最后两天限时验收。每天4小时必做，额外0–2小时修补。',files:[{url:'materials/intensive-15-day-plan.md',label:'下载完整安排'}]});
+materials.push({title:'宏微观作答速查与闭卷检测',tag:'20专题 · 66道短检测',description:'每专题两页选法、起笔、分支和易混对照；26个补充知识点均有直接检测。交互检测草稿、自评及复测单独保存。',files:[{url:'materials/method-sheets.pdf',label:'40页速查PDF'},{url:'materials/method-sheets.html',label:'离线速查'},{url:'materials/method-checks.md',label:'仅题目稿'},{url:'materials/method-check-answers.md',label:'参考与自查稿'}]});
 // Keep each static asset within the hosting size limit as the corpus grows.
 const coreSubjects=subjects.map(subject=>({...subject,questions:subject.questions.map(({training,...question})=>question)}));
-const data={version:1,title:'802练习室',subjects:coreSubjects,plan,materials,recall,diagramSummary,topics,comprehensive:{...comprehensive,questions:[]},trainingSummary,conceptMaps:{},conceptSummary,conceptBridges};
+const data={version:1,title:'802练习室',subjects:coreSubjects,plan,intensivePlan,materials,recall,diagramSummary,topics,comprehensive:{...comprehensive,questions:[]},trainingSummary,conceptMaps:{},conceptSummary,conceptBridges};
 await writeFile(path.join(DIST,'data.js'),'window.STUDY_DATA='+JSON.stringify(data).replace(/</g,'\\u003c')+';\n','utf8');
-const manifest={questions:300,groups:30,days:50,mathCount:questionMathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,topicMathCount,topicSummary,examMathCount,examSummary,trainingMathCount,trainingSummary,conceptMathCount,conceptSummary,mathErrors:errors,sourceHashes,diagramSummary,materials:materials.length,builtAt:new Date().toISOString()};
+const manifest={questions:300,groups:30,days:50,mathCount:questionMathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,topicMathCount,topicSummary,examMathCount,examSummary,trainingMathCount,trainingSummary,conceptMathCount,conceptSummary,methodMathCount,methodSummary:methodSheets.summary,mathErrors:errors,sourceHashes,diagramSummary,materials:materials.length,builtAt:new Date().toISOString()};
 await writeFile(path.join(HERE,'build-manifest.json'),JSON.stringify(manifest,null,2));
 console.log(JSON.stringify(manifest));

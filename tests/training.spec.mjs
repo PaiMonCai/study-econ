@@ -61,7 +61,7 @@ test('comprehensive guide mode retains progressive position without creating a s
 });
 
 test('scores and comprehensive photos survive reload and full backup import',async({page,browser})=>{
- await page.goto('/');await expect(page.locator('#day-select')).toBeVisible();await page.evaluate(()=>{const state=window.RemoteStore.model.fresh();state.records=[{id:'legacy',qid:'MI001',rating:2,at:1000,updatedAt:1000,seconds:10,day:1}];localStorage.setItem('ruc802.practice.v1',JSON.stringify(state));});await page.reload();await expect(page.locator('#day-select')).toBeVisible();
+ await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await expect(page.locator('#day-select')).toBeVisible();await page.evaluate(()=>{const state=window.RemoteStore.model.fresh();state.schedule.mode='legacy';state.records=[{id:'legacy',qid:'MI001',rating:2,at:1000,updatedAt:1000,seconds:10,day:1}];localStorage.setItem('ruc802.practice.v1',JSON.stringify(state));});await page.reload();await expect(page.locator('#day-select')).toBeVisible();
  await openCase(page);await page.locator('input[data-photo-input][multiple]').setInputFiles(await picture(page));
  await expect(page.locator('[data-photo-status]')).toHaveText('已保存 1/3 张');await reveal(page);await score(page,true);
  await page.reload();await expect(page.locator('#case-score-total')).toContainText('已保存 24.5/25');await expect(page.locator('[data-photo-status]')).toHaveText('已保存 1/3 张');

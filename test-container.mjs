@@ -2,6 +2,7 @@ import {execFile} from 'node:child_process';
 import {promisify} from 'node:util';
 import assert from 'node:assert/strict';
 import {fileURLToPath} from 'node:url';
+import vm from 'node:vm';
 const exec=promisify(execFile);
 const testToken='ci_only_access_token_0123456789abcdefgh';
 async function smoke(id,base,expectSaved=false){
@@ -28,6 +29,13 @@ async function smoke(id,base,expectSaved=false){
  const data=await request('/data.js');assert.equal(data.status,200);const script=await data.text();assert.match(script,/MI100/);assert.match(script,/FM53/);assert.match(script,/recall/);
  assert.match(script,/solution/);assert.match(script,/application_md/);
  assert.match(script,/diagramSummary/);assert.match(script,/MI001-graph/);assert.match(script,/MA031-graph/);assert.match(script,/PE041-graph/);
+ const studyContext={window:{}};vm.runInNewContext(script,studyContext);
+ assert.equal(studyContext.window.STUDY_DATA.intensivePlan.days.length,15);
+ const methods=await request('/method-data.js');assert.equal(methods.status,200);vm.runInNewContext(await methods.text(),studyContext);
+ assert.equal(studyContext.window.STUDY_DATA.methodSheets.sheets.length,20);
+ assert.equal(studyContext.window.STUDY_DATA.methodSheets.sheets.flatMap(sheet=>sheet.checks).length,66);
+ for(const asset of ['intensive.js','intensive.css','methods.js','methods.css','materials/method-sheets.html','materials/method-checks.md','materials/method-check-answers.md'])assert.equal((await request('/'+asset)).status,200);
+ const methodPdf=await request('/materials/method-sheets.pdf',{headers:{Range:'bytes=0-7'}});assert.equal(methodPdf.status,206);assert.match(Buffer.from(await methodPdf.arrayBuffer()).toString(),/^%PDF/);
  for(const asset of ['learning.js','learning.css','photos.js','photos.css','solutions.css','interactions.js','interactions.css','diagrams.js','diagrams.css'])assert.equal((await request('/'+asset)).status,200);
  assert.match(home.headers.get('content-security-policy'),/img-src[^;]*blob:/);
  const pdf=await request('/materials/micro-training.pdf',{headers:{Range:'bytes=0-7'}});assert.equal(pdf.status,206);assert.match(Buffer.from(await pdf.arrayBuffer()).toString(),/^%PDF/);

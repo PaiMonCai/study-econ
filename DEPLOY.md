@@ -42,15 +42,15 @@ https://你的域名/802/#token=你的令牌
 
 公网使用HTTPS；接入HTTPS后将`ACCESS_COOKIE_SECURE=true`，只用HTTPS访问。直接HTTP测试时保持false。若只经本机反向代理访问，将`BIND_ADDRESS=127.0.0.1`。
 
-## 从v1.5至v1.10更新
+## 从v1.5至v1.11更新
 
-v1.11.0新增宏微观200题分层、40道综合大题、3套限时卷，以及20专题的知识导图、拓扑、逐问路径和三层自评，沿用v1.5至v1.10的数据库与访问配置。保留自己的`.env`、原Compose项目名和原数据卷，将`IMAGE`改为`ghcr.io/paimoncai/study-econ:v1.11.0`后执行`docker compose pull`和`docker compose up -d`。无需重复迁移已写入服务器的数据。若此前仍使用v1.4及更早版本，继续按下一节同步更新Compose和访问配置。
+v1.12.0新增宏微观15天强化、20专题作答速查和66道闭卷检测，沿用v1.5至v1.11的数据库与访问配置。原专项、综合题、知识图和旧50天计划继续保留，新计划与检测记录独立保存。保留自己的`.env`、原Compose项目名和原数据卷，将`IMAGE`改为`ghcr.io/paimoncai/study-econ:v1.12.0`后执行`docker compose pull`和`docker compose up -d`。无需重复迁移已写入服务器的数据。若此前仍使用v1.4及更早版本，继续按下一节同步更新Compose和访问配置。
 
 ## 从v1.4及更早版本更新
 
 1. 先在旧浏览器“设置与备份”导出完整JSON，保留照片；不要清除旧网站数据。
-2. 换入v1.11.0部署包中的`compose.yaml`、`.env.example`和部署文件，保留自己的`.env`并补入口令。只修改旧Compose的镜像版本不会自动增加数据卷和访问配置。
-3. 将`IMAGE`设为`ghcr.io/paimoncai/study-econ:v1.11.0`，保持原Compose项目名，执行`docker compose pull`和`docker compose up -d`。
+2. 换入v1.12.0部署包中的`compose.yaml`、`.env.example`和部署文件，保留自己的`.env`并补入口令。只修改旧Compose的镜像版本不会自动增加数据卷和访问配置。
+3. 将`IMAGE`设为`ghcr.io/paimoncai/study-econ:v1.12.0`，保持原Compose项目名，执行`docker compose pull`和`docker compose up -d`。
 4. 登录后打开“设置与备份”，选择“检查并迁移本机旧数据”，预览后确认；或导入刚导出的完整JSON。迁移读取当前网站地址下的旧浏览器存储，网址或端口变更时需通过JSON迁移。
 5. 在另一个浏览器登录，确认记录、背诵与照片可见，再继续学习。
 
@@ -58,7 +58,7 @@ v1.11.0新增宏微观200题分层、40道综合大题、3套限时卷，以及2
 
 ## 数据、备份与回退
 
-服务器数据库包含练习记录、错题所依据的自评、收藏、计划日期、阅读设置、历史文字草稿、回忆草稿、背诵进度、当前学习组和作答照片。新浏览器登录即读取服务器数据。页面区分正在保存、已保存、未保存和草稿冲突；不同记录分别合并，同一草稿冲突须选择版本。
+服务器数据库包含练习记录、错题所依据的自评、收藏、两套计划的日期、强化自查、闭卷检测草稿与复测历史、阅读设置、历史文字草稿、回忆草稿、背诵进度、当前学习组和作答照片。新浏览器登录即读取服务器数据。页面区分正在保存、已保存、未保存和草稿冲突；不同记录分别合并，同一草稿冲突须选择版本。
 
 localStorage只保留尚未同步改动的应急恢复副本，不是主要学习库；成功同步后删除此副本。照片只有上传成功才算保存，失败时须重新选择。旧浏览器保存模式可通过`STORAGE_MODE=browser`保留作兼容测试，默认部署使用server模式。
 
@@ -115,4 +115,4 @@ npm run package
 
 测试覆盖原题库、公式、旧浏览器模式，以及认证、数据库重启、不同设备合并、冲突、照片、原子导入、断网恢复与迁移。CI分别在amd64和arm64原生运行器构建，启动根路径、子目录和Compose，并重建服务核验持久化。
 
-仓库为`https://github.com/PaiMonCai/study-econ`。稳定版`ghcr.io/paimoncai/study-econ:latest`，固定版`v1.11.0`，日常版`dev`。main通过验证后发布dev；版本标签与package.json一致时发布正式镜像、latest和部署包。源码构建可叠加`compose.build.yaml`。
+仓库为`https://github.com/PaiMonCai/study-econ`。稳定版`ghcr.io/paimoncai/study-econ:latest`，固定版`v1.12.0`，日常版`dev`。main通过验证后发布dev；版本标签与package.json一致时发布正式镜像、latest和部署包。源码构建可叠加`compose.build.yaml`。

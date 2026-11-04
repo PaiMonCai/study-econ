@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test';
-async function practice(page){await page.goto('/');await page.locator('#day-select').selectOption('1');await page.locator('[data-action="start-day"][data-sub="micro"]').click();await expect(page.locator('[data-photo-status]')).toHaveText('尚未添加图片');}
+async function practice(page){await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('1');await page.locator('[data-action="start-day"][data-sub="micro"]').click();await expect(page.locator('[data-photo-status]')).toHaveText('尚未添加图片');}
 async function picture(page){const url=await page.evaluate(()=>{const c=document.createElement('canvas');c.width=200;c.height=100;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,200,100);x.fillStyle='#000';x.fillText('x + y = 10',10,30);return c.toDataURL('image/png');});return{name:'answer.png',mimeType:'image/png',buffer:Buffer.from(url.split(',')[1],'base64')};}
 test('photo answers persist across reload and question changes and can be viewed or removed',async({page},info)=>{
  await practice(page);await page.locator('input[data-photo-input][multiple]').setInputFiles(await picture(page));await expect(page.locator('[data-photo-status]')).toHaveText('已保存 1/3 张');
@@ -40,7 +40,7 @@ test('a photo finishes saving to its original question after navigating away',as
 
 test('unavailable photo storage reports failure and permits an explicit progress-only export',async({page})=>{
  await page.addInitScript(()=>{Object.defineProperty(window,'indexedDB',{value:{open(){throw new DOMException('Blocked','SecurityError');}}});});
- await page.goto('/');await page.locator('#day-select').selectOption('1');await page.locator('[data-action="start-day"][data-sub="micro"]').click();await expect(page.locator('[data-photo-status]')).toContainText('无法读取图片存储');
+ await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('1');await page.locator('[data-action="start-day"][data-sub="micro"]').click();await expect(page.locator('[data-photo-status]')).toContainText('无法读取图片存储');
  await page.goto('/#settings');await page.getByRole('button',{name:'导出进度备份',exact:true}).click();await expect(page.locator('#toast')).toContainText('照片存储无法读取');
  const pending=page.waitForEvent('download');await page.getByRole('button',{name:'仅导出学习进度（不含照片）',exact:true}).click();const download=await pending;expect(download.suggestedFilename()).toContain('不含照片');const stream=await download.createReadStream();let text='';for await(const chunk of stream)text+=chunk.toString();const backup=JSON.parse(text);expect(backup.photosExcluded).toBe(true);expect(backup.photos).toBeUndefined();expect(backup.session.ids[0]).toBe('MI001');
 });

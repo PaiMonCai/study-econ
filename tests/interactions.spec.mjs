@@ -11,7 +11,7 @@ const serverTest=test.extend({site:async({},use)=>{
  try{await use({url:`http://127.0.0.1:${server.address().port}/802/`,advance(ms){now+=ms;}});}finally{await new Promise(resolve=>{server.close(resolve);server.closeAllConnections();});await rm(dataDir,{recursive:true,force:true});}
 }});
 async function login(page,url){await page.goto(url);await page.getByLabel('访问密码',{exact:true}).fill(password);const ready=page.waitForResponse(r=>r.url()===url+'api/state'&&r.ok());await page.getByRole('button',{name:'进入练习室',exact:true}).click();await ready;await expect(page.locator('.local-status')).toHaveText('服务器已保存');}
-async function practice(page,url='/'){await page.goto(url);await page.locator('#day-select').selectOption('1');await page.locator('[data-action="start-day"][data-sub="micro"]').click();await expect(page.locator('[data-photo-status]')).toHaveText('尚未添加图片');}
+async function practice(page,url='/'){await page.goto(url);await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('1');await page.locator('[data-action="start-day"][data-sub="micro"]').click();await expect(page.locator('[data-photo-status]')).toHaveText('尚未添加图片');}
 async function picture(page){const encoded=await page.evaluate(()=>{const c=document.createElement('canvas');c.width=500;c.height=240;const x=c.getContext('2d');x.fillStyle='white';x.fillRect(0,0,500,240);x.fillStyle='#183347';x.font='24px serif';x.fillText('x + y = 10',30,70);return c.toDataURL('image/png');});return{name:'answer.png',mimeType:'image/png',buffer:Buffer.from(encoded.split(',')[1],'base64')};}
 async function single(page,url='/'){await page.goto(url+'#bank');await page.locator('[data-action="single"][data-id="MI001"]').click();await expect(page.locator('#question-heading')).toBeVisible();}
 
@@ -40,7 +40,7 @@ test('rerenders retain control focus and keep the current question in the rail',
  await page.getByRole('link',{name:'刷题训练',exact:true}).click();await page.locator('[data-action="subject"][data-sub="macro"]').click();await expect(page.locator('[data-action="subject"][data-sub="macro"]')).toBeFocused();await page.locator('#group-filter').selectOption('02');await expect(page.locator('#group-filter')).toBeFocused();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
 test('failed startup has a working retry and never substitutes empty learning data',async({page})=>{
- await page.route('**/_access/status',route=>route.abort());await page.goto('/');await expect(page.getByRole('heading',{name:'练习室暂时未能打开',exact:true})).toBeVisible();await expect(page.locator('#app')).toHaveAttribute('aria-busy','false');expect(await page.evaluate(()=>localStorage.getItem('ruc802.practice.v1'))).toBeNull();await page.unroute('**/_access/status');await page.getByRole('button',{name:'重新打开',exact:true}).click();await expect(page.locator('#day-select')).toBeVisible();
+ await page.route('**/_access/status',route=>route.abort());await page.goto('/');await expect(page.getByRole('heading',{name:'练习室暂时未能打开',exact:true})).toBeVisible();await expect(page.locator('#app')).toHaveAttribute('aria-busy','false');expect(await page.evaluate(()=>localStorage.getItem('ruc802.practice.v1'))).toBeNull();await page.unroute('**/_access/status');await page.getByRole('button',{name:'重新打开',exact:true}).click();await expect(page.locator('#intensive-day-select')).toBeVisible();
 });
 
 serverTest('login supports visible credentials, busy submission and expired form recovery',async({page,site})=>{

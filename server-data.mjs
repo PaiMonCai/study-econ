@@ -54,7 +54,11 @@ export async function createDataStore({dataDir=path.join(HERE,'data'),catalogDir
   if(bank.subject!==subject||!Array.isArray(bank.nodes)||!bank.nodes.length)throw Error('知识图目录不完整，学习记录未改动：'+subject);
   return[subject,bank];
  })));
- const model=stateModel.createStateModel({subjects,plan,recall,topics,comprehensive,conceptMaps}),questions=new Set([...subjects.flatMap(s=>s.questions),...comprehensive.questions].map(question=>question.id));
+ const intensivePlan=JSON.parse(await readFile(path.join(catalogDir,'intensive-plan.json'),'utf8'));
+ const methodSheets=JSON.parse(await readFile(path.join(catalogDir,'method-sheets.json'),'utf8'));
+ const methodChecks=methodSheets.sheets?.flatMap(sheet=>sheet.checks||[])||[];
+ if(methodSheets.version!==1||methodSheets.sheets?.length!==20||new Set(methodSheets.sheets.map(sheet=>sheet.id)).size!==20||methodChecks.length!==66||new Set(methodChecks.map(check=>check.id)).size!==66||methodSheets.sheets.some(sheet=>!conceptMaps[sheet.subject]?.topics.some(topic=>topic.id===sheet.id)||!sheet.checks?.length))throw Error('作答速查目录不完整，学习记录未改动。');
+ const model=stateModel.createStateModel({subjects,plan,intensivePlan,recall,topics,comprehensive,conceptMaps,methodSheets}),questions=new Set([...subjects.flatMap(s=>s.questions),...comprehensive.questions].map(question=>question.id));
  await mkdir(dataDir,{recursive:true,mode:0o700});const filename=path.resolve(dataDir,'study.sqlite'),db=new DatabaseSync(filename);
  const tables=db.prepare("SELECT name FROM sqlite_schema WHERE type='table' AND name NOT LIKE 'sqlite_%'").all();
  const schema=tables.some(t=>t.name==='meta')?db.prepare("SELECT value FROM meta WHERE key='schema'").get():null;

@@ -9,3 +9,5 @@
 @media(max-width:600px){.nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible;gap:4px;margin:0;padding-bottom:10px}.nav a{flex-direction:column;gap:3px;min-width:0;padding:7px 2px;font-size:11px}.nav .count{position:absolute;right:5px;top:3px;font-size:10px}.nav a{position:relative}.brand{margin-bottom:12px}}
 @media(min-width:1400px){.subject-pills{grid-template-columns:repeat(10,minmax(0,1fr))}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+@media(min-width:901px){.sidebar{overflow-y:auto}.sidebar>.nav,.sidebar>.brand,.sidebar>.sidebar-foot{flex-shrink:0}}

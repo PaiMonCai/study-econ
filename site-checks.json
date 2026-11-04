@@ -1,6 +1,6 @@
 {
   "all_passed": true,
-  "count": 37605,
+  "count": 38479,
   "questions": 300,
   "days": 50,
   "mathCount": 1718,
@@ -92,8 +92,3416 @@
       "political": 44
     }
   },
-  "assetCount": 105,
+  "assetCount": 115,
   "checks": [
+    {
+      "name": "15-day plan source hash",
+      "passed": true
+    },
+    {
+      "name": "15-day plan matches validated source",
+      "passed": true
+    },
+    {
+      "name": "15-day offline guide matches complete source",
+      "passed": true
+    },
+    {
+      "name": "method sheets source hash",
+      "passed": true
+    },
+    {
+      "name": "method sheets validated summary",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source lead_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source when_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source start_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source branch_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source check_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source prompt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source answer_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source excerpt_md",
+      "passed": true
+    },
+    {
+      "name": "method formula and source starter_md",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method comparison rendered",
+      "passed": true
+    },
+    {
+      "name": "method mathematical expressions accounted for",
+      "passed": true
+    },
+    {
+      "name": "method print artifacts match current source",
+      "passed": true
+    },
+    {
+      "name": "method print output digest method-sheets.html",
+      "passed": true
+    },
+    {
+      "name": "method print output digest method-sheets.pdf",
+      "passed": true
+    },
+    {
+      "name": "method offline mirror method-sheets.md",
+      "passed": true
+    },
+    {
+      "name": "method offline mirror method-checks.md",
+      "passed": true
+    },
+    {
+      "name": "method offline mirror method-check-answers.md",
+      "passed": true
+    },
     {
       "name": "micro source hash",
       "passed": true
@@ -149711,7 +153119,19 @@
       "passed": true
     },
     {
+      "name": "local asset intensive.css",
+      "passed": true
+    },
+    {
+      "name": "local asset methods.css",
+      "passed": true
+    },
+    {
       "name": "local asset data.js",
+      "passed": true
+    },
+    {
+      "name": "local asset method-data.js",
       "passed": true
     },
     {
@@ -149795,6 +153215,14 @@
       "passed": true
     },
     {
+      "name": "local asset intensive.js",
+      "passed": true
+    },
+    {
+      "name": "local asset methods.js",
+      "passed": true
+    },
+    {
       "name": "local asset app.js",
       "passed": true
     },
@@ -149840,6 +153268,26 @@
     },
     {
       "name": "local asset materials/concept-map-bridges.md",
+      "passed": true
+    },
+    {
+      "name": "local asset materials/intensive-15-day-plan.md",
+      "passed": true
+    },
+    {
+      "name": "local asset materials/method-sheets.pdf",
+      "passed": true
+    },
+    {
+      "name": "local asset materials/method-sheets.html",
+      "passed": true
+    },
+    {
+      "name": "local asset materials/method-checks.md",
+      "passed": true
+    },
+    {
+      "name": "local asset materials/method-check-answers.md",
       "passed": true
     },
     {
@@ -150143,6 +153591,14 @@
       "passed": true
     },
     {
+      "name": "static file under platform size limit intensive.css",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit intensive.js",
+      "passed": true
+    },
+    {
       "name": "static file under platform size limit interactions.css",
       "passed": true
     },
@@ -150179,11 +153635,39 @@
       "passed": true
     },
     {
+      "name": "static file under platform size limit materials\\intensive-15-day-plan.md",
+      "passed": true
+    },
+    {
       "name": "static file under platform size limit materials\\macro-foundation.pdf",
       "passed": true
     },
     {
       "name": "static file under platform size limit materials\\macro-training.pdf",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit materials\\method-artifacts.json",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit materials\\method-check-answers.md",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit materials\\method-checks.md",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit materials\\method-sheets.html",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit materials\\method-sheets.md",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit materials\\method-sheets.pdf",
       "passed": true
     },
     {
@@ -150200,6 +153684,18 @@
     },
     {
       "name": "static file under platform size limit materials\\political-training.pdf",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit method-data.js",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit methods.css",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit methods.js",
       "passed": true
     },
     {

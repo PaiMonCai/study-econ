@@ -9,6 +9,8 @@ import {prepareStudyCorrection} from './build-solutions.mjs';
 import {prepareExamBank} from './build-exam-review.mjs';
 import {prepareTrainingBank,prepareComprehensiveBank,prepareTrainingPapers,trainingDigest} from './build-training.mjs';
 import {prepareConceptMap,conceptDigest,prepareConceptBridges} from './build-concept-map.mjs';
+import {prepareIntensivePlan,intensiveMarkdown} from './build-intensive.mjs';
+import {prepareMethodSheets,methodMarkdown} from './build-methods.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url)),dist=path.join(here,'dist');
 const checks=[];const check=(name,passed)=>checks.push({name,passed:!!passed});
 const context={window:{}};vm.runInNewContext(await readFile(path.join(dist,'data.js'),'utf8'),context);
@@ -16,8 +18,35 @@ const data=context.window.STUDY_DATA,manifest=JSON.parse(await readFile(path.joi
 for(const subject of data.subjects)vm.runInNewContext(await readFile(path.join(dist,'exam-'+subject.key+'.js'),'utf8'),context);
 for(const subject of ['micro','macro'])vm.runInNewContext(await readFile(path.join(dist,'training-data-'+subject+'.js'),'utf8'),context);
 for(const subject of ['micro','macro'])vm.runInNewContext(await readFile(path.join(dist,'concept-data-'+subject+'.js'),'utf8'),context);
+vm.runInNewContext(await readFile(path.join(dist,'method-data.js'),'utf8'),context);
 vm.runInNewContext(await readFile(path.join(dist,'exam-review.js'),'utf8'),context);
+const intensiveRaw=await readFile(path.join(here,'content/intensive-plan.json'));
+const intensive=prepareIntensivePlan(JSON.parse(intensiveRaw),data.subjects,data.comprehensive);
+check('15-day plan source hash',createHash('sha256').update(intensiveRaw).digest('hex')===manifest.sourceHashes.intensive_plan);
+check('15-day plan matches validated source',JSON.stringify(data.intensivePlan)===JSON.stringify(intensive));
+check('15-day offline guide matches complete source',await readFile(path.join(dist,'materials/intensive-15-day-plan.md'),'utf8')===intensiveMarkdown(intensive,data.subjects,data.comprehensive));
 const decode=s=>s.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#x27;|&#39;/g,"'");
+const methodBanks={};for(const subject of ['micro','macro']){const raw=await readFile(path.join(here,'content','concept-map-'+subject+'.json'));methodBanks[subject]={...JSON.parse(raw),raw};}
+const methodRaw=await readFile(path.join(here,'content/method-sheets.json'));
+const methods=prepareMethodSheets(JSON.parse(methodRaw),methodBanks,data.subjects);
+check('method sheets source hash',createHash('sha256').update(methodRaw).digest('hex')===manifest.sourceHashes.method_sheets);
+check('method sheets validated summary',JSON.stringify(methods.summary)===JSON.stringify(manifest.methodSummary));
+let methodMathCount=0;
+function methodFields(source,compiled){
+ if(Array.isArray(source)){source.forEach((item,index)=>methodFields(item,compiled?.[index]));return;}
+ if(!source||typeof source!=='object')return;
+ for(const [key,value] of Object.entries(source)){
+  if(key.endsWith('_md')){const html=compiled?.[key.replace(/_md$/,'_html')]||'',expected=[...value.matchAll(/\$\$([\s\S]+?)\$\$|\$([^$]+?)\$/g)].map(match=>(match[1]||match[2]).trim()),actual=[...html.matchAll(/<annotation encoding="application\/x-tex">([\s\S]*?)<\/annotation>/g)].map(match=>decode(match[1]));check('method formula and source '+key,compiled?.[key]===value&&JSON.stringify(expected)===JSON.stringify(actual)&&!/math-error|katex-error|<script\b|javascript:/i.test(html));methodMathCount+=actual.length;}
+  else methodFields(value,compiled?.[key]);
+ }
+}
+methodFields(methods,data.methodSheets);
+for(const sheet of data.methodSheets.sheets)for(const html of [...sheet.comparison_html.flat(),...sheet.memory_html]){check('method comparison rendered',!/math-error|katex-error|<script\b|javascript:/i.test(html));methodMathCount+=[...html.matchAll(/<annotation encoding="application\/x-tex">/g)].length;}
+check('method mathematical expressions accounted for',methodMathCount===manifest.methodMathCount);
+const methodArtifacts=JSON.parse(await readFile(path.join(dist,'materials/method-artifacts.json'),'utf8'));
+check('method print artifacts match current source',methodArtifacts.source_sha256===createHash('sha256').update(methodRaw).digest('hex')&&methodArtifacts.pages===40);
+for(const [file,digest] of Object.entries(methodArtifacts.files))check('method print output digest '+file,createHash('sha256').update(await readFile(path.join(dist,'materials',file))).digest('hex')===digest);
+for(const [file,options] of [['method-sheets.md',{}],['method-checks.md',{checks:true}],['method-check-answers.md',{checks:true,answers:true}]])check('method offline mirror '+file,await readFile(path.join(dist,'materials',file),'utf8')===methodMarkdown(methods,options));
 let mathCount=0,solutionMathCount=0,examMathCount=0,examQuestions=0;
 for(const subject of data.subjects){
  const raw=await readFile(path.join(here,'content',subject.key+'.json'));const source=JSON.parse(raw);

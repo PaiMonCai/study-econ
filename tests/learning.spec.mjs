@@ -6,7 +6,7 @@ async function upload(page,value){await expect(page.locator('[data-action="impor
 test('functional navigation preserves legacy progress and question day counts',async({page})=>{
  await seed(page,oldBackup());await page.goto('/');
  await expect(page.getByRole('navigation',{name:'主导航'}).getByRole('link')).toHaveText(['今日安排','专题串联','知识导图与拓扑','刷题训练','公式与背诵','复盘与记录','资料库','设置与备份']);
- await page.locator('#day-select').selectOption('1');await expect(page.locator('.subject-pills button')).toHaveCount(30);
+ await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('1');await expect(page.locator('.subject-pills button')).toHaveCount(30);
  await page.getByRole('button',{name:/微观背10张/}).click();await expect(page.locator('#recall-heading')).toBeVisible();
  const stored=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);
  expect(stored.records).toHaveLength(1);expect(stored.drafts.MI001).toBe('保留原来的预算约束');expect(stored.favorites).toEqual(['MI001']);expect(stored.recallSession.ids).toHaveLength(10);
@@ -23,7 +23,7 @@ test('recall hides answer until reveal and restores drafts assessment and curren
 });
 test('topic bridge restores the legacy question draft and links back to the selected topic',async({page})=>{
  const value=oldBackup();value.drafts.MI001='题目中先列原预算。';await seed(page,value);
- await page.goto('/');await page.locator('#day-select').selectOption('1');await page.locator('[data-action="start-day"][data-sub="micro"]').click();
+ await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('1');await page.locator('[data-action="start-day"][data-sub="micro"]').click();
  await page.getByRole('button',{name:'MI001',exact:true}).click();
  await expect(page.locator('#draft')).toHaveCount(0);
  await page.getByRole('button',{name:/查看\d+张相关知识卡/}).click();await expect(page.locator('.bank-meta')).toContainText('关联专题');
@@ -33,7 +33,7 @@ test('topic bridge restores the legacy question draft and links back to the sele
 });
 test('daily recall prioritizes overdue cards and excludes future cards',async({page})=>{
  const value=oldBackup();value.recallProgress={FM01:{rating:2,at:1000,due:'2099-01-01'},FM53:{rating:1,at:1000,due:'2020-01-01'}};
- await seed(page,value);await page.goto('/');await page.getByRole('button',{name:/微观背10张/}).click();
+ await seed(page,value);await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.getByRole('button',{name:/微观背10张/}).click();
  await expect(page.locator('#recall-heading')).toHaveText('圆周空间竞争：差异化、进入与社会品种数');
  const session=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).recallSession,key);expect(session.ids[0]).toBe('FM53');expect(session.ids).not.toContain('FM01');expect(session.ids).toHaveLength(10);
 });

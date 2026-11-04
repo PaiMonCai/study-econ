@@ -80,6 +80,13 @@
     },
     "bridges": 7
   },
+  "methodMathCount": 270,
+  "methodSummary": {
+    "sheets": 20,
+    "checks": 66,
+    "supplements": 26,
+    "decisions": 80
+  },
   "mathErrors": [],
   "sourceHashes": {
     "micro": "164d7702616adbda5774c9bc234cffc48ab2bba51ab9c2c3470f15a943613844",
@@ -103,8 +110,10 @@
     "training_macro": "4796ca61230a3b226d315514969740ba71c351c7186dd70bb9701964d1af0056",
     "comprehensive_macro": "1a695b5c51657f94f2aedcc84e1c36610cf59c016ddb77fd27171a48906b9d0c",
     "training_papers": "867cb0667ccc9c422f9844f4b5fcacf9e94f66e5a8efbd66fab70dcc2dc4ff7f",
+    "intensive_plan": "2014ef2863c59769df4eb074c126b2a7d6350f21845e0f0238b08cff51f16054",
     "concept_map_micro": "036575e9b7519e63f23bdcb84a4eabae095543dea62f0c82d3b525eecbfbdbfc",
     "concept_map_macro": "412902bd5961aaa446da4c8dc52d167d6e51b1e5ab958dee136e012d716ba5e2",
+    "method_sheets": "4c6b1dd66f3fc27efcc2fc1d9b35ab0653081dfdf7efc360b415ad4891927769",
     "concept_map_bridges": "2b2506ae49a39db1eae2e2910bdb6963b12aa50c0c3c1481a8df1948f0c985bc"
   },
   "diagramSummary": {
@@ -118,6 +127,6 @@
       "political": 44
     }
   },
-  "materials": 6,
-  "builtAt": "2026-11-03T09:04:47.235Z"
+  "materials": 8,
+  "builtAt": "2026-11-04T09:12:40.763Z"
 }

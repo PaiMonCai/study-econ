@@ -2,7 +2,7 @@ import {test,expect} from '@playwright/test';
 test('checking presents ordered source steps and knowledge recap for all subjects',async({page},info)=>{
  const errors=[];page.on('pageerror',error=>errors.push(error.message));
  for(const subject of ['micro','macro','political']){
-  await page.goto('/');await page.locator('#day-select').selectOption('1');await page.locator(`[data-action="start-day"][data-sub="${subject}"]`).click();
+  await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('1');await page.locator(`[data-action="start-day"][data-sub="${subject}"]`).click();
   await expect(page.locator('#draft')).toHaveCount(0);await expect(page.locator('.solution-steps')).toHaveCount(0);await expect(page.locator('.knowledge-review')).toHaveCount(0);
   await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();await expect(page.getByRole('heading',{name:'规范解题过程',exact:true})).toBeVisible();
   await page.locator('[data-action="solution-all"]').click();expect(await page.locator('.solution-step').count()).toBeGreaterThan(1);await page.locator('.answer-knowledge summary').click();await expect(page.getByRole('heading',{name:'本题知识点',exact:true})).toBeVisible();await expect(page.getByRole('heading',{name:'把本题再串一遍',exact:true})).toBeVisible();

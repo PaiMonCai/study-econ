@@ -3,7 +3,7 @@ const storageKey='ruc802.practice.v1';
 const visibleLines=page=>page.locator('.solution-line:visible');
 const records=page=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)).records,storageKey);
 async function beginReading(page){
- await page.goto('/');await page.locator('#day-select').selectOption('1');
+ await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('1');
  await page.locator('[data-action="study-day"][data-sub="micro"]').click();
  await expect(page.locator('.q-id')).toHaveText('MI001');
 }
@@ -22,7 +22,7 @@ test('guided reading reveals one line at a time and resumes each question',async
 });
 
 test('independent checking uses the same progressive answer reader',async({page})=>{
- await page.goto('/');await page.locator('#day-select').selectOption('1');await page.locator('[data-action="start-day"][data-sub="micro"]').click();
+ await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('1');await page.locator('[data-action="start-day"][data-sub="micro"]').click();
  await expect(page.locator('.solution-lines')).toHaveCount(0);
  await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();await expect(visibleLines(page)).toHaveCount(1);
  await page.locator('[data-action="solution-next"]').click();await expect(visibleLines(page)).toHaveCount(2);
