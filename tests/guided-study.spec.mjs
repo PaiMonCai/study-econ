@@ -5,8 +5,8 @@ const saved=page=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);
 test('guided answers open immediately for all subjects without recording an attempt',async({page})=>{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  for(const subject of ['micro','macro','political']){
-  await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('1');
-  await page.locator(`[data-action="study-day"][data-sub="${subject}"]`).click();
+  await page.goto('/');await page.locator('#group-filter').selectOption('01');
+  await page.locator(`[data-action="subject"][data-sub="${subject}"]`).click();await page.locator('[data-action="study-filter"]').click();
   await expect(page.getByRole('heading',{name:'规范作答',exact:true})).toBeVisible();
   await expect(page.locator('.study-applications')).toBeVisible();
   expect(await page.locator('.step-concept').count()).toBeGreaterThan(0);
@@ -17,7 +17,7 @@ test('guided answers open immediately for all subjects without recording an atte
 });
 
 test('covering an answer, changing questions and resuming preserve reading position',async({page})=>{
- await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('1');await page.locator('[data-action="study-day"][data-sub="micro"]').click();
+ await page.goto('/');await page.locator('#group-filter').selectOption('01');await page.locator('[data-action="study-filter"]').click();
  await page.getByRole('button',{name:'遮住答案，按主线复述',exact:true}).click();await expect(page.locator('#study-answer')).toBeHidden();
  await page.getByRole('button',{name:'下一题',exact:true}).click();await expect(page.locator('.q-id')).toHaveText('MI002');await expect(page.locator('#study-answer')).toBeVisible();
  await page.getByRole('button',{name:'上一题',exact:true}).click();await expect(page.locator('#study-answer')).toBeHidden();
@@ -33,7 +33,7 @@ test('monopoly topic connects the common models to guided applications',async({p
  await page.locator('.topic-comparison summary').click();await expect(page.locator('.topic-comparison table')).toBeVisible();
  await page.getByRole('button',{name:'按主线跟读本专题题目',exact:true}).click();
  await expect(page.locator('.q-id')).toHaveText('MI043');expect((await saved(page)).session.topicId).toBe('micro-05');
- await page.getByRole('button',{name:'大字号',exact:true}).click();await page.reload();await expect(page.getByRole('button',{name:'大字号',exact:true})).toHaveAttribute('aria-pressed','true');
+ if(!await page.locator('.reading-options').evaluate(el=>el.open))await page.locator('.reading-options>summary').click();await page.getByRole('button',{name:'大字号',exact:true}).click();await page.reload();await page.locator('.reading-options>summary').click();await expect(page.getByRole('button',{name:'大字号',exact:true})).toHaveAttribute('aria-pressed','true');
  await page.getByRole('link',{name:'返回专题串联',exact:true}).click();await expect(page).toHaveURL(/#topics\/micro\/05$/);
  await page.locator('[data-action="topic-section"][data-index="1"]').click();await expect(page.locator('#topic-stage-1 h2')).toBeFocused();
  await page.evaluate(()=>window.scrollTo({top:0}));await page.screenshot({path:info.outputPath('monopoly-topic.png'),fullPage:true});
@@ -53,7 +53,7 @@ test('all 30 topic pages render with valid math and no page overflow',async({pag
 });
 
 test('reading can return from knowledge cards and then switch to independent practice',async({page})=>{
- await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('1');await page.locator('[data-action="study-day"][data-sub="micro"]').click();
+ await page.goto('/');await page.locator('#group-filter').selectOption('01');await page.locator('[data-action="study-filter"]').click();
  await page.locator('.study-applications summary').click();await page.locator('.study-applications [data-action="recall-card"]').first().click();await expect(page).toHaveURL(/#recall-study$/);
  await page.locator('[data-action="recall-back"]').click();await expect(page.locator('#study-answer')).toBeVisible();
  await page.getByRole('button',{name:'独立做这道题',exact:true}).click();await expect(page.locator('.photo-answer')).toBeVisible();await expect(page.locator('.solution-steps')).toHaveCount(0);
@@ -78,5 +78,5 @@ test('topic question and card links return to the current topic across subjects'
  await page.getByRole('link',{name:'返回专题串联',exact:true}).click();await page.locator('.topic-card-links [data-action="recall-card"]').first().click();
  await page.reload();await page.getByRole('button',{name:'返回专题串联',exact:true}).click();await expect(page).toHaveURL(/#topics\/macro\/02$/);
  await page.goto('/#bank');await page.locator('[data-action="subject"][data-sub="micro"]').click();await page.locator('#search').fill('MI001');await page.getByRole('button',{name:'看规范作答',exact:true}).click();
- await expect(page.getByRole('link',{name:'返回专题串联',exact:true})).toHaveAttribute('href','#topics/micro/01');expect((await saved(page)).session.topicId).toBeNull();
+ await expect(page.getByRole('link',{name:'返回专题串联',exact:true})).toHaveAttribute('href','#topics/micro/01');expect((await saved(page)).session.topicId).toBe('micro-01');expect((await saved(page)).session.ids).toHaveLength(10);
 });

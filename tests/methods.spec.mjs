@@ -2,9 +2,9 @@ import {test,expect} from '@playwright/test';
 const saved=page=>page.evaluate(()=>JSON.parse(localStorage.getItem('ruc802.practice.v1')));
 const entry=page=>page.locator('[data-method-check="MI01-D1"]');
 
-test('daily tasks and topic summaries open the matching method sheet without changing the main navigation',async({page})=>{
- await page.goto('/');await page.locator('#intensive-day-select').selectOption('1');await page.locator('a[href="#methods/micro/01"]').click();await expect(page.getByRole('heading',{name:'消费选择、需求与补偿',exact:true})).toBeVisible();
- await expect(page.locator('.nav>a')).toHaveCount(8);await expect(page.locator('.nav>a[aria-current="page"]')).toHaveText('专题串联');await expect(page.locator('[data-method-page]')).toHaveCount(2);
+test('topic summaries open the matching method sheet without changing the main navigation',async({page})=>{
+ await page.goto('/#topics/micro/01');await page.getByRole('link',{name:'作答速查与闭卷检测',exact:true}).click();await expect(page.getByRole('heading',{name:'消费选择、需求与补偿',exact:true})).toBeVisible();
+ await expect(page.locator('.nav>a')).toHaveCount(7);await expect(page.locator('.nav>a[aria-current="page"]')).toHaveText('专题串联');await expect(page.locator('[data-method-page]')).toHaveCount(2);
  await page.goto('/#topics/macro/09');await page.getByRole('link',{name:'作答速查与闭卷检测',exact:true}).click();await expect(page.getByRole('heading',{name:'开放经济、汇率制度与外部冲击',exact:true})).toBeVisible();
 });
 
@@ -15,7 +15,7 @@ test('all twenty sheets and all sixty-six hidden diagnostics render on desktop a
   await page.getByRole('link',{name:'开始闭卷检测（'+sheet.checks+'题）',exact:true}).click();await expect(page.locator('.method-check')).toHaveCount(sheet.checks);await expect(page.locator('.method-feedback:visible')).toHaveCount(0);await expect(page.locator('.method-prompt')).not.toHaveCount(0);total+=sheet.checks;
  }
  expect(total).toBe(66);expect(errors).toEqual([]);
- await page.goto('/#methods/macro/01');await page.getByRole('button',{name:'大字号',exact:true}).click();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth)).toBe(true);
+ await page.goto('/#methods/macro/01');if(!await page.locator('.reading-options').evaluate(el=>el.open))await page.locator('.reading-options>summary').click();await page.getByRole('button',{name:'大字号',exact:true}).click();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth)).toBe(true);
  await page.screenshot({path:info.outputPath('methods-'+info.project.name+'.png'),fullPage:true});
 });
 

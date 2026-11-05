@@ -41,7 +41,7 @@ test('all forty comprehensive cases render complete questions and answers at lar
  await page.goto('/#integrated');const cases=await page.evaluate(()=>window.STUDY_DATA.comprehensive.questions.map(q=>({id:q.id,parts:q.parts.length})));
  expect(cases).toHaveLength(40);
  for(const q of cases){
-  await openCase(page,q.id);await page.getByRole('button',{name:'大字号',exact:true}).click();
+  await openCase(page,q.id);if(!await page.locator('.reading-options').evaluate(el=>el.open))await page.locator('.reading-options>summary').click();await page.getByRole('button',{name:'大字号',exact:true}).click();
   await expect(page.locator('#question-prompt')).toContainText('（'+q.parts+'）');await reveal(page);
   await page.locator('[data-action="solution-all"]').click();
   await expect(page.locator('[data-score-part]')).toHaveCount(q.parts);
@@ -61,7 +61,7 @@ test('comprehensive guide mode retains progressive position without creating a s
 });
 
 test('scores and comprehensive photos survive reload and full backup import',async({page,browser})=>{
- await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await expect(page.locator('#day-select')).toBeVisible();await page.evaluate(()=>{const state=window.RemoteStore.model.fresh();state.schedule.mode='legacy';state.records=[{id:'legacy',qid:'MI001',rating:2,at:1000,updatedAt:1000,seconds:10,day:1}];localStorage.setItem('ruc802.practice.v1',JSON.stringify(state));});await page.reload();await expect(page.locator('#day-select')).toBeVisible();
+ await page.goto('/');await expect(page.getByRole('heading',{name:'刷题训练',exact:true})).toBeVisible();await page.evaluate(()=>{const state=window.RemoteStore.model.fresh();state.schedule.mode='legacy';state.records=[{id:'legacy',qid:'MI001',rating:2,at:1000,updatedAt:1000,seconds:10,day:1}];localStorage.setItem('ruc802.practice.v1',JSON.stringify(state));});await page.reload();await expect(page.getByRole('heading',{name:'刷题训练',exact:true})).toBeVisible();
  await openCase(page);await page.locator('input[data-photo-input][multiple]').setInputFiles(await picture(page));
  await expect(page.locator('[data-photo-status]')).toHaveText('已保存 1/3 张');await reveal(page);await score(page,true);
  await page.reload();await expect(page.locator('#case-score-total')).toContainText('已保存 24.5/25');await expect(page.locator('[data-photo-status]')).toHaveText('已保存 1/3 张');

@@ -4,8 +4,8 @@ const panel=page=>page.locator('.diagram-panel-disclosure');
 async function openPanel(page){if(!await panel(page).evaluate(el=>el.open))await panel(page).locator(':scope>summary').click();}
 
 test('compact question navigation shares the workspace with diagrams after checking',async({page},info)=>{
- await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('6');
- await page.locator('[data-action="start-day"][data-sub="micro"]').click();
+ await page.goto('/');await page.locator('#group-filter').selectOption('06');
+ await page.locator('[data-action="start-filter"]').click();
  await expect(page.locator('.q-id')).toHaveText('MI051');await expect(page.locator('.question-rail .qchip')).toHaveCount(10);
  await expect(page.locator('.diagram-panel,.diagram-review')).toHaveCount(0);
  const before=await page.locator('.question-rail').boundingBox();expect(before.height).toBeLessThan(120);
@@ -18,7 +18,7 @@ test('compact question navigation shares the workspace with diagrams after check
   expect(Math.abs(question.y-answer.y)).toBeLessThan(2);expect(graph.y).toBeGreaterThanOrEqual(question.y+question.height);await expect(page.locator('.question-column #question-prompt')).toBeVisible();await expect(page.locator('.exercise #answer')).toBeVisible();
  }else{expect(question.y).toBeGreaterThanOrEqual(rail.y+rail.height);expect(graph.y).toBeGreaterThanOrEqual(question.y+question.height);expect(answer.y).toBeGreaterThanOrEqual(graph.y+graph.height);}
  const graphStep=page.locator('.diagram-panel [data-diagram-stage="2"]').first();await graphStep.click();
- await page.getByRole('button',{name:'大字号',exact:true}).click();
+ if(!await page.locator('.reading-options').evaluate(el=>el.open))await page.locator('.reading-options>summary').click();await page.getByRole('button',{name:'大字号',exact:true}).click();
  await expect(panel(page)).toHaveAttribute('open','');await expect(page.locator('.diagram-frame [data-current-stage]').first()).toHaveAttribute('data-current-stage','2');
  expect((await state(page)).records).toEqual([]);
  await page.locator('[data-action="jump"][data-index="1"]').click();await expect(page.locator('.q-id')).toHaveText('MI052');
@@ -27,7 +27,7 @@ test('compact question navigation shares the workspace with diagrams after check
 });
 
 test('guided diagrams follow answer visibility and remain available in focus mode',async({page},info)=>{
- await page.goto('/');await page.getByRole('button',{name:'原50天三科计划',exact:true}).click();await page.locator('#day-select').selectOption('6');await page.locator('[data-action="study-day"][data-sub="micro"]').click();
+ await page.goto('/');await page.locator('#group-filter').selectOption('06');await page.locator('[data-action="study-filter"]').click();
  await page.locator('[data-action="jump"][data-index="9"]').click();await expect(page.locator('.q-id')).toHaveText('MI060');
  const current=await page.locator('.question-rail .qchip.current').boundingBox(),ids=await page.locator('.rail-ids').boundingBox();expect(current.x).toBeGreaterThanOrEqual(ids.x);expect(current.x+current.width).toBeLessThanOrEqual(ids.x+ids.width);
  await page.locator('[data-action="jump"][data-index="0"]').click();await expect(page.locator('.q-id')).toHaveText('MI051');

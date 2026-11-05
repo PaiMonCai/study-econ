@@ -10,7 +10,7 @@ for(const subject of Object.keys(prefixes))for(let group=1;group<=10;group++){
   const errors=[];page.on('pageerror',error=>errors.push(error.message));
   await page.goto('/#topics/'+subject+'/'+groupId);
   await page.locator('[data-action="study-topic"]').first().click();
-  await page.getByRole('button',{name:'大字号',exact:true}).click();
+  if(!await page.locator('.reading-options').evaluate(el=>el.open))await page.locator('.reading-options>summary').click();await page.getByRole('button',{name:'大字号',exact:true}).click();
   const results=[];
   for(let index=0;index<10;index++){
    const id=prefixes[subject]+String((group-1)*10+index+1).padStart(3,'0');
