@@ -68,15 +68,17 @@ test('switching an existing practice group to reading keeps its selected queue',
 
 test('reading restores its scroll position after flipping, refreshing and returning from sources',async({page})=>{
  await openReading(page);const view=page.viewportSize().width<1000?'narrow':'wide';
- await page.evaluate(()=>scrollTo(0,1400));
- await expect.poll(()=>page.evaluate(key=>Number(sessionStorage.getItem(key)),`ruc802.reader-offset.MI005:19:serif:${view}`)).toBe(1400);
+ await page.evaluate(()=>document.fonts.ready);
+ const position=await page.evaluate(()=>Math.min(1400,document.documentElement.scrollHeight-innerHeight));expect(position).toBeGreaterThan(500);
+ await page.evaluate(top=>scrollTo(0,top),position);
+ await expect.poll(()=>page.evaluate(key=>Number(sessionStorage.getItem(key)),`ruc802.reader-offset.MI005:19:serif:${view}`)).toBe(position);
  await page.getByRole('button',{name:'下一题',exact:true}).click();await expect(page.locator('.q-id')).toHaveText('MI006');
  await expect.poll(()=>page.evaluate(()=>scrollY)).toBe(0);
  await page.getByRole('button',{name:'上一题',exact:true}).click();await expect(page.locator('.q-id')).toHaveText('MI005');
- await expect.poll(()=>page.evaluate(()=>scrollY)).toBe(1400);
- await page.reload();await expect(page.locator('.q-id')).toHaveText('MI005');await expect.poll(()=>page.evaluate(()=>scrollY)).toBe(1400);
+ await expect.poll(()=>page.evaluate(()=>scrollY)).toBe(position);
+ await page.reload();await expect(page.locator('.q-id')).toHaveText('MI005');await expect.poll(()=>page.evaluate(()=>scrollY)).toBe(position);
  await page.evaluate(()=>location.hash='sources/MI005');await expect(page.locator('.source-reader')).toBeVisible();
- await page.getByRole('link',{name:'返回当前题目',exact:true}).click();await expect(page.locator('.q-id')).toHaveText('MI005');await expect.poll(()=>page.evaluate(()=>scrollY)).toBe(1400);
+ await page.getByRole('link',{name:'返回当前题目',exact:true}).click();await expect(page.locator('.q-id')).toHaveText('MI005');await expect.poll(()=>page.evaluate(()=>scrollY)).toBe(position);
  expect((await saved(page)).records).toEqual([]);
 });
 

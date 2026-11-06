@@ -26,16 +26,24 @@ test('compact question navigation shares the workspace with diagrams after check
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
 
-test('reading uses a continuous column with complete diagrams in focus mode',async({page},info)=>{
+test('reading keeps questions and complete diagrams beside the answer on desktop, including focus mode',async({page},info)=>{
  await page.goto('/');await page.locator('#group-filter').selectOption('06');await page.locator('[data-action="study-filter"]').click();
  await page.locator('[data-action="jump"][data-index="9"]').click();await expect(page.locator('.q-id')).toHaveText('MI060');
  const current=await page.locator('.question-rail .qchip.current').boundingBox(),ids=await page.locator('.rail-ids').boundingBox();expect(current.x).toBeGreaterThanOrEqual(ids.x);expect(current.x+current.width).toBeLessThanOrEqual(ids.x+ids.width);
  await page.locator('[data-action="jump"][data-index="0"]').click();await expect(page.locator('.q-id')).toHaveText('MI051');
  await expect(panel(page)).toHaveCount(0);await expect(page.locator('.reading-document details')).toHaveCount(0);
- await page.getByRole('button',{name:'专注阅读',exact:true}).click();await expect(page.locator('.question-rail')).toBeHidden();
- await expect(page.locator('.diagram-panel')).toBeVisible();await expect(page.locator('.diagram-panel .study-diagram').first()).toBeVisible();
- const graph=await page.locator('.diagram-panel').boundingBox(),steps=await page.locator('.solution-reader').boundingBox();
- expect(graph.y).toBeGreaterThanOrEqual(steps.y+steps.height);expect(Math.abs(graph.x-steps.x)).toBeLessThan(2);
+ for(const focused of [false,true]){
+  if(focused){await page.getByRole('button',{name:'专注阅读',exact:true}).click();await expect(page.locator('.question-rail')).toBeHidden();}
+  await page.evaluate(()=>scrollTo(0,0));
+  await expect(page.locator('.diagram-panel')).toBeVisible();await expect(page.locator('.diagram-panel .study-diagram').first()).toBeVisible();
+  const question=await page.locator('.question-paper').boundingBox(),graph=await page.locator('.diagram-panel').boundingBox(),answer=await page.locator('.reading-article').boundingBox();
+  expect(graph.y).toBeGreaterThanOrEqual(question.y+question.height);
+  if(info.project.name==='desktop'){
+   expect(question.x+question.width).toBeLessThanOrEqual(answer.x);expect(graph.x+graph.width).toBeLessThanOrEqual(answer.x);
+   expect(Math.abs(question.y-answer.y)).toBeLessThan(2);
+   await expect(page.locator('.question-column')).toHaveAttribute('role','region');
+  }else expect(answer.y).toBeGreaterThanOrEqual(graph.y+graph.height);
+ }
  await expect(page.locator('.diagram-frame [data-current-stage]').first()).toHaveAttribute('data-current-stage','2');
  await expect(page.locator('#study-answer')).toBeVisible();
  await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>scrollTo(0,0));
