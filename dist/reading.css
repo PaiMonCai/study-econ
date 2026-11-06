@@ -105,3 +105,74 @@ body:has(.split-workspace) #toast{bottom:calc(96px + env(safe-area-inset-bottom)
  .reading-options-panel{gap:8px;padding:12px}
 }
 @media print{.sidebar,.question-rail,.reading-bar,.exercise-top,.exercise-buttons,.exercise-bottom,.self-check,.writing,.source,.topbar,.star,.answer-nav{display:none!important}.main,.exercise-paper,.question-paper{padding:0!important}.shell,.practice-layout,.reading-focus .practice-layout,.practice-layout.split-workspace,.reading-focus .practice-layout.split-workspace{display:block}.split-workspace>.question-column{position:static;max-height:none;overflow:visible}.paper{border:0}.rich{font-size:12pt;line-height:1.8}.math-block{break-inside:avoid}.answer-section{border-top:1px solid #aaa}body{background:white}}
+.main:has(.reading-document),.reading-focus .main:has(.reading-document){padding:24px 32px calc(116px + env(safe-area-inset-bottom))}
+.reading-document.split-workspace,.reading-focus .reading-document.split-workspace{display:block;max-width:920px;margin:0 auto}
+.reading-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:17px}
+.reading-top>.reading-bar{margin:0;padding:0;flex-wrap:wrap;gap:10px}
+.reading-top>.btn{font-size:13px}
+.reading-document>.question-rail{margin-bottom:18px}
+.reading-document>.reading-flow{position:static;max-height:none;overflow:visible;width:100%;scroll-padding:0}
+.reading-article{padding:40px clamp(28px,4.5vw,64px);border-color:#d4e0e6;min-width:0}
+.reading-question h1{font:650 29px/1.65 var(--sans);margin:12px 0 23px;scroll-margin-top:28px}
+.reading-question .exercise-meta{margin-bottom:8px;line-height:1.8}
+.reading-question .prompt{padding-bottom:0;border-bottom:0}
+.reading-document .rich{line-height:2;letter-spacing:.01em}
+.reading-document .exercise{max-width:none;width:auto;margin:0}
+.reading-document .study-outline{margin-top:26px;padding:24px 0;border-top:1px solid var(--line);border-bottom:2px solid #91bbb0}
+.reading-document .study-outline h2,.reading-document .study-answer>h2{font-size:21px;margin-bottom:14px}
+.reading-document .study-answer{padding-top:28px}
+.reading-document .solution-reader{margin:20px 0 30px}
+.reading-document .solution-reader-step{padding:26px 0 28px;scroll-margin-top:28px}
+.reading-document .solution-reader-step:last-child{border-bottom:0}
+.reading-document .solution-reader .step-heading h3{font-size:20px;line-height:1.8}
+.reading-document .step-uses{margin-bottom:16px}
+.exam-related-cards .btn{white-space:normal;text-align:left;max-width:100%;overflow-wrap:anywhere}
+.reading-document .study-pitfalls,.reading-document .study-recap{margin-top:28px;padding-top:23px}
+.reading-document .study-pitfalls h2,.reading-document .study-recap h2{font-size:19px;margin-bottom:13px}
+.reading-document .study-recap{padding:23px 25px}
+.reading-diagrams.diagram-panel{margin:28px 0;padding:25px 0;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:transparent;box-shadow:none}
+.reading-diagrams>h2{font-size:19px;margin-bottom:20px}
+.reading-diagrams .diagram-panel-body{padding:0;max-height:none;overflow:visible}
+.reading-diagrams .study-diagram{margin:0 0 25px;padding:0;min-width:0}
+.reading-diagrams .study-diagram:last-child{margin-bottom:0}
+.reading-diagrams .diagram-frame{max-width:100%;min-width:0}
+.reading-section{margin:20px 0;padding:16px 0;border-top:1px solid var(--line);min-width:0}
+.reading-section-title{font:600 15px/1.9 var(--sans);margin:0 0 12px;color:var(--green)}
+.reading-end{margin-top:35px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font:12px/1.9 var(--sans)}
+.reading-end .actions{gap:18px;line-height:2}
+.reading-end a,.reading-end button{font-size:13px;color:var(--green);text-decoration:underline;text-underline-offset:4px}
+.reading-document .exercise-bottom{max-width:920px}
+.reading-source-note{padding-top:20px;border-top:1px solid var(--line);margin-top:28px;color:var(--muted);font:13px/1.95 var(--sans)}
+.reading-source-note h2{font-size:16px}
+.source-reader{max-width:920px;margin:auto}
+.source-reader .reading-bar{margin-bottom:20px;flex-wrap:wrap}
+.source-reader .exam-source-note{padding:18px 20px;background:#eef5f3;line-height:1.9}
+.source-reader .reading-section-title{font-size:18px}
+.math-block:has(>.math-punctuation){text-align:center}
+.math-block:has(>.math-punctuation)>.katex-display{display:inline-block;vertical-align:middle}
+.math-punctuation{vertical-align:middle}
+.reading-provenance{margin-top:25px;font:13px/1.9 var(--sans);color:var(--green)}
+@media(max-width:700px){
+ .main:has(.reading-document),.reading-focus .main:has(.reading-document){padding:16px 14px calc(104px + env(safe-area-inset-bottom))}
+ .reading-top{gap:12px;margin-bottom:14px}
+ .reading-top>.reading-bar{flex:1 1 100%;gap:8px;justify-content:flex-start}
+ .reading-top .reading-size button{padding:7px 9px;min-height:40px}
+ .reading-top #reading-face{min-width:76px;min-height:40px;padding:5px 7px}
+ .reading-top .focus-toggle{padding:7px 10px;min-height:40px}
+ .reading-article{padding:27px 21px}
+ .reading-question h1{font-size:24px;line-height:1.65;margin:12px 0 20px}
+ .reading-document .rich{line-height:1.95;letter-spacing:0}
+ .reading-document .solution-reader .step-heading h3{font-size:19px}
+ .reading-document .study-recap{padding:20px 17px}
+ .reading-diagrams .study-diagram>h3{font-size:18px}
+ .reading-end .actions{gap:12px 18px}
+}
+@media print{
+ .reading-top,.reading-end .actions{display:none!important}
+ .main:has(.reading-document),.reading-focus .main:has(.reading-document){padding:0!important}
+ .reading-document .reading-article{padding:0!important;border:0}
+ .reading-document .reading-flow{position:static;max-height:none;overflow:visible}
+ .reading-document .solution-reader-step{break-inside:auto}
+ .reading-document .rich{font-size:12pt;line-height:1.8}
+ .reading-diagrams{break-inside:auto}
+}

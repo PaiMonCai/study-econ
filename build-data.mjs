@@ -7,7 +7,7 @@ import {Marked} from 'marked';
 import {prepareSolution,prepareStudyCorrection} from './build-solutions.mjs';
 import {prepareDiagrams} from './build-diagrams.mjs';
 import {prepareTopics} from './build-topics.mjs';
-import {formatDisplayTex} from './format-math.mjs';
+import {formatDisplayTex,tokenizeDisplayMath} from './format-math.mjs';
 import {prepareExamBank} from './build-exam-review.mjs';
 import {teachingLines} from './build-solutions.mjs';
 import {prepareTrainingBank,prepareComprehensiveBank,prepareTrainingPapers,trainingClassNames,trainingDigest} from './build-training.mjs';
@@ -42,7 +42,7 @@ function math(src,displayMode){
 }
 const marked=new Marked({gfm:true,breaks:true,hooks:{emStrongMask(src){return src.replace(/\$\$[\s\S]+?\$\$|\$[^$]+?\$/g,match=>'a'.repeat(match.length));}},renderer:{html({text}){return /^<br\s*\/?\s*>$/i.test(text.trim())?'<br>':escape(text);}},extensions:[
  {name:'strongLabel',level:'inline',start(src){return src.indexOf('**');},tokenizer(src){const m=/^\*\*([^*\n$]+?)\*\*/.exec(src);if(m)return{type:'strongLabel',raw:m[0],text:m[1]};},renderer(token){return '<strong>'+escape(token.text)+'</strong>';}},
- {name:'displayMath',level:'block',start(src){return src.indexOf('$$');},tokenizer(src){const m=/^\$\$([\s\S]+?)\$\$(?:\n|$)/.exec(src);if(m)return{type:'displayMath',raw:m[0],tex:m[1]};},renderer(token){return `<div class="math-block">${math(token.tex,true)}</div>`;}},
+ {name:'displayMath',level:'block',start(src){return src.indexOf('$$');},tokenizer:tokenizeDisplayMath,renderer(token){return `<div class="math-block">${math(token.tex,true)}${token.punctuation?'<span class="math-punctuation">'+escape(token.punctuation)+'</span>':''}</div>`;}},
  {name:'inlineMath',level:'inline',start(src){return src.indexOf('$');},tokenizer(src){const m=/^\$([^$]+?)\$/.exec(src);if(m)return{type:'inlineMath',raw:m[0],tex:m[1]};},renderer(token){return math(token.tex,false);}}
 ]});
 function renderSolutionStep(step){

@@ -10,7 +10,7 @@ test('legacy draft rating and reading survive question changes and reload',async
  await page.addInitScript(()=>{if(!localStorage.getItem('ruc802.practice.v1'))localStorage.setItem('ruc802.practice.v1',JSON.stringify({version:1,start:'2026-10-29',records:[],drafts:{MI001:'先列预算，再验证条件。'},favorites:[],session:null}));});
  await page.goto('/');await page.locator('#group-filter').selectOption('01');await page.locator('[data-action="start-filter"]').click();
  await expect(page.locator('#draft')).toHaveCount(0);await page.getByText('查看历史文字作答',{exact:true}).click();await expect(page.locator('.legacy-draft pre')).toHaveText('先列预算，再验证条件。');
- if(!await page.locator('.reading-options').evaluate(el=>el.open))await page.locator('.reading-options>summary').click();await page.getByRole('button',{name:'大字号',exact:true}).click();await page.getByRole('button',{name:'专注阅读',exact:true}).click();
+ await page.getByRole('button',{name:'大字号',exact:true}).click();await page.getByRole('button',{name:'专注阅读',exact:true}).click();
  await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();await page.getByRole('button',{name:'不熟，有断点',exact:true}).click();
  await page.getByRole('button',{name:'已保存，下一题',exact:true}).click();await page.getByRole('button',{name:'上一题',exact:true}).click();
  await page.getByText('查看历史文字作答',{exact:true}).click();await expect(page.locator('.legacy-draft pre')).toHaveText('先列预算，再验证条件。');await expect(page.locator('.rating.selected')).toHaveText('不熟，有断点');

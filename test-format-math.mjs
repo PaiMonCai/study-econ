@@ -1,6 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {formatDisplayTex as format} from './format-math.mjs';
+import {formatDisplayTex as format,tokenizeDisplayMath} from './format-math.mjs';
+
+test('display math accepts closing punctuation and leaves following prose intact',()=>{
+ for(const [source,raw,tex,punctuation] of [
+  ['$$x=1$$。\n\nAfter.','$$x=1$$。\n','x=1','。'],
+  ['$$a/b$$，then continue','$$a/b$$，','a/b','，'],
+  ['$$x=1$$\nNext.','$$x=1$$\n','x=1',''],
+  ['$$\nx=1\n$$ \t\nAfter.','$$\nx=1\n$$ \t\n','\nx=1\n',''],
+ ])assert.deepEqual(tokenizeDisplayMath(source),{type:'displayMath',raw,tex,punctuation});
+ assert.equal(tokenizeDisplayMath('$x=1$'),undefined);assert.equal(tokenizeDisplayMath('$$unclosed'),undefined);
+});
 test('display fractions preserve arithmetic precedence',()=>{
  for(const [source,expected] of [
   ['W_N/W_L',String.raw`\frac{W_N}{W_L}`],['9/4',String.raw`\frac{9}{4}`],['q/3',String.raw`\frac{q}{3}`],

@@ -7,7 +7,7 @@ test('graphs reveal progressively without changing assessments and survive pract
  const representatives=await page.evaluate(()=>window.STUDY_DATA.subjects.map(s=>({subject:s.key,id:s.questions.find(q=>q.diagrams?.length)?.id})));expect(representatives.every(r=>r.id)).toBeTruthy();
  for(const r of representatives){await openQuestion(page,r.subject,r.id);await expect(page.locator('.diagram-review')).toHaveCount(0);await revealAnswer(page);const graph=page.locator('.study-diagram').first();await expect(graph).toBeVisible();await expect(graph.locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage','0');const before=await saved(page);
  for(const stage of [1,2,0,2]){const button=graph.locator(`[data-diagram-stage="${stage}"]`);await button.click();await expect(button).toBeFocused();await expect(button).toHaveAttribute('aria-pressed','true');await expect(graph.locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage',String(stage));expect(await saved(page)).toBe(before);}
- if(!await page.locator('.reading-options').evaluate(el=>el.open))await page.locator('.reading-options>summary').click();await page.getByRole('button',{name:'大字号',exact:true}).click();await expect(graph.locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage','2');await page.locator('[data-action="favorite"]').click();await expect(page.locator('.study-diagram').first().locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage','2');
+ await page.getByRole('button',{name:'大字号',exact:true}).click();await expect(graph.locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage','2');await page.locator('[data-action="favorite"]').click();await expect(page.locator('.study-diagram').first().locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage','2');
  await expect(graph.locator('.diagram-frame svg title')).toHaveCount(1);await expect(graph.locator('.diagram-frame svg desc')).toHaveCount(1);await graph.locator('.diagram-text summary').first().click();await expect(graph.locator('.diagram-text').first()).toHaveAttribute('open','');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth)).toBeTruthy();await graph.screenshot({path:info.outputPath(r.subject+'-diagram.png')});
  await page.emulateMedia({media:'print'});await expect(graph.locator('.diagram-print')).toBeVisible();await expect(graph.locator('.diagram-controls')).toBeHidden();await expect(graph.locator('.diagram-print [data-current-stage]')).toHaveAttribute('data-current-stage','2');await page.emulateMedia({media:'screen'});
  }
@@ -80,9 +80,9 @@ test('complete diagram answers fit the page at large reading size for every illu
   if(index)await page.getByRole('link',{name:'刷题训练',exact:true}).click();
   if(q.subject!==previousSubject){await page.locator(`[data-action="subject"][data-sub="${q.subject}"]`).click();previousSubject=q.subject;}
   await page.locator('#search').fill(q.id);await page.locator(`[data-action="single"][data-id="${q.id}"]`).click();await expect(page.locator('.q-id')).toHaveText(q.id);
-  if(index===0){if(!await page.locator('.reading-options').evaluate(el=>el.open))await page.locator('.reading-options>summary').click();await page.getByRole('button',{name:'大字号',exact:true}).click();}
+  if(index===0){await page.getByRole('button',{name:'大字号',exact:true}).click();}
   await revealAnswer(page);
-  await page.locator('[data-action="solution-all"]').click();
+  await expect(page.locator('.solution-reader-controls')).toHaveCount(0);
   for(const button of await page.locator('.diagram-controls [data-diagram-stage="2"]').all())await button.click();
   const width=await page.evaluate(()=>({page:document.documentElement.scrollWidth,viewport:innerWidth}));
   if(width.page>width.viewport)failures.push({id:q.id,...width});
@@ -117,7 +117,7 @@ test('textbook diagrams enlarge the selected stage and restore keyboard focus wi
  expect(await saved(page)).toBe(before);
 });
 
-test('reviewed corrections precede progressive answers and original source stays available',async({page})=>{
+test('reviewed corrections precede complete answers and original source stays available',async({page})=>{
  await page.goto('/');
  const questions=await page.evaluate(()=>window.STUDY_DATA.subjects.flatMap(s=>s.questions.filter(q=>q.diagrams?.some(d=>d.erratum)).map(q=>({subject:s.key,id:q.id,errata:q.diagrams.filter(d=>d.erratum).map(d=>d.erratum)}))));
  expect(questions.map(q=>q.id)).toEqual(expect.arrayContaining(['MI075','MA025']));
@@ -128,8 +128,8 @@ test('reviewed corrections precede progressive answers and original source stays
   await expect(note).toContainText(q.errata[0].explanation);
   expect(await note.evaluate(el=>Boolean(el.compareDocumentPosition(document.querySelector('.solution-steps'))&Node.DOCUMENT_POSITION_FOLLOWING))).toBeTruthy();
   await note.locator('summary').click();await expect(note).toContainText(q.errata[0].original_quote);
-  await page.locator('[data-action="solution-all"]').click();
-  const corrected=(await page.locator('.solution-reader-steps .solution-line').allTextContents()).join('').replace(/\s+/g,'');
+  await expect(page.locator('.solution-reader-controls')).toHaveCount(0);
+  const corrected=(await page.locator('.solution-reader-steps .solution-step-body').allTextContents()).join('').replace(/\s+/g,'');
   const reviewed=await page.evaluate(id=>{
    const question=window.STUDY_DATA.subjects.flatMap(s=>s.questions).find(q=>q.id===id);
    const guide=window.SolutionReader.guide(question),element=document.createElement('div');

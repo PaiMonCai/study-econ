@@ -1,3 +1,8 @@
+export function tokenizeDisplayMath(source){
+ const match=/^\$\$([\s\S]+?)\$\$([，。；、,;:：]*)(?:[ \t]*\n)?/.exec(source);
+ if(match)return {type:'displayMath',raw:match[0],tex:match[1],punctuation:match[2]};
+}
+
 // Only rewrite a flat TeX expression when every token has an unambiguous role.
 function tokenize(source){
  const tokens=[];let i=0;

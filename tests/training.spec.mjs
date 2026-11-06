@@ -30,9 +30,9 @@ test('structured specialist prompts retain their original wording for comparison
  await page.goto('/#bank');await page.locator('#search').fill('MI001');await page.locator('[data-action="single"][data-id="MI001"]').click();
  const expected=await page.evaluate(()=>window.STUDY_DATA.subjects[0].questions[0].training.parts.length);
  await expect(page.locator('#question-prompt')).toContainText('（'+expected+'）');
- await page.locator('details.source>summary').click();await page.locator('.training-source-prompt>summary').click();
+ await page.getByRole('link',{name:'题源与整理记录',exact:true}).click();await expect(page.locator('.source-reader details')).toHaveCount(0);
  await expect(page.locator('.training-source-prompt .rich')).not.toBeEmpty();
- await page.locator('[data-action="reveal"]').click();await expect(page.locator('.training-next-level')).toBeVisible();
+ await page.getByRole('link',{name:'返回当前题目',exact:true}).click();await page.locator('[data-action="reveal"]').click();await expect(page.locator('.training-next-level')).toBeVisible();
  expect((await saved(page)).records).toEqual([]);
 });
 
@@ -41,9 +41,9 @@ test('all forty comprehensive cases render complete questions and answers at lar
  await page.goto('/#integrated');const cases=await page.evaluate(()=>window.STUDY_DATA.comprehensive.questions.map(q=>({id:q.id,parts:q.parts.length})));
  expect(cases).toHaveLength(40);
  for(const q of cases){
-  await openCase(page,q.id);if(!await page.locator('.reading-options').evaluate(el=>el.open))await page.locator('.reading-options>summary').click();await page.getByRole('button',{name:'大字号',exact:true}).click();
+  await openCase(page,q.id);await page.getByRole('button',{name:'大字号',exact:true}).click();
   await expect(page.locator('#question-prompt')).toContainText('（'+q.parts+'）');await reveal(page);
-  await page.locator('[data-action="solution-all"]').click();
+  await expect(page.locator('.solution-reader-controls')).toHaveCount(0);
   await expect(page.locator('[data-score-part]')).toHaveCount(q.parts);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),q.id+' page overflow').toBe(true);
   await expect(page.locator('.math-error,.katex-error')).toHaveCount(0);
@@ -51,12 +51,11 @@ test('all forty comprehensive cases render complete questions and answers at lar
  expect((await saved(page)).records).toEqual([]);expect(errors).toEqual([]);
 });
 
-test('comprehensive guide mode retains progressive position without creating a score',async({page})=>{
+test('comprehensive reading retains complete steps after reload without creating a score',async({page})=>{
  await page.goto('/#integrated/macro');await page.locator('[data-action="study-single"][data-id="CMA01"]').click();
- await expect(page.locator('#study-answer')).toBeVisible();await page.locator('[data-action="solution-next"]').click();
- const count=(await saved(page)).session.solutionLines;expect(count).toBeGreaterThan(1);
- await page.reload();await expect(page.locator('#study-answer')).toBeVisible();expect((await saved(page)).session.solutionLines).toBe(count);
- await page.getByRole('button',{name:'遮住答案，按主线复述',exact:true}).click();await expect(page.locator('#study-answer')).toBeHidden();
+ await expect(page.locator('#study-answer')).toBeVisible();const count=await page.locator('.solution-step-body').count();expect(count).toBeGreaterThan(1);
+ await page.reload();await expect(page.locator('#study-answer')).toBeVisible();await expect(page.locator('.solution-step-body')).toHaveCount(count);
+ await expect(page.locator('.reading-document details,.solution-reader-controls,[data-action="study-reveal"]')).toHaveCount(0);
  expect((await saved(page)).records).toEqual([]);
 });
 

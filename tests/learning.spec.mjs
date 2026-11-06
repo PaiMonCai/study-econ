@@ -54,7 +54,7 @@ test('learning lists and long formulas fit screen and reading settings',async({p
  const errors=[];page.on('pageerror',error=>errors.push(error.message));
  await page.goto('/');await page.screenshot({path:testInfo.outputPath('today.png'),fullPage:true});
  await page.getByRole('link',{name:'公式与背诵',exact:true}).first().click();await expect(page.locator('.recall-row')).toHaveCount(16);await page.screenshot({path:testInfo.outputPath('recall-list.png'),fullPage:true});
- await page.getByRole('button',{name:'背诵 FM03',exact:true}).click();if(!await page.locator('.reading-options').evaluate(el=>el.open))await page.locator('.reading-options>summary').click();await page.getByRole('button',{name:'大字号',exact:true}).click();await page.getByRole('button',{name:'展开原条目核对',exact:true}).click();
+ await page.getByRole('button',{name:'背诵 FM03',exact:true}).click();await page.getByRole('button',{name:'大字号',exact:true}).click();await page.getByRole('button',{name:'展开原条目核对',exact:true}).click();
  await expect(page.locator('.recall-answer strong').first()).toHaveText('题干触发。');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth)).toBeTruthy();await page.evaluate(()=>window.scrollTo({top:0}));await page.screenshot({path:testInfo.outputPath('recall-card.png'),fullPage:true});
  await page.getByRole('button',{name:'专注阅读',exact:true}).click();await expect(page.locator('.sidebar')).toBeHidden();await page.reload();await expect(page.getByRole('button',{name:'退出专注',exact:true})).toBeVisible();
  await page.getByRole('button',{name:'退出专注',exact:true}).click();await page.goto('/#review');await expect(page.getByRole('heading',{name:'复盘与记录',exact:true})).toBeVisible();expect(errors).toEqual([]);

@@ -31,5 +31,17 @@ window.StudyUI=(()=>{
   root.setAttribute('aria-busy','false');root.innerHTML='<section class="opening-error paper" role="alert"><h1 tabindex="-1">练习室暂时未能打开</h1><p></p><button class="btn primary">重新打开</button><p class="small muted">服务器已保存的学习记录不会因此清空。</p></section>';
   root.querySelector('p').textContent=/[\u4e00-\u9fff]/.test(message||'')?message:'无法读取服务器学习库，请检查网络后重试。';root.querySelector('button').addEventListener('click',()=>location.reload());root.querySelector('h1').focus({preventScroll:true});
  }
- return{confirm,restoreFocus,loadError,esc};
+ function readingContent(html){
+  const template=document.createElement('template');template.innerHTML=html;
+  for(const disclosure of [...template.content.querySelectorAll('details')].reverse()){
+   const section=document.createElement('section');
+   for(const attribute of disclosure.attributes)if(attribute.name!=='open')section.setAttribute(attribute.name,attribute.value);
+   section.classList.add('reading-section');
+   const summary=disclosure.querySelector(':scope>summary');
+   if(summary){const heading=document.createElement('h3');heading.className='reading-section-title';heading.innerHTML=summary.innerHTML;summary.replaceWith(heading);}
+   section.append(...disclosure.childNodes);disclosure.replaceWith(section);
+  }
+  return template.innerHTML;
+ }
+ return{confirm,restoreFocus,loadError,esc,readingContent};
 })();

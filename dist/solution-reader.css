@@ -23,4 +23,9 @@
 .solution-reader button:focus-visible,.solution-reader .solution-line:focus-visible{outline:2px solid var(--green);outline-offset:5px}
 @media(max-width:600px){.solution-lines{gap:8px}.solution-reader-controls{display:block}.solution-reader-actions{margin-top:13px}.solution-reader-actions .btn{flex:1 1 130px}.solution-reader .step-heading{display:block}.solution-reader .step-heading h3{margin-top:7px;font-size:17px}.solution-reader .solution-line .math-block{padding:6px 2px}}
 @media(prefers-reduced-motion:reduce){.solution-reader *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
-@media print{.solution-reader-controls,.solution-reader-steps{display:none}.solution-reader-print{display:block}.solution-reader .solution-line{border-left:0;padding-left:0}}
+.solution-step-body{min-width:0;overflow-wrap:anywhere}
+.solution-reader .solution-step-body p{margin:0 0 .85em;line-height:1.95}
+.solution-reader .solution-step-body p:last-child{margin-bottom:0}
+.solution-reader .solution-step-body .math-block{margin:15px 0;padding:7px 2px;background:transparent;max-width:100%;box-sizing:border-box;overflow-x:auto}
+.solution-reader .solution-step-body .katex-display{margin:.2em 0;text-align:center;max-width:100%;overflow-x:auto;overflow-y:hidden}
+@media print{.solution-reader-controls{display:none}.solution-reader .solution-reader-steps{display:block}.solution-reader-print{display:none}.solution-reader .solution-step-body{border:0;padding:0}}

@@ -24,10 +24,10 @@ test('historical plans import and free practice sync to a new authenticated brow
 });
 
 test('guided position syncs to the server without creating practice results',async({page,browser})=>{
- await login(page);await page.goto(url+'#topics/micro/05');await page.getByRole('button',{name:'按主线跟读本专题题目',exact:true}).click();
+ await login(page);await page.goto(url+'#topics/micro/05');await page.locator('.topic-back [data-action="study-topic"]').click();
  await page.getByRole('button',{name:'下一题',exact:true}).click();await expect(page.locator('.q-id')).toHaveText('MI047');await expect(page.locator('.local-status')).toHaveText('服务器已保存');
  const state=(await(await page.request.get(url+'api/state')).json()).state;expect(state.session.study).toBe(true);expect(state.session.topicId).toBe('micro-05');expect(state.session.index).toBe(1);expect(state.records).toEqual([]);
- const context=await browser.newContext();try{const other=await context.newPage();await login(other);await other.getByRole('button',{name:'继续上次跟读',exact:true}).click();await expect(other.locator('.q-id')).toHaveText('MI047');await expect(other.getByRole('heading',{name:'规范作答',exact:true})).toBeVisible();}finally{await context.close();}
+ const context=await browser.newContext();try{const other=await context.newPage();await login(other);await other.getByRole('button',{name:'继续上次跟读',exact:true}).click();await expect(other.locator('.q-id')).toHaveText('MI047');await expect(other.getByRole('heading',{name:'解题步骤',exact:true})).toBeVisible();}finally{await context.close();}
 });
 
 test('password gate protects the app and logout revokes access',async({page},info)=>{
