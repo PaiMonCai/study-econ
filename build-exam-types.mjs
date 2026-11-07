@@ -61,7 +61,8 @@ export function compileExamTypes(bank){
  };
  const renderer=new Marked({gfm:true,breaks:true,hooks:{emStrongMask(source){return source.replace(/\$\$[\s\S]+?\$\$|\$[^$]+?\$/g,match=>'a'.repeat(match.length));}},renderer:{html({text}){return /^<br\s*\/?\s*>$/i.test(text.trim())?'<br>':escape(text);}},extensions:[
   {name:'displayMath',level:'block',start:source=>source.indexOf('$$'),tokenizer:tokenizeDisplayMath,renderer:token=>'<div class="math-block">'+math(token.tex,true)+(token.punctuation?'<span class="math-punctuation">'+escape(token.punctuation)+'</span>':'')+'</div>'},
-  {name:'inlineMath',level:'inline',start:source=>source.indexOf('$'),tokenizer(source){const match=/^\$([^$]+?)\$/.exec(source);if(match)return{type:'inlineMath',raw:match[0],tex:match[1]};},renderer:token=>math(token.tex,false)}
+  {name:'inlineMath',level:'inline',start:source=>source.indexOf('$'),tokenizer(source){const match=/^\$([^$]+?)\$/.exec(source);if(match)return{type:'inlineMath',raw:match[0],tex:match[1]};},renderer:token=>math(token.tex,false)},
+  {name:'textTimes',level:'inline',start:source=>source.indexOf('\\times'),tokenizer(source){const match=/^\\times(?![A-Za-z])/.exec(source);if(match)return{type:'textTimes',raw:match[0]};},renderer:()=>'&times;'}
  ]});
  function compile(value,location=bank.subject){
   if(Array.isArray(value))return value.map((item,index)=>compile(item,location+'['+(item?.id||index)+']'));

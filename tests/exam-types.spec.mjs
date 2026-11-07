@@ -1,5 +1,14 @@
 import {test,expect} from '@playwright/test';
 
+test('GDP arithmetic displays multiplication signs without raw TeX commands',async({page},info)=>{
+ await page.goto('/#exam/EMA046');
+ const answer=page.locator('#exam-type-part-1 .rich');
+ await expect(answer).toContainText('GDP=2\u00d710+4\u00d710=60');
+ await expect(answer).not.toContainText('\\times');
+ await expect(page.locator('#exam-type-part-2 .rich')).not.toContainText('\\times');
+ await page.screenshot({path:info.outputPath('gdp-arithmetic.png'),fullPage:true});
+});
+
 test('main training starts with one representative per type and removed menus stay absent',async({page})=>{
  await page.goto('/#bank');
  await expect(page.getByRole('heading',{name:'统一题型训练',exact:true})).toBeVisible();

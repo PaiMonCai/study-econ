@@ -11,6 +11,16 @@ vm.runInNewContext(await readFile('dist/exam-type-data.js','utf8'),context);
 const compiled=context.window.STUDY_DATA.examTypes;
 const clone=value=>JSON.parse(JSON.stringify(value));
 
+test('plain arithmetic shows multiplication signs while math and code keep their source',()=>{
+ const source={subject:'macro',answer_md:String.raw`GDP=2\times10+4\times10=60; $a\times b$; `+'`'+String.raw`\times`+'`'+String.raw`; \timeseries`};
+ const shown=compileExamTypes(source);
+ assert.equal(shown.answer_md,source.answer_md);
+ assert.match(shown.answer_html,/GDP=2&times;10\+4&times;10=60/);
+ assert.match(shown.answer_html,/<annotation encoding="application\/x-tex">a\\times b<\/annotation>/);
+ assert.match(shown.answer_html,/<code>\\times<\/code>/);
+ assert.match(shown.answer_html,/\\timeseries/);
+});
+
 test('every displayed question and numbered answer matches the reviewed source',()=>{
  for(const [subject,source] of Object.entries(banks)){
   prepareExamTypes(source,subject);
