@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "source_hashes": {
+    "micro": "8f260503e6731ce100ebc2a86391de27fcd71c239861acf2e3cfe3b7a70dc19c",
+    "chapter_study_micro": "147ff7534d16768981f9dcd589e7f59ceaa5f50480405f4e23a129606286122e",
+    "macro": "6dcf6a8bd0ef4a7e95075fff682d959e15225f7ac472b056cf5d2f5bf5a4e128",
+    "chapter_study_macro": "217a29c83a2eaca0d272aa73dc592e9f756be734a5f957c672d4471d973cac9d",
+    "figure_renderer": "5eac929101a53b03a65f33883f6a1133244dc44e6c7cbdf77ba454a92ff1979c",
+    "integration": "24d042adeab52f57e105cbc3a94c6c2c3d1362672d5a24f77bb7edfb5e310978"
+  },
+  "integration": {
+    "micro": {
+      "source_questions": 120,
+      "source_parts": 300,
+      "duplicate": 41,
+      "supplemented": 53,
+      "independent": 26
+    },
+    "macro": {
+      "source_questions": 120,
+      "source_parts": 408,
+      "duplicate": 33,
+      "supplemented": 57,
+      "independent": 30
+    }
+  },
+  "chapterStudy": {
+    "micro": {
+      "chapters": 19,
+      "summaries": 64,
+      "primary_chapters": 17,
+      "related_only_chapters": 2,
+      "model_only_chapters": 0,
+      "formula_entries": 137,
+      "formulas": 226
+    },
+    "macro": {
+      "chapters": 19,
+      "summaries": 47,
+      "primary_chapters": 17,
+      "related_only_chapters": 2,
+      "model_only_chapters": 0,
+      "formula_entries": 96,
+      "formulas": 195
+    }
+  },
+  "figures": [
+    {
+      "id": "EMI022-1",
+      "qid": "EMI022",
+      "part_id": "1",
+      "url": "exam-type-figures/EMI022-1.svg"
+    },
+    {
+      "id": "EMI037-2",
+      "qid": "EMI037",
+      "part_id": "2",
+      "url": "exam-type-figures/EMI037-2.svg"
+    },
+    {
+      "id": "EMI001-6",
+      "qid": "EMI001",
+      "part_id": "6",
+      "url": "exam-type-figures/EMI001-6.svg"
+    },
+    {
+      "id": "EMI014-6",
+      "qid": "EMI014",
+      "part_id": "6",
+      "url": "exam-type-figures/EMI014-6.svg"
+    },
+    {
+      "id": "EMA001-6-021",
+      "qid": "EMA001",
+      "part_id": "6",
+      "url": "exam-type-figures/EMA001-6-021.svg"
+    },
+    {
+      "id": "EMA001-6-06",
+      "qid": "EMA001",
+      "part_id": "6",
+      "url": "exam-type-figures/EMA001-6-06.svg"
+    },
+    {
+      "id": "EMI015-2",
+      "qid": "EMI015",
+      "part_id": "2",
+      "url": "exam-type-figures/EMI015-2.svg"
+    },
+    {
+      "id": "EMA030-1",
+      "qid": "EMA030",
+      "part_id": "1",
+      "url": "exam-type-figures/EMA030-1.svg"
+    },
+    {
+      "id": "EMA030-2",
+      "qid": "EMA030",
+      "part_id": "2",
+      "url": "exam-type-figures/EMA030-2.svg"
+    },
+    {
+      "id": "EMA030-5-IS",
+      "qid": "EMA030",
+      "part_id": "5",
+      "url": "exam-type-figures/EMA030-5-IS.svg"
+    },
+    {
+      "id": "EMA030-5-LM",
+      "qid": "EMA030",
+      "part_id": "5",
+      "url": "exam-type-figures/EMA030-5-LM.svg"
+    },
+    {
+      "id": "EMI065-4",
+      "qid": "EMI065",
+      "part_id": "4",
+      "url": "exam-type-figures/EMI065-4.svg"
+    },
+    {
+      "id": "EMI066-4",
+      "qid": "EMI066",
+      "part_id": "4",
+      "url": "exam-type-figures/EMI066-4.svg"
+    },
+    {
+      "id": "EMI067-4",
+      "qid": "EMI067",
+      "part_id": "4",
+      "url": "exam-type-figures/EMI067-4.svg"
+    },
+    {
+      "id": "EMI068-4",
+      "qid": "EMI068",
+      "part_id": "4",
+      "url": "exam-type-figures/EMI068-4.svg"
+    }
+  ],
+  "subjects": {
+    "micro": {
+      "cases": 64,
+      "parts": 317,
+      "core": 31,
+      "formulas": 2805
+    },
+    "macro": {
+      "cases": 47,
+      "parts": 246,
+      "core": 30,
+      "formulas": 1020
+    }
+  }
+}

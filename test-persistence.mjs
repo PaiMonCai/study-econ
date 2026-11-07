@@ -61,6 +61,20 @@ test('state and photo survive restart and are visible in a new session',()=>fixt
  const backup=await other.json('/api/backup');assert.deepEqual(backup.favorites,['MI001']);assert.equal(backup.photos.items[0].dataUrl,png);
 }));
 
+test('new type drafts survive server restart and export alongside legacy drafts',()=>fixture(async f=>{
+ const micro=JSON.parse(await readFile(new URL('./content/exam-types-micro.json',import.meta.url),'utf8'));
+ const macro=JSON.parse(await readFile(new URL('./content/exam-types-macro.json',import.meta.url),'utf8'));
+ const ids=[micro.cases[0].id,micro.cases.at(-1).id,macro.cases[0].id,macro.cases.at(-1).id,'MI001','CMA01'];
+ const user=await login(f.url);
+ await user.json('/api/state',{method:'PATCH',body:JSON.stringify({changes:ids.map((id,index)=>({path:['drafts',id],before:null,after:'draft '+index}))})});
+ await user.json('/api/photos',{method:'POST',body:JSON.stringify({items:[{...photo('exam-type-photo'),qid:ids[0]}]})});
+ await f.stop();await f.start();
+ const other=await login(f.url),saved=(await other.json('/api/state')).state,backup=await other.json('/api/backup');
+ for(const [index,id] of ids.entries()){assert.equal(saved.drafts[id],'draft '+index);assert.equal(backup.drafts[id],'draft '+index);}
+ assert.equal(backup.photos.items[0].qid,ids[0]);
+ assert.deepEqual(saved.records,[]);
+}));
+
 test('intensive schedule and checks survive restart and backup without relabeling legacy day records',()=>fixture(async f=>{
  const user=await login(f.url),initial=(await user.json('/api/state')).state;
  const schedule={mode:'intensive',start:'2026-11-08',at:1000},checked={checked:true,at:1000};

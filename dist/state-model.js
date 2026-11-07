@@ -29,7 +29,7 @@ function cleanRecall(input,cards){
  return result;
 }
 function createStateModel(D){
-const byId=Object.assign(Object.create(null),Object.fromEntries([...D.subjects.flatMap(s=>s.questions),...(D.comprehensive?.questions||[])].map(q=>[q.id,q])));
+const byId=Object.assign(Object.create(null),Object.fromEntries([...D.subjects.flatMap(s=>s.questions),...(D.comprehensive?.questions||[]),...(D.examTypes?.questions||[])].map(q=>[q.id,q])));
 const catalogSize=Object.keys(byId).length;
 const conceptKeys=new Set(Object.values(D.conceptMaps||{}).flatMap(bank=>bank.nodes.flatMap(node=>['concept','relation','application'].map(layer=>node.id+':'+layer))));
 function cleanConceptProgress(input={}){
@@ -115,7 +115,7 @@ function validate(input) {
  result.records=[...new Map(result.records.map(r=>[r.id,r])).values()].sort((a,b)=>a.at-b.at);
  result.favorites=[...new Set(input.favorites.filter(id=>typeof id==='string'&&byId[id]))];
  for(const [id,text] of Object.entries(input.drafts)){if(byId[id]&&typeof text==='string'&&text.length<=100000) result.drafts[id]=text;else throw new Error('备份中的草稿无效，未导入。');}
- if(input.session && Array.isArray(input.session.ids) && input.session.ids.length && input.session.ids.length<=catalogSize && input.session.ids.every(id=>byId[id]) && Number.isInteger(input.session.index) && input.session.index>=0 && input.session.index<input.session.ids.length){
+ if(input.session && Array.isArray(input.session.ids) && input.session.ids.length && input.session.ids.length<=catalogSize && input.session.ids.every(id=>byId[id]&&!byId[id].exam_type) && Number.isInteger(input.session.index) && input.session.index>=0 && input.session.index<input.session.ids.length){
   const s=input.session; result.session={ids:[...new Set(s.ids)],index:s.index,mode:String(s.mode||'自由练习').slice(0,40),day:Number.isInteger(s.day)&&s.day>=1&&s.day<=50?s.day:null,seconds:Math.max(0,Math.min(604800,Number(s.seconds)||0)),startedAt:null,revealed:!!s.revealed,hint:!!s.hint,ratingId:typeof s.ratingId==='string'?s.ratingId:null};
   result.session.solutionLines=s.solutionLines;
   if(result.session.index>=result.session.ids.length) result.session.index=0;

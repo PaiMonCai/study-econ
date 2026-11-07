@@ -6,7 +6,7 @@ import {createApp} from '../serve.mjs';
 
 const saved=page=>page.evaluate(()=>JSON.parse(localStorage.getItem('ruc802.practice.v1')));
 async function openReading(page,id='MI005',base=''){
- await page.goto(base+'/#bank');await page.locator('#search').fill(id);
+ await page.goto(base+'/#archive');await page.locator('#search').fill(id);
  await page.getByRole('button',{name:'看规范作答',exact:true}).click();
  await expect(page.locator('.q-id')).toHaveText(id);
 }
@@ -58,7 +58,7 @@ test('old partial single-question reading restores with its complete answer and 
 });
 
 test('switching an existing practice group to reading keeps its selected queue',async({page})=>{
- await page.goto('/');
+ await page.goto('/#archive');
  await page.locator('#group-filter').selectOption('01');await page.locator('[data-action="start-filter"]').click();
  const ids=(await saved(page)).session.ids;
  await page.getByRole('button',{name:'直接看规范作答',exact:true}).click();
@@ -94,10 +94,10 @@ test('arrow keys flip reading questions while controls, selected text and charts
 });
 
 test('comprehensive reading continues to the other case in the topic and finishes cleanly',async({page})=>{
- await page.goto('/#integrated/macro');await page.locator('[data-action="study-single"][data-id="CMA01"]').click();
+ await page.goto('/#archive-integrated/macro');await page.locator('[data-action="study-single"][data-id="CMA01"]').click();
  await expect(page.locator('.q-id')).toHaveText('CMA01');await footerIsReachable(page);
  await page.getByRole('button',{name:'下一题',exact:true}).click();await expect(page.locator('.q-id')).toHaveText('CMA02');
- await page.getByRole('button',{name:'读完本组',exact:true}).click();await expect(page).toHaveURL(/#integrated\/macro$/);
+ await page.getByRole('button',{name:'读完本组',exact:true}).click();await expect(page).toHaveURL(/#archive-integrated\/macro$/);
  expect((await saved(page)).records).toEqual([]);
 });
 

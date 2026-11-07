@@ -49,6 +49,11 @@ export async function createDataStore({dataDir=path.join(HERE,'data'),catalogDir
  try{papers=JSON.parse(await readFile(path.join(catalogDir,'training-papers.json'),'utf8')).papers;}
  catch(error){if(error.code!=='ENOENT')throw error;}
  const comprehensive={questions:comprehensiveBanks.flatMap(bank=>bank.cases.map(question=>({...question,comprehensive:true}))),papers};
+ const examTypeBanks=await Promise.all(['micro','macro'].map(async subject=>{
+  try{return JSON.parse(await readFile(path.join(catalogDir,'exam-types-'+subject+'.json'),'utf8'));}
+  catch(error){if(error.code==='ENOENT')return{cases:[]};throw error;}
+ }));
+ const examTypes={questions:examTypeBanks.flatMap(bank=>bank.cases.map(question=>({...question,exam_type:true})))};
  const conceptMaps=Object.fromEntries(await Promise.all(['micro','macro'].map(async subject=>{
   const bank=JSON.parse(await readFile(path.join(catalogDir,'concept-map-'+subject+'.json'),'utf8'));
   if(bank.subject!==subject||!Array.isArray(bank.nodes)||!bank.nodes.length)throw Error('知识图目录不完整，学习记录未改动：'+subject);
@@ -58,7 +63,7 @@ export async function createDataStore({dataDir=path.join(HERE,'data'),catalogDir
  const methodSheets=JSON.parse(await readFile(path.join(catalogDir,'method-sheets.json'),'utf8'));
  const methodChecks=methodSheets.sheets?.flatMap(sheet=>sheet.checks||[])||[];
  if(methodSheets.version!==1||methodSheets.sheets?.length!==20||new Set(methodSheets.sheets.map(sheet=>sheet.id)).size!==20||methodChecks.length!==66||new Set(methodChecks.map(check=>check.id)).size!==66||methodSheets.sheets.some(sheet=>!conceptMaps[sheet.subject]?.topics.some(topic=>topic.id===sheet.id)||!sheet.checks?.length))throw Error('作答速查目录不完整，学习记录未改动。');
- const model=stateModel.createStateModel({subjects,plan,intensivePlan,recall,topics,comprehensive,conceptMaps,methodSheets}),questions=new Set([...subjects.flatMap(s=>s.questions),...comprehensive.questions].map(question=>question.id));
+ const model=stateModel.createStateModel({subjects,plan,intensivePlan,recall,topics,comprehensive,conceptMaps,methodSheets,examTypes}),questions=new Set([...subjects.flatMap(s=>s.questions),...comprehensive.questions,...examTypes.questions].map(question=>question.id));
  await mkdir(dataDir,{recursive:true,mode:0o700});const filename=path.resolve(dataDir,'study.sqlite'),db=new DatabaseSync(filename);
  const tables=db.prepare("SELECT name FROM sqlite_schema WHERE type='table' AND name NOT LIKE 'sqlite_%'").all();
  const schema=tables.some(t=>t.name==='meta')?db.prepare("SELECT value FROM meta WHERE key='schema'").get():null;

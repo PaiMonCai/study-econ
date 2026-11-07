@@ -1,7 +1,7 @@
 'use strict';
 (() => {
 function create({data,esc,shell,readingBar,questionPath=()=>''}) {
- const topics=data.topics;
+ const practiceCatalog=window.createPracticeCatalog(data),topics=practiceCatalog.topics;
  const byId=Object.fromEntries([...data.subjects.flatMap(s=>s.questions.map(q=>({...q,subject:s.key,subjectName:s.name}))),...(data.comprehensive?.questions||[])].map(q=>[q.id,q]));
  const topicById=Object.fromEntries(topics.map(t=>[t.id,t]));
  const topicUrl=topic=>'#topics/'+topic.subject+'/'+topic.group;
@@ -9,7 +9,7 @@ function create({data,esc,shell,readingBar,questionPath=()=>''}) {
   return `<section class="paper guided-home" aria-label="规范作答学习"><div><h2>先看规范作答，顺着思路背。</h2><p>题目直接带着答案读：看条件、认知识点，再沿推导复述。</p><a href="#topics/micro/05">从垄断、串联垄断到 n 厂商古诺</a></div><div class="guided-actions">${data.subjects.map(s=>`<button class="btn primary" data-action="study-day" data-sub="${s.key}">跟读${s.name}今日10题</button>`).join('')}<a class="btn" href="#topics">查看专题串联</a></div></section>`;
  }
  function topicLink(q,label='本题所在专题'){return `<a class="btn" href="${topicUrl(topicById[q.subject+'-'+q.group])}">${label}</a>`;}
- function questionLinks(ids,topic){return `<div class="topic-questions">${ids.map(id=>`<button class="btn" data-action="study-single" data-id="${id}" data-topic="${topic.id}" title="${esc(byId[id].title)}">看规范作答 ${id}</button>`).join('')}</div>`;}
+ function questionLinks(ids,topic){return `<div class="topic-questions">${data.examTypes.banks[topic.subject]?window.ExamTypes.sourceLinks(data,ids):ids.map(id=>`<button class="btn" data-action="study-single" data-id="${id}" data-topic="${topic.id}" title="${esc(byId[id].title)}">看规范作答 ${id}</button>`).join('')}</div>`;}
  function topicCards(topic){return topic.card_ids.length?`<section class="topic-card-links"><h2>回查公式与概念</h2><div class="actions">${topic.card_ids.map(id=>{const card=data.recall.cards.find(c=>c.id===id);return `<button class="btn" data-action="recall-card" data-id="${id}" data-return="topics/${topic.subject}/${topic.group}">${esc(card.title)}</button>`;}).join('')}</div></section>`:'';}
  function renderTopics(){
   const [,subjectKey,group]=location.hash.slice(1).split('/');
@@ -25,7 +25,7 @@ function create({data,esc,shell,readingBar,questionPath=()=>''}) {
    '<nav class="topic-jumps" aria-label="本专题目录">'+topic.stages.map((stage,index)=>'<button data-action="topic-section" data-index="'+index+'"><span>'+(index+1)+'</span>'+esc(stage.title)+'</button>').join('')+'</nav>'+
    '<ol class="topic-stages">'+topic.stages.map((stage,index)=>'<li class="topic-stage" id="topic-stage-'+index+'"><h2 tabindex="-1"><span>'+(index+1)+'</span>'+esc(stage.title)+'</h2><div class="rich">'+stage.explanation_html+'</div>'+ (stage.question_ids.length?questionLinks(stage.question_ids,topic):'<p class="small muted">补充模型的适用条件见本节正文。</p>')+'</li>').join('')+'</ol>'+
    (topic.comparison_md?'<section class="topic-comparison"><h2>模型对照</h2><div class="rich">'+topic.comparison_html+'</div></section>':'')+
-   '<section class="topic-boundaries"><h2>适用条件与边界</h2><div class="rich">'+topic.boundaries_html+'</div></section><section class="topic-recall"><h2>背诵主线</h2><div class="rich">'+topic.recall_html+'</div></section>'+topicCards(topic)+
+   '<section class="topic-boundaries"><h2>适用条件与边界</h2><div class="rich">'+topic.boundaries_html+'</div></section><section class="topic-recall"><h2>知识主线</h2><div class="rich">'+topic.recall_html+'</div></section>'+topicCards(topic)+
    '<section class="topic-all-questions"><h2>本专题关联题目</h2>'+questionLinks(topic.source_question_ids,topic)+'</section>'+
    '<section class="source reading-source-note"><h2>整理依据</h2><p>'+esc(topic.editorial_note)+'</p><p>'+esc(topic.source_note)+'</p></section></article>'+
    (['micro','macro'].includes(topic.subject)?'<nav class="actions topic-reading-links" aria-label="本专题延伸学习"><a class="btn" href="#maps/'+topic.subject+'/'+topic.group+'/mind">在知识导图中查看本专题</a><a class="btn" href="#methods/'+topic.subject+'/'+topic.group+'">作答速查与闭卷检测</a></nav>':'')+
@@ -49,6 +49,7 @@ function create({data,esc,shell,readingBar,questionPath=()=>''}) {
  }
  function renderSources(id,current=false){
   const q=byId[id];if(!q)return false;
+  if(!practiceCatalog.isActive(q)){renderRemoved();return true;}
   const references=(q.source_refs||[]).map(ref=>'<p><strong>'+esc(ref.exam_id)+'</strong>；'+esc(ref.source)+'，PDF物理页 '+esc(ref.pages)+'。<br>'+esc(ref.note)+'</p>').join('');
   const back=current?'<a class="btn" href="#practice">返回当前题目</a>':'<button class="btn" data-action="study-single" data-id="'+q.id+'">阅读本题</button>';
   shell('<div class="source-reader"><div class="page-heading"><div><h1>题源与整理记录</h1><p>'+esc(q.id+' '+q.title)+'</p></div>'+back+'</div>'+readingBar()+'<article class="paper topic-paper"><section><h2>题目来源</h2>'+references+'</section>'+window.StudyUI.readingContent(window.ExamReview.source(q))+window.StudyDiagrams.renderPanel(q,{revealed:true,reading:true,reference:true})+'</article></div>','sources');
@@ -59,7 +60,8 @@ function create({data,esc,shell,readingBar,questionPath=()=>''}) {
   const heading=document.getElementById('topic-stage-'+Number(button.dataset.index))?.querySelector('h2');
   heading?.scrollIntoView({block:'start'});heading?.focus({preventScroll:true});return true;
  }
- return {homePanel,topicLink,renderTopics,renderQuestion,renderSources,applications,action};
+ function renderRemoved(){shell('<section class="paper empty"><h1>政经现仅保留计算题</h1><p>这道论述题已移出练习目录。已有作答、草稿和照片仍随学习备份保留。</p><a class="btn primary" href="#bank/political">选择政经计算题</a></section>','political');}
+ return {homePanel,topicLink,renderTopics,renderQuestion,renderSources,renderRemoved,applications,action};
 }
 window.StudyGuide={create};
 })();

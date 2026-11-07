@@ -2,7 +2,7 @@ import {test,expect} from '@playwright/test';
 test('checking presents ordered source steps and knowledge recap for all subjects',async({page},info)=>{
  const errors=[];page.on('pageerror',error=>errors.push(error.message));
  for(const subject of ['micro','macro','political']){
-  await page.goto('/');await page.locator('#group-filter').selectOption('01');await page.locator(`[data-action="subject"][data-sub="${subject}"]`).click();await page.locator('[data-action="start-filter"]').click();
+  await page.goto('/#archive');await page.locator('#group-filter').selectOption('01');await page.locator(`[data-action="subject"][data-sub="${subject}"]`).click();await page.locator('[data-action="start-filter"]').click();
   await expect(page.locator('#draft')).toHaveCount(0);await expect(page.locator('.solution-steps')).toHaveCount(0);await expect(page.locator('.knowledge-review')).toHaveCount(0);
   await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();await expect(page.getByRole('heading',{name:'规范解题过程',exact:true})).toBeVisible();
   await expect(page.locator('.solution-reader-controls')).toHaveCount(0);expect(await page.locator('.solution-step').count()).toBeGreaterThan(1);await expect(page.locator('.answer-knowledge summary')).toHaveCount(0);await expect(page.getByRole('heading',{name:'本题知识点',exact:true})).toBeVisible();await expect(page.getByRole('heading',{name:'把本题再串一遍',exact:true})).toBeVisible();

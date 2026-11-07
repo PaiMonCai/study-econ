@@ -44,13 +44,13 @@ https://你的域名/802/#token=你的令牌
 
 ## 从v1.5及以后版本更新
 
-v1.13.1恢复桌面普通与专注阅读的双页，左侧题目及完整图形、右侧完整解答；窄屏上下排列，并保留30篇专题整篇阅读、常驻上一题／下一题、直接可选的阅读设置和同一标签页内阅读位置恢复。题源与整理记录独立完整显示，刷题训练仍为首页，由学习者自行安排。沿用既有数据库与访问配置，原专项、综合题、知识图、检测及历史计划记录保留。保留自己的`.env`、原Compose项目名和原数据卷，将`IMAGE`改为`ghcr.io/paimoncai/study-econ:v1.13.1`后执行`docker compose pull`和`docker compose up -d`。无需重复迁移已写入服务器的数据。若此前仍使用v1.4及更早版本，继续按下一节同步更新Compose和访问配置。
+v1.14.0将主训练更新为微观64型317问、宏观47型246问，按尼科尔森第11版／高鸿业第8版参照与曼昆第10版编排38章，全部111型附知识总结。政经在线入口保留40道计算题。新增题号、原题号和历史草稿分别保存；旧公式背诵和复盘入口回到主训练，历史数据继续保留。升级前导出完整备份并保留数据库副本，沿用自己的`.env`、原Compose项目名和数据卷，将`IMAGE`设为`ghcr.io/paimoncai/study-econ:v1.14.0`，执行`docker compose pull`和`docker compose up -d`。重新加载服务后再使用新增题号，无需重复迁移已在服务器保存的数据。若回退旧程序，使用升级前数据副本，以免旧程序无法识别新增题号。若此前仍使用v1.4及更早版本，按下一节同步更新Compose和访问配置。
 
 ## 从v1.4及更早版本更新
 
 1. 先在旧浏览器“设置与备份”导出完整JSON，保留照片；不要清除旧网站数据。
-2. 换入v1.13.1部署包中的`compose.yaml`、`.env.example`和部署文件，保留自己的`.env`并补入口令。只修改旧Compose的镜像版本不会自动增加数据卷和访问配置。
-3. 将`IMAGE`设为`ghcr.io/paimoncai/study-econ:v1.13.1`，保持原Compose项目名，执行`docker compose pull`和`docker compose up -d`。
+2. 换入v1.14.0部署包中的`compose.yaml`、`.env.example`和部署文件，保留自己的`.env`并补入口令。只修改旧Compose的镜像版本不会自动增加数据卷和访问配置。
+3. 将`IMAGE`设为`ghcr.io/paimoncai/study-econ:v1.14.0`，保持原Compose项目名，执行`docker compose pull`和`docker compose up -d`。
 4. 登录后打开“设置与备份”，选择“检查并迁移本机旧数据”，预览后确认；或导入刚导出的完整JSON。迁移读取当前网站地址下的旧浏览器存储，网址或端口变更时需通过JSON迁移。
 5. 在另一个浏览器登录，确认记录、背诵与照片可见，再继续学习。
 
@@ -115,4 +115,4 @@ npm run package
 
 测试覆盖原题库、公式、旧浏览器模式，以及认证、数据库重启、不同设备合并、冲突、照片、原子导入、断网恢复与迁移。CI分别在amd64和arm64原生运行器构建，启动根路径、子目录和Compose，并重建服务核验持久化。
 
-仓库为`https://github.com/PaiMonCai/study-econ`。稳定版`ghcr.io/paimoncai/study-econ:latest`，固定版`v1.13.1`，日常版`dev`。main通过验证后发布dev；版本标签与package.json一致时发布正式镜像、latest和部署包。源码构建可叠加`compose.build.yaml`。
+仓库为`https://github.com/PaiMonCai/study-econ`。稳定版`ghcr.io/paimoncai/study-econ:latest`，固定版`v1.14.0`，日常版`dev`。main通过验证后发布dev；版本标签与package.json一致时发布正式镜像、latest和部署包。源码构建可叠加`compose.build.yaml`。

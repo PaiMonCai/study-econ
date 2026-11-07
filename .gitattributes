@@ -1,2 +1,3 @@
-# Source fingerprints bind exact JSON bytes across platforms.
+# Source fingerprints bind exact bytes across platforms.
 content/*.json -text
+build-exam-type-figures.mjs -text

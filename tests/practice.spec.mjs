@@ -1,14 +1,14 @@
 import {test,expect} from '@playwright/test';
 test('home opens free practice and old schedule links return to the bank',async({page})=>{
- await page.goto('/');await expect(page.getByRole('heading',{name:'刷题训练',exact:true})).toBeVisible();
- await expect(page.locator('.nav>a')).toHaveText(['刷题训练','专题串联','知识导图与拓扑','公式与背诵','复盘与记录','资料库','设置与备份']);
+ await page.goto('/');await expect(page.getByRole('heading',{name:'统一题型训练',exact:true})).toBeVisible();
+ await expect(page.locator('.nav>a')).toHaveText(['刷题训练','专题串联','知识导图与拓扑','资料库','设置与备份']);
  await expect(page.locator('#day-select,#intensive-day-select,.plan-switch')).toHaveCount(0);
- await page.goto('/#today');await expect(page).toHaveURL(/#bank$/);await expect(page.locator('.question-row')).toHaveCount(20);
+ await page.goto('/#today');await expect(page).toHaveURL(/#bank$/);await expect(page.locator('.exam-type-row').first()).toBeVisible();
  await page.goto('/#settings');await expect(page.locator('#start-date,#intensive-start')).toHaveCount(0);await expect(page.getByRole('heading',{name:'备份与换设备',exact:true})).toBeVisible();
 });
 test('legacy draft rating and reading survive question changes and reload',async({page})=>{
  await page.addInitScript(()=>{if(!localStorage.getItem('ruc802.practice.v1'))localStorage.setItem('ruc802.practice.v1',JSON.stringify({version:1,start:'2026-10-29',records:[],drafts:{MI001:'先列预算，再验证条件。'},favorites:[],session:null}));});
- await page.goto('/');await page.locator('#group-filter').selectOption('01');await page.locator('[data-action="start-filter"]').click();
+ await page.goto('/#archive');await page.locator('#group-filter').selectOption('01');await page.locator('[data-action="start-filter"]').click();
  await expect(page.locator('#draft')).toHaveCount(0);await page.getByText('查看历史文字作答',{exact:true}).click();await expect(page.locator('.legacy-draft pre')).toHaveText('先列预算，再验证条件。');
  await page.getByRole('button',{name:'大字号',exact:true}).click();await page.getByRole('button',{name:'专注阅读',exact:true}).click();
  await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();await page.getByRole('button',{name:'不熟，有断点',exact:true}).click();

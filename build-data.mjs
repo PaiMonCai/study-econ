@@ -14,6 +14,7 @@ import {prepareTrainingBank,prepareComprehensiveBank,prepareTrainingPapers,train
 import {prepareConceptMap,compileConceptMap,prepareConceptBridges} from './build-concept-map.mjs';
 import {prepareIntensivePlan} from './build-intensive.mjs';
 import {prepareMethodSheets,compileMethodSheets} from './build-methods.mjs';
+import {preparePracticeSelection} from './build-practice-selection.mjs';
 
 const HERE=path.dirname(fileURLToPath(import.meta.url));
 const ROOT=path.resolve(HERE,'../..');
@@ -231,8 +232,11 @@ materials.push({title:'宏微观知识导图与拓扑总稿',tag:'知识图 · �
 materials.push({title:'宏微观15天强化安排',tag:'每日安排 · 满分目标',description:'20专题、40道完整专项代表题、160道条件筛查，综合应用与最后两天限时验收。每天4小时必做，额外0–2小时修补。',files:[{url:'materials/intensive-15-day-plan.md',label:'下载完整安排'}]});
 materials.push({title:'宏微观作答速查与闭卷检测',tag:'20专题 · 66道短检测',description:'每专题两页选法、起笔、分支和易混对照；26个补充知识点均有直接检测。交互检测草稿、自评及复测单独保存。',files:[{url:'materials/method-sheets.pdf',label:'40页速查PDF'},{url:'materials/method-sheets.html',label:'离线速查'},{url:'materials/method-checks.md',label:'仅题目稿'},{url:'materials/method-check-answers.md',label:'参考与自查稿'}]});
 // Keep each static asset within the hosting size limit as the corpus grows.
+const selectionRaw=await readFile(path.join(SOURCE,'practice-selection.json'));
+const practiceSelection=preparePracticeSelection(JSON.parse(selectionRaw),subjects);
+sourceHashes.practice_selection=createHash('sha256').update(selectionRaw).digest('hex');
 const coreSubjects=subjects.map(subject=>({...subject,questions:subject.questions.map(({training,...question})=>question)}));
-const data={version:1,title:'802练习室',subjects:coreSubjects,plan,intensivePlan,materials,recall,diagramSummary,topics,comprehensive:{...comprehensive,questions:[]},trainingSummary,conceptMaps:{},conceptSummary,conceptBridges};
+const data={version:1,title:'802练习室',subjects:coreSubjects,practiceSelection,plan,intensivePlan,materials,recall,diagramSummary,topics,comprehensive:{...comprehensive,questions:[]},trainingSummary,conceptMaps:{},conceptSummary,conceptBridges};
 await writeFile(path.join(DIST,'data.js'),'window.STUDY_DATA='+JSON.stringify(data).replace(/</g,'\\u003c')+';\n','utf8');
 const manifest={questions:300,groups:30,days:50,mathCount:questionMathCount,solutionMathCount,recallCards:recall.cards.length,recallMathCount,topicMathCount,topicSummary,examMathCount,examSummary,trainingMathCount,trainingSummary,conceptMathCount,conceptSummary,methodMathCount,methodSummary:methodSheets.summary,mathErrors:errors,sourceHashes,diagramSummary,materials:materials.length,builtAt:new Date().toISOString()};
 await writeFile(path.join(HERE,'build-manifest.json'),JSON.stringify(manifest,null,2));

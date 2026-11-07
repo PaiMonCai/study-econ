@@ -2,7 +2,7 @@ import {test,expect} from '@playwright/test';
 const storageKey='ruc802.practice.v1';
 const records=page=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)).records,storageKey);
 async function beginReading(page){
- await page.goto('/');await page.locator('#group-filter').selectOption('01');
+ await page.goto('/#archive');await page.locator('#group-filter').selectOption('01');
  await page.locator('[data-action="study-filter"]').click();
  await expect(page.locator('.q-id')).toHaveText('MI001');
 }
@@ -28,7 +28,7 @@ test('reading displays complete steps and explanations before and after question
 });
 
 test('independent checking displays its complete answer only after finishing the attempt',async({page})=>{
- await page.goto('/');await page.locator('#group-filter').selectOption('01');await page.locator('[data-action="start-filter"]').click();
+ await page.goto('/#archive');await page.locator('#group-filter').selectOption('01');await page.locator('[data-action="start-filter"]').click();
  await expect(page.locator('.solution-step-body')).toHaveCount(0);
  await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();await completeAnswer(page);
  await expect(page.locator('.knowledge-review')).toBeVisible();
@@ -37,7 +37,7 @@ test('independent checking displays its complete answer only after finishing the
 
 test('corrected answers and preserved original answers have separate complete pages',async({page})=>{
  for(const [subject,id,wrong] of [['micro','MI075','所以这不是无转移的帕累托改善结论'],['macro','MA025','货币利率下降并未抵消利差上升']]){
-  await page.goto('/#bank');await page.locator(`[data-action="subject"][data-sub="${subject}"]`).click();await page.locator('#search').fill(id);
+  await page.goto('/#archive');await page.locator(`[data-action="subject"][data-sub="${subject}"]`).click();await page.locator('#search').fill(id);
   await page.getByRole('button',{name:'看规范作答',exact:true}).click();await completeAnswer(page);
   await expect(page.locator('.solution-reader')).not.toContainText(wrong);
   await expect(page.locator('.reading-document')).not.toContainText(wrong);
@@ -63,7 +63,7 @@ test('all topic sections, comparison and boundaries are available without expand
 });
 
 test('insurance answer retains stacked fractions, aligned equations and printable complete steps',async({page},info)=>{
- await page.goto('/#bank');await page.locator('#search').fill('MI021');await page.getByRole('button',{name:'看规范作答',exact:true}).click();await completeAnswer(page);
+ await page.goto('/#archive');await page.locator('#search').fill('MI021');await page.getByRole('button',{name:'看规范作答',exact:true}).click();await completeAnswer(page);
  const reader=page.locator('.solution-reader-steps');expect(await reader.locator('.mfrac').count()).toBeGreaterThan(5);expect(await reader.locator('.sqrt').count()).toBeGreaterThan(1);await expect(reader.locator('.katex-error,.math-error')).toHaveCount(0);
  const rendered=await reader.locator('[data-typeset-tex],annotation[encoding="application/x-tex"]').evaluateAll(els=>els.map(el=>el.getAttribute('data-typeset-tex')||el.textContent));
  expect(rendered.some(tex=>tex.includes('\\begin{aligned}')&&tex.includes('W_L'))).toBe(true);

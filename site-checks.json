@@ -1,6 +1,6 @@
 {
   "all_passed": true,
-  "count": 38479,
+  "count": 38507,
   "questions": 300,
   "days": 50,
   "mathCount": 1718,
@@ -92,8 +92,16 @@
       "political": 44
     }
   },
-  "assetCount": 115,
+  "assetCount": 120,
   "checks": [
+    {
+      "name": "practice selection source hash",
+      "passed": true
+    },
+    {
+      "name": "practice selection matches validated source",
+      "passed": true
+    },
     {
       "name": "15-day plan source hash",
       "passed": true
@@ -153179,6 +153187,10 @@
       "passed": true
     },
     {
+      "name": "local asset practice-catalog.js",
+      "passed": true
+    },
+    {
       "name": "local asset study.js",
       "passed": true
     },
@@ -153220,6 +153232,22 @@
     },
     {
       "name": "local asset methods.js",
+      "passed": true
+    },
+    {
+      "name": "local asset exam-types.css",
+      "passed": true
+    },
+    {
+      "name": "local asset exam-type-data.js",
+      "passed": true
+    },
+    {
+      "name": "local asset chapter-study.js",
+      "passed": true
+    },
+    {
+      "name": "local asset exam-types.js",
       "passed": true
     },
     {
@@ -153539,6 +153567,10 @@
       "passed": true
     },
     {
+      "name": "static file under platform size limit chapter-study.js",
+      "passed": true
+    },
+    {
       "name": "static file under platform size limit concept-data-macro.js",
       "passed": true
     },
@@ -153580,6 +153612,82 @@
     },
     {
       "name": "static file under platform size limit exam-review.js",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-data.js",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMA001-6-021.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMA001-6-06.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMA030-1.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMA030-2.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMA030-5-IS.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMA030-5-LM.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMI001-6.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMI014-6.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMI015-2.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMI022-1.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMI037-2.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMI065-4.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMI066-4.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMI067-4.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-figures\\EMI068-4.svg",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-type-manifest.json",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-types.css",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit exam-types.js",
       "passed": true
     },
     {
@@ -153704,6 +153812,10 @@
     },
     {
       "name": "static file under platform size limit photos.js",
+      "passed": true
+    },
+    {
+      "name": "static file under platform size limit practice-catalog.js",
       "passed": true
     },
     {

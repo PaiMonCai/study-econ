@@ -6,7 +6,7 @@ async function legacy(page){
  await page.reload();
 }
 test('legacy planned sessions resume from the free practice home and return to the bank',async({page})=>{
- await legacy(page);await expect(page.getByRole('heading',{name:'刷题训练',exact:true})).toBeVisible();
+ await legacy(page);await expect(page.getByRole('heading',{name:'统一题型训练',exact:true})).toBeVisible();
  await expect(page.locator('.plan-switch,#intensive-day-select,#day-select')).toHaveCount(0);
  await page.locator('[data-action="resume"]').click();await expect(page.locator('.q-id')).toHaveText('MI001');await expect(page.locator('.rating.selected')).toContainText('不熟');
  await page.getByRole('button',{name:'返回题库',exact:true}).click();await expect(page).toHaveURL(/#bank$/);

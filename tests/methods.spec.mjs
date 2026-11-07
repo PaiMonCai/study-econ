@@ -4,7 +4,7 @@ const entry=page=>page.locator('[data-method-check="MI01-D1"]');
 
 test('topic summaries open the matching method sheet without changing the main navigation',async({page})=>{
  await page.goto('/#topics/micro/01');await page.getByRole('link',{name:'作答速查与闭卷检测',exact:true}).click();await expect(page.getByRole('heading',{name:'消费选择、需求与补偿',exact:true})).toBeVisible();
- await expect(page.locator('.nav>a')).toHaveCount(7);await expect(page.locator('.nav>a[aria-current="page"]')).toHaveText('专题串联');await expect(page.locator('[data-method-page]')).toHaveCount(2);
+ await expect(page.locator('.nav>a')).toHaveCount(5);await expect(page.locator('.nav>a[aria-current="page"]')).toHaveText('专题串联');await expect(page.locator('[data-method-page]')).toHaveCount(2);
  await page.goto('/#topics/macro/09');await page.getByRole('link',{name:'作答速查与闭卷检测',exact:true}).click();await expect(page.getByRole('heading',{name:'开放经济、汇率制度与外部冲击',exact:true})).toBeVisible();
 });
 

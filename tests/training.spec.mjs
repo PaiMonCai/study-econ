@@ -6,7 +6,7 @@ import {createApp} from '../serve.mjs';
 
 const saved=page=>page.evaluate(()=>JSON.parse(localStorage.getItem('ruc802.practice.v1')));
 async function openCase(page,id='CMI01',url='/'){
- await page.goto(url+'#integrated/'+(id.startsWith('CMI')?'micro':'macro'));
+ await page.goto(url+'#archive-integrated/'+(id.startsWith('CMI')?'micro':'macro'));
  await page.locator('[data-action="single"][data-id="'+id+'"]').click();
  await expect(page.locator('.q-id')).toHaveText(id);
 }
@@ -27,7 +27,7 @@ async function backup(page){
 }
 
 test('structured specialist prompts retain their original wording for comparison',async({page})=>{
- await page.goto('/#bank');await page.locator('#search').fill('MI001');await page.locator('[data-action="single"][data-id="MI001"]').click();
+ await page.goto('/#archive');await page.locator('#search').fill('MI001');await page.locator('[data-action="single"][data-id="MI001"]').click();
  const expected=await page.evaluate(()=>window.STUDY_DATA.subjects[0].questions[0].training.parts.length);
  await expect(page.locator('#question-prompt')).toContainText('（'+expected+'）');
  await page.getByRole('link',{name:'题源与整理记录',exact:true}).click();await expect(page.locator('.source-reader details')).toHaveCount(0);
@@ -38,7 +38,7 @@ test('structured specialist prompts retain their original wording for comparison
 
 test('all forty comprehensive cases render complete questions and answers at large type',async({page})=>{
  test.setTimeout(240000);const errors=[];page.on('pageerror',error=>errors.push(error.message));
- await page.goto('/#integrated');const cases=await page.evaluate(()=>window.STUDY_DATA.comprehensive.questions.map(q=>({id:q.id,parts:q.parts.length})));
+ await page.goto('/#archive-integrated');const cases=await page.evaluate(()=>window.STUDY_DATA.comprehensive.questions.map(q=>({id:q.id,parts:q.parts.length})));
  expect(cases).toHaveLength(40);
  for(const q of cases){
   await openCase(page,q.id);await page.getByRole('button',{name:'大字号',exact:true}).click();
@@ -52,7 +52,7 @@ test('all forty comprehensive cases render complete questions and answers at lar
 });
 
 test('comprehensive reading retains complete steps after reload without creating a score',async({page})=>{
- await page.goto('/#integrated/macro');await page.locator('[data-action="study-single"][data-id="CMA01"]').click();
+ await page.goto('/#archive-integrated/macro');await page.locator('[data-action="study-single"][data-id="CMA01"]').click();
  await expect(page.locator('#study-answer')).toBeVisible();const count=await page.locator('.solution-step-body').count();expect(count).toBeGreaterThan(1);
  await page.reload();await expect(page.locator('#study-answer')).toBeVisible();await expect(page.locator('.solution-step-body')).toHaveCount(count);
  await expect(page.locator('.reading-document details,.solution-reader-controls,[data-action="study-reveal"]')).toHaveCount(0);
@@ -60,7 +60,7 @@ test('comprehensive reading retains complete steps after reload without creating
 });
 
 test('scores and comprehensive photos survive reload and full backup import',async({page,browser})=>{
- await page.goto('/');await expect(page.getByRole('heading',{name:'刷题训练',exact:true})).toBeVisible();await page.evaluate(()=>{const state=window.RemoteStore.model.fresh();state.schedule.mode='legacy';state.records=[{id:'legacy',qid:'MI001',rating:2,at:1000,updatedAt:1000,seconds:10,day:1}];localStorage.setItem('ruc802.practice.v1',JSON.stringify(state));});await page.reload();await expect(page.getByRole('heading',{name:'刷题训练',exact:true})).toBeVisible();
+ await page.goto('/#archive');await expect(page.getByRole('heading',{name:'历史原题归档',exact:true})).toBeVisible();await page.evaluate(()=>{const state=window.RemoteStore.model.fresh();state.schedule.mode='legacy';state.records=[{id:'legacy',qid:'MI001',rating:2,at:1000,updatedAt:1000,seconds:10,day:1}];localStorage.setItem('ruc802.practice.v1',JSON.stringify(state));});await page.reload();await expect(page.getByRole('heading',{name:'历史原题归档',exact:true})).toBeVisible();
  await openCase(page);await page.locator('input[data-photo-input][multiple]').setInputFiles(await picture(page));
  await expect(page.locator('[data-photo-status]')).toHaveText('已保存 1/3 张');await reveal(page);await score(page,true);
  await page.reload();await expect(page.locator('#case-score-total')).toContainText('已保存 24.5/25');await expect(page.locator('[data-photo-status]')).toHaveText('已保存 1/3 张');
@@ -75,7 +75,7 @@ test('scores and comprehensive photos survive reload and full backup import',asy
 });
 
 test('timed papers keep answers hidden until submission and score all four cases as one attempt',async({page})=>{
- test.setTimeout(90000);await page.goto('/#papers');await page.locator('[data-action="paper-start"][data-id="P01"]').click();
+ test.setTimeout(90000);await page.goto('/#archive-papers');await page.locator('[data-action="paper-start"][data-id="P01"]').click();
  await expect(page.locator('.paper-session-status')).toContainText('独立作答中');
  await expect(page.locator('[data-action="reveal"],[data-action="hint"],.source,.knowledge-bridge,.diagram-panel,.study-entry')).toHaveCount(0);
  await expect(page.getByRole('button',{name:'暂停计时',exact:true})).toBeVisible();
@@ -89,13 +89,13 @@ test('timed papers keep answers hidden until submission and score all four cases
  await expect(page.locator('.paper-session-status')).toContainText('全卷 100/100');
  const state=await saved(page);expect(state.records.filter(r=>r.paperAttempt===attempt)).toHaveLength(4);expect(state.session.paperSubmitted).toBe(true);
  await page.reload();await expect(page.locator('.paper-session-status')).toContainText('全卷 100/100');
- await page.goto('/#papers');await expect(page.locator('.timed-paper-list>article').first()).toContainText('最近完整自评分：100/100');
+ await page.goto('/#archive-papers');await expect(page.locator('.timed-paper-list>article').first()).toContainText('最近完整自评分：100/100');
  await page.locator('[data-action="paper-start"][data-id="P01"]').click();expect((await saved(page)).session.paperAttempt).not.toBe(attempt);
  await expect(page.locator('.paper-session-status')).toContainText('独立作答中');await expect(page.locator('.case-score-panel')).toHaveCount(0);
 });
 
 test('timed paper preview prints only its four questions',async({page})=>{
- await page.goto('/#papers/P02');await expect(page.locator('.paper-question-sheet')).toHaveCount(4);
+ await page.goto('/#archive-papers/P02');await expect(page.locator('.paper-question-sheet')).toHaveCount(4);
  await page.emulateMedia({media:'print'});await expect(page.locator('.paper-question-sheet').first()).toBeVisible();
  await expect(page.locator('.paper-preview-toolbar')).toBeHidden();await expect(page.locator('.solution-reader,.case-score-panel')).toHaveCount(0);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);

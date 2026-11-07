@@ -39,7 +39,7 @@ test('search, relationship recall, zoom, source-card return and self-assessment 
  for(const [layer,rating] of [['concept',2],['relation',1],['application',0]])await page.locator(`[data-action="map-rate"][data-layer="${layer}"][data-rating="${rating}"]`).click();
  await page.reload();await expect(page.locator('[data-action="map-rate"][data-layer="concept"][aria-pressed="true"]')).toHaveText('能复现');
  const progress=(await saved(page)).conceptProgress;expect(progress[node+':concept'].rating).toBe(2);expect(progress[node+':relation'].rating).toBe(1);expect(progress[node+':application'].rating).toBe(0);expect((await saved(page)).records).toEqual([]);
- const returnTo=page.url();await page.locator('.map-node-detail>.map-evidence>summary').click();await page.locator('.map-node-detail [data-action="recall-card"]').first().click();await page.reload();await page.locator('[data-action="recall-back"]').click();await expect(page).toHaveURL(returnTo);
+ const returnTo=page.url();await page.locator('.map-node-detail>.map-evidence>summary').click();await page.locator('.map-node-detail [data-action="recall-card"]').first().click();await page.locator('[data-action="knowledge-back"]').click();await expect(page).toHaveURL(returnTo);
 });
 test('knowledge self-assessment survives backup import while legacy work is retained',async({page,browser})=>{
  await page.goto('/#maps/micro/01/mind');const id=await page.locator('.map-node.is-selected').getAttribute('data-node-id');await page.locator('[data-action="map-rate"][data-layer="concept"][data-rating="2"]').click();
@@ -50,8 +50,8 @@ test('knowledge self-assessment survives backup import while legacy work is reta
  }finally{await context.close();}
 });
 test('question paths appear after answer reveal and stay hidden in an unsubmitted paper',async({page})=>{
- await page.goto('/#bank');await page.locator('#search').fill('MI001');await page.locator('[data-action="single"][data-id="MI001"]').click();await expect(page.locator('a[href*="/path/MI001"]')).toHaveCount(0);await page.locator('[data-action="reveal"]').click();await expect(page.locator('a[href*="/path/MI001"]')).toHaveCount(1);
- await page.goto('/#papers');await page.locator('[data-action="paper-start"][data-id="P01"]').click();await expect(page.locator('a[href*="/path/"]')).toHaveCount(0);
+ await page.goto('/#archive');await page.locator('#search').fill('MI001');await page.locator('[data-action="single"][data-id="MI001"]').click();await expect(page.locator('a[href*="/path/MI001"]')).toHaveCount(0);await page.locator('[data-action="reveal"]').click();await expect(page.locator('a[href*="/path/MI001"]')).toHaveCount(1);
+ await page.goto('/#archive-papers');await page.locator('[data-action="paper-start"][data-id="P01"]').click();await expect(page.locator('a[href*="/path/"]')).toHaveCount(0);
  await page.locator('.paper-session-status [data-action="paper-submit"]').click();await expect(page.locator('a[href*="/path/"]')).toHaveCount(1);
 });
 const serverTest=test.extend({site:async({},use)=>{
@@ -72,5 +72,5 @@ test('opposite feedback edges keep distinct curves and relationship labels',asyn
 });
 test('an incomplete knowledge download leaves existing browser records untouched',async({page})=>{
  const old={version:1,start:'2026-10-29',records:[{id:'keep',qid:'MI001',rating:2,at:100,seconds:10,day:null}],drafts:{MI001:'keep this'},favorites:['MI001'],conceptProgress:{'KMA001:concept':{rating:2,at:200}}};
- await page.addInitScript(value=>localStorage.setItem('ruc802.practice.v1',JSON.stringify(value)),old);await page.route('**/concept-data-macro.js',route=>route.abort());await page.goto('/');await expect(page.locator('#app')).toContainText('知识图资料未能加载');expect(await saved(page)).toEqual(old);await expect(page.locator('[data-action="start-day"],[data-action="map-rate"]')).toHaveCount(0);
+ await page.addInitScript(value=>localStorage.setItem('ruc802.practice.v1',JSON.stringify(value)),old);await page.route('**/concept-data-macro.js',route=>route.abort());await page.goto('/#archive');await expect(page.locator('#app')).toContainText('知识图资料未能加载');expect(await saved(page)).toEqual(old);await expect(page.locator('[data-action="start-day"],[data-action="map-rate"]')).toHaveCount(0);
 });

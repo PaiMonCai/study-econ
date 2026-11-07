@@ -4,7 +4,7 @@ const panel=page=>page.locator('.diagram-panel-disclosure');
 async function openPanel(page){if(!await panel(page).evaluate(el=>el.open))await panel(page).locator(':scope>summary').click();}
 
 test('compact question navigation shares the workspace with diagrams after checking',async({page},info)=>{
- await page.goto('/');await page.locator('#group-filter').selectOption('06');
+ await page.goto('/#archive');await page.locator('#group-filter').selectOption('06');
  await page.locator('[data-action="start-filter"]').click();
  await expect(page.locator('.q-id')).toHaveText('MI051');await expect(page.locator('.question-rail .qchip')).toHaveCount(10);
  await expect(page.locator('.diagram-panel,.diagram-review')).toHaveCount(0);
@@ -27,7 +27,7 @@ test('compact question navigation shares the workspace with diagrams after check
 });
 
 test('reading keeps questions and complete diagrams beside the answer on desktop, including focus mode',async({page},info)=>{
- await page.goto('/');await page.locator('#group-filter').selectOption('06');await page.locator('[data-action="study-filter"]').click();
+ await page.goto('/#archive');await page.locator('#group-filter').selectOption('06');await page.locator('[data-action="study-filter"]').click();
  await page.locator('[data-action="jump"][data-index="9"]').click();await expect(page.locator('.q-id')).toHaveText('MI060');
  const current=await page.locator('.question-rail .qchip.current').boundingBox(),ids=await page.locator('.rail-ids').boundingBox();expect(current.x).toBeGreaterThanOrEqual(ids.x);expect(current.x+current.width).toBeLessThanOrEqual(ids.x+ids.width);
  await page.locator('[data-action="jump"][data-index="0"]').click();await expect(page.locator('.q-id')).toHaveText('MI051');
@@ -52,7 +52,7 @@ test('reading keeps questions and complete diagrams beside the answer on desktop
 });
 
 test('reading prints complete final charts and all answer steps',async({page})=>{
- await page.goto('/#bank');await page.locator('#search').fill('MI051');await page.getByRole('button',{name:'看规范作答',exact:true}).click();
+ await page.goto('/#archive');await page.locator('#search').fill('MI051');await page.getByRole('button',{name:'看规范作答',exact:true}).click();
  await expect(panel(page)).toHaveCount(0);
  await page.emulateMedia({media:'print'});
  await expect(page.locator('.diagram-panel .diagram-print').first()).toBeVisible();

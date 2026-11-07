@@ -11,10 +11,15 @@ import {prepareTrainingBank,prepareComprehensiveBank,prepareTrainingPapers,train
 import {prepareConceptMap,conceptDigest,prepareConceptBridges} from './build-concept-map.mjs';
 import {prepareIntensivePlan,intensiveMarkdown} from './build-intensive.mjs';
 import {prepareMethodSheets,methodMarkdown} from './build-methods.mjs';
+import {preparePracticeSelection} from './build-practice-selection.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url)),dist=path.join(here,'dist');
 const checks=[];const check=(name,passed)=>checks.push({name,passed:!!passed});
 const context={window:{}};vm.runInNewContext(await readFile(path.join(dist,'data.js'),'utf8'),context);
 const data=context.window.STUDY_DATA,manifest=JSON.parse(await readFile(path.join(here,'build-manifest.json'),'utf8'));
+const selectionRaw=await readFile(path.join(here,'content/practice-selection.json'));
+const practiceSelection=preparePracticeSelection(JSON.parse(selectionRaw),data.subjects);
+check('practice selection source hash',createHash('sha256').update(selectionRaw).digest('hex')===manifest.sourceHashes.practice_selection);
+check('practice selection matches validated source',JSON.stringify(data.practiceSelection)===JSON.stringify(practiceSelection));
 for(const subject of data.subjects)vm.runInNewContext(await readFile(path.join(dist,'exam-'+subject.key+'.js'),'utf8'),context);
 for(const subject of ['micro','macro'])vm.runInNewContext(await readFile(path.join(dist,'training-data-'+subject+'.js'),'utf8'),context);
 for(const subject of ['micro','macro'])vm.runInNewContext(await readFile(path.join(dist,'concept-data-'+subject+'.js'),'utf8'),context);

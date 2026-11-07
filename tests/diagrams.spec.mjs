@@ -1,10 +1,10 @@
 import {test,expect} from '@playwright/test';
 const saved=page=>page.evaluate(()=>localStorage.getItem('ruc802.practice.v1'));
 async function revealAnswer(page){await page.getByRole('button',{name:'作答结束，核对解答',exact:true}).click();const panel=page.locator('.diagram-panel-disclosure');if(await panel.count()&&!await panel.evaluate(el=>el.open))await panel.locator(':scope>summary').click();}
-async function openQuestion(page,subject,id){await page.goto('/#bank');await page.locator(`[data-action="subject"][data-sub="${subject}"]`).click();await page.locator('#search').fill(id);await page.locator(`[data-action="single"][data-id="${id}"]`).click();await expect(page.locator('.q-id')).toHaveText(id);}
+async function openQuestion(page,subject,id){await page.goto('/#archive');await page.locator(`[data-action="subject"][data-sub="${subject}"]`).click();await page.locator('#search').fill(id);await page.locator(`[data-action="single"][data-id="${id}"]`).click();await expect(page.locator('.q-id')).toHaveText(id);}
 test('graphs reveal progressively without changing assessments and survive practice redraws',async({page},info)=>{
- const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/');
- const representatives=await page.evaluate(()=>window.STUDY_DATA.subjects.map(s=>({subject:s.key,id:s.questions.find(q=>q.diagrams?.length)?.id})));expect(representatives.every(r=>r.id)).toBeTruthy();
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/#archive');
+ const representatives=await page.evaluate(()=>{const active=window.createPracticeCatalog(window.STUDY_DATA);return window.STUDY_DATA.subjects.map(s=>({subject:s.key,id:s.questions.find(q=>active.isActive(q.id)&&q.diagrams?.length)?.id}));});expect(representatives.every(r=>r.id)).toBeTruthy();
  for(const r of representatives){await openQuestion(page,r.subject,r.id);await expect(page.locator('.diagram-review')).toHaveCount(0);await revealAnswer(page);const graph=page.locator('.study-diagram').first();await expect(graph).toBeVisible();await expect(graph.locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage','0');const before=await saved(page);
  for(const stage of [1,2,0,2]){const button=graph.locator(`[data-diagram-stage="${stage}"]`);await button.click();await expect(button).toBeFocused();await expect(button).toHaveAttribute('aria-pressed','true');await expect(graph.locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage',String(stage));expect(await saved(page)).toBe(before);}
  await page.getByRole('button',{name:'大字号',exact:true}).click();await expect(graph.locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage','2');await page.locator('[data-action="favorite"]').click();await expect(page.locator('.study-diagram').first().locator('.diagram-frame [data-current-stage]')).toHaveAttribute('data-current-stage','2');
@@ -14,7 +14,7 @@ test('graphs reveal progressively without changing assessments and survive pract
  expect(errors).toEqual([]);
 });
 test('every diagram stage yields finite SVG geometry within its canvas',async({page})=>{
- await page.goto('/');await page.evaluate(()=>document.fonts.ready);
+ await page.goto('/#archive');await page.evaluate(()=>document.fonts.ready);
  const failures=await page.evaluate(()=>{
   const failures=[],host=document.createElement('div');
   host.style.cssText='width:680px;position:absolute;left:0;top:0';document.body.append(host);
@@ -38,7 +38,7 @@ test('every diagram stage yields finite SVG geometry within its canvas',async({p
 });
 
 test('each visible direction is named and flow connectors avoid unrelated nodes',async({page})=>{
- await page.goto('/');await page.evaluate(()=>document.fonts.ready);
+ await page.goto('/#archive');await page.evaluate(()=>document.fonts.ready);
  const failures=await page.evaluate(()=>{
   const failures=[],host=document.createElement('div');host.style.cssText='width:680px;position:absolute;left:0;top:0';document.body.append(host);
   for(const subject of window.STUDY_DATA.subjects)for(const q of subject.questions)for(const d of q.diagrams||[])for(let stage=0;stage<3;stage++){
@@ -69,15 +69,15 @@ test('each visible direction is named and flow connectors avoid unrelated nodes'
  });
  expect(failures).toEqual([]);
 });
-test('questions without graphs keep complete source answers',async({page})=>{await page.goto('/');const r=await page.evaluate(()=>{for(const s of window.STUDY_DATA.subjects){const q=s.questions.find(q=>!q.diagrams?.length);if(q)return{subject:s.key,id:q.id};}});expect(r).toBeTruthy();await openQuestion(page,r.subject,r.id);await revealAnswer(page);await expect(page.locator('.solution-steps')).toBeVisible();await expect(page.locator('.diagram-review')).toHaveCount(0);});
+test('questions without graphs keep complete source answers',async({page})=>{await page.goto('/#archive');const r=await page.evaluate(()=>{for(const s of window.STUDY_DATA.subjects){const q=s.questions.find(q=>!q.diagrams?.length);if(q)return{subject:s.key,id:q.id};}});expect(r).toBeTruthy();await openQuestion(page,r.subject,r.id);await revealAnswer(page);await expect(page.locator('.solution-steps')).toBeVisible();await expect(page.locator('.diagram-review')).toHaveCount(0);});
 
 test('complete diagram answers fit the page at large reading size for every illustrated question',async({page})=>{
- test.setTimeout(120000);await page.goto('/#bank');
- const questions=await page.evaluate(()=>window.STUDY_DATA.subjects.flatMap(s=>s.questions.filter(q=>q.diagrams?.length).map(q=>({subject:s.key,id:q.id}))));
+ test.setTimeout(120000);await page.goto('/#archive');
+ const questions=await page.evaluate(()=>{const active=window.createPracticeCatalog(window.STUDY_DATA);return window.STUDY_DATA.subjects.flatMap(s=>s.questions.filter(q=>active.isActive(q.id)&&q.diagrams?.length).map(q=>({subject:s.key,id:q.id})));});
  test.setTimeout(Math.max(120000,30000+questions.length*2500));
  const failures=[];let previousSubject;
  for(const [index,q] of questions.entries()){
-  if(index)await page.getByRole('link',{name:'刷题训练',exact:true}).click();
+  if(index)await page.evaluate(subject=>{location.hash='archive/'+subject;},q.subject);
   if(q.subject!==previousSubject){await page.locator(`[data-action="subject"][data-sub="${q.subject}"]`).click();previousSubject=q.subject;}
   await page.locator('#search').fill(q.id);await page.locator(`[data-action="single"][data-id="${q.id}"]`).click();await expect(page.locator('.q-id')).toHaveText(q.id);
   if(index===0){await page.getByRole('button',{name:'大字号',exact:true}).click();}
@@ -118,8 +118,8 @@ test('textbook diagrams enlarge the selected stage and restore keyboard focus wi
 });
 
 test('reviewed corrections precede complete answers and original source stays available',async({page})=>{
- await page.goto('/');
- const questions=await page.evaluate(()=>window.STUDY_DATA.subjects.flatMap(s=>s.questions.filter(q=>q.diagrams?.some(d=>d.erratum)).map(q=>({subject:s.key,id:q.id,errata:q.diagrams.filter(d=>d.erratum).map(d=>d.erratum)}))));
+ await page.goto('/#archive');
+ const questions=await page.evaluate(()=>{const active=window.createPracticeCatalog(window.STUDY_DATA);return window.STUDY_DATA.subjects.flatMap(s=>s.questions.filter(q=>active.isActive(q.id)&&q.diagrams?.some(d=>d.erratum)).map(q=>({subject:s.key,id:q.id,errata:q.diagrams.filter(d=>d.erratum).map(d=>d.erratum)})));});
  expect(questions.map(q=>q.id)).toEqual(expect.arrayContaining(['MI075','MA025']));
  for(const q of questions){
   await openQuestion(page,q.subject,q.id);await expect(page.locator('.diagram-correction')).toHaveCount(0);

@@ -10,7 +10,7 @@ test.beforeEach(async()=>{dataDir=await mkdtemp(path.join(tmpdir(),'ruc802-ui-da
 test.afterEach(async()=>{await new Promise(r=>{server.close(r);server.closeAllConnections();});await rm(dataDir,{recursive:true,force:true});});
 const loaded=page=>page.waitForResponse(r=>r.url()===url+'api/state'&&r.request().method()==='GET'&&r.ok());
 async function login(page){await page.goto(url);await page.getByLabel('访问密码或令牌',{exact:true}).fill(password);const ready=loaded(page);await page.getByRole('button',{name:'进入练习室',exact:true}).click();await ready;await expect(page.locator('.local-status')).toHaveText('服务器已保存');}
-async function practice(page){await page.locator('#group-filter').selectOption('01');await page.locator('[data-action="start-filter"]').click();await expect(page.locator('[data-photo-status]')).toHaveText('尚未添加图片');}
+async function practice(page){await page.goto(url+'#archive');await page.locator('#group-filter').selectOption('01');await page.locator('[data-action="start-filter"]').click();await expect(page.locator('[data-photo-status]')).toHaveText('尚未添加图片');}
 async function picture(page){const data=await page.evaluate(()=>{const c=document.createElement('canvas');c.width=200;c.height=100;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,200,100);x.fillStyle='#000';x.fillText('x + y = 10',10,30);return c.toDataURL('image/png');});return{name:'answer.png',mimeType:'image/png',buffer:Buffer.from(data.split(',')[1],'base64')};}
 async function backup(page){const pending=page.waitForEvent('download');await page.getByRole('button',{name:'导出进度备份',exact:true}).click();const stream=await(await pending).createReadStream();let text='';for await(const chunk of stream)text+=chunk.toString();return JSON.parse(text);}
 
@@ -20,14 +20,17 @@ test('historical plans import and free practice sync to a new authenticated brow
  await page.locator('#import-file').setInputFiles({name:'old.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(legacy))});await page.getByRole('button',{name:'合并导入',exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);
  await page.goto(url);await practice(page);await page.locator('[data-action="reveal"]').click();await page.getByRole('button',{name:'会做，已掌握',exact:true}).click();await expect(page.locator('.local-status')).toHaveText('服务器已保存');
  const state=(await(await page.request.get(url+'api/state')).json()).state;expect(state.schedule.start).toBe('2026-11-08');expect(state.records).toHaveLength(2);expect(state.records.find(r=>r.qid==='MI001')).toMatchObject({day:null});expect(state.intensiveProgress['1:micro:0'].checked).toBe(true);
- const context=await browser.newContext();try{const other=await context.newPage();await login(other);await expect(other.getByRole('heading',{name:'刷题训练',exact:true})).toBeVisible();await other.goto(url+'#settings');const exported=await backup(other);expect(exported.records.find(r=>r.id==='old-plan').planId).toBe('intensive-15');expect(exported.intensiveProgress['1:micro:0'].checked).toBe(true);}finally{await context.close();}
+ const context=await browser.newContext();try{const other=await context.newPage();await login(other);await expect(other.getByRole('heading',{name:'统一题型训练',exact:true})).toBeVisible();await other.goto(url+'#settings');const exported=await backup(other);expect(exported.records.find(r=>r.id==='old-plan').planId).toBe('intensive-15');expect(exported.intensiveProgress['1:micro:0'].checked).toBe(true);}finally{await context.close();}
 });
 
 test('guided position syncs to the server without creating practice results',async({page,browser})=>{
- await login(page);await page.goto(url+'#topics/micro/05');await page.locator('.topic-back [data-action="study-topic"]').click();
- await page.getByRole('button',{name:'下一题',exact:true}).click();await expect(page.locator('.q-id')).toHaveText('MI047');await expect(page.locator('.local-status')).toHaveText('服务器已保存');
- const state=(await(await page.request.get(url+'api/state')).json()).state;expect(state.session.study).toBe(true);expect(state.session.topicId).toBe('micro-05');expect(state.session.index).toBe(1);expect(state.records).toEqual([]);
- const context=await browser.newContext();try{const other=await context.newPage();await login(other);await other.getByRole('button',{name:'继续上次跟读',exact:true}).click();await expect(other.locator('.q-id')).toHaveText('MI047');await expect(other.getByRole('heading',{name:'解题步骤',exact:true})).toBeVisible();}finally{await context.close();}
+ await login(page);await page.goto(url+'#archive/micro');await page.locator('#search').fill('MI043');
+ const savedPatch=()=>page.waitForResponse(response=>response.url()===url+'api/state'&&response.request().method()==='PATCH'&&response.ok());
+ const started=savedPatch();await page.locator('[data-action="study-single"][data-id="MI043"]').click();await started;await expect(page.locator('.q-id')).toHaveText('MI043');
+ const initial=(await(await page.request.get(url+'api/state')).json()).state.session,nextId=initial.ids[initial.index+1];expect(nextId).toBeTruthy();
+ const advanced=savedPatch();await page.getByRole('button',{name:'下一题',exact:true}).click();await advanced;await expect(page.locator('.q-id')).toHaveText(nextId);await expect(page.locator('.local-status')).toHaveText('服务器已保存');
+ const state=(await(await page.request.get(url+'api/state')).json()).state;expect(state.session.study).toBe(true);expect(state.session.topicId).toBe(initial.topicId);expect(state.session.index).toBe(initial.index+1);expect(state.session.ids).toEqual(initial.ids);expect(state.records).toEqual([]);
+ const context=await browser.newContext();try{const other=await context.newPage();await login(other);await other.getByRole('button',{name:'继续上次跟读',exact:true}).click();await expect(other.locator('.q-id')).toHaveText(nextId);await expect(other.getByRole('heading',{name:'解题步骤',exact:true})).toBeVisible();}finally{await context.close();}
 });
 
 test('password gate protects the app and logout revokes access',async({page},info)=>{
@@ -80,9 +83,9 @@ test('legacy browser progress and photos migrate only after confirmation',async(
  await page.goto(url+'#settings');await page.getByRole('button',{name:'检查并迁移本机旧数据',exact:true}).click();await expect(page.getByRole('dialog')).toContainText('1 张作答照片');await page.getByRole('button',{name:'取消',exact:true}).click();expect(await page.evaluate(()=>window.RemoteStore.state.favorites)).toEqual([]);
  await page.getByRole('button',{name:'检查并迁移本机旧数据',exact:true}).click();await page.getByRole('button',{name:'合并导入',exact:true}).click();await expect(page.locator('#toast')).toContainText('已合并到服务器');const data=await backup(page);expect(data.photos.items).toHaveLength(1);expect(data.drafts.MI001).toBe('旧版草稿');expect(data.favorites).toContain('MI001');expect(await page.evaluate(()=>localStorage.getItem('ruc802.practice.v1'))).toContain('旧版草稿');
 });
-test('same recall draft conflict requires an explicit choice and preserves both until resolved',async({page,browser})=>{
- await login(page);const context=await browser.newContext();try{const other=await context.newPage();await login(other);for(const target of [page,other]){await target.goto(url+'#recall');await target.getByRole('button',{name:'背诵 FM02',exact:true}).click();}
- await page.locator('#recall-draft').fill('第一台设备的回忆');await expect(page.locator('.local-status')).toHaveText('服务器已保存');await other.locator('#recall-draft').fill('第二台设备的回忆');await expect(other.locator('.local-status')).toHaveText('草稿有冲突，请处理');await expect(other.locator('#recall-draft')).toHaveValue('第二台设备的回忆');
- await other.getByRole('button',{name:'使用服务器版本',exact:true}).click();await other.getByRole('dialog').getByRole('button',{name:'确认使用服务器版本',exact:true}).click();await expect(other.locator('#recall-draft')).toHaveValue('第一台设备的回忆');await expect(other.locator('.local-status')).toHaveText('服务器已保存');
+test('same exam type draft conflict requires an explicit choice and preserves both until resolved',async({page,browser})=>{
+ await login(page);const context=await browser.newContext();try{const other=await context.newPage();await login(other);for(const target of [page,other]){const id=await target.evaluate(()=>window.STUDY_DATA.examTypes.questions[0].id);await target.goto(url+'#exam/'+id+'/write');}
+ await page.locator('#exam-type-draft').fill('第一台设备的回忆');await expect(page.locator('.local-status')).toHaveText('服务器已保存');await other.locator('#exam-type-draft').fill('第二台设备的回忆');await expect(other.locator('.local-status')).toHaveText('草稿有冲突，请处理');await expect(other.locator('#exam-type-draft')).toHaveValue('第二台设备的回忆');
+ await other.getByRole('button',{name:'使用服务器版本',exact:true}).click();await other.getByRole('dialog').getByRole('button',{name:'确认使用服务器版本',exact:true}).click();await expect(other.locator('#exam-type-draft')).toHaveValue('第一台设备的回忆');await expect(other.locator('.local-status')).toHaveText('服务器已保存');
  }finally{await context.close();}
 });

@@ -8,12 +8,14 @@ for(const subject of Object.keys(prefixes))for(let group=1;group<=10;group++){
  test(`exam answers retain complete steps and contained math: ${subject} ${groupId}`,async({page},info)=>{
   test.setTimeout(120000);
   const errors=[];page.on('pageerror',error=>errors.push(error.message));
-  await page.goto('/#topics/'+subject+'/'+groupId);
-  await page.locator('[data-action="study-topic"]').first().click();
+  await page.goto('/#archive/'+subject);
+  const ids=await page.evaluate(({subject,groupId})=>{const active=window.createPracticeCatalog(window.STUDY_DATA);return window.STUDY_DATA.subjects.find(item=>item.key===subject).questions.filter(question=>question.group===groupId&&active.isActive(question.id)).map(question=>question.id);},{subject,groupId});
+  if(!ids.length){await expect(page.locator('#group-filter option[value="'+groupId+'"]').first()).toHaveCount(0);return;}
+  await page.locator('#group-filter').selectOption(groupId);
+  await page.locator('[data-action="study-filter"]').click();
   await page.getByRole('button',{name:'大字号',exact:true}).click();
   const results=[];
-  for(let index=0;index<10;index++){
-   const id=prefixes[subject]+String((group-1)*10+index+1).padStart(3,'0');
+  for(const id of ids){
    await page.getByRole('button',{name:id,exact:true}).click();
    await expect(page.locator('.q-id')).toHaveText(id);
    await expect(page.locator('.solution-reader-controls')).toHaveCount(0);
@@ -48,7 +50,7 @@ for(const subject of Object.keys(prefixes))for(let group=1;group<=10;group++){
 }
 
 test('reviewed method, amended prompt and original answer remain distinct',async({page})=>{
- await page.goto('/#bank');await page.locator('[data-action="subject"][data-sub="macro"]').click();await page.locator('#search').fill('MA098');
+ await page.goto('/#archive');await page.locator('[data-action="subject"][data-sub="macro"]').click();await page.locator('#search').fill('MA098');
  await page.getByRole('button',{name:'看规范作答',exact:true}).click();
  await expect(page.locator('#question-prompt')).toContainText('净出口从20降至15');
  await page.getByRole('link',{name:'题源与整理记录',exact:true}).click();

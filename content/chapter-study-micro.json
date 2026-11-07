@@ -1,0 +1,3439 @@
+{
+  "version": 1,
+  "subject": "micro",
+  "book": {
+    "key": "nicholson11",
+    "title": "微观经济理论：基本原理与扩展",
+    "author": "尼科尔森、斯奈德",
+    "edition": 11,
+    "toc_reference": {
+      "file": "教材课后习题答案/尼科尔森11版笔记和课后题_已解密.pdf",
+      "kind": "textbook-companion",
+      "physical_pages": [
+        1,
+        2
+      ],
+      "sha256": "af401aa31226795d326c0b52d2f0821b1157ccf463220a73a12ed45b93ba4af0",
+      "note": "按本地第11版笔记与课后题的目录图像核对19章。该文件是配套整理资料；章内页码用于回查，不冒称教材原书逐页核读。"
+    }
+  },
+  "reference_books": [
+    {
+      "key": "gao8",
+      "title": "西方经济学（微观部分）",
+      "author": "高鸿业",
+      "edition": 8,
+      "chapter_count": 11,
+      "toc_reference": {
+        "file": "教材课后习题答案/高鸿业《西方经济学（微观部分）》（第8版）课后习题详解_已解密.pdf",
+        "kind": "textbook-companion",
+        "physical_pages": [
+          1
+        ],
+        "sha256": "eb0011b2676d927a61f725aad237f5a2322a08cabaad5f754673c51132784862",
+        "note": "参考第8版11章目录；用于基础概念、图形和经济含义回查，具体命题仍以本题条件为准。"
+      }
+    }
+  ],
+  "editorial_note": "微观以尼科尔森第11版为主线，高鸿业第8版为参照。本地依据为配套资料；2026年11月7日已把4条真题完整推导链和2项证明动作编入正式题型，含改变需求弹性、要素价格、类型成本和排污约束的变式。按具体设问检查条件、推导、结果、边界和解释；阅读完成不等于个人已通过闭卷检验。",
+  "chapters": [
+    {
+      "id": "1",
+      "number": 1,
+      "title": "经济模型",
+      "part": "引言",
+      "model_title": "从假设到最优化与均衡",
+      "model_md": "先说明行为主体、目标、约束、外生条件与内生变量，再区分个人最优、市场出清和福利判断。比较静态改变外生条件，动态分析还需要明确调整规则。",
+      "formula_md": "$$\\text{外生条件}\\longrightarrow\\text{个人最优化}\\longrightarrow\\text{市场出清}$$",
+      "case_ids": [],
+      "related_case_ids": [
+        "EMI016",
+        "EMI036",
+        "EMI043",
+        "EMI045",
+        "EMI059"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 1,
+          "title": "经济模型",
+          "physical_page_range": [
+            3,
+            3
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 1,
+          "title": "引论",
+          "physical_page_range": [
+            3,
+            3
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 2,
+          "title": "需求、供给和均衡价格",
+          "physical_page_range": [
+            4,
+            17
+          ]
+        }
+      ],
+      "selection_note_md": "本章作为方法基础，通过下列题型调用；没有另造一题重复计入正式题量。"
+    },
+    {
+      "id": "2",
+      "number": 2,
+      "title": "微观经济学中的数学工具",
+      "part": "引言",
+      "model_title": "一阶条件、全局比较与包络",
+      "model_md": "一阶条件先给候选，必须结合可行域、二阶或凹性条件、边界和存在性判断。资源上限的影子价值只在对应约束和局部可微分支上解释。",
+      "formula_md": "$$\\mathcal L=f(x)+\\lambda[m-g(x)],\\qquad \\frac{dV}{dm}=\\lambda\\quad\\text{在适当可微内点条件下}$$",
+      "case_ids": [],
+      "related_case_ids": [
+        "EMI007",
+        "EMI008",
+        "EMI037",
+        "EMI019",
+        "EMI020",
+        "EMI049"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 2,
+          "title": "微观经济学中的数学工具",
+          "physical_page_range": [
+            4,
+            23
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 3,
+          "title": "消费者选择",
+          "physical_page_range": [
+            18,
+            32
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 4,
+          "title": "生产技术",
+          "physical_page_range": [
+            33,
+            42
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 5,
+          "title": "成本",
+          "physical_page_range": [
+            43,
+            60
+          ]
+        }
+      ],
+      "selection_note_md": "本章作为方法基础，通过下列题型调用；没有另造一题重复计入正式题量。"
+    },
+    {
+      "id": "3",
+      "number": 3,
+      "title": "偏好与效用",
+      "part": "选择与需求",
+      "model_title": "偏好性质、效用刻度与非标准偏好",
+      "model_md": "确定性选择只依赖偏好次序，严格递增变换保持排序；不确定性下的期望效用表示则有更强限制。非单调或非凸偏好不能直接套标准好物的切点解。",
+      "formula_md": "$$u\\sim F(u),\\ F\\prime>0;\\qquad \\widetilde u=au+b,\\ a>0\\quad\\text{用于vNM表示}$$",
+      "case_ids": [
+        "EMI022",
+        "EMI048"
+      ],
+      "related_case_ids": [
+        "EMI037",
+        "EMI005",
+        "EMI042"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 3,
+          "title": "偏好与效用",
+          "physical_page_range": [
+            24,
+            43
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 3,
+          "title": "消费者选择",
+          "physical_page_range": [
+            18,
+            32
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "4",
+      "number": 4,
+      "title": "效用最大化与选择",
+      "part": "选择与需求",
+      "model_title": "预算、内点角点与全局最优",
+      "model_md": "先列预算和定义域，再按偏好性质比较内点、端点和折点。线性效用可能有整段最优集合；非凸偏好的内点驻点可能是最小值。",
+      "formula_md": "$$\\max_{x\\ge0}u(x)\\quad\\text{s.t. }p\\cdot x\\le m$$",
+      "case_ids": [
+        "EMI037",
+        "EMI042",
+        "EMI043"
+      ],
+      "related_case_ids": [
+        "EMI022",
+        "EMI023",
+        "EMI021",
+        "EMI041",
+        "EMI024",
+        "EMI001",
+        "EMI018",
+        "EMI014"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 4,
+          "title": "效用最大化与选择",
+          "physical_page_range": [
+            44,
+            64
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 3,
+          "title": "消费者选择",
+          "physical_page_range": [
+            18,
+            32
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。",
+      "quick_check": {
+        "prompt_md": "编者补充例：线性效用、日贴现因子为1，现时偏好系数为0.5。比较今天得10与明天得15；再从前一天比较明天得10与后天得15。",
+        "answer_md": "今天比较时两项效用为10和0.5×15=7.5，偏好立即得10。前一天比较时两项都在未来，效用为0.5×10=5和0.5×15=7.5，偏好较晚的15。排序随“是否立即”改变，体现现时偏好造成的动态不一致；这里没有将其冒充人大真题。"
+      }
+    },
+    {
+      "id": "5",
+      "number": 5,
+      "title": "收入效应与替代效应",
+      "part": "选择与需求",
+      "model_title": "Slutsky、补偿需求与货币福利",
+      "model_md": "先固定价格变化方向和补偿口径。Hicks补偿维持效用，Slutsky补偿维持旧篮子可负担；福利货币量必须服从题设正负号和角点分支。",
+      "formula_md": "$$\\frac{\\partial x_i}{\\partial p_j}=\\frac{\\partial h_i}{\\partial p_j}-x_j\\frac{\\partial x_i}{\\partial m}$$",
+      "case_ids": [
+        "EMI021",
+        "EMI001"
+      ],
+      "related_case_ids": [
+        "EMI023",
+        "EMI041",
+        "EMI040",
+        "EMI024",
+        "EMI028",
+        "EMI015",
+        "EMI014",
+        "EMI009",
+        "EMI036",
+        "EMI043",
+        "EMI045"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 5,
+          "title": "收入效应与替代效应",
+          "physical_page_range": [
+            65,
+            84
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 3,
+          "title": "消费者选择",
+          "physical_page_range": [
+            18,
+            32
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "6",
+      "number": 6,
+      "title": "商品间的需求关系",
+      "part": "选择与需求",
+      "model_title": "交叉效应、加总与补偿弹性",
+      "model_md": "总替代与净替代的判定对象不同。先由普通或补偿需求求导，再核齐次性、预算加总和收入效应；市场需求加总还需保留各人的非负需求分支。",
+      "formula_md": "$$\\varepsilon_{ij}=\\varepsilon^h_{ij}-s_j\\eta_i,\\qquad \\sum_j\\varepsilon_{ij}+\\eta_i=0$$",
+      "case_ids": [
+        "EMI024"
+      ],
+      "related_case_ids": [
+        "EMI028",
+        "EMI009",
+        "EMI044",
+        "EMI050",
+        "EMI054"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 6,
+          "title": "商品间的需求关系",
+          "physical_page_range": [
+            85,
+            95
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 2,
+          "title": "需求、供给和均衡价格",
+          "physical_page_range": [
+            4,
+            17
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 3,
+          "title": "消费者选择",
+          "physical_page_range": [
+            18,
+            32
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "7",
+      "number": 7,
+      "title": "不确定性",
+      "part": "不确定性与策略",
+      "model_title": "期望效用、保险、资产与信息价值",
+      "model_md": "逐状态列概率、净财富和决策时点，再求期望效用。风险溢价、保险最高保费和信息最高收费各有不同外部选择，不能互相替换。",
+      "formula_md": "$$EU=\\sum_s\\pi_su(W_s),\\qquad u(CE)=EU,\\qquad RP=E[W]-CE$$",
+      "case_ids": [
+        "EMI039",
+        "EMI005",
+        "EMI046",
+        "EMI047"
+      ],
+      "related_case_ids": [
+        "EMI067",
+        "EMI020",
+        "EMI031",
+        "EMI048"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 7,
+          "title": "不确定性",
+          "physical_page_range": [
+            96,
+            110
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 3,
+          "title": "消费者选择",
+          "physical_page_range": [
+            18,
+            32
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "8",
+      "number": 8,
+      "title": "博弈论",
+      "part": "不确定性与策略",
+      "model_title": "最优反应、承诺、重复与私人类型",
+      "model_md": "先明确行动顺序、策略集合和信息集。静态纳什、子博弈精炼和贝叶斯均衡的约束分别检查；混合策略用对手的无差异条件求解。",
+      "formula_md": "$$\\sigma_i\\in BR_i(\\sigma_{-i}),\\qquad \\frac{\\pi_C}{1-\\delta}\\ge\\pi_D+\\frac{\\delta\\pi_N}{1-\\delta}$$",
+      "case_ids": [
+        "EMI011",
+        "EMI029",
+        "EMI030",
+        "EMI055",
+        "EMI056",
+        "EMI063"
+      ],
+      "related_case_ids": [
+        "EMI038",
+        "EMI026",
+        "EMI012",
+        "EMI020",
+        "EMI027",
+        "EMI032"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 8,
+          "title": "博弈论",
+          "physical_page_range": [
+            111,
+            134
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 10,
+          "title": "博弈论初步",
+          "physical_page_range": [
+            114,
+            123
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "9",
+      "number": 9,
+      "title": "生产函数",
+      "part": "生产与供给",
+      "model_title": "规模报酬、投入互补与技术分支",
+      "model_md": "规模报酬改变全部投入，边际产量改变单一投入。复合技术、固定比例和资本上限先改变生产集合，再影响成本及利润，不能跳过技术约束。",
+      "formula_md": "$$f(tL,tK)=t^\\gamma f(L,K),\\qquad MRTS_{LK}=MP_L/MP_K$$",
+      "case_ids": [
+        "EMI025"
+      ],
+      "related_case_ids": [
+        "EMI033",
+        "EMI007",
+        "EMI060",
+        "EMI066",
+        "EMI049"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 9,
+          "title": "生产函数",
+          "physical_page_range": [
+            135,
+            151
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 4,
+          "title": "生产技术",
+          "physical_page_range": [
+            33,
+            42
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "10",
+      "number": 10,
+      "title": "成本函数",
+      "part": "生产与供给",
+      "model_title": "条件需求、成本包络与开工集合",
+      "model_md": "固定产量求条件投入与最低成本，再比较不同开工集合。成本对要素价格的齐次性、单调性和凹性用于检验合法性；固定费是否可避免必须单列。",
+      "formula_md": "$$c(w,q)=\\min_z\\{w\\cdot z:f(z)\\ge q\\},\\qquad z_i=\\partial c/\\partial w_i$$",
+      "case_ids": [
+        "EMI008",
+        "EMI066",
+        "EMI049"
+      ],
+      "related_case_ids": [
+        "EMI034",
+        "EMI007",
+        "EMI025",
+        "EMI039",
+        "EMI010",
+        "EMI065",
+        "EMI052",
+        "EMI053",
+        "EMI061"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 10,
+          "title": "成本函数",
+          "physical_page_range": [
+            152,
+            167
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 5,
+          "title": "成本",
+          "physical_page_range": [
+            43,
+            60
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "11",
+      "number": 11,
+      "title": "利润最大化",
+      "part": "生产与供给",
+      "model_title": "产量、投入与有限最优存在性",
+      "model_md": "利润最优同时核产品市场价格、技术约束和停产。价格超过常数单位成本又没有容量上限时，可能不存在有限最大值；条件投入替代不能代替产量调整。",
+      "formula_md": "$$\\pi(p,w)=\\max_{q,z}\\{pq-w\\cdot z:f(z)\\ge q\\}$$",
+      "case_ids": [
+        "EMI007"
+      ],
+      "related_case_ids": [
+        "EMI033",
+        "EMI034",
+        "EMI025",
+        "EMI013",
+        "EMI039",
+        "EMI008",
+        "EMI016",
+        "EMI060",
+        "EMI064",
+        "EMI065",
+        "EMI066",
+        "EMI027",
+        "EMI051",
+        "EMI052",
+        "EMI054",
+        "EMI058"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 11,
+          "title": "利润最大化",
+          "physical_page_range": [
+            168,
+            185
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 4,
+          "title": "生产技术",
+          "physical_page_range": [
+            33,
+            42
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 5,
+          "title": "成本",
+          "physical_page_range": [
+            43,
+            60
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 6,
+          "title": "完全竞争市场",
+          "physical_page_range": [
+            61,
+            76
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "12",
+      "number": 12,
+      "title": "竞争性价格决定的局部均衡模型",
+      "part": "竞争性市场",
+      "model_title": "供求、进入退出与政策福利",
+      "model_md": "按短期固定条件与长期可调条件分别建模。价格管制、税收、关税和配额需把成交、配给、财政及稀缺租统一核账；有主题关联不等于完整原题链已经覆盖。",
+      "formula_md": "$$D(p_b)=S(p_s),\\quad p_b-p_s=t,\\quad W=CS+PS+T$$",
+      "case_ids": [
+        "EMI023",
+        "EMI034",
+        "EMI065",
+        "EMI044",
+        "EMI045"
+      ],
+      "related_case_ids": [
+        "EMI035",
+        "EMI041",
+        "EMI040",
+        "EMI013",
+        "EMI026",
+        "EMI012",
+        "EMI017",
+        "EMI054",
+        "EMI061",
+        "EMI062"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 12,
+          "title": "竞争性价格决定的局部均衡模型",
+          "physical_page_range": [
+            186,
+            206
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 2,
+          "title": "需求、供给和均衡价格",
+          "physical_page_range": [
+            4,
+            17
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 6,
+          "title": "完全竞争市场",
+          "physical_page_range": [
+            61,
+            76
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "13",
+      "number": 13,
+      "title": "一般均衡与福利",
+      "part": "竞争性市场",
+      "model_title": "出清、利润收入、效率与实施",
+      "model_md": "财富包含禀赋价值、利润和转移；求均衡后同时核资源与预算。规划目标、帕累托效率和受限再分配的可实施性分别证明，不能只引用福利定理。",
+      "formula_md": "$$m_i=p\\cdot\\omega_i+\\Pi_i+T_i,\\quad \\sum_i x_i=\\sum_i\\omega_i+\\text{净产出}$$",
+      "case_ids": [
+        "EMI041",
+        "EMI033",
+        "EMI015",
+        "EMI016",
+        "EMI060",
+        "EMI017"
+      ],
+      "related_case_ids": [
+        "EMI035",
+        "EMI018",
+        "EMI064",
+        "EMI068",
+        "EMI044",
+        "EMI053",
+        "EMI058",
+        "EMI062"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 13,
+          "title": "一般均衡与福利",
+          "physical_page_range": [
+            207,
+            226
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 9,
+          "title": "一般均衡论和福利经济学",
+          "physical_page_range": [
+            102,
+            113
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "14",
+      "number": 14,
+      "title": "垄断",
+      "part": "市场势力",
+      "model_title": "定价制度、参与约束与福利",
+      "model_md": "按统一价格、分市场、两部收费、捆绑及质量制度分别写利润与参与约束。类型成本不同或不能识别时，要重新建立加权利润和服务集合，不能只套同成本例题。",
+      "formula_md": "$$MR=MC,\\qquad (p-MC)/p=-1/\\varepsilon_D$$",
+      "case_ids": [
+        "EMI040",
+        "EMI028",
+        "EMI010",
+        "EMI067",
+        "EMI009",
+        "EMI050",
+        "EMI051",
+        "EMI052",
+        "EMI053",
+        "EMI054"
+      ],
+      "related_case_ids": [
+        "EMI023",
+        "EMI007",
+        "EMI026",
+        "EMI008",
+        "EMI064",
+        "EMI012",
+        "EMI019",
+        "EMI031"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 14,
+          "title": "垄断",
+          "physical_page_range": [
+            227,
+            244
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 7,
+          "title": "不完全竞争市场",
+          "physical_page_range": [
+            77,
+            91
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "15",
+      "number": 15,
+      "title": "不完全竞争",
+      "part": "市场势力",
+      "model_title": "数量、价格、先后行动与合并",
+      "model_md": "战略变量和行动顺序决定最优反应。非对称成本下先核退出边界；合并收益比较的是合并前多家利润之和与合并后主体利润。",
+      "formula_md": "$$q_i\\in BR_i(q_{-i}),\\qquad q_L\\in\\arg\\max_q\\pi_L(q,BR_F(q))$$",
+      "case_ids": [
+        "EMI026",
+        "EMI012",
+        "EMI027"
+      ],
+      "related_case_ids": [
+        "EMI011",
+        "EMI029",
+        "EMI054",
+        "EMI055"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 15,
+          "title": "不完全竞争",
+          "physical_page_range": [
+            245,
+            264
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 7,
+          "title": "不完全竞争市场",
+          "physical_page_range": [
+            77,
+            91
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 10,
+          "title": "博弈论初步",
+          "physical_page_range": [
+            114,
+            123
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "16",
+      "number": 16,
+      "title": "劳动力市场",
+      "part": "要素市场定价",
+      "model_title": "劳动闲暇、买方垄断与工资制度",
+      "model_md": "家庭劳动供给与企业劳动需求分开求，再按竞争或买方垄断制度联立。最低工资、税楔、岗位配给和工会目标会改变可行集合和经济租。",
+      "formula_md": "$$MRP_L=MR\\,MP_L,\\qquad MFC=w(L)+Lw\\prime(L)$$",
+      "case_ids": [
+        "EMI013",
+        "EMI014",
+        "EMI058",
+        "EMI059"
+      ],
+      "related_case_ids": [
+        "EMI032",
+        "EMI057",
+        "EMI063"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 16,
+          "title": "劳动力市场",
+          "physical_page_range": [
+            265,
+            279
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 8,
+          "title": "生产要素价格的决定",
+          "physical_page_range": [
+            92,
+            101
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "17",
+      "number": 17,
+      "title": "资本和时间",
+      "part": "要素市场定价",
+      "model_title": "跨期预算、借贷折点与资本投资",
+      "model_md": "先用同一时点计价，区分存借利率、融资约束与风险。Euler等式只用于相应内点，借款边界用不等式；人力资本须计机会成本。",
+      "formula_md": "$$c_0+\\frac{c_1}{1+r}=y_0+\\frac{y_1}{1+r},\\qquad u\\prime(c_0)=\\beta(1+r)u\\prime(c_1)$$",
+      "case_ids": [
+        "EMI036",
+        "EMI057"
+      ],
+      "related_case_ids": [
+        "EMI032",
+        "EMI046",
+        "EMI047"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 17,
+          "title": "资本和时间",
+          "physical_page_range": [
+            280,
+            290
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 8,
+          "title": "生产要素价格的决定",
+          "physical_page_range": [
+            92,
+            101
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "18",
+      "number": 18,
+      "title": "不对称信息",
+      "part": "市场失灵",
+      "model_title": "逆向选择、信号、筛选与道德风险",
+      "model_md": "先区分签约前私人类型和签约后隐藏行动。参与、激励相容、有限责任与可核验性逐项写出；信息租不是自动等于资源损失。",
+      "formula_md": "$$U_\\theta(C_\\theta)\\ge U_\\theta(C_{\\theta\\prime}),\\qquad U_\\theta(C_\\theta)\\ge\\bar U_\\theta$$",
+      "case_ids": [
+        "EMI019",
+        "EMI020",
+        "EMI031",
+        "EMI032"
+      ],
+      "related_case_ids": [
+        "EMI067",
+        "EMI009",
+        "EMI055",
+        "EMI056",
+        "EMI063"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 18,
+          "title": "不对称信息",
+          "physical_page_range": [
+            291,
+            309
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 11,
+          "title": "市场失灵和微观经济政策",
+          "physical_page_range": [
+            124,
+            133
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    },
+    {
+      "id": "19",
+      "number": 19,
+      "title": "外部性与公共品",
+      "part": "市场失灵",
+      "model_title": "外部边际条件、产权与公共品供给",
+      "model_md": "先列私人决策和社会决策遗漏的影响，再核财政、转移和非负约束。污染排放是独立控制变量时必须同时优化；产权交易还需明确定价与谈判制度。",
+      "formula_md": "$$MSB=MSC,\\qquad \\sum_iMRS_{G,x}^i=MC_G$$",
+      "case_ids": [
+        "EMI035",
+        "EMI038",
+        "EMI018",
+        "EMI064",
+        "EMI068",
+        "EMI061",
+        "EMI062"
+      ],
+      "related_case_ids": [
+        "EMI063"
+      ],
+      "reading_refs": [
+        {
+          "book_key": "primary",
+          "chapter": 19,
+          "title": "外部性与公共品",
+          "physical_page_range": [
+            310,
+            323
+          ]
+        },
+        {
+          "book_key": "gao8",
+          "chapter": 11,
+          "title": "市场失灵和微观经济政策",
+          "physical_page_range": [
+            124,
+            133
+          ]
+        }
+      ],
+      "selection_note_md": "按尼科尔森章序组织主例，并以高鸿业对应章节补直观解释。题型范围和待补的原题链另见本轮审查，章目齐全不等于满分能力已通过验收。"
+    }
+  ],
+  "summaries": [
+    {
+      "case_id": "EMI022",
+      "question_digest": "d9e4ac779a1e9116b255eb189edd79c3585c390b9815fe441a7b8f3f65aed504",
+      "chapter": 3,
+      "related_chapters": [
+        4
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "min形式不必表示“多多益善”的完全互补偏好；先看min内部各项对每种人数的方向。"
+        },
+        {
+          "body_md": "效用等于某水平要求两项都不低于该水平且至少一项取等，不能只画一条等式。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "效用上轮廓集与无差异边界",
+          "formula_md": "$$2x-y\\ge k,\\qquad 2y-x\\ge k,\\qquad \\min\\{2x-y,2y-x\\}=k$$",
+          "symbols_md": "x、y为两类人数，k≥0。",
+          "conditions_md": "人数非负；最后一个等式刻画边界，前两式刻画上轮廓集。",
+          "use_md": "求两条有效射线的起点和范围，再标出无差异曲线。"
+        },
+        {
+          "title": "活跃分支",
+          "formula_md": "$$u=\\begin{cases}2x-y,&y\\ge x,\\\\2y-x,&y\\le x.\\end{cases}$$",
+          "symbols_md": "哪一项更小决定实际效用。",
+          "conditions_md": "包含折线y=x，折线上不可直接套单侧导数。",
+          "use_md": "判断增加某类人数是改善还是降低效用，并做逆向人数计算。"
+        }
+      ],
+      "conditions_md": "本题人数是非负数量，效用可以在失衡人数下为负；绘图要求的k另限定非负。",
+      "branches_md": "人数超过平衡线后，继续增加同一侧人数可能降低效用；不可把折点外两条直线都当有效边界。",
+      "pitfalls_md": "见到min就套固定比例预算公式会出错；本题没有给定价格和收入，不需另造消费者预算。",
+      "application_md": "先分辨x、y大小确定活跃项，再计算人数改变和反求未知人数；图形用两项同时满足的集合检验。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI023",
+      "question_digest": "7a59ac824915f36c2b5a5ea423c786b6440b71b6b41ce04e2d246d847dea7f34",
+      "chapter": 12,
+      "related_chapters": [
+        4,
+        5,
+        14
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "税收最大化与福利最大化是不同目标；低收入时需求、乘子和税收均可能分段。"
+        },
+        {
+          "body_md": "效用变化只有在明确的货币刻度条件下才可直接与税收相减；可变预算乘子不是任意有限福利变动的换算常数。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "高收入线性需求与税收",
+          "formula_md": "$$x(t)=\\frac{a-p-t}{b},\\quad R(t)=\\frac{t(a-p-t)}b,\\quad t_R=\\frac{a-p}{2}$$",
+          "symbols_md": "a、b为二次拟线性偏好参数，p为生产者价格。",
+          "conditions_md": "0≤t<a-p且y>0；超出正需求域时需求应截断。",
+          "use_md": "先核内点收入条件，再求税收峰值。"
+        },
+        {
+          "title": "内点线性需求的无谓损失",
+          "formula_md": "$$DWL=\\frac{t^2}{2b}$$",
+          "symbols_md": "把税收计入政府账户，效用以计价商品货币单位计。",
+          "conditions_md": "充分收入、税不返还且处于同一正需求分支。",
+          "use_md": "用于基准福利比较；低收入变式不可不加检验地照搬。"
+        },
+        {
+          "title": "恒弹性需求的税收峰值",
+          "formula_md": "$$x=K(p+t)^{-\\varepsilon},\\qquad t_R=\\frac{p}{\\varepsilon-1}$$",
+          "symbols_md": "K,p>0，ε为正的需求弹性绝对值。",
+          "conditions_md": "ε>1、收入充分、没有数量上限；本题独立推广取ε=2。",
+          "use_md": "另用积分计算消费者损失和DWL，不沿用线性三角形公式。"
+        }
+      ],
+      "conditions_md": "税是否返还、收入能否使y保持正值、税率是否使需求归零，都决定公式分支。",
+      "branches_md": "同收入总付税、单位税与一次性返还各自闭合；低收入税收峰值要跨全部分支比较。",
+      "pitfalls_md": "预算乘子λ(t)随税率改变时，题给U差减λR并非一般精确货币DWL，也不保证单调增加。",
+      "application_md": "本题先把需求、税收和效用写成完整函数，再按指定目标取最优；把高收入结论与低收入反例清楚分开。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI035",
+      "question_digest": "2100b49dfd59fc3a1bc9b71cc9efd48a504135c5cfb0ded1ede61815676f9f12",
+      "chapter": 19,
+      "related_chapters": [
+        12,
+        13
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "一人的消费给他人带来额外效用，私人需求忽略的边际外部收益应进入社会规划。"
+        },
+        {
+          "body_md": "补贴的效率条件和由谁负担的财政条件要同时成立；角点的最小融资税负不能只靠内点一阶条件。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "私人和社会的边际评价",
+          "formula_md": "$$MSB_{x_1}=\\frac1{x_1}+\\frac{\\alpha}{x_2+\\alpha x_1}$$",
+          "symbols_md": "基准效用中y为准线性计价物。",
+          "conditions_md": "在对数定义域及相关消费内点计算；边界用不等式。",
+          "use_md": "与消费者2对x的边际评价比较，推导社会最优分配分支。"
+        },
+        {
+          "title": "补贴与融资账户",
+          "formula_md": "$$p_1^{\\rm net}=p-s,\\qquad T=sx_1$$",
+          "symbols_md": "s为对全部x₁的单位补贴，T只由消费者2支付。",
+          "conditions_md": "政府无额外资源，家庭把补贴率与一次性税当给定。",
+          "use_md": "实施方案必须核净价格、个体预算和非负y消费。"
+        }
+      ],
+      "conditions_md": "α改变偏好中的外部作用，私人均衡、社会最优、可融资实施须分别分类。",
+      "branches_md": "内点、消费者x为零角点及市场价格区间分别检查；α的临界值处检验两支衔接和最小税负。",
+      "pitfalls_md": "社会效用增加不等于每个人受益；不能忘记受税者可负担性或把补贴当免费资源。",
+      "application_md": "本题先解私人均衡，再按总效用和资源求最优；最后在明确税负归属下寻找可实施且融资最小的政策。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI021",
+      "question_digest": "82e9873b9bcf20daca5de684fef2cf5bd7071c8d68535b274fd3d9740f418d1f",
+      "chapter": 5,
+      "related_chapters": [
+        4
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "拟线性需求只有在计价商品正消费的分支才没有相关收入效应；低收入角点必须重算。"
+        },
+        {
+          "body_md": "现金、专用券和配给改变不同的预算或数量约束；非线性需求的精确福利用积分而非端点梯形。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "平方根拟线性需求",
+          "formula_md": "$$x^*=\\min\\{1/p^2,m/p\\},\\qquad y^*=m-px^*$$",
+          "symbols_md": "p为x价格，y价格1，效用为2√x+y。",
+          "conditions_md": "m,p>0；内点计价商品分支要求m>1/p。",
+          "use_md": "先确定收入分支，再判断x的收入效应。"
+        },
+        {
+          "title": "对偶恢复需求",
+          "formula_md": "$$x=-v_p/v_m,\\qquad h_x=\\partial e/\\partial p$$",
+          "symbols_md": "v为间接效用，e为支出函数。",
+          "conditions_md": "在相应可微分支成立；跨角点使用完整分段函数。",
+          "use_md": "核Roy与Shephard，并用支出函数精确算CV/EV。"
+        },
+        {
+          "title": "本题推广需求的精确面积",
+          "formula_md": "$$\\Delta CS=\\int_{p_1}^{p_0}\\frac{K}{p^2}\\,dp=K\\left(\\frac1{p_1}-\\frac1{p_0}\\right)$$",
+          "symbols_md": "K>0且p₀>p₁>0。",
+          "conditions_md": "计价商品内点、相关收入效应为零，价格变化没有触发额外配给。",
+          "use_md": "解释为何端点梯形一般不能代替非线性积分或完整货币补偿。"
+        }
+      ],
+      "conditions_md": "共同平方根效用、另设对数效用与配给二次效用分别使用各自定义域及预算。",
+      "branches_md": "内点、y=0角点、券恰用完、券未用完及限购绑定分别比较；某个券与现金等价不能推广到全部制度。",
+      "pitfalls_md": "拟线性不等于所有收入下需求都不变；收到现金也不能自动放松实物数量上限。",
+      "application_md": "本题以完整分段需求为起点，分别做价格、低收入、补偿、专用券和限购比较，最后才判断面积、CV与EV能否相等。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI038",
+      "question_digest": "0d8447fd65e2ad72cb763b8b1475cff64d3ae44633b11f298a7ba8e5b2b08992",
+      "chapter": 19,
+      "related_chapters": [
+        8
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "有限人数选择者已经内部化对自身拥堵的影响，庇古税应补的是对其他人的边际损害。"
+        },
+        {
+          "body_md": "税收是否返还影响个体效用水平；若选择时把返还当既定，返还不改变该私人边际激励。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "私人和社会的边际条件",
+          "formula_md": "$$\\frac{\\partial u_i}{\\partial d_i}=0,\\qquad \\sum_j\\frac{\\partial u_j}{\\partial d_i}=0$$",
+          "symbols_md": "dᵢ为个人活动，总拥堵也含本人的活动。",
+          "conditions_md": "内点最优；若结果为负需比较零活动。",
+          "use_md": "准确区分有限n和非原子近似。"
+        },
+        {
+          "title": "只补外部部分的单位税",
+          "formula_md": "$$t_i^*=-\\sum_{j\\ne i}\\frac{\\partial u_j}{\\partial d_i}\\Big|_{d^*}$$",
+          "symbols_md": "所有导数在社会目标活动量处评价。",
+          "conditions_md": "线性单位税，个体把一次性返还视为外生，不另外内化自己的返还变化。",
+          "use_md": "基准1000人和另设3人模型分别计算，不能共用一个人数近似。"
+        }
+      ],
+      "conditions_md": "要明确居民是否认识自身活动进入总拥堵，以及是否把返还看成给定。",
+      "branches_md": "有限人数税与非原子税不同；数量限制是否达到社会最优需要实际核算。",
+      "pitfalls_md": "不能把总边际损害再次全部征税而重复收费自身损害；不返还税会降低个体货币余额。",
+      "application_md": "分别求精确纳什与社会最优，再由外部边际损害实施；最后把税收、返还和资源效用按制度核账。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI041",
+      "question_digest": "e83e370575b48fcca1d339e24e355c271883347c085d9d155a573a9609744c5d",
+      "chapter": 13,
+      "related_chapters": [
+        4,
+        5,
+        12
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "卖方禀赋使收入取决于保留和出售数量，门槛税会使可行预算出现折点甚至跳跃。"
+        },
+        {
+          "body_md": "仅对超出门槛部分征税与跨门槛后对全部销售征税，具有不同的全局选择。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "仅对超额销售征税的收入",
+          "formula_md": "$$y=pz-t\\max\\{z-\\bar z,0\\},\\qquad x=\\omega_x-z$$",
+          "symbols_md": "z为净销售，z̄为免税门槛。",
+          "conditions_md": "无其他现金收入，税不返还；范围还受禀赋和消费非负约束。",
+          "use_md": "逐税段求候选并核门槛；不能只把净价格写成p-t。"
+        },
+        {
+          "title": "包含政府的商品账户",
+          "formula_md": "$$y_1+y_2+T=\\bar y,\\qquad T=t\\max\\{z-\\bar z,0\\}$$",
+          "symbols_md": "T为政府持有或使用的y，不是返回家庭的转移。",
+          "conditions_md": "本题政府y需求恰等税收。",
+          "use_md": "验证瓦尔拉斯闭合和数值均衡时必须含政府。"
+        }
+      ],
+      "conditions_md": "共同两人均衡与后两问单消费者给定市场价是不同环境，需各自使用预算。",
+      "branches_md": "税生效内点、恰在门槛、禀赋端点分别比较；全量征税在门槛上可能不连续。",
+      "pitfalls_md": "不能沿用无税旧价格；不返还税不能从真实资源账户消失。",
+      "application_md": "先把所有预算段画清，再比较段内驻点和门槛；两人情形联立价格并把政府需求纳入出清。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI033",
+      "question_digest": "ff306cb11ca32f0ceb44a02de9222e71cbe7daa90c6a93860777df62be24f57f",
+      "chapter": 13,
+      "related_chapters": [
+        9,
+        11
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "给定价格能支持某个最优生产点，不代表该点与消费者需求一起使封闭市场出清。"
+        },
+        {
+          "body_md": "有效配置联立边际替代率与边际转换率，还必须满足全部资源约束。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "本题生产边界",
+          "formula_md": "$$4x^2+y^2=200,\\qquad MRT_{xy}=4x/y$$",
+          "symbols_md": "x、y为两产品，劳动投入分别为4x²、y²。",
+          "conditions_md": "全部劳动有效使用且两部门技术按题给平方根形式。",
+          "use_md": "先从劳动资源推PPF，不直接把技术相加。"
+        },
+        {
+          "title": "封闭竞争效率条件",
+          "formula_md": "$$MRS_{xy}=MRT_{xy}=p_x/p_y$$",
+          "symbols_md": "本题平方根乘积偏好的MRS为y/x。",
+          "conditions_md": "两产品内点，价格接受，无外部性且利润归居民。",
+          "use_md": "给定同价时先核供需，再反求真正支持出清的相对价格。"
+        }
+      ],
+      "conditions_md": "需要核劳动和商品两类约束；价格归一只能固定一个尺度。",
+      "branches_md": "给定价格的生产最优、消费者最优与联立均衡是三步，不能跳过商品出清。",
+      "pitfalls_md": "需求偏好比例不必等于给定价格下的生产比例；生产收入须含企业利润与要素收入。",
+      "application_md": "从PPF求生产反应，再核消费者同价下想买的组合，最后以MRS=MRT与资源约束求有效均衡。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI034",
+      "question_digest": "06bb6c4362b9b1086ac62c626a51bc97d9cc6042591c17b669e64d9359acfe4e",
+      "chapter": 12,
+      "related_chapters": [
+        10,
+        11
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "短期沉没固定成本不影响是否继续生产的边际比较；长期可避免固定成本决定退出和进入。"
+        },
+        {
+          "body_md": "固定厂商数、自由进入和有限经营许可是三种行业制度，零利润条件不能跨制度强加。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "短期生产与可避免费用",
+          "formula_md": "$$q\\in\\arg\\max_{q\\ge0}\\{pq-VC(q)\\},\\qquad \\max_q[pq-VC(q)]\\ge F_a$$",
+          "symbols_md": "Fₐ为开始营业才能避免的额外固定费，不含已沉没费用。",
+          "conditions_md": "企业价格接受，停产可避免VC与Fₐ。",
+          "use_md": "解释价格8下原企业与新增许可证费企业为何可能选择不同。"
+        },
+        {
+          "title": "自由进入长期均衡",
+          "formula_md": "$$p=\\min_{q>0}AC(q),\\qquad Q=nq$$",
+          "symbols_md": "n为同质活动企业数。",
+          "conditions_md": "企业自由进入退出、无稀缺许可等租金来源；n连续为本题的分析近似。",
+          "use_md": "求单厂规模、行业总量和企业数；有单位税时区分消费者价和厂商净价。"
+        }
+      ],
+      "conditions_md": "整数企业数、许可证数量和短长期固定费的处理按各问给定。",
+      "branches_md": "短期亏损仍可能生产；长期无限制进入可消除经济利润；许可限制下利润可能资本化为许可租。",
+      "pitfalls_md": "不能用零利润条件解固定企业数市场；不能把沉没固定成本再算作停产可节省。",
+      "application_md": "先求单厂供给，再按制度做市场加总；技术进步后重新算短期均衡和长期零利润规模。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI040",
+      "question_digest": "b04e962cc8f5c6500b400ce6312718be61f00aecb0d36bf7b5241aab7a1b912a",
+      "chapter": 14,
+      "related_chapters": [
+        5,
+        12
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "恒弹性需求产生固定比例加成，但需需求弹性绝对值大于1才有本题有限内点垄断。"
+        },
+        {
+          "body_md": "单位税改变边际成本，纯利润税缩放利润；价格上限碰到成本时可能出现供给不唯一。"
+        },
+        {
+          "body_md": "同一题中的福利比值必须逐一辨明分子、分母；恒弹性需求下利润占有效总剩余的比重可约去成本尺度，但该无量纲关系不意味着利润等于社会福利。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "恒弹性加成及单位税传递",
+          "formula_md": "$$p_M=\\frac{\\varepsilon}{\\varepsilon-1}c,\\qquad \\frac{dp_M}{dt}=\\frac{\\varepsilon}{\\varepsilon-1}$$",
+          "symbols_md": "需求Q=p^(-ε)，单位税等效把c改为c+t。",
+          "conditions_md": "ε>1、c>0，无固定成本、无其他约束。",
+          "use_md": "比较垄断与竞争，并解释从量税可能超过一比一地传到价格。"
+        },
+        {
+          "title": "消费者剩余与有效产量",
+          "formula_md": "$$CS=\\frac{p^{1-\\varepsilon}}{\\varepsilon-1},\\qquad Q^*=c^{-\\varepsilon}$$",
+          "symbols_md": "W为CS加利润加财政收入，补贴支出相应扣回。",
+          "conditions_md": "积分收敛需ε>1；有效配置用真实边际成本c。",
+          "use_md": "用同一福利口径比较税、补贴及限价，不把财政转移漏掉。"
+        },
+        {
+          "title": "垄断利润占有效总剩余的比重",
+          "formula_md": "$$\\frac{\\pi_M}{W^*}=\\left(1-\\frac1\\varepsilon\\right)^{\\varepsilon},\\qquad0<\\frac{\\pi_M}{W^*}<e^{-1}$$",
+          "symbols_md": "$\\pi_M$为无税垄断利润，$W^*$为有效产量的社会总剩余，$\\varepsilon$为需求价格弹性绝对值。",
+          "conditions_md": "需求 $Q=p^{-\\varepsilon}$、$\\varepsilon>1$、恒定单位成本 $c>0$、无固定成本；不直接套入含税或含补贴的财政账户。",
+          "use_md": "第6问从利润和有效福利分别求出后相除；与第2问的有效福利/垄断福利比值分开作答。"
+        }
+      ],
+      "conditions_md": "纯利润税率小于1且不改变其他约束；价格上限与边际成本的相对位置单独核验。",
+      "branches_md": "上限处于$c$与$p_M$之间时可提高销量；上限恰等于$c$时企业零边际利润，不能未经约定认定唯一供给。",
+      "pitfalls_md": "垄断没有独立于需求的供给曲线；利润税与销售税不是同一制度。",
+      "application_md": "先用加成公式得基准，再按政策究竟改变成本、收益比例还是可选价格重求，最后统一核福利与财政。 新增第6问独立检查原题指定的证明动作，完整推导见该问规范解答。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI007",
+      "question_digest": "b3fcbd97a0469b94e850e3462fc9e19ee4819c31de5417b7c3b3d3eac7d908a7",
+      "chapter": 11,
+      "related_chapters": [
+        2,
+        9,
+        10,
+        14
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "条件投入需求固定产量，利润最大化允许产量变化；工资变化下的实际投入变化同时含替代效应和产量效应。"
+        },
+        {
+          "body_md": "资本或产能上限会把常数单位成本技术变为分段成本，并可能恢复有限利润最优。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "无资本上限的条件成本",
+          "formula_md": "$$L^c=q\\sqrt{r/w},\\quad K^c=q\\sqrt{w/r},\\quad C(q)=2q\\sqrt{wr}$$",
+          "symbols_md": "w、r为劳动和资本价格，q为指定产量。",
+          "conditions_md": "技术为q=√(LK)，要素价为正，两投入可自由调整。",
+          "use_md": "先核所需资本是否超过上限，超过时不能沿用无约束投入。"
+        },
+        {
+          "title": "资本上限约束下的高产量成本",
+          "formula_md": "$$C(q\\mid\\bar K)=wq^2/\\bar K+r\\bar K$$",
+          "symbols_md": "资本上限为正的K̄。",
+          "conditions_md": "仅适用于无约束K需求已超过K̄的分支；低产量仍用无约束成本。",
+          "use_md": "求分支衔接、产品市场最优及上限放松的价值。"
+        },
+        {
+          "title": "投入变化的两部分",
+          "formula_md": "$$dL=\\left.\\frac{\\partial L^c}{\\partial w}\\right|_qdw+\\frac{\\partial L^c}{\\partial q}dq$$",
+          "symbols_md": "Lᶜ为条件劳动需求。",
+          "conditions_md": "在同一光滑技术分支作局部比较；跨容量折点需直接算差。",
+          "use_md": "区分固定产量替代与最终销量变化；垄断和竞争有不同dq。"
+        }
+      ],
+      "conditions_md": "先识别技术、要素价、资本上限及产品市场制度；每个另设模型独立求成本。",
+      "branches_md": "常数规模报酬、无容量且产品价高于单位成本时利润无上界；价格相等可能存在多重最优。规模报酬递增也需检查有限最优。",
+      "pitfalls_md": "单一投入边际产量递减不代表规模报酬递减；条件成本的影子价与原资本租金不是同一对象。",
+      "application_md": "本题按“指定产量成本→容量分支→产品市场选择→上限价值”推进。工资改变后重求成本和销量，再分辨投入调整来源。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI025",
+      "question_digest": "eae53720a24e2069d99a6e9d0334fc272823fc574f27021e4f183d7fe887b5b4",
+      "chapter": 9,
+      "related_chapters": [
+        10,
+        11
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "复合技术可能提供多条生产路线，条件成本取低成本路线；价格相等时条件投入可形成集合。"
+        },
+        {
+          "body_md": "固定投入、可变规模报酬和联立互补约束对成本及利润存在性的影响不同。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "替代路线的单位成本",
+          "formula_md": "$$c_u=\\min\\{w_1,w_2+w_3\\},\\qquad C(q)=c_uq$$",
+          "symbols_md": "技术为q=x₁+min{x₂,x₃}。",
+          "conditions_md": "投入价为正、无固定费、无容量上限。",
+          "use_md": "比较单投入路线与配套投入路线，等价时保留全部有效组合。"
+        },
+        {
+          "title": "固定比例幂技术的成本",
+          "formula_md": "$$q=[\\min\\{x_1,x_2\\}]^a\\quad\\Rightarrow\\quad C(q)=(w_1+w_2)q^{1/a}$$",
+          "symbols_md": "a>0，成本由两投入各为q^(1/a)形成。",
+          "conditions_md": "给定技术、投入连续且非负。",
+          "use_md": "按成本的曲率比较有限最优、零生产、平价多重最优与无上界。"
+        },
+        {
+          "title": "联立技术约束",
+          "formula_md": "$$\\min\\{L+K,2L\\}\\ge q\\iff L+K\\ge q,\\quad 2L\\ge q$$",
+          "symbols_md": "成本目标为wL+rK。",
+          "conditions_md": "同一组投入同时满足两个约束。",
+          "use_md": "在角点和交点比较成本，不能将两个单独最小成本相加。"
+        }
+      ],
+      "conditions_md": "短期固定资本的租金是否沉没和产能q≤2K̄都按该问处理。",
+      "branches_md": "常数单位成本下P小于、等于、大于成本分别可能零产量、任意量、利润无界；固定比例幂技术按a分类。",
+      "pitfalls_md": "复合技术不能一律写成两投入切点；约束联立与成本相加不是同一操作。",
+      "application_md": "先把技术化为可行投入不等式，再求条件成本与需求集合；最后才在产品价格下讨论产量选择及最优是否存在。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI024",
+      "question_digest": "acb139c9402a15fc17129a2191d728f13208c0d6feb5b64256f36eaa86b42e4b",
+      "chapter": 6,
+      "related_chapters": [
+        4,
+        5
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "完全互补的有效消费按固定比例配套，最优在折点而非可微切点。"
+        },
+        {
+          "body_md": "需求零次齐次、收入弹性与支出份额形成可检验的加总关系，但固定比例不等于自身需求无价格反应。"
+        },
+        {
+          "body_md": "补偿弹性为零与普通弹性为零是不同命题；固定比例偏好无替代效应，价格仍通过购买力改变普通需求，且交叉价格的收入项使用另一商品的预算份额。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "固定比例需求与支出",
+          "formula_md": "$$x^*=\\frac{a m}{a p_x+p_z},\\quad z^*=\\frac{m}{a p_x+p_z},\\quad e(p,u)=u(p_x+p_z/a)$$",
+          "symbols_md": "效用为min{x,az}，a>0。",
+          "conditions_md": "正价格、正收入、两商品可自由购买；本题基准a=3。",
+          "use_md": "先用x=az合成一单位效用的成本，再计算需求及补偿。"
+        },
+        {
+          "title": "弹性与齐次性核验",
+          "formula_md": "$$\\varepsilon_{x,p_x}=-\\frac{ap_x}{ap_x+p_z},\\quad \\varepsilon_{x,p_z}=-\\frac{p_z}{ap_x+p_z},\\quad \\eta_x=1$$",
+          "symbols_md": "ε为价格弹性，η为收入弹性。",
+          "conditions_md": "消费在该固定比例需求分支且价格收入为正。",
+          "use_md": "验证两价格弹性加收入弹性等于0，并与支出份额对应。"
+        },
+        {
+          "title": "补偿需求与弹性形式的Slutsky方程",
+          "formula_md": "$$h_x=\\bar u,\\quad h_z=\\bar u/3,\\quad\\varepsilon^h_{x,p_j}=0,\\quad\\varepsilon_{x,p_j}=\\varepsilon^h_{x,p_j}-s_j\\eta_x$$",
+          "symbols_md": "$h$为Hicks需求，$\\bar u>0$为给定目标效用，$s_j$为商品 $j$ 的支出份额，$\\eta_x=1$。",
+          "conditions_md": "正价格、正收入、共同固定比例偏好；弹性形式在正需求点计算。",
+          "use_md": "第6问将两普通价格效应分别分解，解释自身份额与另一商品份额为何分别出现。"
+        }
+      ],
+      "conditions_md": "CV和EV符号按各问给定的“降价后抽走”与“原价补到新效用”定义，不能混入价格上涨损失的记号。",
+      "branches_md": "改变配比系数时重写单位效用成本；同收入总付税比较以单位税实际税收为准。",
+      "pitfalls_md": "不可用MRS等于价格比求不可微折点；互补偏好中的特定税收等价结论不适用于任意偏好。",
+      "application_md": "把两商品先视为固定比例复合品，再求预算可买的效用单位，最后用支出函数、份额和财政收入做交叉核验。 新增第6问独立检查原题指定的证明动作，完整推导见该问规范解答。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI001",
+      "question_digest": "9fa24cf1d30e16a1a8a2577a6933035abbdb3ab4f6401fb267bede102cca3f7e",
+      "chapter": 5,
+      "related_chapters": [
+        4
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "普通需求固定收入；Hicks需求固定效用；Slutsky补偿使旧篮子仍可负担。三种比较先固定各自不变量。"
+        },
+        {
+          "body_md": "最低消费、购买上限和财政返还会改变可行集合；共同效用与第（6）问另设的选择数据不能混用。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "本题基准需求与支出函数",
+          "formula_md": "$$x=\\frac{m}{2p_x},\\quad y=\\frac{m}{2p_y},\\quad e(p,u)=2u\\sqrt{p_xp_y}$$",
+          "symbols_md": "m为收入，p为价格，u为本题平方根效用刻度。",
+          "conditions_md": "两价格和收入为正，效用为平方根乘积且没有额外数量约束。",
+          "use_md": "先得到基准篮子，再用支出函数算保持旧效用的收入。"
+        },
+        {
+          "title": "边际Slutsky分解",
+          "formula_md": "$$\\frac{\\partial x_i}{\\partial p_j}=\\frac{\\partial h_i}{\\partial p_j}-x_j\\frac{\\partial x_i}{\\partial m}$$",
+          "symbols_md": "x为普通需求，h为补偿需求。",
+          "conditions_md": "需求在考察点可微，补偿效用等于该点普通需求实现的效用。",
+          "use_md": "核对第（8）问；有限变化仍按各补偿后的实际篮子做差。"
+        },
+        {
+          "title": "价格上涨的两种货币福利损失",
+          "formula_md": "$$CV=e(p^1,u^0)-m,\\qquad EV=m-e(p^0,u^1)$$",
+          "symbols_md": "上标0、1为价格变化前后；这里把福利损失记为正。",
+          "conditions_md": "前后现金收入同为m；若存在配给需另写受限支出问题。",
+          "use_md": "解释CV与EV为何可能不同，不能用一个梯形面积替代所有补偿。"
+        }
+      ],
+      "conditions_md": "先检查正价格、效用定义域、最低消费可负担性和购买上限；每问另设条件优先于共同题干。",
+      "branches_md": "吉芬需要足够强的负收入效应；正常品不可能吉芬。按旧量返税与按实际税收返还需要不同财政闭合。",
+      "pitfalls_md": "Hicks补偿不等于按旧篮子补偿；最低消费支出不能漏；第（6）问的示意数据不能反代共同Cobb-Douglas需求。",
+      "application_md": "本题先算原篮子和新篮子，再分别构造保持效用与保持购买力的收入。最后把配给、最低消费和返税视为独立约束重新优化。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI013",
+      "question_digest": "d1ad3e9faf4aca888947aa7833bdefde9abfa62c17e00c93abea1a6d00f2d358",
+      "chapter": 16,
+      "related_chapters": [
+        11,
+        12
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "单一雇主增加就业会提高所有工人的工资，边际要素支出高于平均工资。"
+        },
+        {
+          "body_md": "最低工资、工资税和岗位数量限制改变不同的约束，法定纳税人不直接决定经济税负。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "竞争与买方垄断的招聘条件",
+          "formula_md": "$$MRP(L)=w(L),\\qquad MRP(L)=w(L)+Lw\\prime(L)$$",
+          "symbols_md": "前式为竞争条件，后式为沿统一工资供给线招聘的买方垄断条件。",
+          "conditions_md": "劳动供给可微、企业支付统一工资；有最低工资时边际支出需分段。",
+          "use_md": "分别算就业后由原供给或工资制度确定实际工资。"
+        },
+        {
+          "title": "工资税楔与劳动经济租",
+          "formula_md": "$$w_g-w_n=t,\\qquad R_L=wL-\\int_0^Lw_S(z)\\,dz$$",
+          "symbols_md": "$w_g$为雇主总单价，$w_n$为工人净工资，$w_S$为劳动机会成本曲线。",
+          "conditions_md": "经济租公式用于以相应工资支付、按供给顺序雇用的劳动；岗位随机分配时需另议。",
+          "use_md": "核税负归宿、财政收入及岗位稀缺租归属。"
+        }
+      ],
+      "conditions_md": "先说明竞争或单雇主，再说明是否有最低工资、税或岗位上限；各问政策独立。",
+      "branches_md": "适度最低工资在买方垄断中可提高就业，过高时产生失业；竞争市场工资下限的机制不同。",
+      "pitfalls_md": "不得直接将最低工资代入原MFC曲线；岗位制度可能只确定两侧边际工资而不唯一确定成交工资。",
+      "application_md": "每个制度先画出有效劳动供给与边际支出，再比较折点和内点，最后分别核工人、企业、财政与社会剩余。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI026",
+      "question_digest": "35b2dbce5453ec152f480d7cb4fc035e560ef1d35db13a6d6a4fa0de755411eb",
+      "chapter": 15,
+      "related_chapters": [
+        8,
+        12,
+        14
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "古诺均衡是同时数量选择下的互为最优反应；合谋和合并改变优化主体，不能只把原产量加在一起。"
+        },
+        {
+          "body_md": "非对称成本可能使企业退出，行业加成与集中度关系只在相应正产量分支成立。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "对称线性古诺",
+          "formula_md": "$$q_i=\\frac{a-c}{b(n+1)},\\quad P=\\frac{a+nc}{n+1}$$",
+          "symbols_md": "需求P=a-bQ，n家同成本c企业。",
+          "conditions_md": "a>c、b>0，无容量或固定费且同时选数量。",
+          "use_md": "核总量、利润、竞争极限及合并后的重新均衡。"
+        },
+        {
+          "title": "市场份额与加成",
+          "formula_md": "$$\\frac{P-c_i}{P}=\\frac{s_i}{|\\varepsilon_D|},\\qquad \\sum_i s_i\\frac{P-c_i}{P}=\\frac{HHI}{|\\varepsilon_D|}$$",
+          "symbols_md": "sᵢ=qᵢ/Q，HHI=Σsᵢ²。",
+          "conditions_md": "正价格、需求可微、活动企业正产量内点古诺，无额外策略效应。",
+          "use_md": "区分企业加成和行业销售份额加权加成。"
+        }
+      ],
+      "conditions_md": "全部产量须非负；一般参数公式只在所有企业确实活动时有效。",
+      "branches_md": "卡特尔需核单方偏离；两家合并后与外部企业的新均衡重求。成本过高企业应切换到退出分支。",
+      "pitfalls_md": "合并不必使合并者获利；利润提高和社会剩余提高不能等同；不得保留负产量解。",
+      "application_md": "先求完整反应函数及均衡，再分别改变合作或所有权结构。福利比较使用同一需求积分与资源成本。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI028",
+      "question_digest": "0ab405edc0a3d6c47ad6cda8750cba7fd4f91ab07fe793b4618d0c76be938620",
+      "chapter": 14,
+      "related_chapters": [
+        5,
+        6
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "三级歧视需市场可分割且不能套利，企业把总产量分配到各市场直至边际收益相等。"
+        },
+        {
+          "body_md": "统一价格下低估值市场可能退出；数量和分配变化共同决定福利，不能仅看企业利润。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "可分市场的最优条件",
+          "formula_md": "$$MR_i(q_i)=MC(Q),\\qquad \\frac{p_i-MC}{p_i}=-1/\\varepsilon_i$$",
+          "symbols_md": "Q为各市场销量之和，εᵢ为该市场负的需求弹性。",
+          "conditions_md": "活动市场正产量内点、不能转售、可微需求。",
+          "use_md": "先各市场解候选，再核零产量与固定成本。"
+        },
+        {
+          "title": "统一价格的分段加总",
+          "formula_md": "$$Q(p)=\\sum_i\\max\\{D_i(p),0\\},\\qquad \\Pi=(p-c)Q(p)-F$$",
+          "symbols_md": "F、c按题给成本，需求按各市场截断。",
+          "conditions_md": "统一单位价、无其他收费工具。",
+          "use_md": "跨参与市场集合分别优化，不把负销量带入利润。"
+        }
+      ],
+      "conditions_md": "本题两市场隔离、成本相同；总剩余按愿付积分减资源成本计算。",
+      "branches_md": "统一价可能只服务高需求市场；歧视不保证总量或社会福利向固定方向变化。",
+      "pitfalls_md": "不要把两市场分别算出的利润遗漏共同固定成本；高价市场不一定需求数量更大，关键是弹性。",
+      "application_md": "先求分市场垄断，再把统一价格按需求截断点分段优化；最后核消费者剩余、总量和总剩余。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI018",
+      "question_digest": "2537706d3ed779d20743045cce1063563082078e951e173b0cbe110fa46c9a56",
+      "chapter": 19,
+      "related_chapters": [
+        4,
+        13
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "公共品由所有人共同享用，社会边际收益为各人边际愿付之和，自愿贡献只内部化自己的收益。"
+        },
+        {
+          "body_md": "等权福利最优、等额分摊和个性化价格所支持的配置不属于同一种制度。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "自愿贡献的边际条件",
+          "formula_md": "$$MRS_{G,x}^i=1\\ (g_i>0),\\qquad MRS_{G,x}^i\\le1\\ (g_i=0)$$",
+          "symbols_md": "gᵢ为个人贡献，公共品G为贡献之和，私人物价格与公共品成本均1。",
+          "conditions_md": "单人给定他人贡献优化；内点与零贡献分支分别检查。",
+          "use_md": "求完整最佳反应并联立，不能直接用社会条件代替纳什。"
+        },
+        {
+          "title": "社会有效供给与个性化价格",
+          "formula_md": "$$\\sum_iMRS_{G,x}^i=1,\\qquad t_i=MRS_{G,x}^i,\\quad\\sum_it_i=1$$",
+          "symbols_md": "tᵢ为对每单位公共品支付的个人价格。",
+          "conditions_md": "光滑内点、共同资源约束；支持指定配置还需合适的个人财富与转移。",
+          "use_md": "核Samuelson条件、Lindahl筹资和个人预算。"
+        }
+      ],
+      "conditions_md": "私人物消费必须为正且总资源不超24。福利权重与起点收入均影响规划配置及是否愿意接受。",
+      "branches_md": "有人零贡献时用不等式；共同分摊某个社会最优G不证明它就是自愿贡献均衡。",
+      "pitfalls_md": "加总效用提高不必每个人效用都提高；个性化价格支持还需核财富转移。",
+      "application_md": "先求各人反应，再做资源规划；最后在同一配置核社会边际条件、各人支付和相对起点的效用变化。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI039",
+      "question_digest": "0d720ccf907bbfdcfd0200e8387bede81271f70062547d2ad26de986120c51c7",
+      "chapter": 7,
+      "related_chapters": [
+        10,
+        11
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "先最大化期望利润再评价EU，与直接最大化EU是两个决策准则。"
+        },
+        {
+          "body_md": "有信息允许状态揭晓后选择不同产量；效用单位的信息收益不等于可支付的货币费用。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "两种生产决策的一阶条件",
+          "formula_md": "$$E[p]-C\\prime(q)=0,\\qquad E[u\\prime(W_s)(p_s-C\\prime(q))]=0$$",
+          "symbols_md": "Wₛ为扣成本后的状态财富，前式风险中性、后式期望效用。",
+          "conditions_md": "内点且财富在效用定义域；成本和期初财富按每个模型分别指定。",
+          "use_md": "在同一可行域比较根、端点与停业。"
+        },
+        {
+          "title": "风险中性完全信息价值",
+          "formula_md": "$$EVPI=E[\\max_q\\pi(q,s)]-\\max_qE[\\pi(q,s)]$$",
+          "symbols_md": "有信息时q可随状态变化，无信息时必须事先选同一个q。",
+          "conditions_md": "风险中性、费用以货币计且信息在生产决策前到达。",
+          "use_md": "效用最大化模型改比较EU；若求最高货币费用则把收费进入净财富再解无差异。"
+        }
+      ],
+      "conditions_md": "利润开平方模型要求各状态利润非负；财富开平方模型另含初始财富，不能混用。",
+      "branches_md": "沉没费用不影响既定营业下的边际q，可避免费用则引入停业比较。",
+      "pitfalls_md": "不能把平均价格直接代入凹效用；EU差不能直接写成货币信息费。",
+      "application_md": "先标清目标与信息时点，再分别做无信息和逐状态最优；最后核可行域、成本性质及信息价值单位。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI015",
+      "question_digest": "6c493a363cfe40434048b955456e6d754a0b2d3ff68fc5762c1c83dab6893f2b",
+      "chapter": 13,
+      "related_chapters": [
+        5
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "均衡价格决定禀赋财富，财富又决定需求；契约曲线描述效率，不自动决定可接受的分配。"
+        },
+        {
+          "body_md": "给定转移重求均衡、反求支持目标的转移、福利权重和自愿交易约束是不同问题。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "交换经济的财富与市场出清",
+          "formula_md": "$$m_i=p\\omega_{xi}+\\omega_{yi}+T_i,\\qquad \\sum_i x_i(p,m_i)=\\bar x$$",
+          "symbols_md": "y为计价物，Tᵢ为一次性现金转移。",
+          "conditions_md": "转移总和为0，总资源守恒；需求需检查收入角点。",
+          "use_md": "把禀赋或转移先写入财富，再联立市场，而不是固定旧均衡价。"
+        },
+        {
+          "title": "内点效率与福利规划",
+          "formula_md": "$$MRS_A=MRS_B,\\qquad \\max\\ \\alpha\\ln u_A+(1-\\alpha)\\ln u_B$$",
+          "symbols_md": "α为规划权重，不是市场给定的收入份额。",
+          "conditions_md": "等MRS只刻画光滑内点有效性；边界、互补偏好需单独判断。",
+          "use_md": "先找效率集合，再按权重或maxmin目标选点，并核支持价格与转移。"
+        }
+      ],
+      "conditions_md": "总资源和个体可行集合都要核验；效用的单调变换保留个人选择，却不自动保留跨人加权福利目标。",
+      "branches_md": "拟线性且可用货币不足时会落到角点；只许转x或只许转y的实施约束也可能不同。",
+      "pitfalls_md": "不能把所有有效点都称为从原点可自愿达到；一次性实物转移后相对价格可能变化。",
+      "application_md": "本题用“均衡→效率集合→分配目标→支持与实施→自愿性”串联。最后给定x转移z时重新闭合，而不沿用逆向实施题的价格。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI008",
+      "question_digest": "2ee669e79b85ccbeebcb87906fd84336505c7262e2912fb27e14c054026c4951",
+      "chapter": 10,
+      "related_chapters": [
+        2,
+        11,
+        14
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "多工厂分配先固定总产量并固定开工集合，活动工厂的边际成本才应相等。"
+        },
+        {
+          "body_md": "可避免启动费造成离散经营选择；给定订单的开工阈值不等于内生销售量下的利润切换阈值。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "两厂活动时的条件分工",
+          "formula_md": "$$2q_1=4q_2,\\qquad q_1+q_2=Q$$",
+          "symbols_md": "厂1、厂2的可变成本分别为q₁²、2q₂²。",
+          "conditions_md": "两厂均开工且正产量；启动费不进入边际分工条件。",
+          "use_md": "解出每厂产量并代回得到两厂成本，再与单厂方案比较。"
+        },
+        {
+          "title": "全局经营方案比较",
+          "formula_md": "$$\\Pi^*=\\max_{S,Q}\\{P(Q)Q-C_S(Q)\\}$$",
+          "symbols_md": "S为开工集合，Cₛ含该集合全部可避免启动费。",
+          "conditions_md": "总量和各厂产量处于可行域；停业也作为一个候选。",
+          "use_md": "分别优化单厂和双厂经营利润，再按F比较，不能只比较同一Q的成本。"
+        }
+      ],
+      "conditions_md": "需求定义域和产量非负要同时检查；只对真正开工工厂支付启动费。",
+      "branches_md": "订单很小时可能只开厂1；F变化会使开工集合切换，临界点可能出现不同总量的并列最优。",
+      "pitfalls_md": "等边际成本只能解活动集合内部，不能决定是否付启动费；补贴转移与真实资源节省分别核算。",
+      "application_md": "先求订单成本包络，再逐方案求垄断利润最大值。对F做比较时保留各方案已优化的量价和利润。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI010",
+      "question_digest": "af22004eaa026eb044aaf806302bdd21b49033354734539f1aa0f73bad746734",
+      "chapter": 14,
+      "related_chapters": [
+        10
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "自然垄断的高固定成本使边际成本定价可能亏损，平均成本定价则要求在可行交点间作福利比较。"
+        },
+        {
+          "body_md": "固定税不改变活动企业边际条件，但可避免的固定税可能使企业退出。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "成本、平均成本与收支平衡",
+          "formula_md": "$$C(Q)=F+cQ,\\quad AC(Q)=F/Q+c,\\quad P(Q)=AC(Q)$$",
+          "symbols_md": "F为营业时才发生的固定资源成本，c为常数边际成本。",
+          "conditions_md": "Q>0；停业成本按题干另列。",
+          "use_md": "平均成本与需求可能有两个交点，要核产量、预算与净总剩余。"
+        },
+        {
+          "title": "同一资源口径的社会净剩余",
+          "formula_md": "$$W(Q)=\\int_0^Q P(z)\\,dz-F-cQ$$",
+          "symbols_md": "社会福利计入消费者和生产者；税收、补贴作为转移单独核账。",
+          "conditions_md": "固定成本是真实资源耗费；筹资额外成本若题干没有给出，不能自行假定为零风险政策结论。",
+          "use_md": "比较无监管、MC定价、收支平衡与单位税时坚持同一口径。"
+        }
+      ],
+      "conditions_md": "先区分单位税、固定经营税、价格规制和补贴制度；营业与停业均为候选。",
+      "branches_md": "MC定价可能需要补贴；不补贴的平均成本价有多支时选可行且总剩余较高者。固定税过大可触发退出。",
+      "pitfalls_md": "不能遗漏固定资源成本；税收不是社会新增收益，补贴也不自动等于资源损失。",
+      "application_md": "先解各制度的量价与企业利润，再核补贴或税收，最后以同一净总剩余比较各方案。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI011",
+      "question_digest": "e8a331366810a87f112101e009eb71d51561454d695eb6f3207248b1d2a90c20",
+      "chapter": 8,
+      "related_chapters": [
+        15
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "重复合作依赖可信的后续惩罚；偏离利润应由偏离者面对合作对手时重新优化求出。"
+        },
+        {
+          "body_md": "已知有限期、阶段均衡唯一且无其他承诺时，末期逆推会破坏此前合作激励。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "触发策略的激励约束",
+          "formula_md": "$$\\frac{\\pi_C}{1-\\delta}\\ge\\pi_D+\\frac{\\delta\\pi_N}{1-\\delta}$$",
+          "symbols_md": "πᶜ为每期合作利润，πᴰ为单次最优偏离利润，πᴺ为惩罚期均衡利润。",
+          "conditions_md": "无限重复、公共可观察偏离、永久回到可信阶段均衡，0≤δ<1。",
+          "use_md": "将本题三个利润放在同一企业口径下比较。"
+        },
+        {
+          "title": "维持合作的贴现门槛",
+          "formula_md": "$$\\delta\\ge\\frac{\\pi_D-\\pi_C}{\\pi_D-\\pi_N}$$",
+          "symbols_md": "贴现因子越高表示越重视未来。",
+          "conditions_md": "πᴰ>πᶜ>πᴺ；若利润排序不同，直接使用原激励约束。",
+          "use_md": "得到阈值后核范围及惩罚是否确为阶段博弈均衡。"
+        }
+      ],
+      "conditions_md": "重复次数、观察结构与惩罚规则是模型条件；不能只写“有合作意愿”。",
+      "branches_md": "有限期逆推与无限期触发策略分开；合谋产量给定时，对手保持合作不代表偏离者也选择合作量。",
+      "pitfalls_md": "不要把垄断总利润当作每家合作利润；不能用双边同时偏离利润代替单方最优偏离收益。",
+      "application_md": "本题先算古诺基准，再求均分合谋收益和单方偏离收益，最后写折现不等式；有限期另从末期向前推。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI014",
+      "question_digest": "00c338eb9ac428cced864e62b7044f7de7647bc7a4a4557ab13f0eec7b3344c7",
+      "chapter": 16,
+      "related_chapters": [
+        4,
+        5
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "工资提高既提高闲暇价格又增加全收入；劳动供给方向取决于两种效应的相对强度。"
+        },
+        {
+          "body_md": "最低消费和非劳动收入改变工资的财富作用，无最低消费的对数基准可能恰好劳动恒定。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "劳动闲暇的全收入预算",
+          "formula_md": "$$c+w\\ell=wT+V-\\tau,\\qquad h=T-\\ell$$",
+          "symbols_md": "T为时间禀赋，V为非劳动收入，τ为一次性税。",
+          "conditions_md": "消费品价格为1；效用定义域和劳动非负仍需核验。",
+          "use_md": "工资变化时预算线绕时间禀赋点变化，不能只当作一般商品降价。"
+        },
+        {
+          "title": "本题最低消费对数偏好的内点",
+          "formula_md": "$$\\ell^*=\\frac{wT+V-\\tau-c_0}{2w},\\qquad c^*-c_0=w\\ell^*$$",
+          "symbols_md": "c₀为最低消费，本题基准c₀=16。",
+          "conditions_md": "u=ln(c-c₀)+lnℓ，内点且总资源超过最低消费。",
+          "use_md": "先核可行工资，再比较有无现金收入、补偿税和c₀=0的独立模型。"
+        }
+      ],
+      "conditions_md": "c>c₀、ℓ>0及0≤h≤T决定可行性。一般后弯分析另假定闲暇正常，不再使用原数值效用。",
+      "branches_md": "对数且c₀=V=τ=0时h=T/2，工资总效应为零；这不表示替代效应和收入效应分别为零。",
+      "pitfalls_md": "工资提高不必增加劳动；保持旧效用的补偿税不能用收入不变替代。",
+      "application_md": "从全收入预算求原选择，再在新工资下用效用等值条件求补偿。用三组劳动量做效应分解，并另算现金收入改变后的分支。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI016",
+      "question_digest": "2609abdfefd2dcdc6a6a881167de3487c21e9ce7f25a37e9a402e5425181b8bf",
+      "chapter": 13,
+      "related_chapters": [
+        1,
+        11
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "家庭收入含生产利润，企业和消费者分别最优后仍要用商品出清与真实资源约束闭合。"
+        },
+        {
+          "body_md": "沿价格变化评价的间接效用函数，和直接在真实可行配置上做福利规划，不是同一个优化问题。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "企业与家庭的预算闭合",
+          "formula_md": "$$\\pi(p)=pq-C(q),\\qquad px+y=\\omega_y+\\pi(p)+T$$",
+          "symbols_md": "家庭拥有全部企业股权，T为一次性返还。",
+          "conditions_md": "家庭把利润与返还视为给定；政府收支与资源耗费另核。",
+          "use_md": "有生产税时区分企业净价格和消费者支付价。"
+        },
+        {
+          "title": "市场出清与福利包络",
+          "formula_md": "$$\\frac{d}{dp}v(p,\\omega_y+\\pi(p))=v_m\\,[q(p)-x(p,m(p))]$$",
+          "symbols_md": "vₘ为收入的边际效用，使用Roy恒等式和利润包络。",
+          "conditions_md": "无税、可微、内点且完整利润收入进入预算。",
+          "use_md": "均衡使导数为零，但这本身不能证明价格处是福利最大值。"
+        },
+        {
+          "title": "瓦尔拉斯定律",
+          "formula_md": "$$p\\cdot z(p)=0$$",
+          "symbols_md": "z为全部商品超额需求向量。",
+          "conditions_md": "预算加总完整、所有收入及政府账户闭合。",
+          "use_md": "只核一个市场前必须先证预算闭合；漏掉税收去向会破坏直接推论。"
+        }
+      ],
+      "conditions_md": "价格接受、市场完备和无外部性支持福利定理；污染等外部影响不能偷偷写成家庭已计入的私人成本。",
+      "branches_md": "生产税会在MRS与真实MRT间形成楔子；同比例价格归一不应改变实物配置。",
+      "pitfalls_md": "不要把利润当资源损失或漏掉它；不要把间接效用对价格的驻点等同规划最优。",
+      "application_md": "先独立求企业供给和消费者需求，再闭合价格与收入，核资源。税收返还、福利定理证明和价格归一分别检查账户及假设。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI037",
+      "question_digest": "a531e599bfa86d1815dafdc23cfcd9d143bda71ec21d211376c3aed35a9971dd",
+      "chapter": 4,
+      "related_chapters": [
+        2,
+        3
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "最大化非凸偏好时切点一阶条件可能给出最小值，应比较整个预算边界及端点。"
+        },
+        {
+          "body_md": "严格递增变换可去掉平方根，但不会把凸目标的最大化变成凹规划。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "等价的确定性目标",
+          "formula_md": "$$\\max\\sqrt{x^2+y^2}\\iff\\max(x^2+y^2)$$",
+          "symbols_md": "两目标在非负消费域产生相同排序。",
+          "conditions_md": "只在确定性选择下使用严格递增变换，不涉及期望效用表示。",
+          "use_md": "更容易看出预算线上的目标为凸函数。"
+        },
+        {
+          "title": "预算端点的效用比较",
+          "formula_md": "$$u_x=m/p_x,\\qquad u_y=m/p_y$$",
+          "symbols_md": "uₓ、uᵧ分别为全部收入购买x或y的效用。",
+          "conditions_md": "正价格、正收入、非负消费与该非凸偏好。",
+          "use_md": "价格相同时保留两个端点最优，不把整段预算线都当最优。"
+        }
+      ],
+      "conditions_md": "本题效用为欧氏长度；正价格保证预算集合紧且最优存在。",
+      "branches_md": "较便宜商品的端点最优；同价时两个端点并列，内点驻点仍非最大。",
+      "pitfalls_md": "不能看到MRS=价格比就停止；本题与完全替代偏好的“同价整段最优”不同。",
+      "application_md": "先找驻点并判断曲率，再算两个端点，最后推广任意价格并报告全部最优集合。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI060",
+      "question_digest": "c42dee80fb3a1d143df073aa081fed1644392928d44173f48d9160e269278c76",
+      "chapter": 13,
+      "related_chapters": [
+        9,
+        11
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "世界生产边界是各国可行集合的有效加总，不是把各国边界方程逐项相加。"
+        },
+        {
+          "body_md": "劳动跨国流动时比较边际产量；线性比较优势模型的机会成本则形成分段直线和专业化折点。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "给定世界产品价的有效生产",
+          "formula_md": "$$\\max\\sum_j[p_xx_j(L_{xj})+p_yy_j(L_{yj})]$$",
+          "symbols_md": "j为国家，劳动约束按是否允许跨国流动分别给定。",
+          "conditions_md": "无贸易成本和额外制度约束，产品价格用作支持有效边界的权重。",
+          "use_md": "原每国劳动固定与总劳动可跨国使用必须分别优化。"
+        },
+        {
+          "title": "内点劳动配置条件",
+          "formula_md": "$$p_xMP_{L,xj}=p_yMP_{L,yj},\\qquad VMP_{L,j}=VMP_{L,k}$$",
+          "symbols_md": "后一式用于允许劳动在国家间流动的内点。",
+          "conditions_md": "边际产量递减时，技术较强国家并不必然吸收全部劳动。",
+          "use_md": "线性技术改按机会成本排序，得到世界PPF各段及折点。"
+        }
+      ],
+      "conditions_md": "凹技术与线性技术是独立设定；劳动流动制度决定资源约束。",
+      "branches_md": "线性机会成本不同会依次专业化；凹技术需边际条件而非只看平均生产率。",
+      "pitfalls_md": "不能因为南国绝对效率高就把全部劳动搬过去；不能直接相加国家平方边界。",
+      "application_md": "本题先按不可流动劳动求各国支持生产并加总，再放松跨国约束；线性变式另以机会成本排列边界。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI064",
+      "question_digest": "a5d7947b09d74f1932559b35f3fd4b8b4ce91f47548e92fb94733b998028a24d",
+      "chapter": 19,
+      "related_chapters": [
+        11,
+        13,
+        14
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "污染生产者只比较私人收益与私人成本，联合经营或纠正税把对他人的损害纳入边际条件。"
+        },
+        {
+          "body_md": "社会有效排放通常不是零，治理目标应比较活动收益和真实边际损害。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "社会边际成本与有效产量",
+          "formula_md": "$$MSC(Q)=MC(Q)+MD(Q),\\qquad P(Q^*)=MSC(Q^*)$$",
+          "symbols_md": "MC为私人边际资源成本，MD为外部边际损害。",
+          "conditions_md": "竞争市场福利比较；钢厂与渔场联合经营时直接最大化利润之和。",
+          "use_md": "先解分散与社会配置，不把受害者损失从真实总剩余中漏掉。"
+        },
+        {
+          "title": "纠正税与福利账户",
+          "formula_md": "$$t^*=MD(Q^*),\\qquad W=\\int_0^QP(z)dz-C(Q)-D(Q)$$",
+          "symbols_md": "D为总损害，税收为政府与企业间转移。",
+          "conditions_md": "税按题给污染活动单位征收，损害与产量关系明确。",
+          "use_md": "实施税须在有效量评价；比较零排放时同样计损害和放弃的收益。"
+        }
+      ],
+      "conditions_md": "共同钢渔模型损害为2s，另设竞争模型MD=Q，不能共用同一固定税率。",
+      "branches_md": "联合经营会改变造成外部性的活动，但不一定改变不相关活动的一阶条件。",
+      "pitfalls_md": "税收收入不应与损害相抵后再重复计入；减少污染不自动意味着社会福利提高到零排放为止。",
+      "application_md": "本题先把各主体利润相加找被遗漏的损害，再求有效活动、实施税及同一资源口径的总剩余。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI065",
+      "question_digest": "d18d7f4bf5b346529dacaee3c371c793cc353785c80905fa669ad642f4803806",
+      "chapter": 12,
+      "related_chapters": [
+        10,
+        11
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "短期继承原资本，不能重新自由最优化。"
+        },
+        {
+          "body_md": "零利润、成本最小化和行业出清必须同时成立。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "长期成本",
+          "formula_md": "$$C(q)=2\\sqrt{wr/27}q^{3/2}+F$$",
+          "symbols_md": "w、r为要素价，F为可避免经营固定费",
+          "conditions_md": "正投入、自由选择两要素",
+          "use_md": "连接投入最小化与进入均衡"
+        },
+        {
+          "title": "长期状态",
+          "formula_md": "$$L^*=F/w,\\quad K^*=F/r,\\quad pq=3F$$",
+          "symbols_md": "星号表示自由进入长期均衡",
+          "conditions_md": "本题三分之一次幂技术、F正",
+          "use_md": "解释继承资本与企业数变化"
+        }
+      ],
+      "conditions_md": "消费者共$M=1620000$人，效用$\\ln x+y$，价格$p>0$，计价物价1，收入足够保证内点。相同竞争厂商技术$q=3L^{1/3}K^{1/3}$，工资$w=4$、资本租价$r=2$，经营固定费$F=27000$。长期自由进入，企业数可连续；短期固定原资本与原企业数，资本费用和固定费不可避免。",
+      "branches_md": "原需求Q=M/p时长期n=M/(3F)；变式Q=A/p²时企业数不再固定。短期继承K和n，长期两者可调。",
+      "pitfalls_md": "把工资变动后的短期资本再优化会错；企业数恒定依赖单位弹性需求，不能当普遍定理。",
+      "application_md": "第1问从技术约束求条件投入，第2问用最低AC及出清，第3问继承原资本，第4问解释结构，第5问改变需求弹性后重算价格、利润与就业。",
+      "provenance_md": "编者根据本地真题任务和尼科尔森主线整理，高鸿业提供直观参照；非教材原话或官方评分。"
+    },
+    {
+      "case_id": "EMI066",
+      "question_digest": "2619546eed1da11a66c52cdc5422cc274e312648c99de5d75198bf08cfa0ae5b",
+      "chapter": 10,
+      "related_chapters": [
+        9,
+        11
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "要素边际价格与全部投入平均价格不能混用。"
+        },
+        {
+          "body_md": "分段最优须同时比较内部驻点与折点。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "平方根变量变换",
+          "formula_md": "$$a=\\sqrt K,\\ b=\\sqrt L,\\ a+b=q$$",
+          "symbols_md": "a、b为变换后的投入",
+          "conditions_md": "投入非负",
+          "use_md": "将成本转为一维严格凸优化"
+        },
+        {
+          "title": "超额计价",
+          "formula_md": "$$E_K(K)=K+\\max\\{K-100,0\\}$$",
+          "symbols_md": "E为资本总支出",
+          "conditions_md": "超出部分单价2",
+          "use_md": "先建立真实支出再求最优"
+        }
+      ],
+      "conditions_md": "技术$q=\\sqrt K+\\sqrt L$，投入非负、产量$q\\ge0$，初始要素价格均1。制度A资本最多100；制度B无上限，但资本100以内单价1、超额部分单价2。无固定费用。",
+      "branches_md": "资本上限分界q=20；累进资本价分界20、30。劳动价改2后分界改15、20，折点必须重新推导。",
+      "pitfalls_md": "累进价格只对超过100的资本生效；不能把整个资本支出写成2K，也不能只比较光滑段驻点。",
+      "application_md": "先令a=√K把约束线性化，分别求两段驻点并与a=10比较，再还原投入、成本和MC，最后核阈值两侧连续。",
+      "provenance_md": "编者根据本地真题任务和尼科尔森主线整理，高鸿业提供直观参照；非教材原话或官方评分。"
+    },
+    {
+      "case_id": "EMI067",
+      "question_digest": "f83b442333230dfb979eb7df80cfdaa3d1561574843c85c613bd00424c759b20",
+      "chapter": 14,
+      "related_chapters": [
+        7,
+        18
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "买方风险选择与保险公司定价是不同优化问题。"
+        },
+        {
+          "body_md": "不能识别类型不意味着两类真实服务成本相同。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "统一价格利润",
+          "formula_md": "$$\\pi(p)=\\sum_i r_i(p-c_i)\\max\\{1-p/\\delta_i,0\\}$$",
+          "symbols_md": "r_i为类型比重，c_i为真实类型成本",
+          "conditions_md": "统一报价、服务后成本仍按真实类型发生",
+          "use_md": "逐服务集合比较"
+        },
+        {
+          "title": "分类型最优",
+          "formula_md": "$$p_i^M=(\\delta_i+c_i)/2$$",
+          "symbols_md": "δ为最高意愿，c为成本",
+          "conditions_md": "线性投保比例、δ>c",
+          "use_md": "三级价格歧视"
+        }
+      ],
+      "conditions_md": "两类客户人口占比分别$r,1-r$，$0\\le r\\le1$。非负价格$p\\ge0$下投保比例$x_1=\\max\\{1-p/20,0\\}$、$x_2=\\max\\{1-p/10,0\\}$，每份合同成本分别8、6。总人口标准化为1，无固定费用。识别类型并不等于识别每人的最高支付意愿；各制度在对应分问启用。",
+      "branches_md": "双类型驻点可行仅r≤1/2；全局制度切换阈值为r=1/5，等号时两个价格同时最优。r=0和1按实际存在类型定价。",
+      "pitfalls_md": "类型无法识别并不消除类型成本差异；不可只检需求非负而忽略服务集合利润比较。一级歧视须识别个人意愿。",
+      "application_md": "前两问先区分识别能力，第三问写真实加权利润并比较双类型和仅高型，第四问解释效率，第五问改变成本后重新判服务集合。 第4问用同一人口比例下两种利润最优统一价格逐一核剩余，说明服务集合变化可以改变与三级歧视的福利排序。",
+      "provenance_md": "编者根据本地真题任务和尼科尔森主线整理，高鸿业提供直观参照；非教材原话或官方评分。"
+    },
+    {
+      "case_id": "EMI068",
+      "question_digest": "a798395c664760a4bfeef8420cd688bd019b300435721e371ec236aa113efef4",
+      "chapter": 19,
+      "related_chapters": [
+        13
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "产量与排污是不同控制变量。"
+        },
+        {
+          "body_md": "产权转移不消耗资源，定价势力和交易制度仍影响效率。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "独立排污最优",
+          "formula_md": "$$8-2x=f,\\quad 10-2f=x$$",
+          "symbols_md": "x为排污，f为渔产",
+          "conditions_md": "联合经营且内点",
+          "use_md": "联立真实外部影响"
+        },
+        {
+          "title": "钢厂排污需求",
+          "formula_md": "$$x(t)=\\max\\{4-t/2,0\\}$$",
+          "symbols_md": "t为每单位排污价格",
+          "conditions_md": "钢厂价格接受且无最低排污限制",
+          "use_md": "区分纠正税与渔场先行定价"
+        }
+      ],
+      "conditions_md": "钢价12、鱼价10，钢产量s、鱼产量f、排污量x非负，钢厂成本$s^2+(4-x)^2$，渔场成本$f^2+xf$。无额外约束时钢厂与渔场分别最大化利润；排污量独立于钢产量。各产权与税收制度仅在对应问启用。",
+      "branches_md": "无税分散、联合经营、排污税、外生总量且足额拍卖、渔场先行定价及更严排污上限分别建模。税与配额收入是转移；产权归属和价格接受本身不确定可售总量或扣留规则。",
+      "pitfalls_md": "不能将排污量机械等同钢产量；不能用科斯结论跳过定价权与时序；若渔场可自由选择售权量，给定价4时不售收益25高于售2的24，单一边际条件不能证明产权均衡。",
+      "application_md": "分别经营先求钢厂s与x，联合经营联立x和f；再给价格接受实施价，与先行定价者的逆向推导比较，最后用排污上限检查约束边际收益。",
+      "provenance_md": "编者根据本地真题任务和尼科尔森主线整理，高鸿业提供直观参照；非教材原话或官方评分。"
+    },
+    {
+      "case_id": "EMI005",
+      "question_digest": "2b11791c6d0100d66b357fb4a46b5c65a90aae5c32ba8641f259298f49279bcf",
+      "chapter": 7,
+      "related_chapters": [
+        3
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "期望财富是货币，期望效用是效用，确定性等价又回到货币；三者不能直接相减。"
+        },
+        {
+          "body_md": "比例保险最优保障与固定全保险最高可接受保费是不同合同问题，外部选择也必须明确。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "保险后的两状态财富",
+          "formula_md": "$$W_N=W-aq,\\qquad W_A=W-D+(1-a)q$$",
+          "symbols_md": "W为初始财富，D为事故损失，q为赔付，a为每单位保费。",
+          "conditions_md": "保费在两种状态都支付，仅事故状态获得赔付，0≤q≤D。",
+          "use_md": "逐一写清净财富后比较无保险、公平保险、加价和免赔合同。"
+        },
+        {
+          "title": "确定性等价与风险溢价",
+          "formula_md": "$$u(CE)=(1-\\pi)u(W_N)+\\pi u(W_A),\\qquad RP=E[W_s]-CE$$",
+          "symbols_md": "π为事故概率，CE为确定性等价，RP为风险溢价。",
+          "conditions_md": "u严格递增；风险厌恶时u凹，RP非负。",
+          "use_md": "固定全保险最高保费相对于不投保为初始财富减未投保CE，包含期望损失和风险溢价。"
+        },
+        {
+          "title": "比例保险内点条件",
+          "formula_md": "$$\\pi(1-a)u\\prime(W_A)=(1-\\pi)a u\\prime(W_N)$$",
+          "symbols_md": "两边分别为增加保障的状态加权边际收益和保费边际损失。",
+          "conditions_md": "效用可微、净财富在定义域内且最优不在赔付上下界。",
+          "use_md": "先算内点，再核q=0、q=D及非负财富边界；公平费率下严格凹效用倾向完全平滑。"
+        }
+      ],
+      "conditions_md": "财富必须在平方根效用定义域内，概率和费率不能混同；不同合同的无保险基准按该问重设。",
+      "branches_md": "公平费率、加价后的部分保险、完全不投保分别核验；免赔合同的最高保费由该合同EU等于外部选择求。",
+      "pitfalls_md": "不要把全保险最高保费直接当比例费率门槛；风险溢价不是完整保费。",
+      "application_md": "以两状态财富表为主线：列净支付、算EU、反解CE，再进行合同之间的全局比较。每次更换事故概率或保险制度都重算外部选择。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI009",
+      "question_digest": "799f9ea47742862ae78dba086d00ac6e1fd6cfc9f3e6d8b1215048ec87feb418",
+      "chapter": 14,
+      "related_chapters": [
+        5,
+        6,
+        18
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "会员费受消费者参与约束限制，统一合同还须比较服务两类与只服务高型的收益。"
+        },
+        {
+          "body_md": "完全识别类型、统一会员合同、统一单位价和一级歧视具有不同的信息与收费约束。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "参与约束与可收固定费",
+          "formula_md": "$$F\\le CS_i(p)=\\int_p^{\\bar p_i}q_i(z)\\,dz$$",
+          "symbols_md": "F为入场费，p为单位价，p̄ᵢ为该消费者需求截断价。",
+          "conditions_md": "消费者准线性、外部选项为0且给定p；积分限只取非负需求区。",
+          "use_md": "同时服务时固定费不能超过低剩余消费者的CS；服务集合改变时重新核约束。"
+        },
+        {
+          "title": "两部收费利润",
+          "formula_md": "$$\\Pi=\\sum_{i\\in A}[F+(p-c)q_i(p)]-F_0$$",
+          "symbols_md": "A为实际入场集合，c为边际成本，F₀为企业固定成本。",
+          "conditions_md": "统一两部合同；类型可识别时允许各自Fᵢ，需另写合同。",
+          "use_md": "分别优化两类入场与高型单独入场，比较全局利润和净剩余。"
+        }
+      ],
+      "conditions_md": "非负需求、消费者参与和企业停业必须检查。类型可识别不等于在私人信息下可以任意收不同费用。",
+      "branches_md": "相同消费者、可提取全部剩余且不改变参与人数时，单位价可取边际成本；异质统一合同通常不能直接套此结论。",
+      "pitfalls_md": "消费者剩余必须扣除入场费；利润增加不必意味着总剩余增加，也不表示消费者受益。",
+      "application_md": "本题围绕服务集合比较：每个候选先求最优单位价、再取约束允许的固定费，最终比较利润、消费者净剩余和总剩余。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI012",
+      "question_digest": "867144ff7f7cee0b372e9f3fdd641c472cf51fcb838e6cb6b9a08228316bcf6b",
+      "chapter": 15,
+      "related_chapters": [
+        8,
+        12,
+        14
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "差异化价格竞争的价格互相影响需求，合并后应内部化价格对另一产品利润的影响。"
+        },
+        {
+          "body_md": "同质伯特兰与差异产品竞争的均衡机制不同；福利核算必须使用题给可积的总愿付函数。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "独立企业的价格最优条件",
+          "formula_md": "$$q_i+(p_i-c_i-t_i)\\frac{\\partial q_i}{\\partial p_i}=0$$",
+          "symbols_md": "tᵢ为单位税，需求qᵢ依赖双方价格。",
+          "conditions_md": "在正需求、光滑且候选处于题给可行营业域时成立。",
+          "use_md": "建立各家反应函数，再联立；单边税也会通过反应改变另一家价格。"
+        },
+        {
+          "title": "共同所有权和福利",
+          "formula_md": "$$\\max_{p_1,p_2}\\sum_i(p_i-c_i)q_i,\\qquad W=V(q_1,q_2)-\\sum_i c_iq_i$$",
+          "symbols_md": "V为题给总愿付，税收计为转移。",
+          "conditions_md": "总愿付与该正需求分支一致；仍须检查需求截断与联合可行域。",
+          "use_md": "合并优化要含跨产品效应；统一用V核消费者净剩余及总剩余。"
+        }
+      ],
+      "conditions_md": "本题明确限制合并的共同营业域，域外外推无效；同质模型还指定平价时的市场分配规则。",
+      "branches_md": "差异产品内点、需求截断角点与同质品压价分开。成本不对称时平价归属影响是否存在纯策略最优。",
+      "pitfalls_md": "不能把每条直接需求简单当成独立的一维福利面积；没有容量约束的同质品结论不能移植到差异品数值。",
+      "application_md": "依次求独立定价、共同所有权、普遍税和单边税；每个制度重新核量价、可行域与同一总愿付下的福利。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI017",
+      "question_digest": "a527556d17f919689f3c40ce9f4be4f0f12d110c479660a746625cba987cac9d",
+      "chapter": 13,
+      "related_chapters": [
+        12
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "开放经济按世界价格选择生产点，消费者在国民收入预算下选择消费点，两点通常不同。"
+        },
+        {
+          "body_md": "进口税改变国内相对价格并产生返还，但世界贸易仍按世界价平衡；禁止性税率需重新分类。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "生产边界与收入最大化",
+          "formula_md": "$$x^2+y^2=\\bar L,\\qquad \\max_{x,y}\\{p_xx+p_yy\\}$$",
+          "symbols_md": "两部门生产为平方根劳动技术，劳动总量为L̄。",
+          "conditions_md": "两部门可自由配置劳动，无闲置浪费；内点时MRT等于产品相对价格。",
+          "use_md": "先算世界价下生产收入，再算消费与贸易。"
+        },
+        {
+          "title": "贸易与关税账户",
+          "formula_md": "$$p_x^*(x_c-x_p)+p_y^*(y_c-y_p)=0,\\qquad T=t\\,M_y$$",
+          "symbols_md": "下标$c$、$p$分别为消费、生产，$M_y$为商品$y$的进口量。",
+          "conditions_md": "无国际借贷；T为进口量为正时的单位关税收入。",
+          "use_md": "国内预算含返还，但资源及外部账户依世界价格核对。"
+        }
+      ],
+      "conditions_md": "税率外生、世界价给定，家庭将返还视为给定；进口方向与税楔成立范围需核验。",
+      "branches_md": "y仍进口时国内价可等于世界价加税；进口归零或方向改变时不得机械延长该价格关系。",
+      "pitfalls_md": "消费点不必在国内PPF上；贸易收益不是国内产量每一项都增加。",
+      "application_md": "本题先求封闭生产消费共同点，再分开求开放生产与消费。有关税时联立国内选择、实际进口、返还与世界价贸易预算。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI019",
+      "question_digest": "bf7063ea36dfd8fd1e6a3949bd6a56be43803937b40603b6b1923587a7bc4c02",
+      "chapter": 18,
+      "related_chapters": [
+        2,
+        14
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "私人类型使合同必须同时满足参与约束和自选择约束；高型的信息租通常来自模仿低型的机会。"
+        },
+        {
+          "body_md": "在单交叉、准线性条件下常见高型不扭曲、低型向下扭曲，类型比例变化还可能排除低型。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "本题的约束与最优支付表示",
+          "formula_md": "$$q_H\\ge q_L,\\quad T_L=V_L(q_L),\\quad T_H=V_H(q_H)-(\\theta_H-\\theta_L)q_L$$",
+          "symbols_md": "Vθ(q)=θq-q²/2，高低类型分别为H、L。",
+          "conditions_md": "这里使用低型IR与高型向下IC绑定的常规筛选分支；仍需核其他约束。",
+          "use_md": "把支付写成数量函数后，明确高型租与卖方目标。"
+        },
+        {
+          "title": "二类型二次价值的数量扭曲",
+          "formula_md": "$$q_H=\\theta_H,\\qquad q_L=\\max\\left\\{0,\\theta_L-\\frac{\\mu}{1-\\mu}(\\theta_H-\\theta_L)\\right\\}$$",
+          "symbols_md": "μ为高型概率，本题边际成本为0。",
+          "conditions_md": "两型价值满足题给二次形式且外部选择0；不是一般筛选问题的无条件公式。",
+          "use_md": "计算低型排除门槛，再恢复支付并逐型检查选约。"
+        }
+      ],
+      "conditions_md": "0<μ<1、数量与支付非负、类型私人信息及弱无差异选约规则均为本题条件。",
+      "branches_md": "低型数量内点与被排除分开；改为统一单位价后必须重新比较服务集合。",
+      "pitfalls_md": "信息租是转移，不可直接当社会效率损失；不能跳过低型IC或高型IR核验。",
+      "application_md": "以完全信息基准为起点，先写全部IR/IC，再缩成数量优化；对给定μ恢复合同并比较总剩余、利润与统一价格制度。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI020",
+      "question_digest": "1dc2aede30c86906292e27144ad2ef0ed9dfb69d823e7a987b4e96da9cdc7768",
+      "chapter": 18,
+      "related_chapters": [
+        2,
+        7,
+        8
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "隐藏行动问题靠状态工资差提供努力激励；参与约束控制总体报酬，有限责任限制惩罚能力。"
+        },
+        {
+          "body_md": "风险厌恶、可核验努力和允许负工资分别改变合同成本，不能只修改一个数值而沿用旧约束。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "风险中性代理的高努力约束",
+          "formula_md": "$$(p_H-p_L)(w_S-w_F)\\ge c_H-c_L,\\qquad p_Hw_S+(1-p_H)w_F-c_H\\ge\\bar U$$",
+          "symbols_md": "$p$为成功概率，$c$为努力成本，$w_S$、$w_F$为成功与失败工资。",
+          "conditions_md": "风险中性代理、工资直接进入效用；有限责任另要求工资非负。",
+          "use_md": "比较IC、IR与非负约束，找实施高努力的最低期望工资。"
+        },
+        {
+          "title": "委托人的实施收益",
+          "formula_md": "$$\\Pi_e=p_eR-E[w\\mid e]-M_e$$",
+          "symbols_md": "R为成功收入，M为该制度下监督费用。",
+          "conditions_md": "失败收入0且委托人风险中性；停业收益也要比较。",
+          "use_md": "分别求高努力、低努力与监督方案的最小成本，再比较净收益。"
+        }
+      ],
+      "conditions_md": "风险厌恶变式使用u(w)与效用单位努力成本，不能把前五问的货币成本直接相减。",
+      "branches_md": "有限责任可能产生代理租；允许负工资时IR可能绑定。努力可核验时无需用状态工资差激励，但须支付监督费。",
+      "pitfalls_md": "期望工资、代理效用和委托人利润不要混同；固定工资在隐藏行动下不能区分两种努力。",
+      "application_md": "本题先做最低成本实施，再决定是否值得实施。每更换监督、有限责任或风险偏好制度，都重写约束后比较。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI027",
+      "question_digest": "ea7a05372724799423379fee54940a33e51cbc46a30aa3712b47bc2ff08a5986",
+      "chapter": 15,
+      "related_chapters": [
+        8,
+        11
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "领导者先承诺产量，跟随者在每个可观察历史后重新最优，形成子博弈精炼策略。"
+        },
+        {
+          "body_md": "先行动优势依赖可承诺的战略变量和技术条件，不是一般性的“先进入就有优势”。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "线性同成本跟随反应",
+          "formula_md": "$$q_F(q_L)=\\max\\{(a-c-q_L)/2,0\\}$$",
+          "symbols_md": "需求$P=a-q_L-q_F$，边际成本$c$。",
+          "conditions_md": "数量非负、无容量和固定费用，跟随者观察领导产量。",
+          "use_md": "必须写到跟随者退出分支，不能只报告均衡点反应。"
+        },
+        {
+          "title": "领导者嵌入跟随反应",
+          "formula_md": "$$\\max_{q_L\\ge0}[a-q_L-q_F(q_L)-c]q_L$$",
+          "symbols_md": "领导者预见后续数量调整。",
+          "conditions_md": "既定产量承诺可信，跟随者按已求反应选择。",
+          "use_md": "逐分支优化并比较边界，再和同时古诺作同口径比较。"
+        }
+      ],
+      "conditions_md": "本题需求斜率为1且成本相同；推广时先重算参数及反应。",
+      "branches_md": "跟随者正产和零产分支都在领导者可选集合中；同时行动制度不使用序贯反应嵌套。",
+      "pitfalls_md": "不能把跟随者产量当常数对领导利润求导；不可把同时古诺反应交点当作顺序均衡。",
+      "application_md": "用逆向归纳先写跟随者完整策略，再求领导者最优承诺，最后计算价格、利润及同时行动基准。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI029",
+      "question_digest": "ed9d5699f08ea6383e4e98fb68b6e05d690294b51e6905fe92b3d8f906b60e53",
+      "chapter": 8,
+      "related_chapters": [
+        15
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "纯策略均衡取双方最佳反应交点；混合策略的概率使对手被随机化的行动无差异。"
+        },
+        {
+          "body_md": "均衡稳定性是单方偏离意义，不能等同帕累托效率或合作可行性。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "行玩家的无差异",
+          "formula_md": "$$2q=1-q$$",
+          "symbols_md": "q为列玩家选L的概率。",
+          "conditions_md": "行玩家在U、D之间均以正概率随机化。",
+          "use_md": "先求列的概率q，再求行自身的概率，防止归属颠倒。"
+        },
+        {
+          "title": "列玩家的无差异",
+          "formula_md": "$$p=2(1-p)$$",
+          "symbols_md": "p为行玩家选U的概率。",
+          "conditions_md": "列玩家对L、R均以正概率随机化。",
+          "use_md": "核p、q均处于0和1之间，再计算期望收益。"
+        }
+      ],
+      "conditions_md": "收益顺序始终为行、列；若只支持部分行动，应对其他行动核不获利偏离。",
+      "branches_md": "边界概率对应纯策略支持，内部混合解之外仍要保留全部纯策略均衡。",
+      "pitfalls_md": "自己的混合概率由对手无差异确定；不要把均衡随机化解释为双方预先轮流合作。",
+      "application_md": "本题先画出四格最优反应，再列双方期望收益无差异式；最后和两个纯均衡作收益及效率比较。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI030",
+      "question_digest": "04ab834a140c862c1a4f1e8efea3edf5f57ad0c0c4cdbf22e104b7ca093e0b9e",
+      "chapter": 8,
+      "related_chapters": [],
+      "knowledge_points": [
+        {
+          "body_md": "完整策略需要规定每个决策节点的行动，包括均衡路径上不会到达的节点。"
+        },
+        {
+          "body_md": "子博弈精炼剔除事后不愿执行的威胁；真正改变后续收益的承诺装置可能使威胁可信。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "在位者的后续最优",
+          "formula_md": "$$a_I(E)\\in\\arg\\max_{a\\in\\{A,F\\}}u_I(E,a)$$",
+          "symbols_md": "E为进入，A为容纳，F为打击。",
+          "conditions_md": "先在进入后子博弈比较实际收益，再求进入者起点选择。",
+          "use_md": "识别正常情形下的非可信打击威胁。"
+        },
+        {
+          "title": "承诺改变支付",
+          "formula_md": "$$u_I(E,A\\mid\\text{承诺})=u_I(E,A)-3$$",
+          "symbols_md": "3为题给容纳额外赔付，未进入时不触发。",
+          "conditions_md": "合同可执行且赔付确在进入后容纳时发生。",
+          "use_md": "重排子博弈收益后再次逆推，不沿用原节点最优。"
+        }
+      ],
+      "conditions_md": "先后行动、观察结构及合同可执行性是模型组成部分。",
+      "branches_md": "策略式纳什允许离路径威胁；子博弈精炼要求每个后续节点都最优。",
+      "pitfalls_md": "不能把策略集合写成仅均衡路径上的动作；口头威胁没有改变支付时不能当作承诺。",
+      "application_md": "先写策略式找全部纯纳什，再从进入后决策节点向前逆推；加入赔付合同后重复同一过程。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI031",
+      "question_digest": "d2b0cbbe80cf173d86c401bc2a5bbb81aa0c0e45e53911a8cfb05c54f9b59936",
+      "chapter": 18,
+      "related_chapters": [
+        7,
+        14
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "买方对质量的预期须与实际愿意出售的类型一致，卖方退出会反过来改变平均质量。"
+        },
+        {
+          "body_md": "可信认证可能恢复交易，但认证成本、可伪造性和自愿/强制制度决定净效果。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "交易集合与竞争报价的一致性",
+          "formula_md": "$$p=E[v_B(\\theta)\\mid\\theta\\in A(p)],\\qquad A(p)=\\{\\theta:p\\ge r_S(\\theta)\\}$$",
+          "symbols_md": "$v_B$为买方估值，$r_S$为卖方保留价值。",
+          "conditions_md": "风险中性竞争买方无法在购买前观察单件质量。",
+          "use_md": "由假定的参与集合算报价，再逐型检查是否愿意交易。"
+        },
+        {
+          "title": "保险混同的零利润与参与",
+          "formula_md": "$$P=E[\\pi_\\theta D\\mid\\theta\\in A(P)],\\qquad P\\le\\overline P_\\theta$$",
+          "symbols_md": "P为全保险费，D为损失，P̄θ为题给最高愿付。",
+          "conditions_md": "竞争报价覆盖实际投保者的期望赔付；类型私人信息。",
+          "use_md": "平均费率必须同时通过类型参与检验，低风险退出后重新定价。"
+        }
+      ],
+      "conditions_md": "不可直接使用全体潜在人群的平均质量或风险；真实交易人群才进入条件预期。",
+      "branches_md": "两类都参与、仅低质量交易、仅高风险投保、可信有费认证各自重新核一致性。",
+      "pitfalls_md": "信息不对称本身不必完全摧毁市场；可信认证也可能因真实费用降低净交易收益。",
+      "application_md": "本题反复使用“猜参与集合→求报价→核参与→更新集合”；认证制度另扣费用并验证不可伪造与低型激励。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI032",
+      "question_digest": "ed2876371328f257ad2b3d7f007cba984632fa3fe622661736acdb1ef190c524",
+      "chapter": 18,
+      "related_chapters": [
+        8,
+        16,
+        17
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "信号以类型间成本差支持分离；教育在本题不提高生产率，私人工资收益与社会生产收益不同。"
+        },
+        {
+          "body_md": "IC区间只是候选配置条件，完整信号均衡还需要企业信念及其对每种观察的最优工资。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "两型的分离约束",
+          "formula_md": "$$w_H-c_He^*\\ge w_L,\\qquad w_L\\ge w_H-c_Le^*$$",
+          "symbols_md": "$c_H$、$c_L$为单位教育成本且$c_L>c_H>0$。",
+          "conditions_md": "低型教育0、高型教育e*，工资按分离后生产率支付。",
+          "use_md": "分别防高型不教育与低型模仿高型。"
+        },
+        {
+          "title": "可支持门槛范围",
+          "formula_md": "$$\\frac{w_H-w_L}{c_L}\\le e^*\\le\\frac{w_H-w_L}{c_H}$$",
+          "symbols_md": "工资差为信号带来的毛收益。",
+          "conditions_md": "线性教育成本与上述分离形式；端点按题给弱无差异规则。",
+          "use_md": "代本题类型差、成本差后检验指定门槛，并核净收入。"
+        }
+      ],
+      "conditions_md": "教育不改变生产率是本题限定，不可推广为所有教育均无社会收益。",
+      "branches_md": "门槛不同会改变真实信号成本；离路径教育水平还需指定一致的信念和工资反应。",
+      "pitfalls_md": "只写IC不能完整证明完美贝叶斯均衡；高型工资差不是净私人收益。",
+      "application_md": "先解两项IC的交集，再核门槛4的工资、教育成本及偏离；最后区分信息传递功能与实际资源耗费。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI036",
+      "question_digest": "86038acacd38330dcaafd0a1f84513dd652ce100be9ba11493617b9a22f2813e",
+      "chapter": 17,
+      "related_chapters": [
+        1,
+        5
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "跨期预算把不同日期资源按借贷利率折算，借贷约束和利率差会形成折点或边界最优。"
+        },
+        {
+          "body_md": "跨期劳动选择把工资时间配置与消费平滑联立，不等于固定劳动收入下的纯消费问题。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "自由借贷的预算和内点Euler条件",
+          "formula_md": "$$c_0+\\frac{c_1}{1+r}=y_0+\\frac{y_1}{1+r},\\qquad u\\prime(c_0)=\\beta(1+r)u\\prime(c_1)$$",
+          "symbols_md": "β为效用贴现因子，本题共同对数模型β=1。",
+          "conditions_md": "同一无风险利率、正消费、借贷不受限的内点。",
+          "use_md": "先求自由候选，再判断储蓄正负和借款上限。"
+        },
+        {
+          "title": "有借款上限的当期消费边界",
+          "formula_md": "$$c_0\\le y_0+\\bar B$$",
+          "symbols_md": "B̄为最多可借入的本金；禁止借款时B̄=0。",
+          "conditions_md": "未来还本付息并保留正消费，收入与利率为相应问条件。",
+          "use_md": "自由候选超边界时重新求受限选择；补助后重新判断约束是否松弛。"
+        }
+      ],
+      "conditions_md": "借、贷利率不同时按实际现金流分段；静态、比较静态与逐期动态概念分开。",
+      "branches_md": "存款、借款、预算折点、借款上限绑定分别核验；利率变化的收入效应受初始净资产位置影响。",
+      "pitfalls_md": "Euler等式只用于内点；储蓄对利率的个例导数不是所有偏好下的一般规律。",
+      "application_md": "先画现值预算求消费和净借贷，再核制度约束；跨期劳动题另联立劳动边际成本与同一终身预算。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI042",
+      "question_digest": "e642e7473a21774ffd5b2ef80c411bcc96ee8f8c6c052585cbb1d7e70c24e63c",
+      "chapter": 4,
+      "related_chapters": [
+        3
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "线性效用比较每元支出的边际效用；边际效用价格比相等时可能有整个最优集合。"
+        },
+        {
+          "body_md": "需求对应而非单值需求函数，是边界价格下应报告的经济对象。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "单位支出收益",
+          "formula_md": "$$\\frac{MU_x}{p_x}=\\frac3{p_x},\\qquad \\frac{MU_y}{p_y}=\\frac2{p_y}$$",
+          "symbols_md": "效用$3x+2y$，$m=12$，$p_y=2$。",
+          "conditions_md": "商品非负、正价格且预算可全部花完。",
+          "use_md": "将钱全部用于单位支出收益较高的一方。"
+        },
+        {
+          "title": "无差异时的需求集合",
+          "formula_md": "$$3/p_x=2/p_y\\quad\\Rightarrow\\quad \\{(x,y)\\ge0:p_xx+p_yy=12\\}$$",
+          "symbols_md": "集合包含预算线上的两个端点及全部中间组合。",
+          "conditions_md": "仅在两商品单位支出收益完全相同的价格比上成立。",
+          "use_md": "解释本题相等价格情形为何不能任取一组后声称唯一。"
+        }
+      ],
+      "conditions_md": "本题是完全替代且局部非饱和，没有内点严格凹条件。",
+      "branches_md": "大于、小于和等于三种价格比都要给；相等时不可漏最优集合。",
+      "pitfalls_md": "切点式只在一个价格比成立，无法求另外两段的角点。",
+      "application_md": "先比较每元效用，再代入三个指定价格，逐项报告唯一角点或整段预算线的需求集合。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI043",
+      "question_digest": "cea2dddcb9b813b2074c1a21e8d1aade1990dffd47ae815fec3dfdf06e55cbea",
+      "chapter": 4,
+      "related_chapters": [
+        1,
+        5
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "直接显示偏好必须先证明另一个篮子在所选择篮子的预算下可负担。"
+        },
+        {
+          "body_md": "价格指数提供特定篮子的购买成本信息，本身不完整识别个人福利变化。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "可负担和直接显示偏好",
+          "formula_md": "$$p^0\\cdot x^1\\le p^0\\cdot x^0\\quad\\Rightarrow\\quad x^0\\succeq^R x^1$$",
+          "symbols_md": "x⁰是在价格p⁰下的已观察选择。",
+          "conditions_md": "选择确为可负担集合中的最优；严格性按支出和选择关系分别判断。",
+          "use_md": "列四个交叉支出，而不是只看各期总支出。"
+        },
+        {
+          "title": "两种价格指数",
+          "formula_md": "$$P_L=\\frac{p^1\\cdot x^0}{p^0\\cdot x^0},\\qquad P_P=\\frac{p^1\\cdot x^1}{p^0\\cdot x^1}$$",
+          "symbols_md": "L使用旧篮子，P使用新篮子作为权重。",
+          "conditions_md": "两期篮子、价格与支出均为题给，不能自行补充效用函数。",
+          "use_md": "指数不一致时尤其不能只取一个指数推断效用排序。"
+        }
+      ],
+      "conditions_md": "每期预算恰用尽，但两期的另一篮子仍可能都不可负担。",
+      "branches_md": "若两个篮子在对方预算下都不可负担，未违反WARP不等于已知哪个效用更高。",
+      "pitfalls_md": "WARP没有被拒绝不表示已经识别完整偏好；名义支出相同也不保证福利相同。",
+      "application_md": "本题先列交叉支出矩阵，再做显示偏好与WARP判断，最后计算并解释两个篮子权重不同的价格指数。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI044",
+      "question_digest": "0e6298fb7d217b66ba9b1f9892366961f923c58b09551284c58ca192b12a2814",
+      "chapter": 12,
+      "related_chapters": [
+        6,
+        13
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "小国关税在进口仍为正时形成国内外价格楔，配额则通过剩余进口需求确定国内价格。"
+        },
+        {
+          "body_md": "配额租属于本国还是外国影响本国福利；世界价变化时须使用新的自由贸易基准。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "关税与配额的价格闭合",
+          "formula_md": "$$p=p^*+t,\\quad M=D(p)-S(p);\\qquad D(p)-S(p)=\\bar M$$",
+          "symbols_md": "p*为世界价，t为进口单位税，M̄为配额。",
+          "conditions_md": "关税式只适用于正进口分支；配额需确实约束进口。",
+          "use_md": "先求各制度量价，再核关税或配额租。"
+        },
+        {
+          "title": "本国福利",
+          "formula_md": "$$W_N=CS+PS+T+R_{\\rm domestic}$$",
+          "symbols_md": "T为关税收入，R为归本国的配额租。",
+          "conditions_md": "忽略执行等额外资源成本，外国所得租不计为本国收入。",
+          "use_md": "世界价上涨后重新核账，国内价格不变不代表本国福利不变。"
+        }
+      ],
+      "conditions_md": "国内市场竞争且小国不能改变世界价；福利范围明确为本国，而非世界总福利。",
+      "branches_md": "正进口、禁止性关税和非约束配额需分别处理；免费许可的受益主体改变转移去向。",
+      "pitfalls_md": "不能把所有配额租都算本国福利；不能以进口更少或国内价不变替代福利核算。",
+      "application_md": "本题按“自由贸易→关税→等量配额→世界价冲击”逐制度求解，每次把数量、税租及其归属放在同一账表。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI045",
+      "question_digest": "9d1d1ae7f9df45b6e452506f5c3afff58c01ab086b5bf8af589c25e1421b19d2",
+      "chapter": 12,
+      "related_chapters": [
+        1,
+        5
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "约束性价格上限造成供不应求，实际成交量由题给供给和配给机制决定。"
+        },
+        {
+          "body_md": "相同交易量并不保证相同消费者剩余；谁得到配给决定交易的愿付价总额。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "上限下的数量和缺口",
+          "formula_md": "$$Q_T=S(\\bar p),\\qquad \\text{短缺}=D(\\bar p)-S(\\bar p)$$",
+          "symbols_md": "$Q_T$为实际成交量，p̄为价格上限。",
+          "conditions_md": "上限约束且题干规定成交量等于供给量。",
+          "use_md": "先核无管制均衡，判断上限是否真正约束。"
+        },
+        {
+          "title": "有效配给的净剩余",
+          "formula_md": "$$W=\\int_0^{Q_T}[P_D(q)-P_S(q)]\\,dq$$",
+          "symbols_md": "按最高愿付价获得商品，生产按最低边际成本组织。",
+          "conditions_md": "只有有效配给时才能直接使用需求曲线前$Q_T$段。",
+          "use_md": "与有效均衡相比求DWL；随机配给缺分配信息时不报唯一CS。"
+        }
+      ],
+      "conditions_md": "管制价格不直接决定谁买到；随机配给需要额外分配规则才能进一步求期望剩余。",
+      "branches_md": "非约束上限不改变均衡；有效与随机配给的实际福利不同。",
+      "pitfalls_md": "短缺不是无谓损失本身；不能默认随机配给也选中了最高愿付价者。",
+      "application_md": "先算无管制与受限量价，再按配给规则挑选福利积分对象，并明确哪些随机结果由题目无法唯一确定。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI046",
+      "question_digest": "c9218513fb6958f35e9ab2c1d96cdbf349a1e9f7dc991bb9570885853f2be6e2",
+      "chapter": 7,
+      "related_chapters": [
+        17
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "投资组合通过各状态回报改变最终财富，风险厌恶不等于一定选择完全无风险资产。"
+        },
+        {
+          "body_md": "状态价格由复制与无套利确定，与主观概率不同；完全市场也不必使各状态消费完全相等。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "两资产组合财富",
+          "formula_md": "$$W_s=(m-a)R_f+aR_s$$",
+          "symbols_md": "$m$为初始资金，$a$为风险投资，$R_f$、$R_s$为总回报。",
+          "conditions_md": "本题最初不许卖空，0≤a≤m；财富须为正。",
+          "use_md": "写EU后求内点并核持仓边界及回报改变后的新最优。"
+        },
+        {
+          "title": "状态价格复制与最优消费",
+          "formula_md": "$$\\sum_s s_sR_{js}=1,\\qquad \\pi_su\\prime(W_s)=\\lambda s_s$$",
+          "symbols_md": "sₛ为单位状态支付的当前价格，πₛ为概率。",
+          "conditions_md": "原资产每份当前价为1；后一条件用于可自由交易状态证券的正消费内点。",
+          "use_md": "先由复制求状态价格，再按现金或禀赋现值预算选择财富。"
+        }
+      ],
+      "conditions_md": "状态支付、现金预算和卖空约束都要核；引入状态证券是明确改变可行交易集合。",
+      "branches_md": "概率价格成比例且适当条件下才可能完全平滑；无风险与风险资产收益变化后不能沿用旧价格。",
+      "pitfalls_md": "状态价格不等于概率；状态财富禀赋不能直接按算术均值当可用现金。",
+      "application_md": "本题先做受限组合，再用复制求状态价格，最后以状态财富现值重做完整交易并核净现金流。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI047",
+      "question_digest": "b8f24a99a3629827c73e4d1e33addb7eaacfe77726695d8401575c5423d5c7e7",
+      "chapter": 7,
+      "related_chapters": [
+        17
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "信息使可选择行动改变，最高费用须用购买后净财富EU与不购买的外部选择比较。"
+        },
+        {
+          "body_md": "固定预付费和状态收费具有不同支付风险，名义费用与期望费用均需报告。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "固定费用的参与约束",
+          "formula_md": "$$u(81-P)=\\tfrac12u(100)+\\tfrac12u(36)$$",
+          "symbols_md": "P为所有状态都支付的固定费用。",
+          "conditions_md": "本题信息前财富彩票与信息后确定财富给定，u为平方根。",
+          "use_md": "用外部选择EU反解可接受费用，不能直接用平均财富差。"
+        },
+        {
+          "title": "仅一状态收费",
+          "formula_md": "$$\\tfrac12u(81-F)+\\tfrac12u(81)=EU_0,\\qquad E[\\text{费}]=F/2$$",
+          "symbols_md": "F为原始高财富状态触发的名义费用。",
+          "conditions_md": "触发概率1/2且净财富非负；收费状态与信息后的确定财富水平分开识别。",
+          "use_md": "比较名义上限、平均费用和额外支付风险。"
+        }
+      ],
+      "conditions_md": "收费时点、收费状态和外部选择是合同的一部分，不能只换一个支付数字。",
+      "branches_md": "固定费平移全部状态财富；条件收费重新引入风险，需按各状态算效用。",
+      "pitfalls_md": "效用收益不是货币费；名义F大于固定P不表示期望收费也更高。",
+      "application_md": "先算不买信息EU，再分别写两种净财富合同的无差异式，最后统一比较货币期望值和风险。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI048",
+      "question_digest": "3098e05674e7ac8c9e832b9cfaa57d3999cc39098b2d32f561dfa5c34b615467",
+      "chapter": 3,
+      "related_chapters": [
+        7
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "确定性效用只表达财富排序，严格递增变换保留确定性选择。"
+        },
+        {
+          "body_md": "期望效用先对每个结果取效用再求概率平均；一般非线性变换会改变彩票排序。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "彩票与确定财富的比较",
+          "formula_md": "$$EU=\\sum_s\\pi_su(W_s),\\qquad EU\\mathrel{\\gtreqless}u(W_c)$$",
+          "symbols_md": "$W_c$为可替换的确定财富。",
+          "conditions_md": "使用同一个效用函数和同一概率描述每个比较。",
+          "use_md": "分别按平方根和线性效用判断选择，不拿EU数值跨人比较。"
+        },
+        {
+          "title": "同一vNM偏好的允许变换",
+          "formula_md": "$$\\widetilde u=au+b,\\ a>0\\quad\\Rightarrow\\quad E[\\widetilde u]=aEU+b$$",
+          "symbols_md": "a、b为不随结果变化的常数。",
+          "conditions_md": "保持全部彩票排序的正仿射表示；一般递增变换仅保确定性排序。",
+          "use_md": "说明把平方根效用平方后为什么可能改变风险选择。"
+        }
+      ],
+      "conditions_md": "财富必须在各效用定义域；风险态度来自效用对财富的曲率。",
+      "branches_md": "线性效用风险中性，平方根严格凹则风险厌恶；不能由确定财富排序相同推出彩票排序相同。",
+      "pitfalls_md": "不得把E[u(W)]写成u(EW)；两个人EU的高低没有直接人际福利意义。",
+      "application_md": "本题对同一彩票与确定财富分别算EU，再检查变换是否正仿射，从而解释确定性与风险选择规则的区别。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI049",
+      "question_digest": "c38be4be19b8030a34c652897ff9b69e50f2d2f2b7d9caaf7d5d8effaf898e5d",
+      "chapter": 10,
+      "related_chapters": [
+        2,
+        9
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "标准成本函数是给定产量的最低要素支出，因此对要素价格一次齐次、单调且凹。"
+        },
+        {
+          "body_md": "可微成本函数的价格导数给条件要素需求，可用支出加总与Euler关系回验。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "Shephard条件投入",
+          "formula_md": "$$L^c=\\frac{\\partial C}{\\partial w}=q\\sqrt{r/w},\\qquad K^c=\\frac{\\partial C}{\\partial r}=q\\sqrt{w/r}$$",
+          "symbols_md": "成本C=2q√(wr)，w、r为要素价格。",
+          "conditions_md": "w,r>0，C可微；需求对应多值时不能只用一个梯度概括。",
+          "use_md": "核wL+rK=C，并恢复与原技术一致的投入。"
+        },
+        {
+          "title": "价格齐次性与凹性",
+          "formula_md": "$$C(tw,tr,q)=tC(w,r,q),\\qquad H_{(w,r)}C\\preceq0$$",
+          "symbols_md": "t>0，H为价格Hessian。",
+          "conditions_md": "保持产量q固定；这是对价格的性质，不是对产量必然凹。",
+          "use_md": "排除价格二次齐次且凸的另一个观测式。"
+        }
+      ],
+      "conditions_md": "生产技术可行集合与产量固定，且厂商确实最小化成本，才有这些对偶限制。",
+      "branches_md": "产量0的退化值不能掩盖正产量下的价格性质违例。",
+      "pitfalls_md": "价格凹性不代表要素互补/替代的全部结论；也不代表产量成本凹。",
+      "application_md": "本题先求梯度并核支出，再检验同比例价格缩放和Hessian，逐条判断候选是否能是标准成本函数。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI050",
+      "question_digest": "5d5a02ee685be6edf80e57b48963989159a07b5506f6d0a951bf767b9f24272e",
+      "chapter": 14,
+      "related_chapters": [
+        6
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "纯捆绑按每位消费者对两品的总估值定价，单卖分别面对每品估值分布。"
+        },
+        {
+          "body_md": "估值负相关可能使总估值更集中，有利于提取剩余，但并非所有捆绑都优于单卖。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "分别定价收入",
+          "formula_md": "$$R_S=\\sum_{j\\in\\{A,B\\}}p_j\\,\\#\\{i:v_{ij}\\ge p_j\\}$$",
+          "symbols_md": "每人每品最多一件，成本为0。",
+          "conditions_md": "离散消费者、确定估值，无其他捆绑或混合菜单。",
+          "use_md": "候选价格取相关估值门槛，逐项核参与数量。"
+        },
+        {
+          "title": "纯捆绑收入",
+          "formula_md": "$$R_B=P_B\\,\\#\\{i:v_{iA}+v_{iB}\\ge P_B\\}$$",
+          "symbols_md": "$P_B$为整套价格。",
+          "conditions_md": "两品只成套销售，消费者可以拒绝。",
+          "use_md": "更换估值相关性后重算总估值与服务集合。"
+        }
+      ],
+      "conditions_md": "不得把离散估值题当连续线性需求；本题成本为零使收入等于利润。",
+      "branches_md": "原反向估值与正向估值组合分别比较；纯捆绑和混合捆绑不是同一制度。",
+      "pitfalls_md": "总估值相近不是每品估值相近；不能只算卖给所有人的方案。",
+      "application_md": "本题分别枚举单品门槛和套装门槛，比较全体参与与高估值者参与的利润，再解释相关性作用。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI051",
+      "question_digest": "556105ceb2560488c3c91389e0adfa3129663486aa6341238c23d59cfdd6548c",
+      "chapter": 14,
+      "related_chapters": [
+        11
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "广告提高需求但也耗费资源，价格与广告应联合优化，不能固定原销量单独算广告收益。"
+        },
+        {
+          "body_md": "候选一阶条件不足以保证有限最大值；消去价格后检查广告方向的全局曲率与增长。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "给定广告后的价格与利润",
+          "formula_md": "$$p^*(z)=\\frac{a+c+bz}{2},\\qquad \\Pi^*(z)=\\frac{(a-c+bz)^2}{4}-kz^2$$",
+          "symbols_md": "z=√A，需求Q=a+b√A-p，广告费用kA。",
+          "conditions_md": "正需求内点且无额外价格或广告上限；z≥0。",
+          "use_md": "将二维问题化为一维，再判断有无有限最大值。"
+        },
+        {
+          "title": "广告方向的二次项",
+          "formula_md": "$$\\Pi^*(z)=\\frac{(a-c)^2}{4}+\\frac{b(a-c)}2z+\\left(\\frac{b^2}{4}-k\\right)z^2$$",
+          "symbols_md": "常数、一次与二次项共同决定大z下的行为。",
+          "conditions_md": "仍须检查z=0和需求可行性。",
+          "use_md": "二次项为零但一次项为正时依然无界，不能误称存在平坦最优。"
+        }
+      ],
+      "conditions_md": "本题a=20、b=2、c=4，广告费用系数在两问改变；无界结论来自题给无限制外推模型。",
+      "branches_md": "费用k改变可使无界变为严格凹的有限最优；边界广告0也要比较。",
+      "pitfalls_md": "不能只给求导方程的形式解；广告模型无界不等于现实广告可以无限创造利润。",
+      "application_md": "先条件于广告求价，再以z=√A检查整条利润曲线；费用变为2A时重求有限全局方案。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI052",
+      "question_digest": "c0f8b34f5b317762d53cbe27097fb77ead4637772f38f1e3cbdf0f0f1e80359c",
+      "chapter": 14,
+      "related_chapters": [
+        10,
+        11
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "共享容量只购买一次，却同时约束多个时段，容量成本由各绑定时段的影子价值共同承担。"
+        },
+        {
+          "body_md": "峰谷需求不同会形成某期绑定、某期松弛的分支，不能把容量成本每期完整重复计费。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "时段供给与容量约束",
+          "formula_md": "$$MR_t(q_t)-c=\\lambda_t,\\quad q_t\\le K,\\quad \\lambda_t\\ge0,\\quad\\lambda_t(K-q_t)=0$$",
+          "symbols_md": "$c$为运营边际成本，$λ_t$为容量的该期影子价值。",
+          "conditions_md": "内点正产量；不活动时段还须核零产量边界。",
+          "use_md": "给定K先解每期，再划分容量绑定区间。"
+        },
+        {
+          "title": "最优共享容量",
+          "formula_md": "$$\\sum_t\\lambda_t=C_K\\prime(K)$$",
+          "symbols_md": "$C_K$为一次性容量成本，本题$C_K=4K$。",
+          "conditions_md": "K正内点、可连续选择；端点用边际不等式。",
+          "use_md": "核高峰和低谷各自对共同容量的贡献。"
+        }
+      ],
+      "conditions_md": "收入按两期相加，运营费按各自销量计，容量费只按K计一次。",
+      "branches_md": "小容量时可能两期均绑定，较大容量时低谷先松弛，足够大时均不绑定。",
+      "pitfalls_md": "不能令每期MR都等于运营成本加全部容量成本；价格也不等于MR。",
+      "application_md": "本题先画各期无容量最优量，再在各K区间求利润及容量价值，跨区间比较全局最优。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI053",
+      "question_digest": "63c32f1c1f644135dda53b31a3f5e3accfa59eb430ca5c1c6de40a091f3335f4",
+      "chapter": 14,
+      "related_chapters": [
+        10,
+        13
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "完全一级歧视把总愿付转成收入，在外部选择0等条件下会内部化消费者的全部边际收益。"
+        },
+        {
+          "body_md": "只能单位定价时企业仍需为边际消费者剩余留出空间，质量与数量的激励随收费制度变化。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "全部剩余提取的质量与数量",
+          "formula_md": "$$\\max_{q,s\\ge0}\\{V(q,s)-C(q,s)\\},\\quad V_q=C_q,\\quad V_s=C_s$$",
+          "symbols_md": "V为消费者总愿付，C为资源成本。",
+          "conditions_md": "可以可靠确定消费者价值并收取全部净剩余，参与约束恰绑定；内点条件还要核曲率。",
+          "use_md": "先求一级歧视基准，并验证非负与全局最优。"
+        },
+        {
+          "title": "单位定价下的需求和利润",
+          "formula_md": "$$p=V_q(q,s),\\qquad \\Pi=pq-C(q,s)$$",
+          "symbols_md": "消费者给定价格与质量选择数量。",
+          "conditions_md": "仅能收统一单位价，不能额外收固定费提取全部剩余。",
+          "use_md": "把逆需求代入企业目标，重新联合选择q和s。"
+        }
+      ],
+      "conditions_md": "质量和数量非负，质量可观察，消费者能拒绝交易；两种制度独立比较。",
+      "branches_md": "边界质量或零交易需核验；有效质量与单位定价质量的差异来自收费能力。",
+      "pitfalls_md": "不能在单位价制度继续把V当企业收入；质量成本s²不是每单位产量都重复发生的成本。",
+      "application_md": "本题先最大化总剩余，再将可提取收入改为pq重新优化；比较时同时看质量、数量与消费者净剩余。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI054",
+      "question_digest": "fc71518eed09bcb725005d0b2b8a2767eca540b2812a5276c98ae270e00cce8e",
+      "chapter": 14,
+      "related_chapters": [
+        6,
+        11,
+        12,
+        15
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "主导企业的需求是市场需求扣除竞争边缘供给之后的剩余需求。"
+        },
+        {
+          "body_md": "竞争边缘对价格作出反应，主导者不能把整个市场销量当作自己的销量。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "剩余需求",
+          "formula_md": "$$Q_D(p)=D(p)-S_f(p)$$",
+          "symbols_md": "$S_f$为边缘企业供给。",
+          "conditions_md": "按实际活动域截断非负数量；本题给定p≥10。",
+          "use_md": "先推主导者的逆剩余需求，再算边际收益。"
+        },
+        {
+          "title": "主导者利润条件",
+          "formula_md": "$$MR_D(Q_D)=MC_D,\\qquad Q=D(p)=Q_D+Q_f$$",
+          "symbols_md": "D下标区分主导者与全市场。",
+          "conditions_md": "主导者正产量内点，边缘供给按同一市场价实现。",
+          "use_md": "解主导者后恢复边缘供给与市场总量并核出清。"
+        }
+      ],
+      "conditions_md": "价格必须落在题给需求和边缘供给有效域。",
+      "branches_md": "主导者零产量、边缘零供给或剩余需求消失等边界在推广时要比较。",
+      "pitfalls_md": "错误使用全市场需求会高估主导者销量并改变边际收益。",
+      "application_md": "先从市场中扣出价格响应的边缘供给，随后按垄断解剩余市场，最后加回边缘产量。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI055",
+      "question_digest": "be74d2e0389dee12cbb67cc4c10f24d850e028beef8d1f724de55522988773cb",
+      "chapter": 8,
+      "related_chapters": [
+        15,
+        18
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "贝叶斯策略应对每种私人类型规定行动，未知类型的企业根据类型分布形成对对手产量的预期。"
+        },
+        {
+          "body_md": "期望值放在信息不足的一方的最优反应里，不能假定双方都观察到了实际成本。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "知情企业的分类型反应",
+          "formula_md": "$$q_1(c_1)=\\max\\{(30-c_1-q_2)/2,0\\}$$",
+          "symbols_md": "企业1知道自身类型，企业2的均衡策略为确定的q₂。",
+          "conditions_md": "线性需求、常数边际成本、同时数量选择。",
+          "use_md": "为低成本与高成本分别列式，并检查非负。"
+        },
+        {
+          "title": "不知情企业的最优条件",
+          "formula_md": "$$q_2=\\max\\{[30-6-E(q_1)]/2,0\\},\\quad E(q_1)=\\tfrac12q_1(0)+\\tfrac12q_1(12)$$",
+          "symbols_md": "类型概率按共同先验。",
+          "conditions_md": "企业2不知道实际c₁；若某类型退出需在期望中使用其真实零产量。",
+          "use_md": "联立类型策略和期望，而不是求两个完全信息均衡再平均。"
+        }
+      ],
+      "conditions_md": "信息结构和先验概率给定，不因观察到均衡行动而事后修改同时决策时的信念。",
+      "branches_md": "某类型正产量候选为负时要分支重求，不能保留负值算期望。",
+      "pitfalls_md": "完全信息均衡的平均不等于贝叶斯均衡；策略不是单个不区分类型的产量。",
+      "application_md": "本题按类型写企业1两条策略，再写企业2对其期望的反应，联立后逐类型核偏离与非负性。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI056",
+      "question_digest": "449f9b87c9eef1d01749af3f0ea77bed984abc794859baa6ceb0c38f6d391eb4",
+      "chapter": 8,
+      "related_chapters": [
+        18
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "二价真实报价弱占优来自赢家支付与自己报价分离；一价拍卖需要在胜率和支付之间权衡。"
+        },
+        {
+          "body_md": "保留价提高成交时的支付但会排除部分有效交易，卖方收入最大化与总剩余最大化不同。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "本题无保留价的对称策略",
+          "formula_md": "$$b_{\\rm II}(v)=v,\\qquad b_{\\rm I}(v)=v/2$$",
+          "symbols_md": "两名独立均匀[0,1]私人估值、风险中性投标者。",
+          "conditions_md": "一价式是本题分布及人数下的对称均衡，不是所有拍卖的通式。",
+          "use_md": "分别证明二价不获利偏离和一价最优响应，再核收入。"
+        },
+        {
+          "title": "本题二价保留价收入",
+          "formula_md": "$$R(r)=\\frac13+r^2-\\frac43r^3,\\qquad \\Pr(\\text{成交})=1-r^2$$",
+          "symbols_md": "r∈[0,1]为保留价，卖者成本0。",
+          "conditions_md": "两名独立均匀估值；仅一人达标支付r，两人达标支付次高值。",
+          "use_md": "检查导数与端点，随后用最高估值的截断期望计算效率代价。"
+        }
+      ],
+      "conditions_md": "价值独立、私人价值、对称分布、风险中性和相同配置规则是收入比较的重要条件。",
+      "branches_md": "无保留价与正保留价改变最低类型参与；收入等价并不允许遗漏保留价及参与规则。",
+      "pitfalls_md": "二价报价等于估值不等于实际支付估值；更高收入不等于更多有效交易。",
+      "application_md": "本题先按机制求策略与支付，再把达标人数分成0、1、2三类求收入，最后比较成交概率和总剩余。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI057",
+      "question_digest": "0de2c17dda9f8fad18f824b38d342f45742154f6ae7bf8eb87b5303e7e68d378",
+      "chapter": 17,
+      "related_chapters": [
+        16
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "人力资本投资成本包括显性学费和当期放弃的工资；未来增量收益按支付日期贴现。"
+        },
+        {
+          "body_md": "风险中性时比较期望净现值，不能由该准则直接推出风险厌恶者也会参加。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "教育投资净现值",
+          "formula_md": "$$NPV=-F-w_0+\\sum_{t=1}^{T}\\frac{\\Delta w_t}{(1+r)^t}$$",
+          "symbols_md": "F为当期学费，w₀为放弃的工资，Δw为未来增薪。",
+          "conditions_md": "成本和收益均为相对不培训的增量，支付时点已对齐。",
+          "use_md": "先算确定性方案，再将增薪替换为相应概率期望。"
+        },
+        {
+          "title": "风险中性的最高学费",
+          "formula_md": "$$F_{\\max}=\\sum_{t=1}^{T}\\frac{E[\\Delta w_t]}{(1+r)^t}-w_0$$",
+          "symbols_md": "本题失败后不增薪，成功概率3/4。",
+          "conditions_md": "风险中性、可融资且无额外收入风险约束。",
+          "use_md": "若上式为负，即使学费0也不一定愿意放弃当期工资。"
+        }
+      ],
+      "conditions_md": "仅计算增量工资，不把培训后全部工资当回报；成功事件可同时影响多期收益。",
+      "branches_md": "不能融资、风险厌恶或不同支付时点时需改变选择准则。",
+      "pitfalls_md": "学费不是全部成本；概率应作用于风险收益而非已确定支付的成本。",
+      "application_md": "本题先画培训与不培训两条现金流，再逐期贴现，计算期望净现值和使参与恰成立的学费。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI058",
+      "question_digest": "91c214c80645179659ab7d55cfd3a33317e6ef8cad04bdba991c886d4732277c",
+      "chapter": 16,
+      "related_chapters": [
+        11,
+        13
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "工会最大化总工资租时会权衡更高工资与更少就业，不等于最大化每个已就业工人的工资。"
+        },
+        {
+          "body_md": "可转移效用下有效就业由劳动边际产出和外部机会成本决定，工资再分配双方租金。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "工资租目标",
+          "formula_md": "$$R(w)=(w-w_0)L_D(w)$$",
+          "symbols_md": "$w_0$为外部工资，$L_D$为企业劳动需求。",
+          "conditions_md": "统一工资且就业由企业沿需求决定，工会目标为题给总租。",
+          "use_md": "对工资优化并检查就业非负、工资不低于外部选择。"
+        },
+        {
+          "title": "有效就业",
+          "formula_md": "$$MRP(L^*)=w_0,\\qquad TS=\\int_0^{L^*}[MRP(z)-w_0]dz$$",
+          "symbols_md": "总剩余计劳动收益与机会成本。",
+          "conditions_md": "可转移效用、外部边际机会成本不变，无其他约束。",
+          "use_md": "把效率数量和工资分配分开；就业优先在本题可能达到相同数量但目标不同。"
+        }
+      ],
+      "conditions_md": "工资租、就业优先和双方总剩余是不同目标函数，比较时明确由谁决定数量。",
+      "branches_md": "若只准工会定工资，就业仍需满足企业需求；有效谈判允许工资和就业共同决定。",
+      "pitfalls_md": "工资总额不是工资租；更高工资不自动意味着更多工人受益。",
+      "application_md": "先解工资租最大化，再用边际社会收益等于机会成本求有效就业，最后说明谈判或就业优先制度的差别。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI059",
+      "question_digest": "036726038da5289fd73e8bb2c33ae48d5115a3eab826311a6208e7a181b42719",
+      "chapter": 16,
+      "related_chapters": [
+        1
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "总体均薪同时取决于岗位内部报酬和岗位构成，原始均值差无法单独识别同工同酬差异。"
+        },
+        {
+          "body_md": "按边际收益产品付酬的对照计算是一个明示基准，偏离基准仍可能有多种原因。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "岗位加权均薪",
+          "formula_md": "$$\\bar w_g=\\sum_js_{gj}w_j$$",
+          "symbols_md": "$s_{gj}$为群体$g$在岗位$j$的比例，$w_j$为同一基准岗位工资。",
+          "conditions_md": "份额之和为1，岗位分类和工资单位一致。",
+          "use_md": "先按MRP构造对照均薪，再与观测均值比较。"
+        },
+        {
+          "title": "两组均薪差的分解",
+          "formula_md": "$$\\bar w_A-\\bar w_B=\\sum_j(s_{Aj}-s_{Bj})w_{Bj}+\\sum_js_{Aj}(w_{Aj}-w_{Bj})$$",
+          "symbols_md": "第一项为按B组工资评价的构成差，第二项为岗位内部工资差。",
+          "conditions_md": "需要组别与岗位交叉工资数据才能实际识别第二项。",
+          "use_md": "明确现有总均值为何不足以单独认定同工歧视。"
+        }
+      ],
+      "conditions_md": "MRP给定只是对照，不等于已经观察到所有岗位实际工资和个体生产率。",
+      "branches_md": "控制岗位仍可能有技能、工时、选择进入等差异；不能用一个残差直接给出因果歧视量。",
+      "pitfalls_md": "总体群体均值之差不是同岗位同条件工资之差。",
+      "application_md": "本题先做岗位份额核算，再列识别还需要的同岗工资、工时、能力和选择信息；保持数量对照与因果结论分开。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI061",
+      "question_digest": "ff9255f1abbdc5b624da2a6582eb3080a1add25669ff3edd6ac79dec1bcde8b8",
+      "chapter": 19,
+      "related_chapters": [
+        10,
+        12
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "既定总减排下成本最小要求活动企业边际减排成本相等，而非每厂减排量相等。"
+        },
+        {
+          "body_md": "初始许可分配影响交易方向和收入，但在无交易成本、竞争交易的内点不改变成本最低的最终减排。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "最低减排成本条件",
+          "formula_md": "$$\\min\\sum_i C_i(a_i)\\quad\\text{s.t. }\\sum_i a_i=A,\\qquad MAC_i=\\lambda$$",
+          "symbols_md": "A为总要求减排，λ为排放许可的机会成本。",
+          "conditions_md": "各企业减排可连续选择，先核0≤aᵢ≤原排放。",
+          "use_md": "先求总减排需求，再联立边际成本。"
+        },
+        {
+          "title": "排放与许可净买入",
+          "formula_md": "$$e_i=e_i^0-a_i,\\qquad b_i=e_i-\\bar e_i$$",
+          "symbols_md": "e⁰为基准排放，ē为初始许可，b>0为买入。",
+          "conditions_md": "最终排放必须有许可覆盖且市场净交易为0。",
+          "use_md": "按最终排放与初始权利比较交易，许可支付作为转移而非新增减排成本。"
+        }
+      ],
+      "conditions_md": "本题总排放上限8对应总减排12，不能把上限直接当减排量。",
+      "branches_md": "角点企业边际成本用不等式；初始权利重新分配不改变总许可数量。",
+      "pitfalls_md": "许可买入不是增加真实减排成本；均分减排不一定成本最低。",
+      "application_md": "先从总量约束得最低成本减排，再由剩余排放决定许可交易，最后用成本积分比较命令控制。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI062",
+      "question_digest": "deb9b368f6c7c05fc13b1b207084f23cb4ae37c7d5e6fbf97d1db2709f18c017",
+      "chapter": 19,
+      "related_chapters": [
+        12,
+        13
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "无协商成本时有效行动比较避免损害与治理成本，产权决定默认行为和转移方向。"
+        },
+        {
+          "body_md": "真实协商成本只在确需达成协商的方案中发生，不能对所有产权下行动都机械加收。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "治理与污染的真实资源比较",
+          "formula_md": "$$\\text{治理净增益}=D-C$$",
+          "symbols_md": "D为避免的损害，C为过滤等治理资源成本。",
+          "conditions_md": "题中治理能完全消除损失，无其他影响。",
+          "use_md": "先识别有效行动，再根据产权推双方愿接受的转移。"
+        },
+        {
+          "title": "需协商时的净合作增益",
+          "formula_md": "$$G=D-C-K$$",
+          "symbols_md": "K为达成协商耗费的真实资源。",
+          "conditions_md": "只用于相对默认产权状态确实需要谈判改变行动的方案。",
+          "use_md": "若增益为负则无互利区间；已有洁净权下的直接履约无需无端支付协商费。"
+        }
+      ],
+      "conditions_md": "产权须可执行；给工厂排污权与给渔民洁净权的无协议后果不同。",
+      "branches_md": "排污权下渔民为过滤付费，区间由治理成本与避免损害界定；洁净权下购买污染许可可能没有双方都接受的价格。",
+      "pitfalls_md": "科斯式效率结论依赖交易成本等条件；转移支付不是社会资源损失。",
+      "application_md": "本题先列两种产权的默认行动，再核是否有改变行动的合作剩余；最后仅对需要协商的制度扣真实费用20。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    },
+    {
+      "case_id": "EMI063",
+      "question_digest": "462ccb56f24ce637395653d76edd0ccd0c56dc5efd8f3e83a72945c4b3f3bdd3",
+      "chapter": 8,
+      "related_chapters": [
+        16,
+        18,
+        19
+      ],
+      "knowledge_points": [
+        {
+          "body_md": "团队平分产出使每人只得到自己边际产出的部分收益，个人激励小于社会边际收益。"
+        },
+        {
+          "body_md": "按个人努力付酬必须能够观察并验证努力；可观察制度的合同不能直接用于隐藏努力。"
+        }
+      ],
+      "formulas": [
+        {
+          "title": "平分与有效努力",
+          "formula_md": "$$\\frac12\\frac{\\partial Y}{\\partial e_i}=c_i\\prime(e_i),\\qquad \\frac{\\partial Y}{\\partial e_i}=c_i\\prime(e_i)$$",
+          "symbols_md": "本题Y=4(e₁+e₂)，个人成本eᵢ²/2。",
+          "conditions_md": "前式为各自选择努力的内点纳什，后式为总剩余内点最优。",
+          "use_md": "比较收益内部化份额带来的努力差异。"
+        },
+        {
+          "title": "可验证努力下的边际产出合同",
+          "formula_md": "$$w_i=4e_i,\\qquad \\sum_iw_i=Y$$",
+          "symbols_md": "合同按各人实际可验证努力支付。",
+          "conditions_md": "只对本题线性可分产出、努力可用于签约的制度成立。",
+          "use_md": "既核个体边际激励，也核预算；隐藏努力时该合同的支付指标不可执行。"
+        }
+      ],
+      "conditions_md": "原制度按产出平分，改制后是否能以个人努力为支付依据必须明说。",
+      "branches_md": "人人都拿整个团队产出通常超预算；本题可验证的可分努力合同与只观察总产出不同。",
+      "pitfalls_md": "不能从一个合同不可用就无条件声称所有团队激励都不可能；也不能把隐藏努力当作可核验。",
+      "application_md": "本题先解平分下的各人激励，再做总剩余规划，最后逐条核新合同的可验证性、激励和总支付。",
+      "provenance_md": "本节为编者依据本题原有教材方法与正式解答归纳。章节主线按尼科尔森第11版，直观解释参照高鸿业第8版；两者本地配套资料的阅读位置在题源页列明。章节关联不表示本题是教材原题，也不代表已完成全部原书逐字核对或官方评分认证。"
+    }
+  ]
+}
